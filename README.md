@@ -12,8 +12,8 @@ kind
 
 with L_eps = sqrt(eps) {Laplace} u - c(x)*u in one space dimension.
 The library contains routines which handle the generation
-of meshes (in particular layer adapted meshes) when treating singularly per-
-turbed problems as well as a wide range of A-stable Runge-Kutta methods. The
+of meshes (in particular layer adapted meshes) when treating singularly perturbed
+problems as well as a wide range of A-stable Runge-Kutta methods. The
 equation systems aring from the application of fully implicit Runge-Kutta
 methods can be solved by a preconditioned GMRES method. Moreover, there
 exist a number of user interfaces which neatly plot the approximated solution
@@ -25,8 +25,8 @@ in various formats or generate LaTeX style "convergence tables".
 ---------------
 In each of the subdirectories you will find Makefiles that will help you with
 the compilation of the library. All you need to do is specify your favourite
-Fortran95 compiler in "make.inc" which is to be found at the top level direc-
-tory. Then type make, lean back, and watch the engine at work..
+Fortran95 compiler in "make.inc" which is to be found at the top level directory
+Then type make, lean back, and watch the engine at work..
 
 
 2. Usage
