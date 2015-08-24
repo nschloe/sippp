@@ -1,0 +1,39 @@
+#!/bin/sh
+#####################################################################
+# BenchIT - Performance Measurement for Scientific Applications
+# Contact: benchit@zih.tu-dresden.de
+#
+# Last change by: $Author: mueller $
+# $Revision: 1.1 $
+# $Date: 2006/05/22 10:15:13 $
+#####################################################################
+
+ # minimum power of the x-axis
+ BENCHIT_KERNEL_PROBLEMSIZE_MIN_POWER=0
+ # maximum power of the x-axis
+ BENCHIT_KERNEL_PROBLEMSIZE_MAX_POWER=16
+ # x-axis logbase
+ BENCHIT_KERNEL_LOGBASE=2
+ # how often should a measurement be done for normalization
+ BENCHIT_KERNEL_MIN_RUNTIME=0
+
+ # number of used threads
+ BENCHIT_KERNEL_MAX_THREADS=1
+ # number of used processes
+ BENCHIT_KERNEL_MAX_PROCESSES=1
+ 
+ # Parameters for database access
+ BENCHIT_KERNEL_DB_SERVER="localhost"
+ BENCHIT_KERNEL_DB_NAME="benchscript"
+ BENCHIT_KERNEL_DB_USR="benchscript" 
+ BENCHIT_KERNEL_DB_PASS="2QBsNwqsMzrhzpp7"
+
+#####################################################################
+# Log-History
+#
+# $Log: PARAMETERS,v $
+# Revision 1.1  2006/05/22 10:15:13  mueller
+# - adding php select kernel
+#
+#
+#####################################################################

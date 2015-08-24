@@ -1,0 +1,90 @@
+###############################################################################
+#                                                                             #
+#  B e n c h I T - Performance Measurement for Scientific Applications        #
+#                                                                             #
+# SYNOPSIS
+#  Common definitions - used in all Subscripts                                
+#                                                                             
+#  Author: Guido Juckeland (juckeland@zhr.tu-dresden.de)                      
+#  Version: 1.0                                                               
+#  Date: 2002-12-14                                                           
+###############################################################################
+
+# This script is obsolete now
+echo "!!!!!!!!!!!!!"
+echo "COMMONDEFS MUST NOT be used anymore"
+echo "!!!!!!!!!!!!!"
+exit 10
+
+if [ "${KERNELDIR}" = "" ] || [ "${BENCHITROOT}" = "" ] ; then
+
+# remember the actual path
+KERNELDIR="`pwd`"
+
+# find the path of the BenchIT main-directory
+BENCHITROOT="`pwd`"
+
+while [ ! -f "${BENCHITROOT}/benchit.c" ]
+do
+  BENCHITROOT="${BENCHITROOT}/.."
+done
+
+cd ${BENCHITROOT}
+BENCHITROOT="`pwd`"
+
+fi
+
+
+uname_minus_n=`${BENCHITROOT}/tools/uname_minus_a | cut -d ' ' -f2`
+
+set +e
+hostname=`hostname -f 2>/dev/null` || hostname=${uname_minus_n}
+set -e
+
+dirpath=${KERNELDIR}
+
+if [ "$1" = "--target" ] && [ "$2" != "" ] ; then
+    uname_minus_n="$2"
+    hostname="$2"
+    shift
+    shift
+fi
+
+#set -a
+
+BENCHIT_DIRBASE=`basename ${dirpath}`
+if [ "${BENCHIT_NODENAME}" = "" ] ; then
+    BENCHIT_NODENAME="${uname_minus_n}"
+    export BENCHIT_NODENAME
+fi
+if [ "${BENCHIT_HOSTNAME}" = "" ] ; then
+    BENCHIT_HOSTNAME="${hostname}"
+    export BENCHIT_HOSTNAME
+fi
+
+#set +a
+
+export BENCHIT_DIRBASE
+
+#echo "uname_minus_n=${uname_minus_n}"
+#echo "hostname=${hostname}"
+#echo "dirpath=${dirpath}"
+#echo "KERNELDIR=${KERNELDIR}"
+#echo "BENCHITROOT=${BENCHITROOT}"
+#echo "BENCHIT_DIRBASE=${BENCHIT_DIRBASE}"
+#echo "BENCHIT_NODENAME=${BENCHIT_NODENAME}"
+#echo "BENCHIT_HOSTNAME=${BENCHIT_HOSTNAME}"
+
+###############################################################################
+#  Log-History
+#
+#  $Log: COMMONDEFS,v $
+#  Revision 1.3  2005/08/30 19:32:48  mickler
+#  + Added failsafe comment for not using this script anymore
+#
+#  Revision 1.2  2005/07/19 12:17:59  wloch
+#  added cvs footer
+#
+#
+###############################################################################
+

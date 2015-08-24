@@ -1,0 +1,56 @@
+#!/bin/sh
+#####################################################################
+# BenchIT - Performance Measurement for Scientific Applications
+# Contact: benchit@zih.tu-dresden.de
+#
+# Last change by: $Author: jmuelle $
+# $Revision: 1.8 $
+# $Date: 2007/07/06 14:54:08 $
+#####################################################################
+
+ BENCHIT_CPP_BLAS="-I/home/markwardt/lib/acml2.6.0/pgi64_mp/include"
+ BENCHIT_LIB_BLAS="${BENCHIT_LIB_BLAS} -L/home/markwardt/lib/acml2.6.0/pgi64_mp/lib -lpgftnrtl"
+ 
+ # Iterate over matrix size from BENCHIT_KERNEL_PROBLEMSIZE_MIN
+ # to BENCHIT_KERNEL_PROBLEMSIZE_MAX, incrementing by
+ # BENCHIT_KERNEL_PROBLEMSIZE_INCREMENT with each step.
+
+ BENCHIT_KERNEL_PROBLEMSIZE_MIN=1
+ BENCHIT_KERNEL_PROBLEMSIZE_MAX=1200
+ BENCHIT_KERNEL_PROBLEMSIZE_INCREMENT=2
+
+ # Describe your own kernel modifications
+ #BENCHIT_KERNEL_COMMENT=""
+
+# Parameters for run_benchit; uncomment and change the ones you need
+# maximum memory for processes in MB
+#BENCHIT_RUN_MAX_MEMORY=1024
+# number of processors
+#BENCHIT_NUM_CPUS=1
+# redirect stdout and stderr to file
+#BENCHIT_RUN_REDIRECT_CONSOLE=output.txt
+# remove executable after run, if 1
+#BENCHIT_RUN_CLEAN=1
+# do not execute anything, just print out comments
+#BENCHIT_RUN_TEST=1
+# timelimit used for enqueueing the job; this is NOT BENCHIT_TOTAL_TIMELIMIT
+#BENCHIT_RUN_QUEUETIMELIMIT=
+
+
+#####################################################################
+# Log-History
+#
+# $Log: PARAMETERS,v $
+# Revision 1.8  2007/07/06 14:54:08  jmuelle
+# Adjusted PARAMETERS to reasonable values
+#
+# Revision 1.7  2006/01/03 11:57:39  mickler
+# # Changes for new variable names
+#
+# Revision 1.6  2005/12/15 09:28:28  hackenb
+# new variable names
+# modified/unified header and footer
+# MIN/MAX/INCREMENT iterating strategy
+#
+#
+#####################################################################

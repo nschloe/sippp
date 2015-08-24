@@ -1,0 +1,25 @@
+#####################################################################
+# BenchIT - Performance Measurement for Scientific Applications
+# Contact: benchit@zih.tu-dresden.de
+#
+# Last change by: $Author: jmuelle $
+# $Revision: 1.3 $
+# $Date: 2007/07/06 14:54:08 $
+#####################################################################
+
+ BENCHIT_KERNEL_PROBLEMSIZE_MIN=1
+ BENCHIT_KERNEL_PROBLEMSIZE_MAX=100
+ BENCHIT_KERNEL_PROBLEMSIZE_INCREMENT=2
+
+###############################################################################
+#  Log-History
+#
+#  $Log: PARAMETERS,v $
+#  Revision 1.3  2007/07/06 14:54:08  jmuelle
+#  Adjusted PARAMETERS to reasonable values
+#
+#  Revision 1.2  2006/01/03 15:30:16  mickler
+#  # Changed for MIN, MAX, INCREMENT
+#
+#
+###############################################################################

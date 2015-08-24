@@ -1,0 +1,412 @@
+#####################################################################
+# BenchIT - Performance Measurement for Scientific Applications
+# Contact: benchit@zih.tu-dresden.de
+#
+# Last change by: $Author: mickler $
+# $Revision: 1.29 $
+# $Date: 2006/01/03 17:55:28 $
+#####################################################################
+
+SCRIPTNAME="`basename ${0}`"
+
+usage() {
+	if [ "${CONFIGURE_MODE}" = "RUN" ]; then
+		printf "\nUsage: ${SCRIPTNAME} [OPTION]... [--] <kernel binary> [Kernel arguments]...\n\n"
+		printf "  <kernel binary> is the location of the kernel which shall be executed, e.g.\n"
+		printf "    bin/numerical.matmul.F77.0.0.double.0\n"
+		printf "  For Java kernels point to its directory, e.g.\n"
+		printf "    bin/numerical.matmul.Java.0.0.double.0/\n"
+	elif [ "${CONFIGURE_MODE}" = "COMPILE" ]; then
+		printf "\nUsage: ${SCRIPTNAME} [OPTION]... <kernel name>\n"
+		printf "   OR: ${SCRIPTNAME} [OPTION]... <kernel directory>\n\n"
+		printf "  <kernel name> is the dotted notation,\n"
+		printf "    e.g. numerical.matmul.F77.0.0.double\n"
+		printf "  <kernel directory> is the location of the kernel sources,\n"
+		printf "    e.g. kernel/numerical/matmul/F77/0/0/double/\n"
+	fi
+	printf "\nOptions:\n"
+	printf "  -p, --parameter-file=STRING     Explicitly define a parameter file to use.\n"
+	printf "                                  If not set, the PARAMETERS file from the\n"
+	printf "                                  kernel directory will be used\n"
+	printf "      --no-parameter-file         Do not read the parameter file\n"
+	printf "      --                          Stop argument scanning, the following argument\n"
+	printf "                                  must be the kernel\n"
+	if [ "${CONFIGURE_MODE}" = "COMPILE" ]; then
+		printf "  -c, --comment=STRING            Set a comment which will be appended to the\n"
+		printf "                                  kernel's executable filename\n"
+		printf "  -t, --target=STRING             Compile with different LOCALDEFS\n"
+	fi
+	if [ "${CONFIGURE_MODE}" = "RUN" ]; then
+		printf "      --numcpus=VALUE             For a parallel kernel: use this many CPUs\n"
+		printf "                                  The number of threads (for OpenMP), or the\n"
+		printf "                                  number of processes (for MPI) will be the same\n"
+		printf "                                  if not set explicitly\n"
+		printf "                                  This is also the value for the number of CPUs\n"
+		printf "                                  that will be requested from the batch system\n"
+		printf "      --numprocesses=VALUE        Start so many MPI processes\n"
+		printf "      --numthreadsperprocess=VALUE Start so many OpenMP threads\n"
+		printf "      --usempi                    Explicitly enable MPI\n"
+		printf "      --useopenmp                 Explicitly enable OpenMP\n"
+		printf "  -o, --outfile=STRING            Write stderr and stdout to this file.\n"
+		printf "      --clean                     Remove executable and temporary files\n"
+		printf "                                  after run\n"
+		printf "      --testrun                   Do not actually start the kernel, instead\n"
+		printf "                                  print what would be executed\n"
+		printf "                                  This is for diagnostic purposes\n"
+		printf "\n  Options for use on batch systems:\n"
+		printf "      --coredumplimit=VALUE       Maximum size (kB) for a coredump (per process)\n"
+		printf "      --emailaddress=STRING       EMail address to send job information to\n"
+		printf "      --maxmemory=VALUE           Maximum memory in kB the kernel may use (per\n"
+		printf "                                  process). If it tries to allocate more memory,\n"
+		printf "                                  the job will be killed\n"
+		printf "      --queuename=STRING          The queue to which the job will be submitted\n"
+		printf "      --queuetimelimit=VALUE      Running time in seconds, before the batch\n"
+		printf "                                  system kills the job (per-process CPU-time)\n"
+	fi
+	printf "\n"
+	printf "  -h, --help                      Show this help\n"
+	printf "\n"
+}
+
+unknownParam() {
+	printf "\nERROR: Unknown parameter: ${1}\n"
+	printf "Try ${SCRIPTNAME} -h for possible options.\n\n"
+	exit 1
+}
+
+checkSet() {
+# Some variable magic here ;-)
+	P="\$${1}"
+	eval P="`echo ${P}`"
+	if [ -n "${P}" ]; then
+		printf "\nERROR: Parameter redefinition: ${1} (\"${P}\") with \"${PARAMSTR}\"\n\n"
+		exit 1
+	else
+		eval ${1}="${PARAMVALUE}"
+	fi
+}
+
+checkShortParam() {
+	if [ -z "${1}" ] || [ "${1%${1#?}}" = "-" ]; then
+		printf "\nERROR: Invalid parameter: \"${PARAMSTR}\"\n"
+		printf "Try ${SCRIPTNAME} -h for possible options.\n\n"
+		exit 1
+	fi
+}
+
+checkLongParam() {
+	if [ -z "${1}" ]; then
+		printf "\nERROR: Invalid parameter: \"${PARAMSTR}\"\n"
+		printf "Try ${SCRIPTNAME} -h for possible options.\n\n"
+		exit 1
+	fi
+}
+
+splitParam() {
+	if [ "${1%${1#??}}" = "--" ]; then
+		PARAMSTR="${1}"
+		PARAMNAME="`echo ${1}|cut -s -d = -f 1`"
+		PARAMVALUE="`echo ${1}|cut -s -d = -f 2`"
+		SHIFTER="shift"
+		checkLongParam "${PARAMVALUE}"
+	else
+		PARAMSTR="${1}"
+		PARAMNAME="${1}"
+		shift
+		PARAMSTR="${PARAMSTR} ${1}"
+		PARAMVALUE="${1}"
+		SHIFTER="shift;shift"
+		checkShortParam "${PARAMVALUE}"
+	fi
+}
+
+# List of varibles which are set in this script
+_CMDLINE_VARLIST="\
+BENCHIT_KERNELBINARY \
+BENCHIT_KERNELBINARY_ARGS \
+BENCHIT_CMDLINE_ARG_FILENAME_COMMENT \
+BENCHIT_CMDLINE_ARG_PARAMETER_FILE \
+BENCHIT_CMDLINE_ARG_IGNORE_PARAMETER_FILE \
+BENCHIT_NODENAME \
+BENCHIT_CROSSCOMPILE \
+BENCHIT_CMDLINE_ARG_NUM_CPUS \
+BENCHIT_CMDLINE_ARG_NUM_PROCESSES \
+BENCHIT_CMDLINE_ARG_NUM_THREADS_PER_PROCESS \
+BENCHIT_CMDLINE_ARG_RUN_CLEAN \
+BENCHIT_CMDLINE_ARG_RUN_COREDUMPLIMIT \
+BENCHIT_CMDLINE_ARG_RUN_EMAIL_ADDRESS \
+BENCHIT_CMDLINE_ARG_RUN_MAX_MEMORY \
+BENCHIT_CMDLINE_ARG_RUN_QUEUENAME \
+BENCHIT_CMDLINE_ARG_RUN_QUEUETIMELIMIT \
+BENCHIT_CMDLINE_ARG_RUN_REDIRECT_CONSOLE \
+BENCHIT_CMDLINE_ARG_RUN_TEST \
+BENCHIT_CMDLINE_ARG_RUN_USE_MPI \
+BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP \
+"
+# Unset the variables we might set in this script and mark them for export
+for myvar in ${_CMDLINE_VARLIST}; do
+	unset ${myvar}
+	export ${myvar}
+done
+BENCHIT_CROSSCOMPILE=0
+
+while [ -n "${1}" ]; do
+	unset PARAMVALUE
+	unset PARAMSTR
+	unset SHIFTER
+	case "${1}" in
+		--help | -h)
+			usage
+			exit 0
+			;;
+		--comment* | -c)
+			splitParam $@
+			checkSet '_COMMENT_'
+			eval "$SHIFTER"
+			if [ -z ${PARAMVALUE%%*.*} ]; then
+				printf "ERROR: Invalid parameter: \"${PARAMSTR}\"\n"
+				printf "The comment MUST NOT contain a dot ('.')\n\n"
+				exit 1
+			fi
+			BENCHIT_CMDLINE_ARG_FILENAME_COMMENT="${PARAMVALUE}"
+			;;
+		--target* | -t)
+			splitParam $@
+			checkSet '_TARGET_'
+			eval "${SHIFTER}"
+			BENCHIT_NODENAME="${PARAMVALUE}"
+			if [ "`uname -n`" != ${BENCHIT_NODENAME} ]; then
+				BENCHIT_CROSSCOMPILE=1
+			fi
+			;;
+		--parameter-file* | -p)
+			splitParam $@
+			checkSet '_PARAMETERFILE_'
+			eval "${SHIFTER}"
+			BENCHIT_CMDLINE_ARG_PARAMETER_FILE="${PARAMVALUE}"
+			;;
+		--no-parameter-file)
+			checkSet '_PARAMETERFILE_'
+			BENCHIT_CMDLINE_ARG_IGNORE_PARAMETER_FILE=1
+			shift
+			;;
+		--testrun)
+			BENCHIT_CMDLINE_ARG_RUN_TEST=1
+			shift
+			;;
+		--queuetimelimit*)
+			splitParam $@
+			checkSet '_QUEUETIMELIMIT_'
+			eval "${SHIFTER}"
+			BENCHIT_CMDLINE_ARG_RUN_QUEUETIMELIMIT="${PARAMVALUE}"
+			;;
+		--queuename*)
+			splitParam $@
+			checkSet '_QUEUENAME_'
+			eval "${SHIFTER}"
+			BENCHIT_CMDLINE_ARG_RUN_QUEUENAME="${PARAMVALUE}"
+			;;
+		--emailaddress*)
+			splitParam $@
+			checkSet '_EMAILADDRESS_'
+			eval "${SHIFTER}"
+			BENCHIT_CMDLINE_ARG_RUN_EMAIL_ADDRESS="${PARAMVALUE}"
+			;;
+		--maxmemory*)
+			splitParam $@
+			checkSet '_MEMORY_'
+			eval "${SHIFTER}"
+			BENCHIT_CMDLINE_ARG_RUN_MAX_MEMORY="${PARAMVALUE}"
+			;;
+		--numprocesses*)
+			splitParam $@
+			checkSet '_NUMPROCESSES_'
+			eval "${SHIFTER}"
+			BENCHIT_CMDLINE_ARG_RUN_NUM_PROCESSES="${PARAMVALUE}"
+			;;
+		--numthreadsperprocess*)
+			splitParam $@
+			checkSet '_NUMTHREADSPERPROCESS_'
+			eval "${SHIFTER}"
+			BENCHIT_CMDLINE_ARG_NUM_THREADS_PER_PROCESS="${PARAMVALUE}"
+			;;
+		--numcpus*)
+			splitParam $@
+			checkSet '_NUMCPUS_'
+			eval "${SHIFTER}"
+			BENCHIT_CMDLINE_ARG_RUN_NUM_CPUS="${PARAMVALUE}"
+			;;
+		--coredumplimit*)
+			splitParam $@
+			checkSet '_CORESIZE_'
+			eval "${SHIFTER}"
+			BENCHIT_CMDLINE_ARG_RUN_COREDUMPLIMIT="${PARAMVALUE}"
+			;;
+		--outfile* | -o)
+			splitParam $@
+			checkSet '_OUTPUTFILE_'
+			eval "${SHIFTER}"
+			BENCHIT_CMDLINE_ARG_RUN_REDIRECT_CONSOLE="${PARAMVALUE}"
+			;;
+		--clean)
+			BENCHIT_CMDLINE_ARG_RUN_CLEAN=1
+			shift
+			;;
+		--usempi)
+			BENCHIT_CMDLINE_ARG_RUN_USE_MPI=1
+			shift
+			;;
+		--useopenmp)
+			BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP=1
+			shift
+			;;
+		--)
+			shift
+			BENCHIT_KERNELBINARY="${1}"
+			shift
+			BENCHIT_KERNELBINARY_ARGS="${KERNELBINARY_ARGS} $@"
+			break
+			;;
+		--*)
+			unknownParam "${1}"
+			;;
+		-*)
+			unknownParam "${1}"
+			;;
+		*)
+			BENCHIT_KERNELBINARY="${1}"
+			shift
+			BENCHIT_KERNELBINARY_ARGS="${KERNELBINARY_ARGS} $@"
+			break
+			;;
+	esac
+done
+
+# Check for necessary values...
+if [ "${COMPILE_GLOBAL}" ] || [ "${CONFIGURE_MODE}" = "RUN" ]; then
+	if [ -z "${BENCHIT_KERNELBINARY}" ]; then
+		printf "\nERROR: Missing kernel argument\n"
+		printf "Use ${SCRIPTNAME} -h to view the syntax of this command.\n\n"
+		exit 1
+	fi
+fi
+
+if [ "${SHELLSCRIPT_DEBUG}" -eq 1 ]; then
+	echo "Cmdlineparams: Exported variables:"
+	for myvar in ${_CMDLINE_VARLIST}; do
+		eval myval="\$${myvar}"
+		printf "\t${myvar} =\t\"${myval}\"\n"
+	done
+fi
+
+###############################################################################
+#  Log-History
+#
+#  $Log: cmdlineparams,v $
+#  Revision 1.29  2006/01/03 17:55:28  mickler
+#  + Commandline arguments now overwrite settings from LOCALDEFS and
+#    PARAMETERS
+#
+#  Revision 1.28  2005/12/15 15:44:54  mickler
+#  - Fixed INTERACTIVE bug, which made compile run interactive if not set
+#
+#  Revision 1.27  2005/12/15 01:33:22  mickler
+#  # Converted to new variable names and other enhancements + fixes
+#
+#  Revision 1.26  2005/12/06 18:15:25  mickler
+#  - Fixed local COMPILE.SH aborting with error about missing kernel argument
+#
+#  Revision 1.25  2005/12/01 23:48:32  mickler
+#  - Fixed syntax error
+#
+#  Revision 1.24  2005/12/01 17:00:54  mickler
+#  # Online help extended
+#
+#  Revision 1.23  2005/11/24 03:26:09  mickler
+#  + Split run_benchit up into different environment files
+#
+#  Revision 1.22  2005/09/11 22:35:38  mickler
+#  + Added a variable for signaling cross-compiling
+#  + Code beautified
+#
+#  Revision 1.21  2005/08/30 22:24:01  mickler
+#  + CHANGED: shell variable BENCHIT_KERNEL_NAME_STRING renamed to
+#    BENCHIT_KERNELNAME and made necessary changes in COMPILE.SHs and
+#    main BenchIT files (benchit.c, JBI.java, ...)
+#  - FIXED: user settings for e.g. linear measurement were not used,
+#    added the ${BENCHIT_DEFINES} to the compile commands in COMPILE.SHs
+#
+#  Revision 1.20  2005/08/30 13:27:26  mickler
+#  - Kernelname without the comment for the database
+#  + Renamed BENCHIT_KERNEL_NAME_STRING to BENCHIT_KERNELNAME
+#  + Sanity-check for the comment
+#
+#  Revision 1.19  2005/08/29 22:53:10  mickler
+#  - SCRIPT NOW CONFORMS 100% TO POSIX.1 STANDARD
+#
+#  - FIXED: Former head and tail usage replaced by shell functionality
+#  - FIXED: Integer comparisons in [] replaced by correct syntax (-eq, -lt, ...)
+#  - FIXED: Run of global COMPILE.SH without specifying kernel caused infinite loop
+#
+#  Revision 1.18  2005/08/25 12:06:34  mueller
+#  - fixed bourne shell compatability
+#  - never ever compate strings with == use = instead (this is not c)
+#  - never ever do comparisons without the test tool (e.g. [])
+#
+#  Revision 1.17  2005/08/15 15:23:37  mickler
+#  + Parameters renamed
+#  + Directorynames in script generation escaped
+#  + Changed handling of PARAMETERS to old style
+#
+#  Revision 1.16  2005/08/11 19:40:10  mickler
+#  - Fixed " in all shell scripts
+#
+#  Revision 1.15  2005/08/08 21:01:13  mickler
+#  + Cleaned up configure a bit.
+#  + COMMONDEFS needed no more
+#  + Added debug flag to configure script
+#  + Added usage description
+#
+#  Revision 1.14  2005/08/07 20:18:33  mickler
+#  - Bug when invoking COMPILE.SH in kerneldir fixed
+#
+#  Revision 1.13  2005/08/05 06:39:15  mickler
+#  + relative path to PARAMETERS file possible
+#
+#  Revision 1.12  2005/08/05 06:15:57  mickler
+#  - Parameter fixing
+#
+#  Revision 1.11  2005/08/04 22:06:01  mickler
+#  - Fixed parameter handling
+#
+#  Revision 1.10  2005/08/03 12:52:47  rschoene
+#  set BENCHIT_NODENAME for --target/-t
+#
+#  Revision 1.9  2005/07/29 12:03:19  wloch
+#  removed wrong function keyword in declaration
+#
+#  Revision 1.8  2005/07/22 17:43:27  mickler
+#  + configure: in COMPILE mode now a path is accepted
+#
+#  Revision 1.7  2005/07/22 15:24:06  wloch
+#  fixed dot bug
+#
+#  Revision 1.6  2005/07/22 11:02:14  mickler
+#  # Changed BENCHIT_EXECUTABLE_COMMENT back to contain NO "." at the beginning!
+#  - Fixed many bugs in configure
+#  + cmdlineparams now passes unknown switches on in $BENCHIT_CMDLINE_PARAMS
+#
+#  Revision 1.5  2005/07/22 10:35:49  wloch
+#  fixed the executable comment dot problem
+#
+#  Revision 1.4  2005/07/21 21:09:26  mickler
+#  + tools/configure: RUN and COMPILE mode implemented
+#  + tools/RUN.SH: Basic structure, no function yet
+#  + tools/COMPILE.SH: Basic structure, no function yet
+#
+#  Revision 1.3  2005/07/21 13:59:44  mickler
+#  + cmdlineparams updated for passing over parameters
+#  - FIXED: executable comment not divided by '.' in configure
+#
+###############################################################################
+

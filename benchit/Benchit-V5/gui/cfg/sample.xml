@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<!-- this is a sample configuration file for the BenchIT GUI -->
+<!-- written by Christoph Mueller pisi@pisi.de -->
+
+<!-- starting the content section -->
+<bigdata>
+	
+	<!-- writtenAt is not really required, but is always written, -->
+	<!-- when the file is saved by the class BIGXMLParser -->
+	<writtenAt value="Sat Jun 28 16:06:53 CEST 2003"></writtenAt>
+
+	<!-- path describes the location of the BenchIT project -->
+	<path PATH="../"></path>
+	
+	<!-- start a section for a file named <hostname> -->
+	<!-- the tag hostname will be replaced by the hostname loaded in the program -->
+	<file NAME="&lt;hostname&gt;">
+
+		<!-- an entry from type none. used for comments -->
+		<!-- POS	the position where the entry wil be displayed in the GUI -->
+		<!-- MULTIPLECHOICECOUNT	this means how many choices may be selected -->
+		<!-- NAME 	the name for this value in the file -->
+		<!-- ACTIVESTATUS	if false, the value is ignored by the GUI -->
+		<!-- VIEWNAME	the name for this value displayed in the GUI -->
+		<!-- TOOLTIPTEXT	the tooltiptext displayed in the GUI -->
+		<!-- HELP	the helptext displayed in the online help -->
+		<!-- ACTION	this is not used. it was introduced to implement dependencies between the values -->
+		<!-- PRIORITY	this selects the minimum viewlevel needed to show this value -->
+		<!-- NECESSITY	this means whether this value is required to be set or not -->
+		<none
+			
+			POS="80"
+			MULTIPLECHOICECOUNT="1"
+			NAME="######## section 1 installed components"
+			ACTIVESTATUS="true"
+			VIEWNAME="######## section 1 installed components"
+			TOOLTIPTEXT="installed components"
+			HELP="installed components"
+			ACTION="null"
+			PRIORITY="0"
+			NECESSITY="true"
+		></none>
+		
+		<!-- an entry from type boolean -->
+		<!-- DEFAULTVALUE	the default value -->
+		<boolean
+			DEFAULTVALUE="true"
+			POS="110"
+			MULTIPLECHOICECOUNT="1"
+			NAME="HAVE_CC"
+			ACTIVESTATUS="true"
+			VIEWNAME="HAVE_CC"
+			TOOLTIPTEXT="enable this if you have a C compiler installed"
+			HELP="enable this if you have a C compiler installed"
+			ACTION="null"
+			PRIORITY="0"
+			NECESSITY="true"
+		></boolean>
+
+		<!-- an entry from type integer -->
+		<integer
+			DEFAULTVALUE="1"
+			POS="500"
+			MULTIPLECHOICECOUNT="1"
+			NAME="NUMPROZ"
+			ACTIVESTATUS="true"
+			VIEWNAME="NUMPROZ"
+			TOOLTIPTEXT="the number of processors installed"
+			HELP="the number of processors installed"
+			ACTION="null"
+			PRIORITY="1"
+			NECESSITY="true"
+		></integer>
+		
+		<!-- an entry from type float. this is a double in the GUI -->
+		<float
+		  	POS="2"
+			MULTIPLECHOICECOUNT="1"
+			NAME="float one"
+			ACTIVESTATUS="false"
+			VIEWNAME="viewname for float one"
+			TOOLTIPTEXT="text"
+			HELP="help"
+			ACTION="null"
+			PRIORITY="8"
+			NECESSITY="false"
+			DEFAULTVALUE="9.81">
+                </float>
+		
+		<!-- an entry from type String -->
+		<string
+			DEFAULTVALUE="unknown"
+			MULTIPLECHOICECOUNT="1"
+			POS="560"
+			NAME="BENCHIT_ARCH_SHORT"
+			ACTIVESTATUS="true"
+			VIEWNAME="BENCHIT_ARCH_SHORT"
+			TOOLTIPTEXT="short name of CPU e.g.: AmK7 or InP4 or MIPS - this field must not contain special chars except _ or - "
+			HELP="short name of CPU e.g.: AmK7 or InP4 or MIPS - this field must not contain special chars except _ or - (the name of the resultfile is generated using this)"
+			ACTION="null"
+			PRIORITY="1"
+			NECESSITY="true"
+		></string>
+		
+		<!-- an entry from type multiple -->
+		<!-- select 1 from n -->
+		<multiple
+			DEFAULTVALUE="0"
+			POS="1460"
+			MULTIPLECHOICECOUNT="1"
+			NAME="OMP_DYNAMIC"
+			ACTIVESTATUS="false"
+			VIEWNAME="OMP_DYNAMIC"
+			TOOLTIPTEXT="This is OMP_DYNAMIC."
+			HELP="This is OMP_DYNAMIC."
+			ACTION="null"
+			PRIORITY="2"
+			NECESSITY="false"
+		>
+			<multiple_part
+				ID="0"
+				VALUE="FALSE"
+			></multiple_part>
+			<multiple_part
+				ID="1"
+				VALUE="TRUE"
+			></multiple_part>
+		</multiple>
+		
+		<!-- an entry from type list -->
+		<!-- select n from m -->
+		<list 
+			POS="5" 
+			MULTIPLECHOICECOUNT="3"
+			NAME="mylist" 
+			ACTIVESTATUS="true" 
+			VIEWNAME="blah" 
+			TOOLTIPTEXT="hcsmhfn"   
+			HELP="sggfb" 
+			ACTION="null" 
+			PRIORITY="2" 
+			NECESSITY="false" 
+			DEFAULTVALUE="&quot;one&quot;,&quot;two&quot;,&quot;three&quot;"
+			UNSELECTED="&quot;four&quot;,&quot;five&quot;,&quot;six&quot;"
+			>
+		</list>
+		
+		
+		<!-- an entry from type datetime -->
+		<!-- because we do not know, how to represent this as a string, -->
+		<!-- this is not implemented jet -->
+		<!--
+		<datetime
+			POS="6"
+			MULTIPLECHOICECOUNT="1"
+			NAME=""
+			ACTIVESTATUS=""
+			VIEWNAME=""
+			TOOLTIPTEXT=""
+			HELP=""
+			ACTION=""
+			PRIORITY=""
+			NECESSITY=""
+			DEFAULTVALUE=""
+			VALUE=""
+			>
+		</datetime>
+		-->
+		
+		<!-- an entry from type vector -->
+		<!-- select n from n -->
+		<vector
+			POS="777"
+			MULTIPLECHOICECOUNT="6"
+			NAME="vector_one"
+			ACTIVESTATUS="false"
+			VIEWNAME="vector_one"
+			TOOLTIPTEXT="tooltiptext"
+			HELP="helptext"
+			ACTION="null"
+			PRIORITY="1"
+			NECESSITY="false"
+			DEFAULTVALUE="&quot;one&quot;,&quot;two&quot;,&quot;three&quot;,&quot;four&quot;,&quot;five&quot;,&quot;six&quot;"
+			>
+		</vector>
+	</file>
+	<!-- start a section for a file named <hostname>_input_architecture -->
+	<!-- the tag hostname will be replaced by the hostname loaded in the program -->
+	<file NAME="&lt;hostname&gt;_input_architecture">
+		<!-- all types of variables are possible in all filesections -->
+		<!-- (except those not implemented yet) -->
+	</file>
+</bigdata>		

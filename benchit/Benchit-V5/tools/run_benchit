@@ -1,0 +1,646 @@
+#!/bin/sh
+########################################################################
+#
+# B e n c h I T - Performance Measurement for Scientific Applications
+#
+# tools/run_benchit
+# SYNOPSIS
+# script for running a (set of) kernel
+# DESCRIPTION
+# generic run; wrapper for lam/mpi, mpich, lsf, nqe, loadleveler
+#
+# Author: Michael Kluge (kluge@zhr.tu-dresden.de)
+#
+# $revision$
+#
+# $date$
+#
+#***
+########################################################################
+
+clean=0
+useproz=1
+allocateproz=0
+#boot=1
+#shutdown=1
+memory=0
+coresizeset=0
+coresize=0
+outfileset=0
+usempi=0
+outfile=""
+java=""
+execute=""
+outf=""
+testmode="0"
+omp=0
+qtimelimit=0
+
+########################################################################
+# FIRST PART: CHECK ENVIRONMENT FOR LAM - MPICH - LSF - NQE - NOTHING
+########################################################################
+
+if [ -z "${*}" ]; then
+    echo "RUN_BENCHIT: Usage"
+    echo "run_benchit <OPTIONS> <EXECUTABLE> <OPTIONS FOR EXECUTABLE>"
+    echo ""
+    echo "RUN_BENCHIT: List of available options:"
+    echo " -memory <X>   : set maximum memory for process to <X> KB"
+    echo " -np <X>       : number of processors for run"
+    echo " -allocate <X> : number of allocated processors"
+    echo " -coresize <X> : set core file size limit to <X> KB"
+    echo " -outfile <X>  : print all output to file <X>"
+    echo " -clean <X>    : remove executable after run if <X>='1'"
+    echo "                 recommended for batch systems, disabled by default"
+    echo " -usempi       : use 'mpirun' or 'mpprun' or similar calls to execute"
+    echo " -omp          : use OpenMP with your programm, disabled by default"
+    echo " -java         : run java code - not jet implemented, but i work on it"
+    echo " -test         : do not execute anything, just print out the commands"
+    echo " -queuetimelimit <X> : set the timelimit which will be used for"
+    echo "             enqueueing the job (instead of BENCHIT_TOTAL_TIMELIMIT)"
+    echo ""
+    echo "RUN_BENCHIT: Notes"
+    echo "    1) If have no idea, what the program does,"
+    echo "       if you forget one of the <X> parameters"
+    echo "       after an option which requires one"
+    echo "    2) Options are only used, if your environment"
+    echo "       supports this options. That means, an -coresize"
+    echo "       or an -allocate option will not turn up in a LAM"
+    echo "       environment"
+    echo "    3) Possible Options for the ENVIRONMENT-Variable are:"
+    echo "          ENVIRONMENT=LAM        (LAM/MPI)"
+    echo "          ENVIRONMENT=MPICH      (MPICH)"
+    echo "          ENVIRONMENT=LSF        (LSF)"
+    echo "          ENVIRONMENT=NQE        (NQE)"
+    echo "          ENVIRONMENT=AIXLL      (LoadLeveler)"
+    echo "          ENVIRONMENT=CACHEGRIND (Valgrind Calltree)"
+    echo "          ENVIRONMENT=ITANIUM    (qsub-based-cluster)"
+    echo "          ENVIRONMENT=NOTHING    (NOT A SPECIAL ONE)"
+    exit 0
+fi
+
+if [ "${ENVIRONMENT}" = "" ]; then
+    echo "Warning: the variable 'ENVIRONMENT' is not set"
+    echo "         using NOTHING as default"
+    ENVIRONMENT=NOTHING
+fi
+
+if [ "${ENVIRONMENT}" != "LAM" -a "${ENVIRONMENT}" != "LSF" -a \
+     "${ENVIRONMENT}" != "MPICH" -a "${ENVIRONMENT}" != "NQE" -a \
+     "${ENVIRONMENT}" != "NOTHING" -a "${ENVIRONMENT}" != "AIXLL" -a \
+     "${ENVIRONMENT}" != "CACHEGRIND" -a "${ENVIRONMENT}" != "SX" -a \
+     "${ENVIRONMENT}" != "ITANIUM" ]; then
+    echo "Error: unkown setting for variable 'ENVIRONMENT'"
+    echo "please use 'LAM', 'MPICH', 'LSF', 'NQE', 'ITANIUM', 'AIXLL', 'CACHEGRIND' or 'NOTHING' !"
+    exit 1
+fi
+
+########################################################################
+# SECOND PART: SEARCH THROUGH COMMAND LINE
+########################################################################
+
+while :
+do
+#        echo "--first is: ${1}"
+	case "$1" in 
+	    -memory) shift
+		     memory="$1" 
+                     ;;
+	    -np) shift
+                 useproz="$1"
+		 # if it is not given, how many processing elements
+                 # we should allocate -> use the value of useproz
+		 if [ "${allocateproz}" = "0" ]; then
+		     allocateproz="${useproz}"
+		 fi
+                 ;;
+	    -allocate) shift
+                       allocateproz="$1"
+                       ;;
+	    -omp) omp="1"
+		  ;;
+	    -coresize) coresizeset=1
+                       shift
+                       coresize="$1" ;;
+	    -outfile) outfileset=1
+                      shift
+                      outfile="$1" ;;
+#	    -boot) shift
+#                  boot="$1"
+#                  ;;
+#	    -shutdown) shift
+#                      shutdown="$1"
+#                       ;;
+	    -clean) shift
+                    clean="$1"
+                    ;;
+	    -queuetimelimit) shift
+                    qtimelimit="$1"
+                    ;;
+	    -usempi) usempi="1"
+                     ;;
+	    -test) testmode="1" ;;
+	    *) break ;;
+	esac
+	shift
+done
+#echo "Remaining arguments: ${*}"
+
+########################################################################
+# THIRD PART: BUILD COMMAND
+########################################################################
+
+if [ "${outfileset}" = "1" ]; then
+    outf=">${outfile} 2>&1"
+fi
+
+
+case "${ENVIRONMENT}" in
+    LAM) if [ "${usempi}" = "1" ]; then
+	   execute="mpirun -np ${useproz}"
+	 fi
+	 execute="${execute} ${*} ${outf}"
+         ;;
+    MPICH) if [ "${usempi}" = "1" ]; then
+	       execute="mpirun -np ${useproz}"
+	 fi
+	 execute="${execute} ${*} ${outf}"
+	 ;;
+    LSF) if [ "${usempi}" = "1" ]; then
+	   execute="mpirun -np ${useproz}"
+	 fi
+	 execute="${execute} ${*} ${outf}"
+	 ;;
+    SX) if [ "${usempi}" = "1" ]; then
+	   execute="mpirun -np ${useproz}"
+	 fi
+	 execute="${execute} ${*} ${outf}"
+	 ;;
+    NQE) if [ "${outfileset}" = "1" ]; then
+           execute="${*} -eo ${outfile}"
+         else
+	   execute="${*}"
+	 fi
+         if [ "${usempi}" = "1" ]; then
+	   execute="mpirun -np ${useproz} ${execute}"
+	 fi 
+	 ;;
+    ITANIUM) if [ "${outfileset}" = "1" ]; then
+           execute="${*}"
+         else
+	   execute="${*}"
+	 fi
+         if [ "${usempi}" = "1" ]; then
+	   execute="mpirun -np ${useproz} ${execute}"
+	 fi 
+	 ;;
+    AIXLL) execute="${*}" ;;
+    CACHEGRIND) execute="calltree ${*} ${outf}" ;;
+    NOTHING) execute="${*} ${outf}"
+	     ;;
+    *) echo "script should never reach this point"
+       exit 1
+       ;;
+esac
+
+
+########################################################################
+# FORTH PART: START SOME THINGS
+########################################################################
+
+case "${ENVIRONMENT}" in
+    LAM) # lam does not support anything except -np
+         # boot lam; enabled by default
+         # if [ "${boot}" = "1" ]; then
+         # da man beim Lam nicht erkennen kann, ob es schon l�ft,
+         # starten wir es auf jeden Fall einmal und beenden es nach
+         # dem Lauf wieder
+           if [ -x `which lamboot` ]; then
+	       if [ "$testmode" = "0" ]; then
+	         lamboot
+	       else
+                 echo $lamboot
+               fi
+           else
+	       echo "unable to start lam, executable 'lamboot' not found"
+	       exit 1
+	   fi
+#         fi
+	 #fi
+	 ;;
+    MPICH) ;;
+    LSF) ;;
+    SX) ;;
+    NQE) ;;
+    ITANIUM) ;;
+    AIXLL) ;;
+    CACHEGRIND) ;;
+    NOTHING) ;;
+    *) echo "script should never reach this point"
+       exit 1
+       ;;
+esac
+
+########################################################################
+# FIFTH PART: EXECUTE AND CLEANUP
+########################################################################
+
+cleancmd=""
+
+#set up clean command
+exewithall=`echo $* | cut -d ' ' -f1`
+executable=`basename ${exewithall}`
+
+if [ -z "${executable}" ]; then
+  echo "Error: executable not found in command line"
+  echo "Command line is: \"${*}\""
+fi
+
+if [ "${clean}" = "1" ]; then
+   cleancmd="rm ${executable}"
+fi
+
+if [ "${executable}" = "java" ]; then
+    if [ ! -z "$KERNEL_DIR" ]; then
+	executable="${KERNEL_DIR}"
+    else
+	executable="${executable}_$$"
+    fi
+fi
+
+#Export Environment for some env's
+if [     "${ENVIRONMENT}" = "LSF" -o  "${ENVIRONMENT}" = "SX" -o\
+  "${ENVIRONMENT}" = "NQE" -o "${ENVIRONMENT}" = "ITANIUM" -o "${ENVIRONMENT}" = "AIXLL" ]; then
+    env | grep BENCHIT | sed -e 's/^\([^=]*\)=\(.*\)$/export \1=\"\2\"/g'> ${executable}_env
+    chmod +x ${executable}_env
+fi
+
+case "${ENVIRONMENT}" in
+    LAM) if [ "$testmode" = "0" ]; then
+	   $execute
+	   if [ -n "${cleancmd}" ]; then
+	       $cleancmd
+	   fi
+         else
+	   echo $execute
+	   if [ -n "${cleancmd}" ]; then
+	       echo $cleancmd
+	   fi
+         fi
+         ;;
+    MPICH) if [ "$testmode" = "0" ]; then
+	       $execute
+	   if [ -n "${cleancmd}" ]; then
+	       $cleancmd
+	   fi
+         else
+	   echo $execute
+	   if [ -n "${cleancmd}" ]; then
+	       echo $cleancmd
+	   fi
+         fi
+         ;;
+    LSF) runcmd="bsub -n ${allocateproz}"
+         curdir=`pwd`
+	 script="${curdir}/temp_script_file_`basename ${executable}`"
+         if [ "${coresizeset}" = "1" ]; then
+	     runcmd="${runcmd} -C ${coresize}"
+         fi
+	 if [ "${memory}" != "0" ]; then
+	     runcmd="${runcmd} -M ${memory}"
+         fi
+#         runcmd="${runcmd} ${execute}"
+	 if [ -f "${script}" ]; then
+	     rm $script
+	 fi
+         echo "#! /bin/sh" >> $script
+	 echo "cd \"${curdir}\""  >> $script
+	 echo ". ./${executable}_env" >>$script
+	 echo "${execute}" >> $script
+	 if [ -n "${cleancmd}" ]; then
+	     echo "${cleancmd}" >> $script
+	     echo "rm ${script}" >>$script
+	 fi
+	 chmod +x $script
+	 runcmd="${runcmd} ${script}"
+         if [ "$testmode" = "0" ]; then
+	   $runcmd
+         else
+	   echo $runcmd
+	   echo "---------------------------------------------------------"
+	   echo "cat LSF temporary script:"
+	   cat $script
+	   echo "---------------------------------------------------------"
+	 fi
+
+######## THIS WAS THE OLD SOLUTION WITHOUT SCRIPT AND ENV-VARS #############
+#         if [ "$testmode" = "0" ]; then
+#	     # exec and grep for batch job id
+#	     bsuboutput=`$runcmd`
+#	     echo $bsuboutput
+#	     batchid=`echo $bsuboutput | sed 's#[^<]*<\([^>]*\).*#\1#g'`
+#	     if [ -n "${cleancmd}" ]; then
+#		 clean="bsub -n 4 -w ended(${batchid}) $cleancmd"
+#		 echo "clean job: ${clean}"
+#		 $clean
+#	     fi
+#         else
+#	     echo "${runcmd}"
+#	     if [ -n "${cleancmd}" ]; then
+#		 echo $cleancmd
+#	     fi
+#	 fi
+############################################################################
+
+	 ;;
+    SX) runcmd="qsub "
+         curdir=`pwd`
+	 script="${curdir}/temp_script_file_`basename ${executable}`"       
+	if [ -f "${script}" ]; then
+             rm $script
+         fi
+	echo "Scriptname=$script"
+	 echo "#! /sbin/ksh" >> $script
+	 echo "#PBS -q test        # queue: dq  for <=8 CPUs">>$script
+	 echo "#PBS -b 1                   # number of nodes">>$script
+	 echo "#PBS -l memsz_job=4gb      # max accumulated memory">>$script
+	 echo "#PBS -l cpunum_prc=${useproz}        # cpus per Node">>$script
+	 echo "#PBS -l cputim_job=299    # max accumulated cputime">>$script
+	 echo "#PBS -N ${executable}" >>$script
+	 echo "cd \"${curdir}\""  >> $script
+	      echo ". ./${executable}_env" >>$script
+
+	 echo "${execute}" >> $script
+	 #echo printenv >>$script
+	if [ -n "${cleancmd}" ]; then
+	     echo "${cleancmd}" >> $script
+	     echo "rm ${script}" >>$script
+	 fi
+	 chmod +x $script
+	 runcmd="${runcmd} ${script}"
+	 echo "Runcmd = ${runcmd}"
+	 echo "" 
+         if [ "$testmode" = "0" ]; then
+	   $runcmd
+         else
+	   echo $runcmd
+	   echo "---------------------------------------------------------"
+	   echo "cat SX temporary script:"
+	   cat $script
+	   echo "---------------------------------------------------------"
+	 fi
+	;;
+    
+     NQE) #runcmd="qsub -l mpp_p=${allocateproz} -l mpp_t=4000 -l p_mpp_t=1000"
+	 if [ "$qtimelimit" != "0" ]; then
+	     timelimit=qtimelimit
+	 else
+	     timelimit=$((BENCHIT_TOTAL_TIMELIMIT/10*11))
+	 fi
+	 allcputimelimit=$((timelimit*allocateproz))
+	 runcmd="qsub -lT $allcputimelimit -lt $timelimit -l mpp_p=${allocateproz} -l mpp_t=$allcputimelimit -l p_mpp_t=$timelimit"
+         curdir=`pwd`
+	 script="${curdir}/temp_script_file_`basename ${executable}`"
+	 if [ -f "${script}" ]; then
+	     rm $script
+	 fi
+         echo "#! /bin/sh" >> $script
+	 echo "cd \"${curdir}\""  >> $script
+	 echo ". ./${executable}_env" >>$script
+	 echo "${execute}" >> $script
+	 if [ -n "${cleancmd}" ]; then
+	     echo "${cleancmd}" >> $script
+	     echo "rm ${script}" >>$script
+	 fi
+	 chmod +x $script
+	 runcmd="${runcmd} ${script}"
+         if [ "$testmode" = "0" ]; then
+	   $runcmd
+         else
+	   echo $runcmd
+	   echo "---------------------------------------------------------"
+	   echo "cat NQE temporary script:"
+	   cat $script
+	   echo "---------------------------------------------------------"
+	 fi
+	 ;; 
+
+
+	ITANIUM)
+		#runcmd="qsub -q <queuename> -n <name> <script> -d <benchit-path>"
+		#### usage
+		# qsub [-a date_time] [-A account_string] [-c { c[=<INTERVAL>] | s | n }]
+		# [-C directive_prefix] [-d path] --D path] [-e path] [-h] [-I] [-j oe] [-k {oe}]
+		# [-l resource_list] [-m {abe}] [-M user_list] [-N jobname] [-o path]
+		# [-p priority] [-q queue] [-r y|n] [-S path] [-u user_list]
+		# [-W otherattributes=value...] [-v variable_list] [-V ] [-z] [script]
+		runcmd="qsub"
+		curdir="`pwd`"
+		#curtime="`date +%H%M%S`"
+		script="${curdir}/temp_script_file_`basename ${executable}`_$$"
+		if [ -f "${script}" ]; then
+			rm $script
+		fi
+
+		if [ "$qtimelimit" != "0" ]; then
+			timelimit=qtimelimit
+		else
+			timelimit=$((BENCHIT_TOTAL_TIMELIMIT/10*11))
+		fi
+		walltime=${timelimit}
+		qtimeh=$((walltime / 3600))
+		walltime=$((timelimit - (qtimeh * 3600)))
+		qtimemin=$((walltime / 60))
+		walltime=$((walltime -  (qtimemin * 60)))
+		qtimesec=${walltime}
+		# Beautify
+		[ "${qtimemin}" -lt 10 ] && qtimemin="0${qtimemin}"
+		[ "${qtimesec}" -lt 10 ] && qtimesec="0${qtimesec}"
+
+		echo "#!/bin/sh" >> $script
+		echo "#PBS -m e" >> $script
+		echo "#PBS -l ncpus=${useproz}" >> $script
+		echo "#PBS -l walltime=${qtimeh}:${qtimemin}:${qtimesec}" >> $script
+		[ "${memory}" != "0" ] && echo "#PBS -l mem=${memory}" >> $script
+		#echo "#PBS -M email" >> $script
+		echo "#PBS -d ${BENCHITROOT}" >> $script
+		[ "${outfileset}" = "1" ] && echo "#PBS -o ${BENCHITROOT}/`basename ${executable}`_$$_out" >> $script
+		echo "#PBS -j oe" >> $script
+		echo "#PBS -q extralongq" >> $script
+		echo "limit coredumpsize 0" >> $script
+		echo "cd \"${curdir}\""  >> $script
+		echo ". ./${executable}_env" >>$script
+		echo "${execute}" >> $script
+		if [ -n "${cleancmd}" ]; then
+			echo "${cleancmd}" >> $script
+			echo "rm ${script}" >>$script
+		fi
+		chmod +x $script
+		runcmd="${runcmd} ${script}"
+		if [ "$testmode" = "0" ]; then
+			$runcmd
+		else
+			echo $runcmd
+			echo "---------------------------------------------------------"
+			echo "cat ITANIUM temporary script:"
+			cat $script
+			echo "---------------------------------------------------------"
+		fi
+	;;
+
+	 
+	 
+    AIXLL) runcmd="${*}"
+	   curdir=`pwd`
+	   script="${curdir}/temp_script_file_`basename ${executable}`"
+	   if [ -f "${script}" ]; then
+	     rm $script
+	   fi
+	   # build script for llsubmit
+	   echo "# @job_type = parallel" >>$script
+       if [ -z "$email" ]; then
+           echo "Please define email address in env variable <email>."
+           echo "Otherwise the job cannot be submitted to LoadLeveler (exit)."
+           exit 1
+       fi
+       echo "# @notify_user = $email" >>$script
+#          no classes in Juelich any longer
+#	   if [ ${allocateproz} -le 12 ]; then
+#	       echo "# @class = small" >>$script 
+#	   else
+#	       echo "# @class = frame2high" >>$script 
+#	   fi
+	   echo "# @node = 1" >>$script
+	   echo "# @wall_clock_limit = 01:30:00" >>$script
+	   if [ "${omp}" = "1" ]; then
+	       echo "# @total_tasks = 1" >>$script
+	       echo "# @resources = ConsumableCpus(${useproz}) ConsumableMemory(2gb)" >>$script
+	   else
+	       echo "# @total_tasks = ${useproz}" >>$script 	   
+	   fi
+	   echo "# @output = out.${executable}" >>$script
+	   echo "# @error = err.${executable}" >>$script
+	   echo "# @queue" >>$script
+	   echo "export MP_SHARED_MEMORY=yes" >>$script
+	   # next part is just for TurboMPI
+	   if [ "${usempi}" = "1" ]; then
+	       echo "export LAPI_USE_SHM=yes" >>$script
+	       echo "export MP_MSG_API=mpi,lapi" >>$script
+	   fi
+	   # set # of threads for openmp
+	   if [ "${omp}" = "1" ]; then
+	       echo "export OMP_NUM_THREADS=${useproz}" >>$script
+	   fi 
+	   echo "cd \"${curdir}\""  >> $script
+	   # not to forget: load environment
+	   echo ". ./${executable}_env" >>$script
+	   echo "${execute}" >> $script
+	   if [ -n "${clencmd}" ]; then
+	       echo "${cleancmd}" >> $script
+	       echo "rm ${script}" >>$script
+	   fi
+	   runcmd="llsubmit ${script}"
+	   if [ "$testmode" = "0" ]; then
+	       $runcmd
+	   else
+	       echo $runcmd
+	       echo "---------------------------------------------------------"
+	       echo "cat LoadLeveler temporary script:"
+	       cat $script
+	       echo "---------------------------------------------------------"
+	   fi
+	   ;; 
+    CACHEGRIND) if [ "$testmode" = "0" ]; then
+               $execute
+               if [ -n "${cleancmd}" ]; then
+                 $cleancmd
+               fi
+             else
+               echo $execute
+               if [ -n "${cleancmd}" ]; then
+                 echo $cleancmd
+               fi
+             fi
+             ;;
+    NOTHING) if [ "$testmode" = "0" ]; then
+	       $execute
+	       if [ -n "${cleancmd}" ]; then
+	         $cleancmd
+	       fi
+             else
+	       echo $execute
+	       if [ -n "${cleancmd}" ]; then
+	         echo $cleancmd
+	       fi
+             fi
+             ;;
+    *) echo "script should never reach this point"
+       exit 1 
+       ;;  
+esac  
+
+########################################################################
+# SIXTH PART: STOP SOME THINGS
+########################################################################
+
+case "${ENVIRONMENT}" in
+    LAM) #shutdown lam; enabled by default
+# lamwipe is deprecated but stronger in shutdown
+# lamhalt is prefered but not that stringent
+#         if [ "${usempi}" = "1" ]; then
+         #if [ "${shutdown}" = "1" ]; then
+           if [ "$testmode" = "0" ]; then
+	     lamhalt 
+           else
+	     echo "lamhalt"
+         fi
+         #fi
+#        fi
+	 ;;
+    MPICH) ;;
+    LSF) ;;
+    SX) ;;
+    NQE) ;;
+    ITANIUM) ;;
+    AIXLL) ;;
+    CACHEGRIND) ;;
+    NOTHING) ;;
+    *) echo "script should never reach this point"
+       exit 1
+       ;;
+esac
+
+###############################################################################
+#  Log-History
+#
+#  $Log: run_benchit,v $
+#  Revision 1.9  2006/09/29 16:35:11  william
+#  fixed wrong robodoc-entries
+#
+#  Revision 1.8  2005/10/24 19:05:49  mickler
+#  - Fixed ITANIUM environment
+#
+#  Revision 1.7  2005/09/11 22:43:16  mickler
+#  # Adapted script to new environment
+#  - Small []-related bugfixes
+#  - Some POSIX conformance bugfixes
+#
+#  Revision 1.6  2005/08/23 13:12:17  william
+#  just a minor bug
+#
+#  Revision 1.5  2005/08/23 13:11:02  william
+#  added a new ENVIRONMENT - corrected some nasty copy&paste-errors
+#
+#  Revision 1.4  2005/08/15 15:23:37  mickler
+#  + Parameters renamed
+#  + Directorynames in script generation escaped
+#  + Changed handling of PARAMETERS to old style
+#
+#  Revision 1.3  2005/07/29 10:48:54  wloch
+#  clearified allocate argument description
+#
+#  Revision 1.2  2005/07/19 12:17:59  wloch
+#  added cvs footer
+#
+#
+###############################################################################

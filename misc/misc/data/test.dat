@@ -1,0 +1,4 @@
+\begin{table}\centering{\tt
+\begin{tabular}{lllllll} \toprule
+$\varepsilon$ &    $N=    10$ &    $N=    20$ &    $N=    40$ &    $N=    80$ &    $N=   160$ &                            \\\midrule
+1.0E+00       &    9.980E-05  &    7.285E-06  

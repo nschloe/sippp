@@ -1,0 +1,2252 @@
+# BenchIT-Resultfile
+#
+# feel free to fill in more architectural information
+#########################################################
+beginofmeasurementinfos
+kernelstring="numerical.rkstep.F95.0.0.gauss2" 
+date="Aug 20 18:39:47 2007"
+numberofprocessorsused=16
+memorysizeused="0"
+comment=
+kerneldescription=
+language="F95"
+compiler="ifort"
+compilerversion=" unknown"
+compilerflags="-free  -O3 -fno-alias -mcpu=itanium2"
+c_compiler_version="1000, build 20070426"
+library1=""
+kernelisparallel=0
+kernelisparallel=0
+is3d=0
+codesequence="z = L*u (factorised)"
+xinmin=2
+xinmax=1001
+y1inmin=-0.00446593
+y1inmax=0.610991
+y2inmin=-0.0044459
+y2inmax=0.0492653
+y3inmin=-0.00444375
+y3inmax=0.0499324
+y4inmin=-0.00444375
+y4inmax=0.0501472
+y5inmin=-0.00442277
+y5inmax=0.0641891
+endofmeasurementinfos
+################################################
+beginofarchitecture
+# Architekturangaben
+nodename="mars"
+hostname="mars.hrsk.tu-dresden.de" 
+###############################################################################
+###############################################################################
+#                                                                             #
+#                                                                             #
+#  B e n c h I T - Performance Measurement for Scientific Applications        #
+#  B e n c h I T - Performance Measurement for Scientific Applications        #
+#                                                                             #
+#                                                                             #
+#  Architectural information about your system, used to compare your system   #
+#  Architectural information about your system, used to compare your system   #
+#  to others. Please fill out the information - your resultfile will not be   #
+#  to others. Please fill out the information - your resultfile will not be   #
+#  accepted on the project homepage without this information.                 #
+#  accepted on the project homepage without this information.                 #
+#                                                                             #
+#                                                                             #
+#  Authors: Guido Juckeland (juckeland@zhr.tu-dresden.de)                     #
+#  Authors: Guido Juckeland (juckeland@zhr.tu-dresden.de)                     #
+#           Stefan Pfl????ger  (pflueger@zhr.tu-dresden.de)                      #
+#           Stefan Pfl????ger  (pflueger@zhr.tu-dresden.de)                      #
+#  $Revision: 1.3 $
+#  $Revision: 1.3 $
+#  $Date: 2007/07/06 16:52:32 $
+#  $Date: 2007/07/06 16:52:32 $
+#                                                                             #
+#                                                                             #
+###############################################################################
+###############################################################################
+
+
+#
+#
+# feel free to insert your data
+# feel free to insert your data
+#
+#
+# quotation marks have to be `escaped'!!!
+# quotation marks have to be `escaped'!!!
+#
+#
+# Note: The examples are from very different systems.
+# Note: The examples are from very different systems.
+#
+#
+
+
+
+
+# Manufacturer of the mainboard, for example: "MSI"
+# Manufacturer of the mainboard, for example: "MSI"
+mainboardmanufacturer="SGI"
+
+
+# Type of the mainboard without manufacturer's name, for example: "845PE Max3 (800 Edition)"
+# Type of the mainboard without manufacturer's name, for example: "845PE Max3 (800 Edition)"
+mainboardtype=""
+
+
+# Chipset of the mainboard, for example: "Intel i845PE"
+# Chipset of the mainboard, for example: "Intel i845PE"
+mainboardchipset=""
+
+
+# Total number of Processors
+# Total number of Processors
+numberofprocessors=2048
+
+
+# Name of the processor, for example: "Intel Pentium 4"
+# Name of the processor, for example: "Intel Pentium 4"
+processorname="Intel Itanium 2"
+
+
+# Processor Serial Number, if available
+# Processor Serial Number, if available
+processorserialnumber=""
+
+
+# Processor version, for example: "x86, Family 6, Model 5, Stepping 1"
+# Processor version, for example: "x86, Family 6, Model 5, Stepping 1"
+processorversion="IA64, Model 2, Revision 1, Stepping 0"
+
+
+# Instruction Set Architecture (ISA) of the processor, for example: "IA-32" or "MIPS"
+# Instruction Set Architecture (ISA) of the processor, for example: "IA-32" or "MIPS"
+processorisaset="IA64"
+
+
+# Several processors are using exact descriptions of their ISA level, for example: "IV" (for MIPS)
+# Several processors are using exact descriptions of their ISA level, for example: "IV" (for MIPS)
+processorisalevel="2"
+
+
+# Extensions of the ISA with an additional number; extendable
+# Extensions of the ISA with an additional number; extendable
+# for example: 
+# for example: 
+
+
+# Clock rate of the processor in Hz, for example: 3060000000
+# Clock rate of the processor in Hz, for example: 3060000000
+processorclockrate="1600000000"
+
+
+# Instruction length in bit, for example: 32 [for RISC] or 0 [for CISC or variable length]
+# Instruction length in bit, for example: 32 [for RISC] or 0 [for CISC or variable length]
+instructionlength="3*41+5"
+
+
+# Processor word length or Word format or xx-bit architecture in bit, for example: 32 
+# Processor word length or Word format or xx-bit architecture in bit, for example: 32 
+processorwordlength="64"
+
+
+# Number of instructions issued to the functional units per clock, for example: 6
+# Number of instructions issued to the functional units per clock, for example: 6
+instructionissue="6"
+
+
+# Number of separate integer units, for example: 2
+# Number of separate integer units, for example: 2
+integerunits="8"
+
+
+# Number of separate floating point units, for example: 3
+# Number of separate floating point units, for example: 3
+floatingpointunits="2"
+
+
+# Number of separate load/store units, for example: 1
+# Number of separate load/store units, for example: 1
+loadstoreunits="4"
+
+
+# Support of multithreading, for example: 1 [0 for no | 1 for yes] [Hyperthreading --> 1]
+# Support of multithreading, for example: 1 [0 for no | 1 for yes] [Hyperthreading --> 1]
+multithreading="0"
+ 
+ 
+# L1 instruction cache size in byte, for example: 12288 
+# L1 instruction cache size in byte, for example: 12288 
+level1icachesize="16384"
+
+
+# L1 data cache size in byte, for example: 8192
+# L1 data cache size in byte, for example: 8192
+level1dcachesize="16384"
+
+
+# L2 cache size in byte, for example: 524288
+# L2 cache size in byte, for example: 524288
+level2cachesize="262144"
+
+
+
+
+# L3 cache size in byte, for example:  33554432
+# L3 cache size in byte, for example:  33554432
+level3cachesize="4194304"
+
+
+# L1 instruction cache organization, for example: "Execution Trace Cache"
+# L1 instruction cache organization, for example: "Execution Trace Cache"
+level1icachetype="4way-associative"
+
+
+# L1 data cache organization, for example: "4-way set-associative, write-through, dual ported"
+# L1 data cache organization, for example: "4-way set-associative, write-through, dual ported"
+level1dcachetype="4way-associative"
+
+
+# L2 cache organization, for example: "8-way set-associative, cache line size 32 words"
+# L2 cache organization, for example: "8-way set-associative, cache line size 32 words"
+level2cachetype="8way-associative"
+
+
+# L3 cache organization, for example: "8-way set-associative, cache line size 128 words with 4 128-byte sectors"
+# L3 cache organization, for example: "8-way set-associative, cache line size 128 words with 4 128-byte sectors"
+level3cachetype="12way-associative"
+
+
+# L2 cache location, for example: "on-chip" or "on-board"
+# L2 cache location, for example: "on-chip" or "on-board"
+level2cachelocation="on-chip"
+
+
+# Support of prefetching, for example: 1 [0 for no | 1 for yes]
+# Support of prefetching, for example: 1 [0 for no | 1 for yes]
+prefetching="0"
+
+
+# Support of preloading, for example: 1 [0 for no | 1 for yes]
+# Support of preloading, for example: 1 [0 for no | 1 for yes]
+preloading="0"
+
+
+# Clock rate of the processor side bus in Hz, for example: 133000000 
+# Clock rate of the processor side bus in Hz, for example: 133000000 
+processorsidebusclockrate="front side bus"
+
+
+# Clock rate of the backside bus in Hz, for example: 200000000
+# Clock rate of the backside bus in Hz, for example: 200000000
+backsideclockrate="333000000"
+
+
+# Structure details of the technology in m, for example: 0.000000130
+# Structure details of the technology in m, for example: 0.000000130
+technologylevel="130"
+
+
+# Memory chip type, for example: "PC-100 SDRAM" or "RIMM-4200"
+# Memory chip type, for example: "PC-100 SDRAM" or "RIMM-4200"
+memorychiptype=""
+
+
+# Memory bus type, for example: "SDRAM bus" or "RAMBUS"
+# Memory bus type, for example: "SDRAM bus" or "RAMBUS"
+memorybustype=""
+
+
+# Clock rate of the memory bus in Hz, for example: 100000000
+# Clock rate of the memory bus in Hz, for example: 100000000
+memorybusclockrate=""
+
+
+# Total size of available memory
+# Total size of available memory
+memorysize=
+
+
+
+
+# Additionaly comment for your system (e.g. Hyper Threading enabled/disabled)
+# Additionaly comment for your system (e.g. Hyper Threading enabled/disabled)
+ systemcomment="SGI Altix 4700"
+
+
+endofarchitecture
+####################################################
+####################################################
+coresperprocessor=2
+
+numberofcorespercpu=2
+processorisaextension1=""
+processorisaextension2=""
+processorisaextension3=""
+beginofenvironmentvariables
+BENCHIT_MPIRUN="mpirun"
+BENCHIT_CC_COMPILER_VERSION="1000, build 20070426"
+OPTIND="1"
+POSIXLY_CORRECT="y"
+BENCHIT_SHELL_INTERPRETER=""
+BENCHIT_MPIF77_C_FLAGS_OMP="-lopenmp"
+BENCHIT_F77_C_FLAGS_STD="-O2"
+BENCHIT_F95_C_FLAGS_STD="-O2"
+OMP_DYNAMIC="FALSE"
+JRE_HOME="/usr/lib/jvm/jre"
+LS_JOBPID="22376"
+LESSOPEN="lessopen.sh %s"
+CPU="ia64"
+BENCHIT_LIB_PVM=""
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_H="1.5 (Mon Aug 20 16:53:42 2007)"
+BENCHIT_F90_COMPILER_VERSION=" unknown"
+COLORTERM="1"
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_TEMPLATE_C="1.12 (Mon Aug 20 16:53:42\
+2007)"
+BENCHIT_F77_C_FLAGS_OMP="-lopenmp"
+BENCHIT_F95_C_FLAGS_OMP="-lopenmp"
+BENCHIT_F_COMPILERFLAGS="-free  -O3 -fno-alias -mcpu=itanium2"
+BENCHIT_KERNEL_FILE_VERSION_QUICKVIEW_SH="1.3 (Mon Aug 20 16:53:42 2007)"
+BENCHIT_PARAMETER_FILE="/work/home0/schloeme/benchit/kernel/numerical/rkstep/F9\
+/0/0/gauss2/PARAMETERS"
+BENCHIT_CPP_SCSL=""
+BENCHIT_RUN_QUEUEOPTIONS=""
+BENCHIT_KERNELBINARY="/work/home0/schloeme/benchit/bin/numerical.rkstep.F95.0.0\
+gauss2.0"
+ENV="/etc/bash.bashrc"
+LSB_UNIXGROUP="zih"
+BENCHIT_KERNEL_FILE_VERSION_ERROR_H="1.1 (Mon Aug 20 16:53:42 2007)"
+BENCHIT_CXX_C_FLAGS_HIGH="-O3 -fno-alias -mcpu=itanium2"
+LS_OPTIONS="-N --color=tty -T 0"
+LSF_LOGDIR="/work/licsoft/lsf/log"
+LSB_EEXEC_REAL_UID=""
+LESS="-M -I"
+PROFILEREAD="true"
+BENCHIT_LIB_FFTW3=" -lfftw3"
+BENCHIT_LIB_ACML=" -lacml"
+BENCHIT_MPICC="icc"
+BENCHIT_RUN_QUEUENAME=""
+BENCHIT_KERNEL_FILE_VERSION_UNAME_MINUS_A="NO REVISION (Mon Aug 20 16:53:42\
+2007)"
+BENCHIT_CPP_ESSL=""
+XDG_DATA_DIRS="/usr/local/share/:/usr/share/:/etc/opt/kde3/share/:/opt/kde3/sha\
+e/:/opt/gnome/share/"
+BENCHIT_KERNEL_FILE_VERSION_BENCHSCRIPT_H="1.1 (Mon Aug 20 16:53:42 2007)"
+BENCHIT_ARCH_SPEED="1G6"
+BENCHIT_JAVA_FLAGS=""
+PWD="/work/home0/schloeme/benchit/tools"
+TERM="xterm"
+BENCHIT_KERNEL_FILE_VERSION_RANDOM="NO REVISION, UNABLE TO READ (Mon Aug 20\
+16:53:42 2007)"
+BENCHIT_KERNEL_START="2"
+BENCHIT_CXX_C_FLAGS=" -DDEBUG=1"
+BENCHIT_CC="icc"
+LESSKEY="/etc/lesskey.bin"
+LSB_SUB_HOST="mars"
+BENCHIT_KERNEL_STEPS="1000"
+XDG_CONFIG_DIRS="/usr/local/etc/xdg/:/etc/xdg/:/etc/opt/gnome/xdg/"
+BENCHIT_F90="ifort"
+BENCHIT_RUN_REDIRECT_CONSOLE="output.txt"
+BASH_VERSION="3.1.17(1)-release"
+PYTHONSTARTUP="/etc/pythonstart"
+BENCHIT_F77_COMPILER_VERSION=" unknown"
+BENCHIT_F95_COMPILER_VERSION=" unknown"
+BENCHIT_MPICC_C_FLAGS_HIGH="-O3 -fno-alias -mcpu=itanium2"
+BENCHIT_JAVA="java"
+SSH_CONNECTION="141.76.176.70 54740 141.30.63.202 22"
+LSB_EXIT_PRE_ABORT="99"
+BENCHIT_INTERACTIVE="0"
+BENCHIT_LIB_PTHREAD="-lpthread"
+BENCHIT_RUN_COREDUMPLIMIT="0"
+BENCHIT_INCLUDES="-I. -I/work/home0/schloeme/benchit"
+COMPILE_GLOBAL="1"
+BENCHIT_CC_C_FLAGS_HIGH="-O3 -fno-alias -mcpu=itanium2"
+_MODULESBEGINENV_="/work/home0/schloeme/.modulesbeginenv"
+myval=""
+BENCHIT_KERNEL_FILE_VERSION_FILEVERSION="NO REVISION (Mon Aug 20 18:34:06\
+2007)"
+BENCHIT_LIB_BLAS="-lblas"
+LSF_EAUTH_CLIENT="user"
+BENCHIT_PERL_INTERPRETER=""
+SHLVL="4"
+BENCHIT_KERNEL_FILE_VERSION_BMERGE_SH="NO REVISION (Mon Aug 20 16:53:42 2007)"
+BENCHIT_KERNEL_FILE_VERSION_FEATURES="NO REVISION (Mon Aug 20 16:53:42 2007)"
+BENCHIT_MPICC_C_FLAGS=""
+LSFUSER="schloeme"
+BENCHIT_F90_C_FLAGS_HIGH="-O3 -fno-alias -mcpu=itanium2"
+LSB_MCPU_HOSTS="mars 1 "
+SHELLOPTS="braceexpand:hashall:interactive-comments:posix"
+BENCHIT_RUN_MAX_MEMORY="0"
+BENCHIT_IGNORE_PARAMETER_FILE="0"
+GTK_PATH="/usr/local/lib/gtk-2.0:/opt/gnome/lib/gtk-2.0:/usr/lib/gtk-2.0"
+LSF_ENVDIR="/work/licsoft/lsf/conf"
+BASH_ARGC="([0]=\"1\" [1]=\"1\")"
+BENCHIT_MPIF77=""
+GNOME2_PATH="/usr/local:/opt/gnome:/usr"
+INPUTRC="/etc/inputrc"
+SSH_CLIENT="141.76.176.70 54740 22"
+HOST="mars"
+BENCHIT_CC_C_FLAGS=" -DDEBUG=1"
+BENCHIT_KERNEL_FILE_VERSION_TMP_ENV="NO REVISION (Mon Aug 20 18:34:12 2007)"
+XNLSPATH="/usr/X11R6/lib/X11/nls"
+LSB_CPUSET_DEDICATED="YES"
+BENCHIT_PHP_INTERPRETER=""
+LSB_JOBRES_PID="22376"
+HISTSIZE="1000"
+BENCHIT_F77="ifort"
+BENCHIT_F95="ifort"
+XKEYSYMDB="/usr/X11R6/lib/X11/XKeysymDB"
+BENCHIT_COMPILER="ifort"
+BENCHIT_USE_VAMPIR_TRACE="0"
+BENCHIT_F90_C_FLAGS="-free"
+USER="schloeme"
+BENCHIT_RUN_TIMELIMIT="0"
+OMP_NESTED="FALSE"
+LD_LIBRARY_PATH="/opt/intel/cmkl//9.0/lib/64:/work/licsoft/lsf/6.2/linux2.6-gli\
+c2.4-sn-ipf/lib:/opt/intel/fc/10.0.023/lib:/opt/intel/cc/10.0.023/lib:/work/lic\
+oft/lsf/6.2/linux2.6-glibc2.4-sn-ipf/lib"
+LSF_INVOKE_CMD="bsub"
+BENCHIT_KERNELBINARY_ARGS=" "
+BENCHIT_KERNEL_INCREMENT="1"
+BENCHIT_MPIF77_C_FLAGS_HIGH="-O3 -fno-alias -mcpu=itanium2"
+BENCHIT_CPP_PVM=""
+BENCHIT_SHELL_FLAGS=""
+BENCHIT_JAVA_HOME=""
+LSB_JOB_EXECUSER="schloeme"
+LOGNAME="schloeme"
+BENCHIT_KERNEL_FILE_VERSION_CMDLINEPARAMS="1.29 (Mon Aug 20 16:53:42 2007)"
+BENCHIT_KERNEL_FILE_VERSION_LOC_CONVERT_SH="NO REVISION (Mon Aug 20 16:53:42\
+2007)"
+BENCHIT_CXX_L_FLAGS="-lm"
+LSF_EAUTH_AUX_PASS="yes"
+SSH_TTY="/dev/pts/3"
+LSB_HOST_CPUSETS="1  mars  /lsf/tud_mars@354845 "
+CSHEDIT="emacs"
+BENCHIT_F77_C_FLAGS_HIGH="-O3 -fno-alias -mcpu=itanium2"
+BENCHIT_F95_C_FLAGS_HIGH="-O3 -fno-alias -mcpu=itanium2"
+XLSF_UIDDIR="/work/licsoft/lsf/6.2/linux2.6-glibc2.4-sn-ipf/lib/uid"
+OPTERR="1"
+myvar="BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP"
+BENCHIT_LIB_ATLAS=" -latlas"
+BENCHIT_KERNEL_FILE_VERSION_ARCHDEFS="NO REVISION (Mon Aug 20 16:53:42 2007)"
+BENCHIT_KERNEL_FILE_VERSION_COMPILERVERSION="NO REVISION, UNABLE TO READ (Mon\
+Aug 20 16:53:42 2007)"
+JAVA_BINDIR="/usr/lib/jvm/jre/bin"
+BENCHIT_CROSSCOMPILE="0"
+_CMDLINE_VARLIST="BENCHIT_KERNELBINARY BENCHIT_KERNELBINARY_ARGS\
+BENCHIT_CMDLINE_ARG_FILENAME_COMMENT BENCHIT_CMDLINE_ARG_PARAMETER_FILE\
+BENCHIT_CMDLINE_ARG_IGNORE_PARAMETER_FILE BENCHIT_NODENAME BENCHIT_CROSSCOMPILE\
+BENCHIT_CMDLINE_ARG_NUM_CPUS BENCHIT_CMDLINE_ARG_NUM_PROCESSES\
+BENCHIT_CMDLINE_ARG_NUM_THREADS_PER_PROCESS BENCHIT_CMDLINE_ARG_RUN_CLEAN\
+BENCHIT_CMDLINE_ARG_RUN_COREDUMPLIMIT BENCHIT_CMDLINE_ARG_RUN_EMAIL_ADDRESS\
+BENCHIT_CMDLINE_ARG_RUN_MAX_MEMORY BENCHIT_CMDLINE_ARG_RUN_QUEUENAME\
+BENCHIT_CMDLINE_ARG_RUN_QUEUETIMELIMIT BENCHIT_CMDLINE_ARG_RUN_REDIRECT_CONSOLE\
+BENCHIT_CMDLINE_ARG_RUN_TEST BENCHIT_CMDLINE_ARG_RUN_USE_MPI\
+BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP "
+BASH="/bin/sh"
+BENCHIT_RUN_QUEUETIMELIMIT=""
+BENCHIT_CPP_FFTW3=""
+BENCHIT_MPIF77_C_FLAGS=""
+BENCHIT_CPP_ACML=""
+BENCHIT_HOSTNAME="mars.hrsk.tu-dresden.de"
+WINDOWMANAGER="/usr/X11R6/bin/kde"
+BENCHIT_NUM_PROCESSES=""
+JAVA_ROOT="/usr/lib/jvm/jre"
+LSB_QUEUE="interactive"
+PIPESTATUS="([0]=\"0\")"
+BENCHIT_KERNEL_FILE_VERSION_FILEVERSION_C="1.6 (Mon Aug 20 16:53:42 2007)"
+KERNELDIR="/work/home0/schloeme/benchit/kernel/numerical/rkstep/F95/0/0/gauss2"
+BENCHIT_LIB_PAPI=""
+BENCHIT_F77_C_FLAGS=""
+BENCHIT_F95_C_FLAGS="-free"
+LSF_SERVERDIR="/work/licsoft/lsf/6.2/linux2.6-glibc2.4-sn-ipf/etc"
+LSB_TRAPSIGS="trap # 15 10 12 2 1"
+LS_SUBCWD="/work/home0/schloeme/benchit"
+FROM_HEADER=""
+GROUPS="()"
+BENCHIT_MPICC_L_FLAGS="-lm -L/opt/intel/fc/10.0.023/lib -lifcore -lmpi"
+DIRSTACK="()"
+LSB_JOBNAME="bash"
+BENCHIT_KERNEL_FILE_VERSION_STRINGLIB_C="1.4 (Mon Aug 20 16:53:42 2007)"
+BENCHIT_LIB_PCL=""
+_="/work/home0/schloeme/benchit/tools/"
+BENCHIT_CC_L_FLAGS="-lm -L/opt/intel/fc/10.0.023/lib -lifcore"
+BENCHIT_KERNEL_FILE_VERSION_RUN_BENCHIT="NO REVISION (Mon Aug 20 16:53:42\
+2007)"
+MANPATH="/opt/intel/cmkl//9.0/man:/opt/intel/fc/10.0.023/man:/opt/intel/cc/10.0\
+023/man:/work/licsoft/lsf/6.2/man:/usr/local/man:/usr/local/share/man:/usr/shar\
+/man:/usr/X11R6/man:/opt/gnome/share/man:/opt/intel/vtune/man"
+BENCHIT_KERNEL_FILE_VERSION_FIRSTTIME="1.29 (Mon Aug 20 16:53:42 2007)"
+PAGER="less"
+LSB_BATCH_JID="354845"
+LSB_ECHKPNT_RSH_CMD="ssh"
+BENCHIT_CPP_BLAS=""
+G_BROKEN_FILENAMES="1"
+BENCHIT_KERNEL_FILE_VERSION_ENVHASHBUILDER="NO REVISION (Mon Aug 20 18:34:04\
+2007)"
+BENCHIT_F90_L_FLAGS="-lm"
+CONFIGURE_MODE="COMPILE"
+MODULE_VERSION="3.1.6"
+OLDCWD="/work/home0/schloeme/benchit"
+MAIL="/var/mail/schloeme"
+CVSROOT=":ext:schloeme@rupert.urz.tu-dresden.de:/cvs-base/mg-root"
+NNTPSERVER="news"
+BENCHIT_NUM_CPUS="16"
+BENCHIT_PERL_FLAGS=""
+INFODIR="/usr/local/info:/usr/share/info:/usr/info"
+_LMFILES_="/usr/share/modules/modules/compilers/icc/default:/usr/share/modules/\
+odules/compilers/ifc/default:/usr/share/modules/modules/libraries/cmkl/default"
+KERNELNAME_FULL=""
+BENCHIT_MANDATORY_FILES="tools/run_benchit tools/uname_minus_a benchit.c\
+interface.h tools/envhashbuilder.c tools/bienvhash.template.c tools/bienvhash.h\
+tools/stringlib.c tools/stringlib.h "
+PS4="+ "
+LSB_ACCT_FILE="/tmp/.1187627521.354845.acct"
+INFOPATH="/usr/local/info:/usr/share/info:/usr/info:/opt/gnome/share/info"
+MODULEPATH="/usr/share/modules/modules/compilers:/usr/share/modules/modules/deb\
+ggers:/usr/share/modules/modules/libraries:/usr/share/modules/modules/tools:/us\
+/share/modules/modules/applications"
+OSTYPE="linux"
+MINICOM="-c on"
+BENCHIT_KERNEL_FILE_VERSION_HELPER_SH="1.14 (Mon Aug 20 16:53:42 2007)"
+LSB_DEFAULTPROJECT="a1a"
+BENCHITROOT="/work/home0/schloeme/benchit"
+BENCHIT_PHP_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_STRINGLIB_H="1.2 (Mon Aug 20 16:53:42 2007)"
+BENCHIT_RUBY_INTERPRETER=""
+BENCHIT_LIB_MKL=""
+BASH_LINENO="([0]=\"78\" [1]=\"0\")"
+HOSTTYPE="IA64"
+MODULESHOME="/usr/share/modules"
+LSB_JOBID="354845"
+BENCHIT_MPIF77_L_FLAGS="-lm"
+EUID="36930"
+MACHTYPE="ia64-suse-linux"
+QT_SYSTEM_DIR="/usr/share/desktop-data"
+BENCHIT_CPP_PTHREADS=""
+BENCHIT_LIB_MPI=""
+SCRIPTNAME="COMPILE.SH"
+BENCHIT_F77_L_FLAGS="-lm"
+BENCHIT_F95_L_FLAGS="-lm"
+BENCHIT_KERNEL_FILE_VERSION_LOC_REPL="NO REVISION (Mon Aug 20 16:53:42 2007)"
+BENCHIT_OPTIONAL_FILES="LOCALDEFS/PROTOTYPE_input_architecture\
+LOCALDEFS/PROTOTYPE_input_display "
+BENCHIT_RUN_OUTPUT_DIR="/work/home0/schloeme/benchit/output"
+JAVA_HOME="/usr/lib/jvm/jre"
+BENCHIT_CPP_ATLAS=""
+BENCHIT_CXX_C_FLAGS_STD="-O2"
+HOME="/work/home0/schloeme"
+BENCHIT_DEBUGLEVEL="3"
+LSB_EEXEC_REAL_GID=""
+LSF_VERSION="15"
+LS_COLORS="no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01\
+cd=40;33;01:or=41;33;01:ex=00;32:*.cmd=00;32:*.exe=01;32:*.com=01;32:*.bat=01;3\
+:*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=\
+0;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.zip=00;31:*.zoo=00;31:*.z=00;31:*.Z=\
+0;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.avi=01;35:*.\
+mp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mng=01;35:*.mov=01;\
+5:*.mpg=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=01;35:*.ppm=01;35:*.tga\
+01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl=01;35:*.wmv=01;35:*.a\
+ff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*.voc=00;32:*.wav=00;32\
+"
+C_COMPILE="icc  -DDEBUG=1 -O2 -I. -I/work/home0/schloeme/benchit \
+-DDEBUGLEVEL=3"
+SHELLSCRIPT_DEBUG="0"
+BENCHIT_RUN_ACCURACY=""
+MODULE_VERSION_STACK="3.1.6"
+BENCHIT_LIB_SCSL=" -lscsl"
+BENCHIT_CXX_C_FLAGS_OMP=""
+BENCHIT_RUN_EMAIL_ADDRESS=""
+LSB_HOSTS="mars"
+ACLOCAL_FLAGS="-I /opt/gnome/share/aclocal"
+LSB_JOBINDEX="0"
+BINARY_TYPE_HPC="linux2.6-glibc2.4-sn-ipf"
+HOSTNAME="mars"
+KERNELBASEDIR="/work/home0/schloeme/benchit/kernel"
+BENCHIT_KERNEL_FILE_VERSION_ENVHASHBUILDER_C="1.3 (Mon Aug 20 16:53:42 2007)"
+BENCHIT_COMPILERFLAGS="-free  -O3 -fno-alias -mcpu=itanium2"
+BENCHIT_CPP_PAPI="-DUSE_PAPI"
+_VARLIST="'BENCHITROOT"
+CVS_RSH="ssh"
+BENCHIT_NODENAME="mars"
+SHELL="/bin/bash"
+BASH_ARGV="([0]=\
+"/work/home0/schloeme/benchit/kernel/numerical/rkstep/F95/0/0/gauss2/COMPILE.SH\
+" [1]=\
+"numerical.rkstep.F95.0.0.gauss2\
+")"
+BENCHIT_JAVAC_FLAGS_HIGH=""
+LSF_LIBDIR="/work/licsoft/lsf/6.2/linux2.6-glibc2.4-sn-ipf/lib"
+BENCHIT_KERNEL_FILE_VERSION_ENVIRONMENTS="NO REVISION, UNABLE TO READ (Mon Aug\
+20 16:53:42 2007)"
+LESSCLOSE="lessclose.sh %s %s"
+BENCHIT_LIB_ESSL=" -lessl"
+myfile="tools/stringlib.h"
+BENCHIT_KERNELNAME="numerical.rkstep.F95.0.0.gauss2"
+F_COMPILE="ifort -free  -O3 -fno-alias -mcpu=itanium2"
+BENCHIT_ENVIRONMENT="LSF_merkur"
+LSB_CHKFILENAME="/work/home0/schloeme/.lsbatch/1187627521.354845"
+BENCHIT_CPP_PCL=" -DUSE_PCL"
+GROFF_NO_SGR="yes"
+HLL="F95"
+OLDIR="/work/home0/schloeme/benchit"
+BENCHIT_F90_SOURCE_FORMAT_FLAG=""
+BENCHIT_MPICC_C_FLAGS_STD="-O2"
+PATH="/work/home0/schloeme/benchit/tools:/work/licsoft/lsf/6.2/linux2.6-glibc2.\
+-sn-ipf/bin:/opt/intel/fc/10.0.023/bin:/opt/intel/cc/10.0.023/bin:/work/licsoft\
+lsf/6.2/linux2.6-glibc2.4-sn-ipf/etc:/work/licsoft/lsf/6.2/linux2.6-glibc2.4-sn\
+ipf/bin:/work/home0/schloeme/bin:/usr/local/bin:/usr/bin:/usr/X11R6/bin:/bin:/u\
+r/games:/opt/gnome/bin:/opt/kde3/bin:/usr/lib/jvm/jre/bin:/usr/lib/mit/bin:/usr\
+lib/mit/sbin:."
+PPID="22387"
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_TEMPLATE_JAVA="1.4 (Mon Aug 20 16:53:42\
+2007)"
+BENCHIT_RUN_TEST="0"
+XCURSOR_THEME="crystalwhite"
+LSF_BINDIR="/work/licsoft/lsf/6.2/linux2.6-glibc2.4-sn-ipf/bin"
+TEXINPUTS=":/work/home0/schloeme/.TeX:/usr/share/doc/.TeX:/usr/doc/.TeX"
+LSB_JOBEXIT_STAT="0"
+BR="0"
+BENCHIT_JAVAC_FLAGS=""
+BENCHIT_MPICC_C_FLAGS_OMP=""
+G_FILENAME_ENCODING="@locale,UTF-8,ISO-8859-15,CP1252"
+BENCHIT_KERNEL_FILE_VERSION_COMMONDEFS="NO REVISION (Mon Aug 20 16:53:42 2007)"
+LSB_INTERACTIVE="Y"
+BENCHIT_CC_C_FLAGS_STD="-O2"
+BENCHIT_CXX_COMPILER_VERSION="1000, build 20070426"
+BENCHIT_FILENAME_COMMENT="0"
+CURDIR="/work/home0/schloeme/benchit"
+LSF_EAUTH_SERVER="mbatchd@tud_mars"
+IFS="' 	"
+BENCHIT_DEFINES=" -DDEBUGLEVEL=3"
+LS_EXEC_T="START"
+BENCHIT_CC_C_FLAGS_OMP=""
+UID="36930"
+BENCHIT_F90_C_FLAGS_STD="-O2"
+OLDPWD="/work/home0/schloeme/benchit"
+BENCHIT_JAVAC=""
+BENCHIT_F90_C_FLAGS_OMP="-lopenmp"
+LSB_JOBFILENAME="/work/home0/schloeme/.lsbatch/1187627521.354845"
+LSB_SHMODE="y"
+BENCHIT_ARCH_SHORT="InIt"
+LOADEDMODULES="icc/default:ifc/default:cmkl/default"
+BENCHIT_CPP_MKL=""
+BENCHIT_F95_SOURCE_FORMAT_FLAG=""
+BASH_SOURCE="([0]=\
+"/work/home0/schloeme/benchit/kernel/numerical/rkstep/F95/0/0/gauss2/COMPILE.SH\
+")"
+BENCHIT_KERNEL_FILE_VERSION_CONFIGURE="1.46 (Mon Aug 20 16:53:42 2007)"
+LESS_ADVANCED_PREPROCESSOR="no"
+BENCHIT_C_COMPILERFLAGS=" -DDEBUG=1 -O2"
+BENCHIT_RUBY_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_BENCHSCRIPT_C="1.2 (Mon Aug 20 16:53:42 2007)"
+BASH_VERSINFO="([0]=\
+"3\
+" [1]=\
+"1\
+" [2]=\
+"17\
+" [3]=\
+"1\
+" [4]=\
+"release\
+" [5]=\
+"ia64-suse-linux\
+")"
+MORE="-sl"
+BENCHIT_CXX="icc"
+BENCHIT_LD_LIBRARY_PATH="/work/home1/jmuelle/benchit/jbi/jni"
+BENCHIT_NUM_THREADS_PER_PROCESS=""
+PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/local/share/pkgconfig:/usr/lib/p\
+gconfig:/usr/share/pkgconfig:/opt/kde3/lib/pkgconfig:/opt/gnome/lib/pkgconfig:/\
+pt/gnome/lib/pkgconfig:/opt/gnome/share/pkgconfig"
+BENCHIT_MPIF77_C_FLAGS_STD="-O2"
+BENCHIT_RUN_LINEAR="0"
+BENCHIT_CPP_MPI=" -DUSE_MPI"
+endofenvironmentvariables
+beginofdisplay
+
+xoutmin=0
+xoutmax=1100
+xaxisticks=11
+xaxislogbase=0
+xaxistext="Problem dimension N"
+
+y1outmin=0
+y1outmax=0.7
+y1axisticks=7
+y1axislogbase=0
+y1axistext="No. of iterations"
+
+y2outmin=0
+y2outmax=0.05
+y2axisticks=5
+y2axislogbase=0
+y2axistext="No. of iterations"
+
+y3outmin=0
+y3outmax=0.05
+y3axisticks=5
+y3axislogbase=0
+y3axistext="No. of iterations"
+
+y4outmin=0
+y4outmax=0.06
+y4axisticks=6
+y4axislogbase=0
+y4axistext="No. of iterations"
+
+y5outmin=0
+y5outmax=0.07
+y5axisticks=7
+y5axislogbase=0
+y5axistext="No. of iterations"
+
+numabscissae=986
+numfunctions=5
+
+## Fuer Architektur- oder Messmerkmal : abc
+#
+# displayabc=1                                           # Steuervariable
+# #Textfeld-Eigenschaften des date-Strings               # Kommentar
+# tabc="ABC-Merkmal: 3 Tm"                               # Text: Wert
+# xabc=                                                  # x-Position
+# yabc=                                                  # y-Position
+# fonttypabc=                                            # Schriftart
+# fontsizeabc=                                           # Schriftgroesse
+tlegendfunction1="ID"
+xlegendfunction1=
+ylegendfunction1=
+fonttypelegendfunction1=
+fontsizelegendfunction1=
+
+tlegendfunction2="BlockJac"
+xlegendfunction2=
+ylegendfunction2=
+fonttypelegendfunction2=
+fontsizelegendfunction2=
+
+tlegendfunction3="LowerBLockSOR"
+xlegendfunction3=
+ylegendfunction3=
+fonttypelegendfunction3=
+fontsizelegendfunction3=
+
+tlegendfunction4="UpperBLockSOR"
+xlegendfunction4=
+ylegendfunction4=
+fonttypelegendfunction4=
+fontsizelegendfunction4=
+
+tlegendfunction5="BlockSSOR"
+xlegendfunction5=
+ylegendfunction5=
+fonttypelegendfunction5=
+fontsizelegendfunction5=
+
+#### alle optionalen Anzeigen ueber Wahrheitswerte display***=1 aktivierbar
+#### alle optionalen Anzeigen ueber Wahrheitswerte display***=1 aktivierbar
+#
+#
+# Optionale Angaben zu den Messprogrammen:
+# Optionale Angaben zu den Messprogrammen:
+#
+#
+# Ausblenden des kernelstrings sinnvoll, wenn separate Bildunterschrift
+# Ausblenden des kernelstrings sinnvoll, wenn separate Bildunterschrift
+# verwendet werden soll!
+# verwendet werden soll!
+displaykernelstring=1
+# topkernelstring=1|0: Bild-Ueber-|Unterschrift
+# topkernelstring=1|0: Bild-Ueber-|Unterschrift
+topkernelstring=1
+fonttypkernelstring=""
+fontsizekernelstring=
+
+
+displaycomment=1
+# 
+# 
+tcomment="Comment:"
+xcomment=
+ycomment=
+fonttypcomment=
+fontsizecomment=
+
+
+displaydate=1
+# Textfeld-Eigenschaften des date-Strings
+# Textfeld-Eigenschaften des date-Strings
+tdate="Datum: "
+xdate=""
+ydate=""
+fonttypdate=""
+fontsizedate=""
+
+
+displaylanguage=0
+# Textfeld-Eigenschaften des language-Strings
+# Textfeld-Eigenschaften des language-Strings
+tlanguage="HLL: "
+xlanguage=""
+ylanguage=""
+fonttyplanguage=""
+fontsizelanguage=""
+
+
+displaycompiler=0
+# Textfeld-Eigenschaften des compiler-Strings
+# Textfeld-Eigenschaften des compiler-Strings
+tcompiler="Compiler: "
+xcompiler=""
+ycompiler=""
+fonttypcompiler=""
+fontsizecompiler=""
+
+
+displaycompilerflags=0
+# Textfeld-Eigenschaften des compilerflags-Strings
+# Textfeld-Eigenschaften des compilerflags-Strings
+tcompilerflags="Compiler-Flags: "
+xcompilerflags=""
+ycompilerflags=""
+fonttypcompilerflags=""
+fontsizecompilerflags=""
+
+
+displaycodesequence=1
+# Textfeld-Eigenschaften des codesequence-Strings
+# Textfeld-Eigenschaften des codesequence-Strings
+tcodesequence=""
+xcodesequence=""
+ycodesequence=""
+fonttypcodesequence=""
+fontsizecodesequence=""
+
+
+# Angaben zu den Architekturmerkmalen, Namen etc. (alle Angaben OPTIONAL):
+# Angaben zu den Architekturmerkmalen, Namen etc. (alle Angaben OPTIONAL):
+
+
+displayhostname=0
+# Textfeld-Eigenschaften des hostname-Strings
+# Textfeld-Eigenschaften des hostname-Strings
+thostname="Hostname: "
+xhostname=""
+yhostname=""
+fonttyphostname=""
+fontsizehostname=""
+
+
+displaynodename=0
+# Textfeld-Eigenschaften des nodename-Strings
+# Textfeld-Eigenschaften des nodename-Strings
+tnodename="Nodename: "
+xnodename=""
+ynodename=""
+fonttypnodename=""
+fontsizenodename=""
+
+
+displaymainboardmanufacturer=0
+# Textfeld-Eigenschaften des mainboardmanufacturer-Strings
+# Textfeld-Eigenschaften des mainboardmanufacturer-Strings
+tmainboardmanufacturer="Manufacturer of  mainboard: "
+xmainboardmanufacturer=""
+ymainboardmanufacturer=""
+fonttypmainboardmanufacturer=""
+fontsizemainboardmanufacturer=""
+
+
+displaymainboardtype=0
+# Textfeld-Eigenschaften des mainboardtype-Strings
+# Textfeld-Eigenschaften des mainboardtype-Strings
+tmainboardtype="Mainboard type: "
+xmainboardtype=""
+ymainboardtype=""
+fonttypmainboardtype=""
+fontsizemainboardtype=""
+
+
+displaymainboardchipset=0
+# Textfeld-Eigenschaften des mainboardchipset-Strings
+# Textfeld-Eigenschaften des mainboardchipset-Strings
+tmainboardchipset="Mainboard Chipset: "
+xmainboardchipset=""
+ymainboardchipset=""
+fonttypmainboardchipset=""
+fontsizemainboardchipset=""
+
+
+displayprocessorname=0
+# Textfeld-Eigenschaften des processorname-Strings
+# Textfeld-Eigenschaften des processorname-Strings
+tprocessorname="Processor name: "
+xprocessorname=""
+yprocessorname=""
+fonttypprocessorname=""
+fontsizeprocessorname=""
+
+
+displayprocessorserialnumber=0
+# Textfeld-Eigenschaften des processorserialnumber-Strings
+# Textfeld-Eigenschaften des processorserialnumber-Strings
+tprocessorserialnumber="Processor Serial No.: "
+yprocessorserialnumber=""
+fonttypprocessorserialnumber=""
+fontsizeprocessorserialnumber=""
+
+
+displayprocessorversion=0
+# Textfeld-Eigenschaften des processorversion-Strings
+# Textfeld-Eigenschaften des processorversion-Strings
+tprocessorversion="Processor Version: "
+xprocessorversion=""
+yprocessorversion=""
+fonttypprocessorversion=""
+fontsizeprocessorversion=""
+
+
+displayprocessorisaset=0
+# Textfeld-Eigenschaften des processorisaset-Strings
+# Textfeld-Eigenschaften des processorisaset-Strings
+tprocessorisaset="Instruction Set Architecture: "
+xprocessorisaset=""
+yprocessorisaset=""
+fonttypprocessorisaset=""
+fontsizeprocessorisaset=""
+
+
+displayprocessorisalevel=0
+# Textfeld-Eigenschaften des processorisalevel-Strings
+# Textfeld-Eigenschaften des processorisalevel-Strings
+tprocessorisalevel="ISA Level: "
+xprocessorisalevel=""
+yprocessorisalevel=""
+fonttypprocessorisalevel=""
+fontsizeprocessorisalevel=""
+
+
+displayprocessorisaextension1=0
+# Textfeld-Eigenschaften des processorisaextension1-Strings
+# Textfeld-Eigenschaften des processorisaextension1-Strings
+tprocessorisaextension1="ISA Extension: "
+xprocessorisaextension1=""
+yprocessorisaextension1=""
+fonttypprocessorisaextension1=""
+fontsizeprocessorisaextension1=""
+
+
+displayprocessorisaextension2=0
+# Textfeld-Eigenschaften des processorisaextension2-Strings
+# Textfeld-Eigenschaften des processorisaextension2-Strings
+tprocessorisaextension2="ISA Extension: "
+xprocessorisaextension2=""
+yprocessorisaextension2=""
+fonttypprocessorisaextension2=""
+fontsizeprocessorisaextension2=""
+
+
+displayprocessorisaextension3=0
+# Textfeld-Eigenschaften des processorisaextension3-Strings
+# Textfeld-Eigenschaften des processorisaextension3-Strings
+tprocessorisaextension3="ISA Extension: "
+xprocessorisaextension3=""
+yprocessorisaextension3=""
+fonttypprocessorisaextension3=""
+fontsizeprocessorisaextension3=""
+
+
+displayprocessorclockrate=0
+# Textfeld-Eigenschaften des processorclockrate-Strings
+# Textfeld-Eigenschaften des processorclockrate-Strings
+tprocessorclockrate="Processor Clock Rate: "
+xprocessorclockrate=""
+yprocessorclockrate=""
+fonttypprocessorclockrate=""
+fontsizeprocessorclockrate=""
+
+
+displayinstructionlength=0
+# Textfeld-Eigenschaften des instructionlength-Strings
+# Textfeld-Eigenschaften des instructionlength-Strings
+tinstructionlength="Instruction Length: "
+xinstructionlength=""
+yinstructionlength=""
+fonttypinstructionlength=""
+fontsizeinstructionlength=""
+
+
+displayprocessorwordlength=0
+# Textfeld-Eigenschaften des processorwordlength-Strings
+# Textfeld-Eigenschaften des processorwordlength-Strings
+tprocessorwordlength="Processor Word Length: "
+xprocessorwordlength=""
+yprocessorwordlength=""
+fonttypprocessorwordlength=""
+fontsizeprocessorwordlength=""
+
+
+displayinstructionissue=0
+# Textfeld-Eigenschaften des instructionissue-Strings
+# Textfeld-Eigenschaften des instructionissue-Strings
+tinstructionissue="Instruction Issue: "
+xinstructionissue=""
+yinstructionissue=""
+fonttypinstructionissue=""
+fontsizeinstructionissue=""
+
+
+displayintegerunits=0
+# Textfeld-Eigenschaften des integerunits-Strings
+# Textfeld-Eigenschaften des integerunits-Strings
+tintegerunits="Number of Integer Units: "
+xintegerunits=""
+yintegerunits=""
+fonttypintegerunits=""
+fontsizeintegerunits=""
+
+
+displayfloatingpointunits=0
+# Textfeld-Eigenschaften des floatingpointunits-Strings
+# Textfeld-Eigenschaften des floatingpointunits-Strings
+tfloatingpointunits="Number of Floating Point Units: "
+xfloatingpointunits=""
+yfloatingpointunits=""
+fonttypfloatingpointunits=""
+fontsizefloatingpointunits=""
+
+
+displayloadstoreunits=0
+# Textfeld-Eigenschaften des loadstoreunits-Strings
+# Textfeld-Eigenschaften des loadstoreunits-Strings
+tloadstoreunits="Number of Load/Store Units: "
+xloadstoreunits=""
+yloadstoreunits=""
+fonttyploadstoreunits=""
+fontsizeloadstoreunits=""
+
+
+displaylevel1icachesize=0
+# Textfeld-Eigenschaften des level1icachesize-Strings
+# Textfeld-Eigenschaften des level1icachesize-Strings
+tlevel1icachesize="L1 Instruction Cache Size: "
+xlevel1icachesize=""
+ylevel1icachesize=""
+fonttyplevel1icachesize=""
+fontsizelevel1icachesize=""
+
+
+displaylevel1icachetype=0
+# Textfeld-Eigenschaften des level1icachetype-Strings
+# Textfeld-Eigenschaften des level1icachetype-Strings
+tlevel1icachetype="L1 Instruction Cache Type: "
+xlevel1icachetype=""
+ylevel1icachetype=""
+fonttyplevel1icachetype=""
+fontsizelevel1icachetype=""
+
+
+displaylevel1dcachesize=0
+# Textfeld-Eigenschaften des level1dcachesize-Strings
+# Textfeld-Eigenschaften des level1dcachesize-Strings
+tlevel1dcachesize="L1 Data Cache Size: "
+xlevel1dcachesize=""
+ylevel1dcachesize=""
+fonttyplevel1dcachesize=""
+fontsizelevel1dcachesize=""
+
+
+displaylevel1dcachetype=0
+# Textfeld-Eigenschaften des level1dcachetype-Strings
+# Textfeld-Eigenschaften des level1dcachetype-Strings
+tlevel1dcachetype="L1 Data Cache Type: "
+xlevel1dcachetype=""
+ylevel1dcachetype=""
+fonttyplevel1dcachetype=""
+fontsizelevel1dcachetype=""
+
+
+displaylevel2cachesize=0
+# Textfeld-Eigenschaften des level2cachesize-Strings
+# Textfeld-Eigenschaften des level2cachesize-Strings
+tlevel2cachesize="L2 Data Cache Size: "
+xlevel2cachesize=""
+ylevel2cachesize=""
+fonttyplevel2cachesize=""
+fontsizelevel2cachesize=""
+
+
+displaylevel2cachetype=0
+# Textfeld-Eigenschaften des level2cachetype-Strings
+# Textfeld-Eigenschaften des level2cachetype-Strings
+tlevel2cachetype="L2 Cache Type: "
+xlevel2cachetype=""
+ylevel2cachetype=""
+fonttyplevel2cachetype=""
+fontsizelevel2cachetype=""
+
+
+displaylevel2cachelocation=0
+# Textfeld-Eigenschaften des level2cachelocation-Strings
+# Textfeld-Eigenschaften des level2cachelocation-Strings
+tlevel2cachelocation="L2 Cache Location: "
+xlevel2cachelocation=""
+ylevel2cachelocation=""
+fonttyplevel2cachelocation=""
+fontsizelevel2cachelocation=""
+
+
+displaylevel3cachesize=0
+# Textfeld-Eigenschaften des level3cachesize-Strings
+# Textfeld-Eigenschaften des level3cachesize-Strings
+tlevel3cachesize="L3 Data Cache Size: "
+xlevel3cachesize=""
+ylevel3cachesize=""
+fonttyplevel3cachesize=""
+fontsizelevel3cachesize=""
+
+
+displaylevel3cachetype=0
+# Textfeld-Eigenschaften des level3cachetype-Strings
+# Textfeld-Eigenschaften des level3cachetype-Strings
+tlevel3cachetype="L3 Cache Type: "
+xlevel3cachetype=""
+ylevel3cachetype=""
+fonttyplevel3cachetype=""
+fontsizelevel3cachetype=""
+
+
+displaylevel3cachelocation=0
+# Textfeld-Eigenschaften des -level3cachelocationStrings
+# Textfeld-Eigenschaften des -level3cachelocationStrings
+tlevel3cachelocation="L3 Cache Location: "
+xlevel3cachelocation=""
+ylevel3cachelocation=""
+fonttyplevel3cachelocation=""
+fontsizelevel3cachelocation=""
+
+
+displayprefetching=0
+# Textfeld-Eigenschaften des prefetching-Strings
+# Textfeld-Eigenschaften des prefetching-Strings
+tprefetching="Prefetching: "
+xprefetching=""
+yprefetching=""
+fonttypprefetching=""
+fontsizeprefetching=""
+
+
+displaypreloading=0
+# Textfeld-Eigenschaften des preloading-Strings
+# Textfeld-Eigenschaften des preloading-Strings
+tpreloading="Preloading: "
+xpreloading=""
+ypreloading=""
+fonttyppreloading=""
+fontsizepreloading=""
+
+
+displaybacksideclockrate=0
+# Textfeld-Eigenschaften des backsideclockrate-Strings
+# Textfeld-Eigenschaften des backsideclockrate-Strings
+tbacksideclockrate="Clock Rate of the Backside Bus: "
+xbacksideclockrate=""
+ybacksideclockrate=""
+fonttypbacksideclockrate=""
+fontsizebacksideclockrate=""
+
+
+displaytechnologylevel=0
+# Textfeld-Eigenschaften des technologylevel-Strings
+# Textfeld-Eigenschaften des technologylevel-Strings
+ttechnologylevel="Technology Level: "
+xtechnologylevel=""
+ytechnologylevel=""
+fonttyptechnologylevel=""
+fontsizetechnologylevel=""
+
+
+displaymemorychiptype=0
+# Textfeld-Eigenschaften des memorychiptype-Strings
+# Textfeld-Eigenschaften des memorychiptype-Strings
+tmemorychiptype="Memory Chip Type: "
+xmemorychiptype=""
+ymemorychiptype=""
+fonttypmemorychiptype=""
+fontsizememorychiptype=""
+
+
+displaymemorybustype=0
+# Textfeld-Eigenschaften des memorybustype-Strings
+# Textfeld-Eigenschaften des memorybustype-Strings
+tmemorybustype="Memory Bus Type: "
+xmemorybustype=""
+ymemorybustype=""
+fonttypmemorybustype=""
+fontsizememorybustype=""
+
+
+displaymemorybusclockrate=0
+# Textfeld-Eigenschaften des memorybusclockrate-Strings
+# Textfeld-Eigenschaften des memorybusclockrate-Strings
+tmemorybusclockrate="Memory Bus Clock Rate: "
+xmemorybusclockrate=""
+ymemorybusclockrate=""
+fonttypmemorybusclockrate=""
+fontsizememorybusclockrate=""
+endofdisplay
+endofdisplay
+####################################################
+####################################################
+beginofidentifierstrings
+beginofidentifierstrings
+# Ersetzung der identifiers durch Strings in den Menu-Windows
+# Ersetzung der identifiers durch Strings in den Menu-Windows
+hostname="Hostname"
+nodename="Nodename"
+mainboardmanufacturer="Manufacturer of  mainboard"
+mainboardtype="Mainboard type"
+mainboardchipset="Mainboard Chipset"
+processorname="Processor name"
+processorserialnumber="Processor Serial No."
+processorversion="Processor Version"
+processorisaset="Instruction Set Architecture"
+processorisalevel="ISA Level"
+processorisaextension1="ISA Extension"
+processorisaextension2="ISA Extension"
+processorisaextension3="ISA Extension"
+processorclockrate="Processor Clock Rate"
+instructionlength="Instruction Length"
+processorwordlength="Processor Word Length"
+instructionissue="Instruction Issue"
+integerunits="Number of Integer Units"
+floatingpointunits="Number of Floating Point Units"
+loadstoreunits="Number of Load/Store Units"
+level1icachesize="L1 Instruction Cache Size"
+level1icachetype="L1 Instruction Cache Type"
+level1dcachesize="L1 Data Cache Size"
+level1dcachetype="L1 Data Cache Type"
+level2cachesize="L2 Data Cache Size"
+level2cachetype="L2 Cache Type"
+level2cachelocation="L2 Cache Location"
+level3cachesize="L3 Data Cache Size"
+level3cachetype="L3 Cache Type"
+level3cachelocation="L3 Cache Location"
+prefetching="Prefetching"
+preloading="Preloading"
+backsideclockrate="Clock Rate of the Backside Bus"
+technologylevel="Technology Level"
+memorychiptype="Memory Chip Type"
+memorybustype="Memory Bus Type"
+memorybusclockrate="Memory Bus Clock Rate"
+numberofprocessorsused="Number Of Used Processors"
+memorysizeused="Used Memory Size"
+systemcomment="Additional System Information"
+endofidentifierstrings
+endofidentifierstrings
+###################################################
+###################################################
+beginofdata
+2	-0.00446593	-0.0044459	-0.00444375	-0.00444375	-0.00442277	
+3	-0.00446068	-0.00442182	-0.00442683	-0.00442301	-0.0044068	
+4	-0.00445973	-0.00438987	-0.00440871	-0.00439178	-0.00437676	
+5	-0.00444781	-0.00440394	-0.00442492	-0.00441586	-0.00434576	
+6	-0.00445162	-0.00440179	-0.00442277	-0.00441491	-0.00434171	
+7	-0.00444972	-0.00439178	-0.00442182	-0.0044037	-0.00439965	
+8	-0.00443899	-0.00435268	-0.00437366	-0.0043739	-0.00431978	
+9	-0.00444662	-0.00437676	-0.00440871	-0.00439774	-0.00437771	
+10	-0.00442468	-0.00424682	-0.00440465	-0.00439297	-0.00428688	
+11	-0.00441085	-0.00435959	-0.00439869	-0.00437581	-0.00424777	
+12	-0.00444089	-0.00434791	-0.00439774	-0.00437581	-0.00424277	
+13	-0.00443565	-0.00434481	-0.00439583	-0.00437271	-0.00435888	
+14	-0.00443589	-0.00434267	-0.00439393	-0.0043708	-0.00435673	
+15	-0.00443088	-0.00432764	-0.00438081	-0.00436961	-0.0043348	
+16	-0.0043708	-0.00419294	-0.00403773	-0.00407182	-0.00398075	
+17	-0.00432478	-0.00430976	-0.00428688	-0.00435173	-0.00417887	
+18	-0.00442277	-0.00430786	-0.00437676	-0.00435077	-0.00432788	
+19	-0.00441681	-0.00413	-0.00437461	-0.00434791	-0.00432478	
+20	-0.00391375	-0.00318562	-0.00426279	-0.00421893	-0.00414072	
+21	-0.00378262	-0.00309788	-0.00324069	-0.00419675	-0.00413286	
+22	-0.00364672	-0.0029739	-0.00414573	-0.00419461	-0.00431787	
+23	-0.00440585	-0.00426375	-0.00435482	-0.00417172	-0.0041207	
+24	-0.00404488	-0.00403272	-0.00423085	-0.00416671	-0.00411569	
+25	-0.00318371	-0.00249587	-0.0039817	-0.0041288	-0.0019828	
+26	-0.00350081	-0.00349771	-0.00420772	-0.00414072	-0.00408088	
+27	-0.00348388	-0.00423466	-0.00434672	-0.00430094	-0.00407301	
+28	-0.00437867	-0.00394665	-0.00434481	-0.0042988	-0.00404178	
+29	-0.00437581	-0.00420987	-0.00434171	-0.00429594	-0.00427185	
+30	-0.0043677	-0.00420772	-0.00434076	-0.00427686	-0.00424491	
+31	-0.00436484	-0.00385486	-0.0043398	-0.00427376	-0.00424277	
+32	-0.0027486	-0.00168978	-0.00159275	-0.00160061	-0.0039817	
+33	-0.00435173	-0.00417577	-0.00432097	-0.00404393	-0.00423681	
+34	-0.00288879	-0.00179373	-0.00200783	-0.00194179	-0.00369274	
+35	-0.00284373	-0.00172364	-0.0039159	-0.00162684	-0.000320782	
+36	-0.00282084	-0.00295292	-0.00431167	-0.00424181	-0.00422489	
+37	-0.00431572	-0.00412284	-0.00430881	-0.00423967	-0.00422393	
+38	-0.00431477	-0.00411688	-0.00430786	-0.00423562	-0.00391184	
+39	-0.00429784	-0.0035957	-0.004305	-0.00142991	-0.00421583	
+40	-0.0026487	-0.00149285	-0.00341879	-0.00390564	-0.00389468	
+41	-0.00427376	-0.00406085	-0.004305	-0.00420987	-0.00418292	
+42	-0.00427185	-0.00249492	-0.00428187	-0.00420581	-0.00388156	
+43	-0.0042678	-0.00404774	-0.00427901	-0.00419985	-0.00416886	
+44	-0.00255381	-0.00131165	-0.00379764	-0.00121366	-0.0038346	
+45	-0.00421988	-0.00404083	-0.00427591	-0.00417386	-0.0041679	
+46	-0.00423585	-0.00401269	-0.00427376	-0.00417291	-0.00378787	
+47	-0.00242578	-0.00115572	-0.00114166	-0.00104867	-0.00376975	
+48	-0.00228273	-0.000992884	-0.00197088	-0.00375472	-0.00375782	
+49	-0.0041927	-0.00397288	-0.00426685	-0.00413691	-0.00411974	
+50	-0.00417458	-0.00104367	-0.0039879	-0.00375568	0.000522981	
+51	-0.00229989	-0.00393187	-0.00423991	-0.00326764	-0.00410973	
+52	-0.0041536	-0.00392662	-0.00423871	-0.0041238	-0.0032879	
+53	-0.00412785	-0.00242483	-0.00394284	-0.00412189	-0.00410282	
+54	-0.00220977	-0.00085174	-0.000733723	-0.00412094	-0.00364291	
+55	-0.00408279	-0.00388061	-0.00422989	-0.00408684	-0.00409471	
+56	-0.00337278	-0.000725855	-0.00422679	-0.00360071	-0.00408994	
+57	-0.00209676	-0.00384699	-0.00422369	-0.000605931	-0.0040866	
+58	-0.00207578	-0.00383769	-0.00351869	-0.00407993	-0.00408589	
+59	-0.00202476	-0.000596871	-0.0038489	-0.000473608	-0.00354969	
+60	-0.00398265	-0.00382172	-0.00384699	-0.00404393	-0.00354086	
+61	-0.00397288	-0.00283586	-0.00419079	-0.0035268	-0.00403081	
+62	-0.00193464	-0.000481953	-0.000222792	-0.000357975	-0.0035206	
+63	-0.00188099	-0.0037378	-0.00418078	-0.00349771	-0.00350868	
+64	-0.00147282	6.08969e-06	0.000147233	0.000132213	0.00177825	
+65	-0.0018078	-0.000288834	-0.000187745	-0.000191798	0.00143827	
+66	-0.00181281	-0.000267853	-0.00332176	-0.000161757	0.00149334	
+67	-0.00381385	-0.0036987	-0.00416981	-0.0038787	-0.00399982	
+68	-0.00173174	-0.000152697	-0.00372087	-3.96867e-05	0.00167407	
+69	-0.00168191	-0.00365578	-0.00414192	-0.00397288	-0.0033537	
+70	-0.00166165	-0.00364791	-0.00413596	-0.00335084	-0.00394284	
+71	-0.00160777	-0.00363575	-0.0041319	-0.00395786	-0.00394069	
+72	-0.00154768	-0.000932803	-0.00413286	-0.00329076	-0.00393878	
+73	-0.00365983	-0.00358974	-0.0041319	0.000196109	-0.00393759	
+74	-0.00362765	-0.00219189	-0.00412594	-0.00394689	-0.00393068	
+75	-0.00358569	-0.00215684	-0.00411784	-0.00393878	-0.00391876	
+76	-0.00351988	-0.0035318	-0.00363075	-0.00390779	0.0021571	
+77	-0.00128685	-0.00212895	-0.00411784	-0.00393664	-0.0039159	
+78	-0.00140678	0.000284086	0.000406156	-0.00319468	0.00222934	
+79	-0.0034486	0.000346313	-0.00182067	0.000491271	-0.0039097	
+80	-0.0011109	0.000600229	-0.00239169	0.000756393	-0.00228583	
+81	-0.00126468	0.00043715	0.000705133	0.000605236	0.00244916	
+82	-0.00125181	0.000528226	0.000625024	0.00064529	-0.00311576	
+83	-0.00329982	-0.00182187	-0.00406991	-0.00387489	-0.00310289	
+84	-0.00119578	0.000569234	0.000712047	0.000718246	-0.000481715	
+85	-0.00115286	0.000635276	0.000888238	0.000777374	0.00268043	
+86	-0.00112401	-0.00341665	-0.00276982	-0.00077187	-0.00308596	
+87	-0.00106369	0.00074018	0.00085939	-0.00294482	0.00280226	
+88	-0.00102388	-0.00336086	0.0009302	0.000879179	0.00287403	
+89	-0.000881781	0.000815282	-0.00346791	0.000936161	0.00290621	
+90	-0.000983824	0.000837217	-0.00404965	-0.00295888	-0.00297796	
+91	-0.000925889	0.000937114	0.00108112	0.00108017	0.00312031	
+92	-0.000916829	0.000925193	-0.00249683	-0.002936	0.00312127	
+93	-0.000872006	0.000970254	0.0011412	-0.00379573	0.0031792	
+94	-0.000865807	-0.00330888	-0.00400769	-0.00375782	-0.00379478	
+95	-0.000800719	0.0010742	0.00122798	-0.00378286	-0.000874629	
+96	-0.000210871	0.00164617	0.00194729	0.00184406	-0.00173389	
+97	-0.000716795	0.00116719	0.00132407	0.00131525	0.00338615	
+98	-0.000707974	0.00120104	-0.00399386	-0.00377475	0.00343216	
+99	-0.00065576	0.00128211	0.000613103	-0.00372182	-0.00371276	
+100	-0.000636687	0.00135411	0.00149025	0.00149811	0.00362218	
+101	-0.000571837	0.00136508	0.00153221	0.00153316	0.0036682	
+102	-0.000556817	-0.00318586	-0.00326477	0.00188936	0.00374425	
+103	-0.000494828	0.00149025	-0.000651946	-0.00369679	-0.00369059	
+104	-0.000412812	0.00156821	0.00175036	0.00177611	0.00392617	
+105	-0.000418772	0.00156821	-0.00226675	0.0018853	0.00391711	
+106	-0.000407805	0.0016302	0.0017773	0.00179828	0.00397314	
+107	-0.000358929	-0.00302564	0.00186409	0.00186122	0.00424636	
+108	-0.0015999	-0.000731816	0.00187625	0.00187124	0.00411619	
+109	-0.000286688	-0.00301777	-0.0039159	-0.00367557	-0.00150382	
+110	-0.000303854	0.0017661	0.00190819	0.00193823	0.00417031	
+111	-0.000104775	0.00184406	0.00200499	-0.00366389	0.00427426	
+112	5.30581e-05	0.00214017	-0.00389778	0.00232137	-0.00257288	
+113	-0.000155797	0.00192727	0.00209821	0.00212802	0.00452412	
+114	-0.000128855	0.00197733	0.00214017	-0.00243889	0.00446499	
+115	-8.88009e-05	0.0020553	-0.00389062	-0.0036379	-0.00362789	
+116	-7.688e-05	0.0020603	-0.00389182	-0.00363885	-0.00356876	
+117	-1.0838e-05	0.00225318	0.00230826	0.00233306	0.00467623	
+118	5.13601e-06	0.00217999	0.00233615	0.00233329	0.00470317	
+119	6.52175e-05	0.0022272	0.00252522	-0.00357591	0.00478805	
+120	0.000120292	-0.00285565	0.00250019	0.00249709	-0.00354897	
+121	0.000127206	0.00230325	-0.0038768	-0.00356566	-0.00109278	
+122	0.000141273	0.00235117	-0.00386797	0.00253619	-0.00353157	
+123	0.00032414	-0.00275384	-0.00382172	0.00263418	-0.00235878	
+124	0.000207077	0.0024432	-0.00386082	0.00264133	-0.00244366	
+125	0.000256191	0.00249017	-0.00386082	0.00268234	-0.00351678	
+126	0.000370155	0.00251926	-0.00180279	-0.00354182	0.00520409	
+127	0.000319372	0.00258721	-0.00185286	-0.00340878	-0.00351464	
+128	0.00110115	0.00340403	0.00353516	0.00353921	0.00602711	
+129	0.000420223	0.0026542	0.00284208	0.00286425	-0.0023378	
+130	0.000524173	0.00271309	0.00286521	-0.00218188	-0.00350892	
+131	0.000477205	0.00280012	0.00296629	0.00296939	0.00548829	
+132	0.000498186	-0.00268375	-0.00383579	-0.00351273	-0.00228583	
+133	0.000689159	-0.00260865	0.00305403	0.00305522	-0.00227987	
+134	0.000589262	-0.00265585	-0.00158774	-0.00203382	-0.00347387	
+135	0.000666271	-0.00256788	-0.00382387	0.00318636	-0.00224101	
+136	0.000786195	0.00314821	0.00342811	0.00332917	0.00591506	
+137	0.000751148	0.00306929	0.00322808	0.00326623	0.00583709	
+138	0.000759254	0.00309313	0.00340713	-0.0019797	0.00591839	
+139	0.000830303	0.00319804	-2.7318e-06	0.00338019	0.00607623	
+140	0.000864158	0.0032512	0.00352133	0.00339116	0.00607623	
+141	0.00094522	0.0032102	0.00341714	0.00344719	0.00608219	
+142	0.000931154	0.00336922	0.00341333	0.00344504	0.00609125	
+143	0.00104536	0.0033511	-0.00274574	-0.00339471	-0.00208174	
+144	0.00142706	0.00368727	0.00390829	0.0040232	0.00662221	
+145	0.00116528	-0.00246893	0.00362838	0.00363005	-0.00341069	
+146	0.00118006	0.0033871	-0.0027188	0.00368703	-0.00340973	
+147	0.00139822	0.00353612	0.00373734	0.00378002	-0.003399	
+148	0.00129617	-0.002447	-0.00373589	-0.00337278	-0.00340568	
+149	0.00139035	0.00363911	0.00382222	0.00381506	0.00673903	
+150	0.00142921	-0.00235974	-0.00373184	0.00382818	-0.00339781	
+151	0.00153221	-0.00240981	-0.00372492	0.00395526	-0.00338875	
+152	0.00163616	0.00382317	-0.00371968	0.0040182	-0.00338184	
+153	0.00177229	-0.00239479	-0.00371682	-0.00334679	-0.00337683	
+154	0.00169505	0.00385798	0.00403322	0.00403632	-0.00329172	
+155	0.00181426	0.00393714	0.0041262	0.00430025	0.00704611	
+156	0.0018412	0.00393523	0.00418128	0.0041684	0.00710214	
+157	0.00193609	0.00396718	0.00432337	0.00419034	0.00711716	
+158	0.00196422	0.00399841	0.00421823	0.00425328	0.00714816	
+159	0.00221623	0.00408114	0.00429905	-0.00329696	0.00433219	
+160	0.00313915	0.00506009	0.00521816	0.00522436	0.00788916	
+161	0.00228013	0.00417722	0.00435628	-0.00329958	0.00728215	
+162	0.00230826	-0.00222599	-0.00368988	0.00437606	0.00742806	
+163	0.00242222	0.00429429	0.00448311	0.00449027	0.00743426	
+164	0.00248827	0.00431717	-0.00367295	0.00463522	-0.00323068	
+165	0.0026163	-0.00218259	0.00457133	0.00460924	0.00757516	
+166	0.00266923	0.00442112	0.00463213	0.00479425	0.00766719	
+167	0.00281514	0.00451911	-0.00243079	0.00472415	0.000224243	
+168	0.00298823	-0.00204884	-0.00359975	-0.00324165	-0.00163065	
+169	0.00308908	0.00452627	0.00474704	0.0047983	0.00779332	
+170	0.00303019	0.00459112	-0.00364887	0.00100316	0.00800718	
+171	0.0031792	-0.00202166	0.00493921	0.00494112	0.00825513	
+172	0.00326909	0.00467123	-0.00364076	0.00507606	0.00801219	
+173	0.00341738	0.00472535	0.00496305	0.00495423	0.000319133	
+174	0.00336517	0.00484122	-0.00364577	0.00494612	-0.00318395	
+175	0.00361622	-0.00198494	-0.00363575	0.00506629	-0.00317775	
+176	0.00420512	0.00526513	0.00551928	0.00563611	0.00866927	
+177	0.00384725	0.00500334	0.00519908	0.00524009	0.00839532	
+178	0.0038792	0.00508131	0.00518621	0.00123037	0.00836123	
+179	0.00404109	0.00509132	0.00528205	0.00542224	0.00848926	
+180	0.0040902	0.00503624	-0.00231563	0.00526608	-0.0031458	
+181	0.00424708	0.00516237	0.00550712	0.00540007	0.00861229	
+182	0.00440324	0.00516237	0.00536717	-0.00311076	0.00300325	
+183	0.00469316	0.00521434	-0.00354682	-0.00309788	-0.00145685	
+184	0.00467933	-0.00187289	-0.00353967	0.00557316	0.00883306	
+185	0.00479711	-0.00186979	-0.00354063	-0.00122177	-0.00132381	
+186	0.00502313	0.00532926	0.00557626	0.00562538	0.00887312	
+187	0.00509728	0.00554527	-0.0035237	0.00573529	0.0090412	
+188	0.0051762	0.00550021	0.00587214	0.00577129	0.0091082	
+189	0.00534237	0.00550211	0.00575841	-0.00305878	0.00923909	
+190	0.00540937	0.00558318	0.00576008	0.00579704	0.00911726	
+191	0.00570811	0.00288142	0.00584615	0.00586523	-0.0013517	
+192	0.00737942	0.00671304	7.80921e-05	-0.00297271	0.0104092	
+193	0.00599111	0.00575436	0.0059203	0.00595225	0.00927914	
+194	0.00605334	0.00584329	0.00204719	0.00592316	0.00927223	
+195	0.00627411	0.00588215	0.00605525	0.00622905	0.00943316	
+196	0.00637806	0.00580109	-0.00348579	0.00606907	-0.00294482	
+197	0.00659836	0.0032152	0.00614203	0.00615204	0.00958217	
+198	0.00669612	0.00599922	0.00619114	0.00636424	0.009668	
+199	0.0070423	-0.00166785	-0.00346672	-0.00291382	-0.00109469	
+200	0.00733198	-0.00155388	0.00642599	-0.000719895	-0.000949969	
+201	0.00733102	-0.00166785	0.0063063	0.00632323	0.00979007	
+202	0.00741924	-0.00164997	0.00648106	0.00636018	-0.00301563	
+203	0.00764121	0.00624431	0.00647033	0.00652422	-0.00299679	
+204	0.00786723	-0.00163185	0.00644721	0.0064484	-0.00104486	
+205	0.00811232	0.006333	-0.00345479	0.00650633	0.00715221	
+206	0.00814332	-0.00144063	0.00647033	0.00647224	-0.00104391	
+207	0.00845612	0.0065111	0.00663913	0.00665415	0.0101191	
+208	0.00940717	0.00683702	0.00724424	-0.00291168	0.0107063	
+209	0.0088271	0.00646127	0.00673116	0.00678028	0.0104922	
+210	0.00895823	-0.00155078	-0.00343667	0.00675524	-0.0029708	
+211	0.00931538	0.00665916	0.00695432	0.00684703	0.0104722	
+212	0.00943721	0.00659717	0.00684107	-0.0029298	0.0105831	
+213	0.00968135	0.00663508	-0.00341689	0.00690616	0.0014211	
+214	0.00983823	0.00676406	-0.00342189	0.00691618	-0.00294887	
+215	0.0101084	0.00672329	0.00698508	0.00705923	0.0107731	
+216	0.0104293	0.00688113	0.0055343	0.00717724	0.0109533	
+217	0.0107771	0.00686134	0.00704111	-0.000518908	0.0107523	
+218	0.0108963	0.00686801	0.00710429	0.00715316	0.0108441	
+219	0.0110983	0.00704516	-0.00339185	0.00723113	-0.00290286	
+220	0.0112091	0.00695528	0.0028962	-0.0028597	-0.000792851	
+221	0.011628	0.00699533	-0.00160896	0.00732935	-0.0028988	
+222	0.0115813	0.0070361	0.0057751	0.00732125	0.0110802	
+223	0.0118183	0.00431002	-0.00159871	0.00744022	0.0112611	
+224	0.014335	0.00834716	-0.00333463	0.00863613	0.0125543	
+225	0.0119852	-0.00139772	0.00743235	0.00747503	0.0112313	
+226	0.0120903	0.00716318	0.00743426	0.00748528	0.0112232	
+227	0.0122761	0.00727905	0.00756205	0.00756825	0.0113803	
+228	0.0122212	0.00743402	0.00762523	0.00760735	-0.00274788	
+229	0.0123872	0.00736226	0.0077833	0.00766314	0.0115453	
+230	0.0124031	-0.00121962	-0.00334989	-0.000283827	-0.00284492	
+231	0.012776	-0.00118481	0.00780428	0.00787605	-0.00282966	
+232	0.0129544	0.00765408	0.00809325	0.00797022	0.0119113	
+233	0.0127813	0.00757135	-0.00327574	0.00799025	0.0117282	
+234	0.0128223	0.00763024	0.00787819	0.00800098	0.0118111	
+235	0.0129892	0.0076722	-0.00155388	0.00804223	0.012117	
+236	0.0130252	0.00766314	0.00797905	0.00802506	0.0120691	
+237	0.0132333	0.00777114	0.00802125	0.00801624	-0.000603785	
+238	0.0133382	0.0077423	-0.0015658	0.00799311	0.0119823	
+239	0.0136763	-0.00110971	0.0081333	0.00815214	-0.000592818	
+240	0.0146521	0.00838126	0.0088302	0.00869406	0.0127331	
+241	0.0138232	0.00809206	0.00842227	0.00835527	0.0123891	
+242	0.0137721	0.00795616	0.00837124	0.00826515	0.0123023	
+243	0.0140363	0.00815428	-0.0013498	0.00836624	0.0124382	
+244	0.0140771	0.00803412	0.00848521	0.00793208	-0.00266277	
+245	0.014263	0.00813426	0.00844611	0.00861419	0.0125662	
+246	0.0143181	0.00820411	0.0084051	0.00853814	0.0125071	
+247	0.0146362	0.00820507	0.00849021	0.00865425	0.0125932	
+248	0.0149242	0.00838126	0.00867404	0.00884212	0.0128101	
+249	0.0148403	-0.000998606	-0.00328385	0.00874818	0.0058452	
+250	0.0149421	-0.000864853	0.00862421	0.00862731	-0.00261985	
+251	0.0153803	0.00841917	0.00879539	0.00882019	0.0129992	
+252	0.0154532	0.00850142	0.00880421	0.00884903	0.0130643	
+253	0.0156952	-0.000816693	-0.00136887	0.00881923	-0.00259077	
+254	0.0155622	-0.000936617	0.00879324	0.00891722	0.0128692	
+255	0.0158721	0.00863827	0.00889338	0.00909818	0.0130843	
+256	0.0194701	0.0102631	0.0106441	0.0105332	0.0148052	
+257	0.0162312	0.00876821	0.00895132	0.00898922	-0.00258862	
+258	0.0162681	0.00869621	0.00907625	-0.00257074	0.013172	
+259	0.0165852	0.00879324	0.00923408	0.00916732	0.0133532	
+260	0.0167173	0.00886119	0.00923503	0.00914014	0.0134431	
+261	0.0170163	0.00897015	-0.00315081	-0.00262772	0.0134963	
+262	0.0171412	0.00895418	0.0093571	0.00930131	0.0135974	
+263	0.0174314	0.00921119	0.00930608	0.000133167	-0.00252687	
+264	0.0180062	0.00916732	0.00951708	0.00970019	0.0138952	
+265	0.0178112	0.00907029	0.00945509	0.00939716	0.0136753	
+266	0.0179142	0.00926412	0.00940622	0.00946034	0.0138041	
+267	0.0183162	-0.000628819	0.0014614	0.0095712	0.0139812	
+268	0.0183741	-0.000633826	-0.00320064	0.00959719	0.0138811	
+269	0.0187451	0.00928033	-0.00120985	0.00972808	-0.00251185	
+270	0.0187103	0.00919212	0.00950922	0.00969423	0.0139371	
+271	0.0192083	0.00935806	0.00979627	0.00969327	0.0140041	
+272	0.0208234	0.0100731	0.0102943	0.0103473	0.0147623	
+273	0.0197994	0.00945605	-0.00309168	-0.00245272	-0.00246774	
+274	0.0197603	0.00950731	0.00989021	0.0098554	0.014263	
+275	0.020197	0.00967301	-0.00308596	0.00989498	0.00304116	
+276	0.0202822	0.00951708	0.00999416	0.00466217	-7.59263e-05	
+277	0.0205792	0.00962318	-0.00307261	0.0100752	0.0145213	
+278	0.0208553	0.00958217	0.0100454	0.0099882	0.0034231	
+279	0.0212253	0.00968731	0.0101282	0.0101003	0.0145372	
+280	0.021824	0.00988711	-0.00314866	0.0101963	-0.0024377	
+281	0.0217491	0.00985516	0.0100652	0.0100712	-0.00243865	
+282	0.0219942	0.00994433	0.00189031	0.0102223	0.000185142	
+283	0.0223702	0.00988926	-0.00304901	0.0103921	0.0149433	
+284	0.0224372	0.0100552	0.0103182	-0.00236689	0.0150172	
+285	0.0229622	0.0102052	-0.00312673	0.0103232	0.00330032	
+286	0.0230583	0.0100921	0.0103213	0.0103752	0.00347818	
+287	0.0234963	0.0102612	0.0104123	0.0104994	0.0150222	
+288	0.0282952	0.0116652	-0.0029708	0.012019	-0.00220286	
+289	0.0243112	-0.000233759	-0.00304066	-0.0023738	0.000258098	
+290	0.0242072	0.0102302	0.0105852	0.0105244	0.0150973	
+291	0.0247671	0.0103713	0.0105983	0.0106083	0.0152782	
+292	0.0250973	0.0102412	-0.00301086	0.0106593	0.00034822	
+293	0.0256142	0.0103532	0.0107151	0.0107204	0.0156182	
+294	0.0256111	0.01044	0.0107583	0.0109521	0.0155693	
+295	0.0262913	0.00787629	0.0108613	0.0109502	0.0156702	
+296	0.0271021	-0.000218739	-0.00298487	0.0111302	0.00782717	
+297	0.0269612	0.0105983	0.0109502	0.0109621	0.0158073	
+298	0.0271593	0.0105761	-0.00298678	0.0109331	-0.00232779	
+299	0.0277163	0.0107311	0.0110523	0.0112513	0.0159432	
+300	0.0277301	-7.28269e-05	0.0111562	0.0110921	-0.00231158	
+301	0.0279883	0.0108262	0.0111963	0.0111312	0.0159172	
+302	0.0280253	0.0107442	0.0110382	0.0111052	0.0160292	
+303	0.0282811	0.0109242	0.0111543	0.0115861	0.0159623	
+304	0.0303081	0.0116292	0.0118841	0.0010692	0.000604282	
+305	0.0285503	0.0110692	0.0113093	0.0113801	-0.00226485	
+306	0.0286712	0.0109912	0.0112752	0.00108207	0.0162093	
+307	0.028952	0.0111622	0.0114051	0.0115422	0.0163463	
+308	0.0287422	0.0109781	-0.00052773	0.0113372	0.0162922	
+309	0.0292522	0.0113543	0.0115494	0.0115911	0.0165423	
+310	0.0293881	0.0112811	0.0115253	0.0117291	0.0166563	
+311	0.0296573	0.0114702	0.0115742	0.0116164	0.016543	
+312	0.0301331	0.0116292	0.0117983	0.0117902	0.0168012	
+313	0.0299112	-5.37534e-05	-0.00292884	0.0116841	0.000615249	
+314	0.0300032	0.0112873	0.0116621	0.0117363	0.0168382	
+315	0.0303053	0.0114042	0.0119091	0.0118173	0.00405325	
+316	0.0302004	0.0115563	0.0118531	0.0119003	0.0170003	
+317	0.0307981	0.0115191	0.0119182	0.0119711	0.0171713	
+318	0.0305861	0.0116471	0.0119082	0.0119082	0.0169731	
+319	0.031103	0.0116912	0.0119981	0.0120291	0.0171062	
+320	0.0366413	0.0136372	0.0137502	0.0138391	0.0188683	
+321	0.0314053	0.0116161	0.0119752	0.0121552	0.0170852	
+322	0.0313162	0.0117852	0.0120322	0.0120362	0.0170361	
+323	0.0317882	0.0118672	0.0121752	0.0123133	0.0173212	
+324	0.0317432	0.0119761	0.0121442	0.0121871	0.0175182	
+325	0.0323531	0.0118193	0.0122122	0.0124122	0.0174192	
+326	0.0322932	0.0121263	0.0123452	0.0123621	0.0176493	
+327	0.0329634	0.0119873	0.0124632	0.0126001	0.0177471	
+328	0.0335082	0.0124532	0.012678	0.0126811	0.017866	
+329	0.0332302	0.012189	0.0124291	0.0126392	0.0177051	
+330	0.0333012	0.0123352	0.0124701	0.0125414	0.0177361	
+331	0.0338272	0.0122513	0.0125822	0.0127932	0.0179211	
+332	0.0337602	0.0122453	-0.00284397	0.0125152	-0.00211679	
+333	0.0343922	0.0122141	-0.00283991	0.0125972	0.0176591	
+334	0.0341832	0.0122691	0.0125834	0.0127162	0.0178171	
+335	0.0347501	0.0124763	0.0127224	0.0127512	0.0179023	
+336	0.0374071	0.0131902	0.0136632	0.0135402	0.018932	
+337	0.0353752	0.0125753	0.0129043	0.0129131	0.0183901	
+338	0.0353941	0.0124782	0.0127901	0.0128323	0.0181862	
+339	0.0359413	0.0125982	0.0129041	0.0131313	0.0182952	
+340	0.0358213	0.0125884	0.0128862	0.0129112	0.0182392	
+341	0.0366062	0.012755	-0.00279581	0.0131461	-0.00205075	
+342	0.0367633	0.0127732	0.0132212	0.0131182	0.0184401	
+343	0.0375573	0.0128282	0.0130662	0.013307	0.0184614	
+344	0.0378791	0.000859151	0.0134171	-0.00198971	0.0187312	
+345	0.0376901	0.0128473	0.013105	0.0131873	0.0188142	
+346	0.037938	0.0129553	0.0131742	0.0132462	0.0186643	
+347	0.0386862	0.0129532	0.0133082	-0.00196086	0.0190142	
+348	0.0384983	0.0130502	0.0134522	0.0134362	0.0189682	
+349	0.0394911	0.0095414	0.0135614	0.0134922	0.0190252	
+350	0.0392853	0.0129362	0.0133523	0.00196613	0.0190412	
+351	0.0399653	0.0130712	0.0135874	0.0135771	0.0189382	
+352	0.0472142	0.0151762	0.015556	0.0155271	0.0209741	
+353	0.040773	0.0131711	0.0134932	-0.00195562	-0.00200688	
+354	0.0410172	0.0132772	0.0135383	0.0136682	0.0190371	
+355	0.0415324	0.000503192	0.0136911	-0.00192391	-0.00198971	
+356	0.0416423	0.0133511	0.013661	0.0137133	0.0194353	
+357	0.0421404	0.0135082	0.0137442	0.0137543	-0.00195991	
+358	0.0426203	0.0135061	0.0138081	0.0140213	0.0194911	
+359	0.0432404	0.0134913	0.0139042	0.0140122	0.0197262	
+360	0.044144	0.0138501	-4.63915e-06	0.0141872	0.0200514	
+361	0.0439412	0.0136243	0.0138842	0.014105	0.0195412	
+362	0.0440973	0.0136782	-0.00271164	0.0139543	0.00134028	
+363	0.0448662	0.0136613	0.0142104	0.0141083	-0.00190484	
+364	0.0448591	0.0137311	0.0140292	0.0140282	0.0198654	
+365	0.0454303	0.0138713	-0.00270378	0.0140962	0.00565733	
+366	0.0457002	0.0136234	-0.00260173	0.0141102	0.00156535	
+367	0.0464712	0.013774	0.0142943	0.0142752	0.019842	
+368	0.0500943	0.0147642	-0.00264679	0.0151311	0.010872	
+369	0.0474123	0.000869165	-0.00267278	0.0145053	-0.00186478	
+370	0.0475043	0.014186	0.0143823	0.0144283	0.0202383	
+371	0.0482954	0.0141493	0.0144323	0.0144614	0.020254	
+372	0.0482212	0.0140213	0.0145282	0.0144383	0.0201842	
+373	0.0487262	0.0141162	0.0146872	0.0145503	0.0204374	
+374	0.0487121	0.0140532	0.0144724	0.0146881	0.0203191	
+375	0.0492162	0.0142354	0.0146383	0.0148243	0.0203971	
+376	0.0500041	0.0144411	0.0148431	0.0148381	-0.00184094	
+377	0.0494651	0.0143541	0.0146352	0.014721	0.00166215	
+378	0.0494281	0.0144402	0.0146932	0.0148922	0.0206162	
+379	0.0500962	0.0143632	-0.00263583	0.0149723	-0.0018047	
+380	0.0497362	0.0145272	0.0149003	0.0149561	0.0210523	
+381	0.0502411	0.014721	0.0149962	0.0149802	0.0211943	
+382	0.0501744	0.014618	0.0148712	0.0148722	0.0208713	
+383	0.0510162	0.00104035	0.0151461	0.0151361	-0.00181996	
+384	0.0599474	0.0169381	0.0172852	0.0174412	0.0231921	
+385	0.0513142	0.0147392	0.0150303	0.0152012	0.0209991	
+386	0.0512921	0.0145842	0.0150071	0.0151423	0.0209383	
+387	0.0517701	0.0147344	-0.00260459	0.0152603	0.0212482	
+388	0.0515221	0.0148841	0.015174	0.00805033	0.0212621	
+389	0.0523611	0.0149392	0.00409711	0.0153612	0.0213393	
+390	0.0524584	0.0148572	0.0154492	-0.00154387	0.0214602	
+391	0.053017	0.0150513	-0.00256382	0.0155391	0.0216721	
+392	0.0540222	0.0153653	0.000361333	0.0157191	0.0219692	
+393	0.0532521	0.0152451	0.0154663	0.0154952	0.0217861	
+394	0.0534603	0.0110482	0.0155231	0.0156022	0.0216752	
+395	0.0540122	0.0154141	-0.00255667	0.0156342	0.0218192	
+396	0.0539972	0.00120128	0.0155772	0.0157021	0.0217232	
+397	0.0546523	0.0152742	0.0157312	0.0158514	0.021803	
+398	0.0543202	0.0151831	-0.00257575	0.0156323	0.00204028	
+399	0.0551821	0.0153912	0.0156902	0.0157281	-0.0017327	
+400	0.059028	0.0163182	0.0168442	0.0167142	0.0229954	
+401	0.0559362	0.0155972	0.0160252	0.0159923	0.0223593	
+402	0.055884	0.0154702	0.0159472	0.0159513	0.0220732	
+403	0.056522	0.0115422	0.0160722	0.0160624	0.00194729	
+404	0.0565182	0.0155813	0.0161191	0.0159472	0.0221301	
+405	0.0572642	0.0157741	0.0163022	0.0161651	0.0224153	
+406	0.0576252	0.0156542	0.0145582	0.0160562	0.00217737	
+407	0.0581883	0.0158304	0.0161063	0.0163773	0.0223781	
+408	0.0593613	0.0160152	0.0164963	-0.00157081	0.0226823	
+409	0.0585872	0.0157563	0.0161313	0.016348	0.0224701	
+410	0.0592653	0.0158771	0.0163893	0.0163592	0.022627	
+411	0.0596951	0.0120994	0.000699172	0.0164901	-0.001608	
+412	0.0596703	0.0159932	0.0164482	0.0165092	0.0230552	
+413	0.0605043	0.015962	0.0164603	0.0165693	0.0229143	
+414	0.0603832	0.0159801	0.0164601	0.0166711	0.0229691	
+415	0.0614821	0.0162302	0.0167292	0.016651	0.0228542	
+416	0.0721122	0.0186573	0.0189132	0.0189492	0.0253703	
+417	0.0620881	0.016224	0.0166062	0.016713	0.0229343	
+418	0.0622033	0.0162102	0.0165063	0.0167233	0.023008	
+419	0.0630952	0.0162243	0.0168132	0.016713	0.0230662	
+420	0.0632392	0.0163311	0.0168182	0.0167471	0.023218	
+421	0.0641252	0.0166012	0.0168012	0.0168153	0.023435	
+422	0.0644032	0.0164162	-0.00243484	0.0168661	0.00689519	
+423	0.0652312	0.0166091	0.0169591	0.0170902	0.0236541	
+424	0.0667282	0.0168883	0.0173203	0.0174774	0.0239743	
+425	0.0659424	0.0166124	0.0169934	0.0172333	0.0236012	
+426	0.0661053	0.00161232	-0.00229989	0.0171172	-0.00153672	
+427	0.0671953	0.0166751	-0.00228392	0.0171932	0.0239822	
+428	0.0672811	0.0167362	0.0170883	0.0171722	0.0238012	
+429	0.068091	0.016821	0.0171443	0.0173441	0.0237302	
+430	0.068298	0.0166911	0.00995506	0.017176	0.00725831	
+431	0.069142	0.0168172	0.0173992	0.0173181	0.0237182	
+432	0.0742902	0.0177201	0.0182282	0.0182244	0.0250021	
+433	0.0704881	0.0169584	0.0174443	0.017665	0.0242103	
+434	0.0709473	0.00171817	-0.00240385	0.0175952	0.0240122	
+435	0.0714282	0.0171234	0.0174703	0.017588	0.00265039	
+436	0.0717701	0.0169922	0.0175551	0.017372	0.0240814	
+437	0.0728442	0.0172843	-0.0023688	0.0176462	0.00271429	
+438	0.0728513	0.0173253	0.0175272	-0.00124585	0.0242423	
+439	0.0736452	0.0174202	0.00538028	0.0178272	0.0244943	
+440	0.0745353	0.0175544	0.018021	0.0181381	0.0246843	
+441	0.0734612	0.0171672	0.0177661	0.0176622	0.0244202	
+442	0.0738021	0.0173832	0.0177561	-0.00120293	0.00763715	
+443	0.0743171	0.0174524	0.0178453	0.0178872	0.00281228	
+444	0.074041	0.0176882	0.0179583	0.0179342	0.0250062	
+445	0.074772	0.0174462	0.00111116	-0.00117885	0.0250133	
+446	0.0745443	0.0175682	0.0178973	0.0181073	0.0247923	
+447	0.0753442	0.0177432	-0.00234186	-0.00115978	0.0247883	
+448	0.0882412	0.0202612	0.0205373	0.0206703	0.0275263	
+449	0.0757202	0.0138193	-0.00234877	0.0181533	-0.00141179	
+450	0.0757073	0.0176302	0.0181142	0.0183412	0.0249683	
+451	0.0762402	0.0176791	-0.00232779	0.0183982	0.00283516	
+452	0.0761663	0.0178224	0.0183193	0.0181834	0.0251912	
+453	0.0770582	0.018073	0.0183832	0.0184022	0.0253712	
+454	0.0771452	0.0179883	-0.00229775	0.0185942	0.00297202	
+455	0.0781151	0.0180861	0.0186101	0.0187811	0.0255231	
+456	0.0795583	0.0185632	0.018818	0.0189172	0.0259611	
+457	0.0782973	0.0179492	-0.00230967	0.0186683	-0.00135862	
+458	0.0784322	0.0181004	0.0185293	0.0187463	0.0255112	
+459	0.0790333	0.0183321	0.0187422	0.0187651	0.0258802	
+460	0.07912	0.0180422	0.0185772	0.0187942	0.0255953	
+461	0.0798422	0.0183634	0.0186733	0.018751	0.0258104	
+462	0.0795401	0.0180642	0.0186941	0.0185682	0.0140172	
+463	0.0805353	0.0185372	0.0188011	0.0188493	0.0257954	
+464	0.0860261	0.0194723	0.0199581	0.019919	0.0269283	
+465	0.0815522	0.0185982	-0.00224673	0.0190493	0.0262812	
+466	0.0815634	0.0184702	0.0188691	0.0191401	0.0259882	
+467	0.0821482	0.0186211	0.0189883	0.0191172	0.0262452	
+468	0.082019	0.0185622	0.0190722	0.0189852	0.0260164	
+469	0.0830182	0.0186774	0.0191311	0.0193313	0.0264982	
+470	0.0829183	0.00217331	0.017676	0.0191313	0.0261752	
+471	0.084231	0.0186232	-0.00224482	-0.000999798	0.0262421	
+472	0.0856243	0.0190572	0.0195371	0.0196523	0.0267931	
+473	0.0846292	0.0189742	0.0192703	0.0192822	0.0266792	
+474	0.0849604	0.0188803	0.019447	0.019338	0.0264803	
+475	0.0865072	0.0189663	0.0195252	0.0196983	0.0269572	
+476	0.08578	0.0189983	0.0194792	0.0195452	0.0269684	
+477	0.0869333	0.0191132	0.0196372	0.0195862	0.0268494	
+478	0.0874583	0.0189942	0.019533	0.0197474	0.0269042	
+479	0.0879632	0.0193101	0.0196213	0.019667	0.026847	
+480	0.102706	0.00313033	0.0223283	0.0223333	0.0161761	
+481	0.089429	0.019246	0.00150622	0.0196661	0.00339616	
+482	0.0893253	0.0191423	0.0196911	0.0196723	0.0267884	
+483	0.0899481	0.0193454	0.0196992	0.0199262	0.0269553	
+484	0.090036	0.0192512	-0.00216972	0.0197753	0.0271262	
+485	0.0915612	0.0194532	-0.00217759	0.0199381	-0.00104772	
+486	0.0916633	0.0193414	-0.00215184	0.0200664	-0.00113689	
+487	0.0927984	0.0195462	-0.00198494	0.0202762	-0.00112068	
+488	0.0947772	0.0199722	0.0204922	0.0204822	-0.00112187	
+489	0.0938681	0.0196332	0.0200623	0.0202183	0.0273804	
+490	0.0937592	0.0196072	0.00140918	0.0200323	-0.00113665	
+491	0.094874	0.0198292	0.0201773	0.0203272	0.0277172	
+492	0.0950042	0.0196532	0.0200993	0.0201882	0.027675	
+493	0.0963801	0.0197731	0.0201923	-0.000858893	-0.000904908	
+494	0.0960943	0.0196601	0.01853	0.0201742	0.00347508	
+495	0.0981032	0.019858	0.0204872	0.0204121	0.0278322	
+496	0.104315	0.0208413	-0.00207387	-0.000738968	0.00344313	
+497	0.0991701	0.0200962	0.0206791	0.0206643	0.0282823	
+498	0.0993081	0.00301922	0.0203663	0.0206503	0.0279271	
+499	0.100696	0.0202931	0.0206071	0.0207433	0.0283553	
+500	0.100215	0.0200874	-0.00208794	-0.000799765	0.0281583	
+501	0.101998	0.0202342	0.0207733	0.020887	0.0285012	
+502	0.101651	0.0201372	-0.00211083	0.0206043	0.0282873	
+503	0.102112	0.0204362	0.0206412	0.0208281	0.028339	
+504	0.103457	0.0208663	0.00683011	0.0209681	0.0287331	
+505	0.102192	0.0202211	-0.00197278	0.0207871	0.0283281	
+506	0.102489	0.0203742	0.0207473	0.0208882	0.0284361	
+507	0.103449	0.00269426	-0.00207173	0.0209502	0.0288223	
+508	0.102808	0.0205823	0.0210072	0.0210782	0.0165552	
+509	0.103764	0.0205163	0.0212542	0.0211052	0.0291273	
+510	0.103521	0.0204612	0.0211581	0.0210382	0.0288452	
+511	0.104487	0.0205022	0.0211662	0.0211002	0.0287942	
+512	0.126841	0.0245582	0.0248751	0.0250422	0.0326952	
+513	0.105329	0.0206694	0.0211302	0.0213233	0.0290223	
+514	0.104937	0.0207423	0.0210961	0.0212382	0.0286542	
+515	0.1058	0.0206663	0.0212332	0.0214652	-0.0010029	
+516	0.105465	0.0207473	0.0212401	0.0213081	0.0293943	
+517	0.106607	0.0209783	-0.00202786	0.0213641	-0.000736823	
+518	0.107286	0.0210842	0.0215923	0.0217472	0.0295922	
+519	0.108214	0.0211982	0.0217022	0.0217372	0.0294741	
+520	0.109765	0.0212621	0.0219923	0.0218953	0.0299052	
+521	0.1086	0.0211743	0.0217563	0.02166	0.0296742	
+522	0.108227	0.021237	0.0215722	0.0215792	0.0296112	
+523	0.109776	0.0213431	0.0217592	0.0218462	0.0298883	
+524	0.108963	0.0213672	0.021644	0.0218741	0.0295473	
+525	0.110259	0.0212442	0.0217282	-0.000630011	0.0297521	
+526	0.109741	0.0212742	0.0216893	0.0217341	0.00965823	
+527	0.111185	0.0213562	-0.00199472	0.0219141	0.00966824	
+528	0.118483	0.0223903	0.0231212	0.0229901	-0.000847926	
+529	0.112159	0.021597	0.0219821	0.022225	0.0300931	
+530	0.112365	0.0213493	0.0220322	0.0220753	0.0298942	
+531	0.115041	0.0220193	0.0223502	0.0224933	-0.000629773	
+532	0.112892	0.0213562	0.0222803	0.00502718	0.0299231	
+533	0.114031	0.021577	0.0223082	-0.000561823	0.0302931	
+534	0.114224	0.00301612	0.0220224	0.0125572	0.030063	
+535	0.115449	0.0216812	-0.00195967	0.00513638	-0.000877728	
+536	0.11744	0.0033573	-0.00193559	-0.000536789	-0.000839819	
+537	0.116084	0.0217122	0.0223082	-0.000572791	0.0302781	
+538	0.116767	0.0217162	0.0225371	0.0224282	0.0304414	
+539	0.118678	0.0220181	0.0224801	0.00525011	-0.000802865	
+540	0.117645	0.0220391	0.0225211	0.0224282	-0.000763764	
+541	0.119062	0.0221433	0.0225841	0.0226902	0.030821	
+542	0.118803	0.0221173	0.0225602	0.0225412	0.0306481	
+543	0.120342	0.022307	0.0225602	0.0227131	0.0307411	
+544	0.140557	0.0252191	0.0258032	0.0258364	0.0340642	
+545	0.121472	0.0222203	0.0225743	0.0225602	0.0308541	
+546	0.121475	0.0221452	0.0225171	0.0228661	0.0307843	
+547	0.123048	0.00323309	-0.00189768	0.0229024	-0.000563731	
+548	0.122899	0.0224253	0.0228452	0.0228142	0.0311672	
+549	0.124431	0.0223471	0.0230883	0.0229772	0.0311333	
+550	0.124935	0.0226652	0.0229732	0.0230061	0.0316223	
+551	0.126	0.0226652	0.0231751	0.0234693	0.0315942	
+552	0.128942	0.0228912	0.0236644	0.023558	0.0319182	
+553	0.127095	0.0224961	0.0229803	0.0232412	0.0312811	
+554	0.127519	0.0225471	0.0232822	0.0231644	0.0314673	
+555	0.128851	0.0227252	0.0232293	0.0234832	-0.000699868	
+556	0.128606	0.0226852	0.0231103	0.0233423	0.0314463	
+557	0.130872	0.0226692	0.0234052	0.0233802	0.0317391	
+558	0.130279	0.0225881	0.0230743	0.0233182	0.0314452	
+559	0.132442	0.0228273	0.0232753	0.0233282	0.0316533	
+560	0.141231	0.0242852	0.0246943	0.0246881	0.0331322	
+561	0.133559	0.0231091	0.0237492	0.0235332	0.0320894	
+562	0.133195	0.0231472	0.0234991	0.02381	0.0320264	
+563	0.134088	0.0230662	-0.00181281	0.0237211	0.0320033	
+564	0.134339	0.0232912	0.0236153	0.0236553	0.0323111	
+565	0.135232	0.0234732	0.0240351	0.0238754	0.0325252	
+566	0.134444	0.0230452	-0.00182473	0.0236782	0.0321242	
+567	0.135763	0.0232083	0.0236722	0.0238851	0.0105142	
+568	0.137423	0.0235704	0.0242792	0.0241462	0.0328692	
+569	0.138116	0.0236641	0.0240582	0.0241991	0.00467218	
+570	0.135884	0.0233551	0.0240032	0.0238952	0.0326501	
+571	0.137235	0.0235092	0.024057	0.024237	0.0328492	
+572	0.137018	0.0235411	-0.00174366	0.0242082	-0.000558962	
+573	0.138087	0.0234581	-0.00176679	0.0243341	-0.00058495	
+574	0.137254	0.0233172	0.0240733	0.0240642	0.0327393	
+575	0.139352	0.0244593	-0.00164567	0.0248953	-0.000392785	
+576	0.162128	0.0267471	0.0274583	0.0273851	0.0205613	
+577	0.139334	0.0236153	0.024201	0.0243071	0.0326892	
+578	0.139273	0.0235812	-0.00161087	0.0242211	0.00470007	
+579	0.140179	0.0184382	-0.00176178	-0.000265707	0.0329052	
+580	0.139806	0.0235633	-0.00174366	0.0243403	0.0329882	
+581	0.141581	0.0240902	0.0245172	0.0245322	0.0334491	
+582	0.141699	0.0240151	0.0245983	0.0245072	0.0333892	
+583	0.142953	0.0241541	0.0248312	0.0247501	0.0336822	
+584	0.145484	0.0242802	0.0249513	0.0251063	0.00531925	
+585	0.143294	0.0240942	-0.001742	0.0247601	0.0332102	
+586	0.143435	0.0241593	0.0245632	0.0246993	0.0333234	
+587	0.144639	0.0244111	0.0248431	0.0248782	0.0339302	
+588	0.144325	0.0241832	0.0247513	0.0247482	0.033527	
+589	0.146258	0.0241302	0.024906	0.0248743	0.0336763	
+590	0.145539	0.0187193	0.0245932	0.0248493	0.0333892	
+591	0.147469	0.0246703	0.00851525	0.0248453	0.0336021	
+592	0.156681	0.0257632	0.0262882	0.00677932	-0.000179877	
+593	0.148479	0.024722	0.0250262	0.0250613	0.0341693	
+594	0.148378	0.0245422	0.025015	0.0250944	0.0339331	
+595	0.149682	0.0191153	-0.00167786	0.0252382	-0.000466694	
+596	0.149309	0.0245541	0.0251623	0.0250682	0.0339722	
+597	0.150842	0.0245603	-0.00165378	0.0254451	0.0342132	
+598	0.151015	0.0247704	0.0250594	0.0253311	0.0339772	
+599	0.152829	0.0247942	0.0251602	0.025488	0.0340344	
+600	0.155692	0.0251652	0.00295127	0.0257422	0.0347043	
+601	0.153348	0.00391234	0.0252112	0.0254601	-0.00044476	
+602	0.153997	0.0248462	0.0252832	0.0254012	0.0344051	
+603	0.155448	0.0248541	0.0256592	0.0256003	0.0346912	
+604	0.155845	0.0250112	0.0257682	0.0257331	0.0349332	
+605	0.156756	0.00456012	-0.00144373	0.0258061	0.0347532	
+606	0.156761	0.025149	0.0256552	0.0257152	0.0345742	
+607	0.159755	0.0252451	0.0257534	0.0260624	-0.000423779	
+608	0.185332	0.0286132	0.0289973	0.0292941	0.0380572	
+609	0.160091	0.0252091	0.0257424	0.0258442	0.0348572	
+610	0.160232	0.0250031	0.0256444	0.0256561	-0.000169625	
+611	0.162001	0.0252873	0.0258123	0.0260643	0.0347711	
+612	0.162198	0.0253881	0.0257701	0.0064124	0.0350882	
+613	0.164409	0.025745	0.0260331	0.0262932	0.0352723	
+614	0.164427	0.0256111	0.0259651	0.0262393	0.0351943	
+615	0.166561	0.0255452	0.0261012	0.0264052	-3.77793e-05	
+616	0.169376	0.00452913	0.0267202	0.0266253	0.0358492	
+617	0.167106	0.025484	0.0259882	0.0262762	0.0353552	
+618	0.167644	0.0257663	0.0262071	0.0264562	0.0354582	
+619	0.169147	0.0258161	0.0262753	0.0265442	0.0358061	
+620	0.168369	0.0256592	0.0263721	0.0263761	0.0354701	
+621	0.170123	0.0258681	0.0263091	0.0264164	0.0356482	
+622	0.169032	0.0258333	0.0262393	0.0263862	0.0353574	
+623	0.170466	0.0258693	0.0263921	0.0265683	0.0353891	
+624	0.181206	0.027167	0.0279883	0.0278653	0.037166	
+625	0.171294	0.0262352	0.0265542	0.0268182	0.0360092	
+626	0.171714	0.025982	0.0267452	0.0265862	0.0359522	
+627	0.172542	0.0259823	0.0266284	0.0269703	0.0359522	
+628	0.171419	0.0257913	-0.00153696	0.0265533	0.0357503	
+629	0.172946	0.0261611	0.0268833	0.0267402	0.0362982	
+630	0.172558	0.0260192	-0.00141965	0.0266124	-0.000273814	
+631	0.174048	0.0264074	0.026687	0.0270292	0.0359963	
+632	0.176436	0.0265862	0.0272373	0.0272311	0.0368193	
+633	0.174121	0.0264002	0.0268282	0.0268504	0.0362533	
+634	0.176497	0.0265411	0.027011	0.0272943	0.0364462	
+635	0.176308	0.0264682	0.0270711	0.0270132	0.0366722	
+636	0.175458	0.0264303	0.0270842	0.0272983	0.0366882	
+637	0.177049	0.0264863	0.0272323	0.0273281	0.0368992	
+638	0.176524	0.0263831	0.0272032	0.0270892	0.0366331	
+639	0.178022	0.0267934	0.0271112	0.0274192	0.0366711	
+640	0.209314	0.0306224	0.0311962	0.0312101	0.0404002	
+641	0.179011	0.026687	0.0273751	0.0272192	0.0367352	
+642	0.178566	0.0264832	0.0270213	0.027284	0.0364012	
+643	0.180217	0.0268122	0.00961627	0.0275272	-0.000206818	
+644	0.179984	0.0268773	0.0272762	0.0274862	0.0369073	
+645	0.182912	0.0268861	0.0276152	0.0276324	0.0372051	
+646	0.182225	0.0271252	0.0274943	0.0279032	0.0373873	
+647	0.184532	0.0272032	0.0178372	0.00714506	0.0373081	
+648	0.187504	0.0274152	0.0281652	0.028195	0.000181089	
+649	0.184889	0.0270892	0.0277552	0.0276772	0.0374793	
+650	0.184872	0.00473608	-0.00142895	0.0276173	-0.000116696	
+651	0.186838	0.0273262	0.0281783	0.0280942	0.0381392	
+652	0.18584	0.0273904	0.0278741	0.0280072	0.0377332	
+653	0.189399	0.0273961	0.00324024	0.0278243	0.0376963	
+654	0.187203	0.0270361	0.0275792	0.0276061	0.0373691	
+655	0.189545	0.0272633	-0.00142991	0.0279902	0.000136266	
+656	0.20186	0.0288543	0.0100752	0.0296141	0.000253091	
+657	0.190973	0.0275051	0.0282041	0.0284051	0.0382162	
+658	0.191128	0.0276281	-0.00140583	0.0281464	0.000200162	
+659	0.192731	0.0276722	0.0282132	0.0282713	0.0380012	
+660	0.192707	0.0275701	0.028087	0.000278364	0.0378832	
+661	0.194474	0.0276843	0.0284213	0.0282823	0.0382902	
+662	0.195019	0.0276982	0.0282711	0.0285732	0.0381442	
+663	0.196448	0.0278844	0.0283011	0.0285343	0.0379273	
+664	0.200062	0.0281261	0.0287923	0.0287942	0.0386142	
+665	0.197733	0.0277664	0.0283612	0.0283712	0.0382272	
+666	0.198276	0.0278262	0.00365008	0.0284551	0.0383071	
+667	0.2004	0.0277182	0.0285841	0.0285252	0.0386251	
+668	0.200122	0.0280334	0.0288593	0.0287021	0.0390142	
+669	0.202454	0.0278643	-0.00113498	0.0287403	0.0387832	
+670	0.202237	0.0279402	0.0286623	0.0285522	0.0387191	
+671	0.204344	0.0282182	0.0288032	0.028869	0.0388202	
+672	0.238555	0.0319604	-0.00119196	0.0325922	0.0424513	
+673	0.206175	0.0279323	-0.00136196	0.0287331	0.0385453	
+674	0.206026	0.0282933	0.0286461	0.028802	0.0385462	
+675	0.207455	0.0281791	0.0287732	0.0289213	0.0387153	
+676	0.206754	0.0282251	0.0290233	0.0288621	0.0391883	
+677	0.208719	0.0285813	0.0291852	0.0290712	0.0390812	
+678	0.237092	0.0317932	0.0119153	0.032369	0.0424434	
+679	0.238939	0.032127	0.0325023	0.0326842	0.0428172	
+680	0.244797	0.00608624	0.0331911	0.0331224	0.0433291	
+681	0.239209	0.0319392	0.0322722	0.0325662	0.0423311	
+682	0.239075	0.0318581	0.0324541	0.0326942	0.0246164	
+683	0.236665	0.0317854	0.0321671	0.0324544	0.0423752	
+684	0.213017	0.0287062	0.0297302	0.0295912	0.000402103	
+685	0.214238	0.0291072	0.0294763	0.0298411	0.0395521	
+686	0.212288	0.0288862	0.0293282	0.0294842	0.0395402	
+687	0.214089	0.0289592	0.0293812	0.0296942	0.0393692	
+688	0.227158	0.0303103	-0.00120293	0.0310694	0.0412382	
+689	0.215029	0.00549425	0.029729	0.0296313	0.0400852	
+690	0.214557	0.0288943	0.0295912	0.0298404	0.0397843	
+691	0.216001	0.0291971	0.0297791	0.00782503	0.0399801	
+692	0.214812	0.0290121	0.0296904	0.0296012	0.0398082	
+693	0.217085	0.0293192	0.0300962	0.0299291	0.0404841	
+694	0.216819	0.0288762	-0.00105678	0.0299124	0.00042523	
+695	0.219026	0.0290462	0.0298544	0.0299691	0.000127206	
+696	0.222187	0.0294162	0.0303353	0.0303503	0.000471244	
+697	0.219281	0.0294212	0.0297641	0.0300423	0.0144683	
+698	0.219823	0.0293423	0.0299832	0.0300042	0.0402912	
+699	0.222302	0.029657	0.0300661	0.0302612	0.0405403	
+700	0.22129	0.0295802	0.0285553	0.0305964	0.000258337	
+701	0.223038	0.0295092	0.0304412	0.0304343	0.0407852	
+702	0.222442	0.029657	0.0301691	0.030285	0.0406963	
+703	0.22495	0.0298294	0.0301873	0.030521	0.00661529	
+704	0.262344	0.0337383	0.0344502	0.0345243	0.0446781	
+705	0.225738	0.0297042	-0.00121676	0.0302903	0.000183235	
+706	0.22554	0.0294713	-0.00101696	0.0302211	0.000461231	
+707	0.227337	0.0298232	-0.00119363	0.0306064	0.00627125	
+708	0.228308	0.0298933	0.0307292	0.0305511	0.0411133	
+709	0.230745	0.0301973	0.0307204	0.0308741	0.0410611	
+710	0.231612	0.0299152	0.0308412	0.0308894	0.0068611	
+711	0.232488	0.0303332	0.0307094	0.031185	0.0416173	
+712	0.236766	0.0305873	0.0314041	0.0314432	0.0418311	
+713	0.233869	0.0301403	-0.000962843	0.0306612	0.0412163	
+714	0.234167	0.0302662	0.0306503	0.0308012	0.0411261	
+715	0.236247	0.0303463	0.0311352	0.0311762	0.0418662	
+716	0.236446	0.0302473	0.0307843	0.0310463	0.041304	
+717	0.23931	0.0302533	0.0194484	0.0310162	0.0415393	
+718	0.237423	0.0301942	0.0309094	0.0308083	0.0415422	
+719	0.240221	0.0305282	0.0308472	0.031175	0.0412523	
+720	0.256095	0.0320171	0.00395526	0.0326811	0.0247654	
+721	0.242122	0.030506	0.0312673	0.0313052	0.0421912	
+722	0.242485	0.0306462	0.0311123	0.0313333	0.0417332	
+723	0.244759	0.0309092	0.0043713	0.0314452	0.042014	
+724	0.243288	0.0305122	0.0312032	0.0312413	0.0416123	
+725	0.245976	0.0308153	0.0314843	0.0313422	0.0422262	
+726	0.246312	0.0305501	0.0311633	0.0313443	0.0418421	
+727	0.249179	0.0308122	0.0313813	0.0315052	0.0420002	
+728	0.252919	0.0310401	0.0320031	0.0318724	0.0425662	
+729	0.249766	0.0308763	0.031329	0.0316051	0.000667224	
+730	0.249491	0.0309612	0.0314964	0.0317921	0.0423693	
+731	0.251295	0.0310952	0.0316583	0.0318562	0.042688	
+732	0.250281	0.0309233	-0.00102173	0.0319113	0.0426263	
+733	0.252234	0.0311531	0.03185	0.0318233	0.0427452	
+734	0.251083	0.0310141	0.0318033	0.0316912	0.0427812	
+735	0.253326	0.0313372	0.031854	0.0320472	0.0423683	
+736	0.294545	0.0353412	0.0359184	0.0358602	0.0467271	
+737	0.25426	0.0312063	0.0319651	0.0318202	0.0428461	
+738	0.253157	0.0309652	0.00442923	0.0317623	0.0423893	
+739	0.254954	0.0313383	0.0321113	0.0320093	0.0429162	
+740	0.254207	0.0311102	-0.00102674	0.0319432	0.000781188	
+741	0.257003	0.0314611	0.0320283	0.0323104	0.0429362	
+742	0.256971	0.0312473	-0.00100981	0.0323981	0.0432083	
+743	0.259466	0.0320593	0.0324782	0.0326692	0.0435573	
+744	0.263014	0.0321163	0.0328332	0.0329882	0.0439593	
+745	0.260028	0.0317062	0.0324501	0.0325242	0.0432371	
+746	0.25882	0.0315243	0.0323073	0.0323302	0.0432252	
+747	0.260814	0.0318371	-0.000984778	0.0325662	0.0434812	
+748	0.25967	0.0315462	0.0323633	0.0323862	0.0009302	
+749	0.262171	0.03171	0.0323712	0.0326213	0.0433344	
+750	0.261183	0.0316814	0.0321843	0.0324761	0.0431622	
+751	0.26806	0.0324801	0.0329172	0.0331093	0.0438582	
+752	0.280385	0.033744	0.0343083	0.034623	0.0454663	
+753	0.265679	0.032313	0.0327174	0.033002	0.0439571	
+754	0.265458	0.0321962	0.0326992	0.0329193	0.043866	
+755	0.266828	0.0323521	0.0327233	0.0330514	0.000863204	
+756	0.265732	0.0318822	0.0326091	0.00106515	0.0436002	
+757	0.268726	0.0325431	0.0331792	0.0331563	0.0440961	
+758	0.26854	0.0321561	0.0327722	0.0328583	0.0438813	
+759	0.271674	0.0321123	0.0329722	0.0332342	0.0438901	
+760	0.275795	0.0328812	0.0333623	0.0336281	0.0447503	
+761	0.272135	0.0323192	0.0329913	0.0329951	0.0440163	
+762	0.272818	0.0322071	0.0330492	0.0331992	0.0443653	
+763	0.278205	0.0328764	0.0333301	0.0335273	0.0448192	
+764	0.275387	0.0327813	0.0333032	0.0335382	0.0448152	
+765	0.277153	0.0326563	0.0335273	0.0333732	0.0449761	
+766	0.277368	0.0323333	0.00449122	0.0334872	0.0444712	
+767	0.280016	0.0327424	0.0332831	0.0336262	0.0444833	
+768	0.333138	0.0378801	0.0383762	0.0385813	0.0496103	
+769	0.281459	0.00684131	0.0332772	0.0334932	0.0446073	
+770	0.280996	0.0325962	0.0332412	0.0332803	0.0443312	
+771	0.283497	0.032699	0.0334891	0.0335294	0.0445982	
+772	0.282906	0.0328852	0.0335342	0.033754	0.0450252	
+773	0.28632	0.0328301	0.0335513	0.0338491	0.0450171	
+774	0.287856	0.0331372	0.0339912	0.0339142	0.0452882	
+775	0.290699	0.0333012	-0.000838627	0.0340551	0.0453924	
+776	0.294426	0.0333883	0.0343841	0.0343031	0.0458411	
+777	0.291659	0.0330371	0.0337132	0.0338801	0.000980268	
+778	0.292302	0.0332991	0.0340883	0.0341002	0.0455042	
+779	0.294337	0.0336622	0.0341052	0.0344333	0.0456981	
+780	0.293022	0.0331723	0.0340244	0.0339123	0.0452741	
+781	0.295552	0.0273362	0.0339133	0.0341612	0.0452982	
+782	0.294012	0.0330752	0.0338432	0.0092131	0.0451454	
+783	0.296341	0.00669707	0.0338973	0.0342432	0.000982175	
+784	0.314782	0.0351702	0.035755	0.0358881	0.0473713	
+785	0.297322	0.0263411	0.0343531	0.0343911	0.0460283	
+786	0.296733	0.0335201	0.0340372	0.0344142	0.0455443	
+787	0.298919	0.0337643	0.0343992	0.0344893	0.04591	
+788	0.297696	0.03346	0.0342273	0.0345723	0.0456411	
+789	0.299812	0.0340172	0.0347532	0.0345754	0.0464643	
+790	0.299486	0.0335482	-0.000833859	0.034299	0.0458912	
+791	0.301416	0.0336973	-0.000828852	0.00120939	0.00106038	
+792	0.306872	0.0344552	0.0351201	0.0353791	0.0469161	
+793	0.301884	0.0335351	0.0344733	0.0011834	0.0460812	
+794	0.302577	0.0338851	0.0347141	0.0346221	0.0462183	
+795	0.304795	0.0338611	0.0347332	0.0348321	0.0465502	
+796	0.303358	0.0340573	0.0347592	0.0348421	0.0012132	
+797	0.307295	0.0345672	0.0350384	0.0351282	0.0469293	
+798	0.305487	0.0340463	-0.000791897	0.0349044	0.00114931	
+799	0.308188	0.0343791	0.0349482	0.0351461	0.0465633	
+800	0.358711	0.0387732	0.0393933	0.0395001	0.0510951	
+801	0.309168	0.034376	-0.000558724	0.0350403	0.0392903	
+802	0.30809	0.034386	0.0349203	0.0349742	0.0465542	
+803	0.310349	0.0343481	0.0349242	0.0352134	0.0464772	
+804	0.309673	0.0342842	0.0350481	0.0350362	0.046882	
+805	0.313283	0.0345291	0.0130574	0.0354401	0.0276183	
+806	0.313274	0.0344192	0.0354573	0.0355331	0.0474504	
+807	0.318087	0.0350992	0.0357913	0.0360314	0.047649	
+808	0.320955	0.0075754	0.0359951	0.0360073	0.0478681	
+809	0.316216	0.0347852	0.0353712	0.0355302	0.0472692	
+810	0.316779	0.0347401	0.0355803	0.0354701	0.0474871	
+811	0.31881	0.0349032	0.0357722	0.0356892	0.0478522	
+812	0.317431	0.0348233	-0.000714888	0.0351671	0.00123728	
+813	0.320912	0.0349964	0.0356182	0.0358902	0.0476643	
+814	0.321664	0.0349981	0.0354062	0.035715	0.0472761	
+815	0.323457	0.0349482	0.0356113	0.0358132	0.0471453	
+816	0.344028	0.0367752	0.0375472	0.0376772	0.0494591	
+817	0.326216	0.0352081	0.0358142	0.0361391	0.0480872	
+818	0.326017	0.0348894	0.0355781	0.0359641	0.0475272	
+819	0.32903	0.0353943	0.0358292	0.0361441	0.0480284	
+820	0.328702	0.0352672	0.0355052	0.0359672	0.0476254	
+821	0.331334	0.0352332	0.0360152	0.0362462	0.0480682	
+822	0.331775	0.0354554	0.0360373	0.0363802	0.0483762	
+823	0.334927	0.0355572	-0.000694861	0.0361582	0.0479232	
+824	0.340832	0.0357074	0.0366463	0.0367912	0.0485233	
+825	0.336928	0.035405	0.0361313	0.0362982	0.0480262	
+826	0.337221	0.0355324	0.0361482	0.0364581	0.0484671	
+827	0.340412	0.0353781	0.0361551	0.0365111	0.0285722	
+828	0.339474	0.0359482	0.0365261	0.0367721	0.0490531	
+829	0.346168	0.0362123	0.0369903	0.0369943	0.0490612	
+830	0.342092	0.0354911	0.0365061	0.0365733	0.0485853	
+831	0.344341	0.0357713	0.0364732	0.0367164	0.0482763	
+832	0.40108	0.0407041	0.0266031	0.0412983	0.0532171	
+833	0.344195	0.0360333	0.0364534	0.0367042	0.0487951	
+834	0.34287	0.0358993	0.0364493	0.0365492	0.0485224	
+835	0.345031	0.0358991	0.0367354	0.0366372	0.0485402	
+836	0.344603	0.0361143	0.0366582	0.0368983	0.0490593	
+837	0.347116	0.0359804	0.0366322	0.0369393	0.0489911	
+838	0.348008	0.0361582	0.0369221	0.0370103	0.0492562	
+839	0.349694	0.0361382	0.00588931	0.03713	0.049322	
+840	0.355123	0.0366103	0.0146312	0.0376121	0.0498682	
+841	0.349985	0.0361782	0.0370592	0.0372411	0.0492693	
+842	0.35154	0.0362703	-0.00056993	0.0373284	0.049317	
+843	0.351596	0.0365402	0.0371851	0.0375403	0.0498542	
+844	0.349924	0.0360683	0.0369612	0.0370132	0.0492343	
+845	0.353699	0.00756014	0.0371291	0.00156201	0.00144328	
+846	0.352562	0.0360931	0.0369252	0.0369893	0.0492181	
+847	0.355789	0.0363082	0.0370091	0.00186933	0.0492541	
+848	0.378218	0.00855316	0.0391852	0.0393273	0.0515193	
+849	0.357909	0.0361911	0.0374731	0.0375394	0.0500592	
+850	0.35775	0.0367302	0.0371422	0.0375341	0.0497202	
+851	0.360266	0.0368372	0.0375041	0.0376123	0.0498983	
+852	0.358467	0.0366863	0.00582112	0.0372723	0.0496281	
+853	0.36242	0.0367383	0.0377082	0.0378114	0.0501911	
+854	0.363726	0.0366932	0.0376941	0.0376202	0.0502311	
+855	0.365561	0.0368682	-0.00055181	0.00164617	0.00148023	
+856	0.370726	0.00780119	0.0381302	0.0382792	0.00154627	
+857	0.366531	0.0367543	0.0376192	0.0378043	0.0501722	
+858	0.367264	0.036934	0.037691	0.0379022	0.0504803	
+859	0.370696	0.0369524	0.0379251	0.0381321	0.050593	
+860	0.368737	0.0371903	0.0382012	0.0381664	0.0506443	
+861	0.372171	0.037233	0.0380482	0.0378751	0.0507721	
+862	0.370582	0.0372242	0.0378832	0.0380231	0.0507621	
+863	0.375334	0.0373741	0.0379771	0.0383591	0.0504722	
+864	0.436679	0.0420703	0.0430533	0.0431243	0.0556144	
+865	0.377492	0.0370733	0.0380691	0.0380772	0.0506011	
+866	0.375879	0.0372852	0.0378491	0.0379223	0.0502552	
+867	0.378115	0.0372223	-0.000232806	0.0381893	0.00167216	
+868	0.377503	0.0373572	0.0381411	0.0382592	0.0507292	
+869	0.384963	0.0377752	0.038545	0.0386163	0.0512432	
+870	0.382649	0.0376242	0.0385763	0.0385012	0.0514621	
+871	0.38819	0.0378293	0.0388731	0.0390092	0.0514962	
+872	0.393335	0.038334	0.0392763	0.0391992	0.0518993	
+873	0.388075	0.0377382	0.0385922	0.0385362	0.0510832	
+874	0.389637	0.0379971	0.0387412	0.0386313	0.0512511	
+875	0.392186	0.0378362	0.0387391	0.0388433	0.0516132	
+876	0.390257	0.0375682	0.0383743	0.0020944	0.0512184	
+877	0.393912	0.0379413	0.0388383	0.0388652	0.0513843	
+878	0.393431	0.0379013	0.0385953	0.0385102	0.0513271	
+879	0.394786	0.0379893	0.0386592	0.0389053	0.051092	
+880	0.419648	0.0399741	-5.58991e-05	0.0408012	0.0536071	
+881	0.397222	0.0385281	0.0392584	0.0394551	0.0519933	
+882	0.395239	0.0378112	0.0388082	0.0389263	0.0515062	
+883	0.397553	0.0384542	0.0388981	0.0391013	0.00171913	
+884	0.395587	0.0380982	-0.000394692	0.00181521	0.00169719	
+885	0.400973	0.0383371	0.0394253	0.039574	0.0522543	
+886	0.397996	0.0383762	0.0389961	0.0393621	0.0520991	
+887	0.400735	0.0385093	0.0389401	0.0392073	0.0518392	
+888	0.406171	0.0389842	0.0396842	0.0398911	0.0528604	
+889	0.400369	0.0380603	0.0390881	0.0391723	0.0520583	
+890	0.400692	0.0382623	-0.000110735	0.0117022	0.00175823	
+891	0.403933	0.0386013	0.0394222	0.0395552	0.0018021	
+892	0.401429	0.0386871	0.0395621	0.0396921	0.05261	
+893	0.405668	0.0389682	0.0252253	0.0398003	0.0527963	
+894	0.404506	0.0386683	-0.000364651	0.0395242	0.0525581	
+895	0.407009	0.0389541	0.0394212	0.0398063	0.0523464	
+896	0.477851	0.0443691	0.0449132	0.0450453	0.0213631	
+897	0.408657	0.0389673	0.0396093	0.0396932	0.0528382	
+898	0.407625	0.0383562	0.0393852	0.0394672	0.0522012	
+899	0.410387	0.0387644	0.0396613	0.0398473	0.0524842	
+900	0.410961	0.0082971	0.0397414	0.0401222	0.0527762	
+901	0.414922	0.0392023	0.0399162	0.0402421	0.0532681	
+902	0.415101	0.0391313	0.0401062	0.0400411	0.0531641	
+903	0.419882	0.0395702	0.0400721	0.0404652	0.0533952	
+904	0.426462	0.0398921	0.0408682	0.0409104	0.0540952	
+905	0.421376	0.0392972	0.0378052	0.0402533	0.053115	
+906	0.420484	0.0393492	0.0402483	0.0404362	0.0534483	
+907	0.423923	0.0393442	0.0403072	0.0404314	0.0536202	
+908	0.421345	0.0390891	0.0400313	0.0402123	0.0530523	
+909	0.425831	0.0394002	0.0402004	0.0402261	0.053341	
+910	0.424454	0.0393981	0.039857	0.0401741	0.0531391	
+911	0.431736	0.0397643	0.0404481	0.0405701	0.0534221	
+912	0.456238	0.0412761	0.0423802	0.042554	0.0555071	
+913	0.431873	0.0399932	0.0407633	0.0405043	0.0540782	
+914	0.431328	0.0397824	0.0403992	0.0406612	0.0539171	
+915	0.434804	0.0396923	0.0405802	0.0408234	0.0201773	
+916	0.433578	0.0397793	0.0403482	0.0405394	0.0538162	
+917	0.438367	0.0397102	0.0408403	0.0408021	0.0542261	
+918	0.437658	0.0396203	0.0405301	0.0406443	0.053815	
+919	0.444699	0.0401131	0.0408341	0.0408603	0.0540642	
+920	0.448952	0.0403882	-0.000213732	0.0414502	0.00197614	
+921	0.443157	0.0400502	0.0405454	0.0408641	0.054031	
+922	0.444414	0.0399653	0.0407251	0.0409471	0.0541412	
+923	0.447489	0.040115	0.0410892	0.0413653	0.0546953	
+924	0.445117	0.0402123	0.0411071	0.01183	0.00208725	
+925	0.450072	0.040248	7.71384e-05	0.0412301	0.0024432	
+926	0.446749	0.04048	0.0408093	0.0411142	0.00200833	
+927	0.450652	0.0405191	6.02107e-05	0.0413863	0.0543593	
+928	0.523693	0.0454403	0.0462242	0.04645	0.0597981	
+929	0.450668	0.0404521	0.0411493	0.0413901	0.0545033	
+930	0.449241	0.0403203	0.0409731	0.0413092	0.0544793	
+931	0.457048	0.0408532	0.0417682	0.0418333	0.0550381	
+932	0.450131	0.0402931	0.0412513	0.0411552	0.0548111	
+933	0.456278	0.0405401	0.0414332	0.0419492	0.055117	
+934	0.454231	0.0408143	0.0415603	0.0417472	0.0552522	
+935	0.45847	0.0410863	0.0419194	0.0419072	0.0557262	
+936	0.465316	0.041473	0.042302	0.042631	0.0560011	
+937	0.458897	0.0406972	0.0417672	0.0418314	0.055369	
+938	0.457782	0.0406913	0.0416323	0.0418202	0.00969423	
+939	0.461862	0.0332352	-0.000112881	0.0422224	0.00215019	
+940	0.457663	0.0407552	0.0415093	0.0418023	0.0552303	
+941	0.463611	0.0412473	0.0419792	0.0420622	0.0555061	
+942	0.459654	0.0405773	0.0412053	0.0414354	0.0106753	
+943	0.464479	0.0410291	0.0418202	0.042029	0.0552162	
+944	0.493665	0.0433842	0.0442342	0.0444154	0.0576373	
+945	0.466609	0.0415112	0.0422012	0.0425443	0.056409	
+946	0.466121	0.0410513	0.0418462	0.0420851	0.0557131	
+947	0.469909	0.0416802	0.0422901	0.0424143	0.0560602	
+948	0.465816	0.0411781	0.0420262	0.042092	0.0555292	
+949	0.470574	0.0415422	0.0423054	0.0425311	0.0563122	
+950	0.470705	0.0415331	0.0423392	0.0424632	0.0562564	
+951	0.474781	0.0415903	0.0422994	0.0426153	0.0561963	
+952	0.480829	0.0417842	0.0427262	0.0430392	0.0561031	
+953	0.474215	0.0411412	0.0422293	0.0423194	0.00230111	
+954	0.475898	0.0415043	0.0422331	0.00245441	0.0561382	
+955	0.479464	0.0418173	0.0423833	0.0427762	0.0566162	
+956	0.482747	0.0421292	0.0430611	0.043187	0.0570713	
+957	0.48256	0.0416793	0.0426432	0.0428952	0.0568222	
+958	0.482156	0.0414592	0.0425891	0.0427662	0.0564622	
+959	0.487799	0.042369	0.0429982	0.0429722	0.0565742	
+960	0.568436	0.0478193	0.0481674	0.0480594	0.062188	
+961	0.488203	0.0417713	0.0426813	0.0428301	0.0565661	
+962	0.491175	0.00969327	0.0426842	0.0429894	0.0565692	
+963	0.490904	0.0420021	0.0429381	0.0431422	0.0563172	
+964	0.491086	0.0422343	0.0429922	0.0429994	0.0572001	
+965	0.495376	0.042271	0.0430132	0.0431622	0.0569431	
+966	0.49618	0.0422222	0.00734509	0.0430123	0.0571753	
+967	0.500092	0.00935806	0.043254	0.0435444	0.0572044	
+968	0.509414	0.0431801	0.0439123	0.0438362	0.0580222	
+969	0.504539	0.0424222	0.000240217	0.0129811	0.0571812	
+970	0.501816	0.0423232	-6.78492e-06	0.0432452	0.0571362	
+971	0.505766	0.042137	0.0434884	0.0435962	0.0576712	
+972	0.502464	0.0421523	0.0433732	0.0432881	0.0572163	
+973	0.506347	0.0423251	0.0432233	0.0435032	0.00230516	
+974	0.503111	0.0422603	0.0429672	0.0432831	0.0571174	
+975	0.507044	0.0426871	0.0433272	0.0437161	0.0571052	
+976	0.539107	0.0446092	0.0456961	0.0457143	0.0597972	
+977	0.509665	0.0428614	0.0414533	0.0028602	0.0580922	
+978	0.509455	0.0427803	0.0436963	0.0440194	0.0576493	
+979	0.511836	0.0426222	0.0437151	0.00252236	0.0578562	
+980	0.509464	0.0430061	0.0436131	0.0438722	0.0578891	
+981	0.514342	0.0430263	0.0437902	0.0440613	0.0582012	
+982	0.513856	0.0429863	0.043666	0.0438751	0.0581163	
+983	0.517986	0.0429741	0.043754	0.0439662	0.0578271	
+984	0.524248	0.0436481	0.0444013	0.0442802	0.0585982	
+985	0.516791	0.0427731	0.0437731	0.043866	0.00238312	
+986	0.517171	0.0430201	0.0438272	0.0440492	0.0581142	
+987	0.520521	0.0431973	0.0440444	0.0443274	0.0585932	
+988	0.517739	0.0430683	0.0441164	0.0443863	0.0587472	
+989	0.522357	0.0435323	0.0441822	0.044453	0.0587541	
+990	0.521816	0.0431203	0.0425202	0.0443541	0.00244511	
+991	0.527252	0.0434433	0.0444082	0.0446833	0.0585922	
+992	0.610991	0.0492653	0.0499324	0.0501472	0.0641891	
+993	0.534052	0.0440952	0.0448653	0.0450121	0.0593072	
+994	0.52479	0.0432521	0.0442032	0.0444373	0.0584651	
+995	0.528035	0.0100621	0.000377307	0.0445503	0.0109481	
+996	0.526346	0.0432092	0.0442861	0.0444263	0.0111092	
+997	0.531982	0.0438041	0.0445382	0.0446161	0.0589501	
+998	0.534604	0.0437201	0.00015534	0.0450302	0.00254715	
+999	0.536911	0.0443174	0.0450233	0.0453111	0.0595282	
+1000	0.546253	0.0447384	0.0453583	0.0455331	0.0600301	
+1001	0.537295	0.0436374	0.0446333	0.0447563	0.0590462	
+endofdata

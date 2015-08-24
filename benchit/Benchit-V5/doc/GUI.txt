@@ -1,0 +1,56 @@
+BenchIT-GUI 
+
+system requirements: 
+
+JAVA 1.4 or later 
+128 MB of RAM 
+
+How to start the GUI: 
+
+run GUI.sh under UNIX or GUI.bat under Windows in the gui/bin/ directory
+
+How to run a kernel: 
+
+(can only be done under UNIX) 
+
+1. Select the kernel 
+1. Select the tab ''Kernels'' at the left of the GUI 
+2. Select the belonging node of the kernel. If the selected node contains others, all of them 
+are selected. You can select more then one node by holding the <CTRL>-Key 
+2. Choose what to do 
+Above the editor for the kernel-files a drop-down-box is shown. Here you can select 
+whether to compile or run a kernel, or to do both. 
+3. Start it 
+Press the RUN-Button 
+4. Choose whether to close the GUI or not 
+If you want to run a kernel, you will be asked whether to close the GUI or not. Not-closing 
+can lead to lower performance, because of another running process on the machine 
+
+
+
+How to show a result: 
+
+1. Select the tab ''Results'' 
+2. Click the file, you want to see 
+1. Byclickingtheleaf,whichcorrespondstotheresult-file,thisonewillbeplot 
+2. You can edit some settings for the plot at the ''config''-tab. Those will not be stored, when 
+selecting another result 
+3. To export the plot to a graphic-file select File in the menu and ''Save as...'' 
+
+
+How to run a kernel remote under Windows and Unix on a remote unix machine: 
+
+(the remote system needs ssh and tar) 
+
+1. Create a remote folder 
+1. Start ''Setup''-->''Create a remote folder'' 
+2. Insert the data 
+1. IP or DNS-Name: the IP or DNS-name (e.g. server.com) 
+2. Username on the remote system 
+3. Foldername on the remote system: A folder with this name will be created within the 
+home directory of user <username> on the remote system 
+2. Select the kernel(s) you want to run 
+(see how to run a kernel) 
+3. Start the selected kernel(s) 
+Start Measure --> Execute in remote folder 
+

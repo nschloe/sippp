@@ -1,0 +1,73 @@
+table of content
+
+1.	kernelname and the kernel-folder
+
+2.	environmentvariables namespace
+
+3.	additional ressources
+
+
+#####################################################################
+
+
+
+1) Der Kernelname enthält nur Buchstaben, Ziffern und Trennzeichen. 
+
+2) Der Kernelname besteht aus 7 Elementen (Kategorien) in fester Reihenfolge: 
+
+a) Oberster Sammelbegriff der Gattung (z.B. "grafical", "IO", "numerical", uä.) 
+b) Name des Algorithmus (Anwendung, Teil einer Anwendung, etc. Z.B. "matmul", "vecadd") 
+b) Programmiersprache (z.B. "C", "F77", "Java") 
+c) Parallelisierung/-bibliothek (Mehrfachnennung möglich) 
+   d) Weitere Bibliothek(en) (Mehrfachnennung möglich) 
+   e) (Daten-)Typ (z.B. "float", "double") 
+   f) Kommentar/Variante (Eigene Versionsnummer oä.) 
+
+   3) "." und "-" sind die einzigen verfügbaren Trennzeichen. Kategorien werden durch "." und Mehrfachnennungen, in alphabetischer Reihenfolge, innerhalb einer Kategorie durch "--". Diese beiden Zeichenketten dürfen nicht in den Bezeichnern der Kategorien auftauchen. 
+
+   4) Entfällt eine Kategorie, dann muss diese durch "0" aufgefüllt werden. 
+
+   5) Die zulässigen Bezeichner in den einzelnen Kategorien sind über die Webseite abfragbar, und nur diese werden beim Hochladen akzeptiert. Neue Bezeichner können dem BenchIT-Admin vorgeschlagen werden. Bei Zustimmung wird die Web-Liste erweitert. Das erste Zeichen nach dem Kategorietrennzeichen "." muß ein Buchstabe oder "0" sein. 
+
+   6) Die Kategorien a) bis e) des Kernelnames werden auf das Kernelverzeichnis hierarchisch abgebildet. Jede Kategorie entspricht dabei einem Unterverzeichnis. Die Kategorie f) wird zur Kompilezeit bestimmt, um mehrere Kompilate ein und desselben Kernels im "${BENCHITROOT}/bin" Verzeichnis unterscheiden zu können. Dies geschieht durch die Umgebungsvariable BENCHIT_EXECUTABLE_COMMENT bzw. einem Parameter zum COMPILE.SH. 
+
+   7) Bei Mehrfachnennungen innerhalb einer Kategorie erfolgt die Abbildung auf die Verzeichnisstruktur flach in alphabetischer Reihenfolge. 
+
+   8) Der Name der ausführbaren Datei eines kompilierten Kernels entspricht dem Kernelnamen und liegt im "${BENCHITROOT}/bin" Verzeichnis. Bei Java Kernels wird in diesem Verzeichnis ein Unterordner mit dem Kernelnamen angelegt. 
+
+   9) Die Struktur des Output-Verzeichnisses wird hierarchisch entsprechend dem Kernelverzeichnis angelegt. 
+
+   10) Die Ergebnisdateien bestehen aus den Kategorien: 
+   a) Architekturinformationen (z.B. InP3_700M) 
+   b) Kategorie f) des Kernelnamen 
+   c) Datum und Uhrzeit 
+
+   11) Trennung der Kategorien im Ergbnisdateinamen erfolgt durch "__" und 
+   Trennung der Teile der Kategorien durch "_". Das Datum hat das Format YYYY_MM_DD und die Uhrzeit HH_MM. Enthält Kategorie f) des Kernelnamen andere Zeichen außer Buchstaben und Ziffern, so werden diese durch "_" ersetzt. 
+
+   Beispiele: 
+
+   Die Dateien des Kernels "numerical.matmul.C.0.0.double.v01" liegen im 
+   Verzeichnis "${BENCHITROOT}/kernel/numerical/matmul/C/0/0/double". 
+   Die ausführbare Datei: "${BENCHITROOT}/bin/numerical.matmul.C.0.0.double.v01". 
+
+   Das Result: 
+   "${BENCHITROOT}/output/numerical/matmul/C/0/0/double/" 
+   "InP3_700M__v01__2005_07_14__13_51.bit" 
+
+   Die Dateien des Kernels "numerical.matmul.F77.MPI--pThreads.BLAS3.double.DTRMM-v02" liegen im 
+   Verzeichnis "${BENCHITROOT}/kernel/numerical/matmul/F77/MPI--pThreads/BLAS3/double". 
+   Die ausführbare Datei: "${BENCHITROOT}/bin/numerical.matmul.F77.MPI--pThreads.BLAS3.double.DTRMM-v02". 
+
+   Das Result: 
+   "${BENCHITROOT}/output/numerical/matmul/F77/MPI--pThreads/BLAS3/double" 
+   "InP3_700M__DTRMM_v02__2005_07_14__13_51.bit" 
+
+
+   Die Dateien des Kernels "numerical.matmul.Java.0.0.double.v03" liegen im 
+   Verzeichnis "${BENCHITROOT}/kernel/numerical/matmul/Java/0/0/double". 
+   Die ausführbare Datei: "${BENCHITROOT}/bin/numerical.matmul.Java.0.0.double.v03/RUN.SH". 
+
+   Das Result: 
+   "${BENCHITROOT}/output/numerical/matmul/Java/0/0/double" 
+   "InP3_700M__v03__2005_07_14__13_51.bit"

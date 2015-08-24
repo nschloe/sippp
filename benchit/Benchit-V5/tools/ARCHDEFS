@@ -1,0 +1,311 @@
+###############################################################################
+#                                                                             #
+#  B e n c h I T - Performance Measurement for Scientific Applications        #
+#                                                                             
+#* tools/ARCHDEFS
+# SYNOPSIS
+# Architectural values
+# DESCRIPTION
+#  Architecture specific programm defaults                                   
+#                                                                            
+#  Author: Guido Juckeland (juckeland@zhr.tu-dresden.de)                     
+#  Version: 1.0                                                              
+#  Date: 2002-12-14                                                          
+#                                                                            
+###############################################################################
+# SOURCE
+uname_minus_s=`uname_minus_a | cut -d ' ' -f1`
+
+if [ "${uname_minus_s}" = "Linux" ]; then
+
+  HAVE_CC=1
+  HAVE_CXX=1
+  HAVE_F77=1
+  HAVE_F90=0
+  HAVE_MPI=1
+  HAVE_PVM=1
+  HAVE_PTHREADS=1
+  HAVE_OMPC=0
+  HAVE_OMPF77=0
+  HAVE_OMPF90=0
+  HAVE_JC=0
+  HAVE_JVM=1
+
+  NUMPROC=1
+
+set -a
+  BENCHIT_ARCH_SHORT="unknown"
+  BENCHIT_ARCH_SPEED="unknown"
+  BENCHIT_TOTAL_TIMELIMIT=600
+  BENCHIT_IO_NUMCHANNELS="1"
+  BENCHIT_IO_DISKPATH="/tmp"
+  BENCHIT_IO_DISKSPACE="25" # in MBytes
+  BENCHIT_IO_RAMSIZE="256" # in MBytes
+
+set +a
+
+  CC=cc
+
+  CC_C_FLAGS=""
+  CC_C_FLAGS="$CC_C_FLAGS -Wall -Werror -Waggregate-return -Wcast-align"
+  CC_C_FLAGS="$CC_C_FLAGS -Wmissing-declarations -Wmissing-prototypes"
+#  CC_C_FLAGS="$CC_C_FLAGS -Wnested-externs -Wpointer-arith -Wstrict-prototypes"
+  CC_C_FLAGS="$CC_C_FLAGS -Wnested-externs -Wpointer-arith"
+  CC_C_FLAGS="$CC_C_FLAGS -Wwrite-strings -fno-common -mcpu=pentiumpro"
+  CC_C_FLAGS="$CC_C_FLAGS -pipe"
+
+  CC_C_FLAGS_STD="-O2"
+  CC_C_FLAGS_HIGH="-O3"
+  CC_C_FLAGS_OMP=""
+
+  CC_L_FLAGS="-lm"
+
+  F77=g77
+
+  F77_C_FLAGS="$CC_C_FLAGS"
+
+  F77_C_FLAGS_STD="$CC_C_FLAGS_STD"
+  F77_C_FLAGS_HIGH="$CC_C_FLAGS_HIGH"
+
+  F77_C_FLAGS_OMP=""
+
+  F77_L_FLAGS="$CC_L_FLAGS"
+
+  F90=""
+
+  F90_C_FLAGS=""
+
+
+  JAVAC=""
+
+  JVM="java"
+
+  JAVA_C_FLAGS=""
+
+  LIB_MPI="-lmpi"
+  LIB_PTHREAD="-lpthread"
+  LIB_BLAS="-lblas"
+  LIB_CURSES="-lncurses"
+
+  OMP_NUM_THREADS=12
+  OMP_DYNAMIC=FALSE
+  OMP_NESTED=FALSE
+
+elif [ "${uname_minus_s}" = "IRIX64" ]; then
+
+  HAVE_CC=1
+  HAVE_CXX=1
+  HAVE_F77=1
+  HAVE_F90=1
+  HAVE_MPI=1
+  HAVE_PVM=1
+  HAVE_PTHREADS=1
+  HAVE_OMPC=1
+  HAVE_OMPF77=1
+  HAVE_OMPF90=1
+  HAVE_JC=0
+  HAVE_JVM=1
+  
+  NUMPROC=4
+
+set -a
+  BENCHIT_ARCH_SHORT="unknown"
+  BENCHIT_ARCH_SPEED="unknown"
+  BENCHIT_TOTAL_TIMELIMIT=600
+  BENCHIT_IO_NUMCHANNELS="1"
+  BENCHIT_IO_DISKPATH="/tmp"
+  BENCHIT_IO_DISKSPACE="25" # in MBytes
+  BENCHIT_IO_RAMSIZE="256" # in MBytes
+set +a
+
+  CC=cc
+
+  CC_C_FLAGS=""
+  CC_C_FLAGS="$CC_C_FLAGS -fullwarn -w2 -woff 1209,1552,1110,3201,84"
+  CC_C_FLAGS="$CC_C_FLAGS -r12000 -64 -mips4 -OPT:Olimit=0 -OPT:roundoff=3"
+
+  CC_C_FLAGS_STD="-O2"
+  CC_C_FLAGS_HIGH="-O3"
+
+  CC_L_FLAGS="-64 -lm"
+
+  F77=f77
+
+  F77_C_FLAGS="$CC_C_FLAGS"
+
+  F77_C_FLAG_STD="$CC_C_FLAGS_STD"
+  F77_C_FLAGS_HIGH="$CC_C_FLAGS_HIGH"
+
+  F77_C_FLAGS_OMP=""
+
+  F77_L_FLAGS="$CC_L_FLAGS"
+
+  F90="f90"
+
+  F90_C_FLAGS=""
+
+  JAVAC=""
+
+  JVM="java"
+
+  JAVA_C_FLAGS=""
+
+  LIB_MPI="-lmpi"
+  LIB_PTHREAD="-lpthread"
+  LIB_BLAS="-lblas"
+  LIB_CURSES="-lcurses"
+
+  OMP_NUM_THREADS=12
+  OMP_DYNAMIC=FALSE
+  OMP_NESTED=FALSE    
+
+elif [ "${uname_minus_s}" = "UNICOSMK" ]; then
+
+  HAVE_CC=1
+  HAVE_CXX=1
+  HAVE_F77=1
+  HAVE_F90=1
+  HAVE_MPI=1
+  HAVE_PVM=1
+  HAVE_PTHREADS=1
+  HAVE_OMPC=1
+  HAVE_OMPF77=1
+  HAVE_OMPF90=1
+  HAVE_JC=0
+  HAVE_JVM=1
+
+set -a
+  BENCHIT_ARCH_SHORT="unknown"
+  BENCHIT_ARCH_SPEED="unknown"
+  BENCHIT_TOTAL_TIMELIMIT=600
+  BENCHIT_IO_NUMCHANNELS="1"
+  BENCHIT_IO_DISKPATH="/tmp"
+  BENCHIT_IO_DISKSPACE="25"
+  BENCHIT_IO_RAMSIZE="256"
+set +a
+
+  CC=cc
+
+  CC_C_FLAGS=""
+#  CC_C_FLAGS="$CC_C_FLAGS -fullwarn -w2 -woff 1209,1552"
+#  CC_C_FLAGS="$CC_C_FLAGS -r12000 -64"
+
+  CC_C_FLAGS_STD="-O2"
+  CC_C_FLAGS_HIGH="-O3"
+
+  CC_L_FLAGS="-lm"
+
+  F77=f77
+
+  F77_C_FLAGS="$CC_C_FLAGS"
+
+  F77_C_FLAG_STD="$CC_C_FLAGS_STD"
+  F77_C_FLAGS_HIGH="$CC_C_FLAGS_HIGH"
+
+  F77_C_FLAGS_OMP=""
+
+  F77_L_FLAGS="$CC_L_FLAGS"
+
+  F90="f90"
+
+  F90_C_FLAGS=""
+
+  JAVAC=""
+
+  JVM="java"
+
+  JAVA_C_FLAGS=""
+
+  LIB_MPI="-lmpi"
+  LIB_PTHREAD="-lpthread"
+  LIB_BLAS="-lsci"
+  LIB_CURSES="-lcurses"
+
+  OMP_NUM_THREADS=12
+  OMP_DYNAMIC=FALSE
+  OMP_NESTED=FALSE
+
+elif [ "${uname_minus_s}" = "AIX" ]; then
+# this section works for juelichs's p690
+
+
+  HAVE_CC=1
+  HAVE_CXX=1
+  HAVE_F77=1
+  HAVE_F90=1
+  HAVE_MPI=1
+  HAVE_PVM=1
+  HAVE_PTHREADS=1
+  HAVE_OMPC=1
+  HAVE_OMPF77=1
+  HAVE_OMPF90=1
+  HAVE_JC=1
+  HAVE_JVM=1
+
+  NUMPROC=32
+
+  BENCHIT_IO_NUMCHANNELS="1"
+  BENCHIT_IO_DISKPATH="/tmp"
+  BENCHIT_IO_DISKSPACE="25"
+  BENCHIT_IO_RAMSIZE="256"
+	
+  LIB_CURSES="-lcurses"
+  LIB_PTHREAD="-lpthread"
+  LIB_BLAS="-lessl"
+  # some MPI stuff
+  # ./home/admin/beta/etc/initmodules.sh
+  # module load TurboSHMEM-2.9.9
+  # LIB_MPI="-lsmac -lturbo -lxlf90_r"
+  # uncomment next line and comment the last three lines to use standard mpi
+  LIB_MPI="-lmpi"
+
+  CC=mpcc_r
+  CCP=mpxlc_r
+  CC_C_FLAGS="-q64"
+  CC_C_FLAGS_STD=""
+  CC_C_FLAGS_HIGH="-O3 -qhot"
+  CC_C_FLAGS_OMP="-qsmp=omp"
+  CC_L_FLAGS="-lm"
+
+  F77=mpxlf_r
+  F77P=mpxlf_r
+  F77_C_FLAGS="-q64 -qextname"
+  F77_C_FLAGS_STD="${CC_C_FLAGS_STD}"
+  F77_C_FLAGS_HIGH="${CC_C_FLAGS_HIGH}"
+  F77_C_FLAGS_OMP="${CC_C_FLAGS_OMP}"
+  F77_L_FLAGS="${CC_L_FLAGS} -qextname"
+  
+  F90="xlf90"
+  F90_C_FLAGS="${F77_C_FLAGS}"
+  F90_C_FLAGS_STD="${F77_C_FLAGS_STD}"
+  F90_C_FLAGS_HIGH="${F77_C_FLAGS_HIGH}"
+  F90_C_FLAGSS_OMP="${F77_C_FLAGS_OMP}"
+  F90_L_FLAGS="${CC_L_FLAGS}"
+
+  JAVAC="javac"
+  JVM="java"
+  JAVA_C_FLAGS=""
+
+  OMP_NUM_THREADS=$NUMPROC
+  OMP_DYNAMIC=FALSE
+  OMP_NESTED=FALSE
+
+  export ENVIRONMENT=AIXLL
+
+else
+
+  echo ""
+  echo "No definitions for your operating system found in ARCHDEFS. You will have"
+  echo "to set them manually in your LOCALDEFS. BenchIT will not run without at"
+  echo "least one set of definitions..."
+  echo ""
+
+fi
+
+
+#****
+# END OF SOURCE
+
+
+
+

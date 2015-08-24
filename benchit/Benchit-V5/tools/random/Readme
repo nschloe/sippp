@@ -1,0 +1,38 @@
+This folder contains tools to find good parameters for the random number 
+generator included in  the benchit.c. Our random number generator actually uses 
+2 random numbergenerators and returns the bitwise XOR of them. Both generators 
+use the simple formula r(n+1) = ((a * r(n)) + b) mod m. As we use 2 generators 
+we need a1,a2,m1,m2,b1,b2 to be specified in the bi_random_init(...) function 
+within benchit.c. Additionally we need fix1 and fix2. Those 2 values specify 
+the fixpoints of the 2 generators (fix= ((a * fix) + b) mod m).
+
+There are some restrictions to the parameters:
+
+1) m1 and m2 have to be prime numbers > 2,815e+14 (more than 48 Bit)
+2) m1 and m2 are not the same number
+3) a1 is a primitive root of m1, a2 is a primitive root of m2
+4) a1 and a2 should not be a very small number (2,3,5,7,11,13)
+5) a1*m1 and a2*m2 are smaller than 2^64 (to avoid overflows)
+6) b1 is smaller than m1, b2 is smaller than m2
+7) fix1 = ((a1*fix1) + b1) mod m1, fix2 = ((a2*fix2) + b2) mod m2
+8) all parameters are positive numbers
+
+We already have a set of parameters defined in the benchit.c that meets all 
+restrictions. The values should not be changed in order to get comparable 
+results. However, if you want to change them anyway here's how to find suitable 
+parameters:
+
+1) run make within this directory or execute the compile.sh to build the tools.
+2) use ./prime to find prime numbers for m
+3) use ./prim_root to find possible values for a
+   it could take a while to find an m that has a primitive root that is not too 
+   small so you should make sure to generate enough prime numbers in step 2 
+   (max should be greater than min+1000)
+4) make sure a * m does not overflow a 64-Bit unsigned integer otherwise repeat 
+   step 2 and/or 3
+5) choose b with the only restriction that it is smaller than m
+6) use ./fixpoint to find the fixpoint for your parameters
+
+Once you have found suitable parameters enter them in the bi_random_init(...) 
+function. At the end of the bi_random_init function the fixpoints are replaced 
+by other values. Make sure that those values really differ from the fixpoints.

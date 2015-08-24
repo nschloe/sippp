@@ -1,0 +1,240 @@
+/********************************************************************
+ * BenchIT - Performance Measurement for Scientific Applications
+ *
+ * Kernel: simple Variant of the c-Skeleton with MPI
+ * Contact: benchit@zih.tu-dresden.de
+ *
+ * Last change by: $Author: william $
+ * $Revision: 1.5 $
+ * $Date: 2006/01/09 16:24:20 $
+ *******************************************************************/
+ 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include <mpi.h>
+#include "interface.h"
+#include "simple.h"
+
+
+/* Reads the environment variables used by this kernel. */
+void evaluate_environment(mydata_t * pmydata)
+{
+   int errors = 0;
+   char * p = 0;
+   p = bi_getenv( "BENCHIT_KERNEL_PROBLEMSIZE_MIN", 0 );
+   if ( p == NULL ) errors++;
+   else pmydata->min = atoi( p );
+   p = bi_getenv( "BENCHIT_KERNEL_PROBLEMSIZE_MAX", 0 );
+   if ( p == NULL ) errors++;
+   else pmydata->max = atoi( p );
+   p = bi_getenv( "BENCHIT_KERNEL_PROBLEMSIZE_INCREMENT", 0 );
+   if ( p == NULL ) errors++;
+   else pmydata->increment = atoi( p );
+   MPI_Comm_rank(MPI_COMM_WORLD, &(pmydata->commrank));
+   MPI_Comm_size(MPI_COMM_WORLD, &(pmydata->commsize));
+ 
+   if ( errors > 0 )
+   {
+      fprintf( stderr, "There's at least one environment variable not set!\n" );
+      exit( 1 );
+   }
+   pmydata->steps = (myinttype) ( pmydata->max - pmydata->min + 1 ) / pmydata->increment;
+   if (( pmydata->max - pmydata->min + 1 ) % pmydata->increment != 0) pmydata->steps++;
+}
+
+/**  The implementation of the bi_getinfo from the BenchIT interface.
+ *   Here the infostruct is filled with informations about the
+ *   kernel.
+ *   @param infostruct  a pointer to a structure filled with zero's
+ */
+void bi_getinfo( bi_info * pinfo )
+{
+   mydata_t * penv;
+   
+   (void) memset ( pinfo, 0, sizeof( bi_info ) );
+   penv = (mydata_t *) malloc( sizeof( mydata_t ) );
+
+   /* get environment variables for the kernel */
+   evaluate_environment(penv);
+   pinfo->codesequence = bi_strdup( "start kernel; do nothing; " );
+   pinfo->kerneldescription = bi_strdup( "simple skeleton for c kernels" );
+   pinfo->xaxistext = bi_strdup( "Problem Size" );
+   pinfo->maxproblemsize = penv->steps;
+   pinfo->num_processes = 1;
+   pinfo->num_threads_per_process = 0;
+   pinfo->kernel_execs_mpi1 = 1;
+   pinfo->kernel_execs_mpi2 = 0;
+   pinfo->kernel_execs_pvm = 0;
+   pinfo->kernel_execs_omp = 0;
+   pinfo->kernel_execs_pthreads = 0;
+   pinfo->numfunctions = 1;
+
+   /* allocating memory for y axis texts and properties */
+   pinfo->yaxistexts = malloc( pinfo->numfunctions * sizeof( char* ) );
+   if ( pinfo->yaxistexts == NULL )
+   {
+     fprintf( stderr, "Allocation of yaxistexts failed.\n" ); fflush( stderr );
+     exit( 127 );
+   }
+   pinfo->outlier_direction_upwards = malloc( pinfo->numfunctions * sizeof( int ) );
+   if ( pinfo->outlier_direction_upwards == NULL )
+   {
+     fprintf( stderr, "Allocation of outlier direction failed.\n" ); fflush( stderr );
+     exit( 127 );
+   }
+   pinfo->legendtexts = malloc( pinfo->numfunctions * sizeof( char* ) );
+   if ( pinfo->legendtexts == NULL )
+   {
+     fprintf( stderr, "Allocation of legendtexts failed.\n" ); fflush( stderr );
+     exit( 127 );
+   }
+   pinfo->base_yaxis = malloc( pinfo->numfunctions * sizeof( double ) );
+   if ( pinfo->base_yaxis == NULL )
+   {
+     fprintf( stderr, "Allocation of base yaxis failed.\n" ); fflush( stderr );
+     exit( 127 );
+   }
+
+   /* setting up y axis texts and properties */
+      pinfo->yaxistexts[0] = bi_strdup( "time in s" );
+      pinfo->outlier_direction_upwards[0] = 0;
+      pinfo->base_yaxis[0] = 10; //logarythmic axis 10^x
+      pinfo->legendtexts[0] = bi_strdup( "time in s" );
+ 
+   /* free all used space */
+   if (penv) free( penv );
+}
+
+
+
+/** Implementation of the bi_init of the BenchIT interface.
+ *  Here you have the chance to allocate the memory you need.
+ *  It is also possible to allocate the memory at the beginning
+ *  of every single measurment and to free the memory thereafter.
+ *  But making usage always of the same memory is faster.
+ *  HAVE A LOOK INTO THE HOWTO !
+ */
+void* bi_init( int problemsizemax )
+{
+   mydata_t * pmydata;
+
+   pmydata = (mydata_t*)malloc( sizeof( mydata_t ) );
+   if ( pmydata == 0 )
+   {
+      fprintf( stderr, "Allocation of structure mydata_t failed\n" ); fflush( stderr );
+      exit( 127 );
+   }
+   evaluate_environment(pmydata);
+  
+   IDL(3, printf("\nrank=%d size=%d\n",pmydata->commrank, pmydata->commsize));
+   IDL(3, printf("max=%d, min=%d, increment=%d, steps=%d\n",pmydata->max, pmydata->min, pmydata->increment, pmydata->steps));
+   return (void *)pmydata;
+}
+
+
+
+/** The central function within each kernel. This function
+ *  is called for each measurment step seperately.
+ *  @param  mdpv         a pointer to the structure created in bi_init,
+ *                       it is the pointer the bi_init returns
+ *  @param  problemsize  the actual problemsize
+ *  @param  results      a pointer to a field of doubles, the
+ *                       size of the field depends on the number
+ *                       of functions, there are #functions+1
+ *                       doubles
+ *  @return 0 if the measurment was sucessfull, something
+ *          else in the case of an error
+ */
+int bi_entry( void * mdpv, int iproblemsize, double * dresults )
+{
+  /* dstart, dend: the start and end time of the measurement */
+  /* dtime: the time for a single measurement in seconds */
+  double dstart = 0.0, dend = 0.0, dtime = 0.0;
+  /* flops stores the calculated FLOPS */
+  double dres = 0.0;
+  /* ii is used for loop iterations */
+  myinttype ii = 0, imyproblemsize = (myinttype) iproblemsize;
+  /* cast void* pointer */
+  mydata_t * pmydata = (mydata_t *) mdpv;
+
+  IDL(3, printf("\nrank=%d entered bi_entry\n",pmydata->commrank));
+  /* calculate real problemsize */
+  imyproblemsize = pmydata->min + ( (imyproblemsize - 1)  * pmydata->increment );
+
+  /* check wether the pointer to store the results in is valid or not */
+  if ( pmydata->commrank == 0 )
+  {
+    if ( dresults == NULL )
+    {
+      fprintf( stderr, "\nrank=%d resultpointer not allocated - panic\n",pmydata->commrank);fflush( stderr );
+      return 1;
+    }
+  }
+
+  /* get the actual time
+   * do the measurement / your algorythm
+   * get the actual time
+   */
+  MPI_Barrier( MPI_COMM_WORLD );
+  dstart = bi_gettime(); 
+  dres = simple(&imyproblemsize);
+  MPI_Barrier( MPI_COMM_WORLD );
+  dend = bi_gettime();
+
+  IDL(3, printf("rank=%d Problemsize=%d, Value=%f\n",pmydata->commrank, imyproblemsize, dres));
+
+  if ( pmydata->commrank == 0 )
+  {
+    /* calculate the used time and FLOPS */
+    dtime = dend - dstart;
+    dtime -= dTimerOverhead;
+        
+    /* If the operation was too fast to be measured by the timer function,
+     * mark the result as invalid 
+     */
+    if( dtime < dTimerGranularity ) dtime = INVALID_MEASUREMENT;
+  
+    /* store the results in results[1], results[2], ...
+    * [1] for the first function, [2] for the second function
+    * and so on ...
+    * the index 0 always keeps the value for the x axis
+    */
+    dresults[0] = (double)imyproblemsize;
+    dresults[1] = dtime;
+  }
+
+  return 0;
+}
+
+/** Clean up the memory
+ */
+void bi_cleanup( void* mdpv )
+{
+   mydata_t * pmydata = (mydata_t*)mdpv;
+   if ( pmydata ) free( pmydata );
+   return;
+}
+
+/********************************************************************
+ * Log-History
+ * 
+ * $Log: kernel_main.c,v $
+ * Revision 1.5  2006/01/09 16:24:20  william
+ * updated the cvs-header
+ *
+ * Revision 1.4  2006/01/09 16:01:43  william
+ * cvs-keyword-problems
+ *
+ * Revision 1.3  2006/01/07 15:05:13  william
+ * some changes reflecting updated benchit.calso some debugmessages added
+ *
+ * Revision 1.2  2006/01/06 16:05:50  william
+ * oh boy - searched a bug for 4h and then recognised i was searching at the wrong place all the time. A typo made every MPI-process test for the resultvector and then bail out because only the rank0 has a valid pointer
+ *
+ * Revision 1.1  2006/01/05 19:37:36  william
+ * A simple Version of the skeleton with mpi for easy first time development
+ *
+ *
+ *******************************************************************/ 

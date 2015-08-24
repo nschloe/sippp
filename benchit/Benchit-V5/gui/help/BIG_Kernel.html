@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <title>BenchIT GUI Kernelmode</title>
+    <meta content="BenchIT GUI Kernelmode">
+    <style></style>
+  </head>
+  <body>
+  <a name="start"></a>
+	<h1>BenchIT GUI Kernelmode</h1>
+	<a name="Click_to_find"></a>
+	<h2>Click to find</h2>
+	Click on the picture to be directed to the belonging section.<br>
+	<map name="ClickToFindResult">
+		<area shape=rect coords="4,54,164,434" href="#The_Kerneltree">
+		<area shape=rect coords="175,81,595,330" href="#The_Edit_-_Area">
+		<area shape=rect coords="174,54,596,65" href="#Having_selected_a_node">
+		<area shape=rect coords="58,29,128,50" href="#What_to_do">
+		<area shape=rect coords="154,67,380,80" href="#Sourcecodefiles">
+		<area shape=rect coords="130,29,150,50" href="#Starting_a_kernel">
+	</map>
+	<img src="KernelMode.png" align="middle" border="0" usemap="#ClickToFindResult">
+	<h2>Basics</h2>
+	<a name="What are kernels"></a>
+	<h3>What are kernels</h3>
+	We define a kernel as performance measuring programs, which use the BenchIT interface.
+	Those can be mathematical kernels like Matrix Multiplication, Vector Addition or a
+	Sinus/Cosinus-measuring program. But also they can measure IO-Speed, RAM-Access and so on.
+	<a name="Sourcecodefiles"></a>
+	<h3>Sourcecodefiles</h3>
+	The Editor will have tabs, containing the files of the kernel.<font color="#aa0000">Problems:</font>All Files within the directory will be displayed! Even 100MB JPGs!!!
+	Those files should be: COMPILE.SH - this file is used to compile the kernel, PARAMETERS - this file will contain settings for the kernel, and source-code files.
+	If you don't want to edit the source-code, but save memory, you can disable the flag kernelsourceedit in Setup &rarr; Preferrences.
+	<a name="How_to_generate_kernels"></a>
+	<h3>How to generate kernels</h3>
+	We generated a HOWTO for this, which can be found at <a href="www.benchit.org"> www.benchit.org </a>.
+	You may also select &quot;Duplicate&quot; from a kernels popup-menu to duplicate this kernel and make changes.<font color="#aa0000">Problems:</font>The new files will have no eXecutable-flag!
+	You may also add /remove single files to/from a kernel.
+	<a name="Used_packages"></a>
+	<h3>Used packages</h3>
+	Here we use a syntax-highlighting by jedit.org, which is under MIT style license.<br>
+	<a href="http://syntax.jedit.org">http://syntax.jedit.org</a>
+
+	<br><a href="#start">to begin</a>
+	<a name="The_BenchIT_GUIs_Kernelmode"></a>
+	<h2>The BenchIT GUI's Kernelmode</h2>
+	<a name="Switching_to_the_Kernelmode"></a>
+	<h3>Switching to the Kernelmode</h3>
+	By clicking on the "Kernel" tab or into the kernel tree area the kernelmode is activated.
+	<a name="The_Kerneltree"></a>
+	<h3>The Kerneltree</h3>
+	<table>
+		<tr>
+			<td>
+				<img src="KernelTree.png" width="150" height="319" border="0">
+			</td>
+			<td>
+				On the left side of the screen, you should see a tree, which has initially the
+				same structure like the kernel directory of BenchIT.
+				This is the Kerneltree, where you can select the kernels you want to start or edit.
+				Select a single Kernel by clicking a leaf, select several by clicking nodes or
+				hold CTRL down while selecting nodes and leaves.
+				The last selected node or leaf will be shown on the left side. While the files
+				are loaded, you can watch the progress at the lower left corner.
+			</td>
+		</tr>
+	</table>
+	<br><b>The popupmenu</b><br>
+	<ul>
+		<LI></LI>
+	</ul>
+	<br><a href="#start">to begin</a>
+	<a name="What_to_do"></a>
+	<h3>What to do</h3>
+	In the upper right corner of the GUI is a combobox, where you can select what you
+	want to do with the kernel.<br>
+	The Options are:<br>
+	<ul>
+  	<li> Compile and Run </li>
+  	<li> Compile only </li>
+  	<li> Run only </li>
+	</ul>
+	In the following, we suppose, you've selected "Compile and Run". If you have
+	selected another one, mostly the procedures to start something are the same.
+	<br><a href="#start">to begin</a>
+	<a name="The_Edit_-_Area"></a>
+	<h3>The Edit - Area</h3>
+	<b>The Editor</b><br>
+	Within the editor you can see the source of the file whose name is shown as tab.
+	FORTRAN will be shown right normal, Shellscript-Files, JAVA, C and Headerfiles
+	with syntax-highlighting. (See Kernelfiles - Sourcecodefiles)<br>
+	<br><a href="#start">to begin</a><br>
+	<a name="Having_selected_a_node"></a>
+	<h3>Having selected a node</h3>
+	If you have selected a node, an additional combobox will appear above the sources, under the toolbar, right of the "Save Changes" Button.
+	Here you can select the kernel, whose files you want to edit.
+	<h3>Kernelfiles - RUN.SH</h3>
+	see BenchIT - Structure - Run-Script.
+	<h3>Kernelfiles - COMPILE.SH</h3>
+	see BenchIT - Structure - Compile-Script.
+	<h3>Kernelfiles - PARAMETERS</h3>
+	see BenchIT - Structure - PARAMETERS-Script.
+	<br><a href="#start">to begin</a>
+	<a name="Starting_a_kernel"></a>
+	<h2>Starting a kernel</h2>
+	<a name="Starting_a_kernel_locale"></a>
+	<h3>Starting a kernel locale</h3>
+	The ordinary way to start a kernel is to start it from the computer BenchIT
+	is running on. Select the Kernels, you want to start (see The Kerneltree) and
+	start it by using one of these Options:
+	<ul>
+		<LI>Use the Kernel-menu</LI>
+		<LI>Use the short-cut <b>CTRL-E</b></LI>
+		<LI>Use the <a href="#The_Kerneltree">Kerneltree</a>'s popupmenu.</LI>
+	</ul>
+	<br>
+	You will be asked whether to shut down the GUI or not. Not shutting the GUI down will
+	have influence on the measuring.
+	<br><a href="#start">to begin</a>
+	<a name="Remote-Folder-Execution"></a>
+	<h2>Remote-Folder-Execution</h2>
+	This one, like the locale execution, only works for UNIX!
+	<a name="Creating_a_Remote-Folder"></a>
+	<h3>Creating a Remote-Folder</h3>
+	For starting a kernel on an other system remote, you first got to define a Remote-Folder.
+	Do this by selecting the Menu-entry "Setup-Create Remote Folder"<br>
+	In the following Frame, select your Options:
+	<ul>
+		<li>IP or DNS-name: Here you shall write the IP or the DNS-name of the computer,
+		you want to start the kernel.</li>
+		<li>Username: The username on the remote computer</li>
+		<li>temporary directory: This will be a directory within the GUI's temporary path,
+		but also a folder within the remote computers home directory.<br>
+		<font color="#aa0000">Problems:</font> The selected path can overwrite data on
+		the remote computer!
+		</li>
+		<li>Use SCP. Use this option only, if other copy fails (because tar isn't supported in the typical POSIX-compliant form.)
+		This is not available under Windows<br>
+		<font color="#aa0000">Problems:</font> It may be, that additional output is produced by both: ssh and tar.
+		This may harm the transferred data. So please be sure, that this doesn't happen.
+		</li>
+	</ul>
+	Afterwards you got to type your password at the console, the BenchIT GUI was started from.<br>
+	<font color="#aa0000">Problems:</font> If you don't want to start BenchIT GUI from a console, please be sure that
+	you can start ssh-connections to an other computer without typing a passwort or have a SSH-X-Password-reader.
+	<a name="Executing_in_Remote-Folder"></a>
+	<h3>Executing in Remote-Folder</h3>
+	Basicly, this can be selected in the same way as a local execution. Clicking the right mouse-button on the kernel-tree 
+	or selecting the entry in the Measure-Menu.
+	Be sure that there are valid LOCALDEFS for the selected machines on your system or in the LOCALDEF-folders on the
+	remote machines.
+	You will be asked at which Remote-Folders the selected kernels shall be executed and whether to check LOCALDEFS or not.
+	<font color="#aa0000">Problems:</font> It may be that the internal hostname of a
+	system differs from the external one. Switch this option off and check manually,
+	whether the LOCALDEFS exist.
+	Then there are 2 password-checks for every system you selected: one for copying, one for executing.
+	<font color="#aa0000">Problems:</font> Please be aware, that all files (even existing Result-Files)
+	 within the Remote-Folder will have the execute-bit set.
+	<h3>Used Pacakges</h3>
+	Ant-tar
+	Ganymed-SSH2
+	<br><a href="#start">to begin</a>
+  </body>
+</html>

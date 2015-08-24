@@ -1,0 +1,367 @@
+#!/bin/sh
+#
+#ident "@(#)features 1.5 - 02/21/01" /* S.Seidl */
+#
+###############################################################################
+#
+# Copyright (C) 1997-2003 Stephan Seidl
+# This file is part of the FMC Project of the author.
+# Edited and supplemented for the BenchIT project by Guido Juckeland
+#
+# Check whether certain features are available.
+# If yes, print some useful strings.
+#
+###############################################################################
+
+unset LANG
+
+if [ -z "${BENCHITROOT}" ]; then
+	echo ""
+	echo "This script is not intended to be run stand-alone."
+	echo ""
+	exit 1
+fi
+
+cd "${BENCHITROOT}/tools"
+p="${BENCHITROOT}/tools/features"
+
+# Look for the MPI header.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "cpp" ] && [ "${2}" = "mpi" ]; then
+    shift
+    shift
+    # Due to some strange headers in `/usr/include' of the Debian Linux 2.1,
+    # the directory `/usr/local/mpi/include' is tested before `/usr/include'.
+    f="${MPI_ROOT}/include/mpi.h";              "${p}" tmh ${f} ${@} && exit 0
+    f="/usr/include/mpi/mpi.h";                 "${p}" tmh ${f} ${@} && exit 0
+    f="/opt/ctl/mpt/mpt/include/mpi.h";         "${p}" tmh ${f} ${@} && exit 0
+    f="/usr/opt/mpisx/inst/usr/include/mpi.h";  "${p}" tmh ${f} ${@} && exit 0
+    f="/usr/local/mpi/include/mpi.h";           "${p}" tmh ${f} ${@} && exit 0
+    f="/usr/include/mpi.h";                     "${p}" tmh ${f} ${@} && exit 0
+    f="/global/mpi/mpich/include/mpi.h";        "${p}" tmh ${f} ${@} && exit 0
+    f="/opt/mpi/include/mpi.h";                 "${p}" tmh ${f} ${@} && exit 0
+    f="/opt/lam/include/mpi.h";                 "${p}" tmh ${f} ${@} && exit 0
+    exit 1
+    fi
+  fi
+#
+# Look for the PVM header.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "cpp" ] && [ "${2}" = "pvm" ]; then
+    shift
+    shift
+    if [ -z "${PVM_ROOT}" ]; then
+      PVM_ROOT=""
+      if [ -f ${HOME}/pvm3/include/pvm3.h ]; then
+        PVM_ROOT="${HOME}/pvm3"
+        fi
+      fi
+    f="${PVM_ROOT}/include/pvm3.h";             "${p}" tph ${f} ${@} && exit 0
+    f="/usr/include/pvm3.h";                    "${p}" tph ${f} ${@} && exit 0
+    f="/opt/ctl/mpt/mpt/pvm3/include/pvm3.h";   "${p}" tph ${f} ${@} && exit 0
+    f="/usr/array/PVM/include/pvm3.h";          "${p}" tph ${f} ${@} && exit 0
+    f="/usr/local/pvm3/include/pvm3.h";         "${p}" tph ${f} ${@} && exit 0
+    f="/global/pvm3/include/pvm3.h";            "${p}" tph ${f} ${@} && exit 0
+    f="/opt/pvm3/include/pvm3.h";               "${p}" tph ${f} ${@} && exit 0
+    exit 1
+    fi
+  fi
+#
+# Look for the Pthread header.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "cpp" ] && [ "${2}" = "thr" ]; then
+    shift
+    shift
+    f="/usr/include/pthread.h";                 "${p}" tth ${f} ${@} && exit 0
+    exit 1
+    fi
+  fi
+#
+# Look for PCL.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "cpp" ] && [ "${2}" = "pcl" ]; then
+    shift
+    shift
+    f="${HOME}/lib/libpcl2.a";                  "${p}" tch ${f} ${@} && exit 0
+    f="/usr/local/pcl2/lib/libpcl2.a";          "${p}" tch ${f} ${@} && exit 0
+    f="/usr/local/lib/libpcl2.a";               "${p}" tch ${f} ${@} && exit 0
+    f="/licsoft/vampir/lib/obj/libpcl2.a";      "${p}" tch ${f} ${@} && exit 0
+    f="${HOME}/lib/libpcl.a";                   "${p}" tch ${f} ${@} && exit 0
+    f="/usr/local/lib/libpcl.a";                "${p}" tch ${f} ${@} && exit 0
+    f="/usr/local/pcl/lib/libpcl.a";            "${p}" tch ${f} ${@} && exit 0
+    f="/licsoft/vampir/lib/obj/libpcl.a";       "${p}" tch ${f} ${@} && exit 0
+    exit 1
+    fi
+  fi
+#
+# Look for the MPI library.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "lib" ] && [ "${2}" = "mpi" ]; then
+    shift
+    shift
+    # Due to Rolf Rabenseifner's PCL patches, we have to use
+    # our own MPI library on T3E, i.e. `${HOME}/lib/libmpi.a'.
+    f="${MPI_ROOT}/lib/libmpi.a";               "${p}" tml ${f} ${@} && exit 0
+    f="${HOME}/lib/libmpi.a";                   "${p}" tml ${f} ${@} && exit 0
+    f="/usr/lib/libmpi.a";                      "${p}" tml ${f} ${@} && exit 0
+    f="/opt/ctl/mpt/mpt/lib/libmpi.a";          "${p}" tml ${f} ${@} && exit 0
+    f="/usr/opt/mpisx/inst/usr/lib0/libmpi.a";  "${p}" tml ${f} ${@} && exit 0
+    f="/usr/lib64/libmpi.*";                    "${p}" tml ${f} ${@} && exit 0
+    f="/usr/local/mpi/lib/libmpi.a";            "${p}" tml ${f} ${@} && exit 0
+    f="/global/mpi/mpich/lib/?*/?*/libmpi.*";   "${p}" tml ${f} ${@} && exit 0
+    f="/opt/mpi/lib/?*/?*/libmpi.*";            "${p}" tml ${f} ${@} && exit 0
+    f="/opt/mpi/lib/pa1*/libmpi.*";             "${p}" tml ${f} ${@} && exit 0
+    f="/opt/mpi/lib/?*/libmpi.*";               "${p}" tml ${f} ${@} && exit 0
+    f="/opt/lam/lib/libmpi.a";                  "${p}" tml ${f} ${@} && exit 0
+    exit 1
+    fi
+  fi
+#
+# Look for the PVM library.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "lib" ] && [ "${2}" = "pvm" ]; then
+    shift
+    shift
+    if [ -z "${PVM_ROOT}" -o -z "${PVM_ARCH}" ]; then
+      PVM_ROOT=""
+      PVM_ARCH="unknown-pvm] && [rchitecture"
+      if [ -x ${HOME}/pvm3/lib/pvmgetarch ]; then
+        PVM_ROOT="${HOME}/pvm3"
+        PVM_ARCH=`${HOME}/pvm3/lib/pvmgetarch`
+        fi
+      fi
+    f="${PVM_ROOT}/lib/${PVM_ARCH}/libpvm3.a";  "${p}" tpl ${f} ${@} && exit 0
+    f="/usr/lib/libpvm3.a";                     "${p}" tpl ${f} ${@} && exit 0
+    f="/opt/ctl/mpt/mpt/pvm3/lib/?*/libpvm3.*"; "${p}" tpl ${f} ${@} && exit 0
+    f="/usr/lib64/libpvm3.*";                   "${p}" tpl ${f} ${@} && exit 0
+    f="/usr/local/pvm3/lib/?*/libpvm3.*";       "${p}" tpl ${f} ${@} && exit 0
+    f="/global/pvm3/lib/?*/libpvm3.*";          "${p}" tpl ${f} ${@} && exit 0
+    f="/opt/pvm3/lib/?*/libpvm3.*";             "${p}" tpl ${f} ${@} && exit 0
+    exit 1
+    fi
+  fi
+#
+# Look for the Pthread library.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "lib" ] && [ "${2}" = "thr" ]; then
+    shift
+    shift
+    f="/usr/lib64/libpthread.so";               "${p}" ttl ${f} ${@} && exit 0
+    f="/usr/lib/libpthread.so";                 "${p}" ttl ${f} ${@} && exit 0
+    f="/usr/lib/libpthread.a";                  "${p}" ttl ${f} ${@} && exit 0
+    f="/usr/shlib/libpthread.so";               "${p}" ttl ${f} ${@} && exit 0
+    f="/usr/lib/libpthreads.a";                 "${p}" ttl ${f} ${@} && exit 0
+    f="/usr/lib/libpthread.sl";                 "${p}" ttl ${f} ${@} && exit 0
+    exit 1
+    fi
+  fi
+#
+# Look for the PCL library.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "lib" ] && [ "${2}" = "pcl" ]; then
+    shift
+    shift
+    f="${HOME}/lib/libpcl2.a";                  "${p}" tcl ${f} ${@} && exit 0
+    f="/usr/local/lib/libpcl2.a";               "${p}" tcl ${f} ${@} && exit 0
+    f="/usr/local/pcl2/lib/libpcl2.a";          "${p}" tcl ${f} ${@} && exit 0
+    f="/licsoft/vampir/lib/obj/libpcl2.a";      "${p}" tcl ${f} ${@} && exit 0
+    f="${HOME}/lib/libpcl.a";                   "${p}" tcl ${f} ${@} && exit 0
+    f="/usr/local/lib/libpcl.a";                "${p}" tcl ${f} ${@} && exit 0
+    f="/usr/local/pcl/lib/libpcl.a";            "${p}" tcl ${f} ${@} && exit 0
+    f="/licsoft/vampir/lib/obj/libpcl.a";       "${p}" tcl ${f} ${@} && exit 0
+    exit 1
+    fi
+  fi
+#
+# Look for $2 in path
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "have" ] && [ "${2}" != "" ]; then
+    shift
+    ${1} >/dev/null 2>/dev/null
+    [ "${?}" -ne 127 ] && exit 0 # $2 found in path
+    shift
+    exit 1
+  fi
+fi
+#
+
+#
+# Test whether MPI is present.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "tmh" ]; then
+    [ -r "${2}" ] || exit 1
+    [ -z "`"${p}" lib mpi`" ] && exit 1
+    d=`dirname ${2}`
+    I="-I${d} "
+    [ "${d}" = "/usr/include" ] && I=""
+    o="${I}"
+    shift
+    shift
+    [ ${#} -gt 0 ] && o="${o} ${@}"
+    echo "${o}"
+    exit 0
+    fi
+  fi
+#
+# Test whether PVM is present.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "tph" ]; then
+    [ -r "${2}" ] || exit 1
+    [ -z "`"${p}" lib pvm`" ] && exit 1
+    d=`dirname ${2}`
+    I="-I${d} "
+    [ "${d}" = "/usr/include" ] && I=""
+    o="${I}"
+    shift
+    shift
+    [ ${#} -gt 0 ] && o="${o} ${@}"
+    echo "${o}"
+    exit 0
+    fi
+  fi
+#
+# Test whether Pthreads are present.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "tth" ]; then
+    [ -r "${2}" ] || exit 1
+    [ -z "`"${p}" lib thr`" ] && exit 1
+    d=`dirname ${2}`
+    I="-I${d} "
+    [ "${d}" = "/usr/include" ] && I=""
+    o="${I}"
+    shift
+    shift
+    [ ${#} -gt 0 ] && o="${o} ${@}"
+    echo "${o}"
+    exit 0
+    fi
+  fi
+#
+# Test whether PCL is present.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "tch" ]; then
+    [ -r "${2}" ] || exit 1
+    [ -z "`"${p}" lib pcl`" ] && exit 1
+    o=""
+    [ "`basename ${2}`" = "libpcl2.a" ] && o=""
+    shift
+    shift
+    [ ${#} -gt 0 ] && o="${o} ${@}"
+    echo "${o}"
+    exit 0
+    fi
+  fi
+#
+# Test whether the MPI library is present.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "tml" ]; then
+    [ -r "${2}" ] || exit 1
+    d=`dirname ${2}`
+    L="-L${d} "
+    [ "${d}" = "/lib" ]       && L=""
+    [ "${d}" = "/usr/lib" ]   && L=""
+    [ "${d}" = "/usr/lib64" ] && L=""
+    [ "${d}" = "/usr/shlib" ] && L=""
+#   [ -r ${d}/libpmpi.* ] && L="${L}-lpmpi "
+    l="-lmpi"
+    [ -r /usr/lib/libcnx_syscall.* ] && l="${l} -lcnx_syscall"
+    [ -r /usr/lib/libail.* ] && l="${l} -lail"
+    shift
+    shift
+    [ ${#} -gt 0 ] && l="${l} ${@}"
+    echo "${L}${l}"
+    exit 0
+    fi
+  fi
+#
+# Test whether the PVM library is present.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "tpl" ]; then
+    [ -r "${2}" ] || exit 1
+    d=`dirname ${2}`
+    L="-L${d} "
+    [ "${d}" = "/lib" ]       && L=""
+    [ "${d}" = "/usr/lib" ]   && L=""
+    [ "${d}" = "/usr/lib64" ] && L=""
+    [ "${d}" = "/usr/shlib" ] && L=""
+    [ -r ${d}/libgpvm3.* ] && L="${L}-lgpvm3 "
+    l="-lpvm3"
+    [ -r /usr/lib/libcnx_syscall.* ] && l="${l} -lcnx_syscall"
+    [ -r /usr/lib/libail.* ] && l="${l} -lail"
+    shift
+    shift
+    [ ${#} -gt 0 ] && l="${l} ${@}"
+    echo "${L}${l}"
+    exit 0
+    fi
+  fi
+#
+# Test whether the Pthread library is present.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "ttl" ]; then
+    [ -r "${2}" ] || exit 1
+    d=`dirname ${2}`
+    L="-L${d} "
+    [ "${d}" = "/lib" ]       && L=""
+    [ "${d}" = "/usr/lib" ]   && L=""
+    [ "${d}" = "/usr/lib64" ] && L=""
+    [ "${d}" = "/usr/shlib" ] && L=""
+    b=`basename ${2}`
+    l=`echo "${b}" | awk '{o=$0;                           \
+                           if(index(o,"lib")!=1)o="lib" o; \
+                           if(index(o,".")==0)o=o ".";     \
+                           o=substr(o,4);                  \
+                           o=substr(o,1,index(o,".")-1);   \
+                           print "-l" o;}'`
+    shift
+    shift
+    [ ${#} -gt 0 ] && l="${l} ${@}"
+    echo "${L}${l}"
+    exit 0
+    fi
+  fi
+#
+# Test whether the PCL library is present.
+if [ ${#} -ge 2 ]; then
+  if [ "${1}" = "tcl" ]; then
+    [ -r "${2}" ] || exit 1
+    d=`dirname ${2}`
+    L="-L${d} "
+    l="-lpcl"
+    [ "`basename ${2}`" = "libpcl2.a" ] && l="-lpcl2"
+    shift
+    shift
+    [ ${#} -gt 0 ] && l="${l} ${@}"
+    echo "${L}${l}"
+    exit 0
+    fi
+  fi
+#
+exit 1
+#
+###############################################################################
+#  Log-History
+#
+#  $Log: features,v $
+#  Revision 1.7  2007/07/10 11:10:16  molka
+#  replaced -a by && as it seems to confuse korn shell
+#
+#  Revision 1.6  2006/10/05 13:57:09  rschoene
+#  removed auto-find new libs
+#
+#  Revision 1.5  2006/10/05 12:40:29  rschoene
+#  search for new libs
+#
+#  Revision 1.4  2005/12/15 01:33:22  mickler
+#  # Converted to new variable names and other enhancements + fixes
+#
+#  Revision 1.3  2005/09/11 22:39:49  mickler
+#  # Adapted script to work in new environment
+#  + Added support for special characters in pathnames
+#
+#  Revision 1.2  2005/07/19 12:17:59  wloch
+#  added cvs footer
+#
+#
+###############################################################################
+

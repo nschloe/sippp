@@ -1,0 +1,150 @@
+###############################################################################
+#                                                                             #
+#  B e n c h I T - Performance Measurement for Scientific Applications        #
+#                                                                             #
+#  Architectural information about your system, used to compare your system   #
+#  to others. Please fill out the information - your resultfile will not be   #
+#  accepted on the project homepage without this information.                 #
+#                                                                             #
+#  Authors: Guido Juckeland (juckeland@zhr.tu-dresden.de)                     #
+#           Stefan Pflueger (pflueger@zhr.tu-dresden.de)                      #
+#  $Revision: 1.6 $                                                           #
+#  $Date: 2007/07/10 15:06:44 $                                               #
+#                                                                             #
+###############################################################################
+
+#
+# feel free to insert your data
+#
+# quotation marks have to be `escaped'!!!
+#
+# Note: The examples are from very different systems.
+#
+
+
+# Manufacturer of the mainboard, for example: "MSI"
+mainboardmanufacturer=""
+
+# Type of the mainboard without manufacturer's name, for example: "845PE Max3 (800 Edition)"
+mainboardtype=""
+
+# Chipset of the mainboard, for example: "Intel i845PE"
+mainboardchipset=""
+
+# Total number of Processors
+numberofprocessors=
+
+# Name of the processor, for example: "Intel Pentium 4"
+processorname="IntM"
+
+# Codename according to manufacturer roadmap, for example: "Montecito"
+codename=""
+
+# Processor Serial Number, if available
+processorserialnumber=""
+
+# Processor version, for example: "x86, Family 6, Model 5, Stepping 1"
+processorversion=""
+
+# Instruction Set Architecture (ISA) of the processor, for example: "IA-32" or "MIPS"
+processorisaset=""
+
+# Several processors are using exact descriptions of their ISA level, for example: "IV" (for MIPS)
+processorisalevel=""
+
+# Extensions of the ISA with an additional number; extendable
+# for example: 
+# processorisaextension1="MMX"
+# processorisaextension2="SSE"
+# processorisaextension3="SSE2"
+processorisaextension1=""
+processorisaextension2=""
+processorisaextension3=""
+
+# Clock rate of the processor in Hz, for example: 3060000000
+processorclockrate="600000000"
+
+# Instruction length in bit, for example: 32 [for RISC] or 0 [for CISC or variable length]
+instructionlength=""
+
+# Processor word length or Word format or xx-bit architecture in bit, for example: 32 
+processorwordlength=""
+
+# Number of instructions issued to the functional units per clock, for example: 6
+instructionissue=""
+
+# Number of separate integer units, for example: 2
+integerunits=""
+
+# Number of separate floating point units, for example: 3
+floatingpointunits=""
+
+# Number of separate load/store units, for example: 1
+loadstoreunits=""
+
+# Support of multithreading, for example: 1 [0 for no | 1 for yes] [Hyperthreading --> 1]
+multithreading="0"
+
+# Number of physical cores per CPU
+numberofcorespercpu=0
+
+# L1 instruction cache size in byte, for example: 12288 
+level1icachesize=""
+
+# L1 data cache size in byte, for example: 8192
+level1dcachesize=""
+
+# L2 cache size in byte, for example: 524288
+level2cachesize=""
+
+
+# L3 cache size in byte, for example:  33554432
+level3cachesize=""
+
+# L1 instruction cache organization, for example: "Execution Trace Cache"
+level1icachetype=""
+
+# L1 data cache organization, for example: "4-way set-associative, write-through, dual ported"
+level1dcachetype=""
+
+# L2 cache organization, for example: "8-way set-associative, cache line size 32 words"
+level2cachetype=""
+
+# L3 cache organization, for example: "8-way set-associative, cache line size 128 words with 4 128-byte sectors"
+level3cachetype=""
+
+# L2 cache location, for example: "on-chip" or "on-board"
+level2cachelocation="on-chip"
+
+# Support of prefetching, for example: 1 [0 for no | 1 for yes]
+prefetching="0"
+
+# Support of preloading, for example: 1 [0 for no | 1 for yes]
+preloading="0"
+
+# Clock rate of the processor side bus in Hz, for example: 133000000 
+processorsidebusclockrate=""
+
+# Clock rate of the backside bus (connection to the on-chip L2-cache) in Hz, for example: 200000000
+backsideclockrate=""
+
+# Structure details of the technology in m, for example: 0.000000130
+technologylevel=""
+
+# Memory chip type, for example: "PC-100 SDRAM" or "RIMM-4200"
+memorychiptype=""
+
+# Memory bus type, for example: "SDRAM bus" or "RAMBUS"
+memorybustype=""
+
+# Clock rate of the memory bus in Hz, for example: 100000000
+memorybusclockrate=""
+
+# Total size of available memory
+memorysize=
+
+# Additionaly comment for your system (e.g. Hyper Threading enabled/disabled)
+ systemcomment=""
+
+endofarchitecture
+####################################################

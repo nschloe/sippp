@@ -1,0 +1,247 @@
+###############################################################################
+###############################################################################
+#                                                                             #
+#                                                                             #
+#  B e n c h I T - Performance Measurement for Scientific Applications        #
+#  B e n c h I T - Performance Measurement for Scientific Applications        #
+#                                                                             #
+#                                                                             #
+#  Architectural information about your system, used to compare your system   #
+#  Architectural information about your system, used to compare your system   #
+#  to others. Please fill out the information - your resultfile will not be   #
+#  to others. Please fill out the information - your resultfile will not be   #
+#  accepted on the project homepage without this information.                 #
+#  accepted on the project homepage without this information.                 #
+#                                                                             #
+#                                                                             #
+#  Authors: Guido Juckeland (juckeland@zhr.tu-dresden.de)                     #
+#  Authors: Guido Juckeland (juckeland@zhr.tu-dresden.de)                     #
+#           Stefan Pfl????ger  (pflueger@zhr.tu-dresden.de)                      #
+#           Stefan Pfl????ger  (pflueger@zhr.tu-dresden.de)                      #
+#  $Revision: 1.3 $
+#  $Revision: 1.3 $
+#  $Date: 2007/07/06 16:52:32 $
+#  $Date: 2007/07/06 16:52:32 $
+#                                                                             #
+#                                                                             #
+###############################################################################
+###############################################################################
+
+
+#
+#
+# feel free to insert your data
+# feel free to insert your data
+#
+#
+# quotation marks have to be `escaped'!!!
+# quotation marks have to be `escaped'!!!
+#
+#
+# Note: The examples are from very different systems.
+# Note: The examples are from very different systems.
+#
+#
+
+
+
+
+# Manufacturer of the mainboard, for example: "MSI"
+# Manufacturer of the mainboard, for example: "MSI"
+mainboardmanufacturer="SGI"
+
+
+# Type of the mainboard without manufacturer's name, for example: "845PE Max3 (800 Edition)"
+# Type of the mainboard without manufacturer's name, for example: "845PE Max3 (800 Edition)"
+mainboardtype=""
+
+
+# Chipset of the mainboard, for example: "Intel i845PE"
+# Chipset of the mainboard, for example: "Intel i845PE"
+mainboardchipset=""
+
+
+# Total number of Processors
+# Total number of Processors
+numberofprocessors=2048
+
+
+# Name of the processor, for example: "Intel Pentium 4"
+# Name of the processor, for example: "Intel Pentium 4"
+processorname="Intel Itanium 2"
+
+
+# Processor Serial Number, if available
+# Processor Serial Number, if available
+processorserialnumber=""
+
+
+# Processor version, for example: "x86, Family 6, Model 5, Stepping 1"
+# Processor version, for example: "x86, Family 6, Model 5, Stepping 1"
+processorversion="IA64, Model 2, Revision 1, Stepping 0"
+
+
+# Instruction Set Architecture (ISA) of the processor, for example: "IA-32" or "MIPS"
+# Instruction Set Architecture (ISA) of the processor, for example: "IA-32" or "MIPS"
+processorisaset="IA64"
+
+
+# Several processors are using exact descriptions of their ISA level, for example: "IV" (for MIPS)
+# Several processors are using exact descriptions of their ISA level, for example: "IV" (for MIPS)
+processorisalevel="2"
+
+
+# Extensions of the ISA with an additional number; extendable
+# Extensions of the ISA with an additional number; extendable
+# for example: 
+# for example: 
+
+
+# Clock rate of the processor in Hz, for example: 3060000000
+# Clock rate of the processor in Hz, for example: 3060000000
+processorclockrate="1600000000"
+
+
+# Instruction length in bit, for example: 32 [for RISC] or 0 [for CISC or variable length]
+# Instruction length in bit, for example: 32 [for RISC] or 0 [for CISC or variable length]
+instructionlength="3*41+5"
+
+
+# Processor word length or Word format or xx-bit architecture in bit, for example: 32 
+# Processor word length or Word format or xx-bit architecture in bit, for example: 32 
+processorwordlength="64"
+
+
+# Number of instructions issued to the functional units per clock, for example: 6
+# Number of instructions issued to the functional units per clock, for example: 6
+instructionissue="6"
+
+
+# Number of separate integer units, for example: 2
+# Number of separate integer units, for example: 2
+integerunits="8"
+
+
+# Number of separate floating point units, for example: 3
+# Number of separate floating point units, for example: 3
+floatingpointunits="2"
+
+
+# Number of separate load/store units, for example: 1
+# Number of separate load/store units, for example: 1
+loadstoreunits="4"
+
+
+# Support of multithreading, for example: 1 [0 for no | 1 for yes] [Hyperthreading --> 1]
+# Support of multithreading, for example: 1 [0 for no | 1 for yes] [Hyperthreading --> 1]
+multithreading="0"
+ 
+ 
+# L1 instruction cache size in byte, for example: 12288 
+# L1 instruction cache size in byte, for example: 12288 
+level1icachesize="16384"
+
+
+# L1 data cache size in byte, for example: 8192
+# L1 data cache size in byte, for example: 8192
+level1dcachesize="16384"
+
+
+# L2 cache size in byte, for example: 524288
+# L2 cache size in byte, for example: 524288
+level2cachesize="262144"
+
+
+
+
+# L3 cache size in byte, for example:  33554432
+# L3 cache size in byte, for example:  33554432
+level3cachesize="4194304"
+
+
+# L1 instruction cache organization, for example: "Execution Trace Cache"
+# L1 instruction cache organization, for example: "Execution Trace Cache"
+level1icachetype="4way-associative"
+
+
+# L1 data cache organization, for example: "4-way set-associative, write-through, dual ported"
+# L1 data cache organization, for example: "4-way set-associative, write-through, dual ported"
+level1dcachetype="4way-associative"
+
+
+# L2 cache organization, for example: "8-way set-associative, cache line size 32 words"
+# L2 cache organization, for example: "8-way set-associative, cache line size 32 words"
+level2cachetype="8way-associative"
+
+
+# L3 cache organization, for example: "8-way set-associative, cache line size 128 words with 4 128-byte sectors"
+# L3 cache organization, for example: "8-way set-associative, cache line size 128 words with 4 128-byte sectors"
+level3cachetype="12way-associative"
+
+
+# L2 cache location, for example: "on-chip" or "on-board"
+# L2 cache location, for example: "on-chip" or "on-board"
+level2cachelocation="on-chip"
+
+
+# Support of prefetching, for example: 1 [0 for no | 1 for yes]
+# Support of prefetching, for example: 1 [0 for no | 1 for yes]
+prefetching="0"
+
+
+# Support of preloading, for example: 1 [0 for no | 1 for yes]
+# Support of preloading, for example: 1 [0 for no | 1 for yes]
+preloading="0"
+
+
+# Clock rate of the processor side bus in Hz, for example: 133000000 
+# Clock rate of the processor side bus in Hz, for example: 133000000 
+processorsidebusclockrate="front side bus"
+
+
+# Clock rate of the backside bus in Hz, for example: 200000000
+# Clock rate of the backside bus in Hz, for example: 200000000
+backsideclockrate="333000000"
+
+
+# Structure details of the technology in m, for example: 0.000000130
+# Structure details of the technology in m, for example: 0.000000130
+technologylevel="130"
+
+
+# Memory chip type, for example: "PC-100 SDRAM" or "RIMM-4200"
+# Memory chip type, for example: "PC-100 SDRAM" or "RIMM-4200"
+memorychiptype=""
+
+
+# Memory bus type, for example: "SDRAM bus" or "RAMBUS"
+# Memory bus type, for example: "SDRAM bus" or "RAMBUS"
+memorybustype=""
+
+
+# Clock rate of the memory bus in Hz, for example: 100000000
+# Clock rate of the memory bus in Hz, for example: 100000000
+memorybusclockrate=""
+
+
+# Total size of available memory
+# Total size of available memory
+memorysize=
+
+
+
+
+# Additionaly comment for your system (e.g. Hyper Threading enabled/disabled)
+# Additionaly comment for your system (e.g. Hyper Threading enabled/disabled)
+ systemcomment="SGI Altix 4700"
+
+
+endofarchitecture
+####################################################
+####################################################
+coresperprocessor=2
+
+numberofcorespercpu=2
+processorisaextension1=""
+processorisaextension2=""
+processorisaextension3=""

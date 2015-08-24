@@ -1,0 +1,2066 @@
+# BenchIT-Resultfile
+#
+# feel free to fill in more architectural information
+#########################################################
+beginofmeasurementinfos
+kernelstring="numerical.block-solve.F95.0.0.gauss2" 
+date="Aug 19 14:05:05 2007"
+numberofprocessorsused=1
+memorysizeused="0"
+comment=
+kerneldescription=
+language="F95"
+compiler="ifort"
+compilerversion=" unknown"
+compilerflags="-free  -O4"
+c_compiler_version="910, build 20061103"
+library1=""
+kernelisparallel=0
+kernelisparallel=0
+is3d=0
+codesequence="z = L*u (factorised)"
+xinmin=2
+xinmax=1001
+y1inmin=-0.000376138
+y1inmax=0.0128819
+y2inmin=-0.000367138
+y2inmax=0.0205199
+endofmeasurementinfos
+################################################
+beginofarchitecture
+# Architekturangaben
+nodename="N4"
+hostname="localhost" 
+###############################################################################
+#                                                                             #
+#  B e n c h I T - Performance Measurement for Scientific Applications        #
+#                                                                             #
+#  Architectural information about your system, used to compare your system   #
+#  to others. Please fill out the information - your resultfile will not be   #
+#  accepted on the project homepage without this information.                 #
+#                                                                             #
+#  Authors: Guido Juckeland (juckeland@zhr.tu-dresden.de)                     #
+#           Stefan Pflueger (pflueger@zhr.tu-dresden.de)                      #
+#  $Revision: 1.6 $                                                           #
+#  $Date: 2007/07/10 15:06:44 $                                               #
+#                                                                             #
+###############################################################################
+
+#
+# feel free to insert your data
+#
+# quotation marks have to be `escaped'!!!
+#
+# Note: The examples are from very different systems.
+#
+
+
+# Manufacturer of the mainboard, for example: "MSI"
+mainboardmanufacturer=""
+
+# Type of the mainboard without manufacturer's name, for example: "845PE Max3 (800 Edition)"
+mainboardtype=""
+
+# Chipset of the mainboard, for example: "Intel i845PE"
+mainboardchipset=""
+
+# Total number of Processors
+numberofprocessors=
+
+# Name of the processor, for example: "Intel Pentium 4"
+processorname="IntM"
+
+# Codename according to manufacturer roadmap, for example: "Montecito"
+codename=""
+
+# Processor Serial Number, if available
+processorserialnumber=""
+
+# Processor version, for example: "x86, Family 6, Model 5, Stepping 1"
+processorversion=""
+
+# Instruction Set Architecture (ISA) of the processor, for example: "IA-32" or "MIPS"
+processorisaset=""
+
+# Several processors are using exact descriptions of their ISA level, for example: "IV" (for MIPS)
+processorisalevel=""
+
+# Extensions of the ISA with an additional number; extendable
+# for example: 
+# processorisaextension1="MMX"
+# processorisaextension2="SSE"
+# processorisaextension3="SSE2"
+processorisaextension1=""
+processorisaextension2=""
+processorisaextension3=""
+
+# Clock rate of the processor in Hz, for example: 3060000000
+processorclockrate="600000000"
+
+# Instruction length in bit, for example: 32 [for RISC] or 0 [for CISC or variable length]
+instructionlength=""
+
+# Processor word length or Word format or xx-bit architecture in bit, for example: 32 
+processorwordlength=""
+
+# Number of instructions issued to the functional units per clock, for example: 6
+instructionissue=""
+
+# Number of separate integer units, for example: 2
+integerunits=""
+
+# Number of separate floating point units, for example: 3
+floatingpointunits=""
+
+# Number of separate load/store units, for example: 1
+loadstoreunits=""
+
+# Support of multithreading, for example: 1 [0 for no | 1 for yes] [Hyperthreading --> 1]
+multithreading="0"
+
+# Number of physical cores per CPU
+numberofcorespercpu=0
+
+# L1 instruction cache size in byte, for example: 12288 
+level1icachesize=""
+
+# L1 data cache size in byte, for example: 8192
+level1dcachesize=""
+
+# L2 cache size in byte, for example: 524288
+level2cachesize=""
+
+
+# L3 cache size in byte, for example:  33554432
+level3cachesize=""
+
+# L1 instruction cache organization, for example: "Execution Trace Cache"
+level1icachetype=""
+
+# L1 data cache organization, for example: "4-way set-associative, write-through, dual ported"
+level1dcachetype=""
+
+# L2 cache organization, for example: "8-way set-associative, cache line size 32 words"
+level2cachetype=""
+
+# L3 cache organization, for example: "8-way set-associative, cache line size 128 words with 4 128-byte sectors"
+level3cachetype=""
+
+# L2 cache location, for example: "on-chip" or "on-board"
+level2cachelocation="on-chip"
+
+# Support of prefetching, for example: 1 [0 for no | 1 for yes]
+prefetching="0"
+
+# Support of preloading, for example: 1 [0 for no | 1 for yes]
+preloading="0"
+
+# Clock rate of the processor side bus in Hz, for example: 133000000 
+processorsidebusclockrate=""
+
+# Clock rate of the backside bus (connection to the on-chip L2-cache) in Hz, for example: 200000000
+backsideclockrate=""
+
+# Structure details of the technology in m, for example: 0.000000130
+technologylevel=""
+
+# Memory chip type, for example: "PC-100 SDRAM" or "RIMM-4200"
+memorychiptype=""
+
+# Memory bus type, for example: "SDRAM bus" or "RAMBUS"
+memorybustype=""
+
+# Clock rate of the memory bus in Hz, for example: 100000000
+memorybusclockrate=""
+
+# Total size of available memory
+memorysize=
+
+# Additionaly comment for your system (e.g. Hyper Threading enabled/disabled)
+ systemcomment=""
+
+endofarchitecture
+####################################################
+beginofenvironmentvariables
+DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-Ko1GotBjVq,guid=b3c66d30a65a6\
+fd4295d20046c73a52"
+BENCHIT_MPIRUN="mpirun"
+BENCHIT_CC_COMPILER_VERSION="910, build 20061103"
+OPTIND="1"
+POSIXLY_CORRECT="y"
+BENCHIT_SHELL_INTERPRETER=""
+BENCHIT_MPIF77_C_FLAGS_OMP=""
+BENCHIT_F77_C_FLAGS_STD="-O2"
+BENCHIT_F95_C_FLAGS_STD="-O2"
+OMP_DYNAMIC="FALSE"
+LESSOPEN="|lesspipe.sh %s"
+BENCHIT_LIB_PVM=""
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_H="1.5 (Fri Jan 19 16:05:11 2007)"
+LANGUAGE="en_US.UTF-8"
+BENCHIT_F90_COMPILER_VERSION=" unknown"
+COLORTERM=""
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_TEMPLATE_C="1.12 (Fri Jul  6 16:14:47\
+2007)"
+BENCHIT_F77_C_FLAGS_OMP=""
+BENCHIT_F95_C_FLAGS_OMP=""
+BENCHIT_F_COMPILERFLAGS="-free  -O4"
+BENCHIT_KERNEL_FILE_VERSION_QUICKVIEW_SH="1.3 (Fri Sep 29 18:35:11 2006)"
+BENCHIT_PARAMETER_FILE="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic\
+1D/Benchit-V5/kernel/numerical/block-solve/F95/0/0/gauss2/PARAMETERS"
+GS_LIB="/home/nico/.fonts"
+BENCHIT_CPP_SCSL=""
+BENCHIT_RUN_QUEUEOPTIONS=""
+LC_TIME="de_DE.UTF-8"
+BENCHIT_KERNELBINARY="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1\
+/Benchit-V5/bin/numerical.block-solve.F95.0.0.gauss2.0"
+BENCHIT_KERNEL_FILE_VERSION_ERROR_H="1.1 (Tue Mar 13 08:22:03 2007)"
+BENCHIT_CXX_C_FLAGS_HIGH="-O3"
+ANT_HOME="/usr/share/ant-core"
+LESS="-R -M --shift 5"
+BENCHIT_LIB_FFTW3=" -lfftw3"
+BENCHIT_LIB_ACML=" -lacml"
+QTDIR="/usr/qt/3"
+BENCHIT_MPICC="icc"
+BENCHIT_RUN_QUEUENAME=""
+KONSOLE_DCOP="DCOPRef(konsole-13077,konsole)"
+BENCHIT_KERNEL_FILE_VERSION_UNAME_MINUS_A="NO REVISION (Mon Jul 18 15:03:19\
+2005)"
+BENCHIT_CPP_ESSL=""
+XDG_DATA_DIRS="/usr/share:/usr/kde/3.5/share:/usr/local/share"
+BENCHIT_KERNEL_FILE_VERSION_BENCHSCRIPT_H="1.1 (Tue May 23 10:13:00 2006)"
+BENCHIT_ARCH_SPEED="600M"
+BENCHIT_JAVA_FLAGS=""
+PWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/tool\
+"
+TERM="xterm"
+BENCHIT_KERNEL_FILE_VERSION_RANDOM="NO REVISION, UNABLE TO READ (Sun Aug 12\
+00:00:02 2007)"
+BENCHIT_KERNEL_START="2"
+BENCHIT_CXX_C_FLAGS=""
+BENCHIT_CC="icc"
+PRELINK_PATH=""
+BENCHIT_KERNEL_STEPS="1000"
+XDG_CONFIG_DIRS="/usr/kde/3.5/etc/xdg"
+JAVACC_HOME="/usr/share/javacc/"
+BENCHIT_F90="ifort"
+BENCHIT_RUN_REDIRECT_CONSOLE="output.txt"
+BASH_VERSION="3.2.17(1)-release"
+BENCHIT_F77_COMPILER_VERSION=" unknown"
+BENCHIT_F95_COMPILER_VERSION=" unknown"
+BENCHIT_MPICC_C_FLAGS_HIGH="-O3"
+BENCHIT_JAVA="java"
+BENCHIT_INTERACTIVE="0"
+BENCHIT_LIB_PTHREAD="-lpthread"
+BENCHIT_RUN_COREDUMPLIMIT="0"
+BENCHIT_INCLUDES="-I.\
+-I/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+INTEL_LICENCE_FILE="/opt/intel/fortran100/licenses"
+COMPILE_GLOBAL="1"
+BENCHIT_CC_C_FLAGS_HIGH="-O3"
+myval=""
+BENCHIT_KERNEL_FILE_VERSION_FILEVERSION="NO REVISION (Sun Aug 19 14:01:13\
+2007)"
+BENCHIT_LIB_BLAS="-lblas"
+BENCHIT_PERL_INTERPRETER=""
+SHLVL="3"
+BENCHIT_KERNEL_FILE_VERSION_BMERGE_SH="NO REVISION (Mon Jul 18 15:03:19 2005)"
+BENCHIT_KERNEL_FILE_VERSION_FEATURES="NO REVISION (Tue Jul 10 13:10:16 2007)"
+CONFIG_PROTECT_MASK="/etc/env.d/java/ /etc/gconf /etc/terminfo\
+/etc/revdep-rebuild /etc/splash"
+DCCC_PATH="/usr/lib/distcc/bin"
+BENCHIT_MPICC_C_FLAGS=""
+BENCHIT_F90_C_FLAGS_HIGH="-O3"
+SHELLOPTS="braceexpand:hashall:interactive-comments:posix"
+BENCHIT_RUN_MAX_MEMORY="0"
+BENCHIT_IGNORE_PARAMETER_FILE="0"
+JAVAC="/home/nico/.gentoo/java-config-2/current-user-vm/bin/javac"
+BENCHIT_PROGRESS_DIR="progress"
+BASH_ARGC="([0]=\"1\" [1]=\"1\")"
+BENCHIT_MPIF77=""
+BENCHIT_CC_C_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_TMP_ENV="NO REVISION (Sun Aug 19 14:01:14 2007)"
+QMAKESPEC="linux-g++"
+BENCHIT_PHP_INTERPRETER=""
+LC_CTYPE="en_US.UTF-8"
+BENCHIT_F77="ifort"
+BENCHIT_F95="ifort"
+BENCHIT_COMPILER="ifort"
+BENCHIT_USE_VAMPIR_TRACE="0"
+BENCHIT_F90_C_FLAGS="-free"
+XDM_MANAGED="/var/run/xdmctl/xdmctl-:0,maysd,mayfn,sched,rsvd,method=classic"
+USER="nico"
+BENCHIT_RUN_TIMELIMIT="600"
+KDE_MULTIHEAD="false"
+OMP_NESTED="FALSE"
+BENCHIT_KERNELBINARY_ARGS=" "
+VMHANDLE="sun-jdk-1.4"
+BENCHIT_KERNEL_INCREMENT="1"
+BENCHIT_MPIF77_C_FLAGS_HIGH=""
+PYTHONPATH="/usr/lib/portage/pym"
+BENCHIT_CPP_PVM=""
+BENCHIT_SHELL_FLAGS=""
+BENCHIT_JAVA_HOME=""
+LOGNAME="nico"
+BENCHIT_KERNEL_FILE_VERSION_CMDLINEPARAMS="1.29 (Tue Jan  3 18:55:28 2006)"
+BENCHIT_KERNEL_FILE_VERSION_LOC_CONVERT_SH="NO REVISION (Wed Jan  4 15:32:49\
+2006)"
+LC_MONETARY="de_DE.UTF-8"
+BENCHIT_CXX_L_FLAGS="-lm"
+BENCHIT_F77_C_FLAGS_HIGH="-O3"
+BENCHIT_F95_C_FLAGS_HIGH="-O4"
+OPTERR="1"
+myvar="BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP"
+BENCHIT_LIB_ATLAS=" -latlas"
+PRELINK_PATH_MASK="/usr/lib/gstreamer-0.10:/usr/lib/gstreamer-0.8:/lib/modules:\
+usr/lib/locale:/usr/lib/wine:/usr/lib/valgrind:*.la:*.png:*.py:*.pl:*.pm:*.sh:*\
+xml:*.xslt:*.a:*.js:/usr/lib/klibc"
+DM_CONTROL="/var/run/xdmctl"
+BENCHIT_KERNEL_FILE_VERSION_ARCHDEFS="NO REVISION (Fri Sep 29 18:35:11 2006)"
+GENERATION="2"
+BENCHIT_KERNEL_FILE_VERSION_COMPILERVERSION="NO REVISION, UNABLE TO READ (Sun\
+Aug 12 00:00:02 2007)"
+BENCHIT_CROSSCOMPILE="0"
+_CMDLINE_VARLIST="BENCHIT_KERNELBINARY BENCHIT_KERNELBINARY_ARGS\
+BENCHIT_CMDLINE_ARG_FILENAME_COMMENT BENCHIT_CMDLINE_ARG_PARAMETER_FILE\
+BENCHIT_CMDLINE_ARG_IGNORE_PARAMETER_FILE BENCHIT_NODENAME BENCHIT_CROSSCOMPILE\
+BENCHIT_CMDLINE_ARG_NUM_CPUS BENCHIT_CMDLINE_ARG_NUM_PROCESSES\
+BENCHIT_CMDLINE_ARG_NUM_THREADS_PER_PROCESS BENCHIT_CMDLINE_ARG_RUN_CLEAN\
+BENCHIT_CMDLINE_ARG_RUN_COREDUMPLIMIT BENCHIT_CMDLINE_ARG_RUN_EMAIL_ADDRESS\
+BENCHIT_CMDLINE_ARG_RUN_MAX_MEMORY BENCHIT_CMDLINE_ARG_RUN_QUEUENAME\
+BENCHIT_CMDLINE_ARG_RUN_QUEUETIMELIMIT BENCHIT_CMDLINE_ARG_RUN_REDIRECT_CONSOLE\
+BENCHIT_CMDLINE_ARG_RUN_TEST BENCHIT_CMDLINE_ARG_RUN_USE_MPI\
+BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP "
+BASH="/bin/sh"
+BENCHIT_RUN_QUEUETIMELIMIT=""
+BENCHIT_CPP_FFTW3=""
+BENCHIT_MPIF77_C_FLAGS=""
+BENCHIT_CPP_ACML=""
+BENCHIT_HOSTNAME="localhost"
+GTK_RC_FILES="/etc/gtk/gtkrc:/home/nico/.gtkrc:/home/nico/.kde/share/config/gtk\
+c"
+BENCHIT_NUM_PROCESSES=""
+PIPESTATUS="([0]=\"0\")"
+BENCHIT_KERNEL_FILE_VERSION_FILEVERSION_C="1.6 (Fri Jan 19 16:05:11 2007)"
+KERNELDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V\
+/kernel/numerical/block-solve/F95/0/0/gauss2"
+BENCHIT_LIB_PAPI=""
+KDEDIRS="/usr:/usr/local:/usr/kde/3.5"
+BENCHIT_F77_C_FLAGS=""
+BENCHIT_F95_C_FLAGS="-free"
+GROUPS="()"
+BENCHIT_MPICC_L_FLAGS="-lm -L/opt/intel/fortran100/lib -lifcore -lmpi"
+DIRSTACK="()"
+BENCHIT_KERNEL_FILE_VERSION_STRINGLIB_C="1.4 (Fri Jan 12 11:44:35 2007)"
+BENCHIT_LIB_PCL=""
+CLASSPATH="."
+_="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/tools/\
+
+BENCHIT_CC_L_FLAGS="-lm -L/opt/intel/fortran100/lib -lifcore"
+BENCHIT_KERNEL_FILE_VERSION_RUN_BENCHIT="NO REVISION (Fri Sep 29 18:35:11\
+2006)"
+MANPATH="/home/nico/.gentoo/java-config-2/current-user-vm/man:/usr/local/share/\
+an:/usr/share/man:/usr/share/binutils-data/i686-pc-linux-gnu/2.17/man:/usr/shar\
+/gcc-data/i686-pc-linux-gnu/4.1.2/man:/opt/intel/compiler91/man:/opt/intel/fort\
+an100/man:/opt/sun-jdk-1.4.2.15/man:/etc/java-config/system-vm/man/:/usr/kde/3.\
+/share/man:/usr/qt/3/doc/man:/usr/local/texlive/current/texmf/doc/man"
+BENCHIT_KERNEL_FILE_VERSION_FIRSTTIME="1.29 (Wed Jul  4 16:22:09 2007)"
+PAGER="/usr/bin/less"
+BENCHIT_CPP_BLAS=""
+G_BROKEN_FILENAMES="1"
+KDE_SESSION_UID="1000"
+BENCHIT_KERNEL_FILE_VERSION_ENVHASHBUILDER="NO REVISION (Sun Aug 19 14:01:13\
+2007)"
+COLON_SEPARATED="XDG_DATA_DIRS"
+LDPATH="/usr/local/lib:///usr/lib/opengl/nvidia/lib:/usr/i686-pc-linux-gnu/lib:\
+usr/lib/gcc/i686-pc-linux-gnu/4.1.2:/opt/intel/compiler91/lib:/opt/intel/fortra\
+100/lib:/usr/lib/nspr:/usr/lib/nss:/opt/sun-jdk-1.4.2.15/jre/lib/i386/:/opt/sun\
+jdk-1.4.2.15/jre/lib/i386/native_threads/:/opt/sun-jdk-1.4.2.15/jre/lib/i386/cl\
+ssic/:/opt/sun-jdk-1.4.2.15/jre/lib/i386/server/:/usr/lib/qt4:/usr/kde/3.5/lib:\
+usr/qt/3/lib:/usr/games/lib:/opt/nessus/lib:/usr/lib/fltk-1.1:/usr/lib/libstdc+\
+-v3/"
+BENCHIT_F90_L_FLAGS="-lm"
+CONFIGURE_MODE="COMPILE"
+OLDCWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_NUM_CPUS="1"
+LC_COLLATE="en_US.UTF-8"
+BENCHIT_PERL_FLAGS=""
+IA32ROOT="/opt/intel/fortran100"
+KERNELNAME_FULL=""
+BENCHIT_MANDATORY_FILES="tools/run_benchit tools/uname_minus_a benchit.c\
+interface.h tools/envhashbuilder.c tools/bienvhash.template.c tools/bienvhash.h\
+tools/stringlib.c tools/stringlib.h "
+PS4="+ "
+GCC_PATH="/usr/i686-pc-linux-gnu/gcc-bin/4.1.2"
+INFOPATH="/usr/share/info:/usr/share/binutils-data/i686-pc-linux-gnu/2.17/info:\
+usr/share/gcc-data/i686-pc-linux-gnu/4.1.2/info:/usr/local/texlive/current/texm\
+/doc/info"
+OSTYPE="linux-gnu"
+BENCHIT_KERNEL_FILE_VERSION_HELPER_SH="1.14 (Mon Dec 12 11:27:20 2005)"
+TEXBASE="/usr/local/texlive/"
+BENCHITROOT="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit\
+V5"
+BENCHIT_PHP_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_STRINGLIB_H="1.2 (Fri Sep 29 16:51:14 2006)"
+BENCHIT_RUBY_INTERPRETER=""
+BENCHIT_LIB_MKL=" -lmkl"
+BASH_LINENO="([0]=\"78\" [1]=\"0\")"
+HOSTTYPE="i686"
+BENCHIT_MPIF77_L_FLAGS=""
+KDE_FULL_SESSION="true"
+EUID="1000"
+MACHTYPE="i686-pc-linux-gnu"
+BENCHIT_CPP_PTHREADS=""
+DESKTOP_SESSION="default"
+HTTP_PROXY="http://localhost:8118"
+http_proxy="http://localhost:8118"
+BENCHIT_LIB_MPI=""
+SCRIPTNAME="COMPILE.SH"
+BENCHIT_F77_L_FLAGS="-lm"
+BENCHIT_F95_L_FLAGS="-lm"
+BENCHIT_KERNEL_FILE_VERSION_LOC_REPL="NO REVISION (Wed Jan  4 15:32:49 2006)"
+GTK2_RC_FILES="/home/nico/.gtkrc-2.0:/home/nico/.kde/share/config/gtkrc-2.0:/et\
+/gtk-2.0/gtkrc"
+BENCHIT_OPTIONAL_FILES="LOCALDEFS/PROTOTYPE_input_architecture\
+LOCALDEFS/PROTOTYPE_input_display "
+GCC_SPECS=""
+BENCHIT_RUN_OUTPUT_DIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic\
+1D/Benchit-V5/output"
+JAVA_HOME="/home/nico/.gentoo/java-config-2/current-user-vm"
+BENCHIT_CPP_ATLAS=""
+BENCHIT_CXX_C_FLAGS_STD="-O2"
+HOME="/home/nico"
+BENCHIT_DEBUGLEVEL="0"
+FLTK_DOCDIR="/usr/share/doc/fltk-1.1.7/html"
+LS_COLORS="no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01\
+cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:su=37;41:sg=30;43:tw=30;42:ow=34;42:s\
+=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.z\
+p=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz\
+01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*\
+cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;\
+5:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif\
+01;35:*.tiff=01;35:*.png=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:\
+.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=\
+1;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rm\
+b=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*\
+xwd=01;35:*.yuv=01;35:*.pdf=00;32:*.ps=00;32:*.txt=00;32:*.patch=00;32:*.diff=0\
+;32:*.log=00;32:*.tex=00;32:*.doc=00;32:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m\
+d=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36\
+*.wav=00;36:"
+C_COMPILE="icc  -O2 -I.\
+-I/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5 \
+-DDEBUGLEVEL=0"
+SHELLSCRIPT_DEBUG="0"
+BENCHIT_RUN_ACCURACY=""
+BENCHIT_LIB_SCSL=" -lscsl"
+BENCHIT_CXX_C_FLAGS_OMP=""
+BENCHIT_RUN_EMAIL_ADDRESS=""
+SANE_CONFIG_DIR="/etc/sane.d"
+LC_MESSAGES="en_US.UTF-8"
+HOSTNAME="N4"
+KERNELBASEDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Bench\
+t-V5/kernel"
+BENCHIT_KERNEL_FILE_VERSION_ENVHASHBUILDER_C="1.3 (Fri Jan 12 11:44:35 2007)"
+BENCHIT_COMPILERFLAGS="-free  -O4"
+BENCHIT_CPP_PAPI="-DUSE_PAPI"
+_VARLIST="'BENCHITROOT"
+CVS_RSH="ssh"
+BENCHIT_NODENAME="N4"
+SHELL="/bin/bash"
+BASH_ARGV="([0]=\
+"/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/kernel/n\
+merical/block-solve/F95/0/0/gauss2/COMPILE.SH\
+" [1]=\
+"numerical.block-solve.F95.0.0.gauss2\
+")"
+BENCHIT_JAVAC_FLAGS_HIGH="-O"
+BENCHIT_KERNEL_FILE_VERSION_ENVIRONMENTS="NO REVISION, UNABLE TO READ (Sun Aug\
+12 00:00:02 2007)"
+BENCHIT_LIB_ESSL=" -lessl"
+myfile="tools/stringlib.h"
+BENCHIT_KERNELNAME="numerical.block-solve.F95.0.0.gauss2"
+DISTCC_VERBOSE="0"
+DISTCC_LOG=""
+F_COMPILE="ifort -free  -O4"
+KONSOLE_DCOP_SESSION="DCOPRef(konsole-13077,session-1)"
+BENCHIT_ENVIRONMENT="NOTHING"
+EDITOR="/usr/bin/vim"
+JDK_HOME="/home/nico/.gentoo/java-config-2/current-user-vm"
+BENCHIT_CPP_PCL=" -DUSE_PCL"
+HLL="F95"
+OLDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_F90_SOURCE_FORMAT_FLAG=""
+BENCHIT_MPICC_C_FLAGS_STD="-O2"
+PATH="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/too\
+s:/usr/kde/3.5/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/i686-pc-linux-gnu\
+gcc-bin/4.1.2:/opt/intel/compiler91/bin:/opt/intel/fortran100/bin:/opt/sun-jdk-\
+.4.2.15/bin:/opt/sun-jdk-1.4.2.15/jre/bin:/opt/sun-jdk-1.4.2.15/jre/javaws:/usr\
+kde/3.5/bin:/usr/qt/3/bin:/usr/games/bin:/usr/local/texlive/current/bin/i386-li\
+ux:/sbin:/usr/sbin:/sbin:/usr/sbin"
+PPID="13086"
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_TEMPLATE_JAVA="1.4 (Thu Jul 21 21:42:13\
+2005)"
+BENCHIT_RUN_TEST="0"
+XCURSOR_THEME="whiteglass"
+BR="0"
+BENCHIT_JAVAC_FLAGS=""
+BENCHIT_MPICC_C_FLAGS_OMP=""
+G_FILENAME_ENCODING="UTF-8"
+BENCHIT_KERNEL_FILE_VERSION_COMMONDEFS="NO REVISION (Tue Aug 30 21:32:48 2005)"
+BENCHIT_CC_C_FLAGS_STD="-O2"
+SESSION_MANAGER="local/N4:/tmp/.ICE-unix/5782"
+BENCHIT_CXX_COMPILER_VERSION="4.1.2 (Gentoo 4.1.2 p1.0.1)"
+DISPLAY=":0.0"
+BENCHIT_FILENAME_COMMENT="0"
+CURDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+IFS="' 	"
+BENCHIT_DEFINES=" -DDEBUGLEVEL=0"
+BENCHIT_CC_C_FLAGS_OMP=""
+UID="1000"
+BENCHIT_F90_C_FLAGS_STD="-O2"
+MIKTEX_INSTALLROOT="/usr/local/texlive/texmf-local"
+OLDPWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_JAVAC="javac"
+BENCHIT_F90_C_FLAGS_OMP=""
+WINDOWID="54525959"
+BENCHIT_ARCH_SHORT="IntM"
+LC_PAPER="de_DE.UTF-8"
+BENCHIT_CPP_MKL=""
+GDK_USE_XFT="1"
+BENCHIT_F95_SOURCE_FORMAT_FLAG=""
+BASH_SOURCE="([0]=\
+"/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/kernel/n\
+merical/block-solve/F95/0/0/gauss2/COMPILE.SH\
+" [1]=\
+"./COMPILE.SH\
+")"
+BENCHIT_KERNEL_FILE_VERSION_CONFIGURE="1.46 (Thu Jun 21 19:41:24 2007)"
+OPENGL_PROFILE="nvidia"
+LC_NUMERIC="de_DE.UTF-8"
+BENCHIT_C_COMPILERFLAGS=" -O2"
+BENCHIT_RUBY_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_BENCHSCRIPT_C="1.2 (Fri Jan 12 11:44:35 2007)"
+CONFIG_PROTECT="/usr/share/X11/xkb /usr/kde/3.5/share/config /usr/kde/3.5/env\
+/usr/kde/3.5/shutdown /usr/share/config"
+BASH_VERSINFO="([0]=\
+"3\
+" [1]=\
+"2\
+" [2]=\
+"17\
+" [3]=\
+"1\
+" [4]=\
+"release\
+" [5]=\
+"i686-pc-linux-gnu\
+")"
+BENCHIT_CXX="c++"
+BENCHIT_LD_LIBRARY_PATH="/home/nico/Desktop/Diplomarbeit/programs/main/paraboli\
+-1D/Benchit-V5/jbi/jni"
+BENCHIT_NUM_THREADS_PER_PROCESS=""
+PKG_CONFIG_PATH="/usr/qt/3/lib/pkgconfig"
+BENCHIT_MPIF77_C_FLAGS_STD=""
+BENCHIT_RUN_LINEAR="0"
+INTEL_FLEXLM_LICENSE="/opt/intel/compiler91/licenses"
+BENCHIT_CPP_MPI=" -DUSE_MPI"
+endofenvironmentvariables
+beginofdisplay
+
+xoutmin=0
+xoutmax=1100
+xaxisticks=11
+xaxislogbase=0
+xaxistext="Problem dimension N"
+
+y1outmin=0
+y1outmax=0.015
+y1axisticks=6
+y1axislogbase=0
+y1axistext="No. of floating points ops"
+
+y2outmin=0
+y2outmax=0.0225
+y2axisticks=9
+y2axislogbase=0
+y2axistext="No. of floating points ops"
+
+numabscissae=986
+numfunctions=2
+
+## Fuer Architektur- oder Messmerkmal : abc
+#
+# displayabc=1                                           # Steuervariable
+# #Textfeld-Eigenschaften des date-Strings               # Kommentar
+# tabc="ABC-Merkmal: 3 Tm"                               # Text: Wert
+# xabc=                                                  # x-Position
+# yabc=                                                  # y-Position
+# fonttypabc=                                            # Schriftart
+# fontsizeabc=                                           # Schriftgroesse
+tlegendfunction1="LowerBlock ver.1"
+xlegendfunction1=
+ylegendfunction1=
+fonttypelegendfunction1=
+fontsizelegendfunction1=
+
+tlegendfunction2="LowerBlock ver.2"
+xlegendfunction2=
+ylegendfunction2=
+fonttypelegendfunction2=
+fontsizelegendfunction2=
+
+#### display of optional information can be enabled by setting display***=1
+
+
+# optional information of the measurement-programs:
+
+# deactivation of the kernelstring is useful, if a separate caption
+# should be used
+displaykernelstring=1
+# topkernelstring=1|0: headline|underline
+topkernelstring=1
+fonttypkernelstring=""
+fontsizekernelstring=
+
+displaycomment=1
+# textfield properties of the comment-string
+tcomment="Comment:"
+xcomment=
+ycomment=
+fonttypcomment=
+fontsizecomment=
+
+displaydate=1
+# textfield properties of the date-string
+tdate="Datum: "
+xdate=""
+ydate=""
+fonttypdate=""
+fontsizedate=""
+
+displaylanguage=0
+# textfield properties of the language-string
+tlanguage="HLL: "
+xlanguage=""
+ylanguage=""
+fonttyplanguage=""
+fontsizelanguage=""
+
+displaycompiler=0
+# textfield properties of the compiler-string
+tcompiler="Compiler: "
+xcompiler=""
+ycompiler=""
+fonttypcompiler=""
+fontsizecompiler=""
+
+displaycompilerflags=0
+# textfield properties of the compilerflags-string
+tcompilerflags="Compiler-Flags: "
+xcompilerflags=""
+ycompilerflags=""
+fonttypcompilerflags=""
+fontsizecompilerflags=""
+
+displaycodesequence=1
+# textfield properties of the codesequence-string
+tcodesequence=""
+xcodesequence=""
+ycodesequence=""
+fonttypcodesequence=""
+fontsizecodesequence=""
+
+# optional information about the architecture, names etc.:
+
+displayhostname=0
+# textfield properties of the hostname-string
+thostname="Hostname: "
+xhostname=""
+yhostname=""
+fonttyphostname=""
+fontsizehostname=""
+
+displaynodename=0
+# textfield properties of the nodename-string
+tnodename="Nodename: "
+xnodename=""
+ynodename=""
+fonttypnodename=""
+fontsizenodename=""
+
+displaymainboardmanufacturer=0
+# textfield properties of the mainboardmanufacturer-string
+tmainboardmanufacturer="Manufacturer of  mainboard: "
+xmainboardmanufacturer=""
+ymainboardmanufacturer=""
+fonttypmainboardmanufacturer=""
+fontsizemainboardmanufacturer=""
+
+displaymainboardtype=0
+# textfield properties of the mainboardtype-string
+tmainboardtype="Mainboard type: "
+xmainboardtype=""
+ymainboardtype=""
+fonttypmainboardtype=""
+fontsizemainboardtype=""
+
+displaymainboardchipset=0
+# textfield properties of the mainboardchipset-string
+tmainboardchipset="Mainboard Chipset: "
+xmainboardchipset=""
+ymainboardchipset=""
+fonttypmainboardchipset=""
+fontsizemainboardchipset=""
+
+displayprocessorname=0
+# textfield properties of the processorname-string
+tprocessorname="Processor name: "
+xprocessorname=""
+yprocessorname=""
+fonttypprocessorname=""
+fontsizeprocessorname=""
+
+displayprocessorserialnumber=0
+# textfield properties of the processorserialnumber-string
+tprocessorserialnumber="Processor Serial No.: "
+yprocessorserialnumber=""
+fonttypprocessorserialnumber=""
+fontsizeprocessorserialnumber=""
+
+displayprocessorversion=0
+# textfield properties of the processorversion-string
+tprocessorversion="Processor Version: "
+xprocessorversion=""
+yprocessorversion=""
+fonttypprocessorversion=""
+fontsizeprocessorversion=""
+
+displayprocessorisaset=0
+# textfield properties of the processorisaset-string
+tprocessorisaset="Instruction Set Architecture: "
+xprocessorisaset=""
+yprocessorisaset=""
+fonttypprocessorisaset=""
+fontsizeprocessorisaset=""
+
+displayprocessorisalevel=0
+# textfield properties of the processorisalevel-string
+tprocessorisalevel="ISA Level: "
+xprocessorisalevel=""
+yprocessorisalevel=""
+fonttypprocessorisalevel=""
+fontsizeprocessorisalevel=""
+
+displayprocessorisaextension1=0
+# textfield properties of the processorisaextension1-string
+tprocessorisaextension1="ISA Extension: "
+xprocessorisaextension1=""
+yprocessorisaextension1=""
+fonttypprocessorisaextension1=""
+fontsizeprocessorisaextension1=""
+
+displayprocessorisaextension2=0
+# textfield properties of the processorisaextension2-string
+tprocessorisaextension2="ISA Extension: "
+xprocessorisaextension2=""
+yprocessorisaextension2=""
+fonttypprocessorisaextension2=""
+fontsizeprocessorisaextension2=""
+
+displayprocessorisaextension3=0
+# textfield properties of the processorisaextension3-string
+tprocessorisaextension3="ISA Extension: "
+xprocessorisaextension3=""
+yprocessorisaextension3=""
+fonttypprocessorisaextension3=""
+fontsizeprocessorisaextension3=""
+
+displayprocessorclockrate=0
+# textfield properties of the processorclockrate-string
+tprocessorclockrate="Processor Clock Rate: "
+xprocessorclockrate=""
+yprocessorclockrate=""
+fonttypprocessorclockrate=""
+fontsizeprocessorclockrate=""
+
+displayinstructionlength=0
+# textfield properties of the instructionlength-string
+tinstructionlength="Instruction Length: "
+xinstructionlength=""
+yinstructionlength=""
+fonttypinstructionlength=""
+fontsizeinstructionlength=""
+
+displayprocessorwordlength=0
+# textfield properties of the processorwordlength-string
+tprocessorwordlength="Processor Word Length: "
+xprocessorwordlength=""
+yprocessorwordlength=""
+fonttypprocessorwordlength=""
+fontsizeprocessorwordlength=""
+
+displayinstructionissue=0
+# textfield properties of the instructionissue-string
+tinstructionissue="Instruction Issue: "
+xinstructionissue=""
+yinstructionissue=""
+fonttypinstructionissue=""
+fontsizeinstructionissue=""
+
+displayintegerunits=0
+# textfield properties of the integerunits-string
+tintegerunits="Number of Integer Units: "
+xintegerunits=""
+yintegerunits=""
+fonttypintegerunits=""
+fontsizeintegerunits=""
+
+displayfloatingpointunits=0
+# textfield properties of the floatingpointunits-string
+tfloatingpointunits="Number of Floating Point Units: "
+xfloatingpointunits=""
+yfloatingpointunits=""
+fonttypfloatingpointunits=""
+fontsizefloatingpointunits=""
+
+displayloadstoreunits=0
+# textfield properties of the loadstoreunits-string
+tloadstoreunits="Number of Load/Store Units: "
+xloadstoreunits=""
+yloadstoreunits=""
+fonttyploadstoreunits=""
+fontsizeloadstoreunits=""
+
+displaylevel1icachesize=0
+# textfield properties of the level1icachesize-string
+tlevel1icachesize="L1 Instruction Cache Size: "
+xlevel1icachesize=""
+ylevel1icachesize=""
+fonttyplevel1icachesize=""
+fontsizelevel1icachesize=""
+
+displaylevel1icachetype=0
+# textfield properties of the level1icachetype-string
+tlevel1icachetype="L1 Instruction Cache Type: "
+xlevel1icachetype=""
+ylevel1icachetype=""
+fonttyplevel1icachetype=""
+fontsizelevel1icachetype=""
+
+displaylevel1dcachesize=0
+# textfield properties of the level1dcachesize-string
+tlevel1dcachesize="L1 Data Cache Size: "
+xlevel1dcachesize=""
+ylevel1dcachesize=""
+fonttyplevel1dcachesize=""
+fontsizelevel1dcachesize=""
+
+displaylevel1dcachetype=0
+# textfield properties of the level1dcachetype-string
+tlevel1dcachetype="L1 Data Cache Type: "
+xlevel1dcachetype=""
+ylevel1dcachetype=""
+fonttyplevel1dcachetype=""
+fontsizelevel1dcachetype=""
+
+displaylevel2cachesize=0
+# textfield properties of the level2cachesize-string
+tlevel2cachesize="L2 Data Cache Size: "
+xlevel2cachesize=""
+ylevel2cachesize=""
+fonttyplevel2cachesize=""
+fontsizelevel2cachesize=""
+
+displaylevel2cachetype=0
+# textfield properties of the level2cachetype-string
+tlevel2cachetype="L2 Cache Type: "
+xlevel2cachetype=""
+ylevel2cachetype=""
+fonttyplevel2cachetype=""
+fontsizelevel2cachetype=""
+
+displaylevel2cachelocation=0
+# textfield properties of the level2cachelocation-string
+tlevel2cachelocation="L2 Cache Location: "
+xlevel2cachelocation=""
+ylevel2cachelocation=""
+fonttyplevel2cachelocation=""
+fontsizelevel2cachelocation=""
+
+displaylevel3cachesize=0
+# textfield properties of the level3cachesize-string
+tlevel3cachesize="L3 Data Cache Size: "
+xlevel3cachesize=""
+ylevel3cachesize=""
+fonttyplevel3cachesize=""
+fontsizelevel3cachesize=""
+
+displaylevel3cachetype=0
+# textfield properties of the level3cachetype-string
+tlevel3cachetype="L3 Cache Type: "
+xlevel3cachetype=""
+ylevel3cachetype=""
+fonttyplevel3cachetype=""
+fontsizelevel3cachetype=""
+
+displaylevel3cachelocation=0
+# textfield properties of the level3cachelocation-string
+tlevel3cachelocation="L3 Cache Location: "
+xlevel3cachelocation=""
+ylevel3cachelocation=""
+fonttyplevel3cachelocation=""
+fontsizelevel3cachelocation=""
+
+displayprefetching=0
+# textfield properties of the prefetching-string
+tprefetching="Prefetching: "
+xprefetching=""
+yprefetching=""
+fonttypprefetching=""
+fontsizeprefetching=""
+
+displaypreloading=0
+# textfield properties of the preloading-string
+tpreloading="Preloading: "
+xpreloading=""
+ypreloading=""
+fonttyppreloading=""
+fontsizepreloading=""
+
+displaybacksideclockrate=0
+# textfield properties of the backsideclockrate-string
+tbacksideclockrate="Clock Rate of the Backside Bus: "
+xbacksideclockrate=""
+ybacksideclockrate=""
+fonttypbacksideclockrate=""
+fontsizebacksideclockrate=""
+
+displaytechnologylevel=0
+# textfield properties of the technologylevel-string
+ttechnologylevel="Technology Level: "
+xtechnologylevel=""
+ytechnologylevel=""
+fonttyptechnologylevel=""
+fontsizetechnologylevel=""
+
+displaymemorychiptype=0
+# textfield properties of the memorychiptype-string
+tmemorychiptype="Memory Chip Type: "
+xmemorychiptype=""
+ymemorychiptype=""
+fonttypmemorychiptype=""
+fontsizememorychiptype=""
+
+displaymemorybustype=0
+# textfield properties of the memorybustype-string
+tmemorybustype="Memory Bus Type: "
+xmemorybustype=""
+ymemorybustype=""
+fonttypmemorybustype=""
+fontsizememorybustype=""
+
+displaymemorybusclockrate=0
+# textfield properties of the memorybusclockrate-string
+tmemorybusclockrate="Memory Bus Clock Rate: "
+xmemorybusclockrate=""
+ymemorybusclockrate=""
+fonttypmemorybusclockrate=""
+fontsizememorybusclockrate=""
+
+displaynumberofprocessorsused=0
+# textfield properties of the numberofprocessorsused-string
+tnumberofprocessorsused="Number Of Used Processors: "
+xnumberofprocessorsused=""
+ynumberofprocessorsused=""
+fonttypnumberofprocessorsused=""
+fontsizenumberofprocessorsused=""
+
+displaymemorysizeused=0
+# textfield properties of the memorysizeused-string
+tmemorysizeused="Used Memory Size: "
+xmemorysizeused=""
+ymemorysizeused=""
+fonttypmemorysizeused=""
+fontsizememorysizeused=""
+
+displaysystemcomment=0
+# textfield properties of the systemcomment-string
+tsystemcomment="Additional System Information: "
+xsystemcomment=""
+ysystemcomment=""
+fonttypsystemcomment=""
+fontsizesystemcomment=""
+
+displayaid=0
+# textfield properties of the aid-string
+taid="AID identifier: "
+xaid=""
+yaid=""
+fonttypaid=""
+fontsizeaid=""
+
+displaycodename=0
+# textfield properties of the codename-string
+tcodename="codename according to roadmap: "
+xcodename=""
+ycodename=""
+fonttypcodename=""
+fontsizecodename=""
+
+displaynumberofcorespercpu=0
+# textfield properties of the numberofcorespercpu-string
+tnumberofcorespercpu="number of physical cores per CPU: "
+xnumberofcorespercpu=""
+ynumberofcorespercpu=""
+fonttypnumberofcorespercpu=""
+fontsizenumberofcorespercpu=""
+endofdisplay
+####################################################
+beginofidentifierstrings
+# strings as replacement for the identifiers in menu-windows
+hostname="Hostname"
+nodename="Nodename"
+mainboardmanufacturer="Manufacturer of  mainboard"
+mainboardtype="Mainboard type"
+mainboardchipset="Mainboard Chipset"
+processorname="Processor name"
+processorserialnumber="Processor Serial No."
+processorversion="Processor Version"
+processorisaset="Instruction Set Architecture"
+processorisalevel="ISA Level"
+processorisaextension1="ISA Extension"
+processorisaextension2="ISA Extension"
+processorisaextension3="ISA Extension"
+processorclockrate="Processor Clock Rate"
+instructionlength="Instruction Length"
+processorwordlength="Processor Word Length"
+instructionissue="Instruction Issue"
+integerunits="Number of Integer Units"
+floatingpointunits="Number of Floating Point Units"
+loadstoreunits="Number of Load/Store Units"
+level1icachesize="L1 Instruction Cache Size"
+level1icachetype="L1 Instruction Cache Type"
+level1dcachesize="L1 Data Cache Size"
+level1dcachetype="L1 Data Cache Type"
+level2cachesize="L2 Data Cache Size"
+level2cachetype="L2 Cache Type"
+level2cachelocation="L2 Cache Location"
+level3cachesize="L3 Data Cache Size"
+level3cachetype="L3 Cache Type"
+level3cachelocation="L3 Cache Location"
+prefetching="Prefetching"
+preloading="Preloading"
+backsideclockrate="Clock Rate of the Backside Bus"
+technologylevel="Technology Level"
+memorychiptype="Memory Chip Type"
+memorybustype="Memory Bus Type"
+memorybusclockrate="Memory Bus Clock Rate"
+numberofprocessorsused="Number Of Used Processors"
+memorysizeused="Used Memory Size"
+systemcomment="Additional System Information"
+aid="AID identifier"
+codename="codename according to roadmap"
+numberofcorespercpu="number of physical cores per CPU"
+endofidentifierstrings
+###################################################
+beginofdata
+2	-0.000376138	-0.000367138	
+3	-0.000376138	-0.000361138	
+4	-0.000375138	-0.000355138	
+5	-0.000375138	-0.000349138	
+6	-0.000373138	-0.000342138	
+7	-0.000373138	-0.000337138	
+8	-0.000373138	-0.000331138	
+9	-0.000373138	-0.000324138	
+10	-0.000371138	-0.000318138	
+11	-0.000371138	-0.000311138	
+12	-0.000370138	-0.000306138	
+13	-0.000371138	-0.000300138	
+14	-0.000370138	-0.000293138	
+15	-0.000369138	-0.000288138	
+16	-0.000369138	-0.000281138	
+17	-0.000367138	-0.000261138	
+18	-0.000367138	-0.000269138	
+19	-0.000367138	-0.000263138	
+20	-0.000366138	-0.000257138	
+21	-0.000366138	-0.000251138	
+22	-0.000366138	-0.000244138	
+23	-0.000365138	-0.000227138	
+24	-0.000364138	-0.000233138	
+25	-0.000364138	-0.000227138	
+26	-0.000362138	-0.000220138	
+27	-0.000362138	-0.000201138	
+28	-0.000362138	-0.000209138	
+29	-0.000362138	-0.000203138	
+30	-0.000362138	-0.000196138	
+31	-0.000361138	-0.000180138	
+32	-0.000361138	-0.000185138	
+33	-0.000360138	-0.000179138	
+34	-0.000360138	-8.0138e-05	
+35	-0.000359138	-0.000166138	
+36	-0.000359138	-0.000161138	
+37	-0.000358138	-0.000155138	
+38	-0.000359138	-0.000135138	
+39	-0.000357138	-0.000142138	
+40	-0.000357138	-0.000137138	
+41	-0.000357138	-0.000101138	
+42	-0.000356138	-0.000124138	
+43	-0.000355138	-0.000118138	
+44	-0.000356138	-0.000101138	
+45	-0.000355138	-0.000106138	
+46	-0.000354138	-0.000100138	
+47	-0.000353138	-9.3138e-05	
+48	-0.000354138	-8.9138e-05	
+49	-0.000354138	-1.138e-06	
+50	-0.000354138	0.00175586	
+51	-0.000351138	-7.1138e-05	
+52	-0.000351138	-5.2138e-05	
+53	-0.000352138	-5.9138e-05	
+54	-0.000352138	-4.1138e-05	
+55	-0.000351138	-4.7138e-05	
+56	-0.000351138	-4.2138e-05	
+57	-0.000347138	-3.4138e-05	
+58	-0.000350138	-1.6138e-05	
+59	-0.000350138	-2.3138e-05	
+60	-0.000350138	-1.7138e-05	
+61	-0.000349138	0.000112862	
+62	-0.000348138	-5.138e-06	
+63	-0.000347138	8.62e-07	
+64	-0.000291138	6.862e-06	
+65	-0.000348138	1.2862e-05	
+66	-0.000342138	1.9862e-05	
+67	-0.000331138	5.0862e-05	
+68	-0.000345138	4.4862e-05	
+69	-0.000345138	3.6862e-05	
+70	-0.000345138	5.3862e-05	
+71	-0.000344138	4.8862e-05	
+72	-0.000344138	6.5862e-05	
+73	-0.000342138	6.0862e-05	
+74	-0.000342138	6.8862e-05	
+75	-0.000343138	8.3862e-05	
+76	-0.000339138	7.8862e-05	
+77	-0.000342138	9.4862e-05	
+78	-0.000340138	9.1862e-05	
+79	-0.000328138	9.7862e-05	
+80	-0.000341138	0.000113862	
+81	-0.000340138	0.000108862	
+82	-0.000338138	0.000152862	
+83	-0.000339138	0.00121686	
+84	-0.000338138	0.000127862	
+85	-0.000338138	0.000145862	
+86	-0.000338138	0.000188862	
+87	-0.000336138	0.000144862	
+88	-0.000336138	0.000150862	
+89	-0.000336138	0.000280862	
+90	-0.000177138	0.000176862	
+91	-0.000335138	0.000168862	
+92	-0.000324138	0.000269862	
+93	-0.000335138	0.000192862	
+94	-0.000334138	0.000266862	
+95	-0.000333138	0.000192862	
+96	-0.000334138	0.000198862	
+97	-0.000333138	0.000214862	
+98	-0.000332138	0.000223862	
+99	-0.000332138	0.000216862	
+100	-0.000290138	0.000222862	
+101	-0.000332138	0.00131986	
+102	-0.000329138	0.000247862	
+103	-0.000331138	0.000250862	
+104	-0.000331138	0.000246862	
+105	-0.000330138	0.000252862	
+106	-0.000330138	0.000285862	
+107	-0.000328138	0.000277862	
+108	-0.000328138	0.000283862	
+109	-0.000328138	0.000287862	
+110	-0.000328138	0.000282862	
+111	-0.000316138	0.000445862	
+112	-0.000123138	0.000432862	
+113	-0.000326138	0.000300862	
+114	-0.000241138	0.000306862	
+115	-0.000326138	0.000324862	
+116	-0.000325138	0.000329862	
+117	-0.000324138	0.000364862	
+118	-0.000323138	0.00143186	
+119	-0.000323138	0.000349862	
+120	-0.000323138	0.000354862	
+121	-0.000323138	0.000359862	
+122	-0.000322138	0.000421862	
+123	-0.000322138	0.000371862	
+124	-0.000322138	0.000377862	
+125	-0.000319138	0.000371862	
+126	-0.000321138	0.000389862	
+127	-0.000309138	0.000384862	
+128	-0.000306138	0.000390862	
+129	-0.000318138	0.000498862	
+130	-0.000319138	0.000413862	
+131	-0.000319138	0.000408862	
+132	-0.000319138	0.000413862	
+133	-0.000317138	0.000432862	
+134	-0.000317138	0.000437862	
+135	-0.000317138	0.000464862	
+136	-0.000316138	0.000475862	
+137	-0.000316138	0.00150386	
+138	-0.000313138	0.000463862	
+139	-0.000311138	0.000471862	
+140	-0.000315138	0.000514862	
+141	-0.000315138	0.000479862	
+142	-0.000314138	0.000484862	
+143	-0.000314138	0.000491862	
+144	-0.000313138	0.000582862	
+145	-0.000312138	0.00181086	
+146	-0.000310138	0.000509862	
+147	-0.000312138	0.000516862	
+148	-0.000310138	0.000523862	
+149	-0.000310138	0.000604862	
+150	-0.000310138	0.000522862	
+151	-0.000310138	0.0158289	
+152	-0.000301138	0.000689862	
+153	-0.000309138	0.000562862	
+154	-0.000310138	0.000557862	
+155	0.00275586	0.000397862	
+156	-0.000316138	0.000416862	
+157	-0.000320138	0.00169786	
+158	-0.000319138	0.000411862	
+159	-0.000319138	0.000416862	
+160	-0.000319138	0.000421862	
+161	-0.000318138	0.000425862	
+162	-0.000319138	0.000430862	
+163	-0.000318138	0.000435862	
+164	-0.000317138	0.000594862	
+165	-0.000317138	0.000458862	
+166	-0.000317138	0.000461862	
+167	-0.000317138	0.000492862	
+168	-0.000310138	0.000478862	
+169	-0.000310138	0.000576862	
+170	-0.000297138	0.000494862	
+171	-0.000309138	0.000493862	
+172	-0.000310138	0.000486862	
+173	-0.000304138	0.000486862	
+174	-0.000314138	0.000501862	
+175	-0.000314138	0.000532862	
+176	-0.000313138	0.000565862	
+177	-0.000313138	0.00161386	
+178	-0.000312138	0.000523862	
+179	-0.000312138	0.000528862	
+180	-0.000312138	0.000531862	
+181	-0.000228138	0.000595862	
+182	-0.000310138	0.000701862	
+183	-0.000308138	0.000586862	
+184	-0.000310138	0.000616862	
+185	-0.000293138	0.000556862	
+186	-0.000311138	0.000561862	
+187	-0.000296138	0.000754862	
+188	-0.000309138	0.000624862	
+189	-0.000308138	0.000695862	
+190	-0.000294138	0.000581862	
+191	-0.000308138	0.000586862	
+192	-0.000308138	0.000591862	
+193	-0.000308138	0.000596862	
+194	-0.000307138	0.000601862	
+195	-0.000307138	0.000673862	
+196	-0.000307138	0.000635862	
+197	-0.000306138	0.00177186	
+198	-0.000304138	0.000623862	
+199	-0.000305138	0.000637862	
+200	-0.000304138	0.000633862	
+201	-0.000305138	0.000635862	
+202	-0.000304138	0.000641862	
+203	-0.000304138	0.000645862	
+204	-0.000304138	0.000651862	
+205	-0.000303138	0.000656862	
+206	-0.000302138	0.000703862	
+207	-0.000289138	0.000668862	
+208	-0.000302138	0.000671862	
+209	-0.000301138	0.000677862	
+210	0.000956862	0.000685862	
+211	-0.000301138	0.000738862	
+212	-0.000301138	0.000692862	
+213	-0.000300138	0.000714862	
+214	-0.000300138	0.000702862	
+215	-0.000300138	0.00171586	
+216	-0.000298138	0.000712862	
+217	-0.000299138	0.000716862	
+218	-0.000299138	0.000721862	
+219	-0.000298138	0.000726862	
+220	-0.000297138	0.000836862	
+221	-0.000297138	0.000736862	
+222	-0.000297138	0.000741862	
+223	-0.000296138	0.000745862	
+224	-0.000296138	0.000750862	
+225	-0.000297138	0.000992862	
+226	-0.000296138	0.000760862	
+227	-0.000296138	0.000765862	
+228	-0.000285138	0.000781862	
+229	-0.000294138	0.000779862	
+230	-0.000292138	0.000798862	
+231	-0.000294138	0.000786862	
+232	-0.000294138	0.000862862	
+233	-0.000293138	0.000796862	
+234	-0.000293138	0.000810862	
+235	-0.000293138	0.000830862	
+236	-0.000292138	0.00174086	
+237	-0.000291138	0.000816862	
+238	-0.000291138	0.000912862	
+239	-0.000290138	0.000867862	
+240	-0.000289138	0.000843862	
+241	-0.000291138	0.000836862	
+242	-0.000290138	0.000841862	
+243	-0.000289138	0.00113786	
+244	-0.000282138	0.000851862	
+245	-0.000289138	0.000873862	
+246	-0.000288138	0.000964862	
+247	-0.000288138	0.000867862	
+248	-0.000277138	0.00212886	
+249	-0.000275138	0.000919862	
+250	-0.000286138	0.000953862	
+251	-0.000268138	0.00115086	
+252	-0.000286138	0.000892862	
+253	-0.000141138	0.00117186	
+254	-0.000285138	0.000913862	
+255	-0.000278138	0.000939862	
+256	-0.000285138	0.00196986	
+257	-0.000284138	0.000917862	
+258	-0.000274138	0.000920862	
+259	-0.000284138	0.000926862	
+260	-0.000284138	0.000930862	
+261	-0.000282138	0.00102786	
+262	-0.000282138	0.00104586	
+263	-0.000282138	0.00103286	
+264	-0.000282138	0.000950862	
+265	-0.000282138	0.000955862	
+266	-0.000282138	0.000960862	
+267	-0.000281138	0.000976862	
+268	-0.000281138	0.000971862	
+269	-0.000270138	0.000975862	
+270	-0.000279138	0.00225286	
+271	-0.000277138	0.000998862	
+272	-0.000280138	0.00202986	
+273	-0.000277138	0.000997862	
+274	-0.000279138	0.00206886	
+275	-0.000277138	0.00101886	
+276	-0.000277138	0.00101186	
+277	-0.000278138	0.00103286	
+278	-0.000277138	0.00103386	
+279	-0.000277138	0.00102686	
+280	-0.000265138	0.00108286	
+281	-0.000275138	0.00112586	
+282	-0.000276138	0.00105186	
+283	-0.000276138	0.00120686	
+284	-0.000274138	0.00105286	
+285	-0.000233138	0.00110586	
+286	-0.000274138	0.00107286	
+287	-0.000274138	0.00108686	
+288	-0.000273138	0.00107186	
+289	-0.000273138	0.00107786	
+290	-0.000272138	0.00114886	
+291	-0.000272138	0.00108686	
+292	-0.000272138	0.00231086	
+293	-0.000270138	0.00119886	
+294	-0.000271138	0.00215986	
+295	-0.000269138	0.00111786	
+296	-0.000270138	0.00111286	
+297	-0.000259138	0.00111586	
+298	-0.000270138	0.00141986	
+299	-0.000256138	0.00112586	
+300	-0.000262138	0.00117586	
+301	-0.000267138	0.00113686	
+302	-0.000268138	0.00121786	
+303	-0.000268138	0.00125286	
+304	-0.000268138	0.00116286	
+305	-0.000267138	0.00116686	
+306	-0.000267138	0.00141486	
+307	-0.000266138	0.00125186	
+308	-0.000259138	0.00117186	
+309	-0.000266138	0.00117686	
+310	-0.000263138	0.00118486	
+311	-0.000238138	0.00158686	
+312	-0.000264138	0.00119186	
+313	-0.000244138	0.00119686	
+314	-0.000252138	0.00127786	
+315	-0.000263138	0.00122786	
+316	-0.000263138	0.00131386	
+317	-0.000262138	0.00122686	
+318	-0.000263138	0.00123186	
+319	-0.000262138	0.00123686	
+320	-0.000262138	0.00124186	
+321	-0.000262138	0.00124686	
+322	-0.000260138	0.00129386	
+323	-0.000260138	0.00134786	
+324	-0.000260138	0.00253386	
+325	-0.000177138	0.00131186	
+326	-0.000248138	0.00126186	
+327	-0.000248138	0.00126686	
+328	-0.000248138	0.00134186	
+329	-0.000257138	0.00127686	
+330	-0.000254138	0.00128486	
+331	-0.000242138	0.0101769	
+332	-0.000271138	0.00838186	
+333	-0.000271138	0.00108186	
+334	-0.000274138	0.00774886	
+335	-0.000270138	0.00106686	
+336	-0.000274138	0.00476886	
+337	-0.000252138	0.00108186	
+338	0.000991862	0.00624286	
+339	-0.000261138	0.00109986	
+340	0.0128819	0.00110586	
+341	-0.000272138	0.00526786	
+342	-0.000259138	0.00404986	
+343	-0.000250138	0.00110986	
+344	-0.000272138	0.00613686	
+345	-0.000270138	0.00111986	
+346	-0.000271138	0.00513186	
+347	-0.000263138	0.00120686	
+348	-0.000270138	0.00115186	
+349	-0.000270138	0.00613586	
+350	-0.000268138	0.00150186	
+351	-0.000266138	0.00223486	
+352	-0.000268138	0.00506186	
+353	-0.000265138	0.00117886	
+354	-0.000265138	0.00181686	
+355	-0.000266138	0.00119486	
+356	-0.000267138	0.00115886	
+357	-0.000267138	0.00116086	
+358	-0.000266138	0.00127186	
+359	-0.000267138	0.00129186	
+360	-0.000266138	0.00118386	
+361	-0.000266138	0.00122886	
+362	-0.000265138	0.00126086	
+363	-0.000265138	0.00119786	
+364	-0.000265138	0.00120086	
+365	-0.000264138	0.00144786	
+366	-0.000264138	0.00129686	
+367	-0.000263138	0.00121786	
+368	-0.000264138	0.00121786	
+369	-0.000264138	0.00127486	
+370	-0.000263138	0.00122686	
+371	-0.000262138	0.00123186	
+372	-0.000262138	0.00123686	
+373	-0.000262138	0.00123886	
+374	-0.000262138	0.00124286	
+375	-0.000261138	0.00133086	
+376	-0.000200138	0.00214886	
+377	-0.000260138	0.00217386	
+378	-0.000260138	0.00126786	
+379	-0.000260138	0.00134986	
+380	-0.000260138	0.00125986	
+381	-0.000256138	0.00130986	
+382	-0.000259138	0.00126886	
+383	-0.000251138	0.00142286	
+384	-0.000259138	0.00128786	
+385	-0.000258138	0.00129086	
+386	-0.000259138	0.00134486	
+387	-0.000258138	0.00129886	
+388	-0.000257138	0.00138986	
+389	-0.000257138	0.00132586	
+390	-0.000251138	0.00131286	
+391	-0.000257138	0.00136586	
+392	-0.000244138	0.00131186	
+393	-0.000255138	0.00132986	
+394	-0.000256138	0.00132986	
+395	-0.000255138	0.00141286	
+396	-0.000254138	0.00229686	
+397	-0.000253138	0.00142886	
+398	-0.000254138	0.00134686	
+399	-0.000254138	0.00135186	
+400	-0.000253138	0.00144986	
+401	-0.000242138	0.00134986	
+402	-0.000243138	0.00135386	
+403	-0.000252138	0.00141586	
+404	-0.000216138	0.00137286	
+405	-0.000252138	0.00137686	
+406	-0.000252138	0.00153486	
+407	-0.000240138	0.00137586	
+408	-0.000251138	0.00138986	
+409	-0.000248138	0.00139486	
+410	-0.000250138	0.00139786	
+411	-0.000250138	0.00141786	
+412	-0.000249138	0.00144386	
+413	-0.000249138	0.00141386	
+414	-0.000247138	0.00148686	
+415	-0.000249138	0.00147086	
+416	-0.000248138	0.00231386	
+417	-0.000236138	0.00141886	
+418	-0.000248138	0.00144186	
+419	-0.000248138	0.00143686	
+420	-0.000248138	0.00144186	
+421	-0.000247138	0.00151986	
+422	-0.000235138	0.00143986	
+423	-0.000246138	0.00153986	
+424	-0.000246138	0.00145886	
+425	-0.000246138	0.00149686	
+426	-0.000246138	0.00152786	
+427	-0.000245138	0.00251486	
+428	-0.000243138	0.00155886	
+429	-0.000235138	0.00147286	
+430	-0.000244138	0.00148486	
+431	-0.000244138	0.00157186	
+432	-0.000242138	0.00148386	
+433	-0.000242138	0.00149886	
+434	-0.000243138	0.00150286	
+435	-0.000184138	0.00227086	
+436	-0.000242138	0.00491486	
+437	-0.000239138	0.00151686	
+438	-0.000241138	0.00151886	
+439	-0.000219138	0.00162786	
+440	-0.000241138	0.00152686	
+441	-0.000229138	0.00157886	
+442	-0.000229138	0.00160586	
+443	-0.000240138	0.00154086	
+444	-0.000239138	0.00159486	
+445	-0.000239138	0.00279886	
+446	-0.000237138	0.00159686	
+447	-0.000238138	0.00160486	
+448	-0.000238138	0.00156186	
+449	-0.000238138	0.00164686	
+450	-0.000237138	0.00157086	
+451	-0.000237138	0.00157386	
+452	-0.000236138	0.00157886	
+453	-0.000235138	0.00166286	
+454	-0.000162138	0.00175286	
+455	-0.000227138	0.00163986	
+456	-0.000224138	0.00162286	
+457	-0.000235138	0.00254586	
+458	-0.000234138	0.00160486	
+459	-0.000234138	0.00160886	
+460	-0.000234138	0.00161386	
+461	-0.000234138	0.00161886	
+462	-0.000233138	0.00179686	
+463	-0.000233138	0.00162686	
+464	-0.000231138	0.00163186	
+465	-0.000232138	0.00168586	
+466	-0.000232138	0.00167786	
+467	-0.000231138	0.00287986	
+468	-0.000226138	0.00178186	
+469	-0.000220138	0.00165286	
+470	-0.000231138	0.00170986	
+471	-0.000220138	0.00181686	
+472	-0.000231138	0.00166586	
+473	-0.000229138	0.00166986	
+474	-0.000229138	0.00167586	
+475	-0.000229138	0.00179586	
+476	-0.000229138	0.00261086	
+477	-0.000225138	0.00177286	
+478	-0.000228138	0.00170786	
+479	-0.000228138	0.00169486	
+480	-0.000227138	0.00172586	
+481	-0.000228138	0.00178286	
+482	-0.000227138	0.00170686	
+483	-0.000227138	0.00171186	
+484	-0.000214138	0.00180186	
+485	-0.000226138	0.00180786	
+486	-0.000225138	0.00182686	
+487	-0.000226138	0.00195686	
+488	-0.000157138	0.00173486	
+489	-0.000202138	0.00175486	
+490	-0.000225138	0.00175186	
+491	-0.000224138	0.00174986	
+492	-0.000224138	0.00182286	
+493	0.00108386	0.0157869	
+494	-0.000205138	0.00179786	
+495	-0.000222138	0.00176686	
+496	-0.000211138	0.00176886	
+497	-0.000214138	0.00177486	
+498	-0.000222138	0.00177886	
+499	-0.000211138	0.00260186	
+500	-0.000220138	0.00204086	
+501	-0.000142138	0.00266586	
+502	-0.000220138	0.00258386	
+503	-0.000218138	0.00180786	
+504	-0.000220138	0.00184786	
+505	-0.000218138	0.00180686	
+506	-0.000220138	0.00182086	
+507	-0.000219138	0.00195586	
+508	-0.000218138	0.00190586	
+509	-0.000217138	0.00182786	
+510	-0.000198138	0.00186586	
+511	-0.000192138	0.0122559	
+512	-0.000192138	0.00185986	
+513	-0.000192138	0.00200486	
+514	-0.000191138	0.00186186	
+515	-0.000203138	0.00208086	
+516	-0.000216138	0.00185286	
+517	-0.000215138	0.00285186	
+518	-0.000214138	0.00198286	
+519	-0.000176138	0.00720686	
+520	-0.000212138	0.00200186	
+521	-0.000204138	0.00189486	
+522	-0.000214138	0.00193786	
+523	-0.000214138	0.00194786	
+524	-0.000214138	0.00188786	
+525	-0.000212138	0.00196386	
+526	-0.000203138	0.00195586	
+527	-0.000212138	0.00190986	
+528	-0.000212138	0.00194586	
+529	-0.000211138	0.00191086	
+530	0.000668862	0.00196486	
+531	-0.000211138	0.00200486	
+532	-0.000211138	0.00193486	
+533	-0.000210138	0.00192686	
+534	-0.000209138	0.00193386	
+535	-0.000208138	0.00193586	
+536	-0.000210138	0.00197686	
+537	-0.000149138	0.00304386	
+538	-0.000207138	0.00195786	
+539	-0.000208138	0.00197186	
+540	-0.000208138	0.00208986	
+541	-0.000208138	0.00196186	
+542	-0.000198138	0.00204586	
+543	-0.000207138	0.00205386	
+544	-0.000207138	0.00203286	
+545	-0.000206138	0.00218286	
+546	-0.000206138	0.00198286	
+547	-0.000206138	0.00318886	
+548	-0.000120138	0.00199286	
+549	-0.000206138	0.00213586	
+550	-0.000204138	0.00202486	
+551	-0.000206138	0.00208986	
+552	-0.000205138	0.00301986	
+553	-0.000200138	0.00221886	
+554	-0.000203138	0.00208586	
+555	-0.000194138	0.00209986	
+556	-0.000202138	0.00203886	
+557	-0.000202138	0.00300486	
+558	-0.000200138	0.00213086	
+559	-0.000118138	0.00309486	
+560	-0.000202138	0.00204386	
+561	-0.000202138	0.00204786	
+562	-0.000191138	0.00209086	
+563	-0.000114138	0.00316186	
+564	-0.000187138	0.00210986	
+565	-0.000199138	0.00206486	
+566	-0.000197138	0.00208086	
+567	-0.000194138	0.00207386	
+568	-0.000199138	0.00207786	
+569	-0.000178138	0.00209686	
+570	-0.000198138	0.00217086	
+571	-0.000198138	0.00209986	
+572	-0.000198138	0.00211186	
+573	-0.000197138	0.00210886	
+574	-0.000196138	0.00216986	
+575	-0.000196138	0.00225886	
+576	-0.000195138	0.00211186	
+577	-0.000196138	0.00215986	
+578	-0.000196138	0.00332986	
+579	-0.000183138	0.00212786	
+580	-0.000185138	0.00221286	
+581	-0.000194138	0.00222586	
+582	-0.000194138	0.00214886	
+583	-0.000193138	0.00230986	
+584	-0.000193138	0.00220986	
+585	-0.000186138	0.00226386	
+586	-0.000186138	0.00233286	
+587	-0.000191138	0.00223186	
+588	-0.000178138	0.00217386	
+589	-0.000192138	0.00217786	
+590	-0.000191138	0.00218286	
+591	-0.000191138	0.00224686	
+592	-0.000191138	0.00360186	
+593	-0.000189138	0.00231986	
+594	-0.000181138	0.00327386	
+595	-0.000187138	0.00225686	
+596	-0.000177138	0.00219986	
+597	-0.000188138	0.00310586	
+598	-0.000159138	0.00229686	
+599	-0.000189138	0.00224186	
+600	-0.000188138	0.00248486	
+601	-0.000187138	0.00222086	
+602	-0.000188138	0.00223086	
+603	-0.000177138	0.00222886	
+604	-0.000187138	0.00229186	
+605	-0.000187138	0.00230686	
+606	-0.000185138	0.00225386	
+607	-0.000186138	0.00226486	
+608	-0.000171138	0.00229086	
+609	-0.000185138	0.00226486	
+610	-0.000186138	0.00231986	
+611	-0.000184138	0.00227386	
+612	-0.000184138	0.00226686	
+613	-0.000174138	0.00236386	
+614	-0.000173138	0.00263686	
+615	-0.000170138	0.00250886	
+616	-0.000106138	0.00236286	
+617	-0.000181138	0.00231686	
+618	0.000753862	0.00231986	
+619	-0.000181138	0.00230786	
+620	-0.000181138	0.00238786	
+621	-0.000180138	0.00240886	
+622	-0.000170138	0.00232086	
+623	-0.000180138	0.00236186	
+624	-0.000180138	0.00349886	
+625	-0.000168138	0.00241286	
+626	-2.138e-06	0.00353386	
+627	-0.000178138	0.00234386	
+628	-0.000179138	0.00330286	
+629	-0.000163138	0.00235986	
+630	-0.000178138	0.00240086	
+631	-0.000178138	0.00243586	
+632	-0.000178138	0.00239986	
+633	-0.000177138	0.00241986	
+634	-0.000177138	0.00237386	
+635	-0.000177138	0.00236686	
+636	-0.000175138	0.00245786	
+637	-0.000170138	0.00237486	
+638	-0.000165138	0.00338186	
+639	-0.000172138	0.00256986	
+640	-0.000165138	0.00238786	
+641	-0.000175138	0.00240286	
+642	-0.000175138	0.00242286	
+643	-0.000109138	0.00241186	
+644	-0.000174138	0.00248786	
+645	-0.000172138	0.00258986	
+646	-0.000171138	0.00247886	
+647	-0.000159138	0.00243986	
+648	-0.000171138	0.00243286	
+649	-0.000171138	0.00247386	
+650	-0.000168138	0.00255686	
+651	-0.000160138	0.00245086	
+652	-0.000160138	0.00248386	
+653	-0.000169138	0.00348486	
+654	-0.000167138	0.00251186	
+655	-0.000170138	0.00257086	
+656	-0.000108138	0.00255486	
+657	-0.000168138	0.00756986	
+658	-0.000159138	0.0129239	
+659	0.00287986	0.00938286	
+660	-0.000151138	0.0111609	
+661	-0.000163138	0.00953786	
+662	-0.000162138	0.0205199	
+663	-0.000163138	0.00553086	
+664	-0.000164138	0.00855686	
+665	-0.000157138	0.00250986	
+666	-0.000156138	0.00554986	
+667	-0.000163138	0.00260686	
+668	-0.000164138	0.00618286	
+669	-0.000163138	0.00528786	
+670	-6.4138e-05	0.00263686	
+671	-0.000164138	0.00257386	
+672	-0.000154138	0.00270786	
+673	-0.000162138	0.00253086	
+674	-0.000164138	0.00270886	
+675	-0.000154138	0.00262186	
+676	-0.000162138	0.00260286	
+677	-0.000162138	0.00273586	
+678	-0.000149138	0.00362986	
+679	-0.000158138	0.00256786	
+680	-0.000146138	0.00258486	
+681	-0.000145138	0.00272786	
+682	-0.000101138	0.00262186	
+683	-4.6138e-05	0.00390986	
+684	-0.000144138	0.00267286	
+685	-0.000160138	0.00267786	
+686	-0.000160138	0.00375586	
+687	-0.000150138	0.00309786	
+688	-0.000158138	0.00442586	
+689	-0.000156138	0.00261086	
+690	-0.000159138	0.00261186	
+691	-0.000158138	0.00261686	
+692	-6.8138e-05	0.00262186	
+693	-0.000140138	0.00267586	
+694	-0.000156138	0.00270686	
+695	-0.000151138	0.00263386	
+696	-0.000147138	0.00269786	
+697	-0.000140138	0.00268586	
+698	-0.000155138	0.00268686	
+699	-0.000154138	0.00380186	
+700	-0.000153138	0.00275986	
+701	-0.000154138	0.00275086	
+702	-0.000154138	0.00266486	
+703	-0.000155138	0.00269686	
+704	-9.9138e-05	0.00281986	
+705	-9.9138e-05	0.00274286	
+706	-0.000152138	0.00269686	
+707	-0.000151138	0.00268686	
+708	-0.000139138	0.00269786	
+709	-0.000151138	0.00281186	
+710	-0.000150138	0.00276186	
+711	-0.000150138	0.00274086	
+712	0.000907862	0.00272986	
+713	-0.000150138	0.00274586	
+714	-0.000149138	0.00277686	
+715	-0.000148138	0.00272286	
+716	-0.000139138	0.00272586	
+717	-0.000136138	0.00289086	
+718	-0.000131138	0.00280486	
+719	-0.000129138	0.00369486	
+720	-0.000147138	0.00286086	
+721	-0.000147138	0.00274786	
+722	-0.000138138	0.00285986	
+723	-0.000135138	0.00286986	
+724	-0.000146138	0.00276086	
+725	-0.000145138	0.00276486	
+726	-0.000145138	0.00284386	
+727	-0.000146138	0.00285786	
+728	-0.000145138	0.00277886	
+729	-0.000144138	0.00288686	
+730	-0.000133138	0.00278586	
+731	-0.000118138	0.00285586	
+732	-0.000143138	0.00279386	
+733	-0.000143138	0.00285586	
+734	-0.000142138	0.00280486	
+735	-0.000143138	0.00286486	
+736	-0.000131138	0.00295086	
+737	-0.000141138	0.00401286	
+738	-0.000138138	0.00288086	
+739	-0.000140138	0.00407586	
+740	-0.000139138	0.00437086	
+741	-0.000139138	0.00290186	
+742	-0.000138138	0.00295786	
+743	-0.000139138	0.00284886	
+744	-0.000138138	0.00285686	
+745	-0.000138138	0.00286186	
+746	-0.000138138	0.00285586	
+747	-0.000137138	0.00299586	
+748	-0.000135138	0.00520086	
+749	-0.000134138	0.00287886	
+750	-0.000136138	0.00299386	
+751	6.6862e-05	0.00418486	
+752	-0.000135138	0.00297686	
+753	-0.000136138	0.00294186	
+754	-0.000136138	0.00325786	
+755	-0.000133138	0.00289586	
+756	-4.9138e-05	0.00289986	
+757	-0.000134138	0.00295586	
+758	-0.000133138	0.00389486	
+759	-0.000120138	0.00291386	
+760	-8.1138e-05	0.00405586	
+761	-0.000102138	0.00524386	
+762	-0.000130138	0.00299086	
+763	-0.000132138	0.00302886	
+764	-0.000132138	0.00294586	
+765	-9.6138e-05	0.00295286	
+766	-0.000130138	0.00308886	
+767	-0.000113138	0.00303086	
+768	-0.000130138	0.00296086	
+769	0.00941486	0.00307286	
+770	-0.000129138	0.00301286	
+771	-0.000128138	0.00297386	
+772	-0.000129138	0.00297786	
+773	-7.3138e-05	0.00594086	
+774	-0.000124138	0.00298786	
+775	-0.000128138	0.00328586	
+776	-0.000114138	0.00308086	
+777	-0.000116138	0.00309186	
+778	-0.000126138	0.00299386	
+779	-0.000125138	0.00301086	
+780	-0.000125138	0.00411486	
+781	-0.000124138	0.00304886	
+782	-0.000125138	0.00319986	
+783	-0.000123138	0.00307586	
+784	-0.000125138	0.00309886	
+785	-0.000106138	0.00456986	
+786	-0.000123138	0.00312686	
+787	-0.000124138	0.00315186	
+788	-0.000103138	0.00314386	
+789	-0.000122138	0.00304186	
+790	-0.000122138	0.00321986	
+791	-0.000122138	0.00313686	
+792	-0.000123138	0.00316386	
+793	-0.000112138	0.00314486	
+794	-0.000123138	0.00325886	
+795	-0.000121138	0.00309086	
+796	-0.000121138	0.00317686	
+797	-0.000108138	0.00307586	
+798	-0.000119138	0.00315686	
+799	-0.000120138	0.00317986	
+800	-0.000119138	0.00407786	
+801	-0.000108138	0.00311186	
+802	-0.000109138	0.00317886	
+803	-8.0138e-05	0.00429686	
+804	-0.000116138	0.00337786	
+805	-0.000117138	0.00320586	
+806	-0.000116138	0.00323886	
+807	-1.0138e-05	0.00593986	
+808	-0.000116138	0.00380786	
+809	-0.000115138	0.00313986	
+810	-0.000103138	0.00321486	
+811	-0.000114138	0.00314686	
+812	-9.9138e-05	0.00318986	
+813	-0.000115138	0.00319586	
+814	-0.000104138	0.00326186	
+815	-0.000115138	0.00321986	
+816	-0.000114138	0.00328886	
+817	-0.000103138	0.00319486	
+818	-0.000113138	0.00325386	
+819	-0.000111138	0.00317086	
+820	-9.6138e-05	0.00329386	
+821	-3.2138e-05	0.00440886	
+822	-8.138e-06	0.00320386	
+823	-0.000104138	0.00321486	
+824	-0.000111138	0.00319186	
+825	-8.1138e-05	0.00332086	
+826	-0.000107138	0.00332086	
+827	0.00100186	0.00326486	
+828	-0.000108138	0.00323686	
+829	-0.000109138	0.00329486	
+830	-0.000107138	0.00333886	
+831	-0.000109138	0.00328386	
+832	3.1862e-05	0.00323886	
+833	-0.000107138	0.00326486	
+834	-9.8138e-05	0.00323586	
+835	-0.000107138	0.00330186	
+836	-0.000107138	0.00335486	
+837	-9.5138e-05	0.00329286	
+838	-0.000105138	0.00341786	
+839	-7.8138e-05	0.00335286	
+840	-0.000104138	0.00339686	
+841	-6.9138e-05	0.00422786	
+842	-9.8138e-05	0.00345286	
+843	-9.5138e-05	0.00336086	
+844	-0.000106138	0.00339586	
+845	-9.4138e-05	0.00334486	
+846	-0.000106138	0.00329486	
+847	-0.000107138	0.00337986	
+848	-0.000105138	0.00333886	
+849	-0.000104138	0.00341186	
+850	-0.000102138	0.00337786	
+851	-7.5138e-05	0.00348886	
+852	-8.4138e-05	0.00332986	
+853	-0.000102138	0.00343086	
+854	-8.5138e-05	0.00341186	
+855	-2.1138e-05	0.00335286	
+856	-0.000101138	0.00337486	
+857	-0.000101138	0.00334286	
+858	-0.000101138	0.00339486	
+859	-9.9138e-05	0.00339286	
+860	-8.8138e-05	0.00341386	
+861	-0.000100138	0.00440086	
+862	-8.8138e-05	0.00344886	
+863	-9.6138e-05	0.00336886	
+864	-8.9138e-05	0.00362086	
+865	-9.8138e-05	0.00351086	
+866	-9.9138e-05	0.00338186	
+867	-8.7138e-05	0.00338686	
+868	-9.6138e-05	0.00342586	
+869	-4.2138e-05	0.00345886	
+870	-9.6138e-05	0.00453286	
+871	-9.5138e-05	0.00340586	
+872	-8.6138e-05	0.00361186	
+873	-9.5138e-05	0.0136219	
+874	-9.2138e-05	0.00384486	
+875	-9.2138e-05	0.0135049	
+876	0.000243862	0.00496186	
+877	4.2862e-05	0.00747486	
+878	-8.9138e-05	0.0100969	
+879	-7.9138e-05	0.0201089	
+880	-8.9138e-05	0.00747586	
+881	-9.1138e-05	0.00759086	
+882	-8.0138e-05	0.00606686	
+883	1.3862e-05	0.00619786	
+884	-9.1138e-05	0.00684786	
+885	-8.9138e-05	0.00371386	
+886	-8.9138e-05	0.00346886	
+887	-9.1138e-05	0.00360186	
+888	-8.0138e-05	0.00361386	
+889	-8.9138e-05	0.00353586	
+890	-8.9138e-05	0.00368986	
+891	-8.7138e-05	0.00349086	
+892	-7.8138e-05	0.00356086	
+893	-7.9138e-05	0.00354186	
+894	-8.7138e-05	0.00351886	
+895	-7.8138e-05	0.00356586	
+896	-6.2138e-05	0.00485886	
+897	-8.4138e-05	0.00359586	
+898	-8.7138e-05	0.00351986	
+899	-6.138e-06	0.00354186	
+900	-7.3138e-05	0.00358586	
+901	-7.4138e-05	0.00361586	
+902	-7.1138e-05	0.00363686	
+903	-8.4138e-05	0.00359886	
+904	-8.5138e-05	0.00354586	
+905	-7.4138e-05	0.00489786	
+906	-7.1138e-05	0.00355486	
+907	-8.4138e-05	0.00361386	
+908	-8.4138e-05	0.00358386	
+909	-2.4138e-05	0.00361286	
+910	-7.3138e-05	0.00383486	
+911	-8.2138e-05	0.00357686	
+912	-7.3138e-05	0.00470486	
+913	-2.1138e-05	0.00360386	
+914	-8.2138e-05	0.00358886	
+915	-8.0138e-05	0.00375686	
+916	-8.0138e-05	0.00464386	
+917	-7.8138e-05	0.00360386	
+918	-7.0138e-05	0.00675986	
+919	-6.7138e-05	0.00361086	
+920	-6.7138e-05	0.00379486	
+921	-5.8138e-05	0.00377786	
+922	0.000899862	0.00367186	
+923	-7.6138e-05	0.00407486	
+924	-1.5138e-05	0.00374186	
+925	-6.5138e-05	0.00363686	
+926	-5.138e-06	0.0102369	
+927	-7.3138e-05	0.00364886	
+928	-7.6138e-05	0.00386586	
+929	-7.4138e-05	0.00365486	
+930	-8.138e-06	0.00382486	
+931	6.3862e-05	0.00543086	
+932	-7.3138e-05	0.00366886	
+933	-6.5138e-05	0.00367086	
+934	-6.4138e-05	0.00377586	
+935	-6.3138e-05	0.00494986	
+936	-6.2138e-05	0.00368486	
+937	-6.4138e-05	0.00393986	
+938	-6.3138e-05	0.00369286	
+939	-2.7138e-05	0.00379586	
+940	-6.3138e-05	0.00370686	
+941	-5.9138e-05	0.00377086	
+942	-5.9138e-05	0.00375186	
+943	0.000989862	0.00371886	
+944	-6.0138e-05	0.00384186	
+945	-5.9138e-05	0.00381386	
+946	-3.8138e-05	0.00381586	
+947	-5.7138e-05	0.00379486	
+948	-5.9138e-05	0.00387586	
+949	-6.9138e-05	0.00374286	
+950	-6.8138e-05	0.00379586	
+951	8.62e-07	0.00378386	
+952	-6.7138e-05	0.00375186	
+953	-4.5138e-05	0.00375786	
+954	-6.1138e-05	0.00496886	
+955	-6.6138e-05	0.00377586	
+956	-6.7138e-05	0.00379686	
+957	-6.7138e-05	0.00389186	
+958	-6.6138e-05	0.00394786	
+959	-6.7138e-05	0.00378186	
+960	-6.6138e-05	0.00387886	
+961	-6.4138e-05	0.0144539	
+962	-6.2138e-05	0.00390386	
+963	-6.5138e-05	0.00394986	
+964	-5.3138e-05	0.00386886	
+965	-5.3138e-05	0.00387286	
+966	-5.4138e-05	0.00413786	
+967	-4.6138e-05	0.00409486	
+968	-6.3138e-05	0.00389486	
+969	-5.3138e-05	0.00382586	
+970	-5.4138e-05	0.00388186	
+971	-1.5138e-05	0.00396986	
+972	-4.8138e-05	0.00392086	
+973	-6.1138e-05	0.00385386	
+974	-6.1138e-05	0.00397986	
+975	-6.1138e-05	0.00389986	
+976	-5.0138e-05	0.00474486	
+977	-4.9138e-05	0.00404486	
+978	-4.9138e-05	0.00477886	
+979	-4.7138e-05	0.00391386	
+980	-5.9138e-05	0.00399086	
+981	-4.0138e-05	0.00398186	
+982	-4.5138e-05	0.00390686	
+983	0.000942862	0.00397386	
+984	-5.8138e-05	0.00404286	
+985	1.4862e-05	0.00391586	
+986	-3.9138e-05	0.00395386	
+987	-4.6138e-05	0.00390386	
+988	-5.7138e-05	0.00393886	
+989	-5.6138e-05	0.00393686	
+990	-5.6138e-05	0.00505586	
+991	-4.5138e-05	0.00391986	
+992	-5.4138e-05	0.00399186	
+993	-5.5138e-05	0.00459386	
+994	-3.7138e-05	0.00410286	
+995	-5.4138e-05	0.00401286	
+996	-4.4138e-05	0.00401786	
+997	-4.4138e-05	0.00394586	
+998	-5.3138e-05	0.00400386	
+999	-5.4138e-05	0.00415986	
+1000	-1.6138e-05	0.00400986	
+1001	-5.2138e-05	0.00397386	
+endofdata

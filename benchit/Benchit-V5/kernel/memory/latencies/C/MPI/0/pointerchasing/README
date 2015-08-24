@@ -1,0 +1,53 @@
+###########################################################
+README file for benchit kernel
+"memaccess_c"
+
+This file is part of the benchit project of the Center for
+High Performance Computing at the Dresden University of
+Technology.
+
+Author: Michael Kluge - kluge@zhr.tu-dresden.de
+###########################################################
+
+
+/* kernel/memaccess_c
+* SYNOPSIS
+* to be added 
+* short introduction of the kernel 
+* and of the persons concerned with the kernel
+* SEE ALSO
+* if you want to referenz anything else - here is your chance
+* DESCRIPTION
+* -----------------------------------------------------------
+* Content
+* 1) What the kernel does
+* 2) What can I change ?
+* 3) Hints
+* -----------------------------------------------------------
+* 
+* 1) The kernel measures the average time of a single
+*    memory access depending on the accessed memory size.
+*    It does something like: 
+*      for loop = ...
+*      {
+*        var = memory{random_field];
+*      }
+*    Typically you will see (on scalar processors) the 
+*    latencies of the several cache hierarchies.
+*      
+*    The x axis shows the memory area used for a run.
+*    The y axis shows the average memory access time.
+* 
+* -----------------------------------------------------------
+* 
+* 2) Edit PARAMETERS to change the used memory sizes.
+* 
+* -----------------------------------------------------------
+* 
+* 3) Mulitply the y axis with the processor clock to
+*    obtain the results in processor cycles.
+* 
+* -----------------------------------------------------------
+*
+***
+*/

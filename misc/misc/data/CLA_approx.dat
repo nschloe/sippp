@@ -1,0 +1,6 @@
+\begin{table}\centering{\tt
+\begin{tabular}{lllllll} \toprule
+$\varepsilon$ &    $N=    64$ &    $N=   128$ &    $N=   256$ &    $N=   512$ &    $N=  1024$ &                            \\\midrule
+1.0E+00       &    8.691E-04  &    4.353E-04  &    2.186E-04  &    1.094E-04  &    5.472E-05  & $\eta_{\varepsilon}^{N,K}$ \\
+              &    0.997      &    0.994      &    0.999      &    0.999      &    ---        & $r_{\varepsilon}^{N,K}$    \\
+1.0E-04       &    4.066E-02  &    1.168E-02  &    3.037E-03  &    7.655E-04  

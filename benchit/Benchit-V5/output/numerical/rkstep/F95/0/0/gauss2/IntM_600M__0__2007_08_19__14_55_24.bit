@@ -1,0 +1,3108 @@
+# BenchIT-Resultfile
+#
+# feel free to fill in more architectural information
+#########################################################
+beginofmeasurementinfos
+kernelstring="numerical.rkstep.F95.0.0.gauss2" 
+date="Aug 19 14:55:24 2007"
+numberofprocessorsused=1
+memorysizeused="0"
+comment=
+kerneldescription=
+language="F95"
+compiler="ifort"
+compilerversion=" unknown"
+compilerflags="-free  -O4"
+c_compiler_version="910, build 20061103"
+library1=""
+kernelisparallel=0
+kernelisparallel=0
+is3d=0
+codesequence="z = L*u (factorised)"
+xinmin=2
+xinmax=2001
+y1inmin=-1.09e-06
+y1inmax=1.791e-05
+y2inmin=1.791e-05
+y2inmax=0.33594
+y3inmin=1.591e-05
+y3inmax=0.30345
+y4inmin=1.591e-05
+y4inmax=0.234892
+y5inmin=2.291e-05
+y5inmax=0.383114
+endofmeasurementinfos
+################################################
+beginofarchitecture
+# Architekturangaben
+nodename="N4"
+hostname="localhost" 
+###############################################################################
+#                                                                             #
+#  B e n c h I T - Performance Measurement for Scientific Applications        #
+#                                                                             #
+#  Architectural information about your system, used to compare your system   #
+#  to others. Please fill out the information - your resultfile will not be   #
+#  accepted on the project homepage without this information.                 #
+#                                                                             #
+#  Authors: Guido Juckeland (juckeland@zhr.tu-dresden.de)                     #
+#           Stefan Pflueger (pflueger@zhr.tu-dresden.de)                      #
+#  $Revision: 1.6 $                                                           #
+#  $Date: 2007/07/10 15:06:44 $                                               #
+#                                                                             #
+###############################################################################
+
+#
+# feel free to insert your data
+#
+# quotation marks have to be `escaped'!!!
+#
+# Note: The examples are from very different systems.
+#
+
+
+# Manufacturer of the mainboard, for example: "MSI"
+mainboardmanufacturer=""
+
+# Type of the mainboard without manufacturer's name, for example: "845PE Max3 (800 Edition)"
+mainboardtype=""
+
+# Chipset of the mainboard, for example: "Intel i845PE"
+mainboardchipset=""
+
+# Total number of Processors
+numberofprocessors=
+
+# Name of the processor, for example: "Intel Pentium 4"
+processorname="IntM"
+
+# Codename according to manufacturer roadmap, for example: "Montecito"
+codename=""
+
+# Processor Serial Number, if available
+processorserialnumber=""
+
+# Processor version, for example: "x86, Family 6, Model 5, Stepping 1"
+processorversion=""
+
+# Instruction Set Architecture (ISA) of the processor, for example: "IA-32" or "MIPS"
+processorisaset=""
+
+# Several processors are using exact descriptions of their ISA level, for example: "IV" (for MIPS)
+processorisalevel=""
+
+# Extensions of the ISA with an additional number; extendable
+# for example: 
+# processorisaextension1="MMX"
+# processorisaextension2="SSE"
+# processorisaextension3="SSE2"
+processorisaextension1=""
+processorisaextension2=""
+processorisaextension3=""
+
+# Clock rate of the processor in Hz, for example: 3060000000
+processorclockrate="600000000"
+
+# Instruction length in bit, for example: 32 [for RISC] or 0 [for CISC or variable length]
+instructionlength=""
+
+# Processor word length or Word format or xx-bit architecture in bit, for example: 32 
+processorwordlength=""
+
+# Number of instructions issued to the functional units per clock, for example: 6
+instructionissue=""
+
+# Number of separate integer units, for example: 2
+integerunits=""
+
+# Number of separate floating point units, for example: 3
+floatingpointunits=""
+
+# Number of separate load/store units, for example: 1
+loadstoreunits=""
+
+# Support of multithreading, for example: 1 [0 for no | 1 for yes] [Hyperthreading --> 1]
+multithreading="0"
+
+# Number of physical cores per CPU
+numberofcorespercpu=0
+
+# L1 instruction cache size in byte, for example: 12288 
+level1icachesize=""
+
+# L1 data cache size in byte, for example: 8192
+level1dcachesize=""
+
+# L2 cache size in byte, for example: 524288
+level2cachesize=""
+
+
+# L3 cache size in byte, for example:  33554432
+level3cachesize=""
+
+# L1 instruction cache organization, for example: "Execution Trace Cache"
+level1icachetype=""
+
+# L1 data cache organization, for example: "4-way set-associative, write-through, dual ported"
+level1dcachetype=""
+
+# L2 cache organization, for example: "8-way set-associative, cache line size 32 words"
+level2cachetype=""
+
+# L3 cache organization, for example: "8-way set-associative, cache line size 128 words with 4 128-byte sectors"
+level3cachetype=""
+
+# L2 cache location, for example: "on-chip" or "on-board"
+level2cachelocation="on-chip"
+
+# Support of prefetching, for example: 1 [0 for no | 1 for yes]
+prefetching="0"
+
+# Support of preloading, for example: 1 [0 for no | 1 for yes]
+preloading="0"
+
+# Clock rate of the processor side bus in Hz, for example: 133000000 
+processorsidebusclockrate=""
+
+# Clock rate of the backside bus (connection to the on-chip L2-cache) in Hz, for example: 200000000
+backsideclockrate=""
+
+# Structure details of the technology in m, for example: 0.000000130
+technologylevel=""
+
+# Memory chip type, for example: "PC-100 SDRAM" or "RIMM-4200"
+memorychiptype=""
+
+# Memory bus type, for example: "SDRAM bus" or "RAMBUS"
+memorybustype=""
+
+# Clock rate of the memory bus in Hz, for example: 100000000
+memorybusclockrate=""
+
+# Total size of available memory
+memorysize=
+
+# Additionaly comment for your system (e.g. Hyper Threading enabled/disabled)
+ systemcomment=""
+
+endofarchitecture
+####################################################
+beginofenvironmentvariables
+DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-Ko1GotBjVq,guid=b3c66d30a65a6\
+fd4295d20046c73a52"
+BENCHIT_MPIRUN="mpirun"
+BENCHIT_CC_COMPILER_VERSION="910, build 20061103"
+OPTIND="1"
+POSIXLY_CORRECT="y"
+BENCHIT_SHELL_INTERPRETER=""
+BENCHIT_MPIF77_C_FLAGS_OMP=""
+BENCHIT_F77_C_FLAGS_STD="-O2"
+BENCHIT_F95_C_FLAGS_STD="-O2"
+OMP_DYNAMIC="FALSE"
+LESSOPEN="|lesspipe.sh %s"
+BENCHIT_LIB_PVM=""
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_H="1.5 (Fri Jan 19 16:05:11 2007)"
+LANGUAGE="en_US.UTF-8"
+BENCHIT_F90_COMPILER_VERSION=" unknown"
+COLORTERM=""
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_TEMPLATE_C="1.12 (Fri Jul  6 16:14:47\
+2007)"
+BENCHIT_F77_C_FLAGS_OMP=""
+BENCHIT_F95_C_FLAGS_OMP=""
+BENCHIT_F_COMPILERFLAGS="-free  -O4"
+BENCHIT_KERNEL_FILE_VERSION_QUICKVIEW_SH="1.3 (Fri Sep 29 18:35:11 2006)"
+BENCHIT_PARAMETER_FILE="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic\
+1D/Benchit-V5/kernel/numerical/rkstep/F95/0/0/gauss2/PARAMETERS"
+GS_LIB="/home/nico/.fonts"
+BENCHIT_CPP_SCSL=""
+BENCHIT_RUN_QUEUEOPTIONS=""
+LC_TIME="de_DE.UTF-8"
+BENCHIT_KERNELBINARY="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1\
+/Benchit-V5/bin/numerical.rkstep.F95.0.0.gauss2.0"
+BENCHIT_KERNEL_FILE_VERSION_ERROR_H="1.1 (Tue Mar 13 08:22:03 2007)"
+BENCHIT_CXX_C_FLAGS_HIGH="-O3"
+ANT_HOME="/usr/share/ant-core"
+LESS="-R -M --shift 5"
+BENCHIT_LIB_FFTW3=" -lfftw3"
+BENCHIT_LIB_ACML=" -lacml"
+QTDIR="/usr/qt/3"
+BENCHIT_MPICC="icc"
+BENCHIT_RUN_QUEUENAME=""
+KONSOLE_DCOP="DCOPRef(konsole-13077,konsole)"
+BENCHIT_KERNEL_FILE_VERSION_UNAME_MINUS_A="NO REVISION (Mon Jul 18 15:03:19\
+2005)"
+BENCHIT_CPP_ESSL=""
+XDG_DATA_DIRS="/usr/share:/usr/kde/3.5/share:/usr/local/share"
+BENCHIT_KERNEL_FILE_VERSION_BENCHSCRIPT_H="1.1 (Tue May 23 10:13:00 2006)"
+BENCHIT_ARCH_SPEED="600M"
+BENCHIT_JAVA_FLAGS=""
+PWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/tool\
+"
+TERM="xterm"
+BENCHIT_KERNEL_FILE_VERSION_RANDOM="NO REVISION, UNABLE TO READ (Sun Aug 12\
+00:00:02 2007)"
+BENCHIT_KERNEL_START="2"
+BENCHIT_CXX_C_FLAGS=""
+BENCHIT_CC="icc"
+PRELINK_PATH=""
+BENCHIT_KERNEL_STEPS="2000"
+XDG_CONFIG_DIRS="/usr/kde/3.5/etc/xdg"
+JAVACC_HOME="/usr/share/javacc/"
+BENCHIT_F90="ifort"
+BENCHIT_RUN_REDIRECT_CONSOLE="output.txt"
+BASH_VERSION="3.2.17(1)-release"
+BENCHIT_F77_COMPILER_VERSION=" unknown"
+BENCHIT_F95_COMPILER_VERSION=" unknown"
+BENCHIT_MPICC_C_FLAGS_HIGH="-O3"
+BENCHIT_JAVA="java"
+BENCHIT_INTERACTIVE="0"
+BENCHIT_LIB_PTHREAD="-lpthread"
+BENCHIT_RUN_COREDUMPLIMIT="0"
+BENCHIT_INCLUDES="-I.\
+-I/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+INTEL_LICENCE_FILE="/opt/intel/fortran100/licenses"
+COMPILE_GLOBAL="1"
+BENCHIT_CC_C_FLAGS_HIGH="-O3"
+myval=""
+BENCHIT_KERNEL_FILE_VERSION_FILEVERSION="NO REVISION (Sun Aug 19 14:50:28\
+2007)"
+BENCHIT_LIB_BLAS="-lblas"
+BENCHIT_PERL_INTERPRETER=""
+SHLVL="3"
+BENCHIT_KERNEL_FILE_VERSION_BMERGE_SH="NO REVISION (Mon Jul 18 15:03:19 2005)"
+BENCHIT_KERNEL_FILE_VERSION_FEATURES="NO REVISION (Tue Jul 10 13:10:16 2007)"
+CONFIG_PROTECT_MASK="/etc/env.d/java/ /etc/gconf /etc/terminfo\
+/etc/revdep-rebuild /etc/splash"
+DCCC_PATH="/usr/lib/distcc/bin"
+BENCHIT_MPICC_C_FLAGS=""
+BENCHIT_F90_C_FLAGS_HIGH="-O3"
+SHELLOPTS="braceexpand:hashall:interactive-comments:posix"
+BENCHIT_RUN_MAX_MEMORY="0"
+BENCHIT_IGNORE_PARAMETER_FILE="0"
+JAVAC="/home/nico/.gentoo/java-config-2/current-user-vm/bin/javac"
+BENCHIT_PROGRESS_DIR="progress"
+BASH_ARGC="([0]=\"1\" [1]=\"1\")"
+BENCHIT_MPIF77=""
+BENCHIT_CC_C_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_TMP_ENV="NO REVISION (Sun Aug 19 14:50:29 2007)"
+QMAKESPEC="linux-g++"
+BENCHIT_PHP_INTERPRETER=""
+LC_CTYPE="en_US.UTF-8"
+BENCHIT_F77="ifort"
+BENCHIT_F95="ifort"
+BENCHIT_COMPILER="ifort"
+BENCHIT_USE_VAMPIR_TRACE="0"
+BENCHIT_F90_C_FLAGS="-free"
+XDM_MANAGED="/var/run/xdmctl/xdmctl-:0,maysd,mayfn,sched,rsvd,method=classic"
+USER="nico"
+BENCHIT_RUN_TIMELIMIT="600"
+KDE_MULTIHEAD="false"
+OMP_NESTED="FALSE"
+BENCHIT_KERNELBINARY_ARGS=" "
+VMHANDLE="sun-jdk-1.4"
+BENCHIT_KERNEL_INCREMENT="1"
+BENCHIT_MPIF77_C_FLAGS_HIGH=""
+PYTHONPATH="/usr/lib/portage/pym"
+BENCHIT_CPP_PVM=""
+BENCHIT_SHELL_FLAGS=""
+BENCHIT_JAVA_HOME=""
+LOGNAME="nico"
+BENCHIT_KERNEL_FILE_VERSION_CMDLINEPARAMS="1.29 (Tue Jan  3 18:55:28 2006)"
+BENCHIT_KERNEL_FILE_VERSION_LOC_CONVERT_SH="NO REVISION (Wed Jan  4 15:32:49\
+2006)"
+LC_MONETARY="de_DE.UTF-8"
+BENCHIT_CXX_L_FLAGS="-lm"
+BENCHIT_F77_C_FLAGS_HIGH="-O3"
+BENCHIT_F95_C_FLAGS_HIGH="-O4"
+OPTERR="1"
+myvar="BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP"
+BENCHIT_LIB_ATLAS=" -latlas"
+PRELINK_PATH_MASK="/usr/lib/gstreamer-0.10:/usr/lib/gstreamer-0.8:/lib/modules:\
+usr/lib/locale:/usr/lib/wine:/usr/lib/valgrind:*.la:*.png:*.py:*.pl:*.pm:*.sh:*\
+xml:*.xslt:*.a:*.js:/usr/lib/klibc"
+DM_CONTROL="/var/run/xdmctl"
+BENCHIT_KERNEL_FILE_VERSION_ARCHDEFS="NO REVISION (Fri Sep 29 18:35:11 2006)"
+GENERATION="2"
+BENCHIT_KERNEL_FILE_VERSION_COMPILERVERSION="NO REVISION, UNABLE TO READ (Sun\
+Aug 12 00:00:02 2007)"
+BENCHIT_CROSSCOMPILE="0"
+_CMDLINE_VARLIST="BENCHIT_KERNELBINARY BENCHIT_KERNELBINARY_ARGS\
+BENCHIT_CMDLINE_ARG_FILENAME_COMMENT BENCHIT_CMDLINE_ARG_PARAMETER_FILE\
+BENCHIT_CMDLINE_ARG_IGNORE_PARAMETER_FILE BENCHIT_NODENAME BENCHIT_CROSSCOMPILE\
+BENCHIT_CMDLINE_ARG_NUM_CPUS BENCHIT_CMDLINE_ARG_NUM_PROCESSES\
+BENCHIT_CMDLINE_ARG_NUM_THREADS_PER_PROCESS BENCHIT_CMDLINE_ARG_RUN_CLEAN\
+BENCHIT_CMDLINE_ARG_RUN_COREDUMPLIMIT BENCHIT_CMDLINE_ARG_RUN_EMAIL_ADDRESS\
+BENCHIT_CMDLINE_ARG_RUN_MAX_MEMORY BENCHIT_CMDLINE_ARG_RUN_QUEUENAME\
+BENCHIT_CMDLINE_ARG_RUN_QUEUETIMELIMIT BENCHIT_CMDLINE_ARG_RUN_REDIRECT_CONSOLE\
+BENCHIT_CMDLINE_ARG_RUN_TEST BENCHIT_CMDLINE_ARG_RUN_USE_MPI\
+BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP "
+BASH="/bin/sh"
+BENCHIT_RUN_QUEUETIMELIMIT=""
+BENCHIT_CPP_FFTW3=""
+BENCHIT_MPIF77_C_FLAGS=""
+BENCHIT_CPP_ACML=""
+BENCHIT_HOSTNAME="localhost"
+GTK_RC_FILES="/etc/gtk/gtkrc:/home/nico/.gtkrc:/home/nico/.kde/share/config/gtk\
+c"
+BENCHIT_NUM_PROCESSES=""
+PIPESTATUS="([0]=\"0\")"
+BENCHIT_KERNEL_FILE_VERSION_FILEVERSION_C="1.6 (Fri Jan 19 16:05:11 2007)"
+KERNELDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V\
+/kernel/numerical/rkstep/F95/0/0/gauss2"
+BENCHIT_LIB_PAPI=""
+KDEDIRS="/usr:/usr/local:/usr/kde/3.5"
+BENCHIT_F77_C_FLAGS=""
+BENCHIT_F95_C_FLAGS="-free"
+GROUPS="()"
+BENCHIT_MPICC_L_FLAGS="-lm -L/opt/intel/fortran100/lib -lifcore -lmpi"
+DIRSTACK="()"
+BENCHIT_KERNEL_FILE_VERSION_STRINGLIB_C="1.4 (Fri Jan 12 11:44:35 2007)"
+BENCHIT_LIB_PCL=""
+CLASSPATH="."
+_="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/tools/\
+
+BENCHIT_CC_L_FLAGS="-lm -L/opt/intel/fortran100/lib -lifcore"
+BENCHIT_KERNEL_FILE_VERSION_RUN_BENCHIT="NO REVISION (Fri Sep 29 18:35:11\
+2006)"
+MANPATH="/home/nico/.gentoo/java-config-2/current-user-vm/man:/usr/local/share/\
+an:/usr/share/man:/usr/share/binutils-data/i686-pc-linux-gnu/2.17/man:/usr/shar\
+/gcc-data/i686-pc-linux-gnu/4.1.2/man:/opt/intel/compiler91/man:/opt/intel/fort\
+an100/man:/opt/sun-jdk-1.4.2.15/man:/etc/java-config/system-vm/man/:/usr/kde/3.\
+/share/man:/usr/qt/3/doc/man:/usr/local/texlive/current/texmf/doc/man"
+BENCHIT_KERNEL_FILE_VERSION_FIRSTTIME="1.29 (Wed Jul  4 16:22:09 2007)"
+PAGER="/usr/bin/less"
+BENCHIT_CPP_BLAS=""
+G_BROKEN_FILENAMES="1"
+KDE_SESSION_UID="1000"
+BENCHIT_KERNEL_FILE_VERSION_ENVHASHBUILDER="NO REVISION (Sun Aug 19 14:50:27\
+2007)"
+COLON_SEPARATED="XDG_DATA_DIRS"
+LDPATH="/usr/local/lib:///usr/lib/opengl/nvidia/lib:/usr/i686-pc-linux-gnu/lib:\
+usr/lib/gcc/i686-pc-linux-gnu/4.1.2:/opt/intel/compiler91/lib:/opt/intel/fortra\
+100/lib:/usr/lib/nspr:/usr/lib/nss:/opt/sun-jdk-1.4.2.15/jre/lib/i386/:/opt/sun\
+jdk-1.4.2.15/jre/lib/i386/native_threads/:/opt/sun-jdk-1.4.2.15/jre/lib/i386/cl\
+ssic/:/opt/sun-jdk-1.4.2.15/jre/lib/i386/server/:/usr/lib/qt4:/usr/kde/3.5/lib:\
+usr/qt/3/lib:/usr/games/lib:/opt/nessus/lib:/usr/lib/fltk-1.1:/usr/lib/libstdc+\
+-v3/"
+BENCHIT_F90_L_FLAGS="-lm"
+CONFIGURE_MODE="COMPILE"
+OLDCWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_NUM_CPUS="1"
+LC_COLLATE="en_US.UTF-8"
+BENCHIT_PERL_FLAGS=""
+IA32ROOT="/opt/intel/fortran100"
+KERNELNAME_FULL=""
+BENCHIT_MANDATORY_FILES="tools/run_benchit tools/uname_minus_a benchit.c\
+interface.h tools/envhashbuilder.c tools/bienvhash.template.c tools/bienvhash.h\
+tools/stringlib.c tools/stringlib.h "
+PS4="+ "
+GCC_PATH="/usr/i686-pc-linux-gnu/gcc-bin/4.1.2"
+INFOPATH="/usr/share/info:/usr/share/binutils-data/i686-pc-linux-gnu/2.17/info:\
+usr/share/gcc-data/i686-pc-linux-gnu/4.1.2/info:/usr/local/texlive/current/texm\
+/doc/info"
+OSTYPE="linux-gnu"
+BENCHIT_KERNEL_FILE_VERSION_HELPER_SH="1.14 (Mon Dec 12 11:27:20 2005)"
+TEXBASE="/usr/local/texlive/"
+BENCHITROOT="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit\
+V5"
+BENCHIT_PHP_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_STRINGLIB_H="1.2 (Fri Sep 29 16:51:14 2006)"
+BENCHIT_RUBY_INTERPRETER=""
+BENCHIT_LIB_MKL=" -lmkl"
+BASH_LINENO="([0]=\"78\" [1]=\"0\")"
+HOSTTYPE="i686"
+BENCHIT_MPIF77_L_FLAGS=""
+KDE_FULL_SESSION="true"
+EUID="1000"
+MACHTYPE="i686-pc-linux-gnu"
+BENCHIT_CPP_PTHREADS=""
+DESKTOP_SESSION="default"
+HTTP_PROXY="http://localhost:8118"
+http_proxy="http://localhost:8118"
+BENCHIT_LIB_MPI=""
+SCRIPTNAME="COMPILE.SH"
+BENCHIT_F77_L_FLAGS="-lm"
+BENCHIT_F95_L_FLAGS="-lm"
+BENCHIT_KERNEL_FILE_VERSION_LOC_REPL="NO REVISION (Wed Jan  4 15:32:49 2006)"
+GTK2_RC_FILES="/home/nico/.gtkrc-2.0:/home/nico/.kde/share/config/gtkrc-2.0:/et\
+/gtk-2.0/gtkrc"
+BENCHIT_OPTIONAL_FILES="LOCALDEFS/PROTOTYPE_input_architecture\
+LOCALDEFS/PROTOTYPE_input_display "
+GCC_SPECS=""
+BENCHIT_RUN_OUTPUT_DIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic\
+1D/Benchit-V5/output"
+JAVA_HOME="/home/nico/.gentoo/java-config-2/current-user-vm"
+BENCHIT_CPP_ATLAS=""
+BENCHIT_CXX_C_FLAGS_STD="-O2"
+HOME="/home/nico"
+BENCHIT_DEBUGLEVEL="0"
+FLTK_DOCDIR="/usr/share/doc/fltk-1.1.7/html"
+LS_COLORS="no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01\
+cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:su=37;41:sg=30;43:tw=30;42:ow=34;42:s\
+=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.z\
+p=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz\
+01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*\
+cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;\
+5:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif\
+01;35:*.tiff=01;35:*.png=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:\
+.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=\
+1;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rm\
+b=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*\
+xwd=01;35:*.yuv=01;35:*.pdf=00;32:*.ps=00;32:*.txt=00;32:*.patch=00;32:*.diff=0\
+;32:*.log=00;32:*.tex=00;32:*.doc=00;32:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m\
+d=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36\
+*.wav=00;36:"
+C_COMPILE="icc  -O2 -I.\
+-I/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5 \
+-DDEBUGLEVEL=0"
+SHELLSCRIPT_DEBUG="0"
+BENCHIT_RUN_ACCURACY=""
+BENCHIT_LIB_SCSL=" -lscsl"
+BENCHIT_CXX_C_FLAGS_OMP=""
+BENCHIT_RUN_EMAIL_ADDRESS=""
+SANE_CONFIG_DIR="/etc/sane.d"
+LC_MESSAGES="en_US.UTF-8"
+HOSTNAME="N4"
+KERNELBASEDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Bench\
+t-V5/kernel"
+BENCHIT_KERNEL_FILE_VERSION_ENVHASHBUILDER_C="1.3 (Fri Jan 12 11:44:35 2007)"
+BENCHIT_COMPILERFLAGS="-free  -O4"
+BENCHIT_CPP_PAPI="-DUSE_PAPI"
+_VARLIST="'BENCHITROOT"
+CVS_RSH="ssh"
+BENCHIT_NODENAME="N4"
+SHELL="/bin/bash"
+BASH_ARGV="([0]=\
+"/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/kernel/n\
+merical/rkstep/F95/0/0/gauss2/COMPILE.SH\
+" [1]=\
+"numerical.rkstep.F95.0.0.gauss2\
+")"
+BENCHIT_JAVAC_FLAGS_HIGH="-O"
+BENCHIT_KERNEL_FILE_VERSION_ENVIRONMENTS="NO REVISION, UNABLE TO READ (Sun Aug\
+12 00:00:02 2007)"
+BENCHIT_LIB_ESSL=" -lessl"
+myfile="tools/stringlib.h"
+BENCHIT_KERNELNAME="numerical.rkstep.F95.0.0.gauss2"
+DISTCC_VERBOSE="0"
+DISTCC_LOG=""
+F_COMPILE="ifort -free  -O4"
+KONSOLE_DCOP_SESSION="DCOPRef(konsole-13077,session-1)"
+BENCHIT_ENVIRONMENT="NOTHING"
+EDITOR="/usr/bin/vim"
+JDK_HOME="/home/nico/.gentoo/java-config-2/current-user-vm"
+BENCHIT_CPP_PCL=" -DUSE_PCL"
+HLL="F95"
+OLDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_F90_SOURCE_FORMAT_FLAG=""
+BENCHIT_MPICC_C_FLAGS_STD="-O2"
+PATH="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/too\
+s:/usr/kde/3.5/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/i686-pc-linux-gnu\
+gcc-bin/4.1.2:/opt/intel/compiler91/bin:/opt/intel/fortran100/bin:/opt/sun-jdk-\
+.4.2.15/bin:/opt/sun-jdk-1.4.2.15/jre/bin:/opt/sun-jdk-1.4.2.15/jre/javaws:/usr\
+kde/3.5/bin:/usr/qt/3/bin:/usr/games/bin:/usr/local/texlive/current/bin/i386-li\
+ux:/sbin:/usr/sbin:/sbin:/usr/sbin"
+PPID="13086"
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_TEMPLATE_JAVA="1.4 (Thu Jul 21 21:42:13\
+2005)"
+BENCHIT_RUN_TEST="0"
+XCURSOR_THEME="whiteglass"
+BR="0"
+BENCHIT_JAVAC_FLAGS=""
+BENCHIT_MPICC_C_FLAGS_OMP=""
+G_FILENAME_ENCODING="UTF-8"
+BENCHIT_KERNEL_FILE_VERSION_COMMONDEFS="NO REVISION (Tue Aug 30 21:32:48 2005)"
+BENCHIT_CC_C_FLAGS_STD="-O2"
+SESSION_MANAGER="local/N4:/tmp/.ICE-unix/5782"
+BENCHIT_CXX_COMPILER_VERSION="4.1.2 (Gentoo 4.1.2 p1.0.1)"
+DISPLAY=":0.0"
+BENCHIT_FILENAME_COMMENT="0"
+CURDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+IFS="' 	"
+BENCHIT_DEFINES=" -DDEBUGLEVEL=0"
+BENCHIT_CC_C_FLAGS_OMP=""
+UID="1000"
+BENCHIT_F90_C_FLAGS_STD="-O2"
+MIKTEX_INSTALLROOT="/usr/local/texlive/texmf-local"
+OLDPWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_JAVAC="javac"
+BENCHIT_F90_C_FLAGS_OMP=""
+WINDOWID="54525959"
+BENCHIT_ARCH_SHORT="IntM"
+LC_PAPER="de_DE.UTF-8"
+BENCHIT_CPP_MKL=""
+GDK_USE_XFT="1"
+BENCHIT_F95_SOURCE_FORMAT_FLAG=""
+BASH_SOURCE="([0]=\
+"/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/kernel/n\
+merical/rkstep/F95/0/0/gauss2/COMPILE.SH\
+" [1]=\
+"./COMPILE.SH\
+")"
+BENCHIT_KERNEL_FILE_VERSION_CONFIGURE="1.46 (Thu Jun 21 19:41:24 2007)"
+OPENGL_PROFILE="nvidia"
+LC_NUMERIC="de_DE.UTF-8"
+BENCHIT_C_COMPILERFLAGS=" -O2"
+BENCHIT_RUBY_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_BENCHSCRIPT_C="1.2 (Fri Jan 12 11:44:35 2007)"
+CONFIG_PROTECT="/usr/share/X11/xkb /usr/kde/3.5/share/config /usr/kde/3.5/env\
+/usr/kde/3.5/shutdown /usr/share/config"
+BASH_VERSINFO="([0]=\
+"3\
+" [1]=\
+"2\
+" [2]=\
+"17\
+" [3]=\
+"1\
+" [4]=\
+"release\
+" [5]=\
+"i686-pc-linux-gnu\
+")"
+BENCHIT_CXX="c++"
+BENCHIT_LD_LIBRARY_PATH="/home/nico/Desktop/Diplomarbeit/programs/main/paraboli\
+-1D/Benchit-V5/jbi/jni"
+BENCHIT_NUM_THREADS_PER_PROCESS=""
+PKG_CONFIG_PATH="/usr/qt/3/lib/pkgconfig"
+BENCHIT_MPIF77_C_FLAGS_STD=""
+BENCHIT_RUN_LINEAR="0"
+INTEL_FLEXLM_LICENSE="/opt/intel/compiler91/licenses"
+BENCHIT_CPP_MPI=" -DUSE_MPI"
+endofenvironmentvariables
+beginofdisplay
+
+xoutmin=0
+xoutmax=2250
+xaxisticks=9
+xaxislogbase=0
+xaxistext="Problem dimension N"
+
+y1outmin=0
+y1outmax=2e-05
+y1axisticks=8
+y1axislogbase=0
+y1axistext="No. of iterations"
+
+y2outmin=0
+y2outmax=0.35
+y2axisticks=7
+y2axislogbase=0
+y2axistext="No. of iterations"
+
+y3outmin=0
+y3outmax=0.35
+y3axisticks=7
+y3axislogbase=0
+y3axistext="No. of iterations"
+
+y4outmin=0
+y4outmax=0.25
+y4axisticks=10
+y4axislogbase=0
+y4axistext="No. of iterations"
+
+y5outmin=0
+y5outmax=0.4
+y5axisticks=8
+y5axislogbase=0
+y5axistext="No. of iterations"
+
+numabscissae=1986
+numfunctions=5
+
+## Fuer Architektur- oder Messmerkmal : abc
+#
+# displayabc=1                                           # Steuervariable
+# #Textfeld-Eigenschaften des date-Strings               # Kommentar
+# tabc="ABC-Merkmal: 3 Tm"                               # Text: Wert
+# xabc=                                                  # x-Position
+# yabc=                                                  # y-Position
+# fonttypabc=                                            # Schriftart
+# fontsizeabc=                                           # Schriftgroesse
+tlegendfunction1="ID"
+xlegendfunction1=
+ylegendfunction1=
+fonttypelegendfunction1=
+fontsizelegendfunction1=
+
+tlegendfunction2="BlockJac"
+xlegendfunction2=
+ylegendfunction2=
+fonttypelegendfunction2=
+fontsizelegendfunction2=
+
+tlegendfunction3="LowerBLockSOR"
+xlegendfunction3=
+ylegendfunction3=
+fonttypelegendfunction3=
+fontsizelegendfunction3=
+
+tlegendfunction4="UpperBLockSOR"
+xlegendfunction4=
+ylegendfunction4=
+fonttypelegendfunction4=
+fontsizelegendfunction4=
+
+tlegendfunction5="BlockSSOR"
+xlegendfunction5=
+ylegendfunction5=
+fonttypelegendfunction5=
+fontsizelegendfunction5=
+
+#### display of optional information can be enabled by setting display***=1
+
+
+# optional information of the measurement-programs:
+
+# deactivation of the kernelstring is useful, if a separate caption
+# should be used
+displaykernelstring=1
+# topkernelstring=1|0: headline|underline
+topkernelstring=1
+fonttypkernelstring=""
+fontsizekernelstring=
+
+displaycomment=1
+# textfield properties of the comment-string
+tcomment="Comment:"
+xcomment=
+ycomment=
+fonttypcomment=
+fontsizecomment=
+
+displaydate=1
+# textfield properties of the date-string
+tdate="Datum: "
+xdate=""
+ydate=""
+fonttypdate=""
+fontsizedate=""
+
+displaylanguage=0
+# textfield properties of the language-string
+tlanguage="HLL: "
+xlanguage=""
+ylanguage=""
+fonttyplanguage=""
+fontsizelanguage=""
+
+displaycompiler=0
+# textfield properties of the compiler-string
+tcompiler="Compiler: "
+xcompiler=""
+ycompiler=""
+fonttypcompiler=""
+fontsizecompiler=""
+
+displaycompilerflags=0
+# textfield properties of the compilerflags-string
+tcompilerflags="Compiler-Flags: "
+xcompilerflags=""
+ycompilerflags=""
+fonttypcompilerflags=""
+fontsizecompilerflags=""
+
+displaycodesequence=1
+# textfield properties of the codesequence-string
+tcodesequence=""
+xcodesequence=""
+ycodesequence=""
+fonttypcodesequence=""
+fontsizecodesequence=""
+
+# optional information about the architecture, names etc.:
+
+displayhostname=0
+# textfield properties of the hostname-string
+thostname="Hostname: "
+xhostname=""
+yhostname=""
+fonttyphostname=""
+fontsizehostname=""
+
+displaynodename=0
+# textfield properties of the nodename-string
+tnodename="Nodename: "
+xnodename=""
+ynodename=""
+fonttypnodename=""
+fontsizenodename=""
+
+displaymainboardmanufacturer=0
+# textfield properties of the mainboardmanufacturer-string
+tmainboardmanufacturer="Manufacturer of  mainboard: "
+xmainboardmanufacturer=""
+ymainboardmanufacturer=""
+fonttypmainboardmanufacturer=""
+fontsizemainboardmanufacturer=""
+
+displaymainboardtype=0
+# textfield properties of the mainboardtype-string
+tmainboardtype="Mainboard type: "
+xmainboardtype=""
+ymainboardtype=""
+fonttypmainboardtype=""
+fontsizemainboardtype=""
+
+displaymainboardchipset=0
+# textfield properties of the mainboardchipset-string
+tmainboardchipset="Mainboard Chipset: "
+xmainboardchipset=""
+ymainboardchipset=""
+fonttypmainboardchipset=""
+fontsizemainboardchipset=""
+
+displayprocessorname=0
+# textfield properties of the processorname-string
+tprocessorname="Processor name: "
+xprocessorname=""
+yprocessorname=""
+fonttypprocessorname=""
+fontsizeprocessorname=""
+
+displayprocessorserialnumber=0
+# textfield properties of the processorserialnumber-string
+tprocessorserialnumber="Processor Serial No.: "
+yprocessorserialnumber=""
+fonttypprocessorserialnumber=""
+fontsizeprocessorserialnumber=""
+
+displayprocessorversion=0
+# textfield properties of the processorversion-string
+tprocessorversion="Processor Version: "
+xprocessorversion=""
+yprocessorversion=""
+fonttypprocessorversion=""
+fontsizeprocessorversion=""
+
+displayprocessorisaset=0
+# textfield properties of the processorisaset-string
+tprocessorisaset="Instruction Set Architecture: "
+xprocessorisaset=""
+yprocessorisaset=""
+fonttypprocessorisaset=""
+fontsizeprocessorisaset=""
+
+displayprocessorisalevel=0
+# textfield properties of the processorisalevel-string
+tprocessorisalevel="ISA Level: "
+xprocessorisalevel=""
+yprocessorisalevel=""
+fonttypprocessorisalevel=""
+fontsizeprocessorisalevel=""
+
+displayprocessorisaextension1=0
+# textfield properties of the processorisaextension1-string
+tprocessorisaextension1="ISA Extension: "
+xprocessorisaextension1=""
+yprocessorisaextension1=""
+fonttypprocessorisaextension1=""
+fontsizeprocessorisaextension1=""
+
+displayprocessorisaextension2=0
+# textfield properties of the processorisaextension2-string
+tprocessorisaextension2="ISA Extension: "
+xprocessorisaextension2=""
+yprocessorisaextension2=""
+fonttypprocessorisaextension2=""
+fontsizeprocessorisaextension2=""
+
+displayprocessorisaextension3=0
+# textfield properties of the processorisaextension3-string
+tprocessorisaextension3="ISA Extension: "
+xprocessorisaextension3=""
+yprocessorisaextension3=""
+fonttypprocessorisaextension3=""
+fontsizeprocessorisaextension3=""
+
+displayprocessorclockrate=0
+# textfield properties of the processorclockrate-string
+tprocessorclockrate="Processor Clock Rate: "
+xprocessorclockrate=""
+yprocessorclockrate=""
+fonttypprocessorclockrate=""
+fontsizeprocessorclockrate=""
+
+displayinstructionlength=0
+# textfield properties of the instructionlength-string
+tinstructionlength="Instruction Length: "
+xinstructionlength=""
+yinstructionlength=""
+fonttypinstructionlength=""
+fontsizeinstructionlength=""
+
+displayprocessorwordlength=0
+# textfield properties of the processorwordlength-string
+tprocessorwordlength="Processor Word Length: "
+xprocessorwordlength=""
+yprocessorwordlength=""
+fonttypprocessorwordlength=""
+fontsizeprocessorwordlength=""
+
+displayinstructionissue=0
+# textfield properties of the instructionissue-string
+tinstructionissue="Instruction Issue: "
+xinstructionissue=""
+yinstructionissue=""
+fonttypinstructionissue=""
+fontsizeinstructionissue=""
+
+displayintegerunits=0
+# textfield properties of the integerunits-string
+tintegerunits="Number of Integer Units: "
+xintegerunits=""
+yintegerunits=""
+fonttypintegerunits=""
+fontsizeintegerunits=""
+
+displayfloatingpointunits=0
+# textfield properties of the floatingpointunits-string
+tfloatingpointunits="Number of Floating Point Units: "
+xfloatingpointunits=""
+yfloatingpointunits=""
+fonttypfloatingpointunits=""
+fontsizefloatingpointunits=""
+
+displayloadstoreunits=0
+# textfield properties of the loadstoreunits-string
+tloadstoreunits="Number of Load/Store Units: "
+xloadstoreunits=""
+yloadstoreunits=""
+fonttyploadstoreunits=""
+fontsizeloadstoreunits=""
+
+displaylevel1icachesize=0
+# textfield properties of the level1icachesize-string
+tlevel1icachesize="L1 Instruction Cache Size: "
+xlevel1icachesize=""
+ylevel1icachesize=""
+fonttyplevel1icachesize=""
+fontsizelevel1icachesize=""
+
+displaylevel1icachetype=0
+# textfield properties of the level1icachetype-string
+tlevel1icachetype="L1 Instruction Cache Type: "
+xlevel1icachetype=""
+ylevel1icachetype=""
+fonttyplevel1icachetype=""
+fontsizelevel1icachetype=""
+
+displaylevel1dcachesize=0
+# textfield properties of the level1dcachesize-string
+tlevel1dcachesize="L1 Data Cache Size: "
+xlevel1dcachesize=""
+ylevel1dcachesize=""
+fonttyplevel1dcachesize=""
+fontsizelevel1dcachesize=""
+
+displaylevel1dcachetype=0
+# textfield properties of the level1dcachetype-string
+tlevel1dcachetype="L1 Data Cache Type: "
+xlevel1dcachetype=""
+ylevel1dcachetype=""
+fonttyplevel1dcachetype=""
+fontsizelevel1dcachetype=""
+
+displaylevel2cachesize=0
+# textfield properties of the level2cachesize-string
+tlevel2cachesize="L2 Data Cache Size: "
+xlevel2cachesize=""
+ylevel2cachesize=""
+fonttyplevel2cachesize=""
+fontsizelevel2cachesize=""
+
+displaylevel2cachetype=0
+# textfield properties of the level2cachetype-string
+tlevel2cachetype="L2 Cache Type: "
+xlevel2cachetype=""
+ylevel2cachetype=""
+fonttyplevel2cachetype=""
+fontsizelevel2cachetype=""
+
+displaylevel2cachelocation=0
+# textfield properties of the level2cachelocation-string
+tlevel2cachelocation="L2 Cache Location: "
+xlevel2cachelocation=""
+ylevel2cachelocation=""
+fonttyplevel2cachelocation=""
+fontsizelevel2cachelocation=""
+
+displaylevel3cachesize=0
+# textfield properties of the level3cachesize-string
+tlevel3cachesize="L3 Data Cache Size: "
+xlevel3cachesize=""
+ylevel3cachesize=""
+fonttyplevel3cachesize=""
+fontsizelevel3cachesize=""
+
+displaylevel3cachetype=0
+# textfield properties of the level3cachetype-string
+tlevel3cachetype="L3 Cache Type: "
+xlevel3cachetype=""
+ylevel3cachetype=""
+fonttyplevel3cachetype=""
+fontsizelevel3cachetype=""
+
+displaylevel3cachelocation=0
+# textfield properties of the level3cachelocation-string
+tlevel3cachelocation="L3 Cache Location: "
+xlevel3cachelocation=""
+ylevel3cachelocation=""
+fonttyplevel3cachelocation=""
+fontsizelevel3cachelocation=""
+
+displayprefetching=0
+# textfield properties of the prefetching-string
+tprefetching="Prefetching: "
+xprefetching=""
+yprefetching=""
+fonttypprefetching=""
+fontsizeprefetching=""
+
+displaypreloading=0
+# textfield properties of the preloading-string
+tpreloading="Preloading: "
+xpreloading=""
+ypreloading=""
+fonttyppreloading=""
+fontsizepreloading=""
+
+displaybacksideclockrate=0
+# textfield properties of the backsideclockrate-string
+tbacksideclockrate="Clock Rate of the Backside Bus: "
+xbacksideclockrate=""
+ybacksideclockrate=""
+fonttypbacksideclockrate=""
+fontsizebacksideclockrate=""
+
+displaytechnologylevel=0
+# textfield properties of the technologylevel-string
+ttechnologylevel="Technology Level: "
+xtechnologylevel=""
+ytechnologylevel=""
+fonttyptechnologylevel=""
+fontsizetechnologylevel=""
+
+displaymemorychiptype=0
+# textfield properties of the memorychiptype-string
+tmemorychiptype="Memory Chip Type: "
+xmemorychiptype=""
+ymemorychiptype=""
+fonttypmemorychiptype=""
+fontsizememorychiptype=""
+
+displaymemorybustype=0
+# textfield properties of the memorybustype-string
+tmemorybustype="Memory Bus Type: "
+xmemorybustype=""
+ymemorybustype=""
+fonttypmemorybustype=""
+fontsizememorybustype=""
+
+displaymemorybusclockrate=0
+# textfield properties of the memorybusclockrate-string
+tmemorybusclockrate="Memory Bus Clock Rate: "
+xmemorybusclockrate=""
+ymemorybusclockrate=""
+fonttypmemorybusclockrate=""
+fontsizememorybusclockrate=""
+
+displaynumberofprocessorsused=0
+# textfield properties of the numberofprocessorsused-string
+tnumberofprocessorsused="Number Of Used Processors: "
+xnumberofprocessorsused=""
+ynumberofprocessorsused=""
+fonttypnumberofprocessorsused=""
+fontsizenumberofprocessorsused=""
+
+displaymemorysizeused=0
+# textfield properties of the memorysizeused-string
+tmemorysizeused="Used Memory Size: "
+xmemorysizeused=""
+ymemorysizeused=""
+fonttypmemorysizeused=""
+fontsizememorysizeused=""
+
+displaysystemcomment=0
+# textfield properties of the systemcomment-string
+tsystemcomment="Additional System Information: "
+xsystemcomment=""
+ysystemcomment=""
+fonttypsystemcomment=""
+fontsizesystemcomment=""
+
+displayaid=0
+# textfield properties of the aid-string
+taid="AID identifier: "
+xaid=""
+yaid=""
+fonttypaid=""
+fontsizeaid=""
+
+displaycodename=0
+# textfield properties of the codename-string
+tcodename="codename according to roadmap: "
+xcodename=""
+ycodename=""
+fonttypcodename=""
+fontsizecodename=""
+
+displaynumberofcorespercpu=0
+# textfield properties of the numberofcorespercpu-string
+tnumberofcorespercpu="number of physical cores per CPU: "
+xnumberofcorespercpu=""
+ynumberofcorespercpu=""
+fonttypnumberofcorespercpu=""
+fontsizenumberofcorespercpu=""
+endofdisplay
+####################################################
+beginofidentifierstrings
+# strings as replacement for the identifiers in menu-windows
+hostname="Hostname"
+nodename="Nodename"
+mainboardmanufacturer="Manufacturer of  mainboard"
+mainboardtype="Mainboard type"
+mainboardchipset="Mainboard Chipset"
+processorname="Processor name"
+processorserialnumber="Processor Serial No."
+processorversion="Processor Version"
+processorisaset="Instruction Set Architecture"
+processorisalevel="ISA Level"
+processorisaextension1="ISA Extension"
+processorisaextension2="ISA Extension"
+processorisaextension3="ISA Extension"
+processorclockrate="Processor Clock Rate"
+instructionlength="Instruction Length"
+processorwordlength="Processor Word Length"
+instructionissue="Instruction Issue"
+integerunits="Number of Integer Units"
+floatingpointunits="Number of Floating Point Units"
+loadstoreunits="Number of Load/Store Units"
+level1icachesize="L1 Instruction Cache Size"
+level1icachetype="L1 Instruction Cache Type"
+level1dcachesize="L1 Data Cache Size"
+level1dcachetype="L1 Data Cache Type"
+level2cachesize="L2 Data Cache Size"
+level2cachetype="L2 Cache Type"
+level2cachelocation="L2 Cache Location"
+level3cachesize="L3 Data Cache Size"
+level3cachetype="L3 Cache Type"
+level3cachelocation="L3 Cache Location"
+prefetching="Prefetching"
+preloading="Preloading"
+backsideclockrate="Clock Rate of the Backside Bus"
+technologylevel="Technology Level"
+memorychiptype="Memory Chip Type"
+memorybustype="Memory Bus Type"
+memorybusclockrate="Memory Bus Clock Rate"
+numberofprocessorsused="Number Of Used Processors"
+memorysizeused="Used Memory Size"
+systemcomment="Additional System Information"
+aid="AID identifier"
+codename="codename according to roadmap"
+numberofcorespercpu="number of physical cores per CPU"
+endofidentifierstrings
+###################################################
+beginofdata
+2	-9e-08	1.791e-05	1.591e-05	1.591e-05	2.291e-05	
+3	-9e-08	2.591e-05	1.991e-05	2.091e-05	3.291e-05	
+4	-9e-08	2.791e-05	2.191e-05	2.291e-05	3.691e-05	
+5	-9e-08	4.291e-05	9.291e-05	3.091e-05	4.891e-05	
+6	-9e-08	4.491e-05	3.191e-05	3.191e-05	5.191e-05	
+7	-9e-08	6.391e-05	4.291e-05	4.091e-05	5.591e-05	
+8	-9e-08	6.591e-05	0.00076391	4.491e-05	7.091e-05	
+9	-9e-08	8.291e-05	4.891e-05	7.191e-05	7.891e-05	
+10	-9e-08	9.191e-05	5.491e-05	5.491e-05	8.691e-05	
+11	-9e-08	0.00010691	5.691e-05	6.691e-05	9.191e-05	
+12	-9e-08	0.00033591	8.991e-05	0.00010091	0.00014291	
+13	-9e-08	0.00011791	7.191e-05	7.191e-05	9.791e-05	
+14	-9e-08	0.00014391	7.491e-05	7.391e-05	0.00011991	
+15	-9e-08	0.00013691	7.691e-05	7.591e-05	0.00012391	
+16	-9e-08	0.00169391	0.00013591	9.491e-05	0.00022791	
+17	-9e-08	0.00026591	0.00032091	0.00015091	0.00054791	
+18	-9e-08	0.00016991	8.691e-05	0.00010191	0.00014091	
+19	-9e-08	0.00017991	0.00010491	0.00010691	0.00014791	
+20	-9e-08	0.00019491	0.00010791	0.00010791	0.00015091	
+21	-9e-08	0.00020591	0.00011091	0.00016291	0.00017991	
+22	-9e-08	0.00020891	0.00011491	0.00011491	0.00018491	
+23	-9e-08	0.00028391	0.00011991	0.00013591	0.00019191	
+24	-1.09e-06	0.00067091	0.0167289	0.00050791	0.00100391	
+25	-9e-08	0.00025091	0.00012691	0.00014491	0.00020291	
+26	-9e-08	0.00080891	0.00013091	0.00014891	0.00022791	
+27	-9e-08	0.00026291	0.00015091	0.00014991	0.00429291	
+28	-9e-08	0.00039591	0.00015591	0.00015591	0.00026791	
+29	-9e-08	0.00132391	0.00033091	0.00080291	0.00181791	
+30	-9e-08	0.00078091	0.00070791	0.00076691	0.00068291	
+31	-1.09e-06	0.00033691	0.00024191	0.00018791	0.00026791	
+32	-9e-08	0.0125469	0.00017391	0.00019291	0.00027591	
+33	-1.09e-06	0.00092791	0.00043591	0.00053391	0.00169891	
+34	-9e-08	0.00037991	0.00017991	0.00020291	0.00028691	
+35	-9e-08	0.00041391	0.00018491	0.00020691	0.00029191	
+36	-9e-08	0.00095091	0.00088591	0.00094091	0.00073991	
+37	-9e-08	0.00042291	0.00022891	0.00024391	0.00030791	
+38	-1.09e-06	0.00133791	0.00050091	0.00092891	0.00135291	
+39	-9e-08	0.00093591	0.00094991	0.00054691	0.00078791	
+40	-9e-08	0.00091691	0.00023291	0.00040891	0.00036791	
+41	-9e-08	0.00119991	0.00054191	0.00060791	0.00080291	
+42	-9e-08	0.00051291	0.00024591	0.00033891	0.00038591	
+43	-1.09e-06	0.00051691	0.00024191	0.00027091	0.00077391	
+44	-9e-08	0.00117791	0.00105691	0.00092891	0.00175591	
+45	-9e-08	0.00059291	0.00026491	0.00030291	0.00048691	
+46	-9e-08	0.00056591	0.00226591	0.00032091	0.00040891	
+47	-9e-08	0.00061691	0.00030391	0.00032191	0.00041491	
+48	-9e-08	0.00122891	0.00110391	0.00821991	0.00220091	
+49	-9e-08	0.00134991	0.00067591	0.00111291	0.00162891	
+50	-9e-08	0.00110291	0.00141091	0.00072491	0.00112591	
+51	-9e-08	0.00117991	0.00119891	0.00104891	0.00201391	
+52	-9e-08	0.00114891	0.00081191	0.00086991	0.00178191	
+53	-9e-08	0.00071491	0.00146691	0.00084991	0.00050091	
+54	-9e-08	0.00094391	0.00033591	0.00035691	0.00060691	
+55	-9e-08	0.00123091	0.00125291	0.00134091	0.00229291	
+56	-9e-08	0.00122491	0.00125191	0.0133409	0.00186191	
+57	-9e-08	0.00076991	0.00034091	0.00037391	0.00053991	
+58	-9e-08	0.00076691	0.00034091	0.00041191	0.00053691	
+59	-9e-08	0.00127391	0.00137091	0.00130991	0.00202291	
+60	-9e-08	0.00128891	0.00169891	0.00132291	0.00200591	
+61	-9e-08	0.00085091	0.00040591	0.00043091	0.00065291	
+62	-1.09e-06	0.00171991	0.00140591	0.00135991	0.00132191	
+63	-1.09e-06	0.00100191	0.00040091	0.00049391	0.00062791	
+64	-9e-08	0.00149791	0.00151091	0.00149791	0.00142291	
+65	-9e-08	0.00138391	0.00175791	0.00141691	0.00341991	
+66	-9e-08	0.00204991	0.00150991	0.00147991	0.00146391	
+67	-9e-08	0.00145691	0.00151591	0.00250391	0.00219291	
+68	-9e-08	0.00164591	0.00208491	0.00155491	0.00222391	
+69	-9e-08	0.00094791	0.0129679	0.00091291	0.00079391	
+70	-9e-08	0.00150091	0.0124329	0.00153391	0.00166291	
+71	-9e-08	0.00104291	0.00052091	0.00049391	0.00071391	
+72	-9e-08	0.00180991	0.00516191	0.00167791	0.0144269	
+73	-9e-08	0.00425991	0.00567791	0.00052391	0.00073291	
+74	-9e-08	0.0101379	0.00046791	0.00236091	0.00072891	
+75	-9e-08	0.00157691	0.0209929	0.0237629	0.00644991	
+76	-9e-08	0.0255169	0.00053991	0.00057391	0.0112199	
+77	-9e-08	0.0122209	0.00048291	0.00059291	0.0142829	
+78	-9e-08	0.00124091	0.00051691	0.00566391	0.00081891	
+79	-9e-08	0.00979491	0.00170791	0.0197569	0.00252491	
+80	-9e-08	0.00536691	0.00112491	0.00166991	0.00086491	
+81	-9e-08	0.00379191	0.00510691	0.00172391	0.00766391	
+82	-9e-08	0.00214591	0.0177669	0.00176191	0.00326191	
+83	-9e-08	0.00384491	0.00178891	0.00178791	0.00260591	
+84	-9e-08	0.00132991	0.00056791	0.00063291	0.00088991	
+85	-9e-08	0.00186591	0.00181991	0.00184891	0.0137659	
+86	-9e-08	0.00132091	0.00058291	0.00063891	0.00090991	
+87	-9e-08	0.00186391	0.00139091	0.00183891	0.00203591	
+88	-9e-08	0.00129891	0.00060391	0.00064891	0.00094991	
+89	-9e-08	0.00147491	0.00059691	0.00072291	0.00093591	
+90	-9e-08	0.00143791	0.00060191	0.00072291	0.00094191	
+91	-9e-08	0.00368191	0.00061191	0.00068091	0.00115991	
+92	-9e-08	0.00136491	0.00074791	0.00079491	0.00096691	
+93	-9e-08	0.00216891	0.00210991	0.00207091	0.00288291	
+94	-9e-08	0.00167291	0.00065491	0.00070291	0.00102791	
+95	-9e-08	0.00203091	0.00201291	0.00202791	0.00288091	
+96	-9e-08	0.00459891	0.00211491	0.00207791	0.00291391	
+97	-9e-08	0.00202691	0.00207991	0.00228991	0.00299791	
+98	-9e-08	0.00204491	0.00204191	0.0130669	0.00321691	
+99	-9e-08	0.00201591	0.00213691	0.00206091	0.0244909	
+100	-9e-08	0.00659391	0.00066691	0.00073991	0.00103991	
+101	-9e-08	0.0232959	0.0142019	0.00225991	0.0182169	
+102	-9e-08	0.00207491	0.0105249	0.00635691	0.00731291	
+103	-9e-08	0.00559391	0.00215291	0.00326091	0.0170709	
+104	-9e-08	0.00422691	0.00926891	0.00611891	0.0169829	
+105	-9e-08	0.00159591	0.00069291	0.0122799	0.00108691	
+106	-9e-08	0.00288291	0.00952291	0.0123829	0.00542691	
+107	-9e-08	0.00823091	0.00222191	0.0109049	0.0131259	
+108	-9e-08	0.00375891	0.00902191	0.00085291	0.00112491	
+109	-9e-08	0.00676491	0.00633791	0.00684091	0.00771091	
+110	-9e-08	0.00633491	0.00242091	0.0179089	0.00646791	
+111	-9e-08	0.00393791	0.00575891	0.00087691	0.00316191	
+112	-9e-08	0.00757391	0.0136749	0.00230691	0.0113169	
+113	-9e-08	0.00180091	0.00075091	0.00089191	0.00617091	
+114	-9e-08	0.00547591	0.00233691	0.00445891	0.00269491	
+115	-9e-08	0.00738691	0.00635491	0.00544891	0.00623891	
+116	-9e-08	0.00638091	0.00238291	0.00851591	0.00749091	
+117	-9e-08	0.0117039	0.0118249	0.00746191	0.0150569	
+118	-9e-08	0.00803291	0.00259791	0.00243391	0.00494291	
+119	-9e-08	0.00188491	0.00085891	0.00092791	0.00150491	
+120	-9e-08	0.00245391	0.00259191	0.00266291	0.00360291	
+121	-9e-08	0.00261391	0.00253391	0.00246191	0.00373191	
+122	-9e-08	0.00200091	0.00091191	0.00094791	0.00133791	
+123	-9e-08	0.0136979	0.00261291	0.00253091	0.00390691	
+124	-9e-08	0.00667491	0.00211591	0.00219291	0.00312991	
+125	-9e-08	0.00263791	0.00254391	0.00253291	0.00376991	
+126	-9e-08	0.00224591	0.0119239	0.00224191	0.00319091	
+127	-9e-08	0.00262391	0.00257791	0.00291791	0.00383191	
+128	-9e-08	0.00319491	0.00091391	0.00110291	0.00139791	
+129	-9e-08	0.00273391	0.00230591	0.00269491	0.0199389	
+130	-9e-08	0.0235759	0.00991491	0.00992591	0.0215749	
+131	-9e-08	0.0128919	0.0119739	0.00282591	0.0102359	
+132	-9e-08	0.00779491	0.0127979	0.00846791	0.0198679	
+133	-9e-08	0.00614491	0.00103691	0.00102891	0.00655791	
+134	-9e-08	0.00210891	0.0160119	0.00103691	0.0162749	
+135	-9e-08	0.00219491	0.00905091	0.00106291	0.00854891	
+136	-9e-08	0.00718691	0.00706691	0.00104991	0.00148291	
+137	-9e-08	0.00804091	0.00813191	0.00712291	0.0136619	
+138	-9e-08	0.0174869	0.00099891	0.00586191	0.00153291	
+139	-9e-08	0.0101209	0.00692791	0.00990791	0.00934291	
+140	9.1e-07	0.00736891	0.00126491	0.00108791	0.00459591	
+141	-9e-08	0.0143869	0.00100091	0.0139749	0.00286991	
+142	-9e-08	0.0121599	0.00882191	0.00827791	0.00865291	
+143	-9e-08	0.00688691	0.00414891	0.00300791	0.00415491	
+144	-9e-08	0.00293691	0.00314191	0.00305491	0.00446591	
+145	-9e-08	0.00420391	0.00291891	0.00300691	0.00437891	
+146	-9e-08	0.00290991	0.00255991	0.00303491	0.00433091	
+147	-9e-08	0.0216979	0.00302691	0.00428391	0.00371391	
+148	-9e-08	0.00304291	0.00352491	0.00259091	0.00433691	
+149	-9e-08	0.00298591	0.00305891	0.00271891	0.00507291	
+150	-9e-08	0.00294891	0.00317291	0.00319391	0.00556591	
+151	-9e-08	0.00245291	0.00106491	0.00122091	0.00163591	
+152	-9e-08	0.00314191	0.00304591	0.00304891	0.00456191	
+153	-9e-08	0.00299591	0.00323591	0.00361091	0.00384591	
+154	-9e-08	0.0253959	0.00312991	0.00119691	0.00887191	
+155	-9e-08	0.0244879	0.0152259	0.0122599	0.0198729	
+156	-9e-08	0.00831791	0.0142579	0.00321691	0.0168579	
+157	-9e-08	0.00967491	0.00117191	0.00119591	0.00285191	
+158	-9e-08	0.00823391	0.00315791	0.00635191	0.0107449	
+159	9.1e-07	0.00314191	0.00636291	0.0105309	0.0118359	
+160	-9e-08	0.00616891	0.00112991	0.00144591	0.00596091	
+161	-9e-08	0.00665791	0.00115491	0.00122291	0.0109369	
+162	-9e-08	0.0102969	0.00355891	0.00734891	0.00973391	
+163	9.1e-07	0.00731291	0.0119649	0.0210779	0.0155449	
+164	-9e-08	0.0185379	0.0114279	0.0164289	0.0160479	
+165	-9e-08	0.0103319	0.00846491	0.00760091	0.0191199	
+166	-9e-08	0.00783391	0.00116091	0.00538691	0.00177291	
+167	-9e-08	0.0150309	0.00635491	0.0246649	0.0354999	
+168	9.1e-07	0.0174729	0.0155009	0.00922991	0.0101189	
+169	-9e-08	0.00851791	0.00303691	0.0126799	0.0195219	
+170	-9e-08	0.0159009	0.0209829	0.0126029	0.0216789	
+171	-9e-08	0.00367491	0.0250099	0.0232999	0.0114979	
+172	-9e-08	0.0141289	0.0216759	0.00828091	0.0348289	
+173	-9e-08	0.0105569	0.00966891	0.0100419	0.0221889	
+174	-9e-08	0.0198849	0.00123891	0.00844391	0.00187691	
+175	-9e-08	0.0308349	0.00760391	0.0267249	0.0173599	
+176	-9e-08	0.0129159	0.0159619	0.0127189	0.0101709	
+177	-9e-08	0.0147539	0.0107999	0.00979791	0.0359689	
+178	-9e-08	0.0157559	0.00980791	0.00890691	0.0240659	
+179	-9e-08	0.0167419	0.00360091	0.0244199	0.0149199	
+180	-9e-08	0.00799191	0.00942991	0.0125589	0.00866291	
+181	9.1e-07	0.0119999	0.00987591	0.0129599	0.0232629	
+182	9.1e-07	0.0429819	0.00136491	0.0218709	0.00194091	
+183	-9e-08	0.0182539	0.00128291	0.00674891	0.0180219	
+184	-9e-08	0.0109259	0.0118039	0.0177619	0.0161419	
+185	-9e-08	0.0124359	0.00999891	0.00372191	0.0234449	
+186	9.1e-07	0.00311291	0.00705191	0.00854791	0.00303591	
+187	-9e-08	0.00337291	0.00435191	0.00151191	0.00520391	
+188	-9e-08	0.0206719	0.00593291	0.0110029	0.0112539	
+189	-9e-08	0.00859491	0.0114949	0.00733391	0.00786791	
+190	-9e-08	0.00918491	0.00371491	0.00154991	0.00722491	
+191	-9e-08	0.0198009	0.00554591	0.00911091	0.00849791	
+192	-9e-08	0.00975291	0.00712791	0.00988991	0.00981591	
+193	-9e-08	0.0119159	0.0146029	0.0222609	0.0152689	
+194	-9e-08	0.00674991	0.00398691	0.00396591	0.00582891	
+195	-9e-08	0.00496091	0.00409991	0.00393991	0.00567991	
+196	-9e-08	0.00382291	0.00428591	0.00389391	0.00568491	
+197	-9e-08	0.00385691	0.00362491	0.00395891	0.0165509	
+198	-9e-08	0.00333991	0.00147891	0.00164991	0.00225191	
+199	-9e-08	0.00340091	0.00161891	0.00161191	0.00220191	
+200	-9e-08	0.00390091	0.00421291	0.00407091	0.00578291	
+201	-9e-08	0.00512591	0.00354091	0.00424191	0.00507091	
+202	-9e-08	0.00340991	0.00156891	0.00175491	0.00231291	
+203	-9e-08	0.00409491	0.00413391	0.00409091	0.00587591	
+204	-9e-08	0.00416191	0.00412391	0.00417991	0.00627891	
+205	-1.09e-06	0.00418591	0.00420391	0.00408091	0.00787391	
+206	-9e-08	0.00396891	0.00545091	0.00419791	0.00587091	
+207	-9e-08	0.00401891	0.00430791	0.00421891	0.00599391	
+208	-9e-08	0.00409191	0.0148629	0.00425491	0.00618291	
+209	-9e-08	0.00418191	0.00430191	0.00647991	0.00590091	
+210	-9e-08	0.00417291	0.00544891	0.00424491	0.00697491	
+211	-9e-08	0.00407291	0.00367891	0.0161579	0.00605291	
+212	-9e-08	0.0151639	0.00416591	0.00452291	0.00703891	
+213	-9e-08	0.00438791	0.00444491	0.00457891	0.00610591	
+214	-9e-08	0.00441291	0.00424491	0.00550191	0.00654091	
+215	-9e-08	0.00358391	0.00151991	0.0180019	0.00939991	
+216	-9e-08	0.0234549	0.0249769	0.0120969	0.0113709	
+217	-9e-08	0.00824091	0.00834091	0.0167709	0.0110639	
+218	-9e-08	0.00379591	0.00162691	0.00187991	0.00257491	
+219	-9e-08	0.00371591	0.00175191	0.00181691	0.00254991	
+220	-9e-08	0.00429391	0.00438191	0.00554591	0.00670991	
+221	-9e-08	0.00442391	0.00443891	0.00460791	0.00641991	
+222	-9e-08	0.00377891	0.00171291	0.00179191	0.00250391	
+223	-9e-08	0.0149959	0.00607591	0.00437291	0.00657791	
+224	-9e-08	0.00447391	0.00465191	0.00446791	0.00790891	
+225	-9e-08	0.00381991	0.00279791	0.00180991	0.00262391	
+226	-9e-08	0.00396691	0.00168091	0.00181091	0.00254591	
+227	-9e-08	0.00465491	0.00454591	0.00559491	0.00647191	
+228	-9e-08	0.0151779	0.00168491	0.00196491	0.00600191	
+229	-9e-08	0.00441491	0.00482891	0.00467991	0.00672091	
+230	-9e-08	0.00446691	0.00463391	0.00458391	0.0260329	
+231	-9e-08	0.00462991	0.00479191	0.00468791	0.0183149	
+232	-9e-08	0.00438891	0.00172591	0.00186391	0.00267491	
+233	-9e-08	0.00485591	0.00480391	0.00462191	0.00653491	
+234	-9e-08	0.00517691	0.00615891	0.00486491	0.00688591	
+235	-9e-08	0.00456591	0.00488191	0.00473691	0.00667291	
+236	-9e-08	0.00457891	0.0151959	0.00477791	0.00716591	
+237	-9e-08	0.00487191	0.0106239	0.00462691	0.00675791	
+238	-9e-08	0.00454791	0.00586091	0.00467491	0.00642091	
+239	-9e-08	0.00418891	0.00342591	0.00191691	0.00288991	
+240	-9e-08	0.00470591	0.00470391	0.0155239	0.00707691	
+241	-9e-08	0.00465491	0.00514091	0.00478391	0.00702691	
+242	-9e-08	0.00469191	0.00444891	0.00480291	0.00738791	
+243	-9e-08	0.0193309	0.00192691	0.00514491	0.00429591	
+244	-9e-08	0.00433691	0.00180491	0.0129769	0.00288991	
+245	-9e-08	0.00496891	0.00488691	0.00504891	0.00700991	
+246	-9e-08	0.00415991	0.00181891	0.00199791	0.00283191	
+247	-9e-08	0.00481291	0.00616191	0.00489291	0.00724191	
+248	-9e-08	0.00525291	0.00493691	0.00499791	0.00697391	
+249	-9e-08	0.00482691	0.0156169	0.00632891	0.00731191	
+250	-9e-08	0.00418191	0.00193291	0.00206091	0.00286591	
+251	-9e-08	0.00460591	0.00173291	0.00176191	0.0134009	
+252	-9e-08	0.00417291	0.00187791	0.00204991	0.00397391	
+253	1.191e-05	0.00528991	0.00186791	0.00211791	0.00284491	
+254	-9e-08	0.00528091	0.00514991	0.00517291	0.00730591	
+255	-9e-08	0.00487991	0.00489091	0.0155839	0.00782191	
+256	-9e-08	0.00513191	0.00529591	0.00529991	0.00718791	
+257	-9e-08	0.00538191	0.00476691	0.00668491	0.00748891	
+258	-9e-08	0.0275469	0.0262409	0.0459419	0.0114039	
+259	-9e-08	0.0105969	0.00503891	0.0159739	0.00772091	
+260	-9e-08	0.00498491	0.00545691	0.00533791	0.00724191	
+261	-9e-08	0.00444591	0.00196891	0.00217691	0.00424191	
+262	-9e-08	0.00439291	0.00193291	0.00215691	0.00316491	
+263	-9e-08	0.00536491	0.00539691	0.00540591	0.00765691	
+264	-9e-08	0.00503091	0.0158899	0.00548691	0.00765491	
+265	-9e-08	0.00521091	0.00530691	0.00513591	0.00758191	
+266	-9e-08	0.00647891	0.00622791	0.00531191	0.0102989	
+267	-9e-08	0.00538991	0.00692491	0.00527991	0.0188529	
+268	-9e-08	0.00529091	0.00646891	0.00540491	0.00776091	
+269	-9e-08	0.00516891	0.00535891	0.00676091	0.00780891	
+270	-9e-08	0.00455591	0.00207691	0.00220891	0.00305191	
+271	-9e-08	0.00548391	0.00558891	0.00559091	0.0187299	
+272	-9e-08	0.00537191	0.0204859	0.00560991	0.00906291	
+273	-9e-08	0.00550691	0.00533991	0.00547891	0.00787591	
+274	-9e-08	0.00489291	0.00212591	0.00222591	0.00311791	
+275	-9e-08	0.0158649	0.00569691	0.00553091	0.00788391	
+276	-9e-08	0.00527691	0.00218291	0.00235491	0.00338391	
+277	-9e-08	0.00455491	0.00203491	0.00222691	0.00447291	
+278	-9e-08	0.00468891	0.00215991	0.00221791	0.00313591	
+279	-9e-08	0.00593191	0.00547091	0.00558791	0.00801891	
+280	-9e-08	0.0160389	0.00585091	0.00554291	0.00807391	
+281	-9e-08	0.00480791	0.00921891	0.00223391	0.0217619	
+282	-9e-08	0.00594491	0.00579391	0.00564291	0.00797291	
+283	-9e-08	0.0166589	0.00566791	0.00574791	0.00825191	
+284	-9e-08	0.00485691	0.00208291	0.00225091	0.00499491	
+285	-9e-08	0.00552791	0.0107039	0.00553191	0.00860491	
+286	-9e-08	0.00565891	0.00512791	0.00570191	0.0189089	
+287	-9e-08	0.00481291	0.00220691	0.00389691	0.00328691	
+288	-9e-08	0.00584491	0.00568991	0.00572691	0.0102449	
+289	-9e-08	0.00551491	0.00580991	0.00588991	0.00825991	
+290	-9e-08	0.00558691	0.00587391	0.0162119	0.0105989	
+291	-1.09e-06	0.00586591	0.00590991	0.00575491	0.00837891	
+292	-9e-08	0.00486891	0.00355591	0.00231691	0.00328291	
+293	-9e-08	0.00496691	0.0149329	0.00744391	0.00341891	
+294	-9e-08	0.0361209	0.0219569	0.00801191	0.00853791	
+295	-9e-08	0.0120839	0.00216591	0.00695091	0.00573191	
+296	-9e-08	0.0156609	0.00262891	0.00241091	0.00342191	
+297	-9e-08	0.00599091	0.00583291	0.00600491	0.00852591	
+298	-9e-08	0.0112669	0.00643691	0.00597691	0.00877191	
+299	-9e-08	0.00646591	0.00236391	0.00254291	0.00334491	
+300	-9e-08	0.0164459	0.00746391	0.00607691	0.00863291	
+301	-9e-08	0.00597091	0.00597391	0.00611191	0.0133369	
+302	-9e-08	0.00598391	0.00620191	0.00601791	0.00877591	
+303	-9e-08	0.0164079	0.00621191	0.00607891	0.00866891	
+304	-9e-08	0.00594991	0.00618291	0.00588491	0.0103199	
+305	-9e-08	0.00777491	0.00650991	0.00605691	0.00884591	
+306	-9e-08	0.0180659	0.00640591	0.00617091	0.00874491	
+307	9.1e-07	0.00585491	0.00624391	0.00637791	0.0101739	
+308	-9e-08	0.00516291	0.00229791	0.00247891	0.00480291	
+309	-9e-08	0.00602491	0.00603391	0.00642791	0.0194179	
+310	-9e-08	0.00541691	0.00232091	0.00247391	0.00370291	
+311	-9e-08	0.00515491	0.00250291	0.00245691	0.00373291	
+312	-9e-08	0.00527791	0.00228291	0.00254391	0.00481291	
+313	-1.09e-06	0.00624391	0.00625191	0.00828291	0.00883991	
+314	-1.09e-06	0.00622391	0.0161269	0.00654491	0.00915591	
+315	-9e-08	0.00528691	0.00231791	0.00261391	0.00363991	
+316	-9e-08	0.00613391	0.00621891	0.00785091	0.00902991	
+317	-9e-08	0.00645191	0.00577191	0.00620491	0.0191139	
+318	-9e-08	0.00795991	0.00615791	0.00648191	0.00914591	
+319	-9e-08	0.00665491	0.00234491	0.00252191	0.00463991	
+320	-9e-08	0.00655491	0.00634891	0.00644891	0.00910791	
+321	-9e-08	0.00537991	0.00261891	0.00261191	0.0139999	
+322	-9e-08	0.00667591	0.00622891	0.00650591	0.00907891	
+323	-9e-08	0.00635991	0.00630391	0.00787891	0.00842591	
+324	-9e-08	0.00625091	0.00651491	0.00657691	0.00933591	
+325	9.1e-07	0.00667191	0.00733091	0.00668491	0.00916991	
+326	-9e-08	0.00651291	0.00803291	0.00750491	0.0272439	
+327	-9e-08	0.0323869	0.0404439	0.0130659	0.0200759	
+328	-9e-08	0.0219779	0.00653491	0.00653891	0.00981491	
+329	-9e-08	0.00554291	0.00248991	0.00268291	0.00504291	
+330	-9e-08	0.00564891	0.00261891	0.00266291	0.00367391	
+331	-9e-08	0.00757191	0.00603991	0.00662291	0.0217709	
+332	-9e-08	0.00655791	0.00695091	0.00656291	0.00974691	
+333	-9e-08	0.00640291	0.00781091	0.00658891	0.00940691	
+334	-9e-08	0.00662391	0.00668491	0.0172629	0.0100439	
+335	-9e-08	0.00582091	0.00267691	0.00283191	0.00398091	
+336	-9e-08	0.00593491	0.00251391	0.00266091	0.00380591	
+337	-9e-08	0.0318819	0.00722391	0.00691591	0.0212369	
+338	-9e-08	0.00648591	0.00807791	0.00679291	0.00993891	
+339	-9e-08	0.00812391	0.00814591	0.00683691	0.0102599	
+340	-9e-08	0.00701391	0.0181459	0.0132359	0.0102759	
+341	-9e-08	0.00659091	0.00679091	0.00664491	0.0106929	
+342	-9e-08	0.00681391	0.00749691	0.00708391	0.0103109	
+343	-9e-08	0.0165539	0.00275791	0.00311291	0.00406291	
+344	-9e-08	0.00585191	0.00270991	0.00271291	0.00387991	
+345	-9e-08	0.00672491	0.00633091	0.00807591	0.00925991	
+346	-9e-08	0.00584591	0.00256291	0.00277691	0.00399291	
+347	-9e-08	0.00682691	0.0178159	0.00724891	0.00987191	
+348	-9e-08	0.00677391	0.00801191	0.00882391	0.0113919	
+349	-9e-08	0.00686691	0.00686191	0.00689891	0.00997291	
+350	-9e-08	0.0173959	0.00730991	0.00695091	0.00995691	
+351	-9e-08	0.00699191	0.00709391	0.00815291	0.0101679	
+352	-9e-08	0.00682991	0.00639491	0.00692591	0.0214979	
+353	-9e-08	0.00796691	0.00731891	0.00698691	0.0111259	
+354	-9e-08	0.00680491	0.00838191	0.0185859	0.0417529	
+355	9.1e-07	0.0405519	0.0150709	0.0140319	0.0239169	
+356	-9e-08	0.00708791	0.00832091	0.00717491	0.0101729	
+357	-9e-08	0.00924091	0.00734491	0.00813491	0.0106329	
+358	-9e-08	0.00718091	0.0177309	0.00716291	0.0104909	
+359	-9e-08	0.00708891	0.00710391	0.00711491	0.0114839	
+360	-9e-08	0.00704191	0.00718691	0.00729791	0.0104399	
+361	-9e-08	0.0175929	0.00758391	0.00724091	0.0102399	
+362	-9e-08	0.00727691	0.00737491	0.00873991	0.0131619	
+363	-9e-08	0.00693191	0.00741591	0.0204889	0.0128379	
+364	-9e-08	0.00713691	0.00724091	0.00734991	0.0119759	
+365	-9e-08	0.00690591	0.00726091	0.00739791	0.0104049	
+366	-9e-08	0.00716791	0.0178589	0.00754591	0.00996291	
+367	-9e-08	0.00730191	0.00749291	0.00860091	0.0103749	
+368	-9e-08	0.00652991	0.00469291	0.00297191	0.00421291	
+369	-9e-08	0.00716591	0.0181049	0.00720791	0.00988191	
+370	-9e-08	0.00737391	0.00752291	0.00721491	0.0121269	
+371	-9e-08	0.00731891	0.00738991	0.00726791	0.0107249	
+372	-9e-08	0.0182959	0.00771891	0.00781391	0.0105539	
+373	-9e-08	0.00743891	0.0125799	0.00725891	0.0108939	
+374	-9e-08	0.00846891	0.00694091	0.0181709	0.0125279	
+375	-9e-08	0.00935791	0.00734491	0.00730991	0.0120019	
+376	-9e-08	0.00578991	0.00235991	0.00282491	0.00364691	
+377	-9e-08	0.00619491	0.00290891	0.00303891	0.00431191	
+378	-9e-08	0.00722691	0.00754791	0.0184849	0.0108759	
+379	-9e-08	0.00732891	0.00755391	0.00779991	0.0121749	
+380	-9e-08	0.0245549	0.0564699	0.0275319	0.0207469	
+381	9.1e-07	0.0213499	0.0181859	0.0147809	0.0154359	
+382	-9e-08	0.00790791	0.00702291	0.00749991	0.0110369	
+383	9.1e-07	0.00741291	0.00752291	0.00770591	0.00987191	
+384	-9e-08	0.00773291	0.0126219	0.00804291	0.0110909	
+385	-9e-08	0.00735691	0.00786191	0.0183489	0.0112449	
+386	-9e-08	0.00879391	0.00701591	0.00794891	0.0244799	
+387	-9e-08	0.00743791	0.00746491	0.0184189	0.0101229	
+388	-9e-08	0.00781891	0.00751591	0.00787991	0.0112519	
+389	9.1e-07	0.00754491	0.00875791	0.00796991	0.0110499	
+390	9.1e-07	0.0183859	0.00778291	0.00964591	0.0110149	
+391	-9e-08	0.00800891	0.00983591	0.00792491	0.0111709	
+392	-9e-08	0.00772991	0.00776891	0.0183569	0.0112819	
+393	-9e-08	0.00803491	0.00773291	0.00795891	0.0123049	
+394	-9e-08	0.0273939	0.00799691	0.0190999	0.0114789	
+395	9.1e-07	0.00766191	0.00776591	0.00958491	0.0126389	
+396	-9e-08	0.00751091	0.00794091	0.00773791	0.0222649	
+397	-9e-08	0.00762791	0.00793891	0.00790591	0.0114399	
+398	-9e-08	0.00767591	0.00926391	0.00808691	0.0232259	
+399	-9e-08	0.0186769	0.0147959	0.0243299	0.0715659	
+400	-9e-08	0.0599239	0.0101019	0.0103709	0.0108789	
+401	-9e-08	0.0133029	0.00636491	0.00945691	0.0104389	
+402	-9e-08	0.00829491	0.00818491	0.0186929	0.0106839	
+403	-9e-08	0.00781291	0.00831591	0.00805591	0.0128709	
+404	-9e-08	0.00788491	0.0106979	0.00807691	0.0238789	
+405	-9e-08	0.00798991	0.00853291	0.00934791	0.0114739	
+406	-9e-08	0.0285349	0.00816291	0.00807391	0.0243889	
+407	-9e-08	0.0216149	0.00322991	0.00365991	0.00593691	
+408	-9e-08	0.00808891	0.00816591	0.00844191	0.0117969	
+409	-9e-08	0.0249259	0.00841191	0.00831591	0.0114619	
+410	-9e-08	0.00916091	0.00833591	0.00824591	0.0135989	
+411	-9e-08	0.00788491	0.0190669	0.00846491	0.0119229	
+412	-9e-08	0.00785591	0.00813291	0.00950591	0.0122189	
+413	-9e-08	0.00807291	0.00951091	0.0193339	0.0134659	
+414	-9e-08	0.0155829	0.00883091	0.00997691	0.0119559	
+415	-9e-08	0.00830591	0.00838191	0.00822691	0.0228719	
+416	-9e-08	0.00819891	0.00849691	0.00858791	0.0119389	
+417	-9e-08	0.00811391	0.00830391	0.00836991	0.0116749	
+418	-9e-08	0.0176849	0.00342891	0.00505791	0.00520791	
+419	-9e-08	0.00828891	0.00859091	0.00848491	0.0135059	
+420	-9e-08	0.0233299	0.0285629	0.0254519	0.0207369	
+421	-9e-08	0.0177149	0.0149819	0.00875191	0.0122319	
+422	-9e-08	0.00833291	0.00824291	0.00979191	0.0121179	
+423	-9e-08	0.00963291	0.00872991	0.00836691	0.0232689	
+424	-9e-08	0.00840291	0.00852491	0.00821491	0.0137169	
+425	-9e-08	0.00817691	0.00873391	0.00850591	0.0226849	
+426	-9e-08	0.00739591	0.00332891	0.00374491	0.00515291	
+427	-9e-08	0.00868891	0.00843191	0.0100649	0.0127549	
+428	-9e-08	0.00841591	0.00860191	0.00861291	0.0244849	
+429	9.1e-07	0.00862991	0.0110759	0.00887191	0.0138189	
+430	-9e-08	0.00862891	0.00866991	0.00857591	0.0228119	
+431	9.1e-07	0.00835091	0.00895191	0.00869291	0.0122139	
+432	-9e-08	0.00892391	0.00336791	0.00361991	0.00537791	
+433	-9e-08	0.00845591	0.00864391	0.0191099	0.0125859	
+434	-9e-08	0.00863891	0.00818591	0.00857491	0.0148229	
+435	-9e-08	0.00945691	0.0206489	0.0198879	0.0130189	
+436	-9e-08	0.00842091	0.00861591	0.0153629	0.0126729	
+437	-9e-08	0.00862291	0.00859691	0.0198469	0.0125269	
+438	-9e-08	0.00864991	0.00873891	0.00869291	0.0125239	
+439	-9e-08	0.00744291	0.00356491	0.00358291	0.00505491	
+440	-9e-08	0.00859591	0.0197429	0.00955791	0.0130869	
+441	-9e-08	0.00872091	0.00887791	0.0103129	0.0482539	
+442	9.1e-07	0.0518739	0.0157469	0.0288329	0.0186749	
+443	-9e-08	0.00883991	0.00874991	0.0145839	0.0130669	
+444	-9e-08	0.00881891	0.00880891	0.0195309	0.0121989	
+445	-9e-08	0.00870991	0.00883291	0.00898191	0.0174959	
+446	-9e-08	0.00910691	0.00884791	0.00912191	0.0246879	
+447	-9e-08	0.00798891	0.00339391	0.00381091	0.00505591	
+448	-9e-08	0.00856291	0.0101559	0.0102129	0.0129679	
+449	-9e-08	0.00898191	0.0203649	0.00915791	0.0145519	
+450	9.1e-07	0.00814091	0.00336591	0.00515191	0.00509791	
+451	9.1e-07	0.00974091	0.00929691	0.00893891	0.0235779	
+452	9.1e-07	0.00776291	0.00391291	0.00371191	0.00525191	
+453	-9e-08	0.00877991	0.00893091	0.0105279	0.0147559	
+454	-9e-08	0.00886491	0.0197209	0.00913091	0.0135929	
+455	-9e-08	0.00866691	0.00898291	0.0104949	0.0131399	
+456	-9e-08	0.00918791	0.00910191	0.0198699	0.0119389	
+457	-9e-08	0.00943091	0.00900391	0.00907291	0.0143539	
+458	-9e-08	0.00900991	0.00356891	0.00396091	0.00509691	
+459	-9e-08	0.0204899	0.00915591	0.00961091	0.0130069	
+460	-9e-08	0.00883191	0.00969791	0.00899791	0.0136179	
+461	-9e-08	0.00903191	0.0198469	0.0101259	0.0137829	
+462	-9e-08	0.00787691	0.00359391	0.00363991	0.00670891	
+463	-9e-08	0.0295729	0.0542679	0.0250389	0.0269369	
+464	-9e-08	0.0247919	0.00940191	0.0103109	0.0156239	
+465	-9e-08	0.00928891	0.0122169	0.0102339	0.0253609	
+466	-9e-08	0.00823091	0.00410291	0.00425191	0.00544691	
+467	-9e-08	0.00923991	0.0107499	0.00917191	0.0132749	
+468	-9e-08	0.00923491	0.0199399	0.00974591	0.0137869	
+469	-9e-08	0.00925691	0.0362899	0.00968891	0.0248679	
+470	9.1e-07	0.00930591	0.00965091	0.00930291	0.0152619	
+471	-9e-08	0.00906991	0.00940091	0.00951191	0.0319289	
+472	-9e-08	0.0110999	0.00952191	0.00936191	0.0149009	
+473	-9e-08	0.00911491	0.00989991	0.00934591	0.0245089	
+474	-9e-08	0.00922791	0.00972391	0.00981491	0.0158249	
+475	-9e-08	0.00914291	0.00937991	0.00961491	0.0244039	
+476	-9e-08	0.00943691	0.00890291	0.0112839	0.0154099	
+477	-9e-08	0.00933591	0.00940291	0.00947591	0.0242319	
+478	-9e-08	0.00934191	0.0123799	0.00951791	0.0152259	
+479	-9e-08	0.00920191	0.00955391	0.00955791	0.0252099	
+480	-9e-08	0.0102239	0.00966991	0.0111049	0.0146579	
+481	-9e-08	0.0521449	0.0443659	0.0192499	0.0255929	
+482	-9e-08	0.00944591	0.00975791	0.00969391	0.0124389	
+483	-9e-08	0.0109209	0.00978891	0.0101239	0.0246529	
+484	-9e-08	0.00974891	0.00973591	0.00957491	0.0139559	
+485	-1.09e-06	0.00932891	0.00360291	0.00391891	0.00597191	
+486	-9e-08	0.00946791	0.00988291	0.0205319	0.0141639	
+487	-9e-08	0.00984891	0.00945591	0.0113499	0.0153889	
+488	-9e-08	0.00829991	0.00530991	0.00391591	0.0173709	
+489	-9e-08	0.0112519	0.00984791	0.00993591	0.0163749	
+490	9.1e-07	0.00847691	0.00379291	0.00423791	0.00576491	
+491	-9e-08	0.00982091	0.0203359	0.00989891	0.0145219	
+492	-9e-08	0.0100279	0.0111689	0.0100279	0.0159929	
+493	-9e-08	0.00952391	0.0218419	0.0101049	0.0144979	
+494	-9e-08	0.0108929	0.0263379	0.0138439	0.0256629	
+495	-9e-08	0.0101969	0.0100559	0.00972591	0.0197199	
+496	-9e-08	0.00972691	0.0100049	0.0223429	0.0150779	
+497	-9e-08	0.00994691	0.0100389	0.0113039	0.0149849	
+498	-9e-08	0.00869991	0.00381791	0.00492491	0.0161949	
+499	-9e-08	0.0107909	0.0103059	0.0103329	0.0159469	
+500	-9e-08	0.0277349	0.0579389	0.0274229	0.0170659	
+501	-9e-08	0.0181839	0.00863991	0.00843991	0.0129579	
+502	-1.09e-06	0.0218169	0.0102699	0.0116739	0.0144049	
+503	-9e-08	0.0100629	0.0103899	0.0100879	0.0324049	
+504	-9e-08	0.0101079	0.0108059	0.0150869	0.0171439	
+505	-9e-08	0.00983191	0.0210869	0.0100279	0.0151789	
+506	-9e-08	0.0101949	0.0116039	0.0103169	0.0144859	
+507	-9e-08	0.0100539	0.0208789	0.0255779	0.0169349	
+508	9.1e-07	0.0101079	0.0103349	0.0100759	0.0258119	
+509	-9e-08	0.00973491	0.0105869	0.0102909	0.0160309	
+510	-9e-08	0.0113459	0.0106629	0.0112469	0.0272579	
+511	9.1e-07	0.0120539	0.0107779	0.0123969	0.0155759	
+512	-9e-08	0.00966991	0.00404991	0.00429591	0.0168629	
+513	-9e-08	0.0107239	0.0112819	0.0107889	0.0187929	
+514	-9e-08	0.0110159	0.0110929	0.0108309	0.0260019	
+515	9.1e-07	0.0104999	0.0100919	0.0103499	0.0166219	
+516	-9e-08	0.0100939	0.0114199	0.0225939	0.0170959	
+517	-9e-08	0.0106379	0.0105469	0.0374089	0.0827059	
+518	9.1e-07	0.0169109	0.0212439	0.0108329	0.0153529	
+519	-9e-08	0.0103269	0.0117299	0.0105129	0.0163939	
+520	-9e-08	0.0228129	0.0102549	0.0105219	0.0149269	
+521	-9e-08	0.0115619	0.0103139	0.0104239	0.0157549	
+522	-9e-08	0.0209309	0.0103989	0.0105799	0.0351429	
+523	-9e-08	0.0113439	0.0109719	0.0231519	0.0153309	
+524	-9e-08	0.0104389	0.0117999	0.0121959	0.0151769	
+525	-9e-08	0.0106939	0.0269869	0.0108529	0.0158559	
+526	-9e-08	0.0116749	0.0104329	0.0123699	0.0259299	
+527	-9e-08	0.0106669	0.0108049	0.0113129	0.0165259	
+528	-9e-08	0.0105329	0.0104009	0.0105229	0.0288149	
+529	-9e-08	0.0106459	0.00966591	0.0121119	0.0150519	
+530	-9e-08	0.0103569	0.0110659	0.0234069	0.0140789	
+531	-9e-08	0.0103429	0.0119629	0.0110219	0.0151599	
+532	-9e-08	0.00885891	0.00444491	0.0150429	0.00637691	
+533	-9e-08	0.0107349	0.0108439	0.0111389	0.0336719	
+534	9.1e-07	0.0586629	0.0281009	0.0182809	0.0429379	
+535	-9e-08	0.0148629	0.0111509	0.0108499	0.0152289	
+536	-9e-08	0.0198329	0.00402391	0.00431291	0.00634191	
+537	-9e-08	0.0106769	0.0112029	0.0123159	0.0152589	
+538	-9e-08	0.0105899	0.0215889	0.0109809	0.0162489	
+539	-9e-08	0.0104059	0.0134039	0.0108909	0.0158749	
+540	-9e-08	0.0205329	0.00401791	0.00505791	0.00639791	
+541	-9e-08	0.0104609	0.0111169	0.0244579	0.0157999	
+542	-9e-08	0.0233779	0.0109779	0.0109699	0.0154059	
+543	-1.09e-06	0.0122669	0.0108289	0.0110239	0.0284409	
+544	-9e-08	0.0108459	0.0113139	0.0108599	0.0161809	
+545	-9e-08	0.0109619	0.0114649	0.0246349	0.0165669	
+546	9.1e-07	0.0107299	0.0124339	0.0174379	0.0160469	
+547	-9e-08	0.0105079	0.0217039	0.0106639	0.0159619	
+548	-9e-08	0.0121429	0.0113919	0.0110119	0.0141129	
+549	-9e-08	0.0217839	0.0114789	0.0109939	0.0193539	
+550	-9e-08	0.0487219	0.0524739	0.0251169	0.0271359	
+551	-9e-08	0.0129799	0.0111899	0.0107939	0.0221549	
+552	-9e-08	0.0139779	0.0235649	0.0117929	0.0155089	
+553	-9e-08	0.0190959	0.0132519	0.0110949	0.0273889	
+554	-9e-08	0.0101959	0.00464391	0.00470491	0.00638591	
+555	-9e-08	0.0111149	0.0127609	0.0131299	0.0169579	
+556	-9e-08	0.0243569	0.0116669	0.0114499	0.0175729	
+557	-9e-08	0.0115609	0.0129499	0.0120399	0.0282869	
+558	-9e-08	0.0110269	0.0118179	0.0141959	0.0188089	
+559	-9e-08	0.0125459	0.0212479	0.0114439	0.0161349	
+560	-9e-08	0.0129289	0.0105719	0.0117669	0.0161479	
+561	-9e-08	0.0226059	0.0114019	0.0112569	0.0180489	
+562	-9e-08	0.0110139	0.0111239	0.0111979	0.0270169	
+563	-9e-08	0.0125079	0.00418791	0.00456791	0.00639791	
+564	-9e-08	0.0113709	0.00420291	0.00474391	0.00659891	
+565	-9e-08	0.0108759	0.0222119	0.0130469	0.0180419	
+566	-9e-08	0.0114909	0.0113389	0.0556439	0.0591009	
+567	-9e-08	0.0122149	0.0240959	0.0116859	0.0181519	
+568	-9e-08	0.0127259	0.0114809	0.0118919	0.0270129	
+569	-9e-08	0.0116819	0.0114649	0.0114749	0.0177169	
+570	-9e-08	0.0117679	0.0113819	0.0220289	0.0169859	
+571	-9e-08	0.0112999	0.0112499	0.0133599	0.0250039	
+572	-9e-08	0.0115009	0.0128729	0.0148789	0.0167419	
+573	-9e-08	0.0112539	0.0253599	0.0117159	0.0173049	
+574	-9e-08	0.0112559	0.00610491	0.0109969	0.00707491	
+575	-9e-08	0.0111759	0.0194209	0.0116399	0.0173009	
+576	-9e-08	0.0114749	0.0260139	0.0199219	0.0270339	
+577	-9e-08	0.0113399	0.0134459	0.0130949	0.0168689	
+578	-9e-08	0.0101359	0.00521391	0.0126819	0.00726991	
+579	-9e-08	0.0115079	0.0114799	0.0114209	0.0169589	
+580	-9e-08	0.0238779	0.0198179	0.0301499	0.120443	
+581	-9e-08	0.0545659	0.0261989	0.0235219	0.0170909	
+582	-9e-08	0.0112759	0.0195739	0.0119839	0.0173889	
+583	-9e-08	0.0128249	0.0120699	0.0118519	0.0314399	
+584	-9e-08	0.0122969	0.0117309	0.0144799	0.0208049	
+585	-9e-08	0.0118549	0.0566839	0.0131519	0.0172729	
+586	-9e-08	0.0120909	0.0195659	0.0132019	0.0183079	
+587	-9e-08	0.0126659	0.0106609	0.0136559	0.0154259	
+588	-9e-08	0.0194569	0.0121289	0.0234589	0.0190999	
+589	-9e-08	0.0115189	0.0118199	0.0197269	0.0219889	
+590	-9e-08	0.0218039	0.0123689	0.0130389	0.0252209	
+591	-9e-08	0.0116039	0.0118599	0.0124589	0.0184209	
+592	-9e-08	0.0119659	0.0116759	0.0196469	0.0197939	
+593	9.1e-07	0.0129559	0.0133669	0.0213159	0.0885029	
+594	-9e-08	0.0188369	0.0204519	0.0117259	0.0173859	
+595	-9e-08	0.0115559	0.0173169	0.0121949	0.0174799	
+596	-9e-08	0.0197139	0.0124409	0.0118489	0.0219009	
+597	-9e-08	0.0107349	0.00460091	0.00476791	0.00677391	
+598	-9e-08	0.0193759	0.0121679	0.0137409	0.0191899	
+599	-9e-08	0.0130399	0.0111389	0.0120919	0.0263999	
+600	-1.09e-06	0.0122699	0.0125099	0.0137779	0.0178119	
+601	-1.09e-06	0.0118229	0.0196799	0.0120789	0.0182419	
+602	-9e-08	0.0117929	0.0160169	0.0122769	0.0245729	
+603	-9e-08	0.0124159	0.0126259	0.0119129	0.0186339	
+604	-9e-08	0.0105639	0.00492991	0.00519591	0.00845591	
+605	9.1e-07	0.0183609	0.00588691	0.00499191	0.00756391	
+606	-9e-08	0.0118679	0.0255119	0.0123309	0.0254629	
+607	-9e-08	0.0122249	0.0124549	0.0134419	0.0178519	
+608	-9e-08	0.0128469	0.0120199	0.0235229	0.0189199	
+609	-9e-08	0.0119279	0.00513991	0.00699691	0.00754591	
+610	-9e-08	0.0506519	0.0546749	0.0189269	0.0263849	
+611	-9e-08	0.0123489	0.0127109	0.0122439	0.0191099	
+612	-1.09e-06	0.0120619	0.0198649	0.0127769	0.0180279	
+613	-9e-08	0.0119449	0.0136869	0.0123089	0.0175629	
+614	-9e-08	0.0202059	0.0126569	0.0121539	0.0369699	
+615	-9e-08	0.0129649	0.0211809	0.0126239	0.0191829	
+616	-9e-08	0.0148299	0.0117509	0.0132709	0.0319519	
+617	-9e-08	0.0124899	0.0123179	0.0125329	0.0197589	
+618	-9e-08	0.0143339	0.0204599	0.0128869	0.0173889	
+619	-9e-08	0.0126379	0.0142099	0.0125169	0.0250869	
+620	-9e-08	0.0122669	0.0122929	0.0126629	0.0190889	
+621	-9e-08	0.0125159	0.0125299	0.0198339	0.0189359	
+622	-9e-08	0.0120729	0.0125219	0.0137619	0.0180249	
+623	-9e-08	0.0213039	0.0139069	0.0144089	0.0182049	
+624	-9e-08	0.0139829	0.0778159	0.0320199	0.0287729	
+625	-9e-08	0.0121569	0.0116319	0.0119709	0.00780991	
+626	-9e-08	0.0107549	0.0108629	0.0125939	0.0156319	
+627	-9e-08	0.0136949	0.0145159	0.0130879	0.0258179	
+628	-9e-08	0.0108409	0.00474791	0.00502491	0.00709891	
+629	-9e-08	0.0125609	0.00624391	0.00521991	0.00724691	
+630	-9e-08	0.0123739	0.0213579	0.0130059	0.0187069	
+631	-9e-08	0.0152869	0.0128359	0.0131079	0.0257939	
+632	9.1e-07	0.0134559	0.0124229	0.0165179	0.0184239	
+633	-9e-08	0.0107009	0.00477691	0.0128799	0.00768991	
+634	-9e-08	0.0151279	0.0126269	0.0155519	0.0184649	
+635	-9e-08	0.0111389	0.0196499	0.0130379	0.00766491	
+636	-9e-08	0.0126949	0.0141069	0.0133049	0.0189649	
+637	-9e-08	0.0203109	0.0131559	0.0129279	0.0253119	
+638	-9e-08	0.0133989	0.0127629	0.0203229	0.0188049	
+639	-9e-08	0.0127879	0.00479691	0.00510791	0.00929491	
+640	-9e-08	0.0131899	0.0127119	0.0203399	0.0212469	
+641	-9e-08	0.0132219	0.0156459	0.0302969	0.0814019	
+642	-9e-08	0.0163089	0.0206929	0.0134769	0.0185899	
+643	-9e-08	0.0184189	0.0145849	0.0129709	0.0276979	
+644	-9e-08	0.0113889	0.00487091	0.00524091	0.00735791	
+645	-9e-08	0.0265719	0.00506391	0.00608391	0.00749391	
+646	-9e-08	0.0202139	0.0133429	0.0128749	0.0203429	
+647	-9e-08	0.0151039	0.0134399	0.0232299	0.0193489	
+648	-9e-08	0.0126339	0.0148709	0.0131359	0.0202919	
+649	-9e-08	0.0202639	0.0148889	0.0136299	0.0203899	
+650	-9e-08	0.0147879	0.0133719	0.0205739	0.0183679	
+651	-9e-08	0.0109819	0.00631691	0.00640891	0.0273509	
+652	-9e-08	0.0227889	0.0134889	0.0136159	0.0199629	
+653	-9e-08	0.0127669	0.0134379	0.0128689	0.0258039	
+654	-9e-08	0.0131199	0.0146999	0.0141709	0.0216079	
+655	-9e-08	0.0204549	0.0139929	0.0136019	0.0203389	
+656	-9e-08	0.0194439	0.0808169	0.0290689	0.0401629	
+657	-9e-08	0.0131089	0.0136469	0.0148669	0.0191009	
+658	-9e-08	0.0195919	0.00493891	0.00567591	0.00785891	
+659	-9e-08	0.0134909	0.0138689	0.0131229	0.0478629	
+660	-9e-08	0.0137959	0.0147509	0.0316079	0.0283719	
+661	-9e-08	0.0118979	0.0202309	0.00553891	0.00799291	
+662	-9e-08	0.0148039	0.0134979	0.0152289	0.0330989	
+663	-9e-08	0.0127279	0.0146609	0.0134009	0.0197109	
+664	-9e-08	0.0207549	0.00542291	0.0129989	0.00807191	
+665	-9e-08	0.0132779	0.0165429	0.0140409	0.0280459	
+666	-9e-08	0.0137269	0.0132429	0.0170759	0.0193189	
+667	-9e-08	0.0130129	0.0224649	0.0136789	0.0198079	
+668	-9e-08	0.0158459	0.0134139	0.0135539	0.0285269	
+669	-9e-08	0.0146579	0.0137959	0.0448969	0.0683899	
+670	-9e-08	0.0299819	0.0432549	0.0155499	0.0207629	
+671	-9e-08	0.0225559	0.0124479	0.0135159	0.0210959	
+672	-9e-08	0.0131339	0.0137619	0.0217269	0.0199619	
+673	-9e-08	0.0132399	0.0148739	0.0155669	0.0203919	
+674	-9e-08	0.0244199	0.0124159	0.0127629	0.0227839	
+675	-9e-08	0.0137899	0.0137729	0.0212139	0.0201639	
+676	-9e-08	0.0139699	0.0147999	0.0153259	0.0270879	
+677	-9e-08	0.0131029	0.0158009	0.0152489	0.0198829	
+678	-9e-08	0.0134279	0.0227949	0.0148679	0.0196669	
+679	-9e-08	0.0168519	0.00545491	0.00538791	0.00797891	
+680	-9e-08	0.0137219	0.0220409	0.0144289	0.0219349	
+681	-9e-08	0.0119239	0.00531891	0.00595091	0.00828591	
+682	-9e-08	0.0226229	0.0161069	0.0149989	0.0232349	
+683	-9e-08	0.0806679	0.0323179	0.0150879	0.0284319	
+684	9.1e-07	0.0157639	0.0204739	0.0155579	0.0284239	
+685	-9e-08	0.0131899	0.0142399	0.0141629	0.0249369	
+686	-9e-08	0.0139489	0.0214269	0.0148359	0.0197639	
+687	-9e-08	0.0153649	0.0140999	0.0141849	0.0278569	
+688	-9e-08	0.0139079	0.0136329	0.0152309	0.0199629	
+689	-9e-08	0.0138389	0.0128639	0.00571391	0.00939291	
+690	-9e-08	0.0135619	0.0140689	0.0150729	0.0218299	
+691	-9e-08	0.0204349	0.00513991	0.00546591	0.00841391	
+692	-9e-08	0.0135329	0.0151989	0.0261009	0.0276739	
+693	-9e-08	0.0141969	0.0140989	0.0278189	0.0201919	
+694	-9e-08	0.0210869	0.0141499	0.0144689	0.0215049	
+695	-9e-08	0.0123989	0.00583091	0.00605291	0.0155629	
+696	-9e-08	0.0145359	0.0149899	0.0148629	0.0341649	
+697	-9e-08	0.0725459	0.0334649	0.0222369	0.0236389	
+698	-9e-08	0.0139899	0.0156789	0.0160859	0.0280849	
+699	9.1e-07	0.0139899	0.0139219	0.0156009	0.0208849	
+700	-9e-08	0.0141519	0.0217029	0.0144609	0.0203819	
+701	-9e-08	0.0338579	0.0244919	0.0146229	0.0203369	
+702	-9e-08	0.0161289	0.0139849	0.0147549	0.0334049	
+703	-9e-08	0.0142449	0.0145459	0.0169679	0.0222289	
+704	-9e-08	0.0218469	0.0148359	0.0140079	0.0219739	
+705	-9e-08	0.0136889	0.0145199	0.0221129	0.0207859	
+706	-9e-08	0.0138189	0.0155469	0.0142419	0.0287039	
+707	-9e-08	0.0140329	0.0180069	0.0153309	0.0217529	
+708	-9e-08	0.0217509	0.0152459	0.0145579	0.0220599	
+709	-9e-08	0.0488699	0.0563829	0.0254029	0.0284199	
+710	-9e-08	0.0142629	0.0147369	0.0158929	0.0207639	
+711	-9e-08	0.0231969	0.0146029	0.0151319	0.0217919	
+712	-9e-08	0.0141069	0.0145519	0.0236979	0.0221389	
+713	-9e-08	0.0268099	0.0144149	0.0145729	0.0292689	
+714	-9e-08	0.0142929	0.0162699	0.0141349	0.0214919	
+715	-1.09e-06	0.0218099	0.0147819	0.0146219	0.0220599	
+716	-9e-08	0.0147089	0.0145549	0.0220069	0.0209169	
+717	-9e-08	0.0165309	0.0350339	0.0237989	0.0238629	
+718	-9e-08	0.0198799	0.00528191	0.00609291	0.00831591	
+719	-9e-08	0.0140159	0.0219579	0.0150069	0.0224669	
+720	-9e-08	0.0142569	0.0258449	0.0281879	0.121926	
+721	-9e-08	0.0706759	0.0468399	0.0154819	0.0286029	
+722	-9e-08	0.0139619	0.0147299	0.0197409	0.0241269	
+723	-9e-08	0.0219149	0.0143469	0.0149169	0.0231829	
+724	-9e-08	0.0170339	0.0161749	0.0486329	0.0228709	
+725	-9e-08	0.0142779	0.0137159	0.0223849	0.0215129	
+726	-9e-08	0.0142159	0.0161409	0.0166159	0.0319099	
+727	-9e-08	0.0144759	0.0143519	0.0162109	0.0212769	
+728	-9e-08	0.0201609	0.00568291	0.00612191	0.00830891	
+729	-9e-08	0.0224059	0.0164349	0.0146369	0.0284509	
+730	-9e-08	0.0152399	0.0161899	0.0161229	0.0217509	
+731	-9e-08	0.0143979	0.0223019	0.0167009	0.0226639	
+732	-9e-08	0.0343689	0.0248959	0.0380529	0.0205699	
+733	9.1e-07	0.0146309	0.0130609	0.00590391	0.00849591	
+734	-9e-08	0.0150559	0.0160649	0.0154749	0.0213349	
+735	-9e-08	0.0200739	0.00608191	0.00596891	0.00868291	
+736	-9e-08	0.0159489	0.0165299	0.0162519	0.0327969	
+737	-9e-08	0.0128529	0.00570791	0.00597891	0.00847291	
+738	-9e-08	0.0392649	0.00552391	0.0135719	0.00882491	
+739	-9e-08	0.0146049	0.0149669	0.0164749	0.0226509	
+740	-9e-08	0.0284709	0.0152389	0.0147099	0.0234239	
+741	-9e-08	0.0159319	0.0237459	0.0151439	0.0219479	
+742	-9e-08	0.0163259	0.0152729	0.0150759	0.0296169	
+743	-9e-08	0.0154779	0.0180479	0.0149549	0.0286359	
+744	-9e-08	0.0148419	0.00649891	0.00693491	0.00911591	
+745	-9e-08	0.0151349	0.00615091	0.0151779	0.00911591	
+746	-9e-08	0.0231039	0.0167359	0.0153809	0.0599529	
+747	9.1e-07	0.0628189	0.0198729	0.0225249	0.0208019	
+748	-9e-08	0.0161379	0.0179809	0.0159159	0.0265909	
+749	-9e-08	0.0149419	0.0138309	0.0158089	0.0240349	
+750	-9e-08	0.0127869	0.0131319	0.00606891	0.00881891	
+751	-9e-08	0.0144389	0.00503291	0.00673291	0.00866791	
+752	-9e-08	0.0165779	0.0174889	0.0167529	0.0302209	
+753	9.1e-07	0.0155649	0.0159569	0.0163959	0.0221619	
+754	-9e-08	0.0161729	0.0225419	0.0177359	0.0245869	
+755	-9e-08	0.0169949	0.0137629	0.0229459	0.0223389	
+756	-9e-08	0.0147679	0.0170339	0.0153949	0.0300959	
+757	-9e-08	0.0156679	0.0149559	0.0204889	0.0229499	
+758	-9e-08	0.0240719	0.0175019	0.0163789	0.0274939	
+759	-9e-08	0.0162129	0.0264049	0.0173659	0.0262759	
+760	-9e-08	0.0860109	0.0338439	0.0229939	0.0223869	
+761	-9e-08	0.0151599	0.0125959	0.00680491	0.00951091	
+762	-9e-08	0.0310519	0.0173729	0.0167929	0.0307029	
+763	-9e-08	0.0143899	0.00768391	0.00697891	0.0109969	
+764	-9e-08	0.0159879	0.0171119	0.0158039	0.0316829	
+765	-9e-08	0.0155089	0.0158529	0.0210449	0.0246529	
+766	-9e-08	0.0231379	0.0157279	0.0159229	0.0931659	
+767	-9e-08	0.0487679	0.0573999	0.0430369	0.0456269	
+768	9.1e-07	0.0159779	0.0172659	0.0158629	0.0307139	
+769	-9e-08	0.0159419	0.0159809	0.0175699	0.0883929	
+770	-9e-08	0.0384149	0.0163749	0.0155289	0.0286629	
+771	-9e-08	0.0152869	0.0249589	0.0160499	0.0244719	
+772	-9e-08	0.0157009	0.0153569	0.0228449	0.0230019	
+773	9.1e-07	0.0155909	0.0735739	0.0561989	0.0909719	
+774	-9e-08	0.0410419	0.0394749	0.0460849	0.0252119	
+775	-9e-08	0.0165879	0.0195439	0.0168009	0.0331919	
+776	-9e-08	0.0167849	0.0162959	0.0173589	0.0232159	
+777	-9e-08	0.0231279	0.0181249	0.0170139	0.0816029	
+778	9.1e-07	0.0530629	0.0141519	0.0153769	0.0436019	
+779	-9e-08	0.0781769	0.0896369	0.0883139	0.0864359	
+780	-9e-08	0.0569159	0.0401759	0.0573179	0.0551949	
+781	-9e-08	0.0389589	0.0463369	0.0339319	0.0573149	
+782	9.1e-07	0.0298779	0.0141859	0.0486749	0.0630079	
+783	-9e-08	0.0561809	0.0409709	0.0545239	0.0536509	
+784	-9e-08	0.0563599	0.0176129	0.0184879	0.0353259	
+785	-9e-08	0.0162619	0.0157449	0.0180899	0.0229869	
+786	-9e-08	0.0230979	0.0164649	0.0159869	0.0260799	
+787	-9e-08	0.0197369	0.0231959	0.0163329	0.0245979	
+788	-9e-08	0.0158259	0.0178749	0.0231499	0.0235169	
+789	-9e-08	0.0169619	0.0169609	0.0159659	0.0298549	
+790	-9e-08	0.0141869	0.00608591	0.00732391	0.0112779	
+791	-9e-08	0.0178459	0.0158619	0.0253469	0.0237989	
+792	-9e-08	0.0193469	0.0807029	0.0385479	0.0426949	
+793	-9e-08	0.0157019	0.0178169	0.0165609	0.0325539	
+794	-9e-08	0.0159119	0.00596091	0.00703591	0.00918691	
+795	-9e-08	0.0173309	0.0162879	0.0239859	0.0248459	
+796	-9e-08	0.0141589	0.0342129	0.00726691	0.0164689	
+797	-9e-08	0.0165159	0.0161659	0.0185789	0.0299529	
+798	-9e-08	0.0230659	0.0163459	0.0159709	0.0259769	
+799	-9e-08	0.0145009	0.00595791	0.0135539	0.00922191	
+800	-9e-08	0.0159919	0.0161169	0.0180559	0.0235439	
+801	-9e-08	0.0229079	0.0170699	0.0178579	0.0270789	
+802	-9e-08	0.0156159	0.0170699	0.0163689	0.0248309	
+803	-9e-08	0.0160889	0.0161459	0.0249029	0.0252199	
+804	-9e-08	0.0178389	0.0834409	0.0366279	0.0320409	
+805	-9e-08	0.0161469	0.0160989	0.0189999	0.0252569	
+806	-9e-08	0.0232059	0.0156789	0.0169739	0.0251429	
+807	-9e-08	0.0176559	0.0249139	0.0169899	0.0255489	
+808	-9e-08	0.0177329	0.0420169	0.0388059	0.0615969	
+809	9.1e-07	0.0544289	0.0604489	0.0379999	0.0607079	
+810	-9e-08	0.0416489	0.0112859	0.0217359	0.0396429	
+811	-9e-08	0.0454929	0.0351109	0.0552299	0.131752	
+812	-9e-08	0.0637429	0.0437599	0.0482329	0.0583789	
+813	-9e-08	0.0372339	0.0477389	0.0413229	0.0561189	
+814	-9e-08	0.0347789	0.0335639	0.0422069	0.0801039	
+815	-9e-08	0.0347419	0.0343689	0.0306879	0.0103229	
+816	-9e-08	0.0163479	0.0184919	0.0360629	0.0754919	
+817	-9e-08	0.112552	0.0516039	0.0229389	0.0241169	
+818	-9e-08	0.0243449	0.0169249	0.0201739	0.0268359	
+819	-9e-08	0.0235389	0.0173309	0.0167489	0.0439239	
+820	-9e-08	0.0295009	0.0337219	0.0188159	0.0432559	
+821	-9e-08	0.0166009	0.0166069	0.0178889	0.0270589	
+822	-9e-08	0.0248879	0.0167569	0.0166989	0.0291919	
+823	-9e-08	0.0247759	0.0167689	0.0251509	0.0372059	
+824	-9e-08	0.0247239	0.0168629	0.0167319	0.0262969	
+825	-9e-08	0.0163249	0.0301509	0.0173969	0.0297279	
+826	-9e-08	0.0972659	0.0273269	0.0269229	0.0241169	
+827	-9e-08	0.0177989	0.0173199	0.0265879	0.0254809	
+828	-9e-08	0.0164139	0.0183239	0.0169869	0.0345229	
+829	-9e-08	0.0163599	0.0184129	0.0173139	0.0349349	
+830	-9e-08	0.0170549	0.0170539	0.0184849	0.0247479	
+831	-1.09e-06	0.0259169	0.0168669	0.0169779	0.0278479	
+832	-9e-08	0.0195599	0.0263469	0.0170649	0.0264929	
+833	-9e-08	0.0167919	0.0256449	0.0168879	0.0337309	
+834	-9e-08	0.0186439	0.0267999	0.0174209	0.0242379	
+835	-9e-08	0.0183949	0.0171799	0.0272829	0.0255959	
+836	-9e-08	0.0187209	0.0582309	0.0645259	0.0363079	
+837	-9e-08	0.0165649	0.0228819	0.0176289	0.0347159	
+838	-9e-08	0.0167219	0.0172769	0.0235589	0.0248089	
+839	-9e-08	0.0261709	0.0169639	0.0204519	0.0281519	
+840	-9e-08	0.0284489	0.0169849	0.0192569	0.0247869	
+841	-9e-08	0.0265739	0.0173889	0.0173889	0.0259319	
+842	-9e-08	0.0188969	0.0270159	0.0177999	0.0263579	
+843	-9e-08	0.0194849	0.0285279	0.0179009	0.0250269	
+844	-9e-08	0.0296209	0.0273769	0.0171249	0.0250089	
+845	-9e-08	0.0171109	0.0172409	0.0284579	0.0246609	
+846	9.1e-07	0.0185479	0.0904019	0.0303109	0.0347599	
+847	-9e-08	0.0174599	0.0210619	0.0193089	0.0362839	
+848	-9e-08	0.0173959	0.0194099	0.0169079	0.0344929	
+849	-9e-08	0.0153399	0.00638491	0.00742591	0.0100539	
+850	-9e-08	0.0340229	0.00681591	0.0174519	0.0112419	
+851	-9e-08	0.0181249	0.0209739	0.0243129	0.0360949	
+852	-9e-08	0.0178089	0.0195009	0.0181289	0.0364429	
+853	9.1e-07	0.0168419	0.0169479	0.0189959	0.0254929	
+854	-9e-08	0.0275129	0.0197189	0.0225039	0.0265379	
+855	-9e-08	0.0277459	0.0202699	0.0198469	0.0265879	
+856	-9e-08	0.0272889	0.0182939	0.0174599	0.0968179	
+857	-9e-08	0.0383879	0.0277699	0.0194489	0.0261729	
+858	-9e-08	0.0162749	0.00671891	0.00762791	0.0198809	
+859	-9e-08	0.0175229	0.0170399	0.0190639	0.0251009	
+860	-9e-08	0.0260599	0.00651191	0.00797891	0.00974491	
+861	-9e-08	0.0190849	0.0179709	0.0295829	0.0253899	
+862	-9e-08	0.0195099	0.0177169	0.0196909	0.0354699	
+863	-9e-08	0.0167379	0.0192499	0.0199039	0.0351459	
+864	-9e-08	0.0169039	0.0187179	0.0339689	0.0253749	
+865	9.1e-07	0.0246619	0.0192979	0.0274009	0.0254529	
+866	-9e-08	0.0188439	0.0179139	0.0175219	0.0366319	
+867	-9e-08	0.0167799	0.00666291	0.00913891	0.0486309	
+868	9.1e-07	0.0663449	0.0284109	0.0184259	0.0252069	
+869	-9e-08	0.0181539	0.0173559	0.0281279	0.0241959	
+870	-9e-08	0.0265469	0.0200679	0.0276119	0.0254329	
+871	-9e-08	0.0299569	0.0288209	0.0330959	0.0279539	
+872	-9e-08	0.0189899	0.0290849	0.0193869	0.0347579	
+873	-9e-08	0.0174669	0.0276269	0.0181079	0.0273169	
+874	-9e-08	0.0180549	0.0281089	0.0188809	0.0307569	
+875	-9e-08	0.0179659	0.0286199	0.0178279	0.0265969	
+876	-9e-08	0.0150859	0.0241359	0.0185739	0.0276619	
+877	-9e-08	0.0176119	0.0187199	0.0312099	0.0254669	
+878	-9e-08	0.0368359	0.0847879	0.0324599	0.0518109	
+879	-9e-08	0.0191329	0.0293379	0.0178329	0.0263849	
+880	-9e-08	0.0191899	0.0178359	0.0292259	0.0261169	
+881	-9e-08	0.0385529	0.0302059	0.0185729	0.0272079	
+882	-9e-08	0.0240309	0.0287089	0.0183429	0.0271799	
+883	-9e-08	0.0207559	0.0305399	0.0179809	0.0270939	
+884	-9e-08	0.0183939	0.0177209	0.0281239	0.0260509	
+885	-9e-08	0.0196919	0.0183779	0.0280629	0.0256659	
+886	-9e-08	0.0199829	0.0180219	0.0292719	0.0285069	
+887	-9e-08	0.0200219	0.0875489	0.0388629	0.0370229	
+888	-9e-08	0.0167109	0.0289629	0.00804791	0.0354049	
+889	-9e-08	0.0177509	0.0207249	0.0183889	0.0367319	
+890	-9e-08	0.0157909	0.00719791	0.00711991	0.0102459	
+891	-9e-08	0.0212429	0.0209609	0.0291069	0.0261589	
+892	-9e-08	0.0201229	0.0179819	0.0282029	0.0259549	
+893	-9e-08	0.0203529	0.0184509	0.0288829	0.0264609	
+894	-9e-08	0.0191659	0.0183789	0.0284509	0.0267289	
+895	-9e-08	0.0249859	0.0185519	0.0280679	0.0284929	
+896	-9e-08	0.0194819	0.0198629	0.0183239	0.0379989	
+897	9.1e-07	0.0168469	0.00884791	0.0236439	0.0613579	
+898	-9e-08	0.0439919	0.0285069	0.0182529	0.0344979	
+899	-9e-08	0.0192579	0.0282349	0.0181389	0.0325199	
+900	-9e-08	0.0161769	0.00690991	0.0283809	0.0103869	
+901	-9e-08	0.0199499	0.0198529	0.0186009	0.0407909	
+902	-9e-08	0.0195079	0.0185639	0.0181969	0.0371049	
+903	9.1e-07	0.0178769	0.0203129	0.0205059	0.0384159	
+904	-9e-08	0.0192369	0.0195249	0.0183099	0.0344399	
+905	-9e-08	0.0182879	0.0204039	0.0188289	0.0370149	
+906	-9e-08	0.0217369	0.0207839	0.0184979	0.0383819	
+907	-9e-08	0.0163909	0.00683791	0.00737791	0.0121459	
+908	-9e-08	0.0950909	0.0354639	0.0486009	0.0315189	
+909	-9e-08	0.0280099	0.0190579	0.0204189	0.0301579	
+910	-9e-08	0.0183139	0.0287079	0.0191999	0.0616929	
+911	-9e-08	0.0196739	0.00688891	0.00803791	0.0104239	
+912	-9e-08	0.0186369	0.0194329	0.0444929	0.0280759	
+913	-9e-08	0.0196849	0.0292339	0.0185939	0.0300149	
+914	-9e-08	0.0486859	0.00702491	0.00833091	0.0107749	
+915	-9e-08	0.0198509	0.00715591	0.00891591	0.0105349	
+916	-9e-08	0.0279929	0.0190519	0.0187299	0.0407679	
+917	-9e-08	0.0466949	0.140678	0.0613729	0.0439939	
+918	-9e-08	0.0303169	0.0190399	0.0191569	0.0296399	
+919	-9e-08	0.0287949	0.0191489	0.0203829	0.0292539	
+920	-9e-08	0.0322689	0.0378049	0.0189179	0.0373079	
+921	-9e-08	0.0185859	0.0183049	0.0206539	0.0389099	
+922	-9e-08	0.0301959	0.0289599	0.0194009	0.0480879	
+923	-9e-08	0.0251889	0.0188109	0.0292969	0.0273809	
+924	-9e-08	0.0198639	0.0191069	0.0283989	0.0297619	
+925	-9e-08	0.0200179	0.0934989	0.0365469	0.0380349	
+926	-9e-08	0.0180429	0.0251619	0.0195219	0.0388839	
+927	-9e-08	0.0352609	0.0205779	0.0294669	0.0281409	
+928	-9e-08	0.0219169	0.0191539	0.0283829	0.0278969	
+929	-9e-08	0.0207359	0.0188699	0.0287769	0.0283459	
+930	-9e-08	0.0207599	0.0190329	0.0306109	0.0297119	
+931	-9e-08	0.0188889	0.00721791	0.00894491	0.0107289	
+932	-9e-08	0.0297119	0.0188989	0.0227819	0.0277979	
+933	-9e-08	0.0294469	0.0190439	0.0205909	0.0287599	
+934	-9e-08	0.0298449	0.0206579	0.0207879	0.121033	
+935	-9e-08	0.0492669	0.0237469	0.0193779	0.0360209	
+936	-9e-08	0.0191379	0.0211089	0.0189439	0.0396199	
+937	-9e-08	0.0186269	0.0407669	0.0312939	0.0276339	
+938	-9e-08	0.0214499	0.0198709	0.0373649	0.0278939	
+939	-9e-08	0.0207289	0.0218689	0.0298829	0.0277699	
+940	-9e-08	0.0216069	0.0190489	0.0309869	0.0293889	
+941	-9e-08	0.0210589	0.0191339	0.0292929	0.0283239	
+942	-9e-08	0.0187749	0.00703591	0.00779291	0.0109259	
+943	-9e-08	0.0306819	0.0190339	0.0208979	0.115702	
+944	-9e-08	0.0399779	0.0213069	0.0335119	0.0411049	
+945	-9e-08	0.0169729	0.00725591	0.00974691	0.0110769	
+946	-9e-08	0.0193189	0.0297229	0.0196349	0.0292919	
+947	9.1e-07	0.0203279	0.0305819	0.0193089	0.0315229	
+948	-9e-08	0.0184499	0.0310909	0.0212279	0.0294269	
+949	-9e-08	0.0185729	0.0298599	0.0214489	0.0309029	
+950	-9e-08	0.0293919	0.0211389	0.0211979	0.0333029	
+951	-9e-08	0.0294709	0.0225839	0.0212639	0.0281079	
+952	-9e-08	0.0305859	0.0198579	0.0209109	0.114035	
+953	-9e-08	0.0362389	0.00725891	0.00887791	0.0112729	
+954	-9e-08	0.0251489	0.0201879	0.0295039	0.0300109	
+955	-9e-08	0.0269729	0.0196739	0.0305179	0.0282089	
+956	9.1e-07	0.0204929	0.00735191	0.00808591	0.0241339	
+957	-9e-08	0.0202449	0.0210449	0.0201329	0.0387749	
+958	-9e-08	0.0196689	0.0221139	0.0236019	0.0419769	
+959	-9e-08	0.0214549	0.00981791	0.0305069	0.0344559	
+960	-9e-08	0.0209179	0.0232619	0.0408239	0.0310479	
+961	-9e-08	0.0241309	0.0242799	0.0339009	0.0323759	
+962	-9e-08	0.0697229	0.0520419	0.0549839	0.124798	
+963	-9e-08	0.0569259	0.0763259	0.0435449	0.0479939	
+964	-9e-08	0.0196199	0.0219639	0.0201279	0.0390259	
+965	-9e-08	0.0194459	0.0230279	0.0231499	0.0485159	
+966	-9e-08	0.0231379	0.0204439	0.0317939	0.0297119	
+967	-9e-08	0.0219539	0.0198209	0.0304839	0.0300879	
+968	-9e-08	0.0216699	0.103444	0.0482699	0.0290899	
+969	-9e-08	0.0224089	0.0211479	0.0942179	0.107441	
+970	-9e-08	0.0444649	0.0284669	0.0310039	0.0303709	
+971	-9e-08	0.0204389	0.00958091	0.00866991	0.0220249	
+972	-9e-08	0.0181619	0.00725091	0.00809291	0.0126619	
+973	-9e-08	0.0184219	0.00784091	0.00873391	0.0222359	
+974	9.1e-07	0.0215739	0.0254809	0.0207109	0.0421259	
+975	-9e-08	0.0194909	0.0230269	0.0333619	0.0308099	
+976	-9e-08	0.0232779	0.0482129	0.0483509	0.0259829	
+977	-9e-08	0.0301219	0.0208069	0.0263289	0.0295149	
+978	-9e-08	0.0307069	0.0202839	0.0274649	0.0414069	
+979	9.1e-07	0.0205049	0.0234599	0.0239609	0.0431169	
+980	-9e-08	0.0223259	0.0239159	0.0202479	0.0320579	
+981	-9e-08	0.0211809	0.0207429	0.0304249	0.121255	
+982	-9e-08	0.0764269	0.0698799	0.0581879	0.122854	
+983	-9e-08	0.0302719	0.0329529	0.0197769	0.0306179	
+984	-9e-08	0.0326659	0.0193909	0.0969399	0.0984389	
+985	-9e-08	0.0812409	0.0684449	0.0663409	0.0615329	
+986	-9e-08	0.0200089	0.0233989	0.0223379	0.0402789	
+987	-9e-08	0.0222959	0.0208069	0.0204979	0.0432559	
+988	-9e-08	0.0214509	0.0629249	0.0743389	0.0475729	
+989	-9e-08	0.0222009	0.0205539	0.0306729	0.0289119	
+990	-9e-08	0.0223009	0.0782309	0.0912939	0.106031	
+991	-9e-08	0.0596899	0.0228129	0.0223639	0.0718819	
+992	-9e-08	0.0238799	0.0265369	0.0212429	0.0399039	
+993	-9e-08	0.0232169	0.0367369	0.0836459	0.17944	
+994	9.1e-07	0.0540959	0.0220379	0.0282469	0.0554379	
+995	-9e-08	0.0218809	0.0265109	0.0233799	0.0684009	
+996	-9e-08	0.0215259	0.0315019	0.0206429	0.0311399	
+997	-9e-08	0.0242299	0.102092	0.0708829	0.104226	
+998	-9e-08	0.0613669	0.0459699	0.0633079	0.142698	
+999	-9e-08	0.0610889	0.0329199	0.0207509	0.0309079	
+1000	-9e-08	0.0367599	0.00755091	0.00928691	0.0227419	
+1001	-9e-08	0.0320349	0.0206109	0.0612749	0.0759149	
+1002	-9e-08	0.0206809	0.0226829	0.0275859	0.0460189	
+1003	-9e-08	0.0255059	0.0296689	0.0416859	0.0390329	
+1004	-9e-08	0.0340719	0.0232699	0.0289119	0.0439989	
+1005	-9e-08	0.0208159	0.0200529	0.0219949	0.0425179	
+1006	-9e-08	0.0228079	0.0242339	0.120046	0.0556119	
+1007	-9e-08	0.0199819	0.00830791	0.00898091	0.0226149	
+1008	-9e-08	0.0186909	0.00758291	0.00893991	0.0116919	
+1009	-9e-08	0.0593449	0.0646649	0.0451619	0.0629249	
+1010	-9e-08	0.0369979	0.0485769	0.0426029	0.0653479	
+1011	-9e-08	0.0410979	0.0568509	0.0559469	0.0912189	
+1012	-9e-08	0.0643529	0.0599139	0.0327589	0.0316429	
+1013	9.1e-07	0.0480049	0.0273579	0.0305389	0.0366959	
+1014	9.1e-07	0.0205069	0.0293929	0.0296429	0.0323049	
+1015	-9e-08	0.0298719	0.0213759	0.0233179	0.0304469	
+1016	-9e-08	0.0322829	0.0230289	0.0398119	0.0463949	
+1017	-9e-08	0.0327609	0.0239779	0.0200219	0.0130629	
+1018	-9e-08	0.0230269	0.0232239	0.0223469	0.0427269	
+1019	9.1e-07	0.0205499	0.0101759	0.0101899	0.0140699	
+1020	9.1e-07	0.0432839	0.0283579	0.116362	0.0473149	
+1021	-9e-08	0.0389419	0.0246719	0.0356439	0.0355829	
+1022	-9e-08	0.0559299	0.0612619	0.0435529	0.0861209	
+1023	-9e-08	0.0485659	0.0450999	0.0217569	0.0640539	
+1024	-9e-08	0.0239079	0.0217309	0.0240339	0.0316599	
+1025	9.1e-07	0.0223279	0.0252669	0.0237399	0.0417949	
+1026	-9e-08	0.0217619	0.0473829	0.0896739	0.0403759	
+1027	-9e-08	0.0187209	0.00923691	0.00938491	0.0122539	
+1028	-9e-08	0.0294729	0.0211679	0.0208479	0.0351719	
+1029	-9e-08	0.0315449	0.0210299	0.0250419	0.125336	
+1030	-9e-08	0.0390839	0.00771391	0.0107859	0.0138129	
+1031	-9e-08	0.0314349	0.0216949	0.0335499	0.0324569	
+1032	-9e-08	0.0209749	0.0230989	0.0271519	0.0389809	
+1033	-9e-08	0.0212259	0.0227369	0.0402109	0.0414239	
+1034	9.1e-07	0.0244069	0.0666869	0.0644709	0.0657419	
+1035	-9e-08	0.0233559	0.0299939	0.0209859	0.0360459	
+1036	9.1e-07	0.0209959	0.0299419	0.0214419	0.0327509	
+1037	9.1e-07	0.0483659	0.0431459	0.0674259	0.0560219	
+1038	-9e-08	0.0211999	0.0223509	0.0234289	0.0395949	
+1039	-9e-08	0.0215529	0.0314549	0.0222229	0.0402609	
+1040	-9e-08	0.0213589	0.0256729	0.0249829	0.0429459	
+1041	-9e-08	0.0500759	0.10296	0.0349459	0.0377729	
+1042	-9e-08	0.0224699	0.0298719	0.0233299	0.0349619	
+1043	-9e-08	0.0315809	0.00939991	0.0124839	0.0130949	
+1044	-9e-08	0.0677509	0.00933191	0.0103979	0.0139019	
+1045	-9e-08	0.0240249	0.0373359	0.0245629	0.0848579	
+1046	-9e-08	0.0580939	0.0360859	0.0234139	0.0350449	
+1047	-9e-08	0.0296609	0.0101139	0.0104229	0.0132459	
+1048	-9e-08	0.0343709	0.0355169	0.0299289	0.0815259	
+1049	-9e-08	0.0672549	0.0493979	0.0438899	0.0699769	
+1050	-9e-08	0.0429379	0.0167959	0.0188179	0.0265049	
+1051	9.1e-07	0.0404219	0.0484759	0.0442429	0.0665879	
+1052	-9e-08	0.0457089	0.0456249	0.0507359	0.0649659	
+1053	9.1e-07	0.0501249	0.0607119	0.100218	0.124489	
+1054	-9e-08	0.0873279	0.0843449	0.0625569	0.0930559	
+1055	-9e-08	0.0541439	0.0230179	0.0272699	0.0283369	
+1056	9.1e-07	0.0900529	0.0631879	0.0575719	0.114753	
+1057	9.1e-07	0.179429	0.0868439	0.0462939	0.102404	
+1058	-9e-08	0.0718699	0.0577289	0.0517939	0.0685019	
+1059	-9e-08	0.0749859	0.0705379	0.0560359	0.0739789	
+1060	-9e-08	0.0567419	0.120958	0.0639179	0.0671689	
+1061	-9e-08	0.0473169	0.0534709	0.0501169	0.0647459	
+1062	-9e-08	0.0471469	0.0444049	0.0468969	0.0731789	
+1063	-9e-08	0.0547269	0.0520509	0.0448639	0.0662819	
+1064	-9e-08	0.0463509	0.0477879	0.12383	0.0967969	
+1065	-9e-08	0.0500619	0.0616439	0.0819989	0.0843709	
+1066	-9e-08	0.0516499	0.0474419	0.0472739	0.0741659	
+1067	-9e-08	0.0489699	0.0494709	0.0472509	0.0733659	
+1068	-9e-08	0.0486989	0.112878	0.0653619	0.0737679	
+1069	9.1e-07	0.0773719	0.0794579	0.0626769	0.0950539	
+1070	-9e-08	0.0510389	0.0664719	0.0661279	0.0987729	
+1071	-9e-08	0.0666629	0.0565149	0.145761	0.114348	
+1072	-9e-08	0.0541799	0.0863299	0.0708289	0.0736059	
+1073	9.1e-07	0.0647459	0.0551889	0.0890369	0.0887809	
+1074	-9e-08	0.0731389	0.0656039	0.140637	0.0940729	
+1075	-9e-08	0.0478169	0.0604709	0.0486879	0.0713189	
+1076	-9e-08	0.0632199	0.0488749	0.0496059	0.0674449	
+1077	-9e-08	0.0514759	0.0491069	0.0493709	0.0724679	
+1078	-9e-08	0.0542609	0.0555059	0.103358	0.0836899	
+1079	9.1e-07	0.0480699	0.0518719	0.0522949	0.0742649	
+1080	-9e-08	0.0410909	0.0135489	0.0178319	0.0268869	
+1081	-9e-08	0.0642949	0.0439769	0.0226939	0.0344789	
+1082	-9e-08	0.0287189	0.00828991	0.00991891	0.0125219	
+1083	-9e-08	0.0236429	0.0225979	0.0459119	0.0699369	
+1084	9.1e-07	0.0459429	0.122411	0.0532119	0.0538909	
+1085	9.1e-07	0.0222919	0.0229459	0.0350629	0.0417919	
+1086	-9e-08	0.0234889	0.0246149	0.0226669	0.0419749	
+1087	-9e-08	0.0220259	0.0245649	0.0239859	0.0429579	
+1088	-9e-08	0.0239199	0.0226739	0.0320609	0.0337649	
+1089	9.1e-07	0.0222159	0.0319409	0.0229099	0.0401819	
+1090	-9e-08	0.0220079	0.0233039	0.0257449	0.0340329	
+1091	-9e-08	0.0328419	0.0226719	0.0487619	0.101823	
+1092	-9e-08	0.0225669	0.0299509	0.0224329	0.0454999	
+1093	-9e-08	0.0280739	0.0226369	0.0315019	0.0326539	
+1094	9.1e-07	0.0254979	0.0351699	0.0233339	0.0327179	
+1095	-9e-08	0.0226609	0.0333309	0.0227889	0.0358659	
+1096	-9e-08	0.0300709	0.00859191	0.00980291	0.0128529	
+1097	-9e-08	0.0243759	0.0310999	0.0233989	0.0341279	
+1098	-9e-08	0.0213309	0.00892591	0.0186349	0.0140629	
+1099	-9e-08	0.0246109	0.0226889	0.0349369	0.0333239	
+1100	-9e-08	0.113753	0.0561539	0.0385529	0.0329719	
+1101	-9e-08	0.0322349	0.0232359	0.0243729	0.0414359	
+1102	-9e-08	0.0234729	0.0440619	0.0330479	0.0332179	
+1103	-9e-08	0.0303109	0.0308889	0.0229609	0.0343459	
+1104	-9e-08	0.0226649	0.0321629	0.0226409	0.0636209	
+1105	-9e-08	0.0231929	0.0262199	0.0233699	0.0447929	
+1106	-9e-08	0.0243959	0.0350189	0.0569399	0.185567	
+1107	-9e-08	0.0395549	0.0309079	0.0229979	0.0373679	
+1108	9.1e-07	0.0235899	0.0171799	0.00978391	0.0134559	
+1109	-9e-08	0.0239049	0.0252189	0.0709739	0.0330819	
+1110	-9e-08	0.0292179	0.00919491	0.00984191	0.0142259	
+1111	-9e-08	0.0263439	0.0337149	0.0362729	0.0348839	
+1112	-9e-08	0.0314139	0.0307969	0.0291169	0.0408019	
+1113	-9e-08	0.0231039	0.0261859	0.0232759	0.0455919	
+1114	-9e-08	0.0522109	0.116695	0.0272879	0.0394069	
+1115	-9e-08	0.0313349	0.0231979	0.0295719	0.0430639	
+1116	-9e-08	0.0318049	0.0271429	0.0640049	0.0805869	
+1117	-9e-08	0.0636969	0.0498769	0.0235339	0.0376559	
+1118	-9e-08	0.0316629	0.0256569	0.0247179	0.0427009	
+1119	-9e-08	0.0228059	0.0255719	0.0230969	0.0504309	
+1120	-9e-08	0.0751089	0.105547	0.0280689	0.0525219	
+1121	-9e-08	0.0304039	0.0297789	0.0424649	0.0334639	
+1122	-9e-08	0.0457489	0.0774409	0.0858409	0.100285	
+1123	-9e-08	0.0380429	0.0232619	0.0241789	0.0355489	
+1124	-9e-08	0.0307569	0.00923391	0.0106219	0.0143879	
+1125	-9e-08	0.0242139	0.0253409	0.0350759	0.0517929	
+1126	-9e-08	0.0248679	0.0381669	0.0458879	0.119989	
+1127	9.1e-07	0.0943109	0.0341999	0.0242489	0.0494009	
+1128	-9e-08	0.0342759	0.0232649	0.0259499	0.0427459	
+1129	9.1e-07	0.0229929	0.0262069	0.0256439	0.0450499	
+1130	-9e-08	0.0260769	0.0243819	0.0337799	0.0359219	
+1131	-9e-08	0.0239529	0.0332629	0.0235659	0.0356329	
+1132	-9e-08	0.0343189	0.0257269	0.0314609	0.0433709	
+1133	-9e-08	0.0253529	0.0270319	0.0254669	0.0439189	
+1134	-9e-08	0.0286009	0.154017	0.0506769	0.0431459	
+1135	-9e-08	0.0238749	0.0301969	0.0246699	0.0460679	
+1136	9.1e-07	0.0252549	0.00890491	0.0103459	0.0233979	
+1137	-9e-08	0.0241879	0.0257669	0.0248549	0.0431739	
+1138	-9e-08	0.0250849	0.0262619	0.0352719	0.0369839	
+1139	-9e-08	0.0543489	0.0238359	0.0256589	0.0437399	
+1140	-9e-08	0.0238059	0.0260749	0.0260609	0.0454209	
+1141	-9e-08	0.0254079	0.0989759	0.0444319	0.0344239	
+1142	-9e-08	0.0264359	0.0239089	0.0333519	0.0359649	
+1143	9.1e-07	0.0263949	0.0332309	0.0238379	0.0735849	
+1144	-9e-08	0.0262929	0.0316209	0.0330429	0.0359859	
+1145	-9e-08	0.0244199	0.0351719	0.0256159	0.0365619	
+1146	-9e-08	0.0329259	0.0261459	0.0257989	0.0460559	
+1147	-9e-08	0.0249149	0.0260259	0.0343059	0.0364979	
+1148	-9e-08	0.0463839	0.0677789	0.0301629	0.0297699	
+1149	-9e-08	0.0256529	0.0283439	0.0333829	0.0340929	
+1150	-9e-08	0.0234049	0.00890791	0.0104869	0.0226699	
+1151	-9e-08	0.0234399	0.0262809	0.0267029	0.0474339	
+1152	-9e-08	0.0276019	0.0237429	0.0333919	0.0366909	
+1153	-9e-08	0.0271219	0.0356749	0.0242929	0.0401539	
+1154	-9e-08	0.0332479	0.0241309	0.0301999	0.0441219	
+1155	-9e-08	0.0262789	0.0261469	0.0341449	0.0356749	
+1156	-9e-08	0.0620259	0.0781529	0.0444689	0.0422289	
+1157	-9e-08	0.0350339	0.0259199	0.0785999	0.0724959	
+1158	9.1e-07	0.0497339	0.0273129	0.0345789	0.0346419	
+1159	-9e-08	0.0261859	0.0256989	0.0341989	0.0382989	
+1160	-9e-08	0.0263869	0.0332899	0.0279059	0.0355929	
+1161	-9e-08	0.0330079	0.0245209	0.0264709	0.0452099	
+1162	9.1e-07	0.0246869	0.0789859	0.0630649	0.0449639	
+1163	-9e-08	0.0253789	0.0264489	0.0372999	0.0367209	
+1164	-9e-08	0.0240359	0.0338529	0.0259289	0.0667039	
+1165	-9e-08	0.0217569	0.00903091	0.0120309	0.0201159	
+1166	-9e-08	0.0358019	0.0250499	0.0289129	0.0452739	
+1167	-9e-08	0.0251239	0.0262719	0.0342379	0.0555359	
+1168	-9e-08	0.0290929	0.0186819	0.0118789	0.0158329	
+1169	-9e-08	0.0259959	0.0250879	0.0367979	0.0402789	
+1170	-9e-08	0.117237	0.0523499	0.0272279	0.0459669	
+1171	-9e-08	0.0232649	0.00928191	0.0123489	0.0136709	
+1172	-9e-08	0.0331419	0.0239209	0.0266669	0.0442029	
+1173	-9e-08	0.0265309	0.0281419	0.0245719	0.0462869	
+1174	-9e-08	0.0265319	0.0247689	0.0343329	0.0371899	
+1175	-9e-08	0.0551299	0.0263979	0.0340159	0.0444639	
+1176	-9e-08	0.0230909	0.0113779	0.0109199	0.0268059	
+1177	-9e-08	0.0885739	0.137606	0.0471329	0.0479999	
+1178	-9e-08	0.0299899	0.0283969	0.0351679	0.0367899	
+1179	-9e-08	0.0294899	0.0526629	0.0275519	0.0451369	
+1180	-9e-08	0.0218069	0.00923191	0.0129559	0.0157419	
+1181	-9e-08	0.0344109	0.0253929	0.0281459	0.0446509	
+1182	-9e-08	0.0354669	0.0395489	0.0350489	0.0371289	
+1183	-9e-08	0.0248889	0.0385459	0.0279089	0.133314	
+1184	-9e-08	0.0408579	0.0266619	0.0258859	0.0464679	
+1185	-9e-08	0.0257239	0.00949291	0.0105419	0.0139059	
+1186	-9e-08	0.0341239	0.0438949	0.0348319	0.0366299	
+1187	-9e-08	0.0248319	0.0165049	0.0107179	0.0162569	
+1188	9.1e-07	0.0250609	0.0346719	0.0791389	0.0877429	
+1189	-9e-08	0.0321469	0.0361049	0.0135729	0.0142579	
+1190	-9e-08	0.0269169	0.0348559	0.0267039	0.0879889	
+1191	-9e-08	0.0731859	0.0527629	0.0265319	0.0433619	
+1192	-9e-08	0.0272849	0.0261309	0.0333219	0.0419279	
+1193	-9e-08	0.0271639	0.0347209	0.0259849	0.0398819	
+1194	-9e-08	0.0333059	0.0273789	0.0315019	0.0478329	
+1195	-9e-08	0.0304789	0.0267589	0.0329669	0.0437169	
+1196	-9e-08	0.0259379	0.0161969	0.0112859	0.0161959	
+1197	-9e-08	0.0242739	0.00926091	0.0109109	0.0202419	
+1198	-9e-08	0.0272279	0.0281359	0.104307	0.0550659	
+1199	9.1e-07	0.0235349	0.0250829	0.0113099	0.0142499	
+1200	-9e-08	0.0274919	0.0315869	0.0257349	0.0440899	
+1201	-9e-08	0.0275569	0.0258349	0.0321919	0.0387089	
+1202	-9e-08	0.0253409	0.0317409	0.0259809	0.0390939	
+1203	-9e-08	0.0353719	0.0254949	0.0276039	0.0431899	
+1204	-9e-08	0.0249519	0.0302199	0.0343469	0.0391729	
+1205	-9e-08	0.0283549	0.0315179	0.0270749	0.0797419	
+1206	-9e-08	0.0674539	0.0324239	0.0259029	0.0385939	
+1207	-9e-08	0.0338119	0.0265329	0.0282459	0.0989919	
+1208	9.1e-07	0.0767719	0.0908539	0.0704209	0.0783899	
+1209	-9e-08	0.0698799	0.0902209	0.0573039	0.0386229	
+1210	-9e-08	0.114413	0.0244109	0.0129959	0.0143059	
+1211	-9e-08	0.0285549	0.0265499	0.0330929	0.0406459	
+1212	-9e-08	0.104951	0.0942229	0.0682469	0.0459279	
+1213	1.791e-05	0.0265139	0.0257409	0.0402839	0.0429989	
+1214	-9e-08	0.0266669	0.0147109	0.0127149	0.0152829	
+1215	-9e-08	0.0312329	0.0260729	0.0343849	0.0521029	
+1216	-9e-08	0.0699749	0.0919959	0.0278669	0.0428039	
+1217	9.1e-07	0.0319839	0.0265579	0.0316719	0.0436759	
+1218	-9e-08	0.0258009	0.0277879	0.0288679	0.0445799	
+1219	-9e-08	0.0688959	0.107553	0.0717439	0.0439529	
+1220	-9e-08	0.0279629	0.0280159	0.0331209	0.0379119	
+1221	-9e-08	0.0260849	0.0354279	0.0292049	0.128493	
+1222	-9e-08	0.0493979	0.0362359	0.0329049	0.0369069	
+1223	-9e-08	0.0276679	0.0328469	0.0266029	0.0557319	
+1224	9.1e-07	0.0330019	0.0257169	0.0352699	0.0543069	
+1225	-9e-08	0.0344659	0.0521059	0.0323309	0.0478759	
+1226	-9e-08	0.0261009	0.0319149	0.0339029	0.0378149	
+1227	9.1e-07	0.0276279	0.0261059	0.0360589	0.0713309	
+1228	9.1e-07	0.0863059	0.0396509	0.0282429	0.0459129	
+1229	-9e-08	0.0277399	0.0283479	0.0277499	0.0470199	
+1230	9.1e-07	0.0302919	0.0338229	0.0275659	0.0396919	
+1231	-9e-08	0.0330779	0.0272589	0.0282949	0.0458719	
+1232	-9e-08	0.0284679	0.0296369	0.0264559	0.0446339	
+1233	-9e-08	0.0318059	0.0351019	0.0310399	0.0408189	
+1234	-9e-08	0.0325879	0.0282479	0.101056	0.0605879	
+1235	-9e-08	0.0275999	0.0332049	0.0330639	0.0379179	
+1236	-9e-08	0.0312659	0.0324999	0.0282989	0.0405159	
+1237	-9e-08	0.0328519	0.0269319	0.0290479	0.0458529	
+1238	9.1e-07	0.0273559	0.0282749	0.0330019	0.0374069	
+1239	-9e-08	0.0497969	0.0334419	0.0321989	0.0459249	
+1240	-9e-08	0.0238259	0.00972991	0.0126559	0.0148819	
+1241	-9e-08	0.0509219	0.162034	0.0665129	0.0558139	
+1242	-9e-08	0.0261519	0.0318719	0.0331939	0.0393989	
+1243	-9e-08	0.0550949	0.0426239	0.0306299	0.0521929	
+1244	9.1e-07	0.0279039	0.0269489	0.0330949	0.0413049	
+1245	-9e-08	0.0272889	0.0334449	0.0369679	0.0449949	
+1246	-9e-08	0.0286709	0.0405639	0.0340419	0.0412579	
+1247	-9e-08	0.102201	0.0217939	0.0304339	0.0180749	
+1248	9.1e-07	0.0279129	0.0275569	0.0339939	0.0373579	
+1249	-9e-08	0.0273349	0.0357079	0.0303119	0.0460869	
+1250	-9e-08	0.0273489	0.0286329	0.0292759	0.0460069	
+1251	-9e-08	0.0453439	0.0386069	0.0328169	0.0481709	
+1252	-9e-08	0.0279329	0.0268749	0.0333779	0.0399759	
+1253	-9e-08	0.0266659	0.0355439	0.0357409	0.0444989	
+1254	-9e-08	0.0276939	0.0281349	0.0275379	0.0456959	
+1255	-9e-08	0.0617439	0.0860309	0.0337559	0.0446669	
+1256	-9e-08	0.0323819	0.0291969	0.0327679	0.0442059	
+1257	9.1e-07	0.0269599	0.0307839	0.0347179	0.0393479	
+1258	-9e-08	0.0292589	0.0381589	0.0332449	0.0462999	
+1259	-9e-08	0.0400609	0.0327529	0.0280539	0.0387179	
+1260	-9e-08	0.0275419	0.0340869	0.0293729	0.0509059	
+1261	-9e-08	0.0344479	0.0289509	0.108344	0.0731419	
+1262	-9e-08	0.0761099	0.0280259	0.0350269	0.0317199	
+1263	9.1e-07	0.0273299	0.0577319	0.0734049	0.135906	
+1264	-9e-08	0.10592	0.0890369	0.0454919	0.153468	
+1265	-9e-08	0.0826909	0.127069	0.0327069	0.0397409	
+1266	-9e-08	0.0349009	0.0310699	0.0356009	0.0406229	
+1267	-9e-08	0.0286079	0.0341169	0.0275719	0.0399599	
+1268	-9e-08	0.0349929	0.0291929	0.0491589	0.0475399	
+1269	-9e-08	0.0321789	0.0274639	0.109583	0.206222	
+1270	-9e-08	0.106751	0.162209	0.0947529	0.0898459	
+1271	-9e-08	0.0709759	0.0669509	0.0843429	0.0916959	
+1272	-9e-08	0.101891	0.121411	0.0341789	0.0454439	
+1273	-9e-08	0.0272789	0.0294949	0.0338389	0.0406219	
+1274	-9e-08	0.0562089	0.0281379	0.0292869	0.0525929	
+1275	-9e-08	0.0273399	0.0294119	0.0357749	0.0387029	
+1276	-9e-08	0.0303099	0.0338299	0.0292619	0.0391069	
+1277	-9e-08	0.0350929	0.0274949	0.0306329	0.0474459	
+1278	9.1e-07	0.0247139	0.0119639	0.0464549	0.0605729	
+1279	-9e-08	0.0422959	0.0282159	0.0293829	0.0453949	
+1280	-9e-08	0.0266999	0.0295119	0.0340439	0.0395249	
+1281	-9e-08	0.0301979	0.0342679	0.0283409	0.0426139	
+1282	-9e-08	0.0353979	0.0301299	0.0282379	0.0450189	
+1283	-9e-08	0.0287459	0.0281699	0.0364019	0.0580779	
+1284	-9e-08	0.0311619	0.0102979	0.0129699	0.0161509	
+1285	-9e-08	0.0296869	0.0373049	0.0270489	0.123111	
+1286	-9e-08	0.0381959	0.0278139	0.0342939	0.0474929	
+1287	-9e-08	0.0330169	0.0280999	0.0349329	0.0430129	
+1288	-9e-08	0.0348669	0.0300799	0.0292409	0.0484399	
+1289	-9e-08	0.0274169	0.0292959	0.0366249	0.0398039	
+1290	-9e-08	0.0311899	0.0357669	0.0279209	0.0423529	
+1291	-9e-08	0.0357989	0.0308159	0.0298609	0.0443069	
+1292	-9e-08	0.0296489	0.109156	0.0445099	0.0411259	
+1293	-9e-08	0.0277509	0.0350109	0.0283389	0.0423619	
+1294	-9e-08	0.0343649	0.0560849	0.0363359	0.0424079	
+1295	-9e-08	0.0302249	0.0286629	0.0309909	0.0455839	
+1296	-9e-08	0.0284889	0.0522129	0.0367899	0.0441629	
+1297	-9e-08	0.0344189	0.0284619	0.0296629	0.106574	
+1298	-9e-08	0.155798	0.0418579	0.0368399	0.0419839	
+1299	-9e-08	0.0379369	0.0290589	0.0305549	0.0516669	
+1300	-9e-08	0.0460939	0.0286509	0.0350099	0.0408639	
+1301	-9e-08	0.0363559	0.0282269	0.0423899	0.0462279	
+1302	-9e-08	0.0421679	0.0283319	0.0354799	0.0420389	
+1303	-9e-08	0.0364359	0.0324749	0.0613269	0.113459	
+1304	-9e-08	0.0276969	0.0339649	0.0364079	0.0563849	
+1305	-9e-08	0.0353939	0.0290109	0.0301659	0.0498659	
+1306	-9e-08	0.0285329	0.0301449	0.0347739	0.0423029	
+1307	-9e-08	0.0281839	0.0350169	0.0305709	0.0403169	
+1308	-9e-08	0.0383469	0.0318379	0.0288749	0.0407789	
+1309	-9e-08	0.0263929	0.0103649	0.0125759	0.0215139	
+1310	9.1e-07	0.0283999	0.0835869	0.0712029	0.0421259	
+1311	-9e-08	0.0282529	0.0349519	0.0300739	0.0433079	
+1312	-9e-08	0.0359999	0.0484329	0.0364989	0.0418129	
+1313	-9e-08	0.0287769	0.0406329	0.0315269	0.0503709	
+1314	-9e-08	0.0296919	0.0301689	0.0350279	0.0407699	
+1315	-9e-08	0.0289009	0.0349949	0.0292929	0.0414839	
+1316	9.1e-07	0.0369829	0.0300089	0.111201	0.0488699	
+1317	-9e-08	0.0253739	0.0134669	0.0118349	0.0174769	
+1318	-9e-08	0.0426949	0.0299609	0.0287449	0.0496429	
+1319	-9e-08	0.0303289	0.0386719	0.0290179	0.0428179	
+1320	-9e-08	0.0368049	0.0289579	0.0302709	0.0498319	
+1321	-9e-08	0.0297339	0.0284899	0.0383069	0.0474969	
+1322	9.1e-07	0.0424609	0.0437039	0.0314149	0.0432009	
+1323	-9e-08	0.107319	0.0543959	0.0286379	0.0467229	
+1324	-9e-08	0.0371879	0.0344279	0.0281169	0.0499159	
+1325	-9e-08	0.0334399	0.0414929	0.0290639	0.0422739	
+1326	-9e-08	0.0371139	0.0305499	0.0303549	0.0493879	
+1327	-9e-08	0.0506529	0.0385069	0.0321399	0.0514149	
+1328	-9e-08	0.0284969	0.0305319	0.0387099	0.0436579	
+1329	-9e-08	0.114061	0.0492609	0.0290249	0.0438729	
+1330	9.1e-07	0.0288559	0.0311299	0.0413919	0.0404909	
+1331	-9e-08	0.0678139	0.0471369	0.0290059	0.0526139	
+1332	-9e-08	0.0301589	0.0394889	0.0290729	0.0434869	
+1333	9.1e-07	0.0373119	0.0103849	0.0154219	0.0158789	
+1334	-9e-08	0.0382029	0.0288959	0.0304999	0.0499499	
+1335	-9e-08	0.0303059	0.114347	0.0736169	0.0431409	
+1336	-9e-08	0.0403569	0.0312809	0.0289359	0.0498609	
+1337	-9e-08	0.0350119	0.0410479	0.0300589	0.0443069	
+1338	9.1e-07	0.0394189	0.0320279	0.0402909	0.0407689	
+1339	-9e-08	0.0304029	0.0390729	0.0289799	0.0576119	
+1340	-9e-08	0.0283539	0.0105109	0.0138209	0.0157859	
+1341	-9e-08	0.0376299	0.0302779	0.0797039	0.104578	
+1342	-9e-08	0.0428409	0.0104159	0.0221569	0.0161239	
+1343	-9e-08	0.0334509	0.0295679	0.0393829	0.0429879	
+1344	-9e-08	0.0391519	0.0274019	0.0316319	0.0514619	
+1345	-9e-08	0.0310629	0.0294869	0.0382009	0.0432639	
+1346	-9e-08	0.0382439	0.0318039	0.0343479	0.0512409	
+1347	-9e-08	0.0296489	0.0306329	0.0419259	0.0849959	
+1348	-9e-08	0.0837629	0.0565009	0.0287369	0.0516619	
+1349	-9e-08	0.0328159	0.0397549	0.0303439	0.0737589	
+1350	-9e-08	0.0285799	0.0316259	0.0458639	0.0440949	
+1351	-9e-08	0.0412159	0.0295069	0.0309879	0.0515449	
+1352	-9e-08	0.0298309	0.0295949	0.0395089	0.0463759	
+1353	-9e-08	0.0402959	0.0310709	0.102742	0.0860589	
+1354	-9e-08	0.0403239	0.0398109	0.0293959	0.0427879	
+1355	9.1e-07	0.0384489	0.0312879	0.0311949	0.0508089	
+1356	9.1e-07	0.0345619	0.0403979	0.0293869	0.0444609	
+1357	-9e-08	0.0384879	0.0461179	0.0451249	0.0491709	
+1358	-9e-08	0.0391359	0.0300819	0.0315319	0.195892	
+1359	-9e-08	0.0854069	0.0405869	0.0308489	0.0604489	
+1360	-9e-08	0.0299579	0.0339899	0.0408169	0.0626049	
+1361	-9e-08	0.0356669	0.0110199	0.0121899	0.0179819	
+1362	-9e-08	0.0312339	0.0394629	0.0326699	0.0540609	
+1363	-9e-08	0.0393209	0.0313909	0.0421489	0.0459019	
+1364	-9e-08	0.0410919	0.0301899	0.118231	0.0598419	
+1365	-9e-08	0.0314029	0.0302209	0.0508259	0.0641519	
+1366	-9e-08	0.0272769	0.0108279	0.0313959	0.0279169	
+1367	-9e-08	0.0308719	0.0329259	0.0466609	0.0451499	
+1368	-9e-08	0.0290089	0.0394339	0.0318399	0.0552359	
+1369	-9e-08	0.0339829	0.0300639	0.0407289	0.0441809	
+1370	-9e-08	0.0398399	0.0325379	0.10011	0.0991559	
+1371	-9e-08	0.0318619	0.0396019	0.0330589	0.0536049	
+1372	-9e-08	0.0279539	0.0105509	0.0153889	0.0172289	
+1373	-9e-08	0.0408419	0.0318339	0.0309499	0.0520259	
+1374	-9e-08	0.0308769	0.0407119	0.0304849	0.0434419	
+1375	-9e-08	0.0383069	0.0106169	0.0177629	0.0165259	
+1376	-9e-08	0.0291459	0.0114969	0.0154389	0.0169589	
+1377	-9e-08	0.0393559	0.0303179	0.0316079	0.0530229	
+1378	-9e-08	0.0317989	0.117626	0.0423089	0.0497879	
+1379	9.1e-07	0.0387039	0.0319009	0.0356799	0.0543199	
+1380	-9e-08	0.0326359	0.0391189	0.0301839	0.0421469	
+1381	-9e-08	0.0398269	0.0316499	0.0332599	0.0535039	
+1382	9.1e-07	0.0427959	0.0407699	0.0333939	0.0521729	
+1383	9.1e-07	0.0336429	0.0330879	0.0404479	0.0647339	
+1384	-9e-08	0.0956559	0.0199099	0.0129079	0.0169619	
+1385	-9e-08	0.0328869	0.0415329	0.0306489	0.0442499	
+1386	-9e-08	0.0404259	0.0491399	0.0438089	0.0430309	
+1387	9.1e-07	0.0453149	0.0328549	0.0357589	0.0523919	
+1388	-9e-08	0.0710319	0.0329739	0.0339689	0.0528669	
+1389	-9e-08	0.0309009	0.0309999	0.0414039	0.0209429	
+1390	-9e-08	0.116569	0.0439999	0.0304979	0.0452099	
+1391	-9e-08	0.0416429	0.0368689	0.0406619	0.0449649	
+1392	-9e-08	0.0325919	0.0560509	0.0432329	0.0540359	
+1393	-9e-08	0.0333809	0.0403869	0.0440819	0.0545869	
+1394	-9e-08	0.0393379	0.0313969	0.0312719	0.0451209	
+1395	-9e-08	0.0436129	0.0344749	0.122201	0.0547619	
+1396	-9e-08	0.0357479	0.0399959	0.0306719	0.0659369	
+1397	-9e-08	0.0285999	0.0141099	0.0150499	0.0187659	
+1398	-9e-08	0.0408689	0.0330749	0.0415119	0.0466709	
+1399	9.1e-07	0.0333609	0.0405819	0.0328919	0.0535829	
+1400	-9e-08	0.0320199	0.0321929	0.0422989	0.0440669	
+1401	-9e-08	0.0394119	0.0317439	0.120633	0.0676659	
+1402	-9e-08	0.0332469	0.0418499	0.0309119	0.0450809	
+1403	-9e-08	0.0419659	0.0502859	0.0410659	0.0456039	
+1404	-9e-08	0.0458779	0.0309319	0.0348279	0.0541609	
+1405	-9e-08	0.0320459	0.0405889	0.0312259	0.0475429	
+1406	-9e-08	0.0418329	0.0309499	0.0400579	0.0444849	
+1407	-9e-08	0.118242	0.0464269	0.0314819	0.0453109	
+1408	-9e-08	0.0419279	0.0324909	0.0416549	0.0476259	
+1409	-9e-08	0.0326559	0.0424639	0.0329959	0.0540149	
+1410	-9e-08	0.0333119	0.0350069	0.0408569	0.0452809	
+1411	-9e-08	0.0403269	0.0369329	0.0326799	0.0573819	
+1412	-9e-08	0.0308309	0.0415289	0.0708759	0.106118	
+1413	-9e-08	0.0280519	0.0168719	0.0128199	0.0174809	
+1414	-9e-08	0.0406519	0.0361599	0.0413309	0.0462749	
+1415	-9e-08	0.0323469	0.0408789	0.0351319	0.0553959	
+1416	-9e-08	0.0329179	0.0312529	0.0421419	0.0766389	
+1417	-9e-08	0.0280839	0.0143119	0.0130979	0.0167309	
+1418	-9e-08	0.0402549	0.0326659	0.0531999	0.215167	
+1419	-9e-08	0.0509359	0.0408259	0.0333709	0.0592469	
+1420	9.1e-07	0.0317239	0.0628259	0.0501349	0.0593499	
+1421	-9e-08	0.0324089	0.0335259	0.0424529	0.0483749	
+1422	-9e-08	0.0400999	0.0414869	0.0410799	0.0446189	
+1423	-9e-08	0.0325799	0.0444239	0.0335419	0.140993	
+1424	-9e-08	0.0347669	0.0437239	0.0415079	0.0468329	
+1425	-9e-08	0.0425589	0.0315149	0.0343039	0.0605609	
+1426	-9e-08	0.0336059	0.0409759	0.0344739	0.0547409	
+1427	-9e-08	0.0293789	0.0135819	0.0135289	0.0181619	
+1428	-9e-08	0.0415499	0.0385509	0.0402719	0.0462849	
+1429	-9e-08	0.0307269	0.0426399	0.0452169	0.132626	
+1430	-9e-08	0.0315549	0.0380299	0.0428589	0.0490979	
+1431	-9e-08	0.0369289	0.0120299	0.0133329	0.0186769	
+1432	-9e-08	0.0328489	0.0440889	0.0333849	0.0571979	
+1433	-9e-08	0.0323449	0.0435819	0.0322559	0.0437509	
+1434	9.1e-07	0.0446019	0.0334339	0.0413569	0.0426259	
+1435	-9e-08	0.0302969	0.0112819	0.0223199	0.0183809	
+1436	-9e-08	0.0327149	0.126166	0.0428899	0.0466759	
+1437	-9e-08	0.0436889	0.0335749	0.0321189	0.0556689	
+1438	-9e-08	0.0701059	0.0406829	0.0417349	0.0465779	
+1439	-9e-08	0.0315499	0.0436499	0.0351819	0.0546149	
+1440	-9e-08	0.0349219	0.0318689	0.0443489	0.0458229	
+1441	-9e-08	0.0453359	0.0342209	0.123711	0.0565419	
+1442	-9e-08	0.0334069	0.0408549	0.0323289	0.0549209	
+1443	-9e-08	0.0343149	0.0371579	0.0426469	0.0470499	
+1444	-9e-08	0.0402699	0.0321709	0.0360609	0.0539869	
+1445	-9e-08	0.0565189	0.0419039	0.0375159	0.0541939	
+1446	-9e-08	0.0337419	0.0337149	0.0446709	0.1313	
+1447	-9e-08	0.0607659	0.0382459	0.0413489	0.0494909	
+1448	-9e-08	0.0456659	0.0327059	0.0451579	0.0715089	
+1449	-9e-08	0.0285969	0.0203119	0.0139749	0.0174029	
+1450	-9e-08	0.0345109	0.0430729	0.0368999	0.0550559	
+1451	-9e-08	0.0347859	0.0339089	0.0419519	0.0452569	
+1452	-9e-08	0.0432089	0.0359859	0.116477	0.0593429	
+1453	-9e-08	0.0332689	0.0437219	0.0346029	0.0466139	
+1454	-9e-08	0.0410439	0.0533359	0.0531639	0.0479259	
+1455	-9e-08	0.0442389	0.0115369	0.0147789	0.0205429	
+1456	-9e-08	0.0424919	0.0342359	0.0332769	0.0556499	
+1457	-9e-08	0.0337839	0.0417029	0.0365249	0.0567869	
+1458	-9e-08	0.0340559	0.117606	0.0436489	0.0484599	
+1459	-9e-08	0.0462489	0.0327649	0.0339189	0.0556309	
+1460	-9e-08	0.0334009	0.0451039	0.0450689	0.0546519	
+1461	-9e-08	0.0336329	0.0330259	0.0430139	0.0470619	
+1462	9.1e-07	0.0413449	0.0438269	0.0414449	0.0480969	
+1463	-1.09e-06	0.0327459	0.0442569	0.0592369	0.108995	
+1464	-9e-08	0.0314469	0.0377279	0.0444169	0.0510699	
+1465	-9e-08	0.0416379	0.0343039	0.0443319	0.0479249	
+1466	-9e-08	0.0324539	0.0444809	0.0369559	0.0568239	
+1467	-9e-08	0.0336149	0.0326149	0.0337749	0.0513809	
+1468	-9e-08	0.0836869	0.131452	0.0958079	0.135787	
+1469	-9e-08	0.0339459	0.0420799	0.0652729	0.186289	
+1470	-9e-08	0.100734	0.0599379	0.0345649	0.0555089	
+1471	-9e-08	0.0337999	0.0821659	0.183389	0.0734139	
+1472	-9e-08	0.0327829	0.0372269	0.0447929	0.0500409	
+1473	9.1e-07	0.0809939	0.0337269	0.0441889	0.0511079	
+1474	-9e-08	0.0414769	0.0461869	0.0427559	0.0602949	
+1475	-9e-08	0.0409899	0.0347189	0.0447309	0.0647629	
+1476	-9e-08	0.118996	0.0422459	0.0380879	0.0588519	
+1477	9.1e-07	0.0388029	0.0435079	0.0333479	0.0596619	
+1478	9.1e-07	0.0405979	0.0336679	0.0437039	0.0480659	
+1479	-9e-08	0.0411669	0.0370479	0.0332889	0.0606739	
+1480	-9e-08	0.0342189	0.0421389	0.0341239	0.0565809	
+1481	-9e-08	0.0354159	0.123579	0.0439819	0.0498599	
+1482	-9e-08	0.0412309	0.0346169	0.0375989	0.0798149	
+1483	-9e-08	0.0413879	0.0126779	0.0148149	0.0206549	
+1484	-9e-08	0.0446529	0.0437269	0.0369129	0.0691509	
+1485	-9e-08	0.0435519	0.0126469	0.0142089	0.0193769	
+1486	9.1e-07	0.0306949	0.0208949	0.0436969	0.0849539	
+1487	-9e-08	0.174606	0.175266	0.128629	0.128039	
+1488	-9e-08	0.0863049	0.0788529	0.0932839	0.115887	
+1489	-9e-08	0.176065	0.0445589	0.0447539	0.0515959	
+1490	-9e-08	0.0336689	0.0335399	0.0387729	0.0594889	
+1491	9.1e-07	0.0353179	0.0423119	0.0338369	0.0626749	
+1492	-9e-08	0.0322339	0.0659659	0.0340899	0.0679109	
+1493	-9e-08	0.0335819	0.0348039	0.0446379	0.117822	
+1494	-9e-08	0.0814409	0.0359639	0.0429239	0.0476579	
+1495	-9e-08	0.0343329	0.0220449	0.0139549	0.0176789	
+1496	-9e-08	0.0605309	0.0501999	0.0490859	0.0518709	
+1497	9.1e-07	0.0425509	0.0330249	0.0350819	0.0592179	
+1498	-9e-08	0.0370939	0.0430069	0.0333269	0.0574179	
+1499	-9e-08	0.0351019	0.108738	0.0595919	0.0488679	
+1500	9.1e-07	0.0441959	0.0351369	0.0349859	0.0559829	
+1501	-9e-08	0.0332289	0.0408679	0.0301079	0.0423859	
+1502	-9e-08	0.0373669	0.0444819	0.0345919	0.0658009	
+1503	-9e-08	0.0354169	0.0446679	0.0336639	0.0486619	
+1504	-9e-08	0.0430819	0.0521579	0.0434749	0.0462359	
+1505	-9e-08	0.0436299	0.0355039	0.126423	0.0741309	
+1506	-9e-08	0.0436099	0.0344149	0.0395009	0.0584789	
+1507	-9e-08	0.0349949	0.0428879	0.0363559	0.0562979	
+1508	-9e-08	0.0346529	0.0348889	0.0443079	0.0487879	
+1509	-9e-08	0.0418459	0.0376219	0.0349429	0.0595559	
+1510	-9e-08	0.0332769	0.0456309	0.0707749	0.144199	
+1511	9.1e-07	0.0484019	0.0351209	0.0374799	0.13433	
+1512	-9e-08	0.0347599	0.0448359	0.0489669	0.0507039	
+1513	-9e-08	0.0436989	0.0373269	0.0433969	0.0480879	
+1514	-9e-08	0.0432469	0.0487459	0.0456699	0.0518439	
+1515	9.1e-07	0.128537	0.0506479	0.0351179	0.0573159	
+1516	-9e-08	0.0375879	0.0430999	0.0354229	0.0579799	
+1517	-9e-08	0.0331539	0.0369749	0.0462949	0.0495689	
+1518	-9e-08	0.0436249	0.0503939	0.0479129	0.0554359	
+1519	-9e-08	0.0428919	0.0374889	0.0737899	0.253491	
+1520	-9e-08	0.0434189	0.0418059	0.0433639	0.0518489	
+1521	-9e-08	0.0451529	0.0522959	0.0439259	0.0510589	
+1522	-9e-08	0.0442649	0.0336889	0.0359969	0.0659599	
+1523	9.1e-07	0.0349089	0.0437409	0.0357599	0.0636589	
+1524	-9e-08	0.0512809	0.115413	0.0605149	0.0576109	
+1525	-9e-08	0.0351729	0.0344849	0.0445619	0.0797019	
+1526	-9e-08	0.0333589	0.0362769	0.0538899	0.0513859	
+1527	-9e-08	0.0421749	0.0259129	0.0146989	0.0283499	
+1528	-9e-08	0.0329249	0.0378829	0.0437599	0.0497889	
+1529	-9e-08	0.0470269	0.0356249	0.13064	0.0660789	
+1530	-9e-08	0.0359839	0.0442829	0.0364859	0.0608809	
+1531	-9e-08	0.0374819	0.0483479	0.0359569	0.0616889	
+1532	-9e-08	0.0366349	0.0456539	0.0342529	0.0499469	
+1533	-9e-08	0.0401649	0.0141259	0.0199709	0.0187599	
+1534	-9e-08	0.0444459	0.0368789	0.0496519	0.0687929	
+1535	-9e-08	0.103698	0.0516259	0.0465639	0.0601869	
+1536	-9e-08	0.0451719	0.0380999	0.0476779	0.0553019	
+1537	-9e-08	0.0454469	0.0392699	0.0367419	0.0618949	
+1538	9.1e-07	0.0357029	0.0457829	0.0415229	0.0638399	
+1539	-9e-08	0.0465679	0.0450469	0.0875399	0.0839669	
+1540	-9e-08	0.0358469	0.0462889	0.0373239	0.0590329	
+1541	-9e-08	0.0307489	0.0325979	0.0146929	0.0308539	
+1542	-9e-08	0.0351069	0.0135119	0.0143929	0.0354029	
+1543	-9e-08	0.0359129	0.0370679	0.0444249	0.0805279	
+1544	9.1e-07	0.0365349	0.0460269	0.0345479	0.0502049	
+1545	-9e-08	0.0440479	0.0751209	0.0970629	0.0504209	
+1546	-9e-08	0.0346119	0.0443319	0.0395339	0.0597059	
+1547	9.1e-07	0.0342279	0.0132359	0.0237349	0.0338059	
+1548	-9e-08	0.0366609	0.0436279	0.0367479	0.0581129	
+1549	9.1e-07	0.0523549	0.0451279	0.0435999	0.0595369	
+1550	-9e-08	0.0367079	0.0443579	0.0366399	0.16261	
+1551	-9e-08	0.0343359	0.0417599	0.0440739	0.0566299	
+1552	-9e-08	0.0456379	0.0396869	0.0467469	0.0512569	
+1553	-9e-08	0.0524519	0.0382989	0.0491269	0.0504379	
+1554	-9e-08	0.0445589	0.0343349	0.0369389	0.0580069	
+1555	-9e-08	0.0391689	0.0547629	0.106349	0.0924979	
+1556	-9e-08	0.0371019	0.0465599	0.0364549	0.0587329	
+1557	-9e-08	0.0561699	0.0449999	0.0375759	0.0664609	
+1558	9.1e-07	0.0384689	0.0448069	0.0354789	0.0620489	
+1559	-9e-08	0.0364539	0.0371979	0.0446639	0.0545859	
+1560	-9e-08	0.0469969	0.132474	0.0588229	0.0506049	
+1561	-9e-08	0.0450139	0.0416869	0.0456619	0.0530559	
+1562	-9e-08	0.0492319	0.0138809	0.0347639	0.0205709	
+1563	9.1e-07	0.0455599	0.0393559	0.0454119	0.0539579	
+1564	-9e-08	0.0442539	0.0747709	0.145402	0.188165	
+1565	-9e-08	0.0395509	0.0141409	0.0242449	0.0189709	
+1566	-9e-08	0.0403799	0.0449179	0.0369699	0.0624389	
+1567	-9e-08	0.0376469	0.0356149	0.0354769	0.0529029	
+1568	-9e-08	0.0470129	0.0667909	0.0353099	0.232018	
+1569	-9e-08	0.172333	0.30345	0.156276	0.240879	
+1570	-9e-08	0.148686	0.159078	0.234892	0.163015	
+1571	-9e-08	0.0442069	0.0375639	0.0468969	0.0578009	
+1572	-9e-08	0.0474619	0.0920929	0.110289	0.184979	
+1573	-9e-08	0.142229	0.162953	0.149039	0.181597	
+1574	-9e-08	0.0908599	0.131281	0.0614739	0.0513099	
+1575	-9e-08	0.0447069	0.0425369	0.0502559	0.0879939	
+1576	-9e-08	0.0437079	0.0367639	0.0444689	0.0941769	
+1577	9.1e-07	0.174195	0.0961879	0.0410699	0.166518	
+1578	-9e-08	0.0357199	0.0418309	0.0523519	0.145123	
+1579	9.1e-07	0.116834	0.0277359	0.0665379	0.0661859	
+1580	1.91e-06	0.210426	0.182433	0.14235	0.137046	
+1581	-9e-08	0.102563	0.104615	0.0946629	0.128505	
+1582	-9e-08	0.0733409	0.0380029	0.125848	0.0640469	
+1583	-9e-08	0.0368649	0.0428009	0.0373739	0.0576279	
+1584	-9e-08	0.0599869	0.0436619	0.0383279	0.0660969	
+1585	9.1e-07	0.0416529	0.0505009	0.0383149	0.0590919	
+1586	-9e-08	0.0372109	0.0424599	0.0371609	0.0584119	
+1587	-9e-08	0.0363429	0.11512	0.0600609	0.0552259	
+1588	-9e-08	0.0412329	0.0380419	0.0432999	0.0528819	
+1589	-9e-08	0.0440969	0.0363699	0.0385509	0.0573739	
+1590	-9e-08	0.0374439	0.0424199	0.0411979	0.0568269	
+1591	-9e-08	0.0446839	0.0447659	0.0396219	0.0735329	
+1592	9.1e-07	0.0381319	0.128517	0.0449309	0.0635499	
+1593	-9e-08	0.0384499	0.0426009	0.0433949	0.0560549	
+1594	-9e-08	0.0449749	0.0383169	0.0418319	0.0530219	
+1595	-9e-08	0.0439759	0.0363819	0.0383439	0.0571819	
+1596	-9e-08	0.0402759	0.0456029	0.0404959	0.0691639	
+1597	-9e-08	0.104785	0.0653059	0.0418269	0.0538679	
+1598	-9e-08	0.0395399	0.0369169	0.0428409	0.0770869	
+1599	9.1e-07	0.0354939	0.0648329	0.0372819	0.0594529	
+1600	9.1e-07	0.0356349	0.0621559	0.0397089	0.0582989	
+1601	-9e-08	0.0360059	0.0594969	0.186889	0.105417	
+1602	9.1e-07	0.0377509	0.0411119	0.0448729	0.0550449	
+1603	-9e-08	0.0602289	0.0425079	0.0438179	0.0557069	
+1604	-9e-08	0.0403059	0.0272319	0.0147469	0.0652119	
+1605	-9e-08	0.0434819	0.0450099	0.0387219	0.0607339	
+1606	-9e-08	0.0525679	0.0624269	0.0309719	0.0291989	
+1607	-9e-08	0.0437149	0.0430739	0.0369719	0.0630419	
+1608	-9e-08	0.0363239	0.0395459	0.0447819	0.0531289	
+1609	-9e-08	0.0426089	0.0395199	0.0492399	0.0532289	
+1610	-9e-08	0.0420309	0.0409379	0.0362899	0.0573239	
+1611	-9e-08	0.0576309	0.0382639	0.118164	0.0710749	
+1612	-9e-08	0.0388819	0.0450419	0.0385329	0.0608889	
+1613	-9e-08	0.0566829	0.0483119	0.0387349	0.0644529	
+1614	-9e-08	0.0369519	0.0128399	0.0215439	0.0198819	
+1615	-9e-08	0.0372509	0.0428659	0.0369759	0.0610719	
+1616	-9e-08	0.0363069	0.0410729	0.0435229	0.134251	
+1617	-9e-08	0.0616559	0.0379629	0.0437819	0.0604859	
+1618	-9e-08	0.0430959	0.0414919	0.0442889	0.0541939	
+1619	-9e-08	0.0448289	0.0408589	0.0391959	0.0629119	
+1620	-9e-08	0.0360319	0.0458059	0.0456069	0.0601449	
+1621	-9e-08	0.0380079	0.0438369	0.0577999	0.131292	
+1622	-9e-08	0.0419639	0.0430399	0.0375329	0.0632939	
+1623	-9e-08	0.0371629	0.0383059	0.0463699	0.0535869	
+1624	-9e-08	0.0420599	0.0651769	0.0451339	0.0829039	
+1625	-9e-08	0.0386519	0.0493989	0.0398059	0.0580029	
+1626	-9e-08	0.0545669	0.0429269	0.0518969	0.0565599	
+1627	-9e-08	0.0384959	0.127084	0.0498949	0.0559169	
+1628	-9e-08	0.0434809	0.0420799	0.0444959	0.0709009	
+1629	-9e-08	0.0646499	0.0497639	0.0386459	0.0595319	
+1630	-9e-08	0.0380619	0.0399389	0.0455449	0.0572389	
+1631	-9e-08	0.0428429	0.0391939	0.0462539	0.117859	
+1632	9.1e-07	0.0763729	0.0422599	0.0441669	0.0555899	
+1633	-9e-08	0.0459369	0.0405659	0.0407799	0.0736199	
+1634	-9e-08	0.0438249	0.0401549	0.0392919	0.0640309	
+1635	-9e-08	0.0523059	0.0465069	0.116929	0.190077	
+1636	-9e-08	0.0805339	0.0447079	0.0388019	0.0655999	
+1637	-9e-08	0.0400399	0.0961359	0.147183	0.0934279	
+1638	-9e-08	0.0342719	0.0519699	0.0507729	0.0689659	
+1639	9.1e-07	0.0972459	0.137791	0.0441589	0.0564939	
+1640	-9e-08	0.0437069	0.0381729	0.0674449	0.0557019	
+1641	-9e-08	0.0525639	0.0396299	0.0474099	0.0547169	
+1642	-9e-08	0.0438309	0.0408849	0.0387299	0.0642819	
+1643	-9e-08	0.0451429	0.0407309	0.118946	0.167022	
+1644	-9e-08	0.116314	0.0521559	0.0429689	0.0630499	
+1645	9.1e-07	0.0391109	0.0146729	0.0446869	0.0716539	
+1646	-9e-08	0.0526219	0.0485829	0.0441389	0.155481	
+1647	9.1e-07	0.166343	0.0440709	0.0804579	0.250655	
+1648	-9e-08	0.133815	0.104811	0.0827499	0.222511	
+1649	-9e-08	0.102393	0.0908959	0.141138	0.0842529	
+1650	-9e-08	0.0409549	0.0460629	0.0403739	0.0668979	
+1651	-9e-08	0.0412069	0.0445749	0.0393589	0.0646029	
+1652	-9e-08	0.0383589	0.125799	0.0509189	0.0622779	
+1653	-9e-08	0.0392889	0.0406639	0.0448919	0.0578049	
+1654	-9e-08	0.0447449	0.0407339	0.0448259	0.0591339	
+1655	-9e-08	0.0456819	0.0395399	0.0457509	0.0604499	
+1656	-9e-08	0.0439689	0.0401679	0.0438709	0.0559369	
+1657	-9e-08	0.15211	0.0136729	0.0154359	0.0262259	
+1658	-9e-08	0.0453269	0.0493179	0.0462529	0.0550999	
+1659	-9e-08	0.0436499	0.0407789	0.0386129	0.0639539	
+1660	9.1e-07	0.0460909	0.0395549	0.0429409	0.0667249	
+1661	-9e-08	0.0472519	0.0443219	0.0497939	0.100902	
+1662	-9e-08	0.116552	0.0717899	0.147121	0.143553	
+1663	-9e-08	0.0450619	0.0421549	0.0455899	0.0810129	
+1664	-9e-08	0.124317	0.119599	0.142592	0.0611739	
+1665	-9e-08	0.0387509	0.0445779	0.0448799	0.0594959	
+1666	-9e-08	0.0492329	0.0816769	0.0483719	0.0596879	
+1667	9.1e-07	0.0606619	0.0438879	0.0493319	0.0745489	
+1668	-9e-08	0.0441099	0.0541199	0.0455979	0.169838	
+1669	-9e-08	0.0804129	0.101749	0.0848219	0.0981109	
+1670	-9e-08	0.124151	0.0930089	0.0975619	0.131809	
+1671	-9e-08	0.199097	0.0954559	0.133201	0.0872199	
+1672	-9e-08	0.0528299	0.0135789	0.0171349	0.0204549	
+1673	-9e-08	0.0480309	0.0397039	0.0486599	0.0611529	
+1674	-9e-08	0.0507739	0.0405879	0.0500309	0.136866	
+1675	-9e-08	0.0711849	0.0413349	0.0483329	0.0580929	
+1676	-9e-08	0.0472899	0.0443869	0.0507879	0.0553609	
+1677	-9e-08	0.0481559	0.0425639	0.0495719	0.0569279	
+1678	-9e-08	0.0472929	0.0440309	0.0502749	0.0572399	
+1679	-9e-08	0.0468859	0.0148389	0.0361289	0.0974599	
+1680	-9e-08	0.0485829	0.0428469	0.0264859	0.0220529	
+1681	-9e-08	0.0442809	0.0480609	0.0438589	0.0649699	
+1682	-9e-08	0.0397699	0.0473369	0.0411439	0.0646169	
+1683	-9e-08	0.0598909	0.0484819	0.0422069	0.0633399	
+1684	-9e-08	0.0613909	0.211589	0.0667749	0.0648629	
+1685	-9e-08	0.0510019	0.0641779	0.0659879	0.0746599	
+1686	-9e-08	0.0400739	0.0505309	0.0435299	0.0666829	
+1687	-9e-08	0.0492719	0.0617209	0.0402269	0.0675339	
+1688	9.1e-07	0.114401	0.0659489	0.0423749	0.0664849	
+1689	-9e-08	0.0441179	0.0483909	0.0418319	0.0642059	
+1690	-9e-08	0.0420409	0.0528689	0.0416779	0.0631139	
+1691	-9e-08	0.0413599	0.0482349	0.0472569	0.0744389	
+1692	-9e-08	0.0398799	0.0488779	0.11821	0.0703139	
+1693	-9e-08	0.0453879	0.0484749	0.0474319	0.0655339	
+1694	-9e-08	0.0423589	0.0502869	0.0428539	0.0636369	
+1695	-9e-08	0.0459809	0.0589369	0.0545509	0.0572859	
+1696	-9e-08	0.0481819	0.0435619	0.0507729	0.116865	
+1697	9.1e-07	0.0777869	0.0961879	0.0445419	0.117852	
+1698	-9e-08	0.0457109	0.0134639	0.0171909	0.0212789	
+1699	-9e-08	0.0507149	0.0149979	0.0161149	0.0229759	
+1700	-9e-08	0.0385619	0.0407389	0.0482409	0.0589759	
+1701	-9e-08	0.0516789	0.0434479	0.0508179	0.162176	
+1702	-9e-08	0.0383319	0.0154789	0.0158089	0.0298759	
+1703	-9e-08	0.0404679	0.0179729	0.0491089	0.0222959	
+1704	-9e-08	0.0429359	0.0483919	0.0411659	0.0658729	
+1705	-9e-08	0.0477459	0.0497139	0.0729649	0.0617309	
+1706	-9e-08	0.0516299	0.0436859	0.0553469	0.150006	
+1707	-9e-08	0.0506439	0.0462339	0.0503819	0.0782639	
+1708	9.1e-07	0.0397389	0.0436959	0.0665259	0.0697419	
+1709	9.1e-07	0.0551059	0.0506399	0.0408869	0.0711339	
+1710	-9e-08	0.0424579	0.0501829	0.0410519	0.0644499	
+1711	-9e-08	0.134241	0.0506119	0.0466749	0.0639409	
+1712	-9e-08	0.0433759	0.0500119	0.0733989	0.0576549	
+1713	-9e-08	0.0554849	0.0408729	0.0519119	0.0589499	
+1714	-9e-08	0.0475419	0.0414089	0.0523649	0.0579429	
+1715	-9e-08	0.0602579	0.128999	0.0506249	0.0601299	
+1716	-9e-08	0.0478099	0.0411779	0.0494699	0.0593089	
+1717	-9e-08	0.0503389	0.0424179	0.0495149	0.0804119	
+1718	-9e-08	0.0406669	0.0488949	0.0415179	0.0666509	
+1719	-9e-08	0.0445649	0.0508379	0.0423699	0.154306	
+1720	-9e-08	0.0441569	0.0493329	0.0460379	0.0649359	
+1721	-9e-08	0.0432789	0.0570909	0.0427139	0.0673199	
+1722	-9e-08	0.0438049	0.0498999	0.0433439	0.0662699	
+1723	9.1e-07	0.0414099	0.0513379	0.0414739	0.0657939	
+1724	-9e-08	0.152581	0.0395079	0.0418689	0.0669139	
+1725	9.1e-07	0.0497929	0.0410489	0.0711159	0.0573209	
+1726	-9e-08	0.0576229	0.0414739	0.0503439	0.0937789	
+1727	-9e-08	0.0467219	0.0497799	0.0465489	0.251156	
+1728	-9e-08	0.0635589	0.0232559	0.0195939	0.0241329	
+1729	-9e-08	0.0567159	0.0441209	0.0900059	0.0683109	
+1730	-9e-08	0.0413469	0.0508419	0.0542589	0.0947669	
+1731	-9e-08	0.0452299	0.0140949	0.0162849	0.0262409	
+1732	-9e-08	0.0527629	0.0411139	0.141497	0.0610359	
+1733	-9e-08	0.0495249	0.0467599	0.0523669	0.0577039	
+1734	-9e-08	0.0484379	0.0420689	0.0492489	0.0593199	
+1735	-9e-08	0.0513619	0.0410689	0.0492779	0.0622129	
+1736	-9e-08	0.0488199	0.0405529	0.0528919	0.155235	
+1737	-9e-08	0.0523699	0.0401709	0.0501569	0.0778899	
+1738	-9e-08	0.0414609	0.0532969	0.0424039	0.0763429	
+1739	-9e-08	0.0526209	0.0400899	0.0430959	0.0699859	
+1740	-9e-08	0.0541759	0.0416479	0.0528129	0.0987899	
+1741	9.1e-07	0.0938909	0.0149919	0.0169379	0.0255499	
+1742	9.1e-07	0.0499049	0.0435609	0.0507229	0.0578569	
+1743	-9e-08	0.0502909	0.0412329	0.0514359	0.0631349	
+1744	-9e-08	0.0506149	0.0418359	0.0580699	0.0785769	
+1745	-9e-08	0.0511429	0.0510339	0.0431409	0.163661	
+1746	-9e-08	0.0658269	0.159074	0.11112	0.0676609	
+1747	-9e-08	0.0435189	0.0504669	0.0620189	0.0816739	
+1748	-9e-08	0.0522469	0.0441139	0.0533859	0.136833	
+1749	-9e-08	0.0712639	0.0505659	0.0539779	0.0715969	
+1750	-9e-08	0.0662479	0.0811699	0.0590189	0.0643769	
+1751	-9e-08	0.0394269	0.0411119	0.0469989	0.0520269	
+1752	-9e-08	0.0502939	0.0504909	0.0592179	0.0751009	
+1753	9.1e-07	0.0433069	0.0953579	0.165027	0.207099	
+1754	-9e-08	0.128008	0.156638	0.113191	0.15669	
+1755	-9e-08	0.0413989	0.132037	0.0678749	0.0740409	
+1756	-9e-08	0.0688249	0.0160269	0.0179339	0.0307269	
+1757	-9e-08	0.0624219	0.0487499	0.0607239	0.0858119	
+1758	-9e-08	0.0484559	0.0805119	0.0543389	0.0649799	
+1759	-9e-08	0.0547179	0.161902	0.109898	0.144019	
+1760	9.1e-07	0.145269	0.124245	0.0999199	0.121177	
+1761	-9e-08	0.0407439	0.0515249	0.152287	0.0784159	
+1762	-9e-08	0.0607609	0.136044	0.120144	0.108554	
+1763	-9e-08	0.0401809	0.0722819	0.0556449	0.0315709	
+1764	-9e-08	0.0549289	0.214576	0.195867	0.168708	
+1765	-9e-08	0.0599399	0.0469289	0.0563609	0.0591139	
+1766	-9e-08	0.0555969	0.0476249	0.0556999	0.0688919	
+1767	-9e-08	0.0468619	0.149888	0.0697009	0.0686549	
+1768	-9e-08	0.0424079	0.0590319	0.0902009	0.0698869	
+1769	-9e-08	0.0455849	0.0524079	0.0438009	0.0695419	
+1770	-9e-08	0.0486449	0.0515059	0.0448049	0.0707549	
+1771	-9e-08	0.130062	0.0766109	0.0431899	0.0714809	
+1772	-9e-08	0.0544299	0.0449969	0.0516109	0.0593819	
+1773	-1.09e-06	0.0500959	0.0457559	0.0509919	0.0605079	
+1774	-9e-08	0.0514839	0.0476309	0.0518019	0.0738689	
+1775	-9e-08	0.0436029	0.147466	0.0600309	0.0691959	
+1776	9.1e-07	0.0507789	0.0528859	0.0458199	0.0695129	
+1777	-9e-08	0.0502799	0.0448699	0.0502899	0.0617629	
+1778	-9e-08	0.0526669	0.0454689	0.0525379	0.0610179	
+1779	-9e-08	0.0528319	0.127248	0.0604299	0.0615309	
+1780	-9e-08	0.0515709	0.0433199	0.0555559	0.0915949	
+1781	9.1e-07	0.0457809	0.0596829	0.0459429	0.0823369	
+1782	-9e-08	0.0600669	0.0459439	0.0518349	0.0595599	
+1783	-9e-08	0.0528689	0.142355	0.0688609	0.0677019	
+1784	-9e-08	0.0463769	0.0521689	0.0446789	0.0908729	
+1785	-9e-08	0.0518729	0.0446349	0.0549309	0.0727279	
+1786	-9e-08	0.0549509	0.0586179	0.0458189	0.0695709	
+1787	9.1e-07	0.0805969	0.113075	0.0495119	0.0704719	
+1788	9.1e-07	0.0420969	0.0238369	0.0168749	0.0223989	
+1789	-9e-08	0.0575319	0.0422469	0.0439309	0.0706279	
+1790	-9e-08	0.0538779	0.0435099	0.0534399	0.0623529	
+1791	-9e-08	0.0515509	0.0455979	0.0529189	0.171386	
+1792	-9e-08	0.0463699	0.0590569	0.0440509	0.0707719	
+1793	9.1e-07	0.0714169	0.0430939	0.0583319	0.0635159	
+1794	-9e-08	0.0530719	0.0444009	0.0523659	0.0637079	
+1795	-9e-08	0.0514789	0.0469069	0.0530899	0.162033	
+1796	-9e-08	0.0410979	0.0436479	0.0420889	0.0764179	
+1797	-9e-08	0.0453329	0.0529379	0.0440569	0.0699829	
+1798	-9e-08	0.0452049	0.0556569	0.0439929	0.0742079	
+1799	-9e-08	0.0515849	0.0482539	0.0553079	0.163972	
+1800	9.1e-07	0.0629489	0.0593199	0.0478069	0.0679669	
+1801	-9e-08	0.0446189	0.0528419	0.0444369	0.0704169	
+1802	-9e-08	0.0439159	0.0539249	0.0756569	0.0631149	
+1803	-9e-08	0.0510209	0.0531879	0.194271	0.126131	
+1804	-9e-08	0.0428289	0.0554769	0.0643379	0.0907689	
+1805	-9e-08	0.0575529	0.0468639	0.0519619	0.0602319	
+1806	-9e-08	0.0617509	0.0563949	0.0543799	0.0711189	
+1807	-9e-08	0.125467	0.0634729	0.0458959	0.0684099	
+1808	-9e-08	0.0409809	0.0238299	0.0190719	0.0239379	
+1809	-9e-08	0.0514569	0.0445359	0.0522489	0.0619029	
+1810	-9e-08	0.0525359	0.0461629	0.0520609	0.0672409	
+1811	-9e-08	0.0516339	0.0444529	0.0541889	0.172224	
+1812	9.1e-07	0.0486509	0.0513069	0.0486059	0.0781209	
+1813	-9e-08	0.0698249	0.0444859	0.0529099	0.0651379	
+1814	-9e-08	0.0508409	0.0489799	0.0516109	0.0710689	
+1815	-9e-08	0.0462169	0.0553099	0.0471829	0.169132	
+1816	-9e-08	0.0446209	0.0543659	0.0485919	0.0685509	
+1817	9.1e-07	0.0711839	0.0451519	0.0622869	0.0637969	
+1818	-9e-08	0.0521039	0.0440309	0.0544529	0.0700049	
+1819	-9e-08	0.0470129	0.0525499	0.0479339	0.178444	
+1820	-9e-08	0.0444989	0.0523599	0.0450169	0.0723149	
+1821	-9e-08	0.0577039	0.0448859	0.0526569	0.0639689	
+1822	-9e-08	0.0470129	0.0148869	0.0396649	0.0333689	
+1823	-9e-08	0.0512979	0.0523119	0.0457849	0.0705339	
+1824	-9e-08	0.12967	0.0694239	0.0578429	0.0648429	
+1825	-9e-08	0.0520479	0.0450039	0.0682009	0.0711189	
+1826	-9e-08	0.0596949	0.0519279	0.0446879	0.0686139	
+1827	-9e-08	0.0458459	0.0543359	0.0465049	0.0727829	
+1828	-9e-08	0.146608	0.0467049	0.0525059	0.0635849	
+1829	9.1e-07	0.0525069	0.0652239	0.0566719	0.0793229	
+1830	-9e-08	0.0474929	0.0530439	0.0449199	0.0690839	
+1831	-9e-08	0.0453179	0.0526729	0.0579469	0.10036	
+1832	-9e-08	0.105003	0.0170939	0.0187909	0.0241039	
+1833	9.1e-07	0.0523819	0.0453619	0.0538079	0.0793469	
+1834	-9e-08	0.0457459	0.0694429	0.0472179	0.0697989	
+1835	9.1e-07	0.0451719	0.0549669	0.0598669	0.0633479	
+1836	9.1e-07	0.0545109	0.0857389	0.109796	0.0760349	
+1837	-9e-08	0.0489049	0.0553319	0.0488069	0.0743649	
+1838	-9e-08	0.0451939	0.0529109	0.0482259	0.0719859	
+1839	-9e-08	0.0544679	0.0466839	0.0539869	0.0660499	
+1840	-9e-08	0.0555939	0.142136	0.0587559	0.0740709	
+1841	-9e-08	0.0451929	0.0534069	0.0732649	0.0722079	
+1842	-9e-08	0.0618389	0.0451769	0.0539699	0.0909169	
+1843	-9e-08	0.0471539	0.0543909	0.0476239	0.25823	
+1844	-9e-08	0.0611089	0.0453699	0.0574649	0.0644149	
+1845	-9e-08	0.0749179	0.0457689	0.0529749	0.0726359	
+1846	-9e-08	0.0543859	0.0487829	0.0569049	0.0709109	
+1847	-9e-08	0.0526119	0.0472539	0.147788	0.0805429	
+1848	-9e-08	0.0475939	0.0204859	0.0181929	0.0339179	
+1849	-9e-08	0.0469659	0.0547409	0.0465989	0.0741569	
+1850	-9e-08	0.0456339	0.0537119	0.0463889	0.0732119	
+1851	-9e-08	0.0558939	0.0455179	0.0536509	0.136155	
+1852	-9e-08	0.0784809	0.0475029	0.0530659	0.0719009	
+1853	-9e-08	0.0635939	0.0636509	0.0496709	0.0778069	
+1854	-9e-08	0.0543669	0.0466569	0.0537139	0.0748149	
+1855	-9e-08	0.0469959	0.0540369	0.0484019	0.173876	
+1856	9.1e-07	0.0518829	0.0598639	0.0927739	0.0859569	
+1857	9.1e-07	0.0508579	0.0544999	0.0468099	0.0746349	
+1858	-9e-08	0.0554519	0.0507809	0.118481	0.215144	
+1859	9.1e-07	0.17321	0.0776479	0.0582919	0.0607839	
+1860	-9e-08	0.0528079	0.0631209	0.0444799	0.255367	
+1861	1.91e-06	0.248479	0.122217	0.159085	0.188695	
+1862	-9e-08	0.117866	0.112306	0.209317	0.112407	
+1863	-9e-08	0.122064	0.161904	0.152879	0.0740399	
+1864	-9e-08	0.0526309	0.0528489	0.0455909	0.0722549	
+1865	9.1e-07	0.140441	0.0502749	0.0551609	0.0778549	
+1866	-9e-08	0.0461129	0.0546459	0.0473209	0.0800819	
+1867	-9e-08	0.0471149	0.0551159	0.0463909	0.0760039	
+1868	-9e-08	0.0507929	0.0456969	0.0516189	0.145086	
+1869	-9e-08	0.0571899	0.0434069	0.0516719	0.0649009	
+1870	-9e-08	0.0514369	0.0845709	0.0458929	0.0774249	
+1871	-9e-08	0.0549779	0.135747	0.162005	0.239047	
+1872	-9e-08	0.0472189	0.0513689	0.0498629	0.0691349	
+1873	-9e-08	0.0548579	0.0490439	0.0510399	0.226534	
+1874	-9e-08	0.131917	0.245128	0.123246	0.0719429	
+1875	-9e-08	0.14508	0.152144	0.0826369	0.0808139	
+1876	-9e-08	0.0570649	0.0645409	0.0534349	0.0767909	
+1877	-9e-08	0.0457059	0.103604	0.107108	0.207819	
+1878	-9e-08	0.167819	0.0188999	0.0458479	0.0377509	
+1879	-9e-08	0.0551839	0.0484009	0.0558889	0.0672589	
+1880	-9e-08	0.0506369	0.0463139	0.0524779	0.187699	
+1881	-9e-08	0.0541159	0.0530049	0.0481139	0.0683369	
+1882	-9e-08	0.0488749	0.0551289	0.0514509	0.0774149	
+1883	-9e-08	0.0510669	0.0465399	0.0531309	0.0819699	
+1884	-9e-08	0.0475149	0.0519029	0.0747179	0.12849	
+1885	-9e-08	0.0495949	0.0510889	0.0535189	0.0694679	
+1886	-1.09e-06	0.0514289	0.0486779	0.0571079	0.0666539	
+1887	9.1e-07	0.0505459	0.0467829	0.0551609	0.0734009	
+1888	-9e-08	0.0477939	0.0516639	0.10342	0.10841	
+1889	9.1e-07	0.0471339	0.0518819	0.0488879	0.0910809	
+1890	-9e-08	0.0555179	0.0500609	0.0572259	0.0743899	
+1891	-9e-08	0.0665629	0.0546039	0.0482069	0.0731329	
+1892	-9e-08	0.0525609	0.0472769	0.139055	0.0639659	
+1893	-9e-08	0.0489919	0.0426359	0.0556999	0.0623509	
+1894	-9e-08	0.0658489	0.0532849	0.0478589	0.0685979	
+1895	-9e-08	0.0602369	0.0538809	0.0695579	0.0632509	
+1896	-9e-08	0.0523469	0.0840939	0.112047	0.0685239	
+1897	-9e-08	0.0523929	0.0590009	0.0452579	0.0735609	
+1898	-9e-08	0.0463169	0.0506439	0.0498349	0.0701349	
+1899	9.1e-07	0.0546289	0.0457219	0.0531789	0.0659899	
+1900	9.1e-07	0.0527439	0.0801249	0.111412	0.0645969	
+1901	-9e-08	0.0512629	0.0499289	0.0526549	0.213548	
+1902	-9e-08	0.212237	0.218134	0.199126	0.157586	
+1903	-9e-08	0.115153	0.130962	0.133786	0.0799319	
+1904	9.1e-07	0.0626119	0.0549559	0.125896	0.0933099	
+1905	9.1e-07	0.0594119	0.0532439	0.0527639	0.0671149	
+1906	-9e-08	0.0521579	0.0479539	0.0526549	0.0726769	
+1907	9.1e-07	0.0594189	0.0578879	0.0498649	0.0707469	
+1908	-9e-08	0.0941199	0.218341	0.0548809	0.0755069	
+1909	-9e-08	0.0443659	0.109506	0.0562289	0.0731329	
+1910	-9e-08	0.0524129	0.0467529	0.0678049	0.0764709	
+1911	9.1e-07	0.0468069	0.0585489	0.142922	0.152926	
+1912	-9e-08	0.163895	0.146659	0.0516559	0.0710389	
+1913	-9e-08	0.0514039	0.0533839	0.0515429	0.0779349	
+1914	-9e-08	0.0838319	0.106182	0.0539859	0.0693569	
+1915	-9e-08	0.0681159	0.0481379	0.140666	0.308211	
+1916	9.1e-07	0.262371	0.123781	0.121148	0.236415	
+1917	9.1e-07	0.249878	0.205515	0.129474	0.178256	
+1918	9.1e-07	0.138514	0.19414	0.0746089	0.0705899	
+1919	9.1e-07	0.0500599	0.0537699	0.124221	0.103458	
+1920	-9e-08	0.0520979	0.113804	0.222443	0.279118	
+1921	-9e-08	0.132447	0.18578	0.116368	0.171795	
+1922	-9e-08	0.194327	0.131904	0.144699	0.213698	
+1923	9.1e-07	0.0492009	0.0513339	0.0470269	0.0683689	
+1924	-9e-08	0.0630829	0.0511549	0.0524909	0.0760689	
+1925	-9e-08	0.0464989	0.0519729	0.0542299	0.0700939	
+1926	-9e-08	0.0492119	0.0617469	0.149959	0.0714439	
+1927	-9e-08	0.0517089	0.0570259	0.0538029	0.0754759	
+1928	-9e-08	0.0492969	0.0538499	0.0507669	0.0693609	
+1929	-8.99999e-08	0.0545049	0.0459169	0.0585519	0.0683019	
+1930	-9e-08	0.0550579	0.134327	0.0660449	0.0745199	
+1931	-9e-08	0.0475159	0.0560179	0.0757559	0.0751879	
+1932	-9e-08	0.0606069	0.0528299	0.0561399	0.0958999	
+1933	-9e-08	0.0494359	0.0553899	0.0693379	0.280916	
+1934	-9e-08	0.183807	0.213427	0.178469	0.230952	
+1935	9.1e-07	0.33594	0.160369	0.173823	0.0900299	
+1936	-9e-08	0.0522339	0.0894909	0.184723	0.311595	
+1937	-9e-08	0.249371	0.123045	0.130565	0.265227	
+1938	-9e-08	0.154818	0.181174	0.0814959	0.0750769	
+1939	-9e-08	0.0682049	0.0490909	0.0686859	0.169017	
+1940	-9e-08	0.0681589	0.0588439	0.0582259	0.0808449	
+1941	-9e-08	0.130904	0.0721929	0.205132	0.162614	
+1942	9.1e-07	0.217132	0.11382	0.138128	0.198336	
+1943	-9e-08	0.127798	0.0594999	0.0483959	0.0757209	
+1944	-9e-08	0.126374	0.0705429	0.0504419	0.0861819	
+1945	-9e-08	0.0558759	0.0534449	0.0577999	0.134079	
+1946	9.1e-07	0.117048	0.141444	0.169117	0.1354	
+1947	9.1e-07	0.0481929	0.0614469	0.0567039	0.0685989	
+1948	-9e-08	0.0481319	0.0563599	0.0498389	0.0731179	
+1949	-9e-08	0.0478819	0.0560509	0.0526969	0.0756379	
+1950	-9e-08	0.0571909	0.113276	0.0868159	0.0875249	
+1951	9.1e-07	0.0496289	0.0585349	0.0802989	0.0730439	
+1952	9.1e-07	0.0544559	0.0620399	0.0489509	0.0737089	
+1953	-9e-08	0.0481729	0.145155	0.199117	0.336064	
+1954	-9e-08	0.12247	0.140572	0.132638	0.383114	
+1955	9.1e-07	0.255827	0.147761	0.0568659	0.0848289	
+1956	-9e-08	0.0475959	0.193063	0.198532	0.287192	
+1957	-9e-08	0.109971	0.112985	0.118394	0.263351	
+1958	-9e-08	0.134131	0.0565059	0.0520079	0.0794909	
+1959	-9e-08	0.0568189	0.0512359	0.0591309	0.0782279	
+1960	-9e-08	0.0492619	0.0163939	0.0299099	0.0250649	
+1961	-9e-08	0.0493479	0.0593749	0.158367	0.0782729	
+1962	-9e-08	0.0572719	0.0657199	0.0536679	0.0768189	
+1963	-9e-08	0.0613639	0.0511809	0.0560799	0.0715569	
+1964	-9e-08	0.0574349	0.0588089	0.0513879	0.0819609	
+1965	9.1e-07	0.16086	0.0601169	0.102967	0.21181	
+1966	9.1e-07	0.14984	0.112577	0.0594019	0.0701299	
+1967	-9e-08	0.0575319	0.142046	0.0685139	0.0763039	
+1968	-9e-08	0.0533119	0.0577999	0.0512389	0.0946459	
+1969	-9e-08	0.0605339	0.0564849	0.0618589	0.0762129	
+1970	-9e-08	0.0615739	0.0523209	0.0574839	0.182615	
+1971	-9e-08	0.0560359	0.0572999	0.0525929	0.0750429	
+1972	9.1e-07	0.0636229	0.0490649	0.0610159	0.0793529	
+1973	-9e-08	0.0487589	0.0562279	0.0507469	0.0750149	
+1974	9.1e-07	0.0595989	0.0509349	0.157601	0.0678569	
+1975	-8.99999e-08	0.0563989	0.0532419	0.0770919	0.0757939	
+1976	-9e-08	0.0675359	0.0637619	0.0565429	0.0767119	
+1977	-9e-08	0.0549499	0.0600719	0.0596989	0.122345	
+1978	1.91e-06	0.10152	0.0573809	0.0568069	0.0830199	
+1979	-9e-08	0.0505019	0.0592209	0.0513959	0.0789339	
+1980	-9e-08	0.0579399	0.0494339	0.0652489	0.143179	
+1981	-9e-08	0.0661929	0.170993	0.0560909	0.0897919	
+1982	-9e-08	0.0630539	0.0637759	0.0573269	0.0877209	
+1983	-9e-08	0.0629179	0.0887259	0.0608119	0.0966119	
+1984	-9e-08	0.198566	0.133286	0.0585339	0.0992439	
+1985	-9e-08	0.0736479	0.0301869	0.0290469	0.0243559	
+1986	-9e-08	0.0575229	0.0622579	0.0594909	0.0765609	
+1987	9.1e-07	0.0471249	0.0609389	0.0804029	0.21523	
+1988	-9e-08	0.0510179	0.0609299	0.0830259	0.230351	
+1989	-9e-08	0.227579	0.246358	0.148415	0.192499	
+1990	9.1e-07	0.147192	0.128512	0.122726	0.171385	
+1991	-9e-08	0.0849829	0.0585299	0.0508679	0.0916549	
+1992	-9e-08	0.0770389	0.0569629	0.0578169	0.0726799	
+1993	-9e-08	0.0509469	0.0608249	0.0529609	0.0798149	
+1994	-9e-08	0.0575199	0.0893089	0.122764	0.0813359	
+1995	-9e-08	0.0493919	0.0643959	0.0524119	0.0779579	
+1996	-9e-08	0.0559669	0.0521109	0.0576759	0.0996579	
+1997	9.1e-07	0.0543349	0.0578769	0.0606849	0.147072	
+1998	-9e-08	0.0750979	0.0727479	0.0668849	0.0820019	
+1999	-9e-08	0.0732319	0.0503569	0.0609169	0.0751999	
+2000	-9e-08	0.0515199	0.0578849	0.0521759	0.153031	
+2001	-9e-08	0.156466	0.236486	0.0949189	0.0862039	
+endofdata

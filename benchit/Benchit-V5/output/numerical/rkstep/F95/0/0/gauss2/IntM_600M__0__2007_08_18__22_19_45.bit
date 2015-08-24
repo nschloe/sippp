@@ -1,0 +1,2108 @@
+# BenchIT-Resultfile
+#
+# feel free to fill in more architectural information
+#########################################################
+beginofmeasurementinfos
+kernelstring="numerical.rkstep.F95.0.0.gauss2" 
+date="Aug 18 22:19:45 2007"
+numberofprocessorsused=1
+memorysizeused="0"
+comment=
+kerneldescription=
+language="F95"
+compiler="ifort"
+compilerversion=" unknown"
+compilerflags="-free  -O4"
+c_compiler_version="910, build 20061103"
+library1=""
+kernelisparallel=0
+kernelisparallel=0
+is3d=0
+codesequence="z = L*u (factorised)"
+xinmin=2
+xinmax=1001
+y1inmin=8.99e-07
+y1inmax=0.0102249
+y2inmin=3.1899e-05
+y2inmax=0.0491849
+y3inmin=1.7899e-05
+y3inmax=0.0301729
+y4inmin=1.6899e-05
+y4inmax=0.0315769
+y5inmin=-1.01e-07
+y5inmax=0.000164899
+endofmeasurementinfos
+################################################
+beginofarchitecture
+# Architekturangaben
+nodename="N4"
+hostname="localhost" 
+###############################################################################
+#                                                                             #
+#  B e n c h I T - Performance Measurement for Scientific Applications        #
+#                                                                             #
+#  Architectural information about your system, used to compare your system   #
+#  to others. Please fill out the information - your resultfile will not be   #
+#  accepted on the project homepage without this information.                 #
+#                                                                             #
+#  Authors: Guido Juckeland (juckeland@zhr.tu-dresden.de)                     #
+#           Stefan Pflueger (pflueger@zhr.tu-dresden.de)                      #
+#  $Revision: 1.6 $                                                           #
+#  $Date: 2007/07/10 15:06:44 $                                               #
+#                                                                             #
+###############################################################################
+
+#
+# feel free to insert your data
+#
+# quotation marks have to be `escaped'!!!
+#
+# Note: The examples are from very different systems.
+#
+
+
+# Manufacturer of the mainboard, for example: "MSI"
+mainboardmanufacturer=""
+
+# Type of the mainboard without manufacturer's name, for example: "845PE Max3 (800 Edition)"
+mainboardtype=""
+
+# Chipset of the mainboard, for example: "Intel i845PE"
+mainboardchipset=""
+
+# Total number of Processors
+numberofprocessors=
+
+# Name of the processor, for example: "Intel Pentium 4"
+processorname=""
+
+# Codename according to manufacturer roadmap, for example: "Montecito"
+codename=""
+
+# Processor Serial Number, if available
+processorserialnumber=""
+
+# Processor version, for example: "x86, Family 6, Model 5, Stepping 1"
+processorversion=""
+
+# Instruction Set Architecture (ISA) of the processor, for example: "IA-32" or "MIPS"
+processorisaset=""
+
+# Several processors are using exact descriptions of their ISA level, for example: "IV" (for MIPS)
+processorisalevel=""
+
+# Extensions of the ISA with an additional number; extendable
+# for example: 
+# processorisaextension1="MMX"
+# processorisaextension2="SSE"
+# processorisaextension3="SSE2"
+processorisaextension1=""
+processorisaextension2=""
+processorisaextension3=""
+
+# Clock rate of the processor in Hz, for example: 3060000000
+processorclockrate=""
+
+# Instruction length in bit, for example: 32 [for RISC] or 0 [for CISC or variable length]
+instructionlength=""
+
+# Processor word length or Word format or xx-bit architecture in bit, for example: 32 
+processorwordlength=""
+
+# Number of instructions issued to the functional units per clock, for example: 6
+instructionissue=""
+
+# Number of separate integer units, for example: 2
+integerunits=""
+
+# Number of separate floating point units, for example: 3
+floatingpointunits=""
+
+# Number of separate load/store units, for example: 1
+loadstoreunits=""
+
+# Support of multithreading, for example: 1 [0 for no | 1 for yes] [Hyperthreading --> 1]
+multithreading=""
+
+# Number of physical cores per CPU
+numberofcorespercpu=0
+
+# L1 instruction cache size in byte, for example: 12288 
+level1icachesize=""
+
+# L1 data cache size in byte, for example: 8192
+level1dcachesize=""
+
+# L2 cache size in byte, for example: 524288
+level2cachesize=""
+
+
+# L3 cache size in byte, for example:  33554432
+level3cachesize=""
+
+# L1 instruction cache organization, for example: "Execution Trace Cache"
+level1icachetype=""
+
+# L1 data cache organization, for example: "4-way set-associative, write-through, dual ported"
+level1dcachetype=""
+
+# L2 cache organization, for example: "8-way set-associative, cache line size 32 words"
+level2cachetype=""
+
+# L3 cache organization, for example: "8-way set-associative, cache line size 128 words with 4 128-byte sectors"
+level3cachetype=""
+
+# L2 cache location, for example: "on-chip" or "on-board"
+level2cachelocation=""
+
+# Support of prefetching, for example: 1 [0 for no | 1 for yes]
+prefetching=""
+
+# Support of preloading, for example: 1 [0 for no | 1 for yes]
+preloading=""
+
+# Clock rate of the processor side bus in Hz, for example: 133000000 
+processorsidebusclockrate=""
+
+# Clock rate of the backside bus (connection to the on-chip L2-cache) in Hz, for example: 200000000
+backsideclockrate=""
+
+# Structure details of the technology in m, for example: 0.000000130
+technologylevel=""
+
+# Memory chip type, for example: "PC-100 SDRAM" or "RIMM-4200"
+memorychiptype=""
+
+# Memory bus type, for example: "SDRAM bus" or "RAMBUS"
+memorybustype=""
+
+# Clock rate of the memory bus in Hz, for example: 100000000
+memorybusclockrate=""
+
+# Total size of available memory
+memorysize=
+
+# Additionaly comment for your system (e.g. Hyper Threading enabled/disabled)
+ systemcomment=""
+
+endofarchitecture
+####################################################
+beginofenvironmentvariables
+DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-Ko1GotBjVq,guid=b3c66d30a65a6\
+fd4295d20046c73a52"
+BENCHIT_MPIRUN="mpirun"
+BENCHIT_CC_COMPILER_VERSION="910, build 20061103"
+OPTIND="1"
+POSIXLY_CORRECT="y"
+BENCHIT_SHELL_INTERPRETER=""
+BENCHIT_MPIF77_C_FLAGS_OMP=""
+BENCHIT_F77_C_FLAGS_STD="-O2"
+BENCHIT_F95_C_FLAGS_STD="-O2"
+OMP_DYNAMIC="FALSE"
+LESSOPEN="|lesspipe.sh %s"
+BENCHIT_LIB_PVM=""
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_H="1.5 (Fri Jan 19 16:05:11 2007)"
+LANGUAGE="en_US.UTF-8"
+BENCHIT_F90_COMPILER_VERSION=" unknown"
+COLORTERM=""
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_TEMPLATE_C="1.12 (Fri Jul  6 16:14:47\
+2007)"
+BENCHIT_F77_C_FLAGS_OMP=""
+BENCHIT_F95_C_FLAGS_OMP=""
+BENCHIT_F_COMPILERFLAGS="-free  -O4"
+BENCHIT_KERNEL_FILE_VERSION_QUICKVIEW_SH="1.3 (Fri Sep 29 18:35:11 2006)"
+BENCHIT_PARAMETER_FILE="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic\
+1D/Benchit-V5/kernel/numerical/rkstep/F95/0/0/gauss2/PARAMETERS"
+GS_LIB="/home/nico/.fonts"
+BENCHIT_CPP_SCSL=""
+BENCHIT_RUN_QUEUEOPTIONS=""
+LC_TIME="de_DE.UTF-8"
+BENCHIT_KERNELBINARY="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1\
+/Benchit-V5/bin/numerical.rkstep.F95.0.0.gauss2.0"
+BENCHIT_KERNEL_FILE_VERSION_ERROR_H="1.1 (Tue Mar 13 08:22:03 2007)"
+BENCHIT_CXX_C_FLAGS_HIGH="-O3"
+ANT_HOME="/usr/share/ant-core"
+LESS="-R -M --shift 5"
+BENCHIT_LIB_FFTW3=" -lfftw3"
+BENCHIT_LIB_ACML=" -lacml"
+QTDIR="/usr/qt/3"
+BENCHIT_MPICC="icc"
+BENCHIT_RUN_QUEUENAME=""
+KONSOLE_DCOP="DCOPRef(konsole-27600,konsole)"
+BENCHIT_KERNEL_FILE_VERSION_UNAME_MINUS_A="NO REVISION (Mon Jul 18 15:03:19\
+2005)"
+BENCHIT_CPP_ESSL=""
+XDG_DATA_DIRS="/usr/share:/usr/kde/3.5/share:/usr/local/share"
+BENCHIT_KERNEL_FILE_VERSION_BENCHSCRIPT_H="1.1 (Tue May 23 10:13:00 2006)"
+BENCHIT_ARCH_SPEED="600M"
+BENCHIT_JAVA_FLAGS=""
+PWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/tool\
+"
+TERM="xterm"
+BENCHIT_KERNEL_FILE_VERSION_RANDOM="NO REVISION, UNABLE TO READ (Sun Aug 12\
+00:00:02 2007)"
+BENCHIT_KERNEL_START="2"
+BENCHIT_CXX_C_FLAGS=""
+BENCHIT_CC="icc"
+PRELINK_PATH=""
+BENCHIT_KERNEL_STEPS="1000"
+XDG_CONFIG_DIRS="/usr/kde/3.5/etc/xdg"
+JAVACC_HOME="/usr/share/javacc/"
+BENCHIT_F90="ifort"
+BENCHIT_RUN_REDIRECT_CONSOLE="output.txt"
+BASH_VERSION="3.2.17(1)-release"
+BENCHIT_F77_COMPILER_VERSION=" unknown"
+BENCHIT_F95_COMPILER_VERSION=" unknown"
+BENCHIT_MPICC_C_FLAGS_HIGH="-O3"
+BENCHIT_JAVA="java"
+BENCHIT_INTERACTIVE="0"
+BENCHIT_LIB_PTHREAD="-lpthread"
+BENCHIT_RUN_COREDUMPLIMIT="0"
+BENCHIT_INCLUDES="-I.\
+-I/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+INTEL_LICENCE_FILE="/opt/intel/fortran100/licenses"
+COMPILE_GLOBAL="1"
+BENCHIT_CC_C_FLAGS_HIGH="-O3"
+myval=""
+BENCHIT_KERNEL_FILE_VERSION_FILEVERSION="NO REVISION (Sat Aug 18 22:19:29\
+2007)"
+BENCHIT_LIB_BLAS="-lblas"
+BENCHIT_PERL_INTERPRETER=""
+SHLVL="3"
+BENCHIT_KERNEL_FILE_VERSION_BMERGE_SH="NO REVISION (Mon Jul 18 15:03:19 2005)"
+BENCHIT_KERNEL_FILE_VERSION_FEATURES="NO REVISION (Tue Jul 10 13:10:16 2007)"
+CONFIG_PROTECT_MASK="/etc/env.d/java/ /etc/gconf /etc/terminfo\
+/etc/revdep-rebuild /etc/splash"
+DCCC_PATH="/usr/lib/distcc/bin"
+BENCHIT_MPICC_C_FLAGS=""
+BENCHIT_F90_C_FLAGS_HIGH="-O3"
+SHELLOPTS="braceexpand:hashall:interactive-comments:posix"
+BENCHIT_RUN_MAX_MEMORY="0"
+BENCHIT_IGNORE_PARAMETER_FILE="0"
+JAVAC="/home/nico/.gentoo/java-config-2/current-user-vm/bin/javac"
+BENCHIT_PROGRESS_DIR="progress"
+BASH_ARGC="([0]=\"1\" [1]=\"1\")"
+BENCHIT_MPIF77=""
+BENCHIT_CC_C_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_TMP_ENV="NO REVISION (Sat Aug 18 22:19:30 2007)"
+QMAKESPEC="linux-g++"
+BENCHIT_PHP_INTERPRETER=""
+LC_CTYPE="en_US.UTF-8"
+BENCHIT_F77="ifort"
+BENCHIT_F95="ifort"
+BENCHIT_COMPILER="ifort"
+BENCHIT_USE_VAMPIR_TRACE="0"
+BENCHIT_F90_C_FLAGS="-free"
+XDM_MANAGED="/var/run/xdmctl/xdmctl-:0,maysd,mayfn,sched,rsvd,method=classic"
+USER="nico"
+BENCHIT_RUN_TIMELIMIT="600"
+KDE_MULTIHEAD="false"
+OMP_NESTED="FALSE"
+BENCHIT_KERNELBINARY_ARGS=" "
+VMHANDLE="sun-jdk-1.4"
+BENCHIT_KERNEL_INCREMENT="1"
+BENCHIT_MPIF77_C_FLAGS_HIGH=""
+PYTHONPATH="/usr/lib/portage/pym"
+BENCHIT_CPP_PVM=""
+BENCHIT_SHELL_FLAGS=""
+BENCHIT_JAVA_HOME=""
+LOGNAME="nico"
+BENCHIT_KERNEL_FILE_VERSION_CMDLINEPARAMS="1.29 (Tue Jan  3 18:55:28 2006)"
+BENCHIT_KERNEL_FILE_VERSION_LOC_CONVERT_SH="NO REVISION (Wed Jan  4 15:32:49\
+2006)"
+LC_MONETARY="de_DE.UTF-8"
+BENCHIT_CXX_L_FLAGS="-lm"
+BENCHIT_F77_C_FLAGS_HIGH="-O3"
+BENCHIT_F95_C_FLAGS_HIGH="-O4"
+OPTERR="1"
+myvar="BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP"
+BENCHIT_LIB_ATLAS=" -latlas"
+PRELINK_PATH_MASK="/usr/lib/gstreamer-0.10:/usr/lib/gstreamer-0.8:/lib/modules:\
+usr/lib/locale:/usr/lib/wine:/usr/lib/valgrind:*.la:*.png:*.py:*.pl:*.pm:*.sh:*\
+xml:*.xslt:*.a:*.js:/usr/lib/klibc"
+DM_CONTROL="/var/run/xdmctl"
+BENCHIT_KERNEL_FILE_VERSION_ARCHDEFS="NO REVISION (Fri Sep 29 18:35:11 2006)"
+GENERATION="2"
+BENCHIT_KERNEL_FILE_VERSION_COMPILERVERSION="NO REVISION, UNABLE TO READ (Sun\
+Aug 12 00:00:02 2007)"
+BENCHIT_CROSSCOMPILE="0"
+_CMDLINE_VARLIST="BENCHIT_KERNELBINARY BENCHIT_KERNELBINARY_ARGS\
+BENCHIT_CMDLINE_ARG_FILENAME_COMMENT BENCHIT_CMDLINE_ARG_PARAMETER_FILE\
+BENCHIT_CMDLINE_ARG_IGNORE_PARAMETER_FILE BENCHIT_NODENAME BENCHIT_CROSSCOMPILE\
+BENCHIT_CMDLINE_ARG_NUM_CPUS BENCHIT_CMDLINE_ARG_NUM_PROCESSES\
+BENCHIT_CMDLINE_ARG_NUM_THREADS_PER_PROCESS BENCHIT_CMDLINE_ARG_RUN_CLEAN\
+BENCHIT_CMDLINE_ARG_RUN_COREDUMPLIMIT BENCHIT_CMDLINE_ARG_RUN_EMAIL_ADDRESS\
+BENCHIT_CMDLINE_ARG_RUN_MAX_MEMORY BENCHIT_CMDLINE_ARG_RUN_QUEUENAME\
+BENCHIT_CMDLINE_ARG_RUN_QUEUETIMELIMIT BENCHIT_CMDLINE_ARG_RUN_REDIRECT_CONSOLE\
+BENCHIT_CMDLINE_ARG_RUN_TEST BENCHIT_CMDLINE_ARG_RUN_USE_MPI\
+BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP "
+BASH="/bin/sh"
+BENCHIT_RUN_QUEUETIMELIMIT=""
+BENCHIT_CPP_FFTW3=""
+BENCHIT_MPIF77_C_FLAGS=""
+BENCHIT_CPP_ACML=""
+BENCHIT_HOSTNAME="localhost"
+GTK_RC_FILES="/etc/gtk/gtkrc:/home/nico/.gtkrc:/home/nico/.kde/share/config/gtk\
+c"
+BENCHIT_NUM_PROCESSES=""
+PIPESTATUS="([0]=\"0\")"
+BENCHIT_KERNEL_FILE_VERSION_FILEVERSION_C="1.6 (Fri Jan 19 16:05:11 2007)"
+KERNELDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V\
+/kernel/numerical/rkstep/F95/0/0/gauss2"
+BENCHIT_LIB_PAPI=""
+KDEDIRS="/usr:/usr/local:/usr/kde/3.5"
+BENCHIT_F77_C_FLAGS=""
+BENCHIT_F95_C_FLAGS="-free"
+GROUPS="()"
+BENCHIT_MPICC_L_FLAGS="-lm -L/opt/intel/fortran100/lib -lifcore -lmpi"
+DIRSTACK="()"
+BENCHIT_KERNEL_FILE_VERSION_STRINGLIB_C="1.4 (Fri Jan 12 11:44:35 2007)"
+BENCHIT_LIB_PCL=""
+CLASSPATH="."
+_="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/tools/\
+
+BENCHIT_CC_L_FLAGS="-lm -L/opt/intel/fortran100/lib -lifcore"
+BENCHIT_KERNEL_FILE_VERSION_RUN_BENCHIT="NO REVISION (Fri Sep 29 18:35:11\
+2006)"
+MANPATH="/home/nico/.gentoo/java-config-2/current-user-vm/man:/usr/local/share/\
+an:/usr/share/man:/usr/share/binutils-data/i686-pc-linux-gnu/2.17/man:/usr/shar\
+/gcc-data/i686-pc-linux-gnu/4.1.2/man:/opt/intel/compiler91/man:/opt/intel/fort\
+an100/man:/opt/sun-jdk-1.4.2.15/man:/etc/java-config/system-vm/man/:/usr/kde/3.\
+/share/man:/usr/qt/3/doc/man:/usr/local/texlive/current/texmf/doc/man"
+BENCHIT_KERNEL_FILE_VERSION_FIRSTTIME="1.29 (Wed Jul  4 16:22:09 2007)"
+PAGER="/usr/bin/less"
+BENCHIT_CPP_BLAS=""
+G_BROKEN_FILENAMES="1"
+KDE_SESSION_UID="1000"
+BENCHIT_KERNEL_FILE_VERSION_ENVHASHBUILDER="NO REVISION (Sat Aug 18 22:19:28\
+2007)"
+COLON_SEPARATED="XDG_DATA_DIRS"
+LDPATH="/usr/local/lib:///usr/lib/opengl/nvidia/lib:/usr/i686-pc-linux-gnu/lib:\
+usr/lib/gcc/i686-pc-linux-gnu/4.1.2:/opt/intel/compiler91/lib:/opt/intel/fortra\
+100/lib:/usr/lib/nspr:/usr/lib/nss:/opt/sun-jdk-1.4.2.15/jre/lib/i386/:/opt/sun\
+jdk-1.4.2.15/jre/lib/i386/native_threads/:/opt/sun-jdk-1.4.2.15/jre/lib/i386/cl\
+ssic/:/opt/sun-jdk-1.4.2.15/jre/lib/i386/server/:/usr/lib/qt4:/usr/kde/3.5/lib:\
+usr/qt/3/lib:/usr/games/lib:/opt/nessus/lib:/usr/lib/fltk-1.1:/usr/lib/libstdc+\
+-v3/"
+BENCHIT_F90_L_FLAGS="-lm"
+CONFIGURE_MODE="COMPILE"
+OLDCWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_NUM_CPUS="1"
+LC_COLLATE="en_US.UTF-8"
+BENCHIT_PERL_FLAGS=""
+IA32ROOT="/opt/intel/fortran100"
+KERNELNAME_FULL=""
+BENCHIT_MANDATORY_FILES="tools/run_benchit tools/uname_minus_a benchit.c\
+interface.h tools/envhashbuilder.c tools/bienvhash.template.c tools/bienvhash.h\
+tools/stringlib.c tools/stringlib.h "
+PS4="+ "
+GCC_PATH="/usr/i686-pc-linux-gnu/gcc-bin/4.1.2"
+INFOPATH="/usr/share/info:/usr/share/binutils-data/i686-pc-linux-gnu/2.17/info:\
+usr/share/gcc-data/i686-pc-linux-gnu/4.1.2/info:/usr/local/texlive/current/texm\
+/doc/info"
+OSTYPE="linux-gnu"
+BENCHIT_KERNEL_FILE_VERSION_HELPER_SH="1.14 (Mon Dec 12 11:27:20 2005)"
+TEXBASE="/usr/local/texlive/"
+BENCHITROOT="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit\
+V5"
+BENCHIT_PHP_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_STRINGLIB_H="1.2 (Fri Sep 29 16:51:14 2006)"
+BENCHIT_RUBY_INTERPRETER=""
+BENCHIT_LIB_MKL=" -lmkl"
+BASH_LINENO="([0]=\"78\" [1]=\"0\")"
+HOSTTYPE="i686"
+BENCHIT_MPIF77_L_FLAGS=""
+KDE_FULL_SESSION="true"
+EUID="1000"
+MACHTYPE="i686-pc-linux-gnu"
+BENCHIT_CPP_PTHREADS=""
+DESKTOP_SESSION="default"
+HTTP_PROXY="http://localhost:8118"
+http_proxy="http://localhost:8118"
+BENCHIT_LIB_MPI=""
+SCRIPTNAME="COMPILE.SH"
+BENCHIT_F77_L_FLAGS="-lm"
+BENCHIT_F95_L_FLAGS="-lm"
+BENCHIT_KERNEL_FILE_VERSION_LOC_REPL="NO REVISION (Wed Jan  4 15:32:49 2006)"
+GTK2_RC_FILES="/home/nico/.gtkrc-2.0:/home/nico/.kde/share/config/gtkrc-2.0:/et\
+/gtk-2.0/gtkrc"
+BENCHIT_OPTIONAL_FILES="LOCALDEFS/PROTOTYPE_input_architecture\
+LOCALDEFS/PROTOTYPE_input_display "
+GCC_SPECS=""
+BENCHIT_RUN_OUTPUT_DIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic\
+1D/Benchit-V5/output"
+JAVA_HOME="/home/nico/.gentoo/java-config-2/current-user-vm"
+BENCHIT_CPP_ATLAS=""
+BENCHIT_CXX_C_FLAGS_STD="-O2"
+HOME="/home/nico"
+BENCHIT_DEBUGLEVEL="0"
+FLTK_DOCDIR="/usr/share/doc/fltk-1.1.7/html"
+LS_COLORS="no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01\
+cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:su=37;41:sg=30;43:tw=30;42:ow=34;42:s\
+=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.z\
+p=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz\
+01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*\
+cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;\
+5:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif\
+01;35:*.tiff=01;35:*.png=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:\
+.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=\
+1;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rm\
+b=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*\
+xwd=01;35:*.yuv=01;35:*.pdf=00;32:*.ps=00;32:*.txt=00;32:*.patch=00;32:*.diff=0\
+;32:*.log=00;32:*.tex=00;32:*.doc=00;32:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m\
+d=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36\
+*.wav=00;36:"
+C_COMPILE="icc  -O2 -I.\
+-I/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5 \
+-DDEBUGLEVEL=0"
+SHELLSCRIPT_DEBUG="0"
+BENCHIT_RUN_ACCURACY=""
+BENCHIT_LIB_SCSL=" -lscsl"
+BENCHIT_CXX_C_FLAGS_OMP=""
+BENCHIT_RUN_EMAIL_ADDRESS=""
+SANE_CONFIG_DIR="/etc/sane.d"
+LC_MESSAGES="en_US.UTF-8"
+HOSTNAME="N4"
+KERNELBASEDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Bench\
+t-V5/kernel"
+BENCHIT_KERNEL_FILE_VERSION_ENVHASHBUILDER_C="1.3 (Fri Jan 12 11:44:35 2007)"
+BENCHIT_COMPILERFLAGS="-free  -O4"
+BENCHIT_CPP_PAPI="-DUSE_PAPI"
+_VARLIST="'BENCHITROOT"
+CVS_RSH="ssh"
+BENCHIT_NODENAME="N4"
+SHELL="/bin/bash"
+BASH_ARGV="([0]=\
+"/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/kernel/n\
+merical/rkstep/F95/0/0/gauss2/COMPILE.SH\
+" [1]=\
+"numerical.rkstep.F95.0.0.gauss2\
+")"
+BENCHIT_JAVAC_FLAGS_HIGH="-O"
+BENCHIT_KERNEL_FILE_VERSION_ENVIRONMENTS="NO REVISION, UNABLE TO READ (Sun Aug\
+12 00:00:02 2007)"
+BENCHIT_LIB_ESSL=" -lessl"
+myfile="tools/stringlib.h"
+BENCHIT_KERNELNAME="numerical.rkstep.F95.0.0.gauss2"
+DISTCC_VERBOSE="0"
+DISTCC_LOG=""
+F_COMPILE="ifort -free  -O4"
+KONSOLE_DCOP_SESSION="DCOPRef(konsole-27600,session-1)"
+BENCHIT_ENVIRONMENT="NOTHING"
+EDITOR="/usr/bin/vim"
+JDK_HOME="/home/nico/.gentoo/java-config-2/current-user-vm"
+BENCHIT_CPP_PCL=" -DUSE_PCL"
+HLL="F95"
+OLDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_F90_SOURCE_FORMAT_FLAG=""
+BENCHIT_MPICC_C_FLAGS_STD="-O2"
+PATH="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/too\
+s:/usr/kde/3.5/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/i686-pc-linux-gnu\
+gcc-bin/4.1.2:/opt/intel/compiler91/bin:/opt/intel/fortran100/bin:/opt/sun-jdk-\
+.4.2.15/bin:/opt/sun-jdk-1.4.2.15/jre/bin:/opt/sun-jdk-1.4.2.15/jre/javaws:/usr\
+kde/3.5/bin:/usr/qt/3/bin:/usr/games/bin:/usr/local/texlive/current/bin/i386-li\
+ux:/sbin:/usr/sbin:/sbin:/usr/sbin"
+PPID="27617"
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_TEMPLATE_JAVA="1.4 (Thu Jul 21 21:42:13\
+2005)"
+BENCHIT_RUN_TEST="0"
+XCURSOR_THEME="whiteglass"
+BR="0"
+BENCHIT_JAVAC_FLAGS=""
+BENCHIT_MPICC_C_FLAGS_OMP=""
+G_FILENAME_ENCODING="UTF-8"
+BENCHIT_KERNEL_FILE_VERSION_COMMONDEFS="NO REVISION (Tue Aug 30 21:32:48 2005)"
+BENCHIT_CC_C_FLAGS_STD="-O2"
+SESSION_MANAGER="local/N4:/tmp/.ICE-unix/5782"
+BENCHIT_CXX_COMPILER_VERSION="4.1.2 (Gentoo 4.1.2 p1.0.1)"
+DISPLAY=":0.0"
+BENCHIT_FILENAME_COMMENT="0"
+CURDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+IFS="' 	"
+BENCHIT_DEFINES=" -DDEBUGLEVEL=0"
+BENCHIT_CC_C_FLAGS_OMP=""
+UID="1000"
+BENCHIT_F90_C_FLAGS_STD="-O2"
+MIKTEX_INSTALLROOT="/usr/local/texlive/texmf-local"
+OLDPWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_JAVAC="javac"
+BENCHIT_F90_C_FLAGS_OMP=""
+WINDOWID="62914567"
+BENCHIT_ARCH_SHORT="IntM"
+LC_PAPER="de_DE.UTF-8"
+BENCHIT_CPP_MKL=""
+GDK_USE_XFT="1"
+BENCHIT_F95_SOURCE_FORMAT_FLAG=""
+BASH_SOURCE="([0]=\
+"/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/kernel/n\
+merical/rkstep/F95/0/0/gauss2/COMPILE.SH\
+" [1]=\
+"./COMPILE.SH\
+")"
+BENCHIT_KERNEL_FILE_VERSION_CONFIGURE="1.46 (Thu Jun 21 19:41:24 2007)"
+OPENGL_PROFILE="nvidia"
+LC_NUMERIC="de_DE.UTF-8"
+BENCHIT_C_COMPILERFLAGS=" -O2"
+BENCHIT_RUBY_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_BENCHSCRIPT_C="1.2 (Fri Jan 12 11:44:35 2007)"
+CONFIG_PROTECT="/usr/share/X11/xkb /usr/kde/3.5/share/config /usr/kde/3.5/env\
+/usr/kde/3.5/shutdown /usr/share/config"
+BASH_VERSINFO="([0]=\
+"3\
+" [1]=\
+"2\
+" [2]=\
+"17\
+" [3]=\
+"1\
+" [4]=\
+"release\
+" [5]=\
+"i686-pc-linux-gnu\
+")"
+BENCHIT_CXX="c++"
+BENCHIT_LD_LIBRARY_PATH="/home/nico/Desktop/Diplomarbeit/programs/main/paraboli\
+-1D/Benchit-V5/jbi/jni"
+BENCHIT_NUM_THREADS_PER_PROCESS=""
+PKG_CONFIG_PATH="/usr/qt/3/lib/pkgconfig"
+BENCHIT_MPIF77_C_FLAGS_STD=""
+BENCHIT_RUN_LINEAR="0"
+INTEL_FLEXLM_LICENSE="/opt/intel/compiler91/licenses"
+BENCHIT_CPP_MPI=" -DUSE_MPI"
+endofenvironmentvariables
+beginofdisplay
+
+xoutmin=0
+xoutmax=1100
+xaxisticks=11
+xaxislogbase=0
+xaxistext="Problem dimension N"
+
+y1outmin=0
+y1outmax=0.0125
+y1axisticks=5
+y1axislogbase=0
+y1axistext="No. of iterations"
+
+y2outmin=0
+y2outmax=0.05
+y2axisticks=10
+y2axislogbase=0
+y2axistext="No. of iterations"
+
+y3outmin=0
+y3outmax=0.035
+y3axisticks=7
+y3axislogbase=0
+y3axistext="No. of iterations"
+
+y4outmin=0
+y4outmax=0.035
+y4axisticks=7
+y4axislogbase=0
+y4axistext="No. of iterations"
+
+y5outmin=0
+y5outmax=0.000175
+y5axisticks=7
+y5axislogbase=0
+y5axistext="No. of iterations"
+
+numabscissae=986
+numfunctions=5
+
+## Fuer Architektur- oder Messmerkmal : abc
+#
+# displayabc=1                                           # Steuervariable
+# #Textfeld-Eigenschaften des date-Strings               # Kommentar
+# tabc="ABC-Merkmal: 3 Tm"                               # Text: Wert
+# xabc=                                                  # x-Position
+# yabc=                                                  # y-Position
+# fonttypabc=                                            # Schriftart
+# fontsizeabc=                                           # Schriftgroesse
+tlegendfunction1="ID"
+xlegendfunction1=
+ylegendfunction1=
+fonttypelegendfunction1=
+fontsizelegendfunction1=
+
+tlegendfunction2="BlockJac"
+xlegendfunction2=
+ylegendfunction2=
+fonttypelegendfunction2=
+fontsizelegendfunction2=
+
+tlegendfunction3="LowerBLockSOR"
+xlegendfunction3=
+ylegendfunction3=
+fonttypelegendfunction3=
+fontsizelegendfunction3=
+
+tlegendfunction4="UpperBLockSOR"
+xlegendfunction4=
+ylegendfunction4=
+fonttypelegendfunction4=
+fontsizelegendfunction4=
+
+tlegendfunction5="BlockSSOR"
+xlegendfunction5=
+ylegendfunction5=
+fonttypelegendfunction5=
+fontsizelegendfunction5=
+
+#### display of optional information can be enabled by setting display***=1
+
+
+# optional information of the measurement-programs:
+
+# deactivation of the kernelstring is useful, if a separate caption
+# should be used
+displaykernelstring=1
+# topkernelstring=1|0: headline|underline
+topkernelstring=1
+fonttypkernelstring=""
+fontsizekernelstring=
+
+displaycomment=1
+# textfield properties of the comment-string
+tcomment="Comment:"
+xcomment=
+ycomment=
+fonttypcomment=
+fontsizecomment=
+
+displaydate=1
+# textfield properties of the date-string
+tdate="Datum: "
+xdate=""
+ydate=""
+fonttypdate=""
+fontsizedate=""
+
+displaylanguage=0
+# textfield properties of the language-string
+tlanguage="HLL: "
+xlanguage=""
+ylanguage=""
+fonttyplanguage=""
+fontsizelanguage=""
+
+displaycompiler=0
+# textfield properties of the compiler-string
+tcompiler="Compiler: "
+xcompiler=""
+ycompiler=""
+fonttypcompiler=""
+fontsizecompiler=""
+
+displaycompilerflags=0
+# textfield properties of the compilerflags-string
+tcompilerflags="Compiler-Flags: "
+xcompilerflags=""
+ycompilerflags=""
+fonttypcompilerflags=""
+fontsizecompilerflags=""
+
+displaycodesequence=1
+# textfield properties of the codesequence-string
+tcodesequence=""
+xcodesequence=""
+ycodesequence=""
+fonttypcodesequence=""
+fontsizecodesequence=""
+
+# optional information about the architecture, names etc.:
+
+displayhostname=0
+# textfield properties of the hostname-string
+thostname="Hostname: "
+xhostname=""
+yhostname=""
+fonttyphostname=""
+fontsizehostname=""
+
+displaynodename=0
+# textfield properties of the nodename-string
+tnodename="Nodename: "
+xnodename=""
+ynodename=""
+fonttypnodename=""
+fontsizenodename=""
+
+displaymainboardmanufacturer=0
+# textfield properties of the mainboardmanufacturer-string
+tmainboardmanufacturer="Manufacturer of  mainboard: "
+xmainboardmanufacturer=""
+ymainboardmanufacturer=""
+fonttypmainboardmanufacturer=""
+fontsizemainboardmanufacturer=""
+
+displaymainboardtype=0
+# textfield properties of the mainboardtype-string
+tmainboardtype="Mainboard type: "
+xmainboardtype=""
+ymainboardtype=""
+fonttypmainboardtype=""
+fontsizemainboardtype=""
+
+displaymainboardchipset=0
+# textfield properties of the mainboardchipset-string
+tmainboardchipset="Mainboard Chipset: "
+xmainboardchipset=""
+ymainboardchipset=""
+fonttypmainboardchipset=""
+fontsizemainboardchipset=""
+
+displayprocessorname=0
+# textfield properties of the processorname-string
+tprocessorname="Processor name: "
+xprocessorname=""
+yprocessorname=""
+fonttypprocessorname=""
+fontsizeprocessorname=""
+
+displayprocessorserialnumber=0
+# textfield properties of the processorserialnumber-string
+tprocessorserialnumber="Processor Serial No.: "
+yprocessorserialnumber=""
+fonttypprocessorserialnumber=""
+fontsizeprocessorserialnumber=""
+
+displayprocessorversion=0
+# textfield properties of the processorversion-string
+tprocessorversion="Processor Version: "
+xprocessorversion=""
+yprocessorversion=""
+fonttypprocessorversion=""
+fontsizeprocessorversion=""
+
+displayprocessorisaset=0
+# textfield properties of the processorisaset-string
+tprocessorisaset="Instruction Set Architecture: "
+xprocessorisaset=""
+yprocessorisaset=""
+fonttypprocessorisaset=""
+fontsizeprocessorisaset=""
+
+displayprocessorisalevel=0
+# textfield properties of the processorisalevel-string
+tprocessorisalevel="ISA Level: "
+xprocessorisalevel=""
+yprocessorisalevel=""
+fonttypprocessorisalevel=""
+fontsizeprocessorisalevel=""
+
+displayprocessorisaextension1=0
+# textfield properties of the processorisaextension1-string
+tprocessorisaextension1="ISA Extension: "
+xprocessorisaextension1=""
+yprocessorisaextension1=""
+fonttypprocessorisaextension1=""
+fontsizeprocessorisaextension1=""
+
+displayprocessorisaextension2=0
+# textfield properties of the processorisaextension2-string
+tprocessorisaextension2="ISA Extension: "
+xprocessorisaextension2=""
+yprocessorisaextension2=""
+fonttypprocessorisaextension2=""
+fontsizeprocessorisaextension2=""
+
+displayprocessorisaextension3=0
+# textfield properties of the processorisaextension3-string
+tprocessorisaextension3="ISA Extension: "
+xprocessorisaextension3=""
+yprocessorisaextension3=""
+fonttypprocessorisaextension3=""
+fontsizeprocessorisaextension3=""
+
+displayprocessorclockrate=0
+# textfield properties of the processorclockrate-string
+tprocessorclockrate="Processor Clock Rate: "
+xprocessorclockrate=""
+yprocessorclockrate=""
+fonttypprocessorclockrate=""
+fontsizeprocessorclockrate=""
+
+displayinstructionlength=0
+# textfield properties of the instructionlength-string
+tinstructionlength="Instruction Length: "
+xinstructionlength=""
+yinstructionlength=""
+fonttypinstructionlength=""
+fontsizeinstructionlength=""
+
+displayprocessorwordlength=0
+# textfield properties of the processorwordlength-string
+tprocessorwordlength="Processor Word Length: "
+xprocessorwordlength=""
+yprocessorwordlength=""
+fonttypprocessorwordlength=""
+fontsizeprocessorwordlength=""
+
+displayinstructionissue=0
+# textfield properties of the instructionissue-string
+tinstructionissue="Instruction Issue: "
+xinstructionissue=""
+yinstructionissue=""
+fonttypinstructionissue=""
+fontsizeinstructionissue=""
+
+displayintegerunits=0
+# textfield properties of the integerunits-string
+tintegerunits="Number of Integer Units: "
+xintegerunits=""
+yintegerunits=""
+fonttypintegerunits=""
+fontsizeintegerunits=""
+
+displayfloatingpointunits=0
+# textfield properties of the floatingpointunits-string
+tfloatingpointunits="Number of Floating Point Units: "
+xfloatingpointunits=""
+yfloatingpointunits=""
+fonttypfloatingpointunits=""
+fontsizefloatingpointunits=""
+
+displayloadstoreunits=0
+# textfield properties of the loadstoreunits-string
+tloadstoreunits="Number of Load/Store Units: "
+xloadstoreunits=""
+yloadstoreunits=""
+fonttyploadstoreunits=""
+fontsizeloadstoreunits=""
+
+displaylevel1icachesize=0
+# textfield properties of the level1icachesize-string
+tlevel1icachesize="L1 Instruction Cache Size: "
+xlevel1icachesize=""
+ylevel1icachesize=""
+fonttyplevel1icachesize=""
+fontsizelevel1icachesize=""
+
+displaylevel1icachetype=0
+# textfield properties of the level1icachetype-string
+tlevel1icachetype="L1 Instruction Cache Type: "
+xlevel1icachetype=""
+ylevel1icachetype=""
+fonttyplevel1icachetype=""
+fontsizelevel1icachetype=""
+
+displaylevel1dcachesize=0
+# textfield properties of the level1dcachesize-string
+tlevel1dcachesize="L1 Data Cache Size: "
+xlevel1dcachesize=""
+ylevel1dcachesize=""
+fonttyplevel1dcachesize=""
+fontsizelevel1dcachesize=""
+
+displaylevel1dcachetype=0
+# textfield properties of the level1dcachetype-string
+tlevel1dcachetype="L1 Data Cache Type: "
+xlevel1dcachetype=""
+ylevel1dcachetype=""
+fonttyplevel1dcachetype=""
+fontsizelevel1dcachetype=""
+
+displaylevel2cachesize=0
+# textfield properties of the level2cachesize-string
+tlevel2cachesize="L2 Data Cache Size: "
+xlevel2cachesize=""
+ylevel2cachesize=""
+fonttyplevel2cachesize=""
+fontsizelevel2cachesize=""
+
+displaylevel2cachetype=0
+# textfield properties of the level2cachetype-string
+tlevel2cachetype="L2 Cache Type: "
+xlevel2cachetype=""
+ylevel2cachetype=""
+fonttyplevel2cachetype=""
+fontsizelevel2cachetype=""
+
+displaylevel2cachelocation=0
+# textfield properties of the level2cachelocation-string
+tlevel2cachelocation="L2 Cache Location: "
+xlevel2cachelocation=""
+ylevel2cachelocation=""
+fonttyplevel2cachelocation=""
+fontsizelevel2cachelocation=""
+
+displaylevel3cachesize=0
+# textfield properties of the level3cachesize-string
+tlevel3cachesize="L3 Data Cache Size: "
+xlevel3cachesize=""
+ylevel3cachesize=""
+fonttyplevel3cachesize=""
+fontsizelevel3cachesize=""
+
+displaylevel3cachetype=0
+# textfield properties of the level3cachetype-string
+tlevel3cachetype="L3 Cache Type: "
+xlevel3cachetype=""
+ylevel3cachetype=""
+fonttyplevel3cachetype=""
+fontsizelevel3cachetype=""
+
+displaylevel3cachelocation=0
+# textfield properties of the level3cachelocation-string
+tlevel3cachelocation="L3 Cache Location: "
+xlevel3cachelocation=""
+ylevel3cachelocation=""
+fonttyplevel3cachelocation=""
+fontsizelevel3cachelocation=""
+
+displayprefetching=0
+# textfield properties of the prefetching-string
+tprefetching="Prefetching: "
+xprefetching=""
+yprefetching=""
+fonttypprefetching=""
+fontsizeprefetching=""
+
+displaypreloading=0
+# textfield properties of the preloading-string
+tpreloading="Preloading: "
+xpreloading=""
+ypreloading=""
+fonttyppreloading=""
+fontsizepreloading=""
+
+displaybacksideclockrate=0
+# textfield properties of the backsideclockrate-string
+tbacksideclockrate="Clock Rate of the Backside Bus: "
+xbacksideclockrate=""
+ybacksideclockrate=""
+fonttypbacksideclockrate=""
+fontsizebacksideclockrate=""
+
+displaytechnologylevel=0
+# textfield properties of the technologylevel-string
+ttechnologylevel="Technology Level: "
+xtechnologylevel=""
+ytechnologylevel=""
+fonttyptechnologylevel=""
+fontsizetechnologylevel=""
+
+displaymemorychiptype=0
+# textfield properties of the memorychiptype-string
+tmemorychiptype="Memory Chip Type: "
+xmemorychiptype=""
+ymemorychiptype=""
+fonttypmemorychiptype=""
+fontsizememorychiptype=""
+
+displaymemorybustype=0
+# textfield properties of the memorybustype-string
+tmemorybustype="Memory Bus Type: "
+xmemorybustype=""
+ymemorybustype=""
+fonttypmemorybustype=""
+fontsizememorybustype=""
+
+displaymemorybusclockrate=0
+# textfield properties of the memorybusclockrate-string
+tmemorybusclockrate="Memory Bus Clock Rate: "
+xmemorybusclockrate=""
+ymemorybusclockrate=""
+fonttypmemorybusclockrate=""
+fontsizememorybusclockrate=""
+
+displaynumberofprocessorsused=0
+# textfield properties of the numberofprocessorsused-string
+tnumberofprocessorsused="Number Of Used Processors: "
+xnumberofprocessorsused=""
+ynumberofprocessorsused=""
+fonttypnumberofprocessorsused=""
+fontsizenumberofprocessorsused=""
+
+displaymemorysizeused=0
+# textfield properties of the memorysizeused-string
+tmemorysizeused="Used Memory Size: "
+xmemorysizeused=""
+ymemorysizeused=""
+fonttypmemorysizeused=""
+fontsizememorysizeused=""
+
+displaysystemcomment=0
+# textfield properties of the systemcomment-string
+tsystemcomment="Additional System Information: "
+xsystemcomment=""
+ysystemcomment=""
+fonttypsystemcomment=""
+fontsizesystemcomment=""
+
+displayaid=0
+# textfield properties of the aid-string
+taid="AID identifier: "
+xaid=""
+yaid=""
+fonttypaid=""
+fontsizeaid=""
+
+displaycodename=0
+# textfield properties of the codename-string
+tcodename="codename according to roadmap: "
+xcodename=""
+ycodename=""
+fonttypcodename=""
+fontsizecodename=""
+
+displaynumberofcorespercpu=0
+# textfield properties of the numberofcorespercpu-string
+tnumberofcorespercpu="number of physical cores per CPU: "
+xnumberofcorespercpu=""
+ynumberofcorespercpu=""
+fonttypnumberofcorespercpu=""
+fontsizenumberofcorespercpu=""
+endofdisplay
+####################################################
+beginofidentifierstrings
+# strings as replacement for the identifiers in menu-windows
+hostname="Hostname"
+nodename="Nodename"
+mainboardmanufacturer="Manufacturer of  mainboard"
+mainboardtype="Mainboard type"
+mainboardchipset="Mainboard Chipset"
+processorname="Processor name"
+processorserialnumber="Processor Serial No."
+processorversion="Processor Version"
+processorisaset="Instruction Set Architecture"
+processorisalevel="ISA Level"
+processorisaextension1="ISA Extension"
+processorisaextension2="ISA Extension"
+processorisaextension3="ISA Extension"
+processorclockrate="Processor Clock Rate"
+instructionlength="Instruction Length"
+processorwordlength="Processor Word Length"
+instructionissue="Instruction Issue"
+integerunits="Number of Integer Units"
+floatingpointunits="Number of Floating Point Units"
+loadstoreunits="Number of Load/Store Units"
+level1icachesize="L1 Instruction Cache Size"
+level1icachetype="L1 Instruction Cache Type"
+level1dcachesize="L1 Data Cache Size"
+level1dcachetype="L1 Data Cache Type"
+level2cachesize="L2 Data Cache Size"
+level2cachetype="L2 Cache Type"
+level2cachelocation="L2 Cache Location"
+level3cachesize="L3 Data Cache Size"
+level3cachetype="L3 Cache Type"
+level3cachelocation="L3 Cache Location"
+prefetching="Prefetching"
+preloading="Preloading"
+backsideclockrate="Clock Rate of the Backside Bus"
+technologylevel="Technology Level"
+memorychiptype="Memory Chip Type"
+memorybustype="Memory Bus Type"
+memorybusclockrate="Memory Bus Clock Rate"
+numberofprocessorsused="Number Of Used Processors"
+memorysizeused="Used Memory Size"
+systemcomment="Additional System Information"
+aid="AID identifier"
+codename="codename according to roadmap"
+numberofcorespercpu="number of physical cores per CPU"
+endofidentifierstrings
+###################################################
+beginofdata
+2	2.899e-06	3.1899e-05	1.7899e-05	1.6899e-05	-1.01e-07	
+3	8.99e-07	3.4899e-05	2.2899e-05	2.3899e-05	-1.01e-07	
+4	8.99e-07	6.5899e-05	2.5899e-05	2.5899e-05	-1.01e-07	
+5	8.99e-07	6.0899e-05	2.4899e-05	2.8899e-05	-1.01e-07	
+6	1.899e-06	4.7899e-05	2.4899e-05	3.0899e-05	-1.01e-07	
+7	8.99e-07	4.8899e-05	2.7899e-05	3.5899e-05	-1.01e-07	
+8	8.99e-07	5.1899e-05	3.3899e-05	3.4899e-05	-1.01e-07	
+9	8.99e-07	6.0899e-05	3.8899e-05	4.0899e-05	-1.01e-07	
+10	8.99e-07	6.4899e-05	5.6899e-05	4.4899e-05	-1.01e-07	
+11	8.99e-07	8.3899e-05	4.8899e-05	4.8899e-05	-1.01e-07	
+12	8.99e-07	8.0899e-05	4.7899e-05	4.7899e-05	-1.01e-07	
+13	8.99e-07	8.3899e-05	4.8899e-05	5.1899e-05	-1.01e-07	
+14	8.99e-07	9.8899e-05	5.1899e-05	6.2899e-05	-1.01e-07	
+15	8.99e-07	0.000111899	5.3899e-05	6.4899e-05	-1.01e-07	
+16	8.99e-07	0.000107899	5.5899e-05	6.7899e-05	-1.01e-07	
+17	8.99e-07	0.000111899	5.7899e-05	6.9899e-05	-1.01e-07	
+18	1.899e-06	0.000116899	6.1899e-05	7.3899e-05	-1.01e-07	
+19	8.99e-07	0.000132899	7.6899e-05	7.6899e-05	-1.01e-07	
+20	8.99e-07	0.000125899	7.7899e-05	7.8899e-05	-1.01e-07	
+21	8.99e-07	0.000150899	0.000320899	9.8899e-05	-1.01e-07	
+22	1.899e-06	0.000148899	8.3899e-05	8.4899e-05	-1.01e-07	
+23	1.899e-06	0.000154899	8.5899e-05	8.7899e-05	-1.01e-07	
+24	1.899e-06	0.000179899	0.000100899	0.000105899	-1.01e-07	
+25	1.899e-06	0.000182899	9.2899e-05	0.000107899	8.99e-07	
+26	1.899e-06	0.000194899	9.8899e-05	0.000126899	-1.01e-07	
+27	1.899e-06	0.000191899	9.5899e-05	0.000114899	8.99e-07	
+28	1.899e-06	0.000198899	9.9899e-05	0.000117899	8.99e-07	
+29	1.899e-06	0.000231899	0.000101899	0.000121899	8.99e-07	
+30	1.899e-06	0.000211899	0.000106899	0.000126899	-1.01e-07	
+31	8.99e-07	0.000237899	0.000124899	0.000128899	-1.01e-07	
+32	1.899e-06	0.000236899	0.000125899	0.000127899	-1.01e-07	
+33	1.899e-06	0.000254899	0.000132899	0.000132899	-1.01e-07	
+34	1.899e-06	0.000252899	0.000135899	0.000159899	-1.01e-07	
+35	1.899e-06	0.000290899	0.000137899	0.000159899	-1.01e-07	
+36	8.99e-07	0.000283899	0.000140899	0.0214869	1.899e-06	
+37	1.899e-06	0.000297899	0.000147899	0.000182899	8.99e-07	
+38	1.899e-06	0.000301899	0.000149899	0.000172899	-1.01e-07	
+39	1.899e-06	0.0050859	0.000154899	0.000190899	8.99e-07	
+40	2.899e-06	0.000316899	0.000153899	0.000177899	-1.01e-07	
+41	1.899e-06	0.000340899	0.000156899	0.000180899	8.99e-07	
+42	1.899e-06	0.000324899	0.000675899	0.000188899	-1.01e-07	
+43	2.899e-06	0.000351899	0.000162899	0.000188899	-1.01e-07	
+44	2.899e-06	0.000362899	0.000164899	0.000203899	-1.01e-07	
+45	2.899e-06	0.000369899	0.000167899	0.000194899	-1.01e-07	
+46	3.899e-06	0.000382899	0.000172899	0.000200899	8.99e-07	
+47	2.899e-06	0.000395899	0.000174899	0.000229899	8.99e-07	
+48	1.899e-06	0.000400899	0.000176899	0.000232899	8.99e-07	
+49	2.899e-06	0.000421899	0.000214899	0.000232899	-1.01e-07	
+50	1.899e-06	0.000430899	0.000219899	0.000238899	-1.01e-07	
+51	2.899e-06	0.000437899	0.000211899	0.000252899	8.99e-07	
+52	2.899e-06	0.000441899	0.000213899	0.000342899	-1.01e-07	
+53	2.899e-06	0.000449899	0.000217899	0.000261899	-1.01e-07	
+54	2.899e-06	0.000462899	0.000225899	0.000368899	8.99e-07	
+55	2.899e-06	0.000465899	0.000223899	0.000268899	-1.01e-07	
+56	2.899e-06	0.000472899	0.000227899	0.0015299	8.99e-07	
+57	2.899e-06	0.000481899	0.000256899	0.000262899	-1.01e-07	
+58	2.899e-06	0.000486899	0.000248899	0.000270899	-1.01e-07	
+59	2.899e-06	0.000488899	0.000247899	0.000269899	-1.01e-07	
+60	1.899e-06	0.000508899	0.000240899	0.000273899	8.99e-07	
+61	8.899e-06	0.000530899	0.000243899	0.000278899	8.99e-07	
+62	2.899e-06	0.000595899	0.000247899	0.000283899	-1.01e-07	
+63	2.899e-06	0.000665899	0.000316899	0.000347899	-1.01e-07	
+64	2.899e-06	0.000618899	0.000253899	0.000288899	-1.01e-07	
+65	2.899e-06	0.000654899	0.000257899	0.000345899	-1.01e-07	
+66	2.899e-06	0.000582899	0.000273899	0.000340899	-1.01e-07	
+67	3.899e-06	0.000603899	0.000266899	0.000344899	-1.01e-07	
+68	2.899e-06	0.000610899	0.000269899	0.000348899	-1.01e-07	
+69	1.3899e-05	0.000648899	0.000272899	0.000361899	8.99e-07	
+70	2.899e-06	0.000663899	0.000462899	0.000442899	-1.01e-07	
+71	3.899e-06	0.000686899	0.000320899	0.000373899	8.99e-07	
+72	2.899e-06	0.000682899	0.000334899	0.000364899	8.99e-07	
+73	3.899e-06	0.000733899	0.000497899	0.000505899	8.99e-07	
+74	3.899e-06	0.0016719	0.000334899	0.000397899	-1.01e-07	
+75	3.899e-06	0.000710899	0.000331899	0.000386899	8.99e-07	
+76	3.899e-06	0.000717899	0.000336899	0.000422899	8.99e-07	
+77	3.899e-06	0.000726899	0.000339899	0.000396899	-1.01e-07	
+78	2.899e-06	0.000736899	0.000344899	0.000390899	8.99e-07	
+79	3.899e-06	0.000741899	0.000347899	0.000405899	-1.01e-07	
+80	2.899e-06	0.000751899	0.000351899	0.000398899	8.99e-07	
+81	2.899e-06	0.000836899	0.000367899	0.000401899	8.99e-07	
+82	3.899e-06	0.000764899	0.000357899	0.000406899	-1.01e-07	
+83	3.899e-06	0.000772899	0.000371899	0.000410899	8.99e-07	
+84	3.899e-06	0.000780899	0.000365899	0.000425899	-1.01e-07	
+85	3.899e-06	0.000775899	0.000429899	0.000419899	8.99e-07	
+86	4.899e-06	0.000852899	0.000387899	0.000427899	8.99e-07	
+87	4.899e-06	0.000862899	0.000378899	0.000439899	8.99e-07	
+88	3.899e-06	0.000817899	0.000381899	0.000432899	-1.01e-07	
+89	3.899e-06	0.000833899	0.000412899	0.000435899	8.99e-07	
+90	3.899e-06	0.000827899	0.000386899	0.000450899	-1.01e-07	
+91	3.899e-06	0.000835899	0.000454899	0.000454899	-1.01e-07	
+92	3.899e-06	0.000834899	0.000427899	0.000448899	8.99e-07	
+93	3.899e-06	0.0018149	0.000400899	0.000463899	8.99e-07	
+94	4.899e-06	0.000920899	0.000402899	0.000468899	-1.01e-07	
+95	3.899e-06	0.000937899	0.000408899	0.000474899	-1.01e-07	
+96	3.899e-06	0.0010039	0.000411899	0.000465899	8.99e-07	
+97	3.899e-06	0.000933899	0.000425899	0.000470899	8.99e-07	
+98	4.899e-06	0.000952899	0.000428899	0.000473899	8.99e-07	
+99	3.899e-06	0.000963899	0.000432899	0.000535899	8.99e-07	
+100	3.899e-06	0.0010469	0.000436899	0.000541899	8.99e-07	
+101	3.899e-06	0.000980899	0.000440899	0.000561899	8.99e-07	
+102	4.899e-06	0.000993899	0.000445899	0.000554899	8.99e-07	
+103	4.899e-06	0.000998899	0.000498899	0.000556899	-1.01e-07	
+104	4.899e-06	0.0021809	0.000455899	0.000623899	8.99e-07	
+105	4.899e-06	0.0010469	0.000443899	0.000619899	8.99e-07	
+106	4.899e-06	0.0010279	0.000448899	0.000581899	8.99e-07	
+107	4.899e-06	0.0010359	0.000533899	0.000585899	8.99e-07	
+108	4.899e-06	0.0010399	0.000465899	0.000577899	8.99e-07	
+109	4.899e-06	0.0010489	0.000469899	0.000584899	8.99e-07	
+110	4.899e-06	0.0011309	0.000473899	0.000600899	8.99e-07	
+111	4.899e-06	0.0011599	0.000531899	0.0016409	8.99e-07	
+112	4.899e-06	0.0011559	0.000599899	0.000600899	8.99e-07	
+113	4.899e-06	0.0011579	0.000626899	0.000646899	8.99e-07	
+114	4.899e-06	0.0012099	0.000631899	0.000607899	8.99e-07	
+115	4.899e-06	0.0011739	0.000557899	0.000620899	8.99e-07	
+116	4.899e-06	0.0011809	0.000550899	0.000628899	8.99e-07	
+117	4.899e-06	0.0011909	0.000567899	0.000622899	8.99e-07	
+118	4.899e-06	0.0012469	0.000558899	0.000639899	8.99e-07	
+119	4.899e-06	0.0012129	0.000575899	0.000632899	8.99e-07	
+120	4.899e-06	0.0012699	0.000581899	0.000648899	8.99e-07	
+121	5.899e-06	0.0012899	0.000598899	0.000744899	8.99e-07	
+122	4.899e-06	0.0012999	0.000577899	0.000811899	1.899e-06	
+123	5.899e-06	0.0012479	0.000591899	0.0018249	1.899e-06	
+124	6.899e-06	0.0012949	0.000597899	0.000655899	8.99e-07	
+125	5.899e-06	0.0012759	0.000593899	0.000672899	8.99e-07	
+126	8.899e-06	0.0015599	0.000732899	0.000909899	8.99e-07	
+127	2.899e-06	0.0012649	0.000610899	0.000668899	8.99e-07	
+128	6.899e-06	0.0013749	0.000608899	0.000665899	8.99e-07	
+129	5.899e-06	0.0013329	0.000610899	0.000727899	8.99e-07	
+130	4.899e-06	0.0014069	0.000623899	0.000693899	8.99e-07	
+131	5.899e-06	0.0013209	0.000646899	0.000686899	8.99e-07	
+132	5.899e-06	0.0024229	0.000620899	0.000707899	8.99e-07	
+133	5.899e-06	0.0013399	0.000633899	0.000867899	8.99e-07	
+134	5.899e-06	0.0014359	0.000639899	0.000714899	8.99e-07	
+135	5.899e-06	0.0013549	0.000644899	0.000718899	8.99e-07	
+136	5.899e-06	0.0013649	0.000715899	0.000714899	1.899e-06	
+137	5.899e-06	0.0014159	0.000639899	0.000727899	8.99e-07	
+138	5.899e-06	0.0013949	0.000655899	0.000747899	8.99e-07	
+139	5.899e-06	0.0014479	0.000662899	0.000739899	1.899e-06	
+140	5.899e-06	0.0014629	0.000665899	0.000744899	8.99e-07	
+141	5.899e-06	0.0014089	0.000669899	0.000747899	8.99e-07	
+142	5.899e-06	0.0014199	0.0016969	0.000825899	8.99e-07	
+143	6.899e-06	0.0014789	0.000678899	0.000748899	8.99e-07	
+144	5.899e-06	0.0014519	0.000681899	0.000751899	1.899e-06	
+145	5.899e-06	0.0015889	0.000812899	0.000771899	1.899e-06	
+146	6.899e-06	0.0014569	0.000689899	0.000768899	8.99e-07	
+147	5.899e-06	0.0014639	0.000692899	0.000765899	8.99e-07	
+148	6.899e-06	0.0014779	0.000697899	0.000781899	8.99e-07	
+149	6.899e-06	0.0015419	0.000773899	0.000786899	8.99e-07	
+150	6.899e-06	0.0014929	0.000711899	0.000857899	1.899e-06	
+151	6.899e-06	0.0015269	0.0017339	0.000798899	8.99e-07	
+152	6.899e-06	0.0015189	0.000715899	0.000801899	8.99e-07	
+153	6.899e-06	0.0016039	0.000707899	0.000804899	8.99e-07	
+154	6.899e-06	0.0015439	0.000714899	0.000808899	8.99e-07	
+155	5.899e-06	0.0016189	0.000717899	0.000817899	8.99e-07	
+156	6.899e-06	0.0016779	0.000733899	0.000983899	8.99e-07	
+157	6.899e-06	0.0015599	0.000737899	0.000883899	8.99e-07	
+158	6.899e-06	0.0015669	0.000774899	0.000829899	8.99e-07	
+159	6.899e-06	0.0015859	0.000737899	0.000835899	1.899e-06	
+160	6.899e-06	0.0015969	0.000749899	0.000828899	8.99e-07	
+161	6.899e-06	0.0017029	0.000796899	0.000843899	1.899e-06	
+162	6.899e-06	0.0016049	0.000815899	0.000849899	8.99e-07	
+163	7.899e-06	0.0016779	0.000794899	0.000860899	1.899e-06	
+164	6.899e-06	0.0016339	0.000746899	0.000737899	8.99e-07	
+165	5.899e-06	0.0013999	0.000663899	0.000772899	8.99e-07	
+166	5.899e-06	0.0014159	0.000722899	0.000732899	8.99e-07	
+167	5.899e-06	0.0014239	0.000661899	0.000778899	8.99e-07	
+168	6.899e-06	0.0015599	0.000718899	0.000791899	8.99e-07	
+169	5.899e-06	0.0015199	0.000721899	0.000794899	1.899e-06	
+170	5.899e-06	0.0015599	0.000739899	0.000843899	1.899e-06	
+171	5.899e-06	0.0026239	0.000839899	0.000852899	8.99e-07	
+172	5.899e-06	0.0015289	0.000708899	0.000803899	8.99e-07	
+173	6.899e-06	0.0014709	0.000680899	0.0017929	1.899e-06	
+174	6.899e-06	0.0015699	0.000685899	0.000779899	8.99e-07	
+175	6.899e-06	0.0014869	0.000688899	0.000781899	8.99e-07	
+176	5.899e-06	0.0014959	0.000693899	0.000860899	8.99e-07	
+177	5.899e-06	0.0015529	0.000694899	0.000820899	8.99e-07	
+178	5.899e-06	0.0015279	0.000699899	0.000800899	8.99e-07	
+179	5.899e-06	0.0015179	0.000702899	0.000830899	1.899e-06	
+180	6.899e-06	0.0015649	0.000756899	0.000792899	8.99e-07	
+181	6.899e-06	0.0015329	0.000720899	0.000806899	8.99e-07	
+182	6.899e-06	0.0015959	0.000724899	0.000811899	8.99e-07	
+183	5.899e-06	0.0015579	0.000733899	0.000893899	8.99e-07	
+184	5.899e-06	0.0015529	0.000732899	0.000820899	8.99e-07	
+185	6.899e-06	0.0015689	0.000724899	0.000837899	8.99e-07	
+186	6.899e-06	0.0017059	0.000739899	0.000816899	8.99e-07	
+187	9.899e-06	0.0022539	0.0010369	0.0011729	1.899e-06	
+188	5.899e-06	0.0016449	0.000746899	0.000835899	1.899e-06	
+189	7.899e-06	0.0017319	0.000741899	0.000840899	8.99e-07	
+190	6.899e-06	0.0016079	0.000753899	0.000861899	8.99e-07	
+191	6.899e-06	0.0016129	0.000757899	0.000868899	1.899e-06	
+192	6.899e-06	0.0026309	0.000763899	0.000919899	1.899e-06	
+193	7.899e-06	0.0017079	0.000772899	0.000856899	8.99e-07	
+194	6.899e-06	0.0016369	0.000767899	0.000857899	1.899e-06	
+195	6.899e-06	0.0017389	0.000775899	0.000865899	1.899e-06	
+196	6.899e-06	0.0017689	0.000723899	0.000801899	8.99e-07	
+197	5.899e-06	0.0016599	0.000844899	0.000819899	1.899e-06	
+198	6.899e-06	0.0017639	0.000762899	0.000853899	8.99e-07	
+199	6.899e-06	0.0112759	0.000762899	0.0069699	4.899e-06	
+200	6.899e-06	0.0063429	0.000750899	0.000840899	8.99e-07	
+201	7.899e-06	0.0021179	0.000764899	0.000865899	8.99e-07	
+202	6.899e-06	0.0162719	0.000835899	0.000836899	1.899e-06	
+203	6.899e-06	0.0068449	0.000740899	0.000840899	8.99e-07	
+204	8.899e-06	0.0035899	0.000809899	0.000846899	1.899e-06	
+205	6.899e-06	0.0017269	0.000853899	0.000856899	8.99e-07	
+206	6.899e-06	0.0019019	0.000758899	0.000848899	8.99e-07	
+207	6.899e-06	0.0017219	0.000763899	0.000892899	8.99e-07	
+208	6.899e-06	0.0017449	0.000755899	0.000857899	1.899e-06	
+209	6.899e-06	0.0018379	0.000768899	0.000861899	8.99e-07	
+210	6.899e-06	0.0018139	0.000760899	0.000864899	8.99e-07	
+211	6.899e-06	0.0017579	0.000799899	0.0018459	1.899e-06	
+212	6.899e-06	0.0017789	0.000770899	0.000873899	1.899e-06	
+213	6.899e-06	0.0017789	0.000782899	0.000876899	1.899e-06	
+214	6.899e-06	0.0018679	0.000776899	0.000957899	1.899e-06	
+215	6.899e-06	0.0018639	0.000816899	0.000972899	8.99e-07	
+216	6.899e-06	0.0018579	0.000794899	0.000978899	1.899e-06	
+217	6.899e-06	0.0018489	0.000799899	0.000980899	1.899e-06	
+218	6.899e-06	0.0018109	0.000797899	0.000983899	1.899e-06	
+219	6.899e-06	0.0018159	0.000906899	0.000987899	8.99e-07	
+220	6.899e-06	0.0018219	0.000806899	0.000995899	8.99e-07	
+221	7.899e-06	0.0028909	0.000879899	0.000997899	8.99e-07	
+222	6.899e-06	0.0019809	0.000815899	0.0010029	8.99e-07	
+223	6.899e-06	0.0018489	0.000894899	0.0010079	1.899e-06	
+224	6.899e-06	0.0019669	0.000811899	0.0010149	8.99e-07	
+225	6.899e-06	0.0018669	0.000824899	0.0010139	8.99e-07	
+226	7.899e-06	0.0019909	0.000826899	0.0010189	8.99e-07	
+227	7.899e-06	0.0018799	0.000829899	0.0010359	1.899e-06	
+228	6.899e-06	0.0019519	0.000834899	0.0010289	8.99e-07	
+229	8.899e-06	0.0019279	0.000872899	0.0010299	1.899e-06	
+230	7.899e-06	0.0019069	0.000826899	0.0010379	1.899e-06	
+231	7.899e-06	0.0019109	0.000982899	0.0019419	1.899e-06	
+232	8.899e-06	0.0020129	0.0010159	0.0010479	8.99e-07	
+233	7.899e-06	0.0019249	0.000867899	0.0011769	1.899e-06	
+234	7.899e-06	0.0020129	0.000856899	0.0010539	8.99e-07	
+235	7.899e-06	0.0020069	0.000889899	0.0010929	1.899e-06	
+236	6.899e-06	0.0020819	0.000864899	0.0010619	8.99e-07	
+237	7.899e-06	0.0019649	0.000865899	0.0010639	1.899e-06	
+238	7.899e-06	0.0019679	0.000868899	0.0010779	1.899e-06	
+239	7.899e-06	0.0020599	0.000873899	0.0010749	8.99e-07	
+240	7.899e-06	0.0019859	0.000929899	0.0010809	8.99e-07	
+241	7.899e-06	0.0019939	0.000878899	0.0010809	1.899e-06	
+242	7.899e-06	0.0020649	0.000883899	0.0010889	8.99e-07	
+243	7.899e-06	0.0020039	0.000885899	0.0010879	1.899e-06	
+244	7.899e-06	0.0020589	0.000888899	0.0011539	1.899e-06	
+245	7.899e-06	0.0020219	0.000912899	0.0011279	1.899e-06	
+246	7.899e-06	0.0062189	0.000898899	0.0011079	1.899e-06	
+247	8.899e-06	0.0020389	0.000944899	0.0012019	1.899e-06	
+248	7.899e-06	0.0021259	0.000903899	0.0011149	1.899e-06	
+249	8.899e-06	0.0020559	0.000905899	0.0011609	8.99e-07	
+250	8.899e-06	0.0021299	0.000899899	0.0011309	1.899e-06	
+251	1.3899e-05	0.0031359	0.0013649	0.0016919	2.899e-06	
+252	7.899e-06	0.0031089	0.000999899	0.0012019	8.99e-07	
+253	9.899e-06	0.0020869	0.000920899	0.0012039	8.99e-07	
+254	8.899e-06	0.0022119	0.000979899	0.0012649	1.899e-06	
+255	3.899e-06	0.0020749	0.000951899	0.0011709	1.899e-06	
+256	7.899e-06	0.0022219	0.000932899	0.0013099	1.899e-06	
+257	8.899e-06	0.0023629	0.000972899	0.0012249	8.99e-07	
+258	7.899e-06	0.0021379	0.000940899	0.0011619	8.99e-07	
+259	8.899e-06	0.0022199	0.000985899	0.0012339	8.99e-07	
+260	8.899e-06	0.0022119	0.000943899	0.0011659	1.899e-06	
+261	8.899e-06	0.0021469	0.000946899	0.0011909	8.99e-07	
+262	7.899e-06	0.0023529	0.000985899	0.0011959	1.899e-06	
+263	8.899e-06	0.0021659	0.000954899	0.0012299	1.899e-06	
+264	7.899e-06	0.0021779	0.000957899	0.0011899	1.899e-06	
+265	8.899e-06	0.0021769	0.000960899	0.0011909	8.99e-07	
+266	8.899e-06	0.0022769	0.000971899	0.0011909	8.99e-07	
+267	8.899e-06	0.0022029	0.000966899	0.0012479	1.899e-06	
+268	8.899e-06	0.0022149	0.000969899	0.0022799	2.899e-06	
+269	9.899e-06	0.0023089	0.000976899	0.0011979	1.899e-06	
+270	9.899e-06	0.0022719	0.000979899	0.0012079	1.899e-06	
+271	8.899e-06	0.0023139	0.000982899	0.0012079	1.899e-06	
+272	8.899e-06	0.0031859	0.0010569	0.0012159	1.899e-06	
+273	9.899e-06	0.0022699	0.000987899	0.0012139	8.99e-07	
+274	8.899e-06	0.0022769	0.0010269	0.0013129	1.899e-06	
+275	8.899e-06	0.0022559	0.000995899	0.0012249	1.899e-06	
+276	8.899e-06	0.0022709	0.000998899	0.0012419	1.899e-06	
+277	8.899e-06	0.0022689	0.0010019	0.0012329	1.899e-06	
+278	8.899e-06	0.0023469	0.0012029	0.0012429	1.899e-06	
+279	8.899e-06	0.0022869	0.0010089	0.0012839	1.899e-06	
+280	8.899e-06	0.0022939	0.0010119	0.0012479	1.899e-06	
+281	8.899e-06	0.0023049	0.0010149	0.0012839	8.99e-07	
+282	8.899e-06	0.0023719	0.0010219	0.0012859	1.899e-06	
+283	8.899e-06	0.0023789	0.0010229	0.0012639	1.899e-06	
+284	8.899e-06	0.0023289	0.0010359	0.0013429	1.899e-06	
+285	9.899e-06	0.0023359	0.0010909	0.0012789	1.899e-06	
+286	8.899e-06	0.0023469	0.0010339	0.0012759	1.899e-06	
+287	8.899e-06	0.0023959	0.0010369	0.0012749	1.899e-06	
+288	9.899e-06	0.0025299	0.0010949	0.0012869	1.899e-06	
+289	9.899e-06	0.0024259	0.0010469	0.0022509	2.899e-06	
+290	1.0899e-05	0.0024239	0.0010479	0.0013469	1.899e-06	
+291	8.899e-06	0.0023869	0.0010519	0.0012919	1.899e-06	
+292	9.899e-06	0.0034909	0.0011649	0.0013029	1.899e-06	
+293	9.899e-06	0.0024849	0.0010589	0.0013029	1.899e-06	
+294	9.899e-06	0.0024389	0.0010969	0.0013109	1.899e-06	
+295	8.899e-06	0.0024229	0.0011249	0.0013119	1.899e-06	
+296	8.899e-06	0.0025579	0.0010709	0.0013199	8.99e-07	
+297	9.899e-06	0.0024339	0.0010979	0.0013209	1.899e-06	
+298	9.899e-06	0.0024339	0.0011129	0.0013959	1.899e-06	
+299	8.899e-06	0.0026009	0.0010909	0.0013299	1.899e-06	
+300	9.899e-06	0.0024899	0.0010809	0.0013439	1.899e-06	
+301	9.899e-06	0.0024589	0.0010859	0.0013459	1.899e-06	
+302	9.899e-06	0.0026399	0.0010909	0.0019499	2.899e-06	
+303	9.899e-06	0.0024979	0.0010939	0.0013529	1.899e-06	
+304	9.899e-06	0.0025439	0.0011179	0.0013799	1.899e-06	
+305	9.899e-06	0.0025009	0.0011679	0.0013519	1.899e-06	
+306	1.0899e-05	0.0025029	0.0011019	0.0013859	1.899e-06	
+307	9.899e-06	0.0025079	0.0011059	0.0013959	1.899e-06	
+308	9.899e-06	0.0025199	0.0011319	0.0014369	1.899e-06	
+309	9.899e-06	0.0025259	0.0033049	0.0013849	1.899e-06	
+310	1.0899e-05	0.0025599	0.0011169	0.0013969	1.899e-06	
+311	1.5899e-05	0.0046379	0.0017829	0.0020919	2.899e-06	
+312	1.0899e-05	0.0027019	0.0012099	0.0023439	2.899e-06	
+313	1.1899e-05	0.0027229	0.0011309	0.0014539	1.899e-06	
+314	1.0899e-05	0.0029539	0.0011359	0.0013989	1.899e-06	
+315	9.899e-06	0.0025789	0.0012189	0.0014059	2.899e-06	
+316	9.899e-06	0.0026209	0.0011379	0.0014129	1.899e-06	
+317	9.899e-06	0.0025869	0.0012159	0.0014059	1.899e-06	
+318	1.0899e-05	0.0026069	0.0011439	0.0015449	2.899e-06	
+319	9.899e-06	0.0026199	0.0011529	0.0014619	1.899e-06	
+320	1.0899e-05	0.0027779	0.0011979	0.0015239	1.899e-06	
+321	9.899e-06	0.0040749	0.0012389	0.0014359	1.899e-06	
+322	1.0899e-05	0.0028049	0.0011619	0.0014329	1.899e-06	
+323	1.0899e-05	0.0028229	0.0011669	0.0015789	2.899e-06	
+324	9.899e-06	0.0028739	0.0012279	0.0014979	1.899e-06	
+325	1.0899e-05	0.0229479	0.0024909	0.0014459	1.899e-06	
+326	1.0899e-05	0.0028669	0.0011829	0.0015569	1.899e-06	
+327	9.899e-06	0.0029909	0.0012269	0.0014619	1.899e-06	
+328	1.0899e-05	0.0029359	0.0011839	0.0014589	1.899e-06	
+329	1.0899e-05	0.0048689	0.0011929	0.0029029	3.899e-06	
+330	1.1899e-05	0.0030639	0.0011989	0.0014689	1.899e-06	
+331	1.1899e-05	0.0030399	0.0011949	0.0014789	2.899e-06	
+332	1.0899e-05	0.0031449	0.0013649	0.0024859	2.899e-06	
+333	1.1899e-05	0.0030999	0.0013739	0.0014869	1.899e-06	
+334	1.1899e-05	0.0029039	0.0013489	0.0015779	2.899e-06	
+335	1.0899e-05	0.0029139	0.0013499	0.0014979	2.899e-06	
+336	1.0899e-05	0.0042429	0.0014049	0.0015099	2.899e-06	
+337	1.1899e-05	0.0030359	0.0013759	0.0015019	2.899e-06	
+338	1.0899e-05	0.0029339	0.0013639	0.0015129	2.899e-06	
+339	1.0899e-05	0.0031179	0.0014299	0.0016279	1.899e-06	
+340	1.0899e-05	0.0031379	0.0022619	0.0016789	2.899e-06	
+341	1.1899e-05	0.0029889	0.0013739	0.0015189	1.899e-06	
+342	1.0899e-05	0.0032409	0.0014719	0.0017579	1.899e-06	
+343	1.0899e-05	0.0031609	0.0014589	0.0016569	1.899e-06	
+344	1.1899e-05	0.0051509	0.0013939	0.0015609	1.899e-06	
+345	1.1899e-05	0.0031229	0.0014679	0.0015369	2.899e-06	
+346	1.1899e-05	0.0030399	0.0013939	0.0015439	2.899e-06	
+347	1.1899e-05	0.0030649	0.0013969	0.0018559	2.899e-06	
+348	1.1899e-05	0.0030159	0.0015179	0.0015449	1.899e-06	
+349	1.0899e-05	0.0030259	0.0014699	0.0015449	1.899e-06	
+350	1.1899e-05	0.0030469	0.0014799	0.0015509	1.899e-06	
+351	1.2899e-05	0.0030609	0.0014219	0.0016429	1.899e-06	
+352	1.1899e-05	0.0031799	0.0014449	0.0025529	3.899e-06	
+353	1.1899e-05	0.0031529	0.0037959	0.0015769	2.899e-06	
+354	1.2899e-05	0.0031349	0.0014279	0.0016849	1.899e-06	
+355	1.1899e-05	0.0031549	0.0015069	0.0023679	2.899e-06	
+356	1.1899e-05	0.0031399	0.0036299	0.0016849	1.899e-06	
+357	1.1899e-05	0.0033979	0.0015749	0.0015909	2.899e-06	
+358	1.1899e-05	0.0031029	0.0015139	0.0016079	1.899e-06	
+359	1.1899e-05	0.0031149	0.0014549	0.0016239	2.899e-06	
+360	1.1899e-05	0.0033169	0.0014939	0.0016099	1.899e-06	
+361	1.1899e-05	0.0031299	0.0014539	0.0016049	2.899e-06	
+362	1.1899e-05	0.0080799	0.0014769	0.0016509	1.899e-06	
+363	1.2899e-05	0.0031509	0.0014699	0.0016129	2.899e-06	
+364	1.1899e-05	0.0031509	0.0014639	0.0017619	2.899e-06	
+365	1.1899e-05	0.0032019	0.0015419	0.0016129	2.899e-06	
+366	1.1899e-05	0.0031849	0.0014779	0.0016339	1.899e-06	
+367	1.1899e-05	0.0032819	0.0014779	0.0016339	1.899e-06	
+368	1.1899e-05	0.0031909	0.0015399	0.0017879	1.899e-06	
+369	1.1899e-05	0.0032179	0.0014869	0.0016429	1.899e-06	
+370	1.2899e-05	0.0052139	0.0036799	0.0017319	2.899e-06	
+371	1.3899e-05	0.0032979	0.0015359	0.0086639	6.899e-06	
+372	1.1899e-05	0.0032539	0.0015009	0.0017069	2.899e-06	
+373	1.1899e-05	0.0132759	0.0015499	0.0016489	2.899e-06	
+374	1.2899e-05	0.0035649	0.0015059	0.0017079	1.899e-06	
+375	1.1899e-05	0.0032529	0.0015169	0.0017309	1.899e-06	
+376	1.7899e-05	0.0052289	0.0027639	0.0025279	3.899e-06	
+377	1.1899e-05	0.0032599	0.0015129	0.0016889	1.899e-06	
+378	1.1899e-05	0.0035839	0.0015539	0.0016909	1.899e-06	
+379	1.2899e-05	0.0033949	0.0015379	0.0016859	2.899e-06	
+380	1.2899e-05	0.0193039	0.0072499	0.0023199	2.899e-06	
+381	1.2899e-05	0.0176049	0.0016429	0.0016839	2.899e-06	
+382	2.2899e-05	0.0074559	0.0055599	0.0017319	1.899e-06	
+383	1.2899e-05	0.0068199	0.0015659	0.0034399	4.899e-06	
+384	1.3899e-05	0.0045329	0.0015989	0.0017129	2.899e-06	
+385	1.2899e-05	0.0035799	0.0015539	0.0017189	2.899e-06	
+386	1.1899e-05	0.0033409	0.0015599	0.0017179	1.899e-06	
+387	1.2899e-05	0.0033729	0.0015839	0.0018219	1.899e-06	
+388	1.2899e-05	0.0035569	0.0015619	0.0017499	2.899e-06	
+389	1.2899e-05	0.0033769	0.0015629	0.0017289	2.899e-06	
+390	1.2899e-05	0.0045949	0.0016609	0.0019049	2.899e-06	
+391	1.2899e-05	0.0034259	0.0015739	0.0017399	2.899e-06	
+392	1.3899e-05	0.0034849	0.0016629	0.0017499	1.899e-06	
+393	1.1899e-05	0.0048599	0.0026989	0.0017419	2.899e-06	
+394	1.2899e-05	0.0034339	0.0016979	0.0017879	1.899e-06	
+395	1.2899e-05	0.0034479	0.0016339	0.0019019	2.899e-06	
+396	1.2899e-05	0.0036149	0.0026889	0.0018869	2.899e-06	
+397	1.2899e-05	0.0035009	0.0016069	0.0017539	1.899e-06	
+398	1.2899e-05	0.0034699	0.0016579	0.0017749	2.899e-06	
+399	1.2899e-05	0.0035629	0.0016709	0.0017719	2.899e-06	
+400	1.2899e-05	0.0034749	0.0017119	0.0017739	2.899e-06	
+401	1.2899e-05	0.0045099	0.0018949	0.0017739	2.899e-06	
+402	1.2899e-05	0.0034779	0.0016249	0.0018449	2.899e-06	
+403	2.4899e-05	0.0034839	0.0016429	0.0061079	6.899e-06	
+404	1.3899e-05	0.0035449	0.0016369	0.0017999	1.899e-06	
+405	1.2899e-05	0.0035889	0.0017289	0.0017989	1.899e-06	
+406	1.2899e-05	0.0039299	0.0016539	0.0017989	1.899e-06	
+407	1.3899e-05	0.0035319	0.0017259	0.0018809	2.899e-06	
+408	9.8899e-05	0.0036009	0.0017029	0.0018209	2.899e-06	
+409	1.2899e-05	0.0038009	0.0016469	0.0019079	2.899e-06	
+410	1.3899e-05	0.0041999	0.0017209	0.0018319	2.899e-06	
+411	1.3899e-05	0.0039869	0.0017399	0.0018709	2.899e-06	
+412	1.4899e-05	0.0041179	0.0016609	0.0018899	2.899e-06	
+413	1.3899e-05	0.0062679	0.0016659	0.0018339	2.899e-06	
+414	1.3899e-05	0.0042009	0.0016759	0.0018419	2.899e-06	
+415	1.4899e-05	0.0039909	0.0016859	0.0018779	2.899e-06	
+416	1.3899e-05	0.0051659	0.0017699	0.0018589	2.899e-06	
+417	1.3899e-05	0.0042049	0.0016809	0.0019369	2.899e-06	
+418	1.3899e-05	0.0040809	0.0017389	0.0019319	1.899e-06	
+419	1.3899e-05	0.0043239	0.0017019	0.0018669	2.899e-06	
+420	1.3899e-05	0.0044889	0.0017859	0.0018719	2.899e-06	
+421	1.3899e-05	0.0045769	0.0017439	0.0019759	2.899e-06	
+422	1.3899e-05	0.0040869	0.0017979	0.0019159	2.899e-06	
+423	1.3899e-05	0.0039139	0.0017729	0.0019249	2.899e-06	
+424	1.3899e-05	0.0039429	0.0017469	0.0019939	2.899e-06	
+425	1.3899e-05	0.0040489	0.0017449	0.0020499	2.899e-06	
+426	1.3899e-05	0.0040369	0.0017239	0.0019699	2.899e-06	
+427	1.4899e-05	0.0039689	0.0017549	0.0020469	2.899e-06	
+428	1.4899e-05	0.0039599	0.0017879	0.0029599	3.899e-06	
+429	1.4899e-05	0.0068529	0.0018549	0.0027139	2.899e-06	
+430	0.000294899	0.0038769	0.0018769	0.0022449	3.899e-06	
+431	1.4899e-05	0.0039589	0.0017449	0.0021489	2.899e-06	
+432	1.5899e-05	0.0037509	0.0018669	0.0034879	4.899e-06	
+433	1.4899e-05	0.0047579	0.0021189	0.0019219	2.899e-06	
+434	1.3899e-05	0.0039299	0.0020679	0.0019819	2.899e-06	
+435	2.1899e-05	0.0057769	0.0026389	0.0029109	4.899e-06	
+436	1.3899e-05	0.0039209	0.0019759	0.0019439	2.899e-06	
+437	1.4899e-05	0.0046829	0.0018509	0.0019459	1.899e-06	
+438	1.3899e-05	0.0041609	0.0019179	0.0019479	2.899e-06	
+439	1.3899e-05	0.0038559	0.0017739	0.0020409	2.899e-06	
+440	1.3899e-05	0.0039779	0.0017689	0.0019559	2.899e-06	
+441	1.3899e-05	0.0038999	0.0177919	0.0021099	2.899e-06	
+442	1.4899e-05	0.0039549	0.0020829	0.0019649	2.899e-06	
+443	1.3899e-05	0.0038449	0.0018049	0.0020169	2.899e-06	
+444	1.3899e-05	0.0039669	0.0017969	0.0020509	2.899e-06	
+445	1.4899e-05	0.0039319	0.0018499	0.0029269	3.899e-06	
+446	1.4899e-05	0.0040779	0.0018209	0.0020689	2.899e-06	
+447	1.4899e-05	0.0038909	0.0018049	0.0019789	2.899e-06	
+448	1.4899e-05	0.0041089	0.0018109	0.0020719	2.899e-06	
+449	1.3899e-05	0.0038849	0.0018109	0.0233859	7.899e-06	
+450	1.4899e-05	0.0042059	0.0018169	0.0019989	2.899e-06	
+451	1.4899e-05	0.0090669	0.0018959	0.0021059	2.899e-06	
+452	1.4899e-05	0.0039209	0.0018279	0.0020779	2.899e-06	
+453	1.5899e-05	0.0041079	0.0018389	0.0020079	2.899e-06	
+454	1.4899e-05	0.0050729	0.0018369	0.0022069	2.899e-06	
+455	1.4899e-05	0.0042129	0.0018379	0.0020169	2.899e-06	
+456	1.4899e-05	0.0041259	0.0018459	0.0020339	2.899e-06	
+457	1.4899e-05	0.0040679	0.0018989	0.0020269	2.899e-06	
+458	1.4899e-05	0.0039629	0.0018369	0.0020419	2.899e-06	
+459	1.3899e-05	0.0064879	0.0019169	0.0020389	2.899e-06	
+460	1.4899e-05	0.0039869	0.0018599	0.0028529	4.899e-06	
+461	1.5899e-05	0.0042349	0.0019419	0.0021469	2.899e-06	
+462	1.4899e-05	0.0040769	0.0018699	0.0020539	2.899e-06	
+463	1.4899e-05	0.0040829	0.0018729	0.0020559	2.899e-06	
+464	1.4899e-05	0.0040939	0.0018749	0.0020769	2.899e-06	
+465	1.4899e-05	0.0041239	0.0019319	0.0020699	2.899e-06	
+466	1.4899e-05	0.0040279	0.0018809	0.0022649	2.899e-06	
+467	1.5899e-05	0.0041429	0.0019129	0.0020819	2.899e-06	
+468	1.4899e-05	0.0040659	0.0028869	0.0021379	2.899e-06	
+469	1.4899e-05	0.0043689	0.0018939	0.0022079	2.899e-06	
+470	1.5899e-05	0.0041979	0.0019029	0.0020899	2.899e-06	
+471	1.4899e-05	0.0046809	0.0020119	0.0020889	2.899e-06	
+472	1.5899e-05	0.0043279	0.0019089	0.0031529	4.899e-06	
+473	1.6899e-05	0.0047049	0.0019159	0.0023369	3.899e-06	
+474	1.5899e-05	0.0053319	0.0019189	0.0025889	3.899e-06	
+475	1.5899e-05	0.0042109	0.0021409	0.0021069	2.899e-06	
+476	1.5899e-05	0.0041309	0.0022059	0.0021969	3.899e-06	
+477	1.5899e-05	0.0041379	0.0021679	0.0021629	2.899e-06	
+478	1.5899e-05	0.0045759	0.0019339	0.0022399	2.899e-06	
+479	1.5899e-05	0.0043669	0.0019259	0.0022089	2.899e-06	
+480	1.5899e-05	0.0043829	0.0020119	0.0021439	2.899e-06	
+481	1.6899e-05	0.0043539	0.0019719	0.0021329	2.899e-06	
+482	1.5899e-05	0.0044349	0.0020169	0.0021419	2.899e-06	
+483	1.5899e-05	0.0045209	0.0019549	0.0021439	2.899e-06	
+484	1.5899e-05	0.0057449	0.0019659	0.0025029	3.899e-06	
+485	1.5899e-05	0.0043389	0.0022079	0.0021549	2.899e-06	
+486	1.5899e-05	0.0042899	0.0023009	0.0021659	2.899e-06	
+487	1.4899e-05	0.0058279	0.0019729	0.0021609	2.899e-06	
+488	1.6899e-05	0.0045009	0.0020439	0.0021819	2.899e-06	
+489	1.6899e-05	0.0042859	0.0021419	0.0021699	2.899e-06	
+490	1.5899e-05	0.0043629	0.0019759	0.0022559	3.899e-06	
+491	1.5899e-05	0.0042549	0.0019819	0.0021719	2.899e-06	
+492	1.5899e-05	0.0043549	0.0039049	0.0125989	8.899e-06	
+493	1.7899e-05	0.0152709	0.0141949	0.0063769	5.899e-06	
+494	1.5899e-05	0.0074379	0.0055319	0.0022569	3.899e-06	
+495	1.6899e-05	0.0059409	0.0021929	0.0021959	2.899e-06	
+496	1.5899e-05	0.0044299	0.0021209	0.0022839	2.899e-06	
+497	1.6899e-05	0.0043189	0.0020199	0.0021989	2.899e-06	
+498	1.5899e-05	0.0043789	0.0020119	0.0022639	2.899e-06	
+499	1.5899e-05	0.0044139	0.0020189	0.0022259	3.899e-06	
+500	1.5899e-05	0.0044439	0.0020419	0.0022469	3.899e-06	
+501	3.4899e-05	0.0067779	0.0074849	0.0036809	4.899e-06	
+502	1.5899e-05	0.0055169	0.0021259	0.0024529	2.899e-06	
+503	1.6899e-05	0.0044779	0.0020769	0.0022469	3.899e-06	
+504	1.6899e-05	0.0044119	0.0021659	0.0022419	2.899e-06	
+505	1.6899e-05	0.0043749	0.0020379	0.0022379	3.899e-06	
+506	1.5899e-05	0.0044259	0.0021169	0.0024179	2.899e-06	
+507	1.6899e-05	0.0043869	0.0020469	0.0024899	3.899e-06	
+508	1.5899e-05	0.0045499	0.0020539	0.0022669	2.899e-06	
+509	1.5899e-05	0.0045009	0.0020689	0.0022759	3.899e-06	
+510	1.5899e-05	0.0046689	0.0023289	0.0023739	2.899e-06	
+511	6.899e-06	0.0045849	0.0022519	0.0025159	3.899e-06	
+512	1.6899e-05	0.0047589	0.0022019	0.0023779	3.899e-06	
+513	1.6899e-05	0.0059679	0.0023469	0.0026229	2.899e-06	
+514	1.8899e-05	0.0048469	0.0022659	0.0025189	3.899e-06	
+515	1.6899e-05	0.0056089	0.0022699	0.0022929	3.899e-06	
+516	1.6899e-05	0.0044599	0.0022419	0.0023049	3.899e-06	
+517	1.5899e-05	0.0045849	0.0021269	0.0022959	3.899e-06	
+518	1.6899e-05	0.0045769	0.0021859	0.0023299	2.899e-06	
+519	1.6899e-05	0.0045729	0.0021099	0.0022979	2.899e-06	
+520	1.5899e-05	0.0044919	0.0021149	0.0024129	3.899e-06	
+521	1.5899e-05	0.0045099	0.0020999	0.0023029	2.899e-06	
+522	1.6899e-05	0.0045279	0.0021139	0.0023969	2.899e-06	
+523	1.6899e-05	0.0045689	0.0021069	0.0033429	4.899e-06	
+524	1.6899e-05	0.0046449	0.0021989	0.0024509	2.899e-06	
+525	1.6899e-05	0.0046239	0.0021209	0.0023309	2.899e-06	
+526	2.6899e-05	0.0046589	0.0021209	0.0023409	2.899e-06	
+527	1.6899e-05	0.0046029	0.0021399	0.0023409	3.899e-06	
+528	1.6899e-05	0.0046179	0.0021389	0.0023429	2.899e-06	
+529	1.6899e-05	0.0047539	0.0021589	0.0023999	3.899e-06	
+530	1.6899e-05	0.0045959	0.0021349	0.0023479	2.899e-06	
+531	1.6899e-05	0.0047359	0.0021549	0.0025109	3.899e-06	
+532	1.7899e-05	0.0046049	0.0021819	0.0023709	2.899e-06	
+533	1.6899e-05	0.0046859	0.0023779	0.0024109	3.899e-06	
+534	1.8899e-05	0.0046179	0.0030979	0.0024519	3.899e-06	
+535	1.7899e-05	0.0058849	0.0022219	0.0023689	2.899e-06	
+536	1.6899e-05	0.0046799	0.0021599	0.0026239	3.899e-06	
+537	1.6899e-05	0.0047079	0.0021859	0.0023749	3.899e-06	
+538	1.7899e-05	0.0047429	0.0022339	0.0023999	3.899e-06	
+539	1.7899e-05	0.0047079	0.0022159	0.0024899	3.899e-06	
+540	1.7899e-05	0.0047889	0.0021809	0.0023989	3.899e-06	
+541	1.7899e-05	0.0053959	0.0021889	0.0023999	3.899e-06	
+542	1.7899e-05	0.0047739	0.0021829	0.0024119	2.899e-06	
+543	1.7899e-05	0.0047289	0.0022339	0.0024539	3.899e-06	
+544	1.7899e-05	0.0047659	0.0021949	0.0035419	5.899e-06	
+545	1.7899e-05	0.0048989	0.0023319	0.0024109	3.899e-06	
+546	1.7899e-05	0.0048659	0.0022979	0.0024389	2.899e-06	
+547	1.6899e-05	0.0049089	0.0022469	0.0024269	3.899e-06	
+548	1.7899e-05	0.0047529	0.0023039	0.0025229	3.899e-06	
+549	1.7899e-05	0.0049059	0.0022709	0.0024449	3.899e-06	
+550	1.7899e-05	0.0050829	0.0023029	0.0026099	3.899e-06	
+551	1.7899e-05	0.0048149	0.0022239	0.0024459	2.899e-06	
+552	1.7899e-05	0.0048059	0.0023819	0.0024529	3.899e-06	
+553	1.7899e-05	0.0255659	0.0024039	0.0026589	3.899e-06	
+554	1.9899e-05	0.0059829	0.0022399	0.0035579	4.899e-06	
+555	1.8899e-05	0.0053149	0.0022429	0.0024669	3.899e-06	
+556	1.7899e-05	0.0062459	0.0022439	0.0028159	4.899e-06	
+557	1.7899e-05	0.0050869	0.0023949	0.0027379	3.899e-06	
+558	2.7899e-05	0.0048519	0.0023639	0.0025789	3.899e-06	
+559	2.7899e-05	0.0074969	0.0033869	0.0037139	5.899e-06	
+560	1.7899e-05	0.0048449	0.0022859	0.0025099	3.899e-06	
+561	1.7899e-05	0.0049139	0.0022629	0.0025369	3.899e-06	
+562	1.7899e-05	0.0048579	0.0022639	0.0025469	3.899e-06	
+563	1.7899e-05	0.0049279	0.0023059	0.0035369	5.899e-06	
+564	1.8899e-05	0.0050659	0.0023699	0.0025049	2.899e-06	
+565	1.7899e-05	0.0049449	0.0023549	0.0025619	3.899e-06	
+566	1.7899e-05	0.0049599	0.0022839	0.0025169	3.899e-06	
+567	1.7899e-05	0.0049449	0.0023829	0.0025929	3.899e-06	
+568	1.8899e-05	0.0050899	0.0022919	0.0026719	3.899e-06	
+569	1.8899e-05	0.0050039	0.0024439	0.0025499	3.899e-06	
+570	1.7899e-05	0.0049429	0.0022929	0.0025429	3.899e-06	
+571	1.7899e-05	0.0050969	0.0023509	0.0025359	2.899e-06	
+572	1.8899e-05	0.0049519	0.0023389	0.0025489	2.899e-06	
+573	7.7899e-05	0.0060449	0.0031379	0.0025509	3.899e-06	
+574	1.8899e-05	0.0133309	0.0024599	0.0086639	8.899e-06	
+575	1.8899e-05	0.0086309	0.0033939	0.0026499	2.899e-06	
+576	1.8899e-05	0.0051109	0.0024989	0.0026649	3.899e-06	
+577	1.8899e-05	0.0051679	0.0024359	0.0025539	2.899e-06	
+578	1.8899e-05	0.0050109	0.0023449	0.0025619	2.899e-06	
+579	1.7899e-05	0.0051549	0.0023419	0.0025789	3.899e-06	
+580	1.7899e-05	0.0050199	0.0025999	0.0026519	3.899e-06	
+581	1.8899e-05	0.0051179	0.0033799	0.0027289	3.899e-06	
+582	1.8899e-05	0.0051639	0.0024189	0.0026309	3.899e-06	
+583	1.8899e-05	0.0050549	0.0023619	0.0025799	3.899e-06	
+584	1.8899e-05	0.0051269	0.0024329	0.0026479	3.899e-06	
+585	1.9899e-05	0.0050629	0.0024159	0.0025969	3.899e-06	
+586	1.8899e-05	0.0052939	0.0024169	0.0027309	3.899e-06	
+587	1.8899e-05	0.0051489	0.0023749	0.0025929	3.899e-06	
+588	1.8899e-05	0.0050869	0.0024469	0.0026609	1.3899e-05	
+589	1.8899e-05	0.0149319	0.0139209	0.0026789	3.899e-06	
+590	1.9899e-05	0.0185139	0.0076829	0.0026449	3.899e-06	
+591	1.9899e-05	0.0086989	0.0023909	0.0069089	8.899e-06	
+592	1.9899e-05	0.0210229	0.0067879	0.0028619	4.899e-06	
+593	2.0899e-05	0.0236779	0.0083169	0.0049729	1.0899e-05	
+594	1.9899e-05	0.0134579	0.0046229	0.0026879	3.899e-06	
+595	3.3899e-05	0.0085849	0.0057139	0.0060869	7.899e-06	
+596	1.9899e-05	0.0155939	0.0045269	0.0027879	3.899e-06	
+597	2.0899e-05	0.0056559	0.0024329	0.0069559	9.899e-06	
+598	1.9899e-05	0.0054849	0.0024239	0.0027589	3.899e-06	
+599	1.9899e-05	0.0052039	0.0024959	0.0026479	3.899e-06	
+600	1.8899e-05	0.0053179	0.0024949	0.0026709	3.899e-06	
+601	1.9899e-05	0.0053439	0.0025169	0.0027129	3.899e-06	
+602	1.9899e-05	0.0053869	0.0024569	0.0026789	3.899e-06	
+603	1.8899e-05	0.0053019	0.0025199	0.0026839	3.899e-06	
+604	1.8899e-05	0.0052459	0.0024349	0.0027509	3.899e-06	
+605	1.8899e-05	0.0052309	0.0024909	0.0026749	3.899e-06	
+606	1.9899e-05	0.0053259	0.0024449	0.0038649	5.899e-06	
+607	1.9899e-05	0.0054559	0.0024609	0.0027779	3.899e-06	
+608	1.9899e-05	0.0052779	0.0025179	0.0036699	5.899e-06	
+609	2.0899e-05	0.0054199	0.0024559	0.0027019	3.899e-06	
+610	1.9899e-05	0.0052919	0.0025239	0.0028139	3.899e-06	
+611	3.0899e-05	0.0054319	0.0024659	0.0027489	3.899e-06	
+612	1.9899e-05	0.0053909	0.0025229	0.0027299	3.899e-06	
+613	1.9899e-05	0.0053119	0.0024789	0.0027939	3.899e-06	
+614	2.9899e-05	0.0055979	0.0026429	0.0028399	3.899e-06	
+615	2.0899e-05	0.0055459	0.0025799	0.0049159	8.899e-06	
+616	1.9899e-05	0.0054859	0.0026189	0.0028959	3.899e-06	
+617	1.9899e-05	0.0076789	0.0025899	0.0027429	3.899e-06	
+618	2.0899e-05	0.0054339	0.0025759	0.0027479	3.899e-06	
+619	1.9899e-05	0.0054279	0.0025029	0.0027969	3.899e-06	
+620	1.9899e-05	0.0055449	0.0025439	0.0027489	3.899e-06	
+621	1.9899e-05	0.0054949	0.0035769	0.0027559	4.899e-06	
+622	2.0899e-05	0.0054279	0.0025169	0.0029849	4.899e-06	
+623	1.9899e-05	0.0054499	0.0025159	0.0027919	3.899e-06	
+624	1.9899e-05	0.0054609	0.0037549	0.0028329	4.899e-06	
+625	1.9899e-05	0.0055099	0.0027939	0.0041959	5.899e-06	
+626	3.1899e-05	0.0083829	0.0038419	0.0043289	7.6899e-05	
+627	2.0899e-05	0.0056439	0.0025399	0.0027829	3.899e-06	
+628	2.0899e-05	0.0055789	0.0025479	0.0028579	3.899e-06	
+629	1.9899e-05	0.0054539	0.0026139	0.0040369	5.899e-06	
+630	1.9899e-05	0.0055279	0.0026319	0.0028099	3.899e-06	
+631	1.9899e-05	0.0055509	0.0248969	0.0133739	1.0899e-05	
+632	2.0899e-05	0.0064559	0.0027409	0.0028619	3.899e-06	
+633	2.0899e-05	0.0055689	0.0025609	0.0028909	3.899e-06	
+634	1.9899e-05	0.0056159	0.0026229	0.0028179	4.899e-06	
+635	2.0899e-05	0.0056759	0.0026399	0.0030129	4.899e-06	
+636	2.1899e-05	0.0056429	0.0025819	0.0040429	6.899e-06	
+637	2.1899e-05	0.0055359	0.0026069	0.0029419	4.899e-06	
+638	2.0899e-05	0.0055889	0.0026539	0.0028469	3.899e-06	
+639	2.0899e-05	0.0055379	0.0026619	0.0028959	4.899e-06	
+640	2.0899e-05	0.0067689	0.0026189	0.0028559	3.899e-06	
+641	2.1899e-05	0.0057359	0.0026109	0.0029259	3.899e-06	
+642	2.0899e-05	0.0055739	0.0025999	0.0029959	4.899e-06	
+643	2.0899e-05	0.0056129	0.0026579	0.0028589	3.899e-06	
+644	2.0899e-05	0.0056639	0.0029539	0.0029719	3.899e-06	
+645	2.1899e-05	0.0055819	0.0027329	0.0029319	3.899e-06	
+646	2.0899e-05	0.0057079	0.0027059	0.0029929	4.899e-06	
+647	1.9899e-05	0.0056759	0.0026149	0.0028689	3.899e-06	
+648	2.0899e-05	0.0056779	0.0026259	0.0039379	6.899e-06	
+649	2.1899e-05	0.0056969	0.0026799	0.0028879	3.899e-06	
+650	2.0899e-05	0.0060399	0.0027139	0.0029039	3.899e-06	
+651	2.0899e-05	0.0057139	0.0026949	0.0029639	3.899e-06	
+652	2.0899e-05	0.0056619	0.0026879	0.0029889	4.899e-06	
+653	2.0899e-05	0.0059159	0.0026659	0.0028949	3.899e-06	
+654	2.0899e-05	0.0056759	0.0027609	0.0029109	3.899e-06	
+655	2.0899e-05	0.0057019	0.0117389	0.0029459	4.899e-06	
+656	2.2899e-05	0.0059069	0.0027529	0.0051699	8.899e-06	
+657	2.1899e-05	0.0059379	0.0026659	0.0030139	3.899e-06	
+658	2.1899e-05	0.0058059	0.0026759	0.0029939	3.899e-06	
+659	2.0899e-05	0.0058529	0.0026689	0.0030329	3.899e-06	
+660	2.0899e-05	0.0058319	0.0026679	0.0030069	3.899e-06	
+661	2.0899e-05	0.0059719	0.0026839	0.0029439	4.899e-06	
+662	2.1899e-05	0.0058719	0.0026729	0.0029589	3.899e-06	
+663	2.0899e-05	0.0058569	0.0168919	0.0030599	3.899e-06	
+664	2.0899e-05	0.0284489	0.0026919	0.0102869	1.0899e-05	
+665	2.4899e-05	0.0096639	0.0028899	0.0029969	3.899e-06	
+666	2.1899e-05	0.0059969	0.0027139	0.0030629	4.899e-06	
+667	2.1899e-05	0.0059379	0.0027099	0.0030119	3.899e-06	
+668	2.1899e-05	0.0060359	0.0027149	0.0029859	4.899e-06	
+669	2.1899e-05	0.0057979	0.0038849	0.0030339	4.899e-06	
+670	2.1899e-05	0.0060369	0.0027179	0.0030759	3.899e-06	
+671	2.0899e-05	0.0059969	0.0027149	0.0030309	4.899e-06	
+672	2.1899e-05	0.0059709	0.0027169	0.0030889	4.899e-06	
+673	2.0899e-05	0.0059629	0.0027229	0.0031999	4.899e-06	
+674	2.1899e-05	0.0059449	0.0027189	0.0030669	4.899e-06	
+675	2.1899e-05	0.0060649	0.0027799	0.0031519	4.899e-06	
+676	2.2899e-05	0.0059609	0.0027959	0.0041249	5.899e-06	
+677	2.2899e-05	0.0058719	0.0028279	0.0074039	1.1899e-05	
+678	6.4899e-05	0.0059629	0.0027389	0.0031969	4.899e-06	
+679	2.1899e-05	0.0059009	0.0028749	0.0030149	3.899e-06	
+680	2.1899e-05	0.0063619	0.0030459	0.0032449	4.899e-06	
+681	2.1899e-05	0.0061709	0.0029429	0.0033309	4.899e-06	
+682	2.1899e-05	0.0064699	0.0030089	0.0033659	3.899e-06	
+683	3.2899e-05	0.0116449	0.0068039	0.0051559	6.899e-06	
+684	2.1899e-05	0.0061679	0.0029329	0.0032109	4.899e-06	
+685	2.1899e-05	0.0059919	0.0027719	0.0030349	4.899e-06	
+686	2.1899e-05	0.0059969	0.0039509	0.0031879	3.899e-06	
+687	2.2899e-05	0.0060189	0.0027779	0.0031049	4.899e-06	
+688	2.1899e-05	0.0061039	0.0028149	0.0030609	4.899e-06	
+689	2.1899e-05	0.0061209	0.0027919	0.0031759	3.899e-06	
+690	2.1899e-05	0.0059759	0.0028049	0.0033699	4.899e-06	
+691	2.2899e-05	0.0060909	0.0027979	0.0030619	3.899e-06	
+692	2.1899e-05	0.0060579	0.0028949	0.0030799	4.899e-06	
+693	2.1899e-05	0.0060099	0.0028689	0.0030779	4.899e-06	
+694	2.1899e-05	0.0063129	0.0027979	0.0041619	7.899e-06	
+695	2.2899e-05	0.0061619	0.0029369	0.0031579	3.899e-06	
+696	2.1899e-05	0.0061499	0.0028149	0.0030989	3.899e-06	
+697	2.3899e-05	0.0061269	0.0029629	0.0041499	5.899e-06	
+698	2.3899e-05	0.0060989	0.0028199	0.0034629	4.899e-06	
+699	2.2899e-05	0.0061849	0.0028319	0.0030999	4.899e-06	
+700	2.2899e-05	0.0069239	0.0028389	0.0032349	4.899e-06	
+701	2.2899e-05	0.0060829	0.0029069	0.0032109	4.899e-06	
+702	2.2899e-05	0.0061209	0.0028469	0.0280419	1.3899e-05	
+703	2.2899e-05	0.0072549	0.0029699	0.0031279	4.899e-06	
+704	2.2899e-05	0.0063999	0.0029069	0.0033729	4.899e-06	
+705	3.3899e-05	0.0061579	0.0028719	0.0031259	3.899e-06	
+706	2.1899e-05	0.0062919	0.0028679	0.0032479	4.899e-06	
+707	2.1899e-05	0.0306509	0.0037799	0.0031679	4.899e-06	
+708	2.2899e-05	0.0062709	0.0033439	0.0032909	4.899e-06	
+709	2.2899e-05	0.0080639	0.0028819	0.0033339	4.899e-06	
+710	2.3899e-05	0.0062429	0.0028899	0.0034279	4.899e-06	
+711	2.3899e-05	0.0063839	0.0029379	0.0032039	4.899e-06	
+712	2.2899e-05	0.0062709	0.0028879	0.0031919	4.899e-06	
+713	2.2899e-05	0.0063009	0.0028919	0.0031719	4.899e-06	
+714	2.2899e-05	0.0062019	0.0040799	0.0033099	4.899e-06	
+715	2.3899e-05	0.0062859	0.0029039	0.0031829	4.899e-06	
+716	2.2899e-05	0.0066739	0.0029089	0.0032289	4.899e-06	
+717	2.4899e-05	0.0064429	0.0030129	0.0043529	6.899e-06	
+718	2.2899e-05	0.0062429	0.0031439	0.0032629	4.899e-06	
+719	2.2899e-05	0.0064279	0.0029149	0.0032669	4.899e-06	
+720	2.2899e-05	0.0063889	0.0029879	0.0032599	3.899e-06	
+721	2.2899e-05	0.0063279	0.0029259	0.0032089	4.899e-06	
+722	2.2899e-05	0.0075139	0.0029349	0.0032609	4.899e-06	
+723	2.3899e-05	0.0064729	0.0029869	0.0034069	5.899e-06	
+724	2.2899e-05	0.0065869	0.0029369	0.0033249	4.899e-06	
+725	2.3899e-05	0.0064369	0.0029429	0.0032329	4.899e-06	
+726	2.2899e-05	0.0064799	0.0029809	0.0033229	4.899e-06	
+727	2.3899e-05	0.0063379	0.0030089	0.0032519	4.899e-06	
+728	2.3899e-05	0.0063729	0.0029529	0.0032569	4.899e-06	
+729	2.2899e-05	0.0065669	0.0029579	0.0033239	4.899e-06	
+730	2.3899e-05	0.0075419	0.0030069	0.0033299	4.899e-06	
+731	2.3899e-05	0.0064229	0.0030539	0.0034659	1.4899e-05	
+732	2.3899e-05	0.0064509	0.0029739	0.0033989	4.899e-06	
+733	2.2899e-05	0.0064209	0.0029759	0.0032609	4.899e-06	
+734	2.3899e-05	0.0066619	0.0029839	0.0032799	4.899e-06	
+735	2.2899e-05	0.0064869	0.0029939	0.0034089	4.899e-06	
+736	2.3899e-05	0.0275829	0.0038829	0.0184019	1.1899e-05	
+737	2.8899e-05	0.0126079	0.0030819	0.0032939	4.899e-06	
+738	2.3899e-05	0.0068699	0.0030449	0.0033779	4.899e-06	
+739	2.4899e-05	0.0064319	0.0030739	0.0033629	4.899e-06	
+740	2.3899e-05	0.0064389	0.0031979	0.0034729	4.899e-06	
+741	2.3899e-05	0.0065389	0.0030109	0.0044239	6.899e-06	
+742	2.4899e-05	0.0067869	0.0030879	0.0033089	4.899e-06	
+743	2.4899e-05	0.0066359	0.0032509	0.0033159	4.899e-06	
+744	2.3899e-05	0.0065489	0.0030889	0.0035459	5.899e-06	
+745	2.3899e-05	0.0064909	0.0030889	0.0035099	4.899e-06	
+746	2.3899e-05	0.0065899	0.0030439	0.0033539	4.899e-06	
+747	2.4899e-05	0.0066669	0.0031849	0.0033189	4.899e-06	
+748	2.3899e-05	0.0065949	0.0031969	0.0034109	4.899e-06	
+749	2.3899e-05	0.0076309	0.0031659	0.0034999	4.899e-06	
+750	2.5899e-05	0.0065339	0.0030449	0.0034859	4.899e-06	
+751	3.6899e-05	0.0105839	0.0046509	0.0064129	1.0899e-05	
+752	2.4899e-05	0.0068569	0.0030569	0.0034459	4.899e-06	
+753	4.1899e-05	0.0067059	0.0031079	0.0034069	4.899e-06	
+754	3.4899e-05	0.0067399	0.0031019	0.0034129	4.899e-06	
+755	2.4899e-05	0.0066569	0.0030889	0.0034299	4.899e-06	
+756	2.4899e-05	0.0065799	0.0030839	0.0034269	4.899e-06	
+757	2.3899e-05	0.0066649	0.0031479	0.0044729	7.899e-06	
+758	2.5899e-05	0.0068479	0.0031129	0.0044279	6.899e-06	
+759	2.3899e-05	0.0067849	0.0031779	0.0034009	4.899e-06	
+760	2.4899e-05	0.0068399	0.0031619	0.0034309	4.899e-06	
+761	2.3899e-05	0.0067809	0.0032739	0.0035099	5.899e-06	
+762	2.4899e-05	0.0066869	0.0030939	0.0034169	4.899e-06	
+763	2.3899e-05	0.0068349	0.0030959	0.0034749	5.899e-06	
+764	2.4899e-05	0.0069069	0.0031749	0.0034379	4.899e-06	
+765	2.4899e-05	0.0078719	0.0032509	0.0034739	5.899e-06	
+766	3.4899e-05	0.0067599	0.0031859	0.0035289	4.899e-06	
+767	2.4899e-05	0.0067029	0.0032329	0.0034889	4.899e-06	
+768	3.6899e-05	0.0067899	0.0032379	0.0034279	4.899e-06	
+769	2.4899e-05	0.0072019	0.0033239	0.0042069	5.899e-06	
+770	2.4899e-05	0.0068289	0.0031419	0.0035289	4.899e-06	
+771	2.4899e-05	0.0069449	0.0034429	0.0035679	4.899e-06	
+772	2.4899e-05	0.0086689	0.0032839	0.0036629	4.899e-06	
+773	2.5899e-05	0.0076669	0.0032879	0.0035949	5.899e-06	
+774	2.4899e-05	0.0067539	0.0031539	0.0035439	5.899e-06	
+775	2.3899e-05	0.0068319	0.0039659	0.0034579	4.899e-06	
+776	2.5899e-05	0.0071439	0.0031529	0.0034669	5.899e-06	
+777	2.4899e-05	0.0068559	0.0032989	0.0035299	4.899e-06	
+778	2.5899e-05	0.0310919	0.0031969	0.0036609	4.899e-06	
+779	2.5899e-05	0.0082599	0.0032459	0.0035489	4.899e-06	
+780	2.4899e-05	0.0071249	0.0032649	0.0034909	4.899e-06	
+781	2.5899e-05	0.0070619	0.0032929	0.0034889	4.899e-06	
+782	2.4899e-05	0.0068329	0.0031919	0.0036719	5.899e-06	
+783	2.4899e-05	0.0068159	0.0031869	0.0034869	4.899e-06	
+784	2.5899e-05	0.0069739	0.0032929	0.0046129	5.899e-06	
+785	2.5899e-05	0.0083099	0.0033069	0.0035069	4.899e-06	
+786	2.5899e-05	0.0070069	0.0032109	0.0036079	4.899e-06	
+787	2.5899e-05	0.0069769	0.0033859	0.0035169	4.899e-06	
+788	2.5899e-05	0.0070999	0.0032449	0.0036439	5.899e-06	
+789	2.5899e-05	0.0068779	0.0032849	0.0035859	4.899e-06	
+790	2.5899e-05	0.0069349	0.0032269	0.0035409	4.899e-06	
+791	2.5899e-05	0.0070649	0.0032139	0.0045409	7.899e-06	
+792	2.5899e-05	0.0071439	0.0032179	0.0037349	5.899e-06	
+793	2.5899e-05	0.0069959	0.0033039	0.0036419	4.899e-06	
+794	2.5899e-05	0.0070059	0.0032999	0.0035649	4.899e-06	
+795	2.4899e-05	0.0070619	0.0035209	0.0036729	5.899e-06	
+796	2.5899e-05	0.0069709	0.0033179	0.0035829	5.899e-06	
+797	2.5899e-05	0.0070279	0.0032479	0.0036509	5.899e-06	
+798	2.7899e-05	0.0072339	0.0032809	0.0068469	1.1899e-05	
+799	2.5899e-05	0.0073079	0.0032529	0.0035639	4.899e-06	
+800	2.6899e-05	0.0072809	0.0032529	0.0036699	4.899e-06	
+801	2.5899e-05	0.0069849	0.0033169	0.0036679	5.899e-06	
+802	2.5899e-05	0.0073719	0.0032969	0.0036619	4.899e-06	
+803	2.5899e-05	0.0071979	0.0032869	0.0036529	5.899e-06	
+804	2.6899e-05	0.0298669	0.0161989	0.0120529	1.1899e-05	
+805	2.6899e-05	0.0167599	0.0085119	0.0085419	1.1899e-05	
+806	2.5899e-05	0.0072039	0.0033809	0.0038239	5.899e-06	
+807	4.0899e-05	0.0110029	0.0049569	0.0054929	8.899e-06	
+808	2.5899e-05	0.0071439	0.0033679	0.0036559	5.899e-06	
+809	2.6899e-05	0.0083599	0.0034929	0.0037119	5.899e-06	
+810	2.6899e-05	0.0071399	0.0034489	0.0037119	4.899e-06	
+811	2.5899e-05	0.0071139	0.0033119	0.0038589	5.899e-06	
+812	2.5899e-05	0.0073139	0.0033089	0.0038189	4.899e-06	
+813	2.6899e-05	0.0074459	0.0033179	0.0036759	5.899e-06	
+814	2.6899e-05	0.0073769	0.0033629	0.0037179	5.899e-06	
+815	2.6899e-05	0.0071479	0.0034049	0.0037079	5.899e-06	
+816	2.6899e-05	0.0116739	0.0034009	0.0038189	5.899e-06	
+817	2.6899e-05	0.0075389	0.0034169	0.0036619	5.899e-06	
+818	2.6899e-05	0.0074109	0.0033779	0.0037459	5.899e-06	
+819	2.7899e-05	0.0071819	0.0047039	0.0039119	5.899e-06	
+820	2.6899e-05	0.0071859	0.0034159	0.0038749	5.899e-06	
+821	2.6899e-05	0.0072509	0.0033439	0.0036779	4.899e-06	
+822	2.6899e-05	0.0073399	0.0097829	0.0037999	5.899e-06	
+823	2.5899e-05	0.0184209	0.0034869	0.0036879	4.899e-06	
+824	2.6899e-05	0.0075119	0.0033659	0.0038339	6.899e-06	
+825	2.7899e-05	0.0075799	0.0034859	0.0039769	5.899e-06	
+826	3.6899e-05	0.0073079	0.0035459	0.0037089	4.899e-06	
+827	2.6899e-05	0.0072479	0.0037019	0.0037779	5.899e-06	
+828	2.6899e-05	0.0083469	0.0034519	0.0055329	1.0899e-05	
+829	2.7899e-05	0.0082639	0.0033759	0.0038439	5.899e-06	
+830	2.6899e-05	0.0074989	0.0033979	0.0039459	5.899e-06	
+831	2.5899e-05	0.0074279	0.0035989	0.0037569	5.899e-06	
+832	3.6899e-05	0.0080289	0.0034829	0.0037409	4.899e-06	
+833	2.7899e-05	0.0073749	0.0033989	0.0038069	5.899e-06	
+834	2.7899e-05	0.0073859	0.0046389	0.0038129	5.899e-06	
+835	2.6899e-05	0.0077069	0.0034099	0.0038249	4.899e-06	
+836	2.6899e-05	0.0075379	0.0034119	0.0038179	4.899e-06	
+837	2.7899e-05	0.0073509	0.0034809	0.0038069	4.899e-06	
+838	2.7899e-05	0.0075609	0.0047639	0.0038519	5.899e-06	
+839	2.8899e-05	0.0085229	0.0048049	0.0249649	1.4899e-05	
+840	2.7899e-05	0.0078349	0.0034399	0.0038749	5.899e-06	
+841	2.7899e-05	0.0075419	0.0035129	0.0053079	9.899e-06	
+842	2.7899e-05	0.0076759	0.0035479	0.0037809	4.899e-06	
+843	2.6899e-05	0.0075739	0.0035859	0.0038759	5.899e-06	
+844	2.6899e-05	0.0075009	0.0034299	0.0038549	5.899e-06	
+845	2.7899e-05	0.0077109	0.0034349	0.0038399	4.899e-06	
+846	2.7899e-05	0.0086679	0.0035269	0.0038589	5.899e-06	
+847	2.6899e-05	0.0074919	0.0035479	0.0037779	4.899e-06	
+848	2.7899e-05	0.0074759	0.0034889	0.0039599	5.899e-06	
+849	2.7899e-05	0.0106079	0.0036309	0.0038499	5.899e-06	
+850	2.7899e-05	0.0076169	0.0038229	0.0038249	5.899e-06	
+851	2.7899e-05	0.0080179	0.0035829	0.0039369	4.899e-06	
+852	2.6899e-05	0.0089289	0.0036139	0.0040039	5.899e-06	
+853	2.8899e-05	0.0076049	0.0037589	0.0040639	6.899e-06	
+854	2.7899e-05	0.0079049	0.0037539	0.0041039	5.899e-06	
+855	2.6899e-05	0.0078069	0.0035959	0.0039519	5.899e-06	
+856	2.7899e-05	0.0077389	0.0035769	0.0038409	5.899e-06	
+857	2.7899e-05	0.0075519	0.0035669	0.0039459	5.899e-06	
+858	2.7899e-05	0.0077299	0.0035729	0.0049869	9.899e-06	
+859	2.8899e-05	0.0076649	0.0048359	0.0039629	5.899e-06	
+860	2.7899e-05	0.0075269	0.0035089	0.0040849	6.899e-06	
+861	2.7899e-05	0.0075999	0.0035759	0.0040259	5.899e-06	
+862	2.7899e-05	0.0077869	0.0035719	0.0039199	5.899e-06	
+863	3.7899e-05	0.0075669	0.0035949	0.0288639	1.4899e-05	
+864	2.9899e-05	0.0260489	0.0079009	0.0092079	9.899e-06	
+865	3.0899e-05	0.0160059	0.0065269	0.0044529	6.899e-06	
+866	3.0899e-05	0.0084919	0.0037929	0.0041649	5.899e-06	
+867	3.0899e-05	0.0095589	0.0038929	0.0043549	6.899e-06	
+868	2.9899e-05	0.0083289	0.0038719	0.0041819	6.899e-06	
+869	3.0899e-05	0.0083079	0.0037939	0.0043519	6.899e-06	
+870	3.0899e-05	0.0081889	0.0038759	0.0043469	6.899e-06	
+871	2.9899e-05	0.0083629	0.0039249	0.0041679	5.899e-06	
+872	3.0899e-05	0.0082499	0.0038799	0.0042699	5.899e-06	
+873	3.0899e-05	0.0128179	0.0039249	0.0043369	6.899e-06	
+874	3.0899e-05	0.0082839	0.0041129	0.0043319	5.899e-06	
+875	2.9899e-05	0.0084919	0.0039509	0.0042499	5.899e-06	
+876	4.3899e-05	0.0119339	0.0054879	0.0059819	8.899e-06	
+877	3.0899e-05	0.0084059	0.0039899	0.0042529	5.899e-06	
+878	3.0899e-05	0.0084209	0.0038649	0.0042219	5.899e-06	
+879	3.0899e-05	0.0083679	0.0038339	0.0042059	5.899e-06	
+880	3.1899e-05	0.0097669	0.0050169	0.0042309	5.899e-06	
+881	3.0899e-05	0.0084959	0.0040069	0.0042309	5.899e-06	
+882	3.0899e-05	0.0083409	0.0038729	0.0043149	6.899e-06	
+883	3.0899e-05	0.0085339	0.0038939	0.0043039	6.899e-06	
+884	3.0899e-05	0.0083799	0.0038629	0.0043709	6.899e-06	
+885	3.0899e-05	0.0084649	0.0042219	0.0043419	6.899e-06	
+886	3.0899e-05	0.0096819	0.0039909	0.0044409	6.899e-06	
+887	3.0899e-05	0.0086239	0.0038809	0.0044319	6.899e-06	
+888	3.1899e-05	0.0084579	0.0038819	0.0043379	6.899e-06	
+889	3.0899e-05	0.0085099	0.0039869	0.0050429	8.899e-06	
+890	3.0899e-05	0.0083549	0.0040049	0.0044729	6.899e-06	
+891	3.0899e-05	0.0083779	0.0038909	0.0223049	1.6899e-05	
+892	3.0899e-05	0.0085139	0.0052479	0.0043869	5.899e-06	
+893	3.0899e-05	0.0085459	0.0049079	0.0043679	5.899e-06	
+894	3.1899e-05	0.0087389	0.0039919	0.0043029	6.899e-06	
+895	3.1899e-05	0.0348029	0.0047639	0.0045159	7.899e-06	
+896	3.0899e-05	0.0086509	0.0039279	0.0044469	6.899e-06	
+897	3.0899e-05	0.0088349	0.0039369	0.0043979	6.899e-06	
+898	3.1899e-05	0.0087909	0.0040419	0.0044069	6.899e-06	
+899	3.1899e-05	0.0085439	0.0040399	0.0043839	6.899e-06	
+900	3.2899e-05	0.0086129	0.0063219	0.0045459	6.899e-06	
+901	3.0899e-05	0.0086519	0.0053629	0.0043269	6.899e-06	
+902	3.1899e-05	0.0084699	0.0042449	0.0044589	6.899e-06	
+903	3.1899e-05	0.0084769	0.0041489	0.0057089	1.1899e-05	
+904	3.1899e-05	0.0086639	0.0041729	0.0043739	6.899e-06	
+905	3.1899e-05	0.0087879	0.0039659	0.0045069	6.899e-06	
+906	3.0899e-05	0.0098429	0.0039609	0.0185769	1.6899e-05	
+907	3.2899e-05	0.0120739	0.0039739	0.0043929	6.899e-06	
+908	3.1899e-05	0.0088649	0.0041829	0.0044209	6.899e-06	
+909	3.1899e-05	0.0087539	0.0039779	0.0043639	6.899e-06	
+910	3.1899e-05	0.0087169	0.0043159	0.0043649	5.899e-06	
+911	3.1899e-05	0.0101299	0.0041109	0.0043799	6.899e-06	
+912	3.1899e-05	0.0086159	0.0041779	0.0043829	6.899e-06	
+913	3.0899e-05	0.0086169	0.0041419	0.0043729	5.899e-06	
+914	3.1899e-05	0.0088189	0.0039999	0.0045129	6.899e-06	
+915	3.2899e-05	0.0088369	0.0263659	0.0051749	1.0899e-05	
+916	3.1899e-05	0.0320119	0.0059169	0.0044149	6.899e-06	
+917	4.1899e-05	0.0090539	0.0042709	0.0043949	6.899e-06	
+918	0.000112899	0.0086009	0.0041009	0.0047329	6.899e-06	
+919	3.1899e-05	0.0086169	0.0053599	0.0048269	7.899e-06	
+920	3.3899e-05	0.0087469	0.0053429	0.0046499	6.899e-06	
+921	3.1899e-05	0.0086549	0.0041249	0.0047479	7.899e-06	
+922	3.2899e-05	0.0088009	0.0041219	0.0048169	8.899e-06	
+923	3.1899e-05	0.0087879	0.0041249	0.0045659	7.899e-06	
+924	3.1899e-05	0.0088809	0.0041449	0.0044419	5.899e-06	
+925	3.1899e-05	0.0100919	0.0041359	0.0044859	6.899e-06	
+926	3.2899e-05	0.0090309	0.0040479	0.0044639	5.899e-06	
+927	3.1899e-05	0.0091649	0.0041159	0.0044399	5.899e-06	
+928	3.1899e-05	0.0092969	0.0041239	0.0044699	6.899e-06	
+929	3.1899e-05	0.0088229	0.0041699	0.0044669	6.899e-06	
+930	3.2899e-05	0.0087619	0.0042289	0.0058519	1.2899e-05	
+931	4.5899e-05	0.0146059	0.0057229	0.0064909	9.899e-06	
+932	3.1899e-05	0.0089069	0.0042099	0.0046379	6.899e-06	
+933	3.2899e-05	0.0087959	0.0040729	0.0047299	6.899e-06	
+934	3.1899e-05	0.0087819	0.0040849	0.0046749	6.899e-06	
+935	3.1899e-05	0.0089849	0.0040939	0.0046719	6.899e-06	
+936	3.2899e-05	0.0089879	0.0041459	0.0048839	7.899e-06	
+937	0.000157899	0.0103609	0.0043469	0.0048649	7.899e-06	
+938	3.1899e-05	0.0114179	0.0041039	0.0046579	6.899e-06	
+939	3.1899e-05	0.0091459	0.0041719	0.0045989	6.899e-06	
+940	3.2899e-05	0.0092539	0.0041569	0.0057859	1.0899e-05	
+941	3.4899e-05	0.0091319	0.0053289	0.0046179	6.899e-06	
+942	3.2899e-05	0.0092209	0.0057099	0.0046369	7.899e-06	
+943	3.3899e-05	0.0091839	0.0041949	0.0045489	6.899e-06	
+944	3.2899e-05	0.0089909	0.0041949	0.0045519	6.899e-06	
+945	3.3899e-05	0.0089559	0.0043809	0.0045659	6.899e-06	
+946	3.2899e-05	0.0141629	0.0301729	0.0112909	1.5899e-05	
+947	3.3899e-05	0.0091669	0.0043249	0.0063019	1.2899e-05	
+948	3.2899e-05	0.0101989	0.0041959	0.0049829	9.899e-06	
+949	0.000203899	0.0095909	0.0046799	0.0046369	7.899e-06	
+950	3.2899e-05	0.0094489	0.0047959	0.0048049	2.4899e-05	
+951	3.2899e-05	0.0113919	0.0046229	0.0046259	6.899e-06	
+952	3.2899e-05	0.0098539	0.0045129	0.0048379	9.899e-06	
+953	4.8899e-05	0.0096459	0.0042659	0.0056839	1.2899e-05	
+954	3.2899e-05	0.0099479	0.0048999	0.0047359	8.899e-06	
+955	3.2899e-05	0.0215619	0.0056919	0.0048729	7.899e-06	
+956	3.4899e-05	0.0094139	0.0044439	0.0049279	8.899e-06	
+957	3.3899e-05	0.0093599	0.0043719	0.0049059	1.9899e-05	
+958	3.2899e-05	0.0091419	0.0046519	0.0049009	9.899e-06	
+959	3.2899e-05	0.0091489	0.0042729	0.0046979	7.899e-06	
+960	3.3899e-05	0.0098689	0.0042889	0.0058469	0.000164899	
+961	3.6899e-05	0.0094649	0.0054029	0.0050359	9.899e-06	
+962	3.3899e-05	0.0093769	0.0043649	0.0046149	6.899e-06	
+963	3.2899e-05	0.0092189	0.0042249	0.0048889	7.899e-06	
+964	3.3899e-05	0.0091899	0.0042239	0.0048699	7.899e-06	
+965	3.3899e-05	0.0460789	0.0065389	0.0125939	1.6899e-05	
+966	3.3899e-05	0.0130879	0.0047709	0.0307279	1.6899e-05	
+967	3.3899e-05	0.0281729	0.0230209	0.0119789	1.5899e-05	
+968	3.3899e-05	0.0255159	0.0186649	0.0131539	1.6899e-05	
+969	0.0102249	0.0226139	0.0129149	0.0113599	1.6899e-05	
+970	3.7899e-05	0.0209929	0.0050199	0.0061619	1.3899e-05	
+971	3.3899e-05	0.0197699	0.0045609	0.0047629	6.899e-06	
+972	3.3899e-05	0.0092749	0.0043389	0.0046769	6.899e-06	
+973	3.3899e-05	0.0093009	0.0046719	0.0048689	8.899e-06	
+974	3.2899e-05	0.0097519	0.0046249	0.0046999	6.899e-06	
+975	3.3899e-05	0.0095799	0.0056049	0.0046849	6.899e-06	
+976	3.3899e-05	0.0093709	0.0045129	0.0052709	9.899e-06	
+977	3.4899e-05	0.0094479	0.0044109	0.0047779	7.899e-06	
+978	3.3899e-05	0.0091719	0.0044389	0.0049639	7.899e-06	
+979	3.3899e-05	0.0098909	0.0045519	0.0047329	6.899e-06	
+980	3.4899e-05	0.0393159	0.0076389	0.0091419	1.6899e-05	
+981	3.5899e-05	0.0256719	0.0139389	0.0315769	3.2899e-05	
+982	3.4899e-05	0.0399809	0.0145929	0.0233169	1.8899e-05	
+983	4.7899e-05	0.0491849	0.0151109	0.0207369	1.8899e-05	
+984	3.5899e-05	0.0292899	0.0257929	0.0143239	1.5899e-05	
+985	3.4899e-05	0.0413219	0.0189449	0.0099279	1.1899e-05	
+986	3.4899e-05	0.0198969	0.0095989	0.0120969	1.2899e-05	
+987	3.4899e-05	0.0198499	0.0227149	0.0307089	1.6899e-05	
+988	3.3899e-05	0.0315779	0.0148109	0.0113489	1.5899e-05	
+989	3.4899e-05	0.0212109	0.0097639	0.0100729	1.4899e-05	
+990	3.3899e-05	0.0197249	0.0095589	0.0100139	1.4899e-05	
+991	3.3899e-05	0.0213859	0.0063929	0.0302259	1.8899e-05	
+992	3.5899e-05	0.0167039	0.0095449	0.0148769	1.4899e-05	
+993	3.4899e-05	0.0202249	0.0093799	0.0085509	1.7899e-05	
+994	3.3899e-05	0.0178569	0.0094709	0.0110989	1.3899e-05	
+995	3.4899e-05	0.0199219	0.0074789	0.0133999	1.3899e-05	
+996	4.8899e-05	0.0222519	0.0044709	0.0133109	1.6899e-05	
+997	3.5899e-05	0.0369089	0.0091699	0.0050789	8.899e-06	
+998	3.4899e-05	0.0095709	0.0043729	0.0050909	7.899e-06	
+999	3.3899e-05	0.0381629	0.0044859	0.0047989	6.899e-06	
+1000	3.5899e-05	0.0097529	0.0044349	0.0048009	6.899e-06	
+1001	3.7899e-05	0.0098429	0.0055449	0.0050319	8.899e-06	
+endofdata

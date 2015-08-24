@@ -1,0 +1,2108 @@
+# BenchIT-Resultfile
+#
+# feel free to fill in more architectural information
+#########################################################
+beginofmeasurementinfos
+kernelstring="numerical.rkstep.F95.0.0.gauss2" 
+date="Aug 19 02:32:34 2007"
+numberofprocessorsused=1
+memorysizeused="0"
+comment=
+kerneldescription=
+language="F95"
+compiler="ifort"
+compilerversion=" unknown"
+compilerflags="-free  -O4"
+c_compiler_version="910, build 20061103"
+library1=""
+kernelisparallel=0
+kernelisparallel=0
+is3d=0
+codesequence="z = L*u (factorised)"
+xinmin=2
+xinmax=1001
+y1inmin=-1.244e-06
+y1inmax=4.2756e-05
+y2inmin=3.1756e-05
+y2inmax=0.109206
+y3inmin=3.1756e-05
+y3inmax=0.0660458
+y4inmin=3.0756e-05
+y4inmax=0.0643148
+y5inmin=-1.244e-06
+y5inmax=7.56e-07
+endofmeasurementinfos
+################################################
+beginofarchitecture
+# Architekturangaben
+nodename="N4"
+hostname="localhost" 
+###############################################################################
+#                                                                             #
+#  B e n c h I T - Performance Measurement for Scientific Applications        #
+#                                                                             #
+#  Architectural information about your system, used to compare your system   #
+#  to others. Please fill out the information - your resultfile will not be   #
+#  accepted on the project homepage without this information.                 #
+#                                                                             #
+#  Authors: Guido Juckeland (juckeland@zhr.tu-dresden.de)                     #
+#           Stefan Pflueger (pflueger@zhr.tu-dresden.de)                      #
+#  $Revision: 1.6 $                                                           #
+#  $Date: 2007/07/10 15:06:44 $                                               #
+#                                                                             #
+###############################################################################
+
+#
+# feel free to insert your data
+#
+# quotation marks have to be `escaped'!!!
+#
+# Note: The examples are from very different systems.
+#
+
+
+# Manufacturer of the mainboard, for example: "MSI"
+mainboardmanufacturer=""
+
+# Type of the mainboard without manufacturer's name, for example: "845PE Max3 (800 Edition)"
+mainboardtype=""
+
+# Chipset of the mainboard, for example: "Intel i845PE"
+mainboardchipset=""
+
+# Total number of Processors
+numberofprocessors=
+
+# Name of the processor, for example: "Intel Pentium 4"
+processorname=""
+
+# Codename according to manufacturer roadmap, for example: "Montecito"
+codename=""
+
+# Processor Serial Number, if available
+processorserialnumber=""
+
+# Processor version, for example: "x86, Family 6, Model 5, Stepping 1"
+processorversion=""
+
+# Instruction Set Architecture (ISA) of the processor, for example: "IA-32" or "MIPS"
+processorisaset=""
+
+# Several processors are using exact descriptions of their ISA level, for example: "IV" (for MIPS)
+processorisalevel=""
+
+# Extensions of the ISA with an additional number; extendable
+# for example: 
+# processorisaextension1="MMX"
+# processorisaextension2="SSE"
+# processorisaextension3="SSE2"
+processorisaextension1=""
+processorisaextension2=""
+processorisaextension3=""
+
+# Clock rate of the processor in Hz, for example: 3060000000
+processorclockrate=""
+
+# Instruction length in bit, for example: 32 [for RISC] or 0 [for CISC or variable length]
+instructionlength=""
+
+# Processor word length or Word format or xx-bit architecture in bit, for example: 32 
+processorwordlength=""
+
+# Number of instructions issued to the functional units per clock, for example: 6
+instructionissue=""
+
+# Number of separate integer units, for example: 2
+integerunits=""
+
+# Number of separate floating point units, for example: 3
+floatingpointunits=""
+
+# Number of separate load/store units, for example: 1
+loadstoreunits=""
+
+# Support of multithreading, for example: 1 [0 for no | 1 for yes] [Hyperthreading --> 1]
+multithreading=""
+
+# Number of physical cores per CPU
+numberofcorespercpu=0
+
+# L1 instruction cache size in byte, for example: 12288 
+level1icachesize=""
+
+# L1 data cache size in byte, for example: 8192
+level1dcachesize=""
+
+# L2 cache size in byte, for example: 524288
+level2cachesize=""
+
+
+# L3 cache size in byte, for example:  33554432
+level3cachesize=""
+
+# L1 instruction cache organization, for example: "Execution Trace Cache"
+level1icachetype=""
+
+# L1 data cache organization, for example: "4-way set-associative, write-through, dual ported"
+level1dcachetype=""
+
+# L2 cache organization, for example: "8-way set-associative, cache line size 32 words"
+level2cachetype=""
+
+# L3 cache organization, for example: "8-way set-associative, cache line size 128 words with 4 128-byte sectors"
+level3cachetype=""
+
+# L2 cache location, for example: "on-chip" or "on-board"
+level2cachelocation=""
+
+# Support of prefetching, for example: 1 [0 for no | 1 for yes]
+prefetching=""
+
+# Support of preloading, for example: 1 [0 for no | 1 for yes]
+preloading=""
+
+# Clock rate of the processor side bus in Hz, for example: 133000000 
+processorsidebusclockrate=""
+
+# Clock rate of the backside bus (connection to the on-chip L2-cache) in Hz, for example: 200000000
+backsideclockrate=""
+
+# Structure details of the technology in m, for example: 0.000000130
+technologylevel=""
+
+# Memory chip type, for example: "PC-100 SDRAM" or "RIMM-4200"
+memorychiptype=""
+
+# Memory bus type, for example: "SDRAM bus" or "RAMBUS"
+memorybustype=""
+
+# Clock rate of the memory bus in Hz, for example: 100000000
+memorybusclockrate=""
+
+# Total size of available memory
+memorysize=
+
+# Additionaly comment for your system (e.g. Hyper Threading enabled/disabled)
+ systemcomment=""
+
+endofarchitecture
+####################################################
+beginofenvironmentvariables
+DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-Ko1GotBjVq,guid=b3c66d30a65a6\
+fd4295d20046c73a52"
+BENCHIT_MPIRUN="mpirun"
+BENCHIT_CC_COMPILER_VERSION="910, build 20061103"
+OPTIND="1"
+POSIXLY_CORRECT="y"
+BENCHIT_SHELL_INTERPRETER=""
+BENCHIT_MPIF77_C_FLAGS_OMP=""
+BENCHIT_F77_C_FLAGS_STD="-O2"
+BENCHIT_F95_C_FLAGS_STD="-O2"
+OMP_DYNAMIC="FALSE"
+LESSOPEN="|lesspipe.sh %s"
+BENCHIT_LIB_PVM=""
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_H="1.5 (Fri Jan 19 16:05:11 2007)"
+LANGUAGE="en_US.UTF-8"
+BENCHIT_F90_COMPILER_VERSION=" unknown"
+COLORTERM=""
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_TEMPLATE_C="1.12 (Fri Jul  6 16:14:47\
+2007)"
+BENCHIT_F77_C_FLAGS_OMP=""
+BENCHIT_F95_C_FLAGS_OMP=""
+BENCHIT_F_COMPILERFLAGS="-free  -O4"
+BENCHIT_KERNEL_FILE_VERSION_QUICKVIEW_SH="1.3 (Fri Sep 29 18:35:11 2006)"
+BENCHIT_PARAMETER_FILE="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic\
+1D/Benchit-V5/kernel/numerical/rkstep/F95/0/0/gauss2/PARAMETERS"
+GS_LIB="/home/nico/.fonts"
+BENCHIT_CPP_SCSL=""
+BENCHIT_RUN_QUEUEOPTIONS=""
+LC_TIME="de_DE.UTF-8"
+BENCHIT_KERNELBINARY="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1\
+/Benchit-V5/bin/numerical.rkstep.F95.0.0.gauss2.0"
+BENCHIT_KERNEL_FILE_VERSION_ERROR_H="1.1 (Tue Mar 13 08:22:03 2007)"
+BENCHIT_CXX_C_FLAGS_HIGH="-O3"
+ANT_HOME="/usr/share/ant-core"
+LESS="-R -M --shift 5"
+BENCHIT_LIB_FFTW3=" -lfftw3"
+BENCHIT_LIB_ACML=" -lacml"
+QTDIR="/usr/qt/3"
+BENCHIT_MPICC="icc"
+BENCHIT_RUN_QUEUENAME=""
+KONSOLE_DCOP="DCOPRef(konsole-27600,konsole)"
+BENCHIT_KERNEL_FILE_VERSION_UNAME_MINUS_A="NO REVISION (Mon Jul 18 15:03:19\
+2005)"
+BENCHIT_CPP_ESSL=""
+XDG_DATA_DIRS="/usr/share:/usr/kde/3.5/share:/usr/local/share"
+BENCHIT_KERNEL_FILE_VERSION_BENCHSCRIPT_H="1.1 (Tue May 23 10:13:00 2006)"
+BENCHIT_ARCH_SPEED="600M"
+BENCHIT_JAVA_FLAGS=""
+PWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/tool\
+"
+TERM="xterm"
+BENCHIT_KERNEL_FILE_VERSION_RANDOM="NO REVISION, UNABLE TO READ (Sun Aug 12\
+00:00:02 2007)"
+BENCHIT_KERNEL_START="2"
+BENCHIT_CXX_C_FLAGS=""
+BENCHIT_CC="icc"
+PRELINK_PATH=""
+BENCHIT_KERNEL_STEPS="1000"
+XDG_CONFIG_DIRS="/usr/kde/3.5/etc/xdg"
+JAVACC_HOME="/usr/share/javacc/"
+BENCHIT_F90="ifort"
+BENCHIT_RUN_REDIRECT_CONSOLE="output.txt"
+BASH_VERSION="3.2.17(1)-release"
+BENCHIT_F77_COMPILER_VERSION=" unknown"
+BENCHIT_F95_COMPILER_VERSION=" unknown"
+BENCHIT_MPICC_C_FLAGS_HIGH="-O3"
+BENCHIT_JAVA="java"
+BENCHIT_INTERACTIVE="0"
+BENCHIT_LIB_PTHREAD="-lpthread"
+BENCHIT_RUN_COREDUMPLIMIT="0"
+BENCHIT_INCLUDES="-I.\
+-I/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+INTEL_LICENCE_FILE="/opt/intel/fortran100/licenses"
+COMPILE_GLOBAL="1"
+BENCHIT_CC_C_FLAGS_HIGH="-O3"
+myval=""
+BENCHIT_KERNEL_FILE_VERSION_FILEVERSION="NO REVISION (Sun Aug 19 02:31:49\
+2007)"
+BENCHIT_LIB_BLAS="-lblas"
+BENCHIT_PERL_INTERPRETER=""
+SHLVL="3"
+BENCHIT_KERNEL_FILE_VERSION_BMERGE_SH="NO REVISION (Mon Jul 18 15:03:19 2005)"
+BENCHIT_KERNEL_FILE_VERSION_FEATURES="NO REVISION (Tue Jul 10 13:10:16 2007)"
+CONFIG_PROTECT_MASK="/etc/env.d/java/ /etc/gconf /etc/terminfo\
+/etc/revdep-rebuild /etc/splash"
+DCCC_PATH="/usr/lib/distcc/bin"
+BENCHIT_MPICC_C_FLAGS=""
+BENCHIT_F90_C_FLAGS_HIGH="-O3"
+SHELLOPTS="braceexpand:hashall:interactive-comments:posix"
+BENCHIT_RUN_MAX_MEMORY="0"
+BENCHIT_IGNORE_PARAMETER_FILE="0"
+JAVAC="/home/nico/.gentoo/java-config-2/current-user-vm/bin/javac"
+BENCHIT_PROGRESS_DIR="progress"
+BASH_ARGC="([0]=\"1\" [1]=\"1\")"
+BENCHIT_MPIF77=""
+BENCHIT_CC_C_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_TMP_ENV="NO REVISION (Sun Aug 19 02:31:51 2007)"
+QMAKESPEC="linux-g++"
+BENCHIT_PHP_INTERPRETER=""
+LC_CTYPE="en_US.UTF-8"
+BENCHIT_F77="ifort"
+BENCHIT_F95="ifort"
+BENCHIT_COMPILER="ifort"
+BENCHIT_USE_VAMPIR_TRACE="0"
+BENCHIT_F90_C_FLAGS="-free"
+XDM_MANAGED="/var/run/xdmctl/xdmctl-:0,maysd,mayfn,sched,rsvd,method=classic"
+USER="nico"
+BENCHIT_RUN_TIMELIMIT="600"
+KDE_MULTIHEAD="false"
+OMP_NESTED="FALSE"
+BENCHIT_KERNELBINARY_ARGS=" "
+VMHANDLE="sun-jdk-1.4"
+BENCHIT_KERNEL_INCREMENT="1"
+BENCHIT_MPIF77_C_FLAGS_HIGH=""
+PYTHONPATH="/usr/lib/portage/pym"
+BENCHIT_CPP_PVM=""
+BENCHIT_SHELL_FLAGS=""
+BENCHIT_JAVA_HOME=""
+LOGNAME="nico"
+BENCHIT_KERNEL_FILE_VERSION_CMDLINEPARAMS="1.29 (Tue Jan  3 18:55:28 2006)"
+BENCHIT_KERNEL_FILE_VERSION_LOC_CONVERT_SH="NO REVISION (Wed Jan  4 15:32:49\
+2006)"
+LC_MONETARY="de_DE.UTF-8"
+BENCHIT_CXX_L_FLAGS="-lm"
+BENCHIT_F77_C_FLAGS_HIGH="-O3"
+BENCHIT_F95_C_FLAGS_HIGH="-O4"
+OPTERR="1"
+myvar="BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP"
+BENCHIT_LIB_ATLAS=" -latlas"
+PRELINK_PATH_MASK="/usr/lib/gstreamer-0.10:/usr/lib/gstreamer-0.8:/lib/modules:\
+usr/lib/locale:/usr/lib/wine:/usr/lib/valgrind:*.la:*.png:*.py:*.pl:*.pm:*.sh:*\
+xml:*.xslt:*.a:*.js:/usr/lib/klibc"
+DM_CONTROL="/var/run/xdmctl"
+BENCHIT_KERNEL_FILE_VERSION_ARCHDEFS="NO REVISION (Fri Sep 29 18:35:11 2006)"
+GENERATION="2"
+BENCHIT_KERNEL_FILE_VERSION_COMPILERVERSION="NO REVISION, UNABLE TO READ (Sun\
+Aug 12 00:00:02 2007)"
+BENCHIT_CROSSCOMPILE="0"
+_CMDLINE_VARLIST="BENCHIT_KERNELBINARY BENCHIT_KERNELBINARY_ARGS\
+BENCHIT_CMDLINE_ARG_FILENAME_COMMENT BENCHIT_CMDLINE_ARG_PARAMETER_FILE\
+BENCHIT_CMDLINE_ARG_IGNORE_PARAMETER_FILE BENCHIT_NODENAME BENCHIT_CROSSCOMPILE\
+BENCHIT_CMDLINE_ARG_NUM_CPUS BENCHIT_CMDLINE_ARG_NUM_PROCESSES\
+BENCHIT_CMDLINE_ARG_NUM_THREADS_PER_PROCESS BENCHIT_CMDLINE_ARG_RUN_CLEAN\
+BENCHIT_CMDLINE_ARG_RUN_COREDUMPLIMIT BENCHIT_CMDLINE_ARG_RUN_EMAIL_ADDRESS\
+BENCHIT_CMDLINE_ARG_RUN_MAX_MEMORY BENCHIT_CMDLINE_ARG_RUN_QUEUENAME\
+BENCHIT_CMDLINE_ARG_RUN_QUEUETIMELIMIT BENCHIT_CMDLINE_ARG_RUN_REDIRECT_CONSOLE\
+BENCHIT_CMDLINE_ARG_RUN_TEST BENCHIT_CMDLINE_ARG_RUN_USE_MPI\
+BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP "
+BASH="/bin/sh"
+BENCHIT_RUN_QUEUETIMELIMIT=""
+BENCHIT_CPP_FFTW3=""
+BENCHIT_MPIF77_C_FLAGS=""
+BENCHIT_CPP_ACML=""
+BENCHIT_HOSTNAME="localhost"
+GTK_RC_FILES="/etc/gtk/gtkrc:/home/nico/.gtkrc:/home/nico/.kde/share/config/gtk\
+c"
+BENCHIT_NUM_PROCESSES=""
+PIPESTATUS="([0]=\"0\")"
+BENCHIT_KERNEL_FILE_VERSION_FILEVERSION_C="1.6 (Fri Jan 19 16:05:11 2007)"
+KERNELDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V\
+/kernel/numerical/rkstep/F95/0/0/gauss2"
+BENCHIT_LIB_PAPI=""
+KDEDIRS="/usr:/usr/local:/usr/kde/3.5"
+BENCHIT_F77_C_FLAGS=""
+BENCHIT_F95_C_FLAGS="-free"
+GROUPS="()"
+BENCHIT_MPICC_L_FLAGS="-lm -L/opt/intel/fortran100/lib -lifcore -lmpi"
+DIRSTACK="()"
+BENCHIT_KERNEL_FILE_VERSION_STRINGLIB_C="1.4 (Fri Jan 12 11:44:35 2007)"
+BENCHIT_LIB_PCL=""
+CLASSPATH="."
+_="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/tools/\
+
+BENCHIT_CC_L_FLAGS="-lm -L/opt/intel/fortran100/lib -lifcore"
+BENCHIT_KERNEL_FILE_VERSION_RUN_BENCHIT="NO REVISION (Fri Sep 29 18:35:11\
+2006)"
+MANPATH="/home/nico/.gentoo/java-config-2/current-user-vm/man:/usr/local/share/\
+an:/usr/share/man:/usr/share/binutils-data/i686-pc-linux-gnu/2.17/man:/usr/shar\
+/gcc-data/i686-pc-linux-gnu/4.1.2/man:/opt/intel/compiler91/man:/opt/intel/fort\
+an100/man:/opt/sun-jdk-1.4.2.15/man:/etc/java-config/system-vm/man/:/usr/kde/3.\
+/share/man:/usr/qt/3/doc/man:/usr/local/texlive/current/texmf/doc/man"
+BENCHIT_KERNEL_FILE_VERSION_FIRSTTIME="1.29 (Wed Jul  4 16:22:09 2007)"
+PAGER="/usr/bin/less"
+BENCHIT_CPP_BLAS=""
+G_BROKEN_FILENAMES="1"
+KDE_SESSION_UID="1000"
+BENCHIT_KERNEL_FILE_VERSION_ENVHASHBUILDER="NO REVISION (Sun Aug 19 02:31:49\
+2007)"
+COLON_SEPARATED="XDG_DATA_DIRS"
+LDPATH="/usr/local/lib:///usr/lib/opengl/nvidia/lib:/usr/i686-pc-linux-gnu/lib:\
+usr/lib/gcc/i686-pc-linux-gnu/4.1.2:/opt/intel/compiler91/lib:/opt/intel/fortra\
+100/lib:/usr/lib/nspr:/usr/lib/nss:/opt/sun-jdk-1.4.2.15/jre/lib/i386/:/opt/sun\
+jdk-1.4.2.15/jre/lib/i386/native_threads/:/opt/sun-jdk-1.4.2.15/jre/lib/i386/cl\
+ssic/:/opt/sun-jdk-1.4.2.15/jre/lib/i386/server/:/usr/lib/qt4:/usr/kde/3.5/lib:\
+usr/qt/3/lib:/usr/games/lib:/opt/nessus/lib:/usr/lib/fltk-1.1:/usr/lib/libstdc+\
+-v3/"
+BENCHIT_F90_L_FLAGS="-lm"
+CONFIGURE_MODE="COMPILE"
+OLDCWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_NUM_CPUS="1"
+LC_COLLATE="en_US.UTF-8"
+BENCHIT_PERL_FLAGS=""
+IA32ROOT="/opt/intel/fortran100"
+KERNELNAME_FULL=""
+BENCHIT_MANDATORY_FILES="tools/run_benchit tools/uname_minus_a benchit.c\
+interface.h tools/envhashbuilder.c tools/bienvhash.template.c tools/bienvhash.h\
+tools/stringlib.c tools/stringlib.h "
+PS4="+ "
+GCC_PATH="/usr/i686-pc-linux-gnu/gcc-bin/4.1.2"
+INFOPATH="/usr/share/info:/usr/share/binutils-data/i686-pc-linux-gnu/2.17/info:\
+usr/share/gcc-data/i686-pc-linux-gnu/4.1.2/info:/usr/local/texlive/current/texm\
+/doc/info"
+OSTYPE="linux-gnu"
+BENCHIT_KERNEL_FILE_VERSION_HELPER_SH="1.14 (Mon Dec 12 11:27:20 2005)"
+TEXBASE="/usr/local/texlive/"
+BENCHITROOT="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit\
+V5"
+BENCHIT_PHP_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_STRINGLIB_H="1.2 (Fri Sep 29 16:51:14 2006)"
+BENCHIT_RUBY_INTERPRETER=""
+BENCHIT_LIB_MKL=" -lmkl"
+BASH_LINENO="([0]=\"78\" [1]=\"0\")"
+HOSTTYPE="i686"
+BENCHIT_MPIF77_L_FLAGS=""
+KDE_FULL_SESSION="true"
+EUID="1000"
+MACHTYPE="i686-pc-linux-gnu"
+BENCHIT_CPP_PTHREADS=""
+DESKTOP_SESSION="default"
+HTTP_PROXY="http://localhost:8118"
+http_proxy="http://localhost:8118"
+BENCHIT_LIB_MPI=""
+SCRIPTNAME="COMPILE.SH"
+BENCHIT_F77_L_FLAGS="-lm"
+BENCHIT_F95_L_FLAGS="-lm"
+BENCHIT_KERNEL_FILE_VERSION_LOC_REPL="NO REVISION (Wed Jan  4 15:32:49 2006)"
+GTK2_RC_FILES="/home/nico/.gtkrc-2.0:/home/nico/.kde/share/config/gtkrc-2.0:/et\
+/gtk-2.0/gtkrc"
+BENCHIT_OPTIONAL_FILES="LOCALDEFS/PROTOTYPE_input_architecture\
+LOCALDEFS/PROTOTYPE_input_display "
+GCC_SPECS=""
+BENCHIT_RUN_OUTPUT_DIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic\
+1D/Benchit-V5/output"
+JAVA_HOME="/home/nico/.gentoo/java-config-2/current-user-vm"
+BENCHIT_CPP_ATLAS=""
+BENCHIT_CXX_C_FLAGS_STD="-O2"
+HOME="/home/nico"
+BENCHIT_DEBUGLEVEL="0"
+FLTK_DOCDIR="/usr/share/doc/fltk-1.1.7/html"
+LS_COLORS="no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01\
+cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:su=37;41:sg=30;43:tw=30;42:ow=34;42:s\
+=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.z\
+p=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz\
+01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*\
+cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;\
+5:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif\
+01;35:*.tiff=01;35:*.png=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:\
+.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=\
+1;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rm\
+b=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*\
+xwd=01;35:*.yuv=01;35:*.pdf=00;32:*.ps=00;32:*.txt=00;32:*.patch=00;32:*.diff=0\
+;32:*.log=00;32:*.tex=00;32:*.doc=00;32:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m\
+d=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36\
+*.wav=00;36:"
+C_COMPILE="icc  -O2 -I.\
+-I/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5 \
+-DDEBUGLEVEL=0"
+SHELLSCRIPT_DEBUG="0"
+BENCHIT_RUN_ACCURACY=""
+BENCHIT_LIB_SCSL=" -lscsl"
+BENCHIT_CXX_C_FLAGS_OMP=""
+BENCHIT_RUN_EMAIL_ADDRESS=""
+SANE_CONFIG_DIR="/etc/sane.d"
+LC_MESSAGES="en_US.UTF-8"
+HOSTNAME="N4"
+KERNELBASEDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Bench\
+t-V5/kernel"
+BENCHIT_KERNEL_FILE_VERSION_ENVHASHBUILDER_C="1.3 (Fri Jan 12 11:44:35 2007)"
+BENCHIT_COMPILERFLAGS="-free  -O4"
+BENCHIT_CPP_PAPI="-DUSE_PAPI"
+_VARLIST="'BENCHITROOT"
+CVS_RSH="ssh"
+BENCHIT_NODENAME="N4"
+SHELL="/bin/bash"
+BASH_ARGV="([0]=\
+"/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/kernel/n\
+merical/rkstep/F95/0/0/gauss2/COMPILE.SH\
+" [1]=\
+"numerical.rkstep.F95.0.0.gauss2\
+")"
+BENCHIT_JAVAC_FLAGS_HIGH="-O"
+BENCHIT_KERNEL_FILE_VERSION_ENVIRONMENTS="NO REVISION, UNABLE TO READ (Sun Aug\
+12 00:00:02 2007)"
+BENCHIT_LIB_ESSL=" -lessl"
+myfile="tools/stringlib.h"
+BENCHIT_KERNELNAME="numerical.rkstep.F95.0.0.gauss2"
+DISTCC_VERBOSE="0"
+DISTCC_LOG=""
+F_COMPILE="ifort -free  -O4"
+KONSOLE_DCOP_SESSION="DCOPRef(konsole-27600,session-1)"
+BENCHIT_ENVIRONMENT="NOTHING"
+EDITOR="/usr/bin/vim"
+JDK_HOME="/home/nico/.gentoo/java-config-2/current-user-vm"
+BENCHIT_CPP_PCL=" -DUSE_PCL"
+HLL="F95"
+OLDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_F90_SOURCE_FORMAT_FLAG=""
+BENCHIT_MPICC_C_FLAGS_STD="-O2"
+PATH="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/too\
+s:/usr/kde/3.5/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/i686-pc-linux-gnu\
+gcc-bin/4.1.2:/opt/intel/compiler91/bin:/opt/intel/fortran100/bin:/opt/sun-jdk-\
+.4.2.15/bin:/opt/sun-jdk-1.4.2.15/jre/bin:/opt/sun-jdk-1.4.2.15/jre/javaws:/usr\
+kde/3.5/bin:/usr/qt/3/bin:/usr/games/bin:/usr/local/texlive/current/bin/i386-li\
+ux:/sbin:/usr/sbin:/sbin:/usr/sbin"
+PPID="27617"
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_TEMPLATE_JAVA="1.4 (Thu Jul 21 21:42:13\
+2005)"
+BENCHIT_RUN_TEST="0"
+XCURSOR_THEME="whiteglass"
+BR="0"
+BENCHIT_JAVAC_FLAGS=""
+BENCHIT_MPICC_C_FLAGS_OMP=""
+G_FILENAME_ENCODING="UTF-8"
+BENCHIT_KERNEL_FILE_VERSION_COMMONDEFS="NO REVISION (Tue Aug 30 21:32:48 2005)"
+BENCHIT_CC_C_FLAGS_STD="-O2"
+SESSION_MANAGER="local/N4:/tmp/.ICE-unix/5782"
+BENCHIT_CXX_COMPILER_VERSION="4.1.2 (Gentoo 4.1.2 p1.0.1)"
+DISPLAY=":0.0"
+BENCHIT_FILENAME_COMMENT="0"
+CURDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+IFS="' 	"
+BENCHIT_DEFINES=" -DDEBUGLEVEL=0"
+BENCHIT_CC_C_FLAGS_OMP=""
+UID="1000"
+BENCHIT_F90_C_FLAGS_STD="-O2"
+MIKTEX_INSTALLROOT="/usr/local/texlive/texmf-local"
+OLDPWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_JAVAC="javac"
+BENCHIT_F90_C_FLAGS_OMP=""
+WINDOWID="62914567"
+BENCHIT_ARCH_SHORT="IntM"
+LC_PAPER="de_DE.UTF-8"
+BENCHIT_CPP_MKL=""
+GDK_USE_XFT="1"
+BENCHIT_F95_SOURCE_FORMAT_FLAG=""
+BASH_SOURCE="([0]=\
+"/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/kernel/n\
+merical/rkstep/F95/0/0/gauss2/COMPILE.SH\
+" [1]=\
+"./COMPILE.SH\
+")"
+BENCHIT_KERNEL_FILE_VERSION_CONFIGURE="1.46 (Thu Jun 21 19:41:24 2007)"
+OPENGL_PROFILE="nvidia"
+LC_NUMERIC="de_DE.UTF-8"
+BENCHIT_C_COMPILERFLAGS=" -O2"
+BENCHIT_RUBY_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_BENCHSCRIPT_C="1.2 (Fri Jan 12 11:44:35 2007)"
+CONFIG_PROTECT="/usr/share/X11/xkb /usr/kde/3.5/share/config /usr/kde/3.5/env\
+/usr/kde/3.5/shutdown /usr/share/config"
+BASH_VERSINFO="([0]=\
+"3\
+" [1]=\
+"2\
+" [2]=\
+"17\
+" [3]=\
+"1\
+" [4]=\
+"release\
+" [5]=\
+"i686-pc-linux-gnu\
+")"
+BENCHIT_CXX="c++"
+BENCHIT_LD_LIBRARY_PATH="/home/nico/Desktop/Diplomarbeit/programs/main/paraboli\
+-1D/Benchit-V5/jbi/jni"
+BENCHIT_NUM_THREADS_PER_PROCESS=""
+PKG_CONFIG_PATH="/usr/qt/3/lib/pkgconfig"
+BENCHIT_MPIF77_C_FLAGS_STD=""
+BENCHIT_RUN_LINEAR="0"
+INTEL_FLEXLM_LICENSE="/opt/intel/compiler91/licenses"
+BENCHIT_CPP_MPI=" -DUSE_MPI"
+endofenvironmentvariables
+beginofdisplay
+
+xoutmin=0
+xoutmax=1100
+xaxisticks=11
+xaxislogbase=0
+xaxistext="Problem dimension N"
+
+y1outmin=0
+y1outmax=4.5e-05
+y1axisticks=9
+y1axislogbase=0
+y1axistext="No. of iterations"
+
+y2outmin=0
+y2outmax=0.125
+y2axisticks=5
+y2axislogbase=0
+y2axistext="No. of iterations"
+
+y3outmin=0
+y3outmax=0.07
+y3axisticks=7
+y3axislogbase=0
+y3axistext="No. of iterations"
+
+y4outmin=0
+y4outmax=0.07
+y4axisticks=7
+y4axislogbase=0
+y4axistext="No. of iterations"
+
+y5outmin=0
+y5outmax=1e-06
+y5axisticks=4
+y5axislogbase=0
+y5axistext="No. of iterations"
+
+numabscissae=986
+numfunctions=5
+
+## Fuer Architektur- oder Messmerkmal : abc
+#
+# displayabc=1                                           # Steuervariable
+# #Textfeld-Eigenschaften des date-Strings               # Kommentar
+# tabc="ABC-Merkmal: 3 Tm"                               # Text: Wert
+# xabc=                                                  # x-Position
+# yabc=                                                  # y-Position
+# fonttypabc=                                            # Schriftart
+# fontsizeabc=                                           # Schriftgroesse
+tlegendfunction1="ID"
+xlegendfunction1=
+ylegendfunction1=
+fonttypelegendfunction1=
+fontsizelegendfunction1=
+
+tlegendfunction2="BlockJac"
+xlegendfunction2=
+ylegendfunction2=
+fonttypelegendfunction2=
+fontsizelegendfunction2=
+
+tlegendfunction3="LowerBLockSOR"
+xlegendfunction3=
+ylegendfunction3=
+fonttypelegendfunction3=
+fontsizelegendfunction3=
+
+tlegendfunction4="UpperBLockSOR"
+xlegendfunction4=
+ylegendfunction4=
+fonttypelegendfunction4=
+fontsizelegendfunction4=
+
+tlegendfunction5="BlockSSOR"
+xlegendfunction5=
+ylegendfunction5=
+fonttypelegendfunction5=
+fontsizelegendfunction5=
+
+#### display of optional information can be enabled by setting display***=1
+
+
+# optional information of the measurement-programs:
+
+# deactivation of the kernelstring is useful, if a separate caption
+# should be used
+displaykernelstring=1
+# topkernelstring=1|0: headline|underline
+topkernelstring=1
+fonttypkernelstring=""
+fontsizekernelstring=
+
+displaycomment=1
+# textfield properties of the comment-string
+tcomment="Comment:"
+xcomment=
+ycomment=
+fonttypcomment=
+fontsizecomment=
+
+displaydate=1
+# textfield properties of the date-string
+tdate="Datum: "
+xdate=""
+ydate=""
+fonttypdate=""
+fontsizedate=""
+
+displaylanguage=0
+# textfield properties of the language-string
+tlanguage="HLL: "
+xlanguage=""
+ylanguage=""
+fonttyplanguage=""
+fontsizelanguage=""
+
+displaycompiler=0
+# textfield properties of the compiler-string
+tcompiler="Compiler: "
+xcompiler=""
+ycompiler=""
+fonttypcompiler=""
+fontsizecompiler=""
+
+displaycompilerflags=0
+# textfield properties of the compilerflags-string
+tcompilerflags="Compiler-Flags: "
+xcompilerflags=""
+ycompilerflags=""
+fonttypcompilerflags=""
+fontsizecompilerflags=""
+
+displaycodesequence=1
+# textfield properties of the codesequence-string
+tcodesequence=""
+xcodesequence=""
+ycodesequence=""
+fonttypcodesequence=""
+fontsizecodesequence=""
+
+# optional information about the architecture, names etc.:
+
+displayhostname=0
+# textfield properties of the hostname-string
+thostname="Hostname: "
+xhostname=""
+yhostname=""
+fonttyphostname=""
+fontsizehostname=""
+
+displaynodename=0
+# textfield properties of the nodename-string
+tnodename="Nodename: "
+xnodename=""
+ynodename=""
+fonttypnodename=""
+fontsizenodename=""
+
+displaymainboardmanufacturer=0
+# textfield properties of the mainboardmanufacturer-string
+tmainboardmanufacturer="Manufacturer of  mainboard: "
+xmainboardmanufacturer=""
+ymainboardmanufacturer=""
+fonttypmainboardmanufacturer=""
+fontsizemainboardmanufacturer=""
+
+displaymainboardtype=0
+# textfield properties of the mainboardtype-string
+tmainboardtype="Mainboard type: "
+xmainboardtype=""
+ymainboardtype=""
+fonttypmainboardtype=""
+fontsizemainboardtype=""
+
+displaymainboardchipset=0
+# textfield properties of the mainboardchipset-string
+tmainboardchipset="Mainboard Chipset: "
+xmainboardchipset=""
+ymainboardchipset=""
+fonttypmainboardchipset=""
+fontsizemainboardchipset=""
+
+displayprocessorname=0
+# textfield properties of the processorname-string
+tprocessorname="Processor name: "
+xprocessorname=""
+yprocessorname=""
+fonttypprocessorname=""
+fontsizeprocessorname=""
+
+displayprocessorserialnumber=0
+# textfield properties of the processorserialnumber-string
+tprocessorserialnumber="Processor Serial No.: "
+yprocessorserialnumber=""
+fonttypprocessorserialnumber=""
+fontsizeprocessorserialnumber=""
+
+displayprocessorversion=0
+# textfield properties of the processorversion-string
+tprocessorversion="Processor Version: "
+xprocessorversion=""
+yprocessorversion=""
+fonttypprocessorversion=""
+fontsizeprocessorversion=""
+
+displayprocessorisaset=0
+# textfield properties of the processorisaset-string
+tprocessorisaset="Instruction Set Architecture: "
+xprocessorisaset=""
+yprocessorisaset=""
+fonttypprocessorisaset=""
+fontsizeprocessorisaset=""
+
+displayprocessorisalevel=0
+# textfield properties of the processorisalevel-string
+tprocessorisalevel="ISA Level: "
+xprocessorisalevel=""
+yprocessorisalevel=""
+fonttypprocessorisalevel=""
+fontsizeprocessorisalevel=""
+
+displayprocessorisaextension1=0
+# textfield properties of the processorisaextension1-string
+tprocessorisaextension1="ISA Extension: "
+xprocessorisaextension1=""
+yprocessorisaextension1=""
+fonttypprocessorisaextension1=""
+fontsizeprocessorisaextension1=""
+
+displayprocessorisaextension2=0
+# textfield properties of the processorisaextension2-string
+tprocessorisaextension2="ISA Extension: "
+xprocessorisaextension2=""
+yprocessorisaextension2=""
+fonttypprocessorisaextension2=""
+fontsizeprocessorisaextension2=""
+
+displayprocessorisaextension3=0
+# textfield properties of the processorisaextension3-string
+tprocessorisaextension3="ISA Extension: "
+xprocessorisaextension3=""
+yprocessorisaextension3=""
+fonttypprocessorisaextension3=""
+fontsizeprocessorisaextension3=""
+
+displayprocessorclockrate=0
+# textfield properties of the processorclockrate-string
+tprocessorclockrate="Processor Clock Rate: "
+xprocessorclockrate=""
+yprocessorclockrate=""
+fonttypprocessorclockrate=""
+fontsizeprocessorclockrate=""
+
+displayinstructionlength=0
+# textfield properties of the instructionlength-string
+tinstructionlength="Instruction Length: "
+xinstructionlength=""
+yinstructionlength=""
+fonttypinstructionlength=""
+fontsizeinstructionlength=""
+
+displayprocessorwordlength=0
+# textfield properties of the processorwordlength-string
+tprocessorwordlength="Processor Word Length: "
+xprocessorwordlength=""
+yprocessorwordlength=""
+fonttypprocessorwordlength=""
+fontsizeprocessorwordlength=""
+
+displayinstructionissue=0
+# textfield properties of the instructionissue-string
+tinstructionissue="Instruction Issue: "
+xinstructionissue=""
+yinstructionissue=""
+fonttypinstructionissue=""
+fontsizeinstructionissue=""
+
+displayintegerunits=0
+# textfield properties of the integerunits-string
+tintegerunits="Number of Integer Units: "
+xintegerunits=""
+yintegerunits=""
+fonttypintegerunits=""
+fontsizeintegerunits=""
+
+displayfloatingpointunits=0
+# textfield properties of the floatingpointunits-string
+tfloatingpointunits="Number of Floating Point Units: "
+xfloatingpointunits=""
+yfloatingpointunits=""
+fonttypfloatingpointunits=""
+fontsizefloatingpointunits=""
+
+displayloadstoreunits=0
+# textfield properties of the loadstoreunits-string
+tloadstoreunits="Number of Load/Store Units: "
+xloadstoreunits=""
+yloadstoreunits=""
+fonttyploadstoreunits=""
+fontsizeloadstoreunits=""
+
+displaylevel1icachesize=0
+# textfield properties of the level1icachesize-string
+tlevel1icachesize="L1 Instruction Cache Size: "
+xlevel1icachesize=""
+ylevel1icachesize=""
+fonttyplevel1icachesize=""
+fontsizelevel1icachesize=""
+
+displaylevel1icachetype=0
+# textfield properties of the level1icachetype-string
+tlevel1icachetype="L1 Instruction Cache Type: "
+xlevel1icachetype=""
+ylevel1icachetype=""
+fonttyplevel1icachetype=""
+fontsizelevel1icachetype=""
+
+displaylevel1dcachesize=0
+# textfield properties of the level1dcachesize-string
+tlevel1dcachesize="L1 Data Cache Size: "
+xlevel1dcachesize=""
+ylevel1dcachesize=""
+fonttyplevel1dcachesize=""
+fontsizelevel1dcachesize=""
+
+displaylevel1dcachetype=0
+# textfield properties of the level1dcachetype-string
+tlevel1dcachetype="L1 Data Cache Type: "
+xlevel1dcachetype=""
+ylevel1dcachetype=""
+fonttyplevel1dcachetype=""
+fontsizelevel1dcachetype=""
+
+displaylevel2cachesize=0
+# textfield properties of the level2cachesize-string
+tlevel2cachesize="L2 Data Cache Size: "
+xlevel2cachesize=""
+ylevel2cachesize=""
+fonttyplevel2cachesize=""
+fontsizelevel2cachesize=""
+
+displaylevel2cachetype=0
+# textfield properties of the level2cachetype-string
+tlevel2cachetype="L2 Cache Type: "
+xlevel2cachetype=""
+ylevel2cachetype=""
+fonttyplevel2cachetype=""
+fontsizelevel2cachetype=""
+
+displaylevel2cachelocation=0
+# textfield properties of the level2cachelocation-string
+tlevel2cachelocation="L2 Cache Location: "
+xlevel2cachelocation=""
+ylevel2cachelocation=""
+fonttyplevel2cachelocation=""
+fontsizelevel2cachelocation=""
+
+displaylevel3cachesize=0
+# textfield properties of the level3cachesize-string
+tlevel3cachesize="L3 Data Cache Size: "
+xlevel3cachesize=""
+ylevel3cachesize=""
+fonttyplevel3cachesize=""
+fontsizelevel3cachesize=""
+
+displaylevel3cachetype=0
+# textfield properties of the level3cachetype-string
+tlevel3cachetype="L3 Cache Type: "
+xlevel3cachetype=""
+ylevel3cachetype=""
+fonttyplevel3cachetype=""
+fontsizelevel3cachetype=""
+
+displaylevel3cachelocation=0
+# textfield properties of the level3cachelocation-string
+tlevel3cachelocation="L3 Cache Location: "
+xlevel3cachelocation=""
+ylevel3cachelocation=""
+fonttyplevel3cachelocation=""
+fontsizelevel3cachelocation=""
+
+displayprefetching=0
+# textfield properties of the prefetching-string
+tprefetching="Prefetching: "
+xprefetching=""
+yprefetching=""
+fonttypprefetching=""
+fontsizeprefetching=""
+
+displaypreloading=0
+# textfield properties of the preloading-string
+tpreloading="Preloading: "
+xpreloading=""
+ypreloading=""
+fonttyppreloading=""
+fontsizepreloading=""
+
+displaybacksideclockrate=0
+# textfield properties of the backsideclockrate-string
+tbacksideclockrate="Clock Rate of the Backside Bus: "
+xbacksideclockrate=""
+ybacksideclockrate=""
+fonttypbacksideclockrate=""
+fontsizebacksideclockrate=""
+
+displaytechnologylevel=0
+# textfield properties of the technologylevel-string
+ttechnologylevel="Technology Level: "
+xtechnologylevel=""
+ytechnologylevel=""
+fonttyptechnologylevel=""
+fontsizetechnologylevel=""
+
+displaymemorychiptype=0
+# textfield properties of the memorychiptype-string
+tmemorychiptype="Memory Chip Type: "
+xmemorychiptype=""
+ymemorychiptype=""
+fonttypmemorychiptype=""
+fontsizememorychiptype=""
+
+displaymemorybustype=0
+# textfield properties of the memorybustype-string
+tmemorybustype="Memory Bus Type: "
+xmemorybustype=""
+ymemorybustype=""
+fonttypmemorybustype=""
+fontsizememorybustype=""
+
+displaymemorybusclockrate=0
+# textfield properties of the memorybusclockrate-string
+tmemorybusclockrate="Memory Bus Clock Rate: "
+xmemorybusclockrate=""
+ymemorybusclockrate=""
+fonttypmemorybusclockrate=""
+fontsizememorybusclockrate=""
+
+displaynumberofprocessorsused=0
+# textfield properties of the numberofprocessorsused-string
+tnumberofprocessorsused="Number Of Used Processors: "
+xnumberofprocessorsused=""
+ynumberofprocessorsused=""
+fonttypnumberofprocessorsused=""
+fontsizenumberofprocessorsused=""
+
+displaymemorysizeused=0
+# textfield properties of the memorysizeused-string
+tmemorysizeused="Used Memory Size: "
+xmemorysizeused=""
+ymemorysizeused=""
+fonttypmemorysizeused=""
+fontsizememorysizeused=""
+
+displaysystemcomment=0
+# textfield properties of the systemcomment-string
+tsystemcomment="Additional System Information: "
+xsystemcomment=""
+ysystemcomment=""
+fonttypsystemcomment=""
+fontsizesystemcomment=""
+
+displayaid=0
+# textfield properties of the aid-string
+taid="AID identifier: "
+xaid=""
+yaid=""
+fonttypaid=""
+fontsizeaid=""
+
+displaycodename=0
+# textfield properties of the codename-string
+tcodename="codename according to roadmap: "
+xcodename=""
+ycodename=""
+fonttypcodename=""
+fontsizecodename=""
+
+displaynumberofcorespercpu=0
+# textfield properties of the numberofcorespercpu-string
+tnumberofcorespercpu="number of physical cores per CPU: "
+xnumberofcorespercpu=""
+ynumberofcorespercpu=""
+fonttypnumberofcorespercpu=""
+fontsizenumberofcorespercpu=""
+endofdisplay
+####################################################
+beginofidentifierstrings
+# strings as replacement for the identifiers in menu-windows
+hostname="Hostname"
+nodename="Nodename"
+mainboardmanufacturer="Manufacturer of  mainboard"
+mainboardtype="Mainboard type"
+mainboardchipset="Mainboard Chipset"
+processorname="Processor name"
+processorserialnumber="Processor Serial No."
+processorversion="Processor Version"
+processorisaset="Instruction Set Architecture"
+processorisalevel="ISA Level"
+processorisaextension1="ISA Extension"
+processorisaextension2="ISA Extension"
+processorisaextension3="ISA Extension"
+processorclockrate="Processor Clock Rate"
+instructionlength="Instruction Length"
+processorwordlength="Processor Word Length"
+instructionissue="Instruction Issue"
+integerunits="Number of Integer Units"
+floatingpointunits="Number of Floating Point Units"
+loadstoreunits="Number of Load/Store Units"
+level1icachesize="L1 Instruction Cache Size"
+level1icachetype="L1 Instruction Cache Type"
+level1dcachesize="L1 Data Cache Size"
+level1dcachetype="L1 Data Cache Type"
+level2cachesize="L2 Data Cache Size"
+level2cachetype="L2 Cache Type"
+level2cachelocation="L2 Cache Location"
+level3cachesize="L3 Data Cache Size"
+level3cachetype="L3 Cache Type"
+level3cachelocation="L3 Cache Location"
+prefetching="Prefetching"
+preloading="Preloading"
+backsideclockrate="Clock Rate of the Backside Bus"
+technologylevel="Technology Level"
+memorychiptype="Memory Chip Type"
+memorybustype="Memory Bus Type"
+memorybusclockrate="Memory Bus Clock Rate"
+numberofprocessorsused="Number Of Used Processors"
+memorysizeused="Used Memory Size"
+systemcomment="Additional System Information"
+aid="AID identifier"
+codename="codename according to roadmap"
+numberofcorespercpu="number of physical cores per CPU"
+endofidentifierstrings
+###################################################
+beginofdata
+2	-2.44e-07	3.1756e-05	3.1756e-05	3.0756e-05	-2.44e-07	
+3	-2.44e-07	5.0756e-05	4.3756e-05	5.7756e-05	-2.44e-07	
+4	-2.44e-07	5.5756e-05	4.6756e-05	4.6756e-05	-2.44e-07	
+5	-2.44e-07	6.8756e-05	5.1756e-05	6.2756e-05	-2.44e-07	
+6	-2.44e-07	7.7756e-05	5.6756e-05	6.7756e-05	-2.44e-07	
+7	-2.44e-07	8.2756e-05	6.0756e-05	7.2756e-05	-2.44e-07	
+8	-2.44e-07	8.4756e-05	6.2756e-05	0.000122756	-2.44e-07	
+9	-2.44e-07	0.000107756	6.9756e-05	9.6756e-05	-2.44e-07	
+10	-2.44e-07	0.000124756	7.9756e-05	9.5756e-05	-2.44e-07	
+11	-2.44e-07	0.000128756	8.2756e-05	9.9756e-05	-2.44e-07	
+12	-2.44e-07	0.000134756	9.6756e-05	0.000102756	-2.44e-07	
+13	-2.44e-07	0.000158756	9.0756e-05	0.000126756	-2.44e-07	
+14	-2.44e-07	0.000163756	9.2756e-05	0.000143756	-2.44e-07	
+15	-2.44e-07	0.000170756	0.000117756	0.000138756	-2.44e-07	
+16	-2.44e-07	0.000181756	0.000121756	0.000168756	-2.44e-07	
+17	7.56e-07	0.000190756	0.000129756	0.000151756	-2.44e-07	
+18	-2.44e-07	0.000233756	0.000135756	0.000157756	7.56e-07	
+19	7.56e-07	0.000229756	0.000139756	0.000164756	-2.44e-07	
+20	-2.44e-07	0.000246756	0.000144756	0.000195756	-2.44e-07	
+21	-2.44e-07	0.000274756	0.000260756	0.000205756	-2.44e-07	
+22	-2.44e-07	0.000285756	0.000154756	0.000240756	-2.44e-07	
+23	-2.44e-07	0.000301756	0.000163756	0.000221756	-2.44e-07	
+24	-2.44e-07	0.000442756	0.000166756	0.000224756	-2.44e-07	
+25	-2.44e-07	0.00166076	0.000171756	0.000262756	-2.44e-07	
+26	-2.44e-07	0.000357756	0.000176756	0.000270756	-2.44e-07	
+27	7.56e-07	0.000367756	0.000213756	0.000293756	-2.44e-07	
+28	-2.44e-07	0.000376756	0.000218756	0.000296756	-2.44e-07	
+29	-2.44e-07	0.000420756	0.000222756	0.000304756	-2.44e-07	
+30	-1.244e-06	0.000432756	0.000230756	0.000362756	-2.44e-07	
+31	-2.44e-07	0.000445756	0.000247756	0.000307756	-2.44e-07	
+32	-2.44e-07	0.000453756	0.000251756	0.000314756	-2.44e-07	
+33	-2.44e-07	0.000517756	0.000246756	0.000361756	-2.44e-07	
+34	-2.44e-07	0.000527756	0.000252756	0.000368756	-2.44e-07	
+35	-2.44e-07	0.000563756	0.000256756	0.00150576	-2.44e-07	
+36	-2.44e-07	0.000544756	0.000415756	0.000388756	-2.44e-07	
+37	-2.44e-07	0.000561756	0.000285756	0.000397756	-2.44e-07	
+38	7.56e-07	0.000645756	0.000274756	0.000465756	-2.44e-07	
+39	-2.44e-07	0.000617756	0.000280756	0.000457756	-2.44e-07	
+40	-2.44e-07	0.000774756	0.000238756	0.000391756	-2.44e-07	
+41	-2.44e-07	0.000584756	0.000243756	0.000410756	-2.44e-07	
+42	-2.44e-07	0.000599756	0.000259756	0.000407756	-2.44e-07	
+43	-2.44e-07	0.000620756	0.000252756	0.000425756	-2.44e-07	
+44	-2.44e-07	0.000619756	0.000307756	0.000422756	-1.244e-06	
+45	-2.44e-07	0.000639756	0.000303756	0.000432756	-2.44e-07	
+46	-2.44e-07	0.000689756	0.000321756	0.000484756	-2.44e-07	
+47	-2.44e-07	0.000944756	0.000325756	0.000563756	-2.44e-07	
+48	-2.44e-07	0.000724756	0.000319756	0.000512756	-2.44e-07	
+49	-2.44e-07	0.000769756	0.000319756	0.000558756	-1.244e-06	
+50	-2.44e-07	0.000784756	0.00145376	0.000514756	-2.44e-07	
+51	-2.44e-07	0.000841756	0.000343756	0.000517756	-2.44e-07	
+52	-2.44e-07	0.000841756	0.000348756	0.000528756	-2.44e-07	
+53	-2.44e-07	0.000832756	0.000340756	0.000546756	-2.44e-07	
+54	-2.44e-07	0.000906756	0.000348756	0.000558756	-2.44e-07	
+55	-2.44e-07	0.000914756	0.000352756	0.000563756	-2.44e-07	
+56	-2.44e-07	0.00102676	0.000358756	0.000628756	-2.44e-07	
+57	7.56e-07	0.000993756	0.000386756	0.000651756	-2.44e-07	
+58	-2.44e-07	0.000960756	0.000517756	0.000644756	-2.44e-07	
+59	-2.44e-07	0.000972756	0.000424756	0.000714756	-2.44e-07	
+60	-2.44e-07	0.000989756	0.000431756	0.000727756	-2.44e-07	
+61	-2.44e-07	0.00107276	0.000450756	0.000665756	-2.44e-07	
+62	-2.44e-07	0.00108576	0.000442756	0.000680756	-2.44e-07	
+63	7.56e-07	0.00164376	0.000709756	0.00112076	-2.44e-07	
+64	-2.44e-07	0.00125576	0.000466756	0.000749756	-1.244e-06	
+65	-2.44e-07	0.00121176	0.000464756	0.000808756	-2.44e-07	
+66	-2.44e-07	0.00126876	0.000484756	0.000859756	-2.44e-07	
+67	-2.44e-07	0.00123476	0.000535756	0.000787756	-1.244e-06	
+68	-2.44e-07	0.00125276	0.000486756	0.000810756	-2.44e-07	
+69	-2.44e-07	0.00127676	0.000493756	0.000819756	-2.44e-07	
+70	-1.244e-06	0.00128876	0.000602756	0.00184876	-2.44e-07	
+71	-2.44e-07	0.00130776	0.000581756	0.000844756	-1.244e-06	
+72	-2.44e-07	0.00133976	0.000587756	0.000891756	-2.44e-07	
+73	-2.44e-07	0.00140676	0.000592756	0.00206576	-2.44e-07	
+74	-2.44e-07	0.00142576	0.000598756	0.000884756	-2.44e-07	
+75	-2.44e-07	0.00153876	0.000595756	0.000952756	-2.44e-07	
+76	-2.44e-07	0.00147076	0.000602756	0.000966756	-2.44e-07	
+77	-2.44e-07	0.00162776	0.000619756	0.000974756	-2.44e-07	
+78	-2.44e-07	0.00159376	0.000616756	0.000987756	-2.44e-07	
+79	-2.44e-07	0.00166176	0.000760756	0.00103276	-2.44e-07	
+80	-2.44e-07	0.00169176	0.000628756	0.00100876	-2.44e-07	
+81	-2.44e-07	0.00164076	0.000657756	0.00102076	-2.44e-07	
+82	-2.44e-07	0.00165876	0.000642756	0.00102976	-2.44e-07	
+83	-2.44e-07	0.00168176	0.000661756	0.00104376	-2.44e-07	
+84	-2.44e-07	0.00169676	0.000830756	0.00111076	-2.44e-07	
+85	-2.44e-07	0.00187176	0.000666756	0.00108676	-2.44e-07	
+86	-1.244e-06	0.00280476	0.000849756	0.00113676	-2.44e-07	
+87	-2.44e-07	0.00183476	0.000689756	0.00108676	-1.244e-06	
+88	-2.44e-07	0.00185276	0.000694756	0.00109376	-2.44e-07	
+89	-2.44e-07	0.00199276	0.00190576	0.00111476	-2.44e-07	
+90	-1.244e-06	0.00190376	0.000799756	0.00112776	-2.44e-07	
+91	-2.44e-07	0.00198976	0.000789756	0.00122576	-2.44e-07	
+92	-2.44e-07	0.00199176	0.000808756	0.00130576	-2.44e-07	
+93	-2.44e-07	0.00195676	0.000901756	0.00127076	-2.44e-07	
+94	-2.44e-07	0.00201876	0.000824756	0.00125176	-2.44e-07	
+95	-2.44e-07	0.00199176	0.000822756	0.00127676	-2.44e-07	
+96	-2.44e-07	0.00211976	0.000842756	0.00135476	-1.244e-06	
+97	-2.44e-07	0.00214176	0.000849756	0.00130076	-2.44e-07	
+98	-2.44e-07	0.00225276	0.000856756	0.00131076	-2.44e-07	
+99	-2.44e-07	0.00217576	0.000864756	0.00131376	-2.44e-07	
+100	-2.44e-07	0.00227876	0.000881756	0.00134776	-2.44e-07	
+101	-2.44e-07	0.00235176	0.000887756	0.00136376	-2.44e-07	
+102	-2.44e-07	0.00237876	0.000932756	0.00135076	-2.44e-07	
+103	-2.44e-07	0.00238176	0.000895756	0.00142376	-2.44e-07	
+104	-2.44e-07	0.00240776	0.000912756	0.00137176	-2.44e-07	
+105	-2.44e-07	0.00241876	0.000917756	0.00138176	-2.44e-07	
+106	-2.44e-07	0.00246976	0.00109076	0.00156776	-2.44e-07	
+107	-2.44e-07	0.00253676	0.000925756	0.00264476	-2.44e-07	
+108	-2.44e-07	0.00258276	0.00202776	0.00153276	-2.44e-07	
+109	-2.44e-07	0.00250776	0.000963756	0.00175376	-2.44e-07	
+110	-2.44e-07	0.00254476	0.000967756	0.00155976	-2.44e-07	
+111	-2.44e-07	0.00264076	0.000959756	0.00156476	-2.44e-07	
+112	-2.44e-07	0.00257876	0.00109776	0.00159176	-2.44e-07	
+113	-2.44e-07	0.00269276	0.000972756	0.00158776	-2.44e-07	
+114	-2.44e-07	0.00267576	0.00100376	0.00168776	-2.44e-07	
+115	-2.44e-07	0.00262576	0.00108976	0.00161776	-2.44e-07	
+116	-2.44e-07	0.00275776	0.00110276	0.00167976	-2.44e-07	
+117	-2.44e-07	0.00274476	0.00110576	0.00164776	-2.44e-07	
+118	-2.44e-07	0.00269776	0.00111776	0.00172976	-2.44e-07	
+119	-2.44e-07	0.00344876	0.00112376	0.00166676	-2.44e-07	
+120	-2.44e-07	0.00281576	0.00113376	0.00168776	-2.44e-07	
+121	-2.44e-07	0.00275776	0.00121476	0.00170376	-2.44e-07	
+122	-1.244e-06	0.00279276	0.000989756	0.00147076	-2.44e-07	
+123	-1.244e-06	0.00259176	0.00105076	0.00166176	-2.44e-07	
+124	-2.44e-07	0.00271776	0.00100076	0.00159776	-1.244e-06	
+125	-2.44e-07	0.0134738	0.00100976	0.00160176	-2.44e-07	
+126	-2.44e-07	0.0133808	0.00240076	0.00365976	-2.44e-07	
+127	-2.44e-07	0.00258676	0.00102176	0.00152776	-2.44e-07	
+128	-2.44e-07	0.00261276	0.00102976	0.00152676	-2.44e-07	
+129	-2.44e-07	0.00261776	0.00103376	0.00276776	-2.44e-07	
+130	-2.44e-07	0.00265976	0.00104676	0.00155876	-2.44e-07	
+131	-2.44e-07	0.00279476	0.00105076	0.00155876	-2.44e-07	
+132	-2.44e-07	0.00280876	0.00113576	0.00156376	-2.44e-07	
+133	-2.44e-07	0.00295676	0.00106576	0.00163576	-2.44e-07	
+134	-2.44e-07	0.00295076	0.00111376	0.00165876	-2.44e-07	
+135	-2.44e-07	0.00295676	0.00107876	0.00161376	-2.44e-07	
+136	-2.44e-07	0.00291976	0.00112776	0.00162176	-2.44e-07	
+137	-2.44e-07	0.00291076	0.00109276	0.00173676	-2.44e-07	
+138	-1.244e-06	0.0237418	0.00230876	0.00223276	-2.44e-07	
+139	-1.244e-06	0.00308176	0.00111776	0.00177776	-2.44e-07	
+140	-1.244e-06	0.00306676	0.00111676	0.00178276	-2.44e-07	
+141	-2.44e-07	0.00317576	0.00115676	0.00186976	-2.44e-07	
+142	-2.44e-07	0.00313476	0.00114776	0.00846076	7.56e-07	
+143	-2.44e-07	0.00303976	0.00113876	0.00181776	-2.44e-07	
+144	-2.44e-07	0.00319376	0.00115776	0.00183176	-2.44e-07	
+145	-2.44e-07	0.00309576	0.00115176	0.00189676	-2.44e-07	
+146	-2.44e-07	0.00310276	0.00115976	0.00185176	-2.44e-07	
+147	-2.44e-07	0.00332176	0.00118176	0.00190176	-1.244e-06	
+148	-2.44e-07	0.00318976	0.00117476	0.00187576	-2.44e-07	
+149	-2.44e-07	0.00317776	0.00230976	0.00188176	-2.44e-07	
+150	-2.44e-07	0.00326076	0.00118876	0.00233976	-2.44e-07	
+151	-2.44e-07	0.00346076	0.00123976	0.00210776	-2.44e-07	
+152	-1.244e-06	0.00347476	0.00122676	0.00266476	-2.44e-07	
+153	-2.44e-07	0.00336776	0.00129876	0.00212076	-2.44e-07	
+154	-1.244e-06	0.00339076	0.00121976	0.00207976	-2.44e-07	
+155	-2.44e-07	0.0131048	0.00122776	0.00240176	-2.44e-07	
+156	-2.44e-07	0.00353576	0.00124176	0.00214376	-2.44e-07	
+157	-2.44e-07	0.00469976	0.00129876	0.00232576	-2.44e-07	
+158	-2.44e-07	0.00348276	0.00127276	0.00205576	-2.44e-07	
+159	-2.44e-07	0.00361876	0.00125776	0.00206376	-2.44e-07	
+160	-2.44e-07	0.00372876	0.00139576	0.00203176	-2.44e-07	
+161	-2.44e-07	0.00384576	0.00140276	0.00202876	-2.44e-07	
+162	-2.44e-07	0.00373476	0.00140176	0.00237276	-2.44e-07	
+163	-2.44e-07	0.00382476	0.00148276	0.00316776	-2.44e-07	
+164	-1.244e-06	0.00411476	0.00141976	0.00579076	7.56e-07	
+165	-2.44e-07	0.0109118	0.00566176	0.00217176	-1.244e-06	
+166	-2.44e-07	0.00716176	0.00150576	0.00245876	-2.44e-07	
+167	-2.44e-07	0.00380576	0.00152076	0.00228276	-2.44e-07	
+168	-2.44e-07	0.00388876	0.00154576	0.00246376	-2.44e-07	
+169	-2.44e-07	0.00501876	0.00185476	0.00221076	-2.44e-07	
+170	-2.44e-07	0.00412576	0.00177276	0.00230576	-2.44e-07	
+171	-2.44e-07	0.00436376	0.00188376	0.00238976	-2.44e-07	
+172	-2.44e-07	0.00409476	0.00156676	0.00245076	-2.44e-07	
+173	-2.44e-07	0.00532876	0.00155276	0.00221576	-2.44e-07	
+174	-2.44e-07	0.00403376	0.00151176	0.00218176	-2.44e-07	
+175	-1.244e-06	0.00406876	0.00155676	0.00228276	-2.44e-07	
+176	-2.44e-07	0.00402576	0.00151576	0.00232976	-2.44e-07	
+177	-2.44e-07	0.00418776	0.00151776	0.00222076	-2.44e-07	
+178	-2.44e-07	0.00411776	0.00154076	0.00222376	-2.44e-07	
+179	-2.44e-07	0.00432276	0.00162376	0.00229476	-2.44e-07	
+180	-2.44e-07	0.00433176	0.00155976	0.00224976	-2.44e-07	
+181	-2.44e-07	0.00419576	0.00156276	0.00226276	-2.44e-07	
+182	-2.44e-07	0.00418676	0.00160776	0.0166598	-2.44e-07	
+183	-2.44e-07	0.0141778	0.00160076	0.0157818	-2.44e-07	
+184	-2.44e-07	0.0102238	0.00159776	0.00767976	-2.44e-07	
+185	-2.44e-07	0.00879876	0.00158876	0.00607376	7.56e-07	
+186	-1.244e-06	0.00981876	0.00795976	0.0126828	-2.44e-07	
+187	-2.44e-07	0.00743576	0.00292676	0.00410576	-2.44e-07	
+188	-2.44e-07	0.0153868	0.00535876	0.00645976	-2.44e-07	
+189	-2.44e-07	0.00753676	0.00771776	0.00239876	-2.44e-07	
+190	-2.44e-07	0.00939376	0.00164376	0.00544576	-2.44e-07	
+191	-2.44e-07	0.0104038	0.00164876	0.00850776	-2.44e-07	
+192	-2.44e-07	0.0114588	0.00190776	0.00239276	-2.44e-07	
+193	-2.44e-07	0.00571476	0.00166076	0.0130088	-2.44e-07	
+194	-2.44e-07	0.00438576	0.00166276	0.00245476	-1.244e-06	
+195	-2.44e-07	0.00449776	0.00176976	0.00248976	-1.244e-06	
+196	-2.44e-07	0.00445576	0.00173576	0.00244576	-2.44e-07	
+197	-2.44e-07	0.00467476	0.00173976	0.00250776	-1.244e-06	
+198	-2.44e-07	0.00463176	0.00171276	0.00246776	-2.44e-07	
+199	-1.244e-06	0.00464276	0.00176476	0.00247976	-2.44e-07	
+200	-2.44e-07	0.00461876	0.00173676	0.00259576	-2.44e-07	
+201	-2.44e-07	0.00468176	0.00172276	0.00254676	-2.44e-07	
+202	-1.244e-06	0.00485176	0.00173576	0.00358176	-2.44e-07	
+203	-2.44e-07	0.00493876	0.00174676	0.00252976	-2.44e-07	
+204	-2.44e-07	0.00470676	0.00181576	0.00259176	-2.44e-07	
+205	-2.44e-07	0.00467876	0.00192776	0.00256476	-2.44e-07	
+206	-2.44e-07	0.00482676	0.00175876	0.00257276	-2.44e-07	
+207	-2.44e-07	0.00471276	0.00176976	0.00284176	-1.244e-06	
+208	-2.44e-07	0.00484376	0.00178276	0.00275976	-2.44e-07	
+209	-2.44e-07	0.00474476	0.00178476	0.00287076	-2.44e-07	
+210	-2.44e-07	0.00491576	0.00179676	0.00281176	-2.44e-07	
+211	-2.44e-07	0.00488176	0.00180476	0.00279776	-2.44e-07	
+212	-2.44e-07	0.00530576	0.00181576	0.00715976	7.56e-07	
+213	-2.44e-07	0.00485776	0.00189576	0.00285076	-2.44e-07	
+214	-2.44e-07	0.00784976	0.00182676	0.00331076	-2.44e-07	
+215	-2.44e-07	0.00505276	0.00185776	0.00315776	-2.44e-07	
+216	-1.244e-06	0.00528576	0.00185476	0.00290276	-2.44e-07	
+217	-2.44e-07	0.00545376	0.00302976	0.00323476	-2.44e-07	
+218	-2.44e-07	0.00645176	0.00239676	0.00290176	-1.244e-06	
+219	-1.244e-06	0.00541576	0.00186876	0.00292176	-2.44e-07	
+220	-2.44e-07	0.00539976	0.00187876	0.00313976	-2.44e-07	
+221	-2.44e-07	0.00714476	0.00202976	0.00297176	-2.44e-07	
+222	-2.44e-07	0.00732676	0.00226876	0.00303076	-2.44e-07	
+223	-2.44e-07	0.00560176	0.00199476	0.00295876	-2.44e-07	
+224	-2.44e-07	0.00557576	0.00248376	0.00299676	-2.44e-07	
+225	-2.44e-07	0.00563876	0.00198976	0.0103428	-2.44e-07	
+226	-2.44e-07	0.0314648	0.00766176	0.00429676	-2.44e-07	
+227	-2.44e-07	0.00559276	0.00193276	0.00299876	-2.44e-07	
+228	-2.44e-07	0.00548176	0.00200776	0.00311376	-2.44e-07	
+229	-2.44e-07	0.00547376	0.00194676	0.00417376	-2.44e-07	
+230	-2.44e-07	0.00548676	0.00207376	0.00304076	-2.44e-07	
+231	-2.44e-07	0.00560376	0.00196376	0.00324876	-2.44e-07	
+232	-2.44e-07	0.00557376	0.00197876	0.00324476	-2.44e-07	
+233	-2.44e-07	0.00550976	0.00219176	0.00421176	-2.44e-07	
+234	-2.44e-07	0.00576776	0.00240476	0.00308376	-2.44e-07	
+235	-2.44e-07	0.00564276	0.00212276	0.00319176	-2.44e-07	
+236	-2.44e-07	0.00563076	0.00200476	0.00319676	-2.44e-07	
+237	-2.44e-07	0.00570476	0.00205876	0.00314076	-2.44e-07	
+238	-2.44e-07	0.00573776	0.00213276	0.00313776	-1.244e-06	
+239	-2.44e-07	0.00600776	0.00210076	0.00329876	-2.44e-07	
+240	-2.44e-07	0.00572576	0.00203976	0.00329976	-2.44e-07	
+241	-2.44e-07	0.0160498	0.00320576	0.00343876	-2.44e-07	
+242	-2.44e-07	0.00575876	0.00208376	0.00330976	-2.44e-07	
+243	-2.44e-07	0.00594476	0.00206076	0.00326176	-2.44e-07	
+244	-2.44e-07	0.00575376	0.00208876	0.00332276	-2.44e-07	
+245	-2.44e-07	0.00578276	0.00207476	0.00322276	-2.44e-07	
+246	-2.44e-07	0.00589976	0.00219276	0.00325176	-2.44e-07	
+247	-1.244e-06	0.00582176	0.00209276	0.00433576	-2.44e-07	
+248	-2.44e-07	0.0122858	0.00248376	0.00328076	-2.44e-07	
+249	-2.44e-07	0.00618776	0.00222876	0.00446376	-2.44e-07	
+250	-2.44e-07	0.00599476	0.00212576	0.00339276	-2.44e-07	
+251	7.56e-07	0.0148748	0.00517776	0.00870576	-2.44e-07	
+252	-2.44e-07	0.00613176	0.00230576	0.00332376	-2.44e-07	
+253	-2.44e-07	0.00607476	0.00214376	0.00337576	-1.244e-06	
+254	-2.44e-07	0.00607076	0.00217576	0.00396776	-2.44e-07	
+255	-2.44e-07	0.00604676	0.00217376	0.00336176	-2.44e-07	
+256	-2.44e-07	0.00610176	0.00226276	0.00748376	-2.44e-07	
+257	-2.44e-07	0.0254638	0.0163548	0.00758076	-2.44e-07	
+258	-2.44e-07	0.0103308	0.00222076	0.00507776	-2.44e-07	
+259	-2.44e-07	0.00632976	0.00219376	0.00340376	-1.244e-06	
+260	-2.44e-07	0.00622276	0.00224276	0.00342476	-2.44e-07	
+261	-2.44e-07	0.00616576	0.00220176	0.00349576	-2.44e-07	
+262	-2.44e-07	0.00661076	0.00341176	0.00354776	-2.44e-07	
+263	-2.44e-07	0.00635576	0.00226776	0.00346676	-2.44e-07	
+264	-2.44e-07	0.00632776	0.00229276	0.00352876	-2.44e-07	
+265	-2.44e-07	0.00629876	0.00229376	0.00348376	-2.44e-07	
+266	-1.244e-06	0.00627976	0.00238276	0.00352276	-2.44e-07	
+267	-2.44e-07	0.00636576	0.00225276	0.00350876	-2.44e-07	
+268	-1.244e-06	0.00645276	0.00232076	0.00363876	-1.244e-06	
+269	-2.44e-07	0.00632876	0.00232776	0.00361476	-2.44e-07	
+270	-2.44e-07	0.00773976	0.00334376	0.00370276	-2.44e-07	
+271	-2.44e-07	0.00639476	0.00231976	0.00362176	-2.44e-07	
+272	-2.44e-07	0.00661476	0.00235076	0.00357576	-2.44e-07	
+273	-2.44e-07	0.00655876	0.00233976	0.00361576	-1.244e-06	
+274	-2.44e-07	0.00651676	0.00240776	0.00359976	-2.44e-07	
+275	-2.44e-07	0.00655976	0.00236476	0.00361276	-2.44e-07	
+276	-2.44e-07	0.00647676	0.00233576	0.00363876	-1.244e-06	
+277	-2.44e-07	0.00664876	0.00233276	0.00379676	-2.44e-07	
+278	-2.44e-07	0.00819576	0.00235476	0.00367576	-2.44e-07	
+279	-2.44e-07	0.00687176	0.00247376	0.00403076	-2.44e-07	
+280	-2.44e-07	0.00659676	0.00259776	0.00376076	-2.44e-07	
+281	-2.44e-07	0.00668176	0.00259376	0.00367576	-2.44e-07	
+282	-2.44e-07	0.00676176	0.00260076	0.00374176	-2.44e-07	
+283	-2.44e-07	0.00669476	0.00259376	0.00370576	-2.44e-07	
+284	-2.44e-07	0.00676376	0.00267676	0.00386976	-2.44e-07	
+285	-2.44e-07	0.0112888	0.00273776	0.00377576	-2.44e-07	
+286	-2.44e-07	0.00678476	0.00276876	0.00388676	-2.44e-07	
+287	-2.44e-07	0.00691176	0.00264276	0.00376076	-2.44e-07	
+288	-2.44e-07	0.00687876	0.00264576	0.00379476	-2.44e-07	
+289	-2.44e-07	0.00690376	0.00272476	0.00442776	-2.44e-07	
+290	-2.44e-07	0.00691576	0.00275376	0.00495576	-2.44e-07	
+291	-2.44e-07	0.00694976	0.00270076	0.00398276	-2.44e-07	
+292	-2.44e-07	0.00870376	0.00277976	0.00397276	-2.44e-07	
+293	-1.244e-06	0.00693976	0.00278576	0.00390076	-2.44e-07	
+294	-2.44e-07	0.00692876	0.00270976	0.00396176	-2.44e-07	
+295	-2.44e-07	0.00693876	0.00272076	0.00389776	-2.44e-07	
+296	-2.44e-07	0.00707376	0.00272476	0.00388976	-2.44e-07	
+297	-2.44e-07	0.00703576	0.00273976	0.0252068	-2.44e-07	
+298	-2.44e-07	0.00854576	0.00275176	0.00410276	-2.44e-07	
+299	-2.44e-07	0.00718576	0.00275876	0.00539176	-2.44e-07	
+300	-2.44e-07	0.00724376	0.00275376	0.00396576	-2.44e-07	
+301	-2.44e-07	0.00723876	0.00277476	0.00394076	-2.44e-07	
+302	-1.244e-06	0.00726176	0.00284676	0.00422276	-2.44e-07	
+303	-2.44e-07	0.00711176	0.00278876	0.00403176	-2.44e-07	
+304	-2.44e-07	0.0128258	0.00289976	0.00399776	-2.44e-07	
+305	-2.44e-07	0.00741076	0.00288276	0.00401076	-2.44e-07	
+306	-2.44e-07	0.00730076	0.00280676	0.00410276	-2.44e-07	
+307	-2.44e-07	0.00718276	0.00285376	0.00411576	-2.44e-07	
+308	-2.44e-07	0.00724176	0.00282676	0.00402676	-2.44e-07	
+309	-2.44e-07	0.00734676	0.00285476	0.00404776	-2.44e-07	
+310	-2.44e-07	0.00780976	0.00497276	0.00430076	-2.44e-07	
+311	-2.44e-07	0.0133928	0.0131738	0.00714076	-2.44e-07	
+312	-2.44e-07	0.00756976	0.00286676	0.00422676	-2.44e-07	
+313	-2.44e-07	0.00758576	0.00291276	0.00421076	-2.44e-07	
+314	-2.44e-07	0.00744476	0.00289676	0.00411476	-2.44e-07	
+315	-2.44e-07	0.00746476	0.00297176	0.00413076	-2.44e-07	
+316	-2.44e-07	0.00743176	0.00295876	0.00413676	-2.44e-07	
+317	-2.44e-07	0.00777676	0.00305976	0.00450276	-2.44e-07	
+318	-2.44e-07	0.00859376	0.00304376	0.00433476	-2.44e-07	
+319	-1.244e-06	0.00761476	0.00292376	0.00438676	-2.44e-07	
+320	-2.44e-07	0.00755276	0.00294076	0.00427176	-2.44e-07	
+321	-2.44e-07	0.00768176	0.00312176	0.00423876	-2.44e-07	
+322	-2.44e-07	0.00764276	0.00303076	0.00421376	-1.244e-06	
+323	-2.44e-07	0.0231468	0.0103528	0.0224998	-2.44e-07	
+324	-2.44e-07	0.0121218	0.00310876	0.00425376	-2.44e-07	
+325	-2.44e-07	0.00767176	0.00305576	0.00431976	-2.44e-07	
+326	-2.44e-07	0.00765376	0.00305576	0.00428476	-2.44e-07	
+327	-2.44e-07	0.00770476	0.00300376	0.00584976	-2.44e-07	
+328	-2.44e-07	0.00794376	0.00310876	0.00529476	-2.44e-07	
+329	-1.244e-06	0.00912976	0.00312376	0.00430976	-2.44e-07	
+330	-2.44e-07	0.00779576	0.00317776	0.00435276	-2.44e-07	
+331	-1.244e-06	0.00781776	0.00421176	0.00433376	-2.44e-07	
+332	-2.44e-07	0.00785576	0.00340376	0.00446276	-2.44e-07	
+333	-2.44e-07	0.00779276	0.00320176	0.00454876	-2.44e-07	
+334	-2.44e-07	0.00794076	0.00315276	0.00436676	-2.44e-07	
+335	-2.44e-07	0.00816276	0.00310376	0.00464276	-2.44e-07	
+336	-2.44e-07	0.00804076	0.00310476	0.00449676	-2.44e-07	
+337	-2.44e-07	0.00792076	0.00316776	0.00449376	-2.44e-07	
+338	-2.44e-07	0.00792976	0.00311176	0.00453476	-2.44e-07	
+339	-2.44e-07	0.00825976	0.00329976	0.00490876	-1.244e-06	
+340	-2.44e-07	0.00959376	0.00324976	0.00485776	-2.44e-07	
+341	-2.44e-07	0.0144098	0.00314076	0.00453676	-2.44e-07	
+342	-2.44e-07	0.00862676	0.00344676	0.00479176	-1.244e-06	
+343	-2.44e-07	0.00850276	0.00328576	0.00468376	-2.44e-07	
+344	-2.44e-07	0.00820076	0.00316376	0.00450176	-2.44e-07	
+345	-2.44e-07	0.00857076	0.00422176	0.00455976	-2.44e-07	
+346	-1.244e-06	0.00842576	0.00329476	0.00472676	-2.44e-07	
+347	-2.44e-07	0.00835876	0.00326576	0.00593576	-2.44e-07	
+348	-1.244e-06	0.00830576	0.00324376	0.00495576	-1.244e-06	
+349	-2.44e-07	0.00888176	0.00321676	0.00492676	-2.44e-07	
+350	-2.44e-07	0.00828276	0.00323076	0.00495876	-2.44e-07	
+351	-2.44e-07	0.0349778	0.00332176	0.00491576	-2.44e-07	
+352	-2.44e-07	0.00833776	0.00430776	0.00490776	-1.244e-06	
+353	-2.44e-07	0.00841576	0.00331876	0.00491676	-2.44e-07	
+354	-2.44e-07	0.0303628	0.00412576	0.00514076	-2.44e-07	
+355	-2.44e-07	0.00861376	0.00854276	0.00496776	-2.44e-07	
+356	-2.44e-07	0.00906476	0.00334676	0.00503076	-2.44e-07	
+357	-2.44e-07	0.00840876	0.00351276	0.00501976	-2.44e-07	
+358	-2.44e-07	0.00855076	0.00335576	0.00505176	-2.44e-07	
+359	-2.44e-07	0.00841776	0.00472276	0.00514876	-1.244e-06	
+360	-2.44e-07	0.00857276	0.00330176	0.00533576	-2.44e-07	
+361	-2.44e-07	0.00853376	0.00335176	0.00512376	-2.44e-07	
+362	-2.44e-07	0.00858676	0.00332776	0.00508576	-2.44e-07	
+363	-2.44e-07	0.00862976	0.00332876	0.00506676	-2.44e-07	
+364	-2.44e-07	0.00863876	0.00333576	0.00517676	-2.44e-07	
+365	-2.44e-07	0.0101398	0.00347576	0.00507976	-2.44e-07	
+366	-2.44e-07	0.00883776	0.00336276	0.00516776	-2.44e-07	
+367	-2.44e-07	0.00866276	0.00353176	0.00520176	-2.44e-07	
+368	-2.44e-07	0.00872076	0.00343776	0.00518776	-2.44e-07	
+369	-2.44e-07	0.00870576	0.00347576	0.00520176	-2.44e-07	
+370	-2.44e-07	0.00871176	0.00368076	0.00620476	-2.44e-07	
+371	-2.44e-07	0.00875976	0.00469076	0.00531376	-1.244e-06	
+372	-2.44e-07	0.00899276	0.00340876	0.00526276	-2.44e-07	
+373	-2.44e-07	0.00886576	0.00342576	0.00529176	-2.44e-07	
+374	-2.44e-07	0.00884576	0.00343376	0.00528876	-2.44e-07	
+375	-2.44e-07	0.0440858	0.00849576	0.00887776	-2.44e-07	
+376	7.56e-07	0.0228388	0.00844076	0.0452438	7.56e-07	
+377	-2.44e-07	0.0106508	0.00357176	0.00537776	-2.44e-07	
+378	-2.44e-07	0.00894576	0.00356576	0.00526776	-2.44e-07	
+379	-2.44e-07	0.00932476	0.00365676	0.00574076	-2.44e-07	
+380	-2.44e-07	0.0102368	0.00355576	0.00536176	-1.244e-06	
+381	-2.44e-07	0.00904176	0.00364676	0.00542676	-2.44e-07	
+382	-2.44e-07	0.00900176	0.00351676	0.00542476	-2.44e-07	
+383	-2.44e-07	0.00903076	0.00358376	0.00543976	-2.44e-07	
+384	-2.44e-07	0.00929976	0.00352176	0.00544076	-2.44e-07	
+385	-2.44e-07	0.0105258	0.00368176	0.00562076	-2.44e-07	
+386	-2.44e-07	0.00943676	0.00356076	0.00548576	-2.44e-07	
+387	-2.44e-07	0.00912576	0.00354476	0.00550976	-1.244e-06	
+388	-2.44e-07	0.00914276	0.00357976	0.00555276	-1.244e-06	
+389	-1.244e-06	0.0102398	0.00359176	0.00554776	-2.44e-07	
+390	-2.44e-07	0.00954576	0.00492676	0.00562576	-2.44e-07	
+391	-2.44e-07	0.00926276	0.00371376	0.00559576	-2.44e-07	
+392	-2.44e-07	0.00928876	0.00467176	0.00556476	-2.44e-07	
+393	-2.44e-07	0.00938076	0.00369776	0.00572976	-1.244e-06	
+394	-2.44e-07	0.00926476	0.00362576	0.00561876	-2.44e-07	
+395	-2.44e-07	0.00954276	0.00834576	0.00562776	-2.44e-07	
+396	-2.44e-07	0.00967876	0.00379176	0.00567076	-2.44e-07	
+397	-2.44e-07	0.00937476	0.00373176	0.00558776	-2.44e-07	
+398	-2.44e-07	0.00943876	0.00372976	0.00625076	-2.44e-07	
+399	-1.244e-06	0.00935976	0.00373876	0.00566276	-1.244e-06	
+400	-2.44e-07	0.0109508	0.00398476	0.00575576	-2.44e-07	
+401	-1.244e-06	0.00964176	0.00373076	0.00558676	-2.44e-07	
+402	-2.44e-07	0.0101448	0.00370476	0.00562576	-2.44e-07	
+403	-2.44e-07	0.0101208	0.00370876	0.00573876	-2.44e-07	
+404	-2.44e-07	0.0131138	0.0193108	0.00978676	-2.44e-07	
+405	-2.44e-07	0.0103628	0.00372776	0.00733476	7.56e-07	
+406	-2.44e-07	0.0114568	0.00376276	0.00587476	-2.44e-07	
+407	-2.44e-07	0.0107818	0.00403076	0.00618676	-2.44e-07	
+408	-2.44e-07	0.0101538	0.00374776	0.0114078	-2.44e-07	
+409	-2.44e-07	0.0102008	0.00395876	0.00577176	-2.44e-07	
+410	-2.44e-07	0.0101298	0.00398476	0.00573776	-2.44e-07	
+411	-2.44e-07	0.0103778	0.00382776	0.00573276	-2.44e-07	
+412	-2.44e-07	0.0116558	0.00382076	0.00584576	-2.44e-07	
+413	-2.44e-07	0.0118438	0.00508976	0.00580576	-2.44e-07	
+414	-2.44e-07	0.0105738	0.00384976	0.00576676	-2.44e-07	
+415	-2.44e-07	0.0104868	0.00386476	0.00594376	-2.44e-07	
+416	-2.44e-07	0.0102948	0.00382276	0.00592076	-2.44e-07	
+417	-2.44e-07	0.0103258	0.00390176	0.00588176	-2.44e-07	
+418	-2.44e-07	0.0117018	0.00398176	0.00589076	-2.44e-07	
+419	-2.44e-07	0.0108328	0.00392476	0.00593876	-2.44e-07	
+420	-2.44e-07	0.0105838	0.00394976	0.00596576	-2.44e-07	
+421	-2.44e-07	0.0105978	0.00398276	0.0507108	-2.44e-07	
+422	-2.44e-07	0.0259898	0.00566776	0.00849876	-2.44e-07	
+423	-2.44e-07	0.0148868	0.00552176	0.00848676	-2.44e-07	
+424	-2.44e-07	0.0164928	0.00555976	0.00854576	-2.44e-07	
+425	-2.44e-07	0.0148638	0.00555676	0.00837776	-2.44e-07	
+426	-2.44e-07	0.0149188	0.00569076	0.00840376	-2.44e-07	
+427	-1.244e-06	0.0167148	0.00593376	0.00859476	-2.44e-07	
+428	-2.44e-07	0.0152448	0.00571376	0.00900576	7.56e-07	
+429	-2.44e-07	0.0156978	0.00590276	0.00875276	-2.44e-07	
+430	-2.44e-07	0.0155758	0.00755476	0.00900576	-2.44e-07	
+431	-2.44e-07	0.0156728	0.00556276	0.00884276	-2.44e-07	
+432	-2.44e-07	0.0178198	0.00555576	0.00911676	-2.44e-07	
+433	-2.44e-07	0.0163108	0.0118778	0.0108478	-2.44e-07	
+434	-2.44e-07	0.0174538	0.00716476	0.00910376	-2.44e-07	
+435	-2.44e-07	0.0193088	0.00712476	0.0107938	-2.44e-07	
+436	-2.44e-07	0.0172908	0.00586876	0.00882876	-2.44e-07	
+437	-2.44e-07	0.0175948	0.00645576	0.0100428	-2.44e-07	
+438	-2.44e-07	0.0155268	0.00583976	0.00972476	-2.44e-07	
+439	-2.44e-07	0.0157368	0.00591576	0.0374088	-2.44e-07	
+440	-2.44e-07	0.0168898	0.00589576	0.00868676	-2.44e-07	
+441	-2.44e-07	0.0154488	0.00587976	0.00894776	-2.44e-07	
+442	-2.44e-07	0.0160688	0.00585476	0.0104368	-2.44e-07	
+443	-2.44e-07	0.0156558	0.00577776	0.00877876	-2.44e-07	
+444	-2.44e-07	0.0155808	0.00600776	0.00880476	-2.44e-07	
+445	-2.44e-07	0.0155078	0.00604076	0.0101888	-2.44e-07	
+446	-2.44e-07	0.0395098	0.00588376	0.00889676	-2.44e-07	
+447	-2.44e-07	0.0161398	0.00582476	0.00888276	-2.44e-07	
+448	-2.44e-07	0.0176298	0.00585276	0.00890976	-2.44e-07	
+449	-2.44e-07	0.0157738	0.00594776	0.00884976	-2.44e-07	
+450	7.56e-07	0.0159798	0.00592976	0.0540438	-2.44e-07	
+451	-2.44e-07	0.0222048	0.00613276	0.00891176	-2.44e-07	
+452	-2.44e-07	0.0159458	0.00586876	0.0105218	-2.44e-07	
+453	-2.44e-07	0.0179668	0.00594476	0.00886376	7.56e-07	
+454	-2.44e-07	0.0160158	0.00616976	0.00909376	-2.44e-07	
+455	-2.44e-07	0.0161028	0.00586076	0.0105688	7.56e-07	
+456	-2.44e-07	0.0165138	0.00597976	0.00913276	7.56e-07	
+457	-2.44e-07	0.0158668	0.00654576	0.00915876	-2.44e-07	
+458	-2.44e-07	0.0159998	0.00592776	0.0103888	-2.44e-07	
+459	-2.44e-07	0.0166878	0.00599276	0.00921776	-2.44e-07	
+460	-2.44e-07	0.0175048	0.00604876	0.00914776	-2.44e-07	
+461	-2.44e-07	0.0160928	0.00597976	0.0106458	-2.44e-07	
+462	-2.44e-07	0.0198678	0.00614576	0.00930676	7.56e-07	
+463	-2.44e-07	0.0162238	0.00602076	0.0110318	-2.44e-07	
+464	-2.44e-07	0.0163658	0.00605476	0.0395918	7.56e-07	
+465	-2.44e-07	0.0228488	0.00618176	0.0414048	-2.44e-07	
+466	7.56e-07	0.0339328	0.00601476	0.00939776	-2.44e-07	
+467	-2.44e-07	0.0184568	0.00641576	0.0112418	-2.44e-07	
+468	-2.44e-07	0.0633418	0.0169658	0.0394458	-2.44e-07	
+469	-2.44e-07	0.0557458	0.0205428	0.0258988	-2.44e-07	
+470	-2.44e-07	0.0423018	0.0179218	0.0557998	-2.44e-07	
+471	7.56e-07	0.0238948	0.00635976	0.00941476	-2.44e-07	
+472	-2.44e-07	0.0194728	0.00626476	0.0102388	-2.44e-07	
+473	7.56e-07	0.0198088	0.00760876	0.0116318	7.56e-07	
+474	-2.44e-07	0.0228548	0.00919576	0.0121028	-2.44e-07	
+475	-2.44e-07	0.0187128	0.00713676	0.00992976	-2.44e-07	
+476	-2.44e-07	0.0214318	0.00741676	0.0100048	-2.44e-07	
+477	-2.44e-07	0.0207198	0.00628876	0.0103998	-2.44e-07	
+478	-2.44e-07	0.0185288	0.00987676	0.0107198	-2.44e-07	
+479	-2.44e-07	0.0182498	0.00703776	0.0165288	7.56e-07	
+480	-2.44e-07	0.0181538	0.00628576	0.00956576	-2.44e-07	
+481	-2.44e-07	0.0186748	0.00695576	0.0102308	-2.44e-07	
+482	-2.44e-07	0.0202778	0.00933876	0.0103318	-2.44e-07	
+483	-2.44e-07	0.0187818	0.00856076	0.0101428	-2.44e-07	
+484	-2.44e-07	0.0485358	0.00778576	0.00989376	-2.44e-07	
+485	-2.44e-07	0.0181048	0.00696776	0.0100488	-2.44e-07	
+486	-2.44e-07	0.0176368	0.00625676	0.0111308	-2.44e-07	
+487	-2.44e-07	0.0177868	0.00633576	0.00980876	-2.44e-07	
+488	-2.44e-07	0.0202678	0.00628876	0.00983676	-2.44e-07	
+489	-2.44e-07	0.0191398	0.00866176	0.0105688	-2.44e-07	
+490	-2.44e-07	0.0175288	0.00696976	0.0101888	-2.44e-07	
+491	-2.44e-07	0.0176538	0.00697276	0.0103848	7.56e-07	
+492	7.56e-07	0.0192048	0.00732376	0.00981476	7.56e-07	
+493	-2.44e-07	0.0190958	0.00695676	0.0104478	-2.44e-07	
+494	-2.44e-07	0.0400128	0.0326028	0.0212608	7.56e-07	
+495	-2.44e-07	0.0186808	0.00861476	0.0112448	-2.44e-07	
+496	-2.44e-07	0.0198088	0.0103328	0.00994376	-2.44e-07	
+497	-2.44e-07	0.0189628	0.00705076	0.0103398	-2.44e-07	
+498	-2.44e-07	0.0252388	0.00673476	0.0106218	-2.44e-07	
+499	-2.44e-07	0.0189858	0.00656076	0.0112688	7.56e-07	
+500	-2.44e-07	0.0209678	0.00666976	0.0118178	7.56e-07	
+501	-2.44e-07	0.0447038	0.0110878	0.0167188	7.56e-07	
+502	-2.44e-07	0.0192588	0.00657176	0.0104548	-2.44e-07	
+503	-2.44e-07	0.0185448	0.00661776	0.0105078	-2.44e-07	
+504	-2.44e-07	0.0192538	0.0184578	0.0109028	7.56e-07	
+505	-2.44e-07	0.0183668	0.00661876	0.0100688	-2.44e-07	
+506	-2.44e-07	0.0189728	0.00660476	0.0101398	-2.44e-07	
+507	-2.44e-07	0.0196998	0.00685676	0.0110338	7.56e-07	
+508	-2.44e-07	0.0192338	0.00712176	0.0109788	7.56e-07	
+509	-2.44e-07	0.0526928	0.00937776	0.0105598	-2.44e-07	
+510	7.56e-07	0.0190488	0.00772176	0.0103688	7.56e-07	
+511	-2.44e-07	0.0208408	0.00699576	0.0106718	-2.44e-07	
+512	-2.44e-07	0.0192358	0.00698076	0.0119158	-2.44e-07	
+513	-2.44e-07	0.0203198	0.00748076	0.0123168	-2.44e-07	
+514	-2.44e-07	0.0211298	0.00711476	0.0120348	7.56e-07	
+515	7.56e-07	0.0185588	0.00670976	0.0101578	-2.44e-07	
+516	-2.44e-07	0.0198458	0.00835176	0.0102778	-2.44e-07	
+517	-2.44e-07	0.0185958	0.00683576	0.0102318	-2.44e-07	
+518	-2.44e-07	0.0618168	0.0155588	0.0196268	7.56e-07	
+519	-2.44e-07	0.0203918	0.00774676	0.0125118	-2.44e-07	
+520	-2.44e-07	0.0202968	0.00714376	0.0106568	-2.44e-07	
+521	-2.44e-07	0.0201468	0.00711976	0.0108898	-2.44e-07	
+522	7.56e-07	0.0213698	0.00718976	0.0110738	-2.44e-07	
+523	-2.44e-07	0.0199878	0.00718176	0.0118728	7.56e-07	
+524	-2.44e-07	0.0288428	0.0169008	0.0189088	-2.44e-07	
+525	7.56e-07	0.0371708	0.00739476	0.0106498	7.56e-07	
+526	-2.44e-07	0.0214478	0.00719576	0.0106818	-2.44e-07	
+527	-2.44e-07	0.0189968	0.00692476	0.0112068	-2.44e-07	
+528	-2.44e-07	0.0188458	0.00696776	0.0442058	-2.44e-07	
+529	-2.44e-07	0.0203438	0.00689076	0.0105398	-2.44e-07	
+530	-2.44e-07	0.0569338	0.0149198	0.0188078	-2.44e-07	
+531	-2.44e-07	0.0425048	0.00759376	0.0111818	-2.44e-07	
+532	-2.44e-07	0.0214358	0.00694776	0.0205578	-2.44e-07	
+533	-2.44e-07	0.0194078	0.00715276	0.0106898	-2.44e-07	
+534	-2.44e-07	0.0205638	0.00698476	0.0106168	-2.44e-07	
+535	-2.44e-07	0.0266618	0.00750276	0.0112748	-2.44e-07	
+536	-2.44e-07	0.0198998	0.00729876	0.0113218	-2.44e-07	
+537	-2.44e-07	0.0717478	0.0220618	0.0293118	-2.44e-07	
+538	-2.44e-07	0.0321878	0.00720676	0.0106218	7.56e-07	
+539	-2.44e-07	0.0193528	0.00724876	0.0108308	-2.44e-07	
+540	-2.44e-07	0.0220888	0.00744976	0.0106528	-2.44e-07	
+541	-2.44e-07	0.0194298	0.00715176	0.0106898	-2.44e-07	
+542	7.56e-07	0.0187638	0.00585576	0.0103628	-2.44e-07	
+543	-2.44e-07	0.0164548	0.00596276	0.00899476	-2.44e-07	
+544	-2.44e-07	0.0162228	0.00583376	0.00907076	-2.44e-07	
+545	-2.44e-07	0.0162848	0.00615576	0.0143288	-2.44e-07	
+546	-2.44e-07	0.0168648	0.00604476	0.0171678	-2.44e-07	
+547	-2.44e-07	0.0533858	0.00644376	0.0179688	-2.44e-07	
+548	-2.44e-07	0.0171678	0.00641776	0.00900676	-2.44e-07	
+549	-2.44e-07	0.0409708	0.00690576	0.00938176	-2.44e-07	
+550	-2.44e-07	0.0184538	0.00609376	0.00931176	-2.44e-07	
+551	-2.44e-07	0.0163868	0.00625976	0.00911376	-2.44e-07	
+552	-2.44e-07	0.0179388	0.00591076	0.00931476	-2.44e-07	
+553	-2.44e-07	0.0164488	0.00736576	0.00912776	-2.44e-07	
+554	-2.44e-07	0.0181358	0.00595876	0.00926576	-2.44e-07	
+555	-2.44e-07	0.0350888	0.00891676	0.00925676	-2.44e-07	
+556	-2.44e-07	0.0167068	0.00608476	0.00906676	-2.44e-07	
+557	-2.44e-07	0.0165718	0.00752376	0.00907676	-2.44e-07	
+558	-2.44e-07	0.0185418	0.00611076	0.00985376	-2.44e-07	
+559	-2.44e-07	0.0249818	0.00729776	0.0126548	-2.44e-07	
+560	-2.44e-07	0.0168718	0.00611876	0.0354568	-2.44e-07	
+561	-2.44e-07	0.0618938	0.0177738	0.0559348	7.56e-07	
+562	-2.44e-07	0.0379158	0.0146358	0.0187378	-2.44e-07	
+563	-2.44e-07	0.0368838	0.00609076	0.00950576	-2.44e-07	
+564	-2.44e-07	0.0167348	0.00747376	0.00961576	-2.44e-07	
+565	-2.44e-07	0.0172548	0.00606376	0.00927376	-2.44e-07	
+566	-2.44e-07	0.0169958	0.00618676	0.00995676	-2.44e-07	
+567	-2.44e-07	0.0171768	0.0116318	0.0122868	-2.44e-07	
+568	-2.44e-07	0.0182808	0.00633076	0.00961376	-2.44e-07	
+569	-2.44e-07	0.0195318	0.00649876	0.0301608	7.56e-07	
+570	4.2756e-05	0.0340928	0.00666776	0.0577588	-2.44e-07	
+571	-2.44e-07	0.0191378	0.00625476	0.00947976	-2.44e-07	
+572	-2.44e-07	0.0170438	0.00613976	0.00970776	-2.44e-07	
+573	-2.44e-07	0.0188318	0.00626876	0.00944076	-1.244e-06	
+574	-2.44e-07	0.0179028	0.00638276	0.00947476	-2.44e-07	
+575	-2.44e-07	0.0185378	0.00661476	0.00946876	-2.44e-07	
+576	-2.44e-07	0.0189798	0.00622076	0.00986976	-2.44e-07	
+577	-2.44e-07	0.0172238	0.00620376	0.00957176	-2.44e-07	
+578	-2.44e-07	0.0251378	0.00632776	0.0109268	-2.44e-07	
+579	-2.44e-07	0.0174768	0.00666676	0.0108678	-2.44e-07	
+580	-2.44e-07	0.0174538	0.00682376	0.00958376	-2.44e-07	
+581	-2.44e-07	0.0669658	0.0155288	0.0228978	7.56e-07	
+582	-2.44e-07	0.0286318	0.00636376	0.00988376	-2.44e-07	
+583	-2.44e-07	0.0173868	0.00634876	0.00958676	-2.44e-07	
+584	-2.44e-07	0.0176688	0.00626776	0.00977476	-2.44e-07	
+585	-2.44e-07	0.0198508	0.00669876	0.00969676	-2.44e-07	
+586	7.56e-07	0.0177058	0.00632276	0.00989576	-2.44e-07	
+587	-2.44e-07	0.0176088	0.00630076	0.0110838	-2.44e-07	
+588	-2.44e-07	0.0184128	0.00656376	0.00961176	-2.44e-07	
+589	-2.44e-07	0.0178478	0.00644876	0.00963076	-2.44e-07	
+590	-2.44e-07	0.0179038	0.00656876	0.0109798	-2.44e-07	
+591	-2.44e-07	0.0187248	0.00636876	0.0100878	-2.44e-07	
+592	-2.44e-07	0.0180928	0.00709976	0.00985976	-2.44e-07	
+593	-2.44e-07	0.0443568	0.0118868	0.00981476	-2.44e-07	
+594	-2.44e-07	0.0181978	0.00650376	0.0403878	-2.44e-07	
+595	-2.44e-07	0.0217188	0.00640576	0.0100378	-2.44e-07	
+596	-2.44e-07	0.0195138	0.00669976	0.0104978	-2.44e-07	
+597	-2.44e-07	0.0212188	0.00656076	0.0101388	-2.44e-07	
+598	-2.44e-07	0.0183288	0.00650876	0.0180558	-2.44e-07	
+599	-2.44e-07	0.0407998	0.00655676	0.00997276	7.56e-07	
+600	-2.44e-07	0.0202118	0.0117858	0.0104778	7.56e-07	
+601	-2.44e-07	0.0184028	0.00791276	0.00992476	-2.44e-07	
+602	-2.44e-07	0.0191288	0.00655576	0.0101998	-2.44e-07	
+603	-2.44e-07	0.0183838	0.00647476	0.0474708	7.56e-07	
+604	-2.44e-07	0.0307648	0.00667476	0.0100438	-2.44e-07	
+605	-2.44e-07	0.0184828	0.00683276	0.0112588	-2.44e-07	
+606	-2.44e-07	0.0205658	0.00661476	0.0100468	-2.44e-07	
+607	-2.44e-07	0.0184648	0.00652376	0.0102928	-2.44e-07	
+608	-2.44e-07	0.0287898	0.00686476	0.0102378	-2.44e-07	
+609	-2.44e-07	0.0186438	0.00663876	0.0113708	7.56e-07	
+610	-2.44e-07	0.0188048	0.00688776	0.0114998	-2.44e-07	
+611	-2.44e-07	0.0192288	0.00676576	0.0100198	-2.44e-07	
+612	-2.44e-07	0.0187628	0.00678576	0.0101518	-2.44e-07	
+613	-2.44e-07	0.0240428	0.00686876	0.0104748	-2.44e-07	
+614	-2.44e-07	0.0191728	0.00670876	0.0101858	-2.44e-07	
+615	-2.44e-07	0.0209138	0.00684476	0.0101318	-2.44e-07	
+616	7.56e-07	0.0209908	0.00670776	0.0100498	-2.44e-07	
+617	-2.44e-07	0.0198928	0.00691676	0.0349648	7.56e-07	
+618	-2.44e-07	0.0194838	0.00683376	0.0102258	-2.44e-07	
+619	-2.44e-07	0.0202238	0.00683676	0.0104658	-2.44e-07	
+620	-2.44e-07	0.0203948	0.00667076	0.0104518	-2.44e-07	
+621	-2.44e-07	0.0189398	0.00699076	0.0103978	-2.44e-07	
+622	-2.44e-07	0.0189148	0.00676876	0.0102778	-2.44e-07	
+623	-2.44e-07	0.0205848	0.00707876	0.0102458	-1.244e-06	
+624	-2.44e-07	0.0191128	0.0142998	0.0453088	7.56e-07	
+625	-2.44e-07	0.0286048	0.00714176	0.0104438	-2.44e-07	
+626	7.56e-07	0.0321808	0.0106088	0.0162138	-2.44e-07	
+627	-2.44e-07	0.0566158	0.0147538	0.0133238	7.56e-07	
+628	-2.44e-07	0.0192788	0.00699276	0.0104038	-2.44e-07	
+629	-2.44e-07	0.0208598	0.00687976	0.0107058	-2.44e-07	
+630	-2.44e-07	0.0192528	0.00685576	0.0103798	-2.44e-07	
+631	-2.44e-07	0.0194398	0.00696976	0.0117538	-2.44e-07	
+632	-2.44e-07	0.0561898	0.0234108	0.0124178	-2.44e-07	
+633	-2.44e-07	0.0209678	0.00738076	0.0135568	7.56e-07	
+634	-2.44e-07	0.0198338	0.00700676	0.0105928	-2.44e-07	
+635	-2.44e-07	0.0204678	0.0120608	0.0110928	-2.44e-07	
+636	-2.44e-07	0.0212318	0.00696176	0.0105568	-2.44e-07	
+637	-2.44e-07	0.0203908	0.00694476	0.0120308	-2.44e-07	
+638	-2.44e-07	0.0202808	0.00707276	0.0183798	7.56e-07	
+639	-2.44e-07	0.0949158	0.00703776	0.0108318	-2.44e-07	
+640	-2.44e-07	0.0198448	0.00698076	0.0121578	-2.44e-07	
+641	-2.44e-07	0.0197858	0.00720276	0.0107508	-2.44e-07	
+642	-2.44e-07	0.0198728	0.00692976	0.0109538	-2.44e-07	
+643	-2.44e-07	0.0349748	0.00706876	0.0109408	-2.44e-07	
+644	-2.44e-07	0.0277248	0.00691876	0.0519158	7.56e-07	
+645	-1.244e-06	0.0384158	0.00694176	0.0205478	-2.44e-07	
+646	-2.44e-07	0.0575848	0.00729276	0.0112488	-2.44e-07	
+647	-2.44e-07	0.0200438	0.00718976	0.0107188	-2.44e-07	
+648	-2.44e-07	0.0202758	0.00728476	0.0105778	-2.44e-07	
+649	-2.44e-07	0.0202008	0.00708676	0.0108428	-2.44e-07	
+650	-2.44e-07	0.0690598	0.0157538	0.0108068	-2.44e-07	
+651	-2.44e-07	0.0215028	0.00722976	0.0111848	-2.44e-07	
+652	-2.44e-07	0.0199758	0.00851776	0.0108108	-2.44e-07	
+653	-2.44e-07	0.0211938	0.00864876	0.0110578	-2.44e-07	
+654	-2.44e-07	0.0208558	0.00720076	0.0108388	-2.44e-07	
+655	-2.44e-07	0.0210648	0.00705976	0.0108918	-2.44e-07	
+656	-2.44e-07	0.0460178	0.00884376	0.0112568	-2.44e-07	
+657	-2.44e-07	0.0554438	0.00787476	0.0118688	-2.44e-07	
+658	-2.44e-07	0.0211608	0.00760376	0.0129138	7.56e-07	
+659	-2.44e-07	0.0267068	0.0100558	0.0123228	-2.44e-07	
+660	-2.44e-07	0.0225198	0.00805476	0.0119988	-2.44e-07	
+661	-2.44e-07	0.0231758	0.0228498	0.0194858	-2.44e-07	
+662	-2.44e-07	0.0208078	0.00721476	0.0123978	7.56e-07	
+663	-2.44e-07	0.0226168	0.00759876	0.0117438	-2.44e-07	
+664	-2.44e-07	0.0460268	0.0183108	0.0410158	-2.44e-07	
+665	-2.44e-07	0.0588128	0.0293088	0.0376238	7.56e-07	
+666	-2.44e-07	0.0536108	0.0256768	0.0499958	-2.44e-07	
+667	7.56e-07	0.0269768	0.00771376	0.0112258	-2.44e-07	
+668	-2.44e-07	0.0204558	0.00759676	0.0111658	-2.44e-07	
+669	-2.44e-07	0.0271568	0.0102878	0.0115818	-2.44e-07	
+670	-2.44e-07	0.0206468	0.00730276	0.0125978	-2.44e-07	
+671	-2.44e-07	0.0206568	0.00896476	0.0117098	-2.44e-07	
+672	-2.44e-07	0.0209668	0.00729676	0.0111468	-2.44e-07	
+673	-2.44e-07	0.0652578	0.00750876	0.0129568	-2.44e-07	
+674	-2.44e-07	0.0206238	0.00747476	0.0113728	-2.44e-07	
+675	-2.44e-07	0.0222998	0.00740976	0.0112598	-2.44e-07	
+676	-2.44e-07	0.0225138	0.00728476	0.0112538	-2.44e-07	
+677	7.56e-07	0.0347398	0.00765676	0.0113528	-2.44e-07	
+678	-2.44e-07	0.0339628	0.00752276	0.0113658	-2.44e-07	
+679	-2.44e-07	0.0250878	0.00749676	0.0112118	-2.44e-07	
+680	7.56e-07	0.0221768	0.00777276	0.0116448	-2.44e-07	
+681	-2.44e-07	0.0657178	0.0155918	0.0117758	-2.44e-07	
+682	-2.44e-07	0.0227818	0.00801776	0.0136588	-2.44e-07	
+683	-2.44e-07	0.0280908	0.00994576	0.0151158	-2.44e-07	
+684	-2.44e-07	0.0219968	0.00803576	0.0117598	-2.44e-07	
+685	-2.44e-07	0.0214488	0.00766076	0.0115188	-2.44e-07	
+686	-2.44e-07	0.0224988	0.00764076	0.0115558	-2.44e-07	
+687	-2.44e-07	0.0212818	0.00751076	0.0113508	-2.44e-07	
+688	7.56e-07	0.0211858	0.00893576	0.0237708	-2.44e-07	
+689	-2.44e-07	0.0214558	0.00753076	0.0114448	-2.44e-07	
+690	-2.44e-07	0.0214198	0.0124898	0.0113408	-2.44e-07	
+691	-2.44e-07	0.0219988	0.00766376	0.0113888	-2.44e-07	
+692	-2.44e-07	0.0228148	0.00753976	0.0129508	-2.44e-07	
+693	-2.44e-07	0.0254528	0.00747576	0.0130908	-2.44e-07	
+694	-2.44e-07	0.0213718	0.0202888	0.0248248	7.56e-07	
+695	-2.44e-07	0.0220598	0.00760576	0.0115728	-2.44e-07	
+696	-2.44e-07	0.0216448	0.00763776	0.0176148	-2.44e-07	
+697	-2.44e-07	0.0233748	0.00775876	0.0115658	-2.44e-07	
+698	-2.44e-07	0.0706308	0.0286208	0.0387498	7.56e-07	
+699	7.56e-07	0.0755348	0.0143958	0.0267838	-2.44e-07	
+700	-2.44e-07	0.0789988	0.00832176	0.0131548	-2.44e-07	
+701	-2.44e-07	0.0242578	0.00798776	0.0116918	-2.44e-07	
+702	-2.44e-07	0.0236918	0.00758076	0.0131978	-2.44e-07	
+703	-2.44e-07	0.0219488	0.00783276	0.0120118	-2.44e-07	
+704	-2.44e-07	0.0216678	0.00765376	0.0117618	-2.44e-07	
+705	-2.44e-07	0.0237358	0.00764176	0.0119838	7.56e-07	
+706	-2.44e-07	0.0219868	0.00774876	0.0116488	-2.44e-07	
+707	-2.44e-07	0.0261448	0.00797176	0.0119228	-2.44e-07	
+708	-2.44e-07	0.0226418	0.00774376	0.0117618	-2.44e-07	
+709	-2.44e-07	0.0220498	0.00776576	0.0302518	-2.44e-07	
+710	-2.44e-07	0.0318758	0.00846376	0.0427808	-2.44e-07	
+711	-2.44e-07	0.0364868	0.00830376	0.0130128	-2.44e-07	
+712	-2.44e-07	0.0240568	0.00982876	0.0129118	-2.44e-07	
+713	-2.44e-07	0.0263768	0.00854376	0.0131288	7.56e-07	
+714	-2.44e-07	0.0241408	0.0101388	0.0133398	-2.44e-07	
+715	-2.44e-07	0.0247518	0.00868976	0.0130468	-2.44e-07	
+716	-2.44e-07	0.0241318	0.00866176	0.0143938	-2.44e-07	
+717	7.56e-07	0.0261708	0.00896776	0.0129348	-2.44e-07	
+718	-2.44e-07	0.0630738	0.0148918	0.0179298	-2.44e-07	
+719	-2.44e-07	0.0265598	0.00889376	0.0146288	-2.44e-07	
+720	-2.44e-07	0.0247528	0.00877976	0.0130668	-2.44e-07	
+721	-2.44e-07	0.0248308	0.00903376	0.0145288	-2.44e-07	
+722	-2.44e-07	0.0257738	0.00856676	0.0130358	7.56e-07	
+723	-2.44e-07	0.0240278	0.00837876	0.0143648	-2.44e-07	
+724	-2.44e-07	0.0229238	0.00799776	0.0124968	-2.44e-07	
+725	-2.44e-07	0.0225518	0.00791776	0.0123038	-2.44e-07	
+726	-1.244e-06	0.0279378	0.00819276	0.0125738	7.56e-07	
+727	-2.44e-07	0.0237438	0.00811276	0.0122218	-2.44e-07	
+728	-2.44e-07	0.0263338	0.00838376	0.0121468	-2.44e-07	
+729	-2.44e-07	0.0241228	0.00810376	0.0376728	7.56e-07	
+730	-2.44e-07	0.0231138	0.00832276	0.0123598	-2.44e-07	
+731	-2.44e-07	0.0230128	0.00810976	0.0123808	7.56e-07	
+732	-2.44e-07	0.0243498	0.00801676	0.0125148	-2.44e-07	
+733	-2.44e-07	0.0229208	0.00813476	0.0122218	-2.44e-07	
+734	-2.44e-07	0.0248538	0.00818276	0.0138678	7.56e-07	
+735	-2.44e-07	0.0231828	0.00827876	0.0123638	-2.44e-07	
+736	-2.44e-07	0.0246558	0.00808576	0.0126568	-2.44e-07	
+737	-2.44e-07	0.0250918	0.00804876	0.0124478	7.56e-07	
+738	-2.44e-07	0.0793508	0.00839876	0.0125218	-2.44e-07	
+739	-2.44e-07	0.0249138	0.00813176	0.0124698	7.56e-07	
+740	-2.44e-07	0.0234418	0.00832576	0.0126398	-2.44e-07	
+741	-2.44e-07	0.0237768	0.00962376	0.0123578	-2.44e-07	
+742	-2.44e-07	0.0235038	0.00830476	0.0125038	-2.44e-07	
+743	-2.44e-07	0.0232968	0.00808376	0.0140818	-2.44e-07	
+744	-2.44e-07	0.0234868	0.00829376	0.0126098	-2.44e-07	
+745	-2.44e-07	0.0233488	0.00850676	0.0179828	-2.44e-07	
+746	-2.44e-07	0.0238718	0.00833676	0.0126858	-2.44e-07	
+747	-2.44e-07	0.0244818	0.00823076	0.0153618	-2.44e-07	
+748	-2.44e-07	0.0253438	0.00828776	0.0126768	-2.44e-07	
+749	-2.44e-07	0.0239288	0.0334608	0.0128858	-2.44e-07	
+750	-2.44e-07	0.0258598	0.00837376	0.0125608	-2.44e-07	
+751	7.56e-07	0.0585768	0.0184108	0.0511438	-2.44e-07	
+752	-2.44e-07	0.0240438	0.00965976	0.0126948	-2.44e-07	
+753	-2.44e-07	0.0238918	0.00855376	0.0127228	-2.44e-07	
+754	-2.44e-07	0.0237138	0.00855876	0.0258028	-2.44e-07	
+755	-2.44e-07	0.0321598	0.00868876	0.0126398	-2.44e-07	
+756	-2.44e-07	0.0251728	0.00852376	0.0128678	-2.44e-07	
+757	-2.44e-07	0.0243408	0.00835976	0.0127158	-2.44e-07	
+758	-2.44e-07	0.0757838	0.0164978	0.0643148	-2.44e-07	
+759	-2.44e-07	0.0536198	0.0252388	0.0156708	7.56e-07	
+760	-2.44e-07	0.0244098	0.00909876	0.0129188	-2.44e-07	
+761	-2.44e-07	0.0256498	0.00871676	0.0129118	7.56e-07	
+762	-2.44e-07	0.0242518	0.00842576	0.0128478	-2.44e-07	
+763	-1.244e-06	0.0267758	0.00888976	0.0161668	-2.44e-07	
+764	-2.44e-07	0.0249368	0.00852976	0.0143138	-2.44e-07	
+765	-2.44e-07	0.0464918	0.0156848	0.0149198	-2.44e-07	
+766	-2.44e-07	0.0683058	0.00864076	0.0129888	-2.44e-07	
+767	-2.44e-07	0.0303518	0.00893876	0.0129318	-2.44e-07	
+768	-2.44e-07	0.0257838	0.00863676	0.0132698	-2.44e-07	
+769	-2.44e-07	0.0245428	0.00871376	0.0131048	-2.44e-07	
+770	-2.44e-07	0.0259918	0.00864476	0.0131988	-2.44e-07	
+771	-2.44e-07	0.0246868	0.0163518	0.0144588	-2.44e-07	
+772	-1.244e-06	0.0248008	0.00881176	0.0133728	-2.44e-07	
+773	-2.44e-07	0.0246038	0.0270468	0.0433838	-2.44e-07	
+774	-2.44e-07	0.0249828	0.00858676	0.0132498	-2.44e-07	
+775	-2.44e-07	0.0260538	0.00859976	0.0132878	-2.44e-07	
+776	-2.44e-07	0.0248148	0.00862976	0.0134008	-2.44e-07	
+777	-2.44e-07	0.0289448	0.00873376	0.0132528	-2.44e-07	
+778	-2.44e-07	0.0265728	0.0103808	0.0133398	-2.44e-07	
+779	-2.44e-07	0.0280968	0.00964876	0.0136948	7.56e-07	
+780	-2.44e-07	0.0268318	0.00900476	0.0141498	-2.44e-07	
+781	-2.44e-07	0.0361208	0.00902776	0.0140448	-2.44e-07	
+782	-2.44e-07	0.0283578	0.00916176	0.0170068	-2.44e-07	
+783	-2.44e-07	0.0279458	0.00963976	0.0143668	-2.44e-07	
+784	-2.44e-07	0.0533938	0.00916576	0.0164988	7.56e-07	
+785	-1.244e-06	0.0280978	0.00958476	0.0158588	-2.44e-07	
+786	-2.44e-07	0.0271308	0.00988176	0.0143978	-2.44e-07	
+787	-2.44e-07	0.0278728	0.00935376	0.0155668	-2.44e-07	
+788	-2.44e-07	0.0277128	0.00886976	0.0136518	-2.44e-07	
+789	-2.44e-07	0.0254298	0.00875676	0.0155628	-2.44e-07	
+790	-2.44e-07	0.0261558	0.00897976	0.0134838	-2.44e-07	
+791	-2.44e-07	0.0964868	0.0227308	0.0328658	-2.44e-07	
+792	-2.44e-07	0.0283128	0.00917076	0.0132788	-2.44e-07	
+793	-2.44e-07	0.0257088	0.0102408	0.0138478	-2.44e-07	
+794	-2.44e-07	0.0255928	0.00928176	0.0133958	7.56e-07	
+795	-2.44e-07	0.0254598	0.0102418	0.0136668	-2.44e-07	
+796	-2.44e-07	0.0259008	0.00917676	0.0135438	-2.44e-07	
+797	-2.44e-07	0.0273638	0.0138978	0.0138848	-2.44e-07	
+798	-2.44e-07	0.0274238	0.00892876	0.0143348	-2.44e-07	
+799	-2.44e-07	0.0283158	0.0101118	0.0145508	-2.44e-07	
+800	-2.44e-07	0.0341068	0.00904276	0.0388648	-2.44e-07	
+801	-2.44e-07	0.0272108	0.0103608	0.0145378	-2.44e-07	
+802	-2.44e-07	0.0290038	0.0111958	0.0145618	-2.44e-07	
+803	7.56e-07	0.0278468	0.00949276	0.0143488	-2.44e-07	
+804	-2.44e-07	0.0293858	0.0106068	0.0144368	-2.44e-07	
+805	-2.44e-07	0.0279588	0.00931276	0.0146088	-2.44e-07	
+806	-2.44e-07	0.0280398	0.00986876	0.0144888	-2.44e-07	
+807	-2.44e-07	0.0883338	0.0140168	0.0165188	7.56e-07	
+808	-2.44e-07	0.0261658	0.00891576	0.0627188	-2.44e-07	
+809	-2.44e-07	0.0364838	0.00908076	0.0154258	7.56e-07	
+810	7.56e-07	0.0262028	0.00916976	0.0140758	-2.44e-07	
+811	-2.44e-07	0.0261938	0.00906076	0.0153468	-2.44e-07	
+812	-2.44e-07	0.0265018	0.00917476	0.0139748	-2.44e-07	
+813	-2.44e-07	0.0277198	0.00945976	0.0162778	7.56e-07	
+814	-2.44e-07	0.0282218	0.0100348	0.0150168	-2.44e-07	
+815	-2.44e-07	0.0267108	0.0110258	0.0144658	-2.44e-07	
+816	-2.44e-07	0.0266078	0.00934976	0.0145628	-2.44e-07	
+817	-2.44e-07	0.0279658	0.0311798	0.0336458	-2.44e-07	
+818	-2.44e-07	0.0646508	0.0176208	0.0279408	-2.44e-07	
+819	-2.44e-07	0.0278448	0.00932676	0.0141918	-2.44e-07	
+820	-2.44e-07	0.0266228	0.00937376	0.0155038	-2.44e-07	
+821	-2.44e-07	0.0265358	0.00924576	0.0141618	7.56e-07	
+822	-2.44e-07	0.0262978	0.0105848	0.0140248	7.56e-07	
+823	-2.44e-07	0.0271488	0.00974676	0.0139838	-2.44e-07	
+824	-2.44e-07	0.0769298	0.00941676	0.0142188	-2.44e-07	
+825	-2.44e-07	0.0269628	0.0106498	0.0144208	-2.44e-07	
+826	-2.44e-07	0.0267518	0.00929076	0.0140738	-2.44e-07	
+827	-2.44e-07	0.0287498	0.00927176	0.0141308	-2.44e-07	
+828	-2.44e-07	0.0269058	0.00931476	0.0138418	-2.44e-07	
+829	-2.44e-07	0.0293558	0.00953476	0.0146438	-2.44e-07	
+830	7.56e-07	0.0272848	0.00921776	0.0141838	-2.44e-07	
+831	-2.44e-07	0.0322898	0.00955076	0.0142618	-2.44e-07	
+832	-2.44e-07	0.0279868	0.00935976	0.0139558	-2.44e-07	
+833	-1.244e-06	0.0318978	0.00953076	0.0154628	-2.44e-07	
+834	-2.44e-07	0.0521178	0.00950876	0.0143418	-2.44e-07	
+835	-2.44e-07	0.0273578	0.00927276	0.0144958	-2.44e-07	
+836	-2.44e-07	0.0283488	0.00959076	0.0143548	-2.44e-07	
+837	-2.44e-07	0.0274748	0.00929276	0.0141318	7.56e-07	
+838	-2.44e-07	0.0498278	0.0104988	0.0153548	-2.44e-07	
+839	-2.44e-07	0.0300268	0.00989276	0.0150768	-2.44e-07	
+840	7.56e-07	0.0312248	0.00977476	0.0378518	-2.44e-07	
+841	7.56e-07	0.0427128	0.0101988	0.0147808	-2.44e-07	
+842	-2.44e-07	0.0302398	0.00979176	0.0145558	7.56e-07	
+843	7.56e-07	0.0281798	0.0101088	0.0159868	-2.44e-07	
+844	-2.44e-07	0.0283758	0.00968176	0.0144428	-2.44e-07	
+845	-2.44e-07	0.0278698	0.00941376	0.0160898	-2.44e-07	
+846	-2.44e-07	0.0285308	0.00936476	0.0145898	-2.44e-07	
+847	-2.44e-07	0.0275038	0.0144558	0.0179608	-2.44e-07	
+848	-2.44e-07	0.0278328	0.00942176	0.0158618	-2.44e-07	
+849	-2.44e-07	0.0304088	0.0103478	0.0148258	-2.44e-07	
+850	-2.44e-07	0.0277578	0.0496578	0.0146618	-2.44e-07	
+851	-2.44e-07	0.0305868	0.00984776	0.0153958	-2.44e-07	
+852	-2.44e-07	0.0298048	0.00988776	0.0150008	-2.44e-07	
+853	-2.44e-07	0.0277828	0.00937176	0.0146908	-2.44e-07	
+854	-2.44e-07	0.0305878	0.0100958	0.0152008	-2.44e-07	
+855	-2.44e-07	0.0282148	0.00989776	0.0163748	-2.44e-07	
+856	-2.44e-07	0.0280198	0.00967376	0.0146328	-2.44e-07	
+857	-2.44e-07	0.0769868	0.00963776	0.0149878	-2.44e-07	
+858	-2.44e-07	0.0281058	0.0118208	0.0147478	-2.44e-07	
+859	-2.44e-07	0.0292928	0.0114338	0.0150288	-2.44e-07	
+860	-2.44e-07	0.0339658	0.00986476	0.0147748	-2.44e-07	
+861	-2.44e-07	0.0281478	0.00967476	0.0145468	-2.44e-07	
+862	-2.44e-07	0.0296978	0.00975876	0.0147098	7.56e-07	
+863	1.3756e-05	0.0281748	0.00959576	0.0165238	-2.44e-07	
+864	-2.44e-07	0.0285158	0.00962176	0.0150388	-2.44e-07	
+865	-2.44e-07	0.0289608	0.0408438	0.0151428	-2.44e-07	
+866	-2.44e-07	0.0288718	0.0350008	0.0153158	-2.44e-07	
+867	-2.44e-07	0.0348748	0.00963376	0.0149768	7.56e-07	
+868	7.56e-07	0.0297428	0.00991476	0.0149028	-2.44e-07	
+869	-2.44e-07	0.0284778	0.00968376	0.0166018	-2.44e-07	
+870	-2.44e-07	0.0288158	0.00962476	0.0148918	-2.44e-07	
+871	-2.44e-07	0.0299098	0.00993476	0.0164608	-2.44e-07	
+872	-2.44e-07	0.0285028	0.00978376	0.0150488	-2.44e-07	
+873	-2.44e-07	0.0783128	0.00992076	0.0152228	-2.44e-07	
+874	-2.44e-07	0.0303218	0.00974676	0.0150958	-2.44e-07	
+875	-2.44e-07	0.0332288	0.00963276	0.0153328	-2.44e-07	
+876	-2.44e-07	0.0448618	0.0147538	0.0224088	-2.44e-07	
+877	-2.44e-07	0.0304008	0.0101908	0.0149468	-2.44e-07	
+878	-2.44e-07	0.0286548	0.00974376	0.0164818	7.56e-07	
+879	-2.44e-07	0.0291588	0.00976576	0.0166788	-2.44e-07	
+880	7.56e-07	0.0300678	0.0150428	0.0151258	-2.44e-07	
+881	-2.44e-07	0.0295318	0.00992376	0.0158188	-2.44e-07	
+882	-2.44e-07	0.0319318	0.0107128	0.0153898	-2.44e-07	
+883	-2.44e-07	0.0291058	0.00969876	0.0406438	-2.44e-07	
+884	-2.44e-07	0.0379958	0.00991176	0.0152918	-2.44e-07	
+885	-2.44e-07	0.0303908	0.0101278	0.0150608	-2.44e-07	
+886	-2.44e-07	0.0292798	0.00982476	0.0153048	-2.44e-07	
+887	-2.44e-07	0.0308318	0.00988376	0.0152058	-2.44e-07	
+888	-2.44e-07	0.0288598	0.00980676	0.0165418	-2.44e-07	
+889	-2.44e-07	0.0295398	0.0189588	0.0160968	-2.44e-07	
+890	-2.44e-07	0.109206	0.0156658	0.0155788	-2.44e-07	
+891	-2.44e-07	0.0300268	0.0105958	0.0158698	7.56e-07	
+892	-2.44e-07	0.0308578	0.00982876	0.0155398	-2.44e-07	
+893	-2.44e-07	0.0293048	0.0100368	0.0152828	7.56e-07	
+894	-2.44e-07	0.0312188	0.0100238	0.0153858	-2.44e-07	
+895	-2.44e-07	0.0292998	0.0100398	0.0205088	-2.44e-07	
+896	-2.44e-07	0.0298478	0.0100548	0.0163498	-2.44e-07	
+897	-2.44e-07	0.0293608	0.0117198	0.0172898	-2.44e-07	
+898	-2.44e-07	0.0309258	0.0102378	0.0471398	7.56e-07	
+899	-2.44e-07	0.0298338	0.0101758	0.0154738	-2.44e-07	
+900	-2.44e-07	0.0328758	0.0100218	0.0155258	-2.44e-07	
+901	-2.44e-07	0.0300028	0.0101408	0.0152698	7.56e-07	
+902	-2.44e-07	0.0318408	0.0101628	0.0156888	-2.44e-07	
+903	-2.44e-07	0.0298258	0.0101618	0.0167668	-2.44e-07	
+904	-2.44e-07	0.0298448	0.0103648	0.0155068	-2.44e-07	
+905	-2.44e-07	0.0792928	0.0100478	0.0156938	-2.44e-07	
+906	-2.44e-07	0.0313138	0.0101308	0.0156578	-2.44e-07	
+907	-1.244e-06	0.0302468	0.0101688	0.0159298	-2.44e-07	
+908	-2.44e-07	0.0316748	0.0102228	0.0156298	-2.44e-07	
+909	-2.44e-07	0.0320038	0.0103498	0.0169168	-2.44e-07	
+910	-2.44e-07	0.0305598	0.0103368	0.0157848	7.56e-07	
+911	-2.44e-07	0.0306638	0.0114888	0.0156908	-2.44e-07	
+912	-2.44e-07	0.0302618	0.0112008	0.0156968	-2.44e-07	
+913	-2.44e-07	0.0600978	0.0103448	0.0156788	-2.44e-07	
+914	-2.44e-07	0.0704828	0.0104938	0.0158668	-2.44e-07	
+915	-2.44e-07	0.0322058	0.0103538	0.0156138	-2.44e-07	
+916	-2.44e-07	0.0305108	0.0105288	0.0155218	-2.44e-07	
+917	-2.44e-07	0.0570588	0.0102038	0.0174598	-2.44e-07	
+918	-2.44e-07	0.0362148	0.0105198	0.0162358	-2.44e-07	
+919	-2.44e-07	0.0343148	0.0358148	0.0439448	-2.44e-07	
+920	-2.44e-07	0.0947818	0.0256248	0.0346428	-2.44e-07	
+921	-2.44e-07	0.0308228	0.0142968	0.0157938	-2.44e-07	
+922	-2.44e-07	0.0323108	0.0104308	0.0158268	-2.44e-07	
+923	-2.44e-07	0.0323398	0.0118878	0.0287288	-2.44e-07	
+924	-2.44e-07	0.0312048	0.0105578	0.0176008	7.56e-07	
+925	-2.44e-07	0.0393008	0.0135768	0.0176368	-2.44e-07	
+926	-2.44e-07	0.0743738	0.0118958	0.0161198	-2.44e-07	
+927	-2.44e-07	0.0373138	0.0132708	0.0161658	-2.44e-07	
+928	-2.44e-07	0.0324548	0.0124238	0.0312688	-2.44e-07	
+929	-2.44e-07	0.0333178	0.0106068	0.0162748	-2.44e-07	
+930	-2.44e-07	0.0420608	0.0105488	0.0177468	-2.44e-07	
+931	-2.44e-07	0.0386588	0.0126388	0.0192378	7.56e-07	
+932	-2.44e-07	0.0360028	0.0202358	0.0599878	-2.44e-07	
+933	-2.44e-07	0.0351048	0.0121368	0.0193558	-2.44e-07	
+934	-2.44e-07	0.0312568	0.0106508	0.0165288	-2.44e-07	
+935	-2.44e-07	0.0327048	0.0107038	0.0162548	-2.44e-07	
+936	-2.44e-07	0.0310258	0.0105668	0.0177248	-2.44e-07	
+937	-2.44e-07	0.0315578	0.0119638	0.0161698	-2.44e-07	
+938	-2.44e-07	0.0482848	0.0107028	0.0180508	-2.44e-07	
+939	-2.44e-07	0.0328878	0.0111258	0.0230498	-2.44e-07	
+940	-2.44e-07	0.0338808	0.0108538	0.0166198	7.56e-07	
+941	-2.44e-07	0.0648768	0.0106348	0.0182458	-2.44e-07	
+942	-2.44e-07	0.0363598	0.0103728	0.0166818	-2.44e-07	
+943	-2.44e-07	0.0367588	0.0106978	0.0180728	-2.44e-07	
+944	-2.44e-07	0.0333708	0.0238798	0.0168588	-2.44e-07	
+945	-2.44e-07	0.0347628	0.0129818	0.0162968	-2.44e-07	
+946	-2.44e-07	0.0499818	0.0445448	0.0179018	-2.44e-07	
+947	-2.44e-07	0.0315868	0.0125998	0.0181858	-2.44e-07	
+948	-1.244e-06	0.0378108	0.0109368	0.0168378	-2.44e-07	
+949	-2.44e-07	0.0337158	0.0106888	0.0166268	-2.44e-07	
+950	-2.44e-07	0.0314108	0.0107128	0.0181078	-2.44e-07	
+951	-2.44e-07	0.0340028	0.0106078	0.0167078	-2.44e-07	
+952	-2.44e-07	0.0352678	0.0110508	0.0163638	-2.44e-07	
+953	-2.44e-07	0.0364188	0.0106988	0.0397288	-2.44e-07	
+954	-2.44e-07	0.0332338	0.0108268	0.0446998	7.56e-07	
+955	-2.44e-07	0.0393038	0.0107648	0.0166978	-2.44e-07	
+956	-2.44e-07	0.0409928	0.0108048	0.0167908	-2.44e-07	
+957	-2.44e-07	0.0317498	0.0125778	0.0168368	-2.44e-07	
+958	-2.44e-07	0.0366148	0.0108608	0.0164078	-2.44e-07	
+959	-2.44e-07	0.0456278	0.0106638	0.0166828	-2.44e-07	
+960	-2.44e-07	0.0808718	0.0109728	0.0167978	-2.44e-07	
+961	7.56e-07	0.0383848	0.0110748	0.0164298	-2.44e-07	
+962	-2.44e-07	0.0359328	0.0112638	0.0182918	-2.44e-07	
+963	-2.44e-07	0.0322978	0.0108988	0.0202618	-2.44e-07	
+964	-2.44e-07	0.0354268	0.0112318	0.0168218	-2.44e-07	
+965	-2.44e-07	0.0330718	0.0109008	0.0222258	-2.44e-07	
+966	-2.44e-07	0.0347518	0.0110718	0.0177598	-2.44e-07	
+967	-2.44e-07	0.0347548	0.0112888	0.0170058	-2.44e-07	
+968	-2.44e-07	0.0338278	0.0354348	0.0178838	-2.44e-07	
+969	-2.44e-07	0.0343778	0.0110518	0.0171248	-2.44e-07	
+970	-2.44e-07	0.0341748	0.0109718	0.0211398	-2.44e-07	
+971	-2.44e-07	0.0478828	0.0112708	0.0167278	-2.44e-07	
+972	7.56e-07	0.0323588	0.0111428	0.0183198	7.56e-07	
+973	-2.44e-07	0.0375608	0.0109658	0.0167508	-2.44e-07	
+974	-2.44e-07	0.0836928	0.0108318	0.0173378	-2.44e-07	
+975	-2.44e-07	0.0340768	0.0112368	0.0209898	-2.44e-07	
+976	-2.44e-07	0.0325378	0.0110068	0.0182528	7.56e-07	
+977	-2.44e-07	0.0328358	0.0125638	0.0301998	7.56e-07	
+978	-2.44e-07	0.0349348	0.0109238	0.0169038	7.56e-07	
+979	-2.44e-07	0.0328278	0.0120488	0.0253728	7.56e-07	
+980	-2.44e-07	0.0330218	0.0116188	0.0303438	-2.44e-07	
+981	-2.44e-07	0.0388148	0.0122478	0.0166638	7.56e-07	
+982	-2.44e-07	0.0603938	0.0126158	0.0172888	-2.44e-07	
+983	-2.44e-07	0.0331658	0.0127498	0.0169758	-2.44e-07	
+984	-2.44e-07	0.0323878	0.0110338	0.0173308	-2.44e-07	
+985	-2.44e-07	0.0571078	0.0111278	0.0173658	-2.44e-07	
+986	-2.44e-07	0.0344138	0.0112478	0.0170438	-2.44e-07	
+987	-2.44e-07	0.0334098	0.0660458	0.0225358	7.56e-07	
+988	-2.44e-07	0.0331328	0.0127448	0.0171218	7.56e-07	
+989	-2.44e-07	0.0359358	0.0114288	0.0173728	-1.244e-06	
+990	-2.44e-07	0.0355038	0.0114308	0.0180378	-2.44e-07	
+991	-2.44e-07	0.0352698	0.0125858	0.0175788	-2.44e-07	
+992	7.56e-07	0.0329778	0.0114418	0.0169278	-2.44e-07	
+993	-2.44e-07	0.0413978	0.0111748	0.0177108	-2.44e-07	
+994	-2.44e-07	0.0369548	0.0335158	0.0174508	-2.44e-07	
+995	-2.44e-07	0.0806278	0.0132538	0.0171618	-2.44e-07	
+996	-2.44e-07	0.0335898	0.0125638	0.0173718	-2.44e-07	
+997	-2.44e-07	0.0333468	0.0117158	0.0185158	7.56e-07	
+998	-2.44e-07	0.0350198	0.0111758	0.0192728	-2.44e-07	
+999	-2.44e-07	0.0336878	0.0125768	0.0175108	-2.44e-07	
+1000	-2.44e-07	0.0335608	0.0112958	0.0640028	-2.44e-07	
+1001	-2.44e-07	0.0473978	0.0113368	0.0177088	-2.44e-07	
+endofdata

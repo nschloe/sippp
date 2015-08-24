@@ -1,0 +1,93 @@
+#!/bin/sh
+#####################################################################
+# BenchIT - Performance Measurement for Scientific Applications
+# Contact: benchit@zih.tu-dresden.de
+#
+# Last change by: $Author: william $
+# $Revision: 1.1 $
+# $Date: 2007/04/26 02:33:04 $
+#####################################################################
+
+ #########################
+ # number of IO-Channels #
+ #########################
+ export BENCHIT_KERNEL_NUMCHANNELS="1"
+
+ #######################################
+ # path for files that will be written #
+ #######################################
+ export BENCHIT_KERNEL_DISKPATH="/var/tmp/"
+
+ ######################################################
+ # diskspace for files that will be written (in byte) #
+ ######################################################
+ export BENCHIT_KERNEL_DISKSPACE="104857600.0"  # 100Mb
+
+ ###################################################
+ # RAM that is installed on the computer (in byte) #
+ ###################################################
+ export BENCHIT_KERNEL_RAMSIZE="134217728.0"   #128Mb
+
+ #######################
+ # threads per channel #
+ #######################
+ export BENCHIT_KERNEL_CHANNELFACTOR="1"
+
+ #########################################
+ # size in Bytes (one file)		 #
+ # - has to be at least 1048576.0 = 1 Mb #
+ # - should be a multiple of 1048576.0	 #
+ #########################################
+ export BENCHIT_KERNEL_FILESIZE="5242880.0"   #5Mb
+
+ #############################################################
+ # with the following variables the kernel can be finetuned, #
+ # they are described in the README file                     #
+ # and should propably remain in their present state         #
+ #############################################################
+ export BENCHIT_KERNEL_TMPHEADER="BenchITtempFile"
+ export BENCHIT_KERNEL_FILESPERDIR="32"
+ export BENCHIT_KERNEL_POTFILPERDIR="5"
+
+ #############################################
+ # check wether 2^POTFILPERDIR = FILESPERDIR #
+ #############################################
+#POTFILPERDIR=${BENCHIT_IOREAD_C_PTHREADS_BIG_POTFILPERDIR}
+#let "FILESPERDIR = 2 ** ${POTFILPERDIR}"
+#if [ "${BENCHIT_IOREAD_C_PTHREADS_BIG_FILESPERDIR}" != "${FILESPERDIR}" ]; then
+#  echo "check wether 2^POTFILPERDIR = FILESPERDIR"
+#  echo " !!! FAILED !!! "
+#  exit 127
+#fi
+ export BENCHIT_KERNEL_FILESPERTHREAD="1"
+ export BENCHIT_KERNEL_MAXREPEAT="2"
+ export BENCHIT_KERNEL_REPEATSTOP="25"
+
+# Parameters for run_benchit; uncomment and change the ones you need
+# maximum memory for processes in MB
+#BENCHIT_RUN_MAX_MEMORY=1024
+# number of processors
+#BENCHIT_NUM_CPUS=1
+# redirect stdout and stderr to file
+#BENCHIT_RUN_REDIRECT_CONSOLE=output.txt
+# remove executable after run, if 1
+#BENCHIT_RUN_CLEAN=1
+# do not execute anything, just print out comments
+#BENCHIT_RUN_TEST=1
+# timelimit used for enqueueing the job; this is NOT BENCHIT_TOTAL_TIMELIMIT
+#BENCHIT_RUN_QUEUETIMELIMIT=
+
+#####################################################################
+# Log-History
+#
+# $Log: PARAMETERS,v $
+# Revision 1.1  2007/04/26 02:33:04  william
+# fixed errors due to old layout of Kernel (no more RUN.SH)
+#
+# Revision 1.2  2006/04/19 15:42:59  william
+# fixed PARAMETERS-file and started work on bi_init + bi_entry
+# rewrote all the Environment-Variables-stuff
+#
+#
+#####################################################################
+

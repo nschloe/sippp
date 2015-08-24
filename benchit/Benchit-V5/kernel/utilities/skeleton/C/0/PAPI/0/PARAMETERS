@@ -1,0 +1,37 @@
+#!/bin/sh
+######################################################################
+#
+# B e n c h I T - Performance Measurement for Scientific Applications
+#
+#  <> PARAMETERS for C PAPI Skeleton
+#
+#  Author: Robert Schoene (robert.schoene@zih.tu-dresden.de)
+#
+#  Last change by $Author: mickler $
+#
+#  $Revision: 1.3 $
+#
+#  $Date: 2005/12/13 00:39:19 $
+#
+######################################################################
+
+ BENCHIT_KERNEL_PROBLEMSIZE_MIN=1
+ BENCHIT_KERNEL_PROBLEMSIZE_MAX=600
+ BENCHIT_KERNEL_PROBLEMSIZE_INCREMENT=1
+
+ # Parameters for run_benchit; uncomment and change the ones you need
+ # maximum memory for processes in kB
+ #BENCHIT_RUN_MEMORY=1024
+ # number of processors
+ #BENCHIT_NUM_CPUS=1
+ # set core file size limit in kB
+ #BENCHIT_RUN_CORESIZE=1024
+ # print all output to file
+ #BENCHIT_RUN_OUTPUTFILE=output.txt
+ # remove executable after run, if 1
+ #BENCHIT_RUN_CLEAN=0
+ # do not execute anything, just print out comments
+ #BENCHIT_RUN_TEST="1"
+ # timelimit used for enqueueing the job; this is NOT BENCHIT_TOTAL_TIMELIMIT
+ #BENCHIT_RUN_QUEUETIMELIMIT=
+

@@ -1,0 +1,207 @@
+#####################################################################
+#****h* BenchIT/README
+# DESCRIPTION
+#  Shellscript compiling kernels
+#
+# DIAGNODSTICS
+#  Author: Thomas William (william@zhr.tu-dresden.de)
+#  Last change by: $Author: william $
+#  $Revision: 1.5 $
+#  $Date: 2006/10/05 14:35:30 $
+# SOURCE
+#####################################################################
+
+
+List of Content
+
+0.	Introduction
+
+1. 	Installation
+
+2.	Usage
+2.1	Commandline
+2.2	./benchit script (CLI)
+2.3	Graphical User Interface (GUI) 
+
+3.	Dokumentation
+
+4.	Legal Stuff
+
+
+#####################################################################
+
+
+Introduction
+
+B-e-n-c-h-I-T
+
+BenchIT is a freely available framework for performance-measurements and
+analysis of UNIX based HPC systems. To achive the greatest possible
+compatibility we only rely on a POSIX-compliant shell and a C-compiler
+for basic functionality of BenchIT. Because we aim at running massively
+parallel architectures, an MPI environment and a batch system as well as
+a Fortran compiler would be very useful too. In order to view your results
+as a graphic, you need either gnuplot and an eps capable viewer or you can
+use our BenchIT-Website.
+	http://www.benchit.org
+
+
+#####################################################################
+
+
+1.	Installation
+
+As you read this README you should have managed to grab our sources - either as
+a tarball from our website or as a checkout from svn/cvs.
+BenchIT works right out of the box. You just have to set up your environment and
+let BenchIT know which compilers and libraries to use and where to find them. 
+BenchIT uses a sript located under tools/FIRSTTIME to set up your environment.
+It is automaically invoked the firt time you use any of the scripts in BenchIT. 
+But we recommend you start this script by hand before doing anything else:
+
+	tools/FIRSTTIME
+
+By doing so three files will be generated in the LOCALDEFS/ folder - all
+starting with your hostname. The file only named after your hostname contains
+all information nessessary for compiling and running the kernels. If you intend
+to upload your results to our database (www.benchit.org) you should also fill
+out the file named hostname_input_architecture. I strongly advise you to take a
+look into the hostname file to verify all the data filled in by our script as
+it may be incorrect. 
+
+Now we can begin with the real measurement.
+
+
+#####################################################################
+
+
+2.     Usage
+
+There are basically three ways to do a measurement:
+2.1) use the commandline
+2.2) use the ./benchit script (so called Command Line User Interface CLI)
+2.3) use the java based Graphical User Interface (GUI) 
+
+
+#####################################################################
+
+
+2.1	Commandline
+
+You first must choose a kernel to do the measurement with
+As an example we will choose a matrix-multiplication-kernel (short = matmul).
+The matmul kernels are located in the subfolder kernel/numerical/matmul/.
+There you'll have at least the choice between versions written in C, Fortran77
+or Java. We'll choose the C-Version because that compiler has to be installed
+anyway for BenchIT to work and therefor is the safest choice in this example.
+The next subfolder is named 0 (explanation later) andin there you'll find again
+a folder named 0 and a few others naming different optimizing libraries such as
+MKL or ATLAS - we will again choose the default-version named 0. The last
+subfolder is named double and in there are the sourcefiles of the kernel.
+The full path is now:
+
+	kernel/numerical/matmul/C/0/0/double/
+
+If you want to customize the kernel, you can do it by changing the values of
+the PARAMETERS-file with a texteditor of your choice:
+
+	editor kernel/numerical/matmul/C/0/0/double/PARAMETERS
+
+For testing - you might lower the value of the variable:
+
+	BENCHIT_MATMUL_C_DOUBLE_STEPS
+
+to a lower value - maybe 100. This variable determines the maximal size of the
+matrizes - the lower the faster the kernel will finish and the lower values
+your resultfile will consist of as the kernel iterates over the size of the
+matrix.
+Now the kernel is set up you should compile it.
+Therefor you use the COPILE.SH script located in the benchit-root-folder:
+
+	./COMPILE.SH kernel/numerical/matmul/C/0/0/double/
+
+Because you are running BenchIT for the first time - a script will ask you a
+bunch of questions about your system unless it can find that information all by
+itself. All these information are composed into what we call the LOCALDEF's of
+a machine. You can find and alter these information at any time in the
+LOCALDEFS/ folder. There you should find three files beginning with the
+hostname of your machine. The first one of these three contains the important
+data - the other contain additional infos not nessessary right now.
+If your kernel compiled successfully, it generates a binary in the bin/ folder
+which equals the kernelpath (with slashes replaced by dots).
+Now you can run your kernel by invoking it with:
+
+	./RUN.SH bin/numerical.matmul.C.0.0.double.0
+
+After finishing, you'll have two new files in your output/ folder. The name
+depends on your customization in the LOCALDEFS. The first file includes the
+values of the measurement at the very end. The secondfile contains only
+information for the genreation of a eps-graphic with gnuplot - you can alter
+these settings to alter the graphic.
+You can now take a look at your result with the help of a script located in
+the tools/ folder:
+
+	./tools/QUICKVIEW.SH output/numerical/matmul/C/0/0/double/file.bit
+
+Congratulations on your first measurement with BenchIT.
+
+
+#####################################################################
+
+
+2.2	./benchit script (CLI)
+
+The Command Line Interface CLI can be started by invoking:
+
+	./benchit
+
+This script is fairly selfexplanory. Just keep in mind to perform the steps in
+the given order and always do the cleanupstep before using any of the other
+methods to do measurements as this script generates special versions of the
+PARAMETERS file so that the original PARAMETERS are not altered.  
+For further information look into CLI.txt
+
+
+#####################################################################
+
+
+2.3	Graphical User Interface (GUI) 
+
+Look into GUI.txt for instructions on how to set up the
+graphical user interface properly.
+
+
+#####################################################################
+
+
+2. Documentaion
+
+We structured the documantation. Here's a list of files, where to find them
+and what they are about:
+
+kernel.txt	whats a kernel - how is the kernel/ folder structured
+
+kernel/*	folder which holds a docu-file for each available kernel
+
+CLI.txt		explains the use of the ./benchit script
+
+GUI.txt		explains the use of the java-GUI
+
+variables.txt	list of all used variables with their meaning
+
+var_help	shows help for a BenchIT-Variable
+
+
+...
+
+
+#####################################################################
+
+
+3. legal Stuff
+
+where to find our license . . .
+
+
+#####################################################################
+#******

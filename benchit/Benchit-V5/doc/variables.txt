@@ -1,0 +1,289 @@
+Liste aller globalen variablen und deren bedeutung bzw moegliche Werte. XML-Syntax der Form
+
+<BEGIN VARIABLE>
+Erkaerung
+<END VARIABLE>
+
+Damit kann spaeter Fehlerausgabe bzw auch ein Installscript und auch ein besseres FIRSTIME erstellt werden. an autodetection routine kann nach den Zwei Schluesselwortern grepen - sich deren Zeilen ausgeben lassen und mit head und tail dann die Zeilen dazwischen ausgeben. So hat man eine zentrale Stelle zur Verwaltung der Beschreibung und automatisch immer ein aktuelles an autodetection routine
+
+
+#####################################################################
+list of content
+
+1.	LOCALDEFS
+1.1	PROTOTYPE
+1.1.1	HAVE-Section
+1.2	PROTOTYPE_input_architecture
+1.3	PROTOTYPE_input_display
+
+
+#####################################################################
+
+
+1.	LOCALDEFS
+
+The LOCALDEFS consist of specifications building the copnfiguration of that particaular plattform / machine. Each machine got its own LOACLADEF named after its hostname.
+
+
+#####################################################################
+
+
+1.1	PROTOTYPE
+
+This file holds information like the installed compilers and libraries.
+
+
+#####################################################################
+
+
+1.1.1	HAVE-Section
+
+####################################
+# "0"..NOT available               #
+# "1"..available                   #
+####################################                                                                        
+
+<BEGIN HAVE_CC>
+0 = no c compiler installed
+1 = c compiler installed
+Will be set by an autodetection routine if c-compiler is found
+<END HAVE_CC>
+
+<BEGIN HAVE_CXX>
+0 = no c++ compiler installed
+1 = c++ compiler installed
+Will be set by an autodetection routine if c++ compiler is found
+<END HAVE_CXX>
+
+<BEGIN HAVE_F77>
+0 = no f77 compiler installed
+1 = f77 compiler installed
+Will be set by an autodetection routine if f77 compiler is found
+<END HAVE_F77>
+
+<BEGIN HAVE_F90>
+0 = no f90 compiler installed
+1 = f90 compiler installed
+Will be set by an autodetection routine if f90 compiler is found
+<END HAVE_F90>
+
+<BEGIN VARIABLE>
+<END VARIABLE>
+
+<BEGIN HAVE_MPI>
+0 = no MPI Library installed
+1 = MPI Library installed
+Will be set by an autodetection routine if MPI Library is found
+<END HAVE_MPI>
+
+<BEGIN HAVE_PVM>
+0 = no PVM Library installed
+1 = PVM Library installed
+Will be set by an autodetection routine if PVM Library is found
+<END HAVE_PVM>
+   
+<BEGIN HAVE_PTHREADS>
+0 = no PThread Library installed
+1 = PThread Library installed
+Will be set by an autodetection routine if PThread Library is found
+<END HAVE_PTHREADS>
+   
+# Performance Counter Library
+  HAVE_PCL=0
+ 
+# Performance Application Programming Interface
+  HAVE_PAPI=0
+
+# OpenMP for C Libraries
+  HAVE_OMPC=0
+ 
+# OpenMP for Fortran77 Libraries
+  HAVE_OMPF77=0
+   
+# OpenMP for Fortran90 Libraries
+  HAVE_OMPF90=0
+   
+# Java Compiler
+  HAVE_JC=0
+   
+# Java Virtual Machine
+  HAVE_JVM=0
+
+
+#####################################################################
+
+
+1.1.2	Architectural Information 
+
+# Number of Processors to use
+  NUMCPUS=1
+
+# Memorysize used (512MB, 2048MB, ...)
+  MEMUSED=0MB
+ 
+# Short specification of your CPU - will be used for the output-filename
+# ex. "AmK7" for AMD Athlon, "InP4" for Intel Pentium IV, "MIPS", "SX6"...
+  BENCHIT_ARCH_SHORT="NONE"
+   
+# specification of your CPU speed, ex. "500M" for 500 MHz, "1G33" for 1,33 GHz
+  BENCHIT_ARCH_SPEED=""
+   
+# set the total timelimit in seconds for one kernel
+  BENCHIT_TOTAL_TIMELIMIT=600
+
+# runtime environment on your system
+# currently known are: "LAM", "MPICH", "LSF", "NQE", "NOTHING"
+  ENVIRONMENT="NOTHING"
+  
+set +a
+ 
+# Library Linking Options
+ 
+# pThreads
+ CPP_PTHREADS=""
+ LIB_PTHREAD=""
+ 
+# Performance Counter Library
+ CPP_PCL=""
+ LIB_PCL="$LIB_PTHREAD"
+ 
+# Performance Application Programming Interface
+ CPP_PAPI=""
+ LIB_PAPI=""
+
+# BLAS-Routines
+# LIB_BLAS=-lblas
+ 
+# MPI-Library
+ CPP_MPI=""
+ LIB_MPI=""
+
+# PVM-Library
+ CPP_PVM=""
+ LIB_PVM=""
+
+
+
+##############################
+# Section 3 Compiler Options #
+##############################
+
+################################## 
+# Section 3.1 C-Compiler Options #
+##################################
+
+# name of C Compiler
+  CC=""
+ 
+# Compilerflags
+  CC_C_FLAGS=""
+ 
+# Additional Compilerflags - used for normal files
+  CC_C_FLAGS_STD="-O2"
+   
+# Additional Compilerflags - used for the kernels
+  CC_C_FLAGS_HIGH="-O3"
+ 
+# Additional Compilerflags - used for OpenMP kernel
+  CC_C_FLAGS_OMP=""
+
+# Standard Linkerflags
+  CC_L_FLAGS="-lm"
+
+####################################
+# Section 3.2 C++ Compiler Options #
+####################################
+
+# name of C Compiler
+  CXX=""
+                                                                                
+# Compilerflags
+  CXX_C_FLAGS="${CC_C_FLAGS}"
+                                                                                
+# Additional Compilerflags - used for normal files
+  CXX_C_FLAGS_STD="-O2"
+                                                                                
+# Additional Compilerflags - used for the kernels
+  CXX_C_FLAGS_HIGH="-O3"
+                                                                                
+# Standard Linkerflags
+  CXX_L_FLAGS="-lm"
+ 
+##########################################
+# Section 3.3 Fortran77 Compiler Options #
+##########################################
+
+# Name of Fortran77 Compiler
+  F77=""
+ 
+# Compilerflags
+  F77_C_FLAGS=""
+ 
+# Additional Compilerflags - used for normal files
+  F77_C_FLAGS_STD="-O2"
+   
+# Additional Compilerflags - used for the kernels
+  F77_C_FLAGS_HIGH="-O3"
+ 
+# Additional Compilerflags - used for OpenMP kernel
+  F77_C_FLAGS_OMP=""
+ 
+# Standard Linkerflags
+#  F77_L_FLAGS=""
+   
+##########################################
+# Section 3.4 Fortran90 Compiler Options #
+##########################################
+
+# Name of Fortran90 Compiler
+  F90=""
+ 
+# Compilerflags
+  F90_C_FLAGS=""
+
+# Additional Compilerflags - used for normal files
+  F90_C_FLAGS_STD=""
+                                                                                
+# Additional Compilerflags - used for the kernels
+  F90_C_FLAGS_HIGH=""
+                                                                                
+# Additional Compilerflags - used for OpenMP kernel
+#  F90_C_FLAGS_OMP=""
+                                                                                
+# Standard Linkerflags
+#  F90_L_FLAGS=""
+
+ 
+#####################################
+# Section 3.5 Java Compiler Options #
+#####################################
+
+# Name of Java Compiler
+  JAVAC=""
+ 
+# Name of Java Virtual Machine
+  JVM=""
+ 
+# Compilerflags
+  JAVAC_C_FLAGS=""
+
+# Additional Compilerflags - used for the kernels
+  JAVAC_C_FLAGS_HIGH="-O"
+
+
+
+################################
+# Section 4 Additional Options #
+################################
+
+  OMP_NUM_THREADS=1
+  OMP_DYNAMIC=FALSE
+  OMP_NESTED=FALSE
+
+
+
+
+
+
+
+#####################################################################

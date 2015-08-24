@@ -1,0 +1,55 @@
+#!/bin/sh
+#####################################################################
+# BenchIT - Performance Measurement for Scientific Applications
+# Contact: benchit@zih.tu-dresden.de
+#
+# Last change by: $Author: hackenb $
+# $Revision: 1.8 $
+# $Date: 2006/01/03 16:40:26 $
+#####################################################################
+
+ # BENCHIT_KERNEL_MIN_ACCESS_LENGTH is the minimum of accessed memory (in KByte)
+ BENCHIT_KERNEL_MIN_ACCESS_LENGTH=1
+
+ # BENCHIT_KERNEL_MAX_ACCESS_LENGTH is the maximum of accessed memory (in KByte)   
+ BENCHIT_KERNEL_MAX_ACCESS_LENGTH=2048
+
+ # BENCHIT_KERNEL_ACCESS_STEPS is the number of measurement points
+ BENCHIT_KERNEL_ACCESS_STEPS=50
+
+ # BENCHIT_KERNEL_NUMBER_OF_JUMPS is the number of pointer jumps
+ # that the kernel will perform per measurement   
+ # point (must be a multiple of 100)              
+ BENCHIT_KERNEL_NUMBER_OF_JUMPS=4000000
+ 
+# Describe your own kernel modifications
+#BENCHIT_KERNEL_COMMENT=""
+
+# Parameters for run_benchit; uncomment and change the ones you need
+# maximum memory for processes in MB
+#BENCHIT_RUN_MAX_MEMORY=1024
+# number of processors
+#BENCHIT_NUM_CPUS=1
+# redirect stdout and stderr to file
+#BENCHIT_RUN_REDIRECT_CONSOLE=output.txt
+# remove executable after run, if 1
+#BENCHIT_RUN_CLEAN=1
+# do not execute anything, just print out comments
+#BENCHIT_RUN_TEST=1
+# timelimit used for enqueueing the job; this is NOT BENCHIT_TOTAL_TIMELIMIT
+#BENCHIT_RUN_QUEUETIMELIMIT=
+ 
+
+#####################################################################
+# Log-History
+#
+# $Log: PARAMETERS,v $
+# Revision 1.8  2006/01/03 16:40:26  hackenb
+# new interface
+#
+# Revision 1.7  2006/01/03 15:34:34  hackenb
+# modified/unified header and footer
+# new interface
+#
+#
+#####################################################################

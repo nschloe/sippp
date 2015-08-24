@@ -1,0 +1,2108 @@
+# BenchIT-Resultfile
+#
+# feel free to fill in more architectural information
+#########################################################
+beginofmeasurementinfos
+kernelstring="numerical.rkstep.F95.0.0.gauss2" 
+date="Aug 19 11:10:29 2007"
+numberofprocessorsused=1
+memorysizeused="0"
+comment=
+kerneldescription=
+language="F95"
+compiler="ifort"
+compilerversion=" unknown"
+compilerflags="-free  -O4"
+c_compiler_version="910, build 20061103"
+library1=""
+kernelisparallel=0
+kernelisparallel=0
+is3d=0
+codesequence="z = L*u (factorised)"
+xinmin=2
+xinmax=1001
+y1inmin=5554
+y1inmax=692669
+y2inmin=5588
+y2inmax=692702
+y3inmin=5621
+y3inmax=692735
+y4inmin=5654
+y4inmax=692768
+y5inmin=5687
+y5inmax=692801
+endofmeasurementinfos
+################################################
+beginofarchitecture
+# Architekturangaben
+nodename="N4"
+hostname="localhost" 
+###############################################################################
+#                                                                             #
+#  B e n c h I T - Performance Measurement for Scientific Applications        #
+#                                                                             #
+#  Architectural information about your system, used to compare your system   #
+#  to others. Please fill out the information - your resultfile will not be   #
+#  accepted on the project homepage without this information.                 #
+#                                                                             #
+#  Authors: Guido Juckeland (juckeland@zhr.tu-dresden.de)                     #
+#           Stefan Pflueger (pflueger@zhr.tu-dresden.de)                      #
+#  $Revision: 1.6 $                                                           #
+#  $Date: 2007/07/10 15:06:44 $                                               #
+#                                                                             #
+###############################################################################
+
+#
+# feel free to insert your data
+#
+# quotation marks have to be `escaped'!!!
+#
+# Note: The examples are from very different systems.
+#
+
+
+# Manufacturer of the mainboard, for example: "MSI"
+mainboardmanufacturer=""
+
+# Type of the mainboard without manufacturer's name, for example: "845PE Max3 (800 Edition)"
+mainboardtype=""
+
+# Chipset of the mainboard, for example: "Intel i845PE"
+mainboardchipset=""
+
+# Total number of Processors
+numberofprocessors=
+
+# Name of the processor, for example: "Intel Pentium 4"
+processorname=""
+
+# Codename according to manufacturer roadmap, for example: "Montecito"
+codename=""
+
+# Processor Serial Number, if available
+processorserialnumber=""
+
+# Processor version, for example: "x86, Family 6, Model 5, Stepping 1"
+processorversion=""
+
+# Instruction Set Architecture (ISA) of the processor, for example: "IA-32" or "MIPS"
+processorisaset=""
+
+# Several processors are using exact descriptions of their ISA level, for example: "IV" (for MIPS)
+processorisalevel=""
+
+# Extensions of the ISA with an additional number; extendable
+# for example: 
+# processorisaextension1="MMX"
+# processorisaextension2="SSE"
+# processorisaextension3="SSE2"
+processorisaextension1=""
+processorisaextension2=""
+processorisaextension3=""
+
+# Clock rate of the processor in Hz, for example: 3060000000
+processorclockrate=""
+
+# Instruction length in bit, for example: 32 [for RISC] or 0 [for CISC or variable length]
+instructionlength=""
+
+# Processor word length or Word format or xx-bit architecture in bit, for example: 32 
+processorwordlength=""
+
+# Number of instructions issued to the functional units per clock, for example: 6
+instructionissue=""
+
+# Number of separate integer units, for example: 2
+integerunits=""
+
+# Number of separate floating point units, for example: 3
+floatingpointunits=""
+
+# Number of separate load/store units, for example: 1
+loadstoreunits=""
+
+# Support of multithreading, for example: 1 [0 for no | 1 for yes] [Hyperthreading --> 1]
+multithreading=""
+
+# Number of physical cores per CPU
+numberofcorespercpu=0
+
+# L1 instruction cache size in byte, for example: 12288 
+level1icachesize=""
+
+# L1 data cache size in byte, for example: 8192
+level1dcachesize=""
+
+# L2 cache size in byte, for example: 524288
+level2cachesize=""
+
+
+# L3 cache size in byte, for example:  33554432
+level3cachesize=""
+
+# L1 instruction cache organization, for example: "Execution Trace Cache"
+level1icachetype=""
+
+# L1 data cache organization, for example: "4-way set-associative, write-through, dual ported"
+level1dcachetype=""
+
+# L2 cache organization, for example: "8-way set-associative, cache line size 32 words"
+level2cachetype=""
+
+# L3 cache organization, for example: "8-way set-associative, cache line size 128 words with 4 128-byte sectors"
+level3cachetype=""
+
+# L2 cache location, for example: "on-chip" or "on-board"
+level2cachelocation=""
+
+# Support of prefetching, for example: 1 [0 for no | 1 for yes]
+prefetching=""
+
+# Support of preloading, for example: 1 [0 for no | 1 for yes]
+preloading=""
+
+# Clock rate of the processor side bus in Hz, for example: 133000000 
+processorsidebusclockrate=""
+
+# Clock rate of the backside bus (connection to the on-chip L2-cache) in Hz, for example: 200000000
+backsideclockrate=""
+
+# Structure details of the technology in m, for example: 0.000000130
+technologylevel=""
+
+# Memory chip type, for example: "PC-100 SDRAM" or "RIMM-4200"
+memorychiptype=""
+
+# Memory bus type, for example: "SDRAM bus" or "RAMBUS"
+memorybustype=""
+
+# Clock rate of the memory bus in Hz, for example: 100000000
+memorybusclockrate=""
+
+# Total size of available memory
+memorysize=
+
+# Additionaly comment for your system (e.g. Hyper Threading enabled/disabled)
+ systemcomment=""
+
+endofarchitecture
+####################################################
+beginofenvironmentvariables
+DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-Ko1GotBjVq,guid=b3c66d30a65a6\
+fd4295d20046c73a52"
+BENCHIT_MPIRUN="mpirun"
+BENCHIT_CC_COMPILER_VERSION="910, build 20061103"
+OPTIND="1"
+POSIXLY_CORRECT="y"
+BENCHIT_SHELL_INTERPRETER=""
+BENCHIT_MPIF77_C_FLAGS_OMP=""
+BENCHIT_F77_C_FLAGS_STD="-O2"
+BENCHIT_F95_C_FLAGS_STD="-O2"
+OMP_DYNAMIC="FALSE"
+LESSOPEN="|lesspipe.sh %s"
+BENCHIT_LIB_PVM=""
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_H="1.5 (Fri Jan 19 16:05:11 2007)"
+LANGUAGE="en_US.UTF-8"
+BENCHIT_F90_COMPILER_VERSION=" unknown"
+COLORTERM=""
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_TEMPLATE_C="1.12 (Fri Jul  6 16:14:47\
+2007)"
+BENCHIT_F77_C_FLAGS_OMP=""
+BENCHIT_F95_C_FLAGS_OMP=""
+BENCHIT_F_COMPILERFLAGS="-free  -O4"
+BENCHIT_KERNEL_FILE_VERSION_QUICKVIEW_SH="1.3 (Fri Sep 29 18:35:11 2006)"
+BENCHIT_PARAMETER_FILE="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic\
+1D/Benchit-V5/kernel/numerical/rkstep/F95/0/0/gauss2/PARAMETERS"
+GS_LIB="/home/nico/.fonts"
+BENCHIT_CPP_SCSL=""
+BENCHIT_RUN_QUEUEOPTIONS=""
+LC_TIME="de_DE.UTF-8"
+BENCHIT_KERNELBINARY="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1\
+/Benchit-V5/bin/numerical.rkstep.F95.0.0.gauss2.0"
+BENCHIT_KERNEL_FILE_VERSION_ERROR_H="1.1 (Tue Mar 13 08:22:03 2007)"
+BENCHIT_CXX_C_FLAGS_HIGH="-O3"
+ANT_HOME="/usr/share/ant-core"
+LESS="-R -M --shift 5"
+BENCHIT_LIB_FFTW3=" -lfftw3"
+BENCHIT_LIB_ACML=" -lacml"
+QTDIR="/usr/qt/3"
+BENCHIT_MPICC="icc"
+BENCHIT_RUN_QUEUENAME=""
+KONSOLE_DCOP="DCOPRef(konsole-13077,konsole)"
+BENCHIT_KERNEL_FILE_VERSION_UNAME_MINUS_A="NO REVISION (Mon Jul 18 15:03:19\
+2005)"
+BENCHIT_CPP_ESSL=""
+XDG_DATA_DIRS="/usr/share:/usr/kde/3.5/share:/usr/local/share"
+BENCHIT_KERNEL_FILE_VERSION_BENCHSCRIPT_H="1.1 (Tue May 23 10:13:00 2006)"
+BENCHIT_ARCH_SPEED="600M"
+BENCHIT_JAVA_FLAGS=""
+PWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/tool\
+"
+TERM="xterm"
+BENCHIT_KERNEL_FILE_VERSION_RANDOM="NO REVISION, UNABLE TO READ (Sun Aug 12\
+00:00:02 2007)"
+BENCHIT_KERNEL_START="2"
+BENCHIT_CXX_C_FLAGS=""
+BENCHIT_CC="icc"
+PRELINK_PATH=""
+BENCHIT_KERNEL_STEPS="1000"
+XDG_CONFIG_DIRS="/usr/kde/3.5/etc/xdg"
+JAVACC_HOME="/usr/share/javacc/"
+BENCHIT_F90="ifort"
+BENCHIT_RUN_REDIRECT_CONSOLE="output.txt"
+BASH_VERSION="3.2.17(1)-release"
+BENCHIT_F77_COMPILER_VERSION=" unknown"
+BENCHIT_F95_COMPILER_VERSION=" unknown"
+BENCHIT_MPICC_C_FLAGS_HIGH="-O3"
+BENCHIT_JAVA="java"
+BENCHIT_INTERACTIVE="0"
+BENCHIT_LIB_PTHREAD="-lpthread"
+BENCHIT_RUN_COREDUMPLIMIT="0"
+BENCHIT_INCLUDES="-I.\
+-I/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+INTEL_LICENCE_FILE="/opt/intel/fortran100/licenses"
+COMPILE_GLOBAL="1"
+BENCHIT_CC_C_FLAGS_HIGH="-O3"
+myval=""
+BENCHIT_KERNEL_FILE_VERSION_FILEVERSION="NO REVISION (Sun Aug 19 11:06:19\
+2007)"
+BENCHIT_LIB_BLAS="-lblas"
+BENCHIT_PERL_INTERPRETER=""
+SHLVL="3"
+BENCHIT_KERNEL_FILE_VERSION_BMERGE_SH="NO REVISION (Mon Jul 18 15:03:19 2005)"
+BENCHIT_KERNEL_FILE_VERSION_FEATURES="NO REVISION (Tue Jul 10 13:10:16 2007)"
+CONFIG_PROTECT_MASK="/etc/env.d/java/ /etc/gconf /etc/terminfo\
+/etc/revdep-rebuild /etc/splash"
+DCCC_PATH="/usr/lib/distcc/bin"
+BENCHIT_MPICC_C_FLAGS=""
+BENCHIT_F90_C_FLAGS_HIGH="-O3"
+SHELLOPTS="braceexpand:hashall:interactive-comments:posix"
+BENCHIT_RUN_MAX_MEMORY="0"
+BENCHIT_IGNORE_PARAMETER_FILE="0"
+JAVAC="/home/nico/.gentoo/java-config-2/current-user-vm/bin/javac"
+BENCHIT_PROGRESS_DIR="progress"
+BASH_ARGC="([0]=\"1\" [1]=\"1\")"
+BENCHIT_MPIF77=""
+BENCHIT_CC_C_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_TMP_ENV="NO REVISION (Sun Aug 19 11:06:20 2007)"
+QMAKESPEC="linux-g++"
+BENCHIT_PHP_INTERPRETER=""
+LC_CTYPE="en_US.UTF-8"
+BENCHIT_F77="ifort"
+BENCHIT_F95="ifort"
+BENCHIT_COMPILER="ifort"
+BENCHIT_USE_VAMPIR_TRACE="0"
+BENCHIT_F90_C_FLAGS="-free"
+XDM_MANAGED="/var/run/xdmctl/xdmctl-:0,maysd,mayfn,sched,rsvd,method=classic"
+USER="nico"
+BENCHIT_RUN_TIMELIMIT="600"
+KDE_MULTIHEAD="false"
+OMP_NESTED="FALSE"
+BENCHIT_KERNELBINARY_ARGS=" "
+VMHANDLE="sun-jdk-1.4"
+BENCHIT_KERNEL_INCREMENT="1"
+BENCHIT_MPIF77_C_FLAGS_HIGH=""
+PYTHONPATH="/usr/lib/portage/pym"
+BENCHIT_CPP_PVM=""
+BENCHIT_SHELL_FLAGS=""
+BENCHIT_JAVA_HOME=""
+LOGNAME="nico"
+BENCHIT_KERNEL_FILE_VERSION_CMDLINEPARAMS="1.29 (Tue Jan  3 18:55:28 2006)"
+BENCHIT_KERNEL_FILE_VERSION_LOC_CONVERT_SH="NO REVISION (Wed Jan  4 15:32:49\
+2006)"
+LC_MONETARY="de_DE.UTF-8"
+BENCHIT_CXX_L_FLAGS="-lm"
+BENCHIT_F77_C_FLAGS_HIGH="-O3"
+BENCHIT_F95_C_FLAGS_HIGH="-O4"
+OPTERR="1"
+myvar="BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP"
+BENCHIT_LIB_ATLAS=" -latlas"
+PRELINK_PATH_MASK="/usr/lib/gstreamer-0.10:/usr/lib/gstreamer-0.8:/lib/modules:\
+usr/lib/locale:/usr/lib/wine:/usr/lib/valgrind:*.la:*.png:*.py:*.pl:*.pm:*.sh:*\
+xml:*.xslt:*.a:*.js:/usr/lib/klibc"
+DM_CONTROL="/var/run/xdmctl"
+BENCHIT_KERNEL_FILE_VERSION_ARCHDEFS="NO REVISION (Fri Sep 29 18:35:11 2006)"
+GENERATION="2"
+BENCHIT_KERNEL_FILE_VERSION_COMPILERVERSION="NO REVISION, UNABLE TO READ (Sun\
+Aug 12 00:00:02 2007)"
+BENCHIT_CROSSCOMPILE="0"
+_CMDLINE_VARLIST="BENCHIT_KERNELBINARY BENCHIT_KERNELBINARY_ARGS\
+BENCHIT_CMDLINE_ARG_FILENAME_COMMENT BENCHIT_CMDLINE_ARG_PARAMETER_FILE\
+BENCHIT_CMDLINE_ARG_IGNORE_PARAMETER_FILE BENCHIT_NODENAME BENCHIT_CROSSCOMPILE\
+BENCHIT_CMDLINE_ARG_NUM_CPUS BENCHIT_CMDLINE_ARG_NUM_PROCESSES\
+BENCHIT_CMDLINE_ARG_NUM_THREADS_PER_PROCESS BENCHIT_CMDLINE_ARG_RUN_CLEAN\
+BENCHIT_CMDLINE_ARG_RUN_COREDUMPLIMIT BENCHIT_CMDLINE_ARG_RUN_EMAIL_ADDRESS\
+BENCHIT_CMDLINE_ARG_RUN_MAX_MEMORY BENCHIT_CMDLINE_ARG_RUN_QUEUENAME\
+BENCHIT_CMDLINE_ARG_RUN_QUEUETIMELIMIT BENCHIT_CMDLINE_ARG_RUN_REDIRECT_CONSOLE\
+BENCHIT_CMDLINE_ARG_RUN_TEST BENCHIT_CMDLINE_ARG_RUN_USE_MPI\
+BENCHIT_CMDLINE_ARG_RUN_USE_OPENMP "
+BASH="/bin/sh"
+BENCHIT_RUN_QUEUETIMELIMIT=""
+BENCHIT_CPP_FFTW3=""
+BENCHIT_MPIF77_C_FLAGS=""
+BENCHIT_CPP_ACML=""
+BENCHIT_HOSTNAME="localhost"
+GTK_RC_FILES="/etc/gtk/gtkrc:/home/nico/.gtkrc:/home/nico/.kde/share/config/gtk\
+c"
+BENCHIT_NUM_PROCESSES=""
+PIPESTATUS="([0]=\"0\")"
+BENCHIT_KERNEL_FILE_VERSION_FILEVERSION_C="1.6 (Fri Jan 19 16:05:11 2007)"
+KERNELDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V\
+/kernel/numerical/rkstep/F95/0/0/gauss2"
+BENCHIT_LIB_PAPI=""
+KDEDIRS="/usr:/usr/local:/usr/kde/3.5"
+BENCHIT_F77_C_FLAGS=""
+BENCHIT_F95_C_FLAGS="-free"
+GROUPS="()"
+BENCHIT_MPICC_L_FLAGS="-lm -L/opt/intel/fortran100/lib -lifcore -lmpi"
+DIRSTACK="()"
+BENCHIT_KERNEL_FILE_VERSION_STRINGLIB_C="1.4 (Fri Jan 12 11:44:35 2007)"
+BENCHIT_LIB_PCL=""
+CLASSPATH="."
+_="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/tools/\
+
+BENCHIT_CC_L_FLAGS="-lm -L/opt/intel/fortran100/lib -lifcore"
+BENCHIT_KERNEL_FILE_VERSION_RUN_BENCHIT="NO REVISION (Fri Sep 29 18:35:11\
+2006)"
+MANPATH="/home/nico/.gentoo/java-config-2/current-user-vm/man:/usr/local/share/\
+an:/usr/share/man:/usr/share/binutils-data/i686-pc-linux-gnu/2.17/man:/usr/shar\
+/gcc-data/i686-pc-linux-gnu/4.1.2/man:/opt/intel/compiler91/man:/opt/intel/fort\
+an100/man:/opt/sun-jdk-1.4.2.15/man:/etc/java-config/system-vm/man/:/usr/kde/3.\
+/share/man:/usr/qt/3/doc/man:/usr/local/texlive/current/texmf/doc/man"
+BENCHIT_KERNEL_FILE_VERSION_FIRSTTIME="1.29 (Wed Jul  4 16:22:09 2007)"
+PAGER="/usr/bin/less"
+BENCHIT_CPP_BLAS=""
+G_BROKEN_FILENAMES="1"
+KDE_SESSION_UID="1000"
+BENCHIT_KERNEL_FILE_VERSION_ENVHASHBUILDER="NO REVISION (Sun Aug 19 11:06:19\
+2007)"
+COLON_SEPARATED="XDG_DATA_DIRS"
+LDPATH="/usr/local/lib:///usr/lib/opengl/nvidia/lib:/usr/i686-pc-linux-gnu/lib:\
+usr/lib/gcc/i686-pc-linux-gnu/4.1.2:/opt/intel/compiler91/lib:/opt/intel/fortra\
+100/lib:/usr/lib/nspr:/usr/lib/nss:/opt/sun-jdk-1.4.2.15/jre/lib/i386/:/opt/sun\
+jdk-1.4.2.15/jre/lib/i386/native_threads/:/opt/sun-jdk-1.4.2.15/jre/lib/i386/cl\
+ssic/:/opt/sun-jdk-1.4.2.15/jre/lib/i386/server/:/usr/lib/qt4:/usr/kde/3.5/lib:\
+usr/qt/3/lib:/usr/games/lib:/opt/nessus/lib:/usr/lib/fltk-1.1:/usr/lib/libstdc+\
+-v3/"
+BENCHIT_F90_L_FLAGS="-lm"
+CONFIGURE_MODE="COMPILE"
+OLDCWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_NUM_CPUS="1"
+LC_COLLATE="en_US.UTF-8"
+BENCHIT_PERL_FLAGS=""
+IA32ROOT="/opt/intel/fortran100"
+KERNELNAME_FULL=""
+BENCHIT_MANDATORY_FILES="tools/run_benchit tools/uname_minus_a benchit.c\
+interface.h tools/envhashbuilder.c tools/bienvhash.template.c tools/bienvhash.h\
+tools/stringlib.c tools/stringlib.h "
+PS4="+ "
+GCC_PATH="/usr/i686-pc-linux-gnu/gcc-bin/4.1.2"
+INFOPATH="/usr/share/info:/usr/share/binutils-data/i686-pc-linux-gnu/2.17/info:\
+usr/share/gcc-data/i686-pc-linux-gnu/4.1.2/info:/usr/local/texlive/current/texm\
+/doc/info"
+OSTYPE="linux-gnu"
+BENCHIT_KERNEL_FILE_VERSION_HELPER_SH="1.14 (Mon Dec 12 11:27:20 2005)"
+TEXBASE="/usr/local/texlive/"
+BENCHITROOT="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit\
+V5"
+BENCHIT_PHP_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_STRINGLIB_H="1.2 (Fri Sep 29 16:51:14 2006)"
+BENCHIT_RUBY_INTERPRETER=""
+BENCHIT_LIB_MKL=" -lmkl"
+BASH_LINENO="([0]=\"78\" [1]=\"0\")"
+HOSTTYPE="i686"
+BENCHIT_MPIF77_L_FLAGS=""
+KDE_FULL_SESSION="true"
+EUID="1000"
+MACHTYPE="i686-pc-linux-gnu"
+BENCHIT_CPP_PTHREADS=""
+DESKTOP_SESSION="default"
+HTTP_PROXY="http://localhost:8118"
+http_proxy="http://localhost:8118"
+BENCHIT_LIB_MPI=""
+SCRIPTNAME="COMPILE.SH"
+BENCHIT_F77_L_FLAGS="-lm"
+BENCHIT_F95_L_FLAGS="-lm"
+BENCHIT_KERNEL_FILE_VERSION_LOC_REPL="NO REVISION (Wed Jan  4 15:32:49 2006)"
+GTK2_RC_FILES="/home/nico/.gtkrc-2.0:/home/nico/.kde/share/config/gtkrc-2.0:/et\
+/gtk-2.0/gtkrc"
+BENCHIT_OPTIONAL_FILES="LOCALDEFS/PROTOTYPE_input_architecture\
+LOCALDEFS/PROTOTYPE_input_display "
+GCC_SPECS=""
+BENCHIT_RUN_OUTPUT_DIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic\
+1D/Benchit-V5/output"
+JAVA_HOME="/home/nico/.gentoo/java-config-2/current-user-vm"
+BENCHIT_CPP_ATLAS=""
+BENCHIT_CXX_C_FLAGS_STD="-O2"
+HOME="/home/nico"
+BENCHIT_DEBUGLEVEL="0"
+FLTK_DOCDIR="/usr/share/doc/fltk-1.1.7/html"
+LS_COLORS="no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01\
+cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:su=37;41:sg=30;43:tw=30;42:ow=34;42:s\
+=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.z\
+p=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz\
+01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*\
+cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;\
+5:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif\
+01;35:*.tiff=01;35:*.png=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:\
+.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=\
+1;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rm\
+b=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*\
+xwd=01;35:*.yuv=01;35:*.pdf=00;32:*.ps=00;32:*.txt=00;32:*.patch=00;32:*.diff=0\
+;32:*.log=00;32:*.tex=00;32:*.doc=00;32:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m\
+d=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36\
+*.wav=00;36:"
+C_COMPILE="icc  -O2 -I.\
+-I/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5 \
+-DDEBUGLEVEL=0"
+SHELLSCRIPT_DEBUG="0"
+BENCHIT_RUN_ACCURACY=""
+BENCHIT_LIB_SCSL=" -lscsl"
+BENCHIT_CXX_C_FLAGS_OMP=""
+BENCHIT_RUN_EMAIL_ADDRESS=""
+SANE_CONFIG_DIR="/etc/sane.d"
+LC_MESSAGES="en_US.UTF-8"
+HOSTNAME="N4"
+KERNELBASEDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Bench\
+t-V5/kernel"
+BENCHIT_KERNEL_FILE_VERSION_ENVHASHBUILDER_C="1.3 (Fri Jan 12 11:44:35 2007)"
+BENCHIT_COMPILERFLAGS="-free  -O4"
+BENCHIT_CPP_PAPI="-DUSE_PAPI"
+_VARLIST="'BENCHITROOT"
+CVS_RSH="ssh"
+BENCHIT_NODENAME="N4"
+SHELL="/bin/bash"
+BASH_ARGV="([0]=\
+"/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/kernel/n\
+merical/rkstep/F95/0/0/gauss2/COMPILE.SH\
+" [1]=\
+"numerical.rkstep.F95.0.0.gauss2\
+")"
+BENCHIT_JAVAC_FLAGS_HIGH="-O"
+BENCHIT_KERNEL_FILE_VERSION_ENVIRONMENTS="NO REVISION, UNABLE TO READ (Sun Aug\
+12 00:00:02 2007)"
+BENCHIT_LIB_ESSL=" -lessl"
+myfile="tools/stringlib.h"
+BENCHIT_KERNELNAME="numerical.rkstep.F95.0.0.gauss2"
+DISTCC_VERBOSE="0"
+DISTCC_LOG=""
+F_COMPILE="ifort -free  -O4"
+KONSOLE_DCOP_SESSION="DCOPRef(konsole-13077,session-1)"
+BENCHIT_ENVIRONMENT="NOTHING"
+EDITOR="/usr/bin/vim"
+JDK_HOME="/home/nico/.gentoo/java-config-2/current-user-vm"
+BENCHIT_CPP_PCL=" -DUSE_PCL"
+HLL="F95"
+OLDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_F90_SOURCE_FORMAT_FLAG=""
+BENCHIT_MPICC_C_FLAGS_STD="-O2"
+PATH="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/too\
+s:/usr/kde/3.5/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/i686-pc-linux-gnu\
+gcc-bin/4.1.2:/opt/intel/compiler91/bin:/opt/intel/fortran100/bin:/opt/sun-jdk-\
+.4.2.15/bin:/opt/sun-jdk-1.4.2.15/jre/bin:/opt/sun-jdk-1.4.2.15/jre/javaws:/usr\
+kde/3.5/bin:/usr/qt/3/bin:/usr/games/bin:/usr/local/texlive/current/bin/i386-li\
+ux:/sbin:/usr/sbin:/sbin:/usr/sbin"
+PPID="13086"
+BENCHIT_KERNEL_FILE_VERSION_BIENVHASH_TEMPLATE_JAVA="1.4 (Thu Jul 21 21:42:13\
+2005)"
+BENCHIT_RUN_TEST="0"
+XCURSOR_THEME="whiteglass"
+BR="0"
+BENCHIT_JAVAC_FLAGS=""
+BENCHIT_MPICC_C_FLAGS_OMP=""
+G_FILENAME_ENCODING="UTF-8"
+BENCHIT_KERNEL_FILE_VERSION_COMMONDEFS="NO REVISION (Tue Aug 30 21:32:48 2005)"
+BENCHIT_CC_C_FLAGS_STD="-O2"
+SESSION_MANAGER="local/N4:/tmp/.ICE-unix/5782"
+BENCHIT_CXX_COMPILER_VERSION="4.1.2 (Gentoo 4.1.2 p1.0.1)"
+DISPLAY=":0.0"
+BENCHIT_FILENAME_COMMENT="0"
+CURDIR="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+IFS="' 	"
+BENCHIT_DEFINES=" -DDEBUGLEVEL=0"
+BENCHIT_CC_C_FLAGS_OMP=""
+UID="1000"
+BENCHIT_F90_C_FLAGS_STD="-O2"
+MIKTEX_INSTALLROOT="/usr/local/texlive/texmf-local"
+OLDPWD="/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5"
+BENCHIT_JAVAC="javac"
+BENCHIT_F90_C_FLAGS_OMP=""
+WINDOWID="54525959"
+BENCHIT_ARCH_SHORT="IntM"
+LC_PAPER="de_DE.UTF-8"
+BENCHIT_CPP_MKL=""
+GDK_USE_XFT="1"
+BENCHIT_F95_SOURCE_FORMAT_FLAG=""
+BASH_SOURCE="([0]=\
+"/home/nico/Desktop/Diplomarbeit/programs/main/parabolic-1D/Benchit-V5/kernel/n\
+merical/rkstep/F95/0/0/gauss2/COMPILE.SH\
+" [1]=\
+"./COMPILE.SH\
+")"
+BENCHIT_KERNEL_FILE_VERSION_CONFIGURE="1.46 (Thu Jun 21 19:41:24 2007)"
+OPENGL_PROFILE="nvidia"
+LC_NUMERIC="de_DE.UTF-8"
+BENCHIT_C_COMPILERFLAGS=" -O2"
+BENCHIT_RUBY_FLAGS=""
+BENCHIT_KERNEL_FILE_VERSION_BENCHSCRIPT_C="1.2 (Fri Jan 12 11:44:35 2007)"
+CONFIG_PROTECT="/usr/share/X11/xkb /usr/kde/3.5/share/config /usr/kde/3.5/env\
+/usr/kde/3.5/shutdown /usr/share/config"
+BASH_VERSINFO="([0]=\
+"3\
+" [1]=\
+"2\
+" [2]=\
+"17\
+" [3]=\
+"1\
+" [4]=\
+"release\
+" [5]=\
+"i686-pc-linux-gnu\
+")"
+BENCHIT_CXX="c++"
+BENCHIT_LD_LIBRARY_PATH="/home/nico/Desktop/Diplomarbeit/programs/main/paraboli\
+-1D/Benchit-V5/jbi/jni"
+BENCHIT_NUM_THREADS_PER_PROCESS=""
+PKG_CONFIG_PATH="/usr/qt/3/lib/pkgconfig"
+BENCHIT_MPIF77_C_FLAGS_STD=""
+BENCHIT_RUN_LINEAR="0"
+INTEL_FLEXLM_LICENSE="/opt/intel/compiler91/licenses"
+BENCHIT_CPP_MPI=" -DUSE_MPI"
+endofenvironmentvariables
+beginofdisplay
+
+xoutmin=0
+xoutmax=1100
+xaxisticks=11
+xaxislogbase=0
+xaxistext="Problem dimension N"
+
+y1outmin=0
+y1outmax=700000
+y1axisticks=7
+y1axislogbase=0
+y1axistext="No. of iterations"
+
+y2outmin=0
+y2outmax=700000
+y2axisticks=7
+y2axislogbase=0
+y2axistext="No. of iterations"
+
+y3outmin=0
+y3outmax=700000
+y3axisticks=7
+y3axislogbase=0
+y3axistext="No. of iterations"
+
+y4outmin=0
+y4outmax=700000
+y4axisticks=7
+y4axislogbase=0
+y4axistext="No. of iterations"
+
+y5outmin=0
+y5outmax=700000
+y5axisticks=7
+y5axislogbase=0
+y5axistext="No. of iterations"
+
+numabscissae=986
+numfunctions=5
+
+## Fuer Architektur- oder Messmerkmal : abc
+#
+# displayabc=1                                           # Steuervariable
+# #Textfeld-Eigenschaften des date-Strings               # Kommentar
+# tabc="ABC-Merkmal: 3 Tm"                               # Text: Wert
+# xabc=                                                  # x-Position
+# yabc=                                                  # y-Position
+# fonttypabc=                                            # Schriftart
+# fontsizeabc=                                           # Schriftgroesse
+tlegendfunction1="ID"
+xlegendfunction1=
+ylegendfunction1=
+fonttypelegendfunction1=
+fontsizelegendfunction1=
+
+tlegendfunction2="BlockJac"
+xlegendfunction2=
+ylegendfunction2=
+fonttypelegendfunction2=
+fontsizelegendfunction2=
+
+tlegendfunction3="LowerBLockSOR"
+xlegendfunction3=
+ylegendfunction3=
+fonttypelegendfunction3=
+fontsizelegendfunction3=
+
+tlegendfunction4="UpperBLockSOR"
+xlegendfunction4=
+ylegendfunction4=
+fonttypelegendfunction4=
+fontsizelegendfunction4=
+
+tlegendfunction5="BlockSSOR"
+xlegendfunction5=
+ylegendfunction5=
+fonttypelegendfunction5=
+fontsizelegendfunction5=
+
+#### display of optional information can be enabled by setting display***=1
+
+
+# optional information of the measurement-programs:
+
+# deactivation of the kernelstring is useful, if a separate caption
+# should be used
+displaykernelstring=1
+# topkernelstring=1|0: headline|underline
+topkernelstring=1
+fonttypkernelstring=""
+fontsizekernelstring=
+
+displaycomment=1
+# textfield properties of the comment-string
+tcomment="Comment:"
+xcomment=
+ycomment=
+fonttypcomment=
+fontsizecomment=
+
+displaydate=1
+# textfield properties of the date-string
+tdate="Datum: "
+xdate=""
+ydate=""
+fonttypdate=""
+fontsizedate=""
+
+displaylanguage=0
+# textfield properties of the language-string
+tlanguage="HLL: "
+xlanguage=""
+ylanguage=""
+fonttyplanguage=""
+fontsizelanguage=""
+
+displaycompiler=0
+# textfield properties of the compiler-string
+tcompiler="Compiler: "
+xcompiler=""
+ycompiler=""
+fonttypcompiler=""
+fontsizecompiler=""
+
+displaycompilerflags=0
+# textfield properties of the compilerflags-string
+tcompilerflags="Compiler-Flags: "
+xcompilerflags=""
+ycompilerflags=""
+fonttypcompilerflags=""
+fontsizecompilerflags=""
+
+displaycodesequence=1
+# textfield properties of the codesequence-string
+tcodesequence=""
+xcodesequence=""
+ycodesequence=""
+fonttypcodesequence=""
+fontsizecodesequence=""
+
+# optional information about the architecture, names etc.:
+
+displayhostname=0
+# textfield properties of the hostname-string
+thostname="Hostname: "
+xhostname=""
+yhostname=""
+fonttyphostname=""
+fontsizehostname=""
+
+displaynodename=0
+# textfield properties of the nodename-string
+tnodename="Nodename: "
+xnodename=""
+ynodename=""
+fonttypnodename=""
+fontsizenodename=""
+
+displaymainboardmanufacturer=0
+# textfield properties of the mainboardmanufacturer-string
+tmainboardmanufacturer="Manufacturer of  mainboard: "
+xmainboardmanufacturer=""
+ymainboardmanufacturer=""
+fonttypmainboardmanufacturer=""
+fontsizemainboardmanufacturer=""
+
+displaymainboardtype=0
+# textfield properties of the mainboardtype-string
+tmainboardtype="Mainboard type: "
+xmainboardtype=""
+ymainboardtype=""
+fonttypmainboardtype=""
+fontsizemainboardtype=""
+
+displaymainboardchipset=0
+# textfield properties of the mainboardchipset-string
+tmainboardchipset="Mainboard Chipset: "
+xmainboardchipset=""
+ymainboardchipset=""
+fonttypmainboardchipset=""
+fontsizemainboardchipset=""
+
+displayprocessorname=0
+# textfield properties of the processorname-string
+tprocessorname="Processor name: "
+xprocessorname=""
+yprocessorname=""
+fonttypprocessorname=""
+fontsizeprocessorname=""
+
+displayprocessorserialnumber=0
+# textfield properties of the processorserialnumber-string
+tprocessorserialnumber="Processor Serial No.: "
+yprocessorserialnumber=""
+fonttypprocessorserialnumber=""
+fontsizeprocessorserialnumber=""
+
+displayprocessorversion=0
+# textfield properties of the processorversion-string
+tprocessorversion="Processor Version: "
+xprocessorversion=""
+yprocessorversion=""
+fonttypprocessorversion=""
+fontsizeprocessorversion=""
+
+displayprocessorisaset=0
+# textfield properties of the processorisaset-string
+tprocessorisaset="Instruction Set Architecture: "
+xprocessorisaset=""
+yprocessorisaset=""
+fonttypprocessorisaset=""
+fontsizeprocessorisaset=""
+
+displayprocessorisalevel=0
+# textfield properties of the processorisalevel-string
+tprocessorisalevel="ISA Level: "
+xprocessorisalevel=""
+yprocessorisalevel=""
+fonttypprocessorisalevel=""
+fontsizeprocessorisalevel=""
+
+displayprocessorisaextension1=0
+# textfield properties of the processorisaextension1-string
+tprocessorisaextension1="ISA Extension: "
+xprocessorisaextension1=""
+yprocessorisaextension1=""
+fonttypprocessorisaextension1=""
+fontsizeprocessorisaextension1=""
+
+displayprocessorisaextension2=0
+# textfield properties of the processorisaextension2-string
+tprocessorisaextension2="ISA Extension: "
+xprocessorisaextension2=""
+yprocessorisaextension2=""
+fonttypprocessorisaextension2=""
+fontsizeprocessorisaextension2=""
+
+displayprocessorisaextension3=0
+# textfield properties of the processorisaextension3-string
+tprocessorisaextension3="ISA Extension: "
+xprocessorisaextension3=""
+yprocessorisaextension3=""
+fonttypprocessorisaextension3=""
+fontsizeprocessorisaextension3=""
+
+displayprocessorclockrate=0
+# textfield properties of the processorclockrate-string
+tprocessorclockrate="Processor Clock Rate: "
+xprocessorclockrate=""
+yprocessorclockrate=""
+fonttypprocessorclockrate=""
+fontsizeprocessorclockrate=""
+
+displayinstructionlength=0
+# textfield properties of the instructionlength-string
+tinstructionlength="Instruction Length: "
+xinstructionlength=""
+yinstructionlength=""
+fonttypinstructionlength=""
+fontsizeinstructionlength=""
+
+displayprocessorwordlength=0
+# textfield properties of the processorwordlength-string
+tprocessorwordlength="Processor Word Length: "
+xprocessorwordlength=""
+yprocessorwordlength=""
+fonttypprocessorwordlength=""
+fontsizeprocessorwordlength=""
+
+displayinstructionissue=0
+# textfield properties of the instructionissue-string
+tinstructionissue="Instruction Issue: "
+xinstructionissue=""
+yinstructionissue=""
+fonttypinstructionissue=""
+fontsizeinstructionissue=""
+
+displayintegerunits=0
+# textfield properties of the integerunits-string
+tintegerunits="Number of Integer Units: "
+xintegerunits=""
+yintegerunits=""
+fonttypintegerunits=""
+fontsizeintegerunits=""
+
+displayfloatingpointunits=0
+# textfield properties of the floatingpointunits-string
+tfloatingpointunits="Number of Floating Point Units: "
+xfloatingpointunits=""
+yfloatingpointunits=""
+fonttypfloatingpointunits=""
+fontsizefloatingpointunits=""
+
+displayloadstoreunits=0
+# textfield properties of the loadstoreunits-string
+tloadstoreunits="Number of Load/Store Units: "
+xloadstoreunits=""
+yloadstoreunits=""
+fonttyploadstoreunits=""
+fontsizeloadstoreunits=""
+
+displaylevel1icachesize=0
+# textfield properties of the level1icachesize-string
+tlevel1icachesize="L1 Instruction Cache Size: "
+xlevel1icachesize=""
+ylevel1icachesize=""
+fonttyplevel1icachesize=""
+fontsizelevel1icachesize=""
+
+displaylevel1icachetype=0
+# textfield properties of the level1icachetype-string
+tlevel1icachetype="L1 Instruction Cache Type: "
+xlevel1icachetype=""
+ylevel1icachetype=""
+fonttyplevel1icachetype=""
+fontsizelevel1icachetype=""
+
+displaylevel1dcachesize=0
+# textfield properties of the level1dcachesize-string
+tlevel1dcachesize="L1 Data Cache Size: "
+xlevel1dcachesize=""
+ylevel1dcachesize=""
+fonttyplevel1dcachesize=""
+fontsizelevel1dcachesize=""
+
+displaylevel1dcachetype=0
+# textfield properties of the level1dcachetype-string
+tlevel1dcachetype="L1 Data Cache Type: "
+xlevel1dcachetype=""
+ylevel1dcachetype=""
+fonttyplevel1dcachetype=""
+fontsizelevel1dcachetype=""
+
+displaylevel2cachesize=0
+# textfield properties of the level2cachesize-string
+tlevel2cachesize="L2 Data Cache Size: "
+xlevel2cachesize=""
+ylevel2cachesize=""
+fonttyplevel2cachesize=""
+fontsizelevel2cachesize=""
+
+displaylevel2cachetype=0
+# textfield properties of the level2cachetype-string
+tlevel2cachetype="L2 Cache Type: "
+xlevel2cachetype=""
+ylevel2cachetype=""
+fonttyplevel2cachetype=""
+fontsizelevel2cachetype=""
+
+displaylevel2cachelocation=0
+# textfield properties of the level2cachelocation-string
+tlevel2cachelocation="L2 Cache Location: "
+xlevel2cachelocation=""
+ylevel2cachelocation=""
+fonttyplevel2cachelocation=""
+fontsizelevel2cachelocation=""
+
+displaylevel3cachesize=0
+# textfield properties of the level3cachesize-string
+tlevel3cachesize="L3 Data Cache Size: "
+xlevel3cachesize=""
+ylevel3cachesize=""
+fonttyplevel3cachesize=""
+fontsizelevel3cachesize=""
+
+displaylevel3cachetype=0
+# textfield properties of the level3cachetype-string
+tlevel3cachetype="L3 Cache Type: "
+xlevel3cachetype=""
+ylevel3cachetype=""
+fonttyplevel3cachetype=""
+fontsizelevel3cachetype=""
+
+displaylevel3cachelocation=0
+# textfield properties of the level3cachelocation-string
+tlevel3cachelocation="L3 Cache Location: "
+xlevel3cachelocation=""
+ylevel3cachelocation=""
+fonttyplevel3cachelocation=""
+fontsizelevel3cachelocation=""
+
+displayprefetching=0
+# textfield properties of the prefetching-string
+tprefetching="Prefetching: "
+xprefetching=""
+yprefetching=""
+fonttypprefetching=""
+fontsizeprefetching=""
+
+displaypreloading=0
+# textfield properties of the preloading-string
+tpreloading="Preloading: "
+xpreloading=""
+ypreloading=""
+fonttyppreloading=""
+fontsizepreloading=""
+
+displaybacksideclockrate=0
+# textfield properties of the backsideclockrate-string
+tbacksideclockrate="Clock Rate of the Backside Bus: "
+xbacksideclockrate=""
+ybacksideclockrate=""
+fonttypbacksideclockrate=""
+fontsizebacksideclockrate=""
+
+displaytechnologylevel=0
+# textfield properties of the technologylevel-string
+ttechnologylevel="Technology Level: "
+xtechnologylevel=""
+ytechnologylevel=""
+fonttyptechnologylevel=""
+fontsizetechnologylevel=""
+
+displaymemorychiptype=0
+# textfield properties of the memorychiptype-string
+tmemorychiptype="Memory Chip Type: "
+xmemorychiptype=""
+ymemorychiptype=""
+fonttypmemorychiptype=""
+fontsizememorychiptype=""
+
+displaymemorybustype=0
+# textfield properties of the memorybustype-string
+tmemorybustype="Memory Bus Type: "
+xmemorybustype=""
+ymemorybustype=""
+fonttypmemorybustype=""
+fontsizememorybustype=""
+
+displaymemorybusclockrate=0
+# textfield properties of the memorybusclockrate-string
+tmemorybusclockrate="Memory Bus Clock Rate: "
+xmemorybusclockrate=""
+ymemorybusclockrate=""
+fonttypmemorybusclockrate=""
+fontsizememorybusclockrate=""
+
+displaynumberofprocessorsused=0
+# textfield properties of the numberofprocessorsused-string
+tnumberofprocessorsused="Number Of Used Processors: "
+xnumberofprocessorsused=""
+ynumberofprocessorsused=""
+fonttypnumberofprocessorsused=""
+fontsizenumberofprocessorsused=""
+
+displaymemorysizeused=0
+# textfield properties of the memorysizeused-string
+tmemorysizeused="Used Memory Size: "
+xmemorysizeused=""
+ymemorysizeused=""
+fonttypmemorysizeused=""
+fontsizememorysizeused=""
+
+displaysystemcomment=0
+# textfield properties of the systemcomment-string
+tsystemcomment="Additional System Information: "
+xsystemcomment=""
+ysystemcomment=""
+fonttypsystemcomment=""
+fontsizesystemcomment=""
+
+displayaid=0
+# textfield properties of the aid-string
+taid="AID identifier: "
+xaid=""
+yaid=""
+fonttypaid=""
+fontsizeaid=""
+
+displaycodename=0
+# textfield properties of the codename-string
+tcodename="codename according to roadmap: "
+xcodename=""
+ycodename=""
+fonttypcodename=""
+fontsizecodename=""
+
+displaynumberofcorespercpu=0
+# textfield properties of the numberofcorespercpu-string
+tnumberofcorespercpu="number of physical cores per CPU: "
+xnumberofcorespercpu=""
+ynumberofcorespercpu=""
+fonttypnumberofcorespercpu=""
+fontsizenumberofcorespercpu=""
+endofdisplay
+####################################################
+beginofidentifierstrings
+# strings as replacement for the identifiers in menu-windows
+hostname="Hostname"
+nodename="Nodename"
+mainboardmanufacturer="Manufacturer of  mainboard"
+mainboardtype="Mainboard type"
+mainboardchipset="Mainboard Chipset"
+processorname="Processor name"
+processorserialnumber="Processor Serial No."
+processorversion="Processor Version"
+processorisaset="Instruction Set Architecture"
+processorisalevel="ISA Level"
+processorisaextension1="ISA Extension"
+processorisaextension2="ISA Extension"
+processorisaextension3="ISA Extension"
+processorclockrate="Processor Clock Rate"
+instructionlength="Instruction Length"
+processorwordlength="Processor Word Length"
+instructionissue="Instruction Issue"
+integerunits="Number of Integer Units"
+floatingpointunits="Number of Floating Point Units"
+loadstoreunits="Number of Load/Store Units"
+level1icachesize="L1 Instruction Cache Size"
+level1icachetype="L1 Instruction Cache Type"
+level1dcachesize="L1 Data Cache Size"
+level1dcachetype="L1 Data Cache Type"
+level2cachesize="L2 Data Cache Size"
+level2cachetype="L2 Cache Type"
+level2cachelocation="L2 Cache Location"
+level3cachesize="L3 Data Cache Size"
+level3cachetype="L3 Cache Type"
+level3cachelocation="L3 Cache Location"
+prefetching="Prefetching"
+preloading="Preloading"
+backsideclockrate="Clock Rate of the Backside Bus"
+technologylevel="Technology Level"
+memorychiptype="Memory Chip Type"
+memorybustype="Memory Bus Type"
+memorybusclockrate="Memory Bus Clock Rate"
+numberofprocessorsused="Number Of Used Processors"
+memorysizeused="Used Memory Size"
+systemcomment="Additional System Information"
+aid="AID identifier"
+codename="codename according to roadmap"
+numberofcorespercpu="number of physical cores per CPU"
+endofidentifierstrings
+###################################################
+beginofdata
+2	15147	15150	15153	15156	15159	
+3	15164	15169	15173	15177	15181	
+4	15186	15191	15195	15199	15203	
+5	15210	15217	15222	15227	15232	
+6	15239	15246	15251	15256	15261	
+7	15270	15279	15285	15291	15296	
+8	15305	15314	15320	15326	15332	
+9	15343	15353	15359	15366	15372	
+10	15383	15393	15399	15405	15411	
+11	15423	15434	15440	15447	15453	
+12	15481	15509	15518	15528	15546	
+13	15559	15570	15577	15584	15590	
+14	15603	15615	15622	15629	15636	
+15	15650	15662	15669	15676	15683	
+16	15701	15719	15730	15738	15749	
+17	15782	15802	15819	15831	15843	
+18	15858	15871	15878	15886	15893	
+19	15909	15922	15930	15938	15945	
+20	15961	15974	15982	15990	15997	
+21	16014	16028	16036	16044	16052	
+22	16069	16083	16091	16099	16107	
+23	16125	16140	16148	16157	16165	
+24	16198	16231	16262	16289	16322	
+25	16341	16356	16364	16373	16381	
+26	16400	16415	16423	16432	16440	
+27	16460	16475	16484	16493	16501	
+28	16522	16538	16547	16556	16565	
+29	16598	16631	16648	16681	16698	
+30	16731	16764	16797	16830	16851	
+31	16873	16890	16899	16909	16918	
+32	16941	16958	16967	16977	16986	
+33	17019	17052	17082	17105	17138	
+34	17162	17179	17188	17198	17207	
+35	17231	17249	17258	17268	17277	
+36	17310	17343	17376	17409	17442	
+37	17468	17486	17496	17507	17516	
+38	17549	17582	17602	17635	17654	
+39	17687	17720	17753	17774	17807	
+40	17834	17853	17863	17874	17884	
+41	17917	17950	17981	18003	18036	
+42	18065	18084	18094	18105	18115	
+43	18145	18164	18174	18185	18195	
+44	18228	18261	18294	18327	18353	
+45	18384	18404	18414	18425	18435	
+46	18468	18488	18498	18510	18520	
+47	18554	18575	18586	18598	18608	
+48	18642	18675	18708	18741	18774	
+49	18809	18842	18864	18887	18909	
+50	18944	18977	19000	19023	19054	
+51	19090	19123	19145	19178	19209	
+52	19246	19279	19312	19342	19375	
+53	19413	19435	19446	19459	19470	
+54	19508	19530	19541	19553	19564	
+55	19603	19636	19659	19692	19725	
+56	19764	19797	19830	19854	19887	
+57	19927	19949	19960	19972	19983	
+58	20024	20046	20057	20070	20081	
+59	20123	20156	20189	20222	20255	
+60	20297	20330	20363	20388	20421	
+61	20464	20487	20499	20512	20523	
+62	20567	20600	20625	20658	20682	
+63	9850	9873	9885	9898	9910	
+64	20727	20760	20793	20826	20859	
+65	20905	20938	20971	21004	21028	
+66	21075	21108	21141	21167	21200	
+67	21247	21280	21304	21330	21363	
+68	21411	21444	21477	21510	21543	
+69	21592	21615	21627	21640	21652	
+70	21702	21735	21768	21801	21834	
+71	21884	21907	21919	21932	21944	
+72	21995	22028	22061	22087	22120	
+73	22172	22196	22208	22221	22233	
+74	22286	22310	22322	22335	22347	
+75	22400	22433	22466	22499	22532	
+76	22586	22611	22624	22638	22651	
+77	22706	22730	22742	22756	22768	
+78	22824	22849	22861	22875	22887	
+79	22943	22976	23009	23042	23075	
+80	23132	23157	23170	23184	23197	
+81	23255	23288	23321	23354	23387	
+82	23446	23479	23504	23531	23556	
+83	23616	23649	23682	23715	23741	
+84	23801	23826	23839	23853	23866	
+85	23927	23960	23993	24026	24059	
+86	24121	24146	24159	24173	24186	
+87	24250	24283	24316	24349	24375	
+88	24440	24465	24478	24492	24505	
+89	24571	24596	24609	24623	24636	
+90	24702	24728	24741	24756	24769	
+91	24836	24861	24874	24888	24901	
+92	24969	24994	25007	25021	25034	
+93	25103	25136	25169	25202	25235	
+94	25305	25330	25343	25357	25370	
+95	25440	25473	25506	25539	25566	
+96	25637	25670	25703	25736	25769	
+97	25841	25874	25907	25940	25973	
+98	26046	26079	26112	26141	26174	
+99	26247	26280	26313	26346	26379	
+100	26453	26479	26492	26506	26519	
+101	26594	26627	26660	26693	26726	
+102	26802	26835	26868	26901	26934	
+103	27011	27044	27077	27110	27143	
+104	27220	27253	27281	27314	27347	
+105	27425	27451	27464	27479	27492	
+106	27571	27604	27637	27670	27703	
+107	27783	27816	27849	27882	27915	
+108	27996	28022	28035	28050	28063	
+109	28145	28178	28211	28244	28277	
+110	28360	28393	28426	28459	28492	
+111	28576	28603	28617	28632	28645	
+112	28729	28762	28790	28823	28851	
+113	28936	28963	28976	28991	29004	
+114	29090	29123	29154	29183	29210	
+115	29297	29330	29358	29391	29418	
+116	29506	29539	29572	29605	29638	
+117	29726	29759	29792	29825	29858	
+118	29947	29980	30013	30046	30079	
+119	30169	30196	30210	30225	30239	
+120	30330	30363	30396	30429	30462	
+121	30554	30587	30620	30653	30686	
+122	30778	30805	30819	30834	30848	
+123	30941	30974	31007	31040	31073	
+124	31169	31202	31233	31262	31289	
+125	31386	31419	31452	31485	31518	
+126	7162	7195	7228	7261	7294	
+127	31617	31650	31683	31716	31749	
+128	31849	31876	31890	31905	31919	
+129	32020	32053	32081	32111	32139	
+130	32240	32273	32306	32339	32372	
+131	32474	32507	32540	32573	32606	
+132	32709	32742	32775	32808	32841	
+133	32945	32972	32986	33001	33015	
+134	33120	33147	33161	33176	33190	
+135	33296	33323	33337	33352	33366	
+136	33472	33499	33513	33528	33542	
+137	33649	33682	33715	33748	33781	
+138	33889	33916	33930	33945	33959	
+139	34068	34101	34134	34167	34200	
+140	34310	34337	34351	34366	34380	
+141	34491	34518	34532	34547	34561	
+142	34673	34706	34739	34772	34801	
+143	34914	34947	34980	35013	35046	
+144	35160	35193	35226	35259	35292	
+145	35407	35440	35473	35506	35539	
+146	35654	35687	35720	35753	35786	
+147	35902	35935	35964	35997	36030	
+148	36147	36180	36209	36239	36272	
+149	36390	36423	36451	36481	36510	
+150	36629	36662	36695	36728	36761	
+151	36881	36908	36922	36937	36951	
+152	37072	37105	37138	37171	37204	
+153	37325	37358	37391	37424	37457	
+154	37579	37607	37621	37636	37650	
+155	37773	37806	37839	37872	37905	
+156	38029	38062	38095	38128	38161	
+157	38288	38315	38329	38344	38358	
+158	38486	38519	38552	38585	38618	
+159	38747	38780	38813	38846	38879	
+160	39009	39038	39052	39068	39082	
+161	39213	39240	39254	39269	39283	
+162	39415	39448	39481	39514	39547	
+163	39679	39712	39745	39778	39811	
+164	39945	39978	40011	40044	40077	
+165	40212	40245	40278	40311	40344	
+166	40479	40507	40521	40537	40551	
+167	40687	40720	40753	40786	40819	
+168	40956	40989	41022	41055	41088	
+169	41226	41259	41292	41325	41358	
+170	41497	41530	41563	41596	41629	
+171	41769	41802	41835	41868	41901	
+172	42042	42075	42108	42138	42171	
+173	42313	42346	42377	42410	42439	
+174	42582	42610	42624	42640	42654	
+175	42798	42831	42864	42897	42930	
+176	43075	43108	43141	43174	43207	
+177	43353	43386	43419	43452	43485	
+178	43631	43664	43697	43727	43760	
+179	43907	43940	43973	44006	44039	
+180	44187	44215	44229	44245	44259	
+181	44408	44441	44474	44507	44540	
+182	44690	44718	44732	44748	44762	
+183	44913	44941	44955	44971	44985	
+184	45137	45170	45203	45236	45269	
+185	45422	45455	45488	45521	45554	
+186	45708	45736	45750	45766	45780	
+187	10065	10094	10108	10124	10138	
+188	45937	45970	46003	46036	46069	
+189	46228	46261	46294	46327	46360	
+190	46520	46549	46564	46580	46595	
+191	46756	46789	46822	46855	46888	
+192	47050	47083	47116	47149	47182	
+193	47345	47378	47411	47444	47477	
+194	47640	47673	47706	47739	47772	
+195	47936	47969	48002	48035	48068	
+196	48233	48266	48299	48332	48365	
+197	48531	48564	48593	48626	48655	
+198	48822	48851	48866	48882	48897	
+199	49066	49094	49108	49124	49138	
+200	49308	49341	49374	49407	49440	
+201	49611	49644	49677	49710	49743	
+202	49915	49944	49959	49975	49990	
+203	50162	50195	50228	50261	50294	
+204	50468	50501	50534	50567	50600	
+205	50774	50807	50840	50873	50906	
+206	51081	51114	51147	51178	51211	
+207	51387	51420	51453	51486	51519	
+208	51696	51729	51762	51795	51828	
+209	52006	52039	52072	52105	52138	
+210	52318	52351	52384	52417	52450	
+211	52630	52663	52692	52725	52754	
+212	52935	52968	53001	53034	53067	
+213	53249	53282	53315	53348	53381	
+214	53564	53597	53630	53663	53696	
+215	53880	53909	53923	53939	53953	
+216	54138	54171	54204	54237	54270	
+217	54456	54489	54522	54555	54588	
+218	54777	54806	54821	54837	54852	
+219	55042	55071	55086	55102	55117	
+220	55308	55341	55374	55407	55440	
+221	55632	55665	55698	55731	55764	
+222	55957	55986	56001	56017	56032	
+223	56226	56259	56292	56325	56358	
+224	56553	56586	56619	56652	56685	
+225	56881	56910	56925	56941	56956	
+226	57153	57182	57197	57213	57228	
+227	57426	57459	57492	57525	57558	
+228	57757	57790	57805	57822	57851	
+229	58051	58084	58117	58150	58183	
+230	58384	58417	58450	58483	58516	
+231	58718	58751	58784	58817	58850	
+232	59053	59082	59097	59113	59128	
+233	59332	59365	59398	59431	59464	
+234	59669	59702	59735	59768	59801	
+235	60007	60040	60073	60106	60139	
+236	60346	60379	60412	60445	60478	
+237	60686	60719	60752	60785	60818	
+238	61027	61060	61093	61126	61155	
+239	61365	61394	61409	61425	61440	
+240	61651	61684	61717	61750	61783	
+241	61995	62028	62061	62094	62127	
+242	62340	62373	62406	62439	62469	
+243	62683	62712	62727	62743	62758	
+244	62973	63002	63017	63033	63048	
+245	63264	63297	63330	63363	63396	
+246	63613	63642	63657	63673	63688	
+247	63908	63941	63974	64007	64040	
+248	64261	64294	64327	64360	64393	
+249	64616	64649	64682	64715	64748	
+250	64972	65001	65016	65032	65047	
+251	5912	5941	5956	5972	5987	
+252	65273	65302	65317	65333	65348	
+253	65575	65604	65619	65635	65650	
+254	65877	65910	65943	65976	66009	
+255	66237	66270	66300	66331	66360	
+256	66589	66622	66655	66688	66721	
+257	66951	66984	67017	67050	67080	
+258	67311	67344	67374	67407	67436	
+259	67668	67701	67734	67767	67800	
+260	68033	68066	68099	68132	68165	
+261	68399	68428	68443	68459	68474	
+262	68710	68739	68754	68770	68785	
+263	69022	69055	69088	69121	69154	
+264	69392	69425	69458	69491	69524	
+265	69763	69796	69829	69862	69895	
+266	70135	70168	70201	70234	70267	
+267	70509	70542	70575	70608	70641	
+268	70884	70917	70950	70983	71016	
+269	71259	71292	71325	71358	71391	
+270	71635	71664	71679	71695	71710	
+271	71955	71988	72021	72054	72087	
+272	72333	72366	72399	72432	72465	
+273	72712	72745	72778	72811	72844	
+274	73094	73123	73138	73154	73169	
+275	73421	73454	73487	73520	73553	
+276	73805	73836	73851	73868	73884	
+277	74138	74167	74182	74198	74213	
+278	74468	74497	74512	74528	74543	
+279	74799	74832	74865	74898	74931	
+280	75189	75222	75255	75288	75321	
+281	75580	75609	75624	75640	75655	
+282	75915	75948	75981	76014	76047	
+283	76309	76342	76375	76408	76441	
+284	76703	76732	76747	76763	76778	
+285	77041	77074	77107	77140	77173	
+286	77436	77469	77502	77535	77568	
+287	77833	77862	77877	77893	77908	
+288	78174	78207	78240	78273	78306	
+289	78574	78607	78640	78673	78706	
+290	78975	79008	79041	79074	79107	
+291	79376	79409	79442	79475	79508	
+292	79778	79807	79822	79838	79853	
+293	80124	80153	80168	80184	80199	
+294	80471	80500	80515	80531	80546	
+295	80819	80848	80863	80879	80894	
+296	81169	81198	81213	81229	81244	
+297	81520	81553	81586	81619	81652	
+298	81929	81962	81995	82028	82061	
+299	82339	82368	82383	82399	82414	
+300	82693	82726	82759	82792	82825	
+301	83107	83140	83170	83201	83231	
+302	83514	83547	83580	83613	83646	
+303	83931	83964	83995	84028	84058	
+304	84344	84377	84410	84443	84476	
+305	84763	84796	84829	84862	84895	
+306	85183	85216	85249	85282	85315	
+307	85604	85637	85670	85703	85736	
+308	86026	86055	86070	86086	86101	
+309	86392	86425	86458	86491	86524	
+310	86817	86846	86861	86877	86892	
+311	10432	10461	10476	10492	10507	
+312	87187	87216	87231	87247	87262	
+313	87558	87591	87624	87657	87690	
+314	87987	88020	88051	88084	88117	
+315	88415	88444	88459	88475	88490	
+316	88789	88822	88855	88888	88921	
+317	89221	89254	89287	89320	89353	
+318	89654	89687	89720	89753	89786	
+319	90088	90117	90132	90148	90163	
+320	90466	90499	90532	90565	90598	
+321	90903	90932	90947	90963	90978	
+322	91284	91317	91350	91383	91413	
+323	91720	91753	91783	91816	91849	
+324	92157	92190	92223	92256	92289	
+325	92598	92631	92664	92697	92730	
+326	93040	93073	93106	93139	93172	
+327	93485	93518	93551	93584	93617	
+328	93931	93964	93997	94030	94063	
+329	94378	94407	94422	94438	94453	
+330	94769	94798	94813	94829	94844	
+331	95162	95195	95228	95261	95291	
+332	95610	95643	95676	95709	95742	
+333	96062	96095	96128	96161	96194	
+334	96515	96548	96581	96614	96647	
+335	96970	96999	97014	97030	97045	
+336	97369	97398	97413	97429	97444	
+337	97769	97802	97835	97868	97901	
+338	98228	98261	98294	98327	98360	
+339	98688	98721	98754	98787	98820	
+340	99150	99183	99216	99249	99282	
+341	99613	99646	99679	99712	99745	
+342	100077	100110	100143	100176	100206	
+343	100539	100568	100583	100599	100614	
+344	100949	100978	100993	101009	101024	
+345	101360	101393	101423	101456	101489	
+346	101825	101854	101869	101885	101900	
+347	102237	102270	102303	102336	102369	
+348	102708	102741	102774	102807	102840	
+349	103180	103213	103246	103279	103309	
+350	103652	103685	103718	103751	103784	
+351	104128	104161	104194	104227	104260	
+352	104605	104638	104668	104701	104734	
+353	105081	105114	105147	105180	105213	
+354	105561	105594	105627	105660	105693	
+355	106042	106075	106108	106141	106174	
+356	106524	106557	106587	106620	106653	
+357	107004	107037	107070	107103	107136	
+358	107488	107521	107554	107587	107617	
+359	107970	108003	108036	108069	108102	
+360	108456	108489	108522	108555	108585	
+361	108941	108974	109007	109040	109073	
+362	109430	109463	109496	109529	109562	
+363	109920	109953	109986	110019	110052	
+364	110411	110444	110474	110507	110538	
+365	110898	110931	110961	110994	111025	
+366	111387	111420	111450	111483	111513	
+367	111876	111909	111942	111975	112008	
+368	112372	112402	112417	112433	112448	
+369	112814	112847	112880	112913	112943	
+370	113310	113343	113373	113406	113436	
+371	113805	113838	113871	113904	113937	
+372	114307	114340	114373	114406	114439	
+373	114810	114843	114873	114906	114939	
+374	115311	115344	115377	115410	115443	
+375	115818	115851	115884	115917	115950	
+376	7670	7700	7715	7732	7747	
+377	116328	116357	116372	116388	116403	
+378	116782	116815	116848	116881	116914	
+379	117294	117327	117360	117393	117426	
+380	117807	117840	117873	117906	117937	
+381	118320	118353	118386	118419	118452	
+382	118835	118868	118901	118934	118967	
+383	119352	119385	119418	119451	119482	
+384	119868	119902	119935	119969	120002	
+385	120389	120422	120455	120488	120521	
+386	120910	120943	120976	121009	121042	
+387	121432	121465	121498	121531	121564	
+388	121955	121988	122021	122054	122087	
+389	122479	122512	122545	122578	122611	
+390	123005	123038	123071	123104	123137	
+391	123532	123565	123598	123629	123659	
+392	124055	124088	124121	124154	124187	
+393	124584	124617	124650	124683	124716	
+394	125114	125147	125180	125213	125246	
+395	125646	125679	125712	125745	125778	
+396	126179	126212	126245	126278	126311	
+397	126713	126746	126779	126812	126845	
+398	127248	127281	127314	127347	127380	
+399	127786	127820	127853	127887	127920	
+400	128327	128356	128371	128387	128402	
+401	128810	128839	128854	128870	128885	
+402	129295	129328	129361	129394	129427	
+403	129839	129872	129905	129938	129971	
+404	130384	130417	130450	130483	130516	
+405	130930	130963	130996	131029	131062	
+406	131477	131510	131543	131576	131609	
+407	132025	132054	132069	132086	132101	
+408	132519	132552	132585	132618	132651	
+409	133070	133104	133137	133170	133203	
+410	133623	133656	133689	133722	133755	
+411	134177	134210	134243	134276	134309	
+412	134732	134765	134798	134831	134864	
+413	135288	135321	135351	135384	135417	
+414	135842	135875	135908	135941	135971	
+415	136397	136430	136463	136496	136529	
+416	136957	136990	137023	137056	137089	
+417	137518	137551	137584	137617	137650	
+418	138081	138110	138125	138141	138156	
+419	138588	138621	138654	138687	138720	
+420	139153	139182	139197	139213	139228	
+421	139662	139695	139725	139758	139791	
+422	140228	140261	140294	140327	140360	
+423	140798	140831	140864	140897	140930	
+424	141370	141403	141436	141469	141502	
+425	141943	141976	142009	142042	142075	
+426	142517	142546	142561	142577	142592	
+427	143035	143068	143101	143134	143167	
+428	143612	143645	143678	143711	143744	
+429	144191	144224	144257	144290	144323	
+430	144771	144804	144837	144870	144903	
+431	145353	145386	145419	145452	145485	
+432	145936	145965	145980	145996	146011	
+433	146463	146496	146529	146562	146595	
+434	147049	147082	147115	147148	147181	
+435	10963	10997	11030	11064	11097	
+436	147639	147672	147705	147738	147771	
+437	148231	148264	148297	148330	148363	
+438	148824	148857	148887	148920	148953	
+439	149415	149444	149459	149475	149490	
+440	149953	149986	150019	150052	150082	
+441	150546	150580	150613	150646	150679	
+442	151144	151177	151210	151243	151276	
+443	151745	151778	151811	151844	151877	
+444	152347	152380	152413	152446	152479	
+445	152951	152984	153017	153050	153083	
+446	153556	153589	153622	153655	153688	
+447	154162	154191	154206	154222	154237	
+448	154712	154745	154778	154811	154844	
+449	155320	155353	155383	155416	155446	
+450	155923	155953	155968	155985	156000	
+451	156478	156511	156541	156574	156607	
+452	157087	157116	157131	157147	157162	
+453	157644	157677	157710	157743	157776	
+454	158259	158292	158325	158358	158391	
+455	158875	158908	158941	158974	159007	
+456	159492	159525	159558	159591	159624	
+457	160111	160145	160178	160211	160244	
+458	160732	160761	160776	160792	160807	
+459	161296	161329	161362	161395	161425	
+460	161916	161949	161982	162015	162048	
+461	162540	162573	162606	162639	162672	
+462	163166	163195	163210	163226	163241	
+463	163736	163770	163803	163836	163869	
+464	164367	164400	164433	164466	164499	
+465	164999	165032	165065	165098	165131	
+466	165631	165661	165676	165693	165708	
+467	166210	166243	166276	166309	166342	
+468	166846	166879	166912	166945	166978	
+469	167484	167518	167551	167584	167617	
+470	168124	168157	168190	168223	168256	
+471	168765	168798	168831	168864	168897	
+472	169407	169441	169474	169507	169540	
+473	170052	170085	170118	170151	170184	
+474	170697	170730	170763	170796	170829	
+475	171343	171376	171409	171442	171475	
+476	171990	172023	172056	172089	172122	
+477	172638	172671	172704	172738	172771	
+478	173288	173321	173354	173387	173420	
+479	173938	173971	174004	174037	174070	
+480	174590	174623	174656	174689	174722	
+481	175243	175276	175307	175340	175373	
+482	175895	175928	175961	175994	176027	
+483	176550	176584	176617	176651	176684	
+484	177209	177242	177275	177308	177341	
+485	177868	177897	177912	177928	177943	
+486	178473	178506	178539	178572	178605	
+487	179136	179169	179202	179235	179268	
+488	179799	179828	179843	179859	179874	
+489	180407	180441	180474	180508	180541	
+490	181075	181104	181119	181135	181150	
+491	181685	181719	181752	181785	181818	
+492	182355	182389	182422	182455	182488	
+493	183028	183061	183094	183127	183157	
+494	183698	183731	183764	183797	183830	
+495	184374	184407	184440	184473	184506	
+496	185051	185084	185117	185150	185183	
+497	185730	185763	185796	185829	185862	
+498	186410	186440	186455	186472	186487	
+499	187038	187071	187104	187137	187167	
+500	187719	187752	187785	187818	187851	
+501	5554	5588	5621	5654	5687	
+502	188407	188440	188473	188506	188539	
+503	189096	189129	189162	189195	189228	
+504	189786	189820	189853	189886	189919	
+505	190480	190513	190546	190579	190612	
+506	191174	191207	191240	191273	191306	
+507	191870	191903	191936	191969	192002	
+508	192567	192600	192633	192666	192699	
+509	193266	193299	193332	193365	193398	
+510	193966	193999	194032	194065	194098	
+511	194667	194700	194733	194766	194799	
+512	195370	195399	195414	195430	195445	
+513	196017	196050	196083	196116	196149	
+514	196722	196755	196788	196821	196854	
+515	197427	197460	197493	197526	197559	
+516	198134	198167	198197	198230	198263	
+517	198840	198873	198906	198939	198972	
+518	199551	199584	199617	199650	199683	
+519	200264	200297	200330	200363	200396	
+520	200978	201011	201044	201077	201110	
+521	201694	201727	201760	201793	201826	
+522	202410	202443	202476	202509	202542	
+523	203128	203162	203195	203229	203262	
+524	203849	203882	203915	203948	203981	
+525	204570	204603	204636	204669	204702	
+526	205294	205327	205360	205393	205426	
+527	206019	206053	206086	206119	206152	
+528	206747	206780	206813	206846	206879	
+529	207475	207508	207541	207574	207607	
+530	208204	208237	208270	208303	208333	
+531	208932	208965	208998	209031	209064	
+532	209664	209693	209708	209724	209739	
+533	210342	210376	210409	210443	210476	
+534	211081	211114	211147	211180	211213	
+535	211821	211855	211888	211922	211955	
+536	212564	212593	212608	212624	212639	
+537	213249	213282	213315	213348	213381	
+538	213993	214026	214059	214092	214125	
+539	214739	214772	214805	214838	214868	
+540	215482	215511	215526	215542	215557	
+541	216172	216205	216238	216272	216305	
+542	216922	216955	216988	217021	217054	
+543	217673	217706	217739	217772	217805	
+544	218425	218458	218491	218524	218557	
+545	219179	219212	219245	219278	219311	
+546	219935	219968	220001	220034	220067	
+547	220693	220726	220759	220792	220825	
+548	221452	221485	221518	221551	221584	
+549	222212	222245	222278	222311	222344	
+550	222973	223007	223040	223073	223106	
+551	223737	223770	223803	223836	223869	
+552	224502	224535	224568	224601	224634	
+553	225268	225301	225332	225365	225398	
+554	226034	226063	226078	226094	226109	
+555	226747	226781	226814	226848	226881	
+556	227521	227555	227588	227621	227654	
+557	228295	228328	228361	228394	228427	
+558	229071	229104	229137	229170	229203	
+559	11743	11776	11806	11839	11869	
+560	229851	229884	229914	229945	229976	
+561	230625	230658	230691	230724	230757	
+562	231407	231440	231473	231506	231539	
+563	232192	232221	232236	232252	232267	
+564	232922	232952	232967	232983	232998	
+565	233654	233687	233720	233754	233787	
+566	234446	234479	234512	234545	234578	
+567	235238	235271	235304	235337	235370	
+568	236032	236065	236098	236131	236164	
+569	236828	236861	236894	236927	236960	
+570	237625	237658	237691	237724	237757	
+571	238423	238457	238490	238524	238557	
+572	239225	239258	239291	239324	239357	
+573	240026	240059	240092	240125	240158	
+574	240828	240861	240891	240922	240938	
+575	241609	241642	241675	241708	241741	
+576	242413	242446	242479	242513	242546	
+577	243219	243252	243285	243318	243351	
+578	244025	244055	244070	244101	244117	
+579	244792	244825	244855	244888	244921	
+580	245598	245631	245664	245697	245730	
+581	246409	246443	246476	246510	246543	
+582	247223	247256	247289	247322	247355	
+583	248036	248069	248102	248135	248168	
+584	248853	248886	248919	248952	248985	
+585	249671	249704	249737	249770	249803	
+586	250490	250523	250556	250589	250622	
+587	251311	251344	251374	251407	251437	
+588	252127	252160	252193	252226	252259	
+589	252950	252983	253016	253049	253082	
+590	253775	253808	253841	253874	253907	
+591	254602	254635	254668	254701	254734	
+592	255435	255468	255501	255534	255565	
+593	256267	256300	256333	256366	256399	
+594	257105	257138	257171	257204	257237	
+595	257945	257978	258011	258045	258078	
+596	258787	258820	258853	258886	258916	
+597	259627	259656	259671	259687	259702	
+598	260414	260447	260480	260513	260546	
+599	261261	261294	261325	261358	261391	
+600	262108	262142	262175	262209	262242	
+601	262962	262996	263029	263063	263096	
+602	263817	263850	263883	263916	263949	
+603	264672	264705	264738	264771	264804	
+604	265528	265557	265572	265588	265603	
+605	266329	266358	266373	266389	266404	
+606	267131	267164	267197	267230	267263	
+607	267990	268023	268056	268089	268122	
+608	268850	268883	268916	268950	268983	
+609	269712	269745	269761	269778	269794	
+610	270524	270557	270590	270623	270656	
+611	271388	271421	271454	271487	271520	
+612	272253	272286	272319	272352	272385	
+613	273120	273153	273186	273219	273252	
+614	273988	274021	274054	274087	274120	
+615	274858	274891	274924	274957	274990	
+616	275730	275763	275796	275829	275860	
+617	276602	276635	276668	276701	276734	
+618	277477	277510	277543	277576	277609	
+619	278353	278386	278419	278452	278485	
+620	279233	279266	279299	279332	279365	
+621	280115	280149	280182	280215	280248	
+622	280999	281032	281065	281098	281131	
+623	281882	281916	281949	281982	282015	
+624	282769	282803	282836	282869	282902	
+625	283659	283692	283722	283753	283769	
+626	8507	8540	8573	8606	8639	
+627	284532	284565	284598	284631	284664	
+628	285429	285458	285473	285489	285504	
+629	286271	286300	286315	286331	286346	
+630	287115	287148	287181	287214	287247	
+631	288019	288052	288085	288118	288151	
+632	288925	288958	288991	289024	289057	
+633	289834	289863	289878	289894	289909	
+634	290688	290722	290756	290790	290823	
+635	291603	291633	291663	291696	291712	
+636	292494	292528	292561	292595	292628	
+637	293411	293444	293477	293510	293543	
+638	294327	294360	294393	294426	294459	
+639	295245	295274	295289	295305	295320	
+640	296108	296141	296174	296207	296238	
+641	297027	297060	297093	297126	297159	
+642	297949	297982	298015	298048	298081	
+643	298873	298906	298939	298972	299005	
+644	299798	299827	299842	299858	299873	
+645	300667	300697	300712	300729	300744	
+646	301539	301572	301605	301638	301668	
+647	302465	302498	302531	302564	302597	
+648	303396	303429	303462	303495	303528	
+649	304329	304362	304395	304428	304461	
+650	305263	305296	305329	305362	305395	
+651	306199	306228	306243	306259	306274	
+652	307079	307112	307145	307178	307208	
+653	308016	308049	308082	308115	308148	
+654	308958	308991	309024	309057	309090	
+655	309901	309934	309967	310000	310033	
+656	310845	310879	310912	310945	310978	
+657	311793	311826	311859	311892	311925	
+658	312741	312771	312786	312803	312818	
+659	313636	313670	313703	313737	313770	
+660	314593	314626	314659	314692	314725	
+661	315551	315580	315595	315611	315626	
+662	316454	316488	316521	316554	316587	
+663	317418	317451	317484	317517	317550	
+664	318383	318416	318432	318465	318481	
+665	319316	319350	319383	319417	319450	
+666	320286	320319	320352	320385	320418	
+667	321259	321292	321325	321358	321391	
+668	322233	322266	322299	322332	322365	
+669	323209	323242	323275	323308	323341	
+670	324185	324219	324252	324286	324319	
+671	325166	325199	325232	325265	325298	
+672	326147	326180	326213	326246	326279	
+673	327129	327162	327195	327228	327261	
+674	328112	328145	328178	328209	328240	
+675	329092	329126	329159	329192	329225	
+676	330079	330112	330145	330178	330211	
+677	331066	331099	331132	331165	331198	
+678	332054	332087	332120	332153	332186	
+679	333044	333073	333088	333104	333119	
+680	333978	334011	334044	334077	334110	
+681	334970	334999	335014	335030	335045	
+682	335907	335940	335973	336006	336039	
+683	12733	12767	12800	12834	12867	
+684	336905	336938	336971	337004	337037	
+685	337904	337937	337970	338003	338036	
+686	338906	338940	338973	339006	339039	
+687	339911	339944	339977	340010	340043	
+688	340917	340950	340983	341016	341049	
+689	341924	341953	341968	341984	341999	
+690	342876	342909	342942	342975	343008	
+691	343888	343917	343932	343948	343963	
+692	344846	344879	344912	344945	344978	
+693	345864	345897	345930	345963	345996	
+694	346885	346918	346951	346984	347017	
+695	347909	347939	347955	347972	347987	
+696	348881	348914	348947	348980	349013	
+697	349909	349942	349975	350008	350041	
+698	350939	350972	351005	351038	351071	
+699	351973	352006	352039	352072	352105	
+700	353008	353042	353075	353109	353142	
+701	354046	354079	354112	354145	354176	
+702	355083	355116	355149	355182	355215	
+703	356125	356158	356191	356224	356257	
+704	357168	357202	357235	357269	357302	
+705	358213	358246	358279	358312	358345	
+706	359258	359291	359324	359357	359390	
+707	360305	360338	360371	360404	360437	
+708	361353	361387	361420	361453	361486	
+709	362404	362438	362471	362505	362538	
+710	363457	363490	363523	363556	363589	
+711	364509	364543	364576	364610	364643	
+712	365564	365597	365630	365663	365696	
+713	366619	366653	366686	366719	366752	
+714	367676	367709	367742	367775	367808	
+715	368734	368767	368798	368831	368864	
+716	369792	369826	369859	369892	369925	
+717	370855	370888	370921	370954	370987	
+718	371921	371950	371965	371981	371996	
+719	372931	372964	372997	373030	373063	
+720	373999	374032	374065	374098	374131	
+721	375069	375102	375135	375168	375201	
+722	376141	376174	376207	376240	376273	
+723	377216	377249	377282	377315	377348	
+724	378295	378329	378362	378396	378429	
+725	379380	379413	379444	379477	379510	
+726	380463	380496	380529	380562	380595	
+727	381550	381583	381616	381649	381680	
+728	382637	382666	382681	382697	382712	
+729	383671	383704	383737	383770	383803	
+730	384764	384798	384831	384864	384897	
+731	385861	385894	385925	385958	385991	
+732	386957	386987	387002	387019	387034	
+733	388002	388031	388046	388062	388077	
+734	389047	389080	389113	389146	389179	
+735	390152	390181	390196	390212	390227	
+736	391202	391235	391268	391301	391334	
+737	392311	392340	392355	392371	392386	
+738	393365	393394	393409	393425	393440	
+739	394420	394453	394486	394519	394550	
+740	395531	395565	395598	395631	395664	
+741	396646	396679	396712	396745	396778	
+742	397762	397795	397828	397861	397894	
+743	398879	398912	398945	398978	399011	
+744	399997	400030	400046	400063	400079	
+745	401066	401097	401113	401146	401162	
+746	402151	402184	402217	402250	402283	
+747	403273	403306	403339	403372	403405	
+748	404399	404432	404465	404496	404529	
+749	405525	405558	405588	405621	405654	
+750	406653	406682	406697	406713	406728	
+751	6987	7017	7032	7049	7064	
+752	407730	407763	407796	407829	407862	
+753	408866	408899	408932	408965	408998	
+754	410006	410039	410072	410105	410138	
+755	411147	411180	411213	411246	411277	
+756	412290	412323	412356	412389	412422	
+757	413438	413471	413504	413537	413570	
+758	414590	414623	414656	414689	414722	
+759	415743	415776	415809	415842	415875	
+760	416897	416930	416963	416996	417029	
+761	418055	418085	418100	418116	418131	
+762	419159	419192	419225	419258	419291	
+763	420321	420350	420365	420381	420396	
+764	421427	421461	421494	421527	421561	
+765	422594	422627	422660	422693	422726	
+766	423760	423793	423826	423859	423892	
+767	424926	424960	424993	425026	425059	
+768	426093	426127	426160	426193	426226	
+769	427260	427293	427326	427359	427392	
+770	428426	428459	428492	428525	428558	
+771	429592	429626	429659	429693	429726	
+772	430760	430794	430827	430860	430893	
+773	431927	431960	431993	432026	432059	
+774	433093	433127	433160	433194	433227	
+775	434261	434294	434327	434360	434393	
+776	435427	435461	435494	435528	435561	
+777	436595	436629	436662	436695	436728	
+778	437762	437792	437807	437823	437838	
+779	438872	438905	438938	438971	439004	
+780	440038	440071	440104	440137	440170	
+781	441204	441237	441270	441303	441336	
+782	442370	442399	442414	442430	442445	
+783	443479	443512	443543	443576	443609	
+784	444643	444676	444709	444742	444775	
+785	445809	445843	445876	445909	445942	
+786	446976	447009	447042	447075	447108	
+787	448142	448176	448209	448243	448276	
+788	449310	449343	449376	449409	449442	
+789	450476	450509	450542	450575	450608	
+790	451642	451672	451687	451704	451719	
+791	452753	452786	452819	452852	452885	
+792	453919	453952	453985	454018	454049	
+793	455083	455116	455149	455182	455215	
+794	456249	456279	456294	456311	456326	
+795	457360	457393	457426	457459	457492	
+796	458526	458556	458571	458588	458603	
+797	459637	459671	459704	459737	459770	
+798	460804	460837	460870	460903	460934	
+799	461968	461998	462013	462029	462044	
+800	463078	463111	463144	463177	463210	
+801	464244	464277	464310	464343	464376	
+802	465410	465443	465476	465509	465542	
+803	466576	466609	466642	466675	466708	
+804	467742	467775	467808	467841	467874	
+805	468908	468941	468974	469007	469040	
+806	470074	470107	470140	470173	470206	
+807	13901	13934	13967	14000	14033	
+808	471240	471273	471306	471339	471370	
+809	472404	472438	472471	472504	472537	
+810	473571	473601	473616	473633	473648	
+811	474682	474715	474748	474781	474814	
+812	475848	475882	475915	475949	475982	
+813	477016	477049	477082	477115	477148	
+814	478182	478216	478249	478283	478316	
+815	479350	479380	479410	479443	479459	
+816	480493	480527	480560	480593	480626	
+817	481660	481693	481726	481759	481792	
+818	482826	482859	482892	482925	482958	
+819	483992	484026	484059	484093	484126	
+820	485160	485193	485226	485259	485292	
+821	486326	486359	486392	486425	486458	
+822	487492	487526	487559	487592	487625	
+823	488659	488692	488725	488758	488791	
+824	489825	489858	489888	489921	489951	
+825	490985	491018	491051	491084	491114	
+826	492148	492181	492214	492247	492280	
+827	493314	493347	493380	493413	493446	
+828	494480	494513	494546	494579	494612	
+829	495646	495679	495712	495745	495778	
+830	496812	496846	496879	496912	496945	
+831	497979	498012	498045	498078	498111	
+832	499145	499178	499211	499244	499277	
+833	500311	500344	500375	500408	500441	
+834	501475	501508	501541	501574	501607	
+835	502641	502675	502708	502741	502774	
+836	503808	503842	503875	503908	503941	
+837	504975	505008	505041	505074	505107	
+838	506141	506174	506207	506240	506273	
+839	507307	507340	507373	507406	507439	
+840	508473	508507	508540	508574	508607	
+841	509641	509674	509707	509741	509774	
+842	510808	510841	510874	510907	510940	
+843	511974	512008	512041	512075	512108	
+844	513142	513175	513208	513241	513274	
+845	514308	514341	514374	514407	514440	
+846	515474	515507	515540	515573	515606	
+847	516640	516673	516706	516739	516772	
+848	517806	517839	517872	517905	517938	
+849	518972	519002	519017	519033	519048	
+850	520082	520112	520127	520144	520159	
+851	521193	521227	521260	521294	521327	
+852	522361	522395	522428	522462	522495	
+853	523529	523562	523595	523628	523661	
+854	524695	524728	524761	524794	524827	
+855	525861	525895	525928	525961	525994	
+856	527028	527061	527094	527127	527160	
+857	528194	528228	528261	528295	528328	
+858	529362	529393	529408	529425	529440	
+859	530474	530507	530540	530573	530606	
+860	531640	531670	531685	531702	531717	
+861	532751	532784	532817	532850	532883	
+862	533917	533950	533983	534016	534049	
+863	535083	535116	535149	535182	535215	
+864	536249	536282	536315	536348	536381	
+865	537415	537449	537482	537515	537548	
+866	538582	538615	538648	538682	538715	
+867	539749	539780	539795	539812	539827	
+868	540861	540895	540928	540961	540994	
+869	542028	542061	542091	542124	542157	
+870	543191	543224	543257	543290	543321	
+871	544355	544388	544421	544454	544487	
+872	545521	545554	545587	545620	545653	
+873	546687	546720	546753	546786	546819	
+874	547853	547886	547919	547952	547985	
+875	549019	549052	549083	549116	549146	
+876	9673	9706	9739	9772	9805	
+877	550180	550213	550246	550279	550312	
+878	551346	551379	551412	551445	551478	
+879	552512	552545	552578	552611	552644	
+880	553678	553711	553744	553777	553810	
+881	554844	554877	554910	554943	554976	
+882	556010	556043	556076	556109	556142	
+883	557176	557209	557242	557275	557308	
+884	558342	558375	558408	558441	558474	
+885	559508	559541	559574	559607	559640	
+886	560674	560707	560740	560773	560806	
+887	561840	561873	561906	561939	561972	
+888	563006	563037	563068	563085	563115	
+889	564149	564182	564215	564248	564281	
+890	565315	565345	565360	565376	565391	
+891	566425	566459	566492	566525	566558	
+892	567592	567626	567659	567693	567726	
+893	568760	568794	568827	568860	568893	
+894	569927	569960	569993	570026	570059	
+895	571093	571126	571159	571192	571225	
+896	572259	572293	572326	572359	572392	
+897	573426	573457	573473	573490	573506	
+898	574540	574573	574606	574639	574672	
+899	575706	575740	575773	575807	575841	
+900	576875	576905	576920	576951	576966	
+901	578000	578033	578066	578099	578132	
+902	579166	579199	579232	579265	579298	
+903	580332	580365	580398	580431	580464	
+904	581498	581531	581561	581594	581625	
+905	582659	582693	582726	582760	582793	
+906	583827	583860	583893	583926	583959	
+907	584993	585023	585038	585054	585069	
+908	586103	586136	586169	586202	586235	
+909	587269	587303	587336	587369	587402	
+910	588436	588470	588503	588536	588569	
+911	589603	589633	589648	589665	589680	
+912	590714	590747	590780	590813	590846	
+913	591880	591913	591946	591979	592012	
+914	593046	593076	593091	593108	593123	
+915	594157	594187	594202	594219	594234	
+916	595268	595301	595334	595367	595400	
+917	596434	596467	596500	596533	596566	
+918	597600	597633	597664	597697	597727	
+919	598761	598794	598827	598860	598893	
+920	599927	599960	599993	600026	600059	
+921	601093	601126	601159	601192	601225	
+922	602259	602292	602325	602358	602391	
+923	603425	603458	603491	603524	603557	
+924	604591	604624	604657	604690	604723	
+925	605757	605790	605823	605856	605889	
+926	606923	606956	606989	607022	607055	
+927	608089	608123	608156	608190	608223	
+928	609257	609290	609321	609354	609387	
+929	610421	610454	610487	610520	610553	
+930	611587	611621	611654	611688	611721	
+931	15067	15097	15112	15129	15144	
+932	612755	612789	612822	612855	612888	
+933	613922	613956	613989	614022	614055	
+934	615089	615122	615155	615188	615221	
+935	616255	616288	616319	616350	616381	
+936	617415	617448	617481	617514	617547	
+937	618581	618614	618647	618680	618713	
+938	619747	619781	619814	619848	619881	
+939	620915	620948	620981	621014	621047	
+940	622081	622115	622148	622181	622214	
+941	623248	623281	623314	623347	623380	
+942	624414	624444	624459	624475	624490	
+943	625524	625557	625590	625623	625656	
+944	626690	626724	626757	626790	626823	
+945	627857	627887	627902	627919	627934	
+946	628968	629001	629034	629067	629098	
+947	630132	630165	630198	630231	630264	
+948	631298	631331	631364	631397	631430	
+949	632464	632497	632530	632563	632596	
+950	633630	633663	633696	633729	633762	
+951	634796	634829	634862	634896	634929	
+952	635963	635996	636029	636062	636095	
+953	637129	637159	637174	637191	637206	
+954	638240	638273	638306	638339	638372	
+955	639406	639440	639473	639506	639539	
+956	640573	640603	640618	640634	640649	
+957	641683	641717	641750	641784	641817	
+958	642851	642884	642917	642950	642983	
+959	644017	644050	644065	644082	644097	
+960	645131	645164	645197	645230	645263	
+961	646297	646331	646364	646397	646430	
+962	647464	647497	647530	647563	647596	
+963	648630	648663	648696	648729	648762	
+964	649796	649830	649863	649896	649929	
+965	650963	650996	651029	651062	651095	
+966	652129	652162	652195	652228	652261	
+967	653295	653329	653362	653395	653428	
+968	654462	654495	654528	654561	654594	
+969	655628	655662	655695	655728	655761	
+970	656795	656829	656862	656895	656928	
+971	657962	657992	658007	658024	658039	
+972	659073	659103	659118	659134	659149	
+973	660183	660213	660228	660245	660260	
+974	661294	661327	661360	661393	661426	
+975	662460	662493	662524	662557	662590	
+976	663624	663654	663669	663685	663700	
+977	664734	664767	664800	664833	664866	
+978	665900	665934	665967	666000	666033	
+979	667067	667101	667134	667167	667201	
+980	668235	668269	668302	668335	668368	
+981	669402	669435	669468	669501	669534	
+982	670568	670601	670634	670667	670700	
+983	671734	671768	671801	671835	671868	
+984	672902	672935	672966	672999	673030	
+985	674064	674097	674130	674163	674196	
+986	675230	675264	675297	675331	675364	
+987	676398	676431	676462	676495	676528	
+988	677562	677595	677628	677661	677694	
+989	678728	678761	678792	678825	678858	
+990	679892	679925	679958	679991	680024	
+991	681058	681091	681124	681157	681190	
+992	682224	682257	682290	682323	682356	
+993	683390	683424	683457	683491	683524	
+994	684558	684591	684624	684658	684691	
+995	685725	685759	685792	685825	685858	
+996	686892	686926	686959	686993	687026	
+997	688060	688094	688127	688161	688194	
+998	689228	689261	689294	689327	689358	
+999	690392	690425	690458	690491	690524	
+1000	691558	691588	691603	691620	691635	
+1001	692669	692702	692735	692768	692801	
+endofdata

@@ -1,0 +1,63 @@
+#####################################################################
+# BenchIT - Performance Measurement for Scientific Applications
+# Contact: benchit@zih.tu-dresden.de
+#
+# Last change by: $Author: william $
+# $Revision: 1.4 $
+# $Date: 2006/10/10 16:52:32 $
+#####################################################################
+
+########################################################################
+# FIRST PART: ASSEMBLE COMMAND
+########################################################################
+
+execute_cmd="${BENCHIT_KERNELBINARY} ${BENCHIT_KERNELBINARY_ARGS}"
+
+if [ -n "${BENCHIT_RUN_REDIRECT_CONSOLE}" ]; then
+	execute_cmd="${execute_cmd} >${BENCHIT_RUN_REDIRECT_CONSOLE} 2>&1"
+fi
+
+if [ "${BENCHIT_RUN_USE_MPI}" = "1" ]; then
+	execute_cmd="${BENCHIT_MPIRUN} -np ${BENCHIT_NUM_PROCESSES} ${execute_cmd}"
+fi
+
+########################################################################
+# SECOND PART: SAVE ENVIRONMENT IF NECESSARY
+########################################################################
+
+
+########################################################################
+# THIRD PART: EXECUTE AND CLEANUP
+########################################################################
+
+if [ "${BENCHIT_RUN_TEST}" != "1" ]; then
+	cd ${BENCHITROOT}
+	${execute_cmd}
+	if [ "${BENCHIT_RUN_CLEAN}" = "1" ]; then
+		rm -f ${BENCHIT_KERNELBINARY}
+	fi
+else
+	printf "${execute_cmd}\n"
+	if [ "${BENCHIT_RUN_CLEAN}" = "1" ]; then
+		printf "rm -f ${BENCHIT_KERNELBINARY}\n"
+	fi
+fi
+
+###############################################################################
+#  Log-History
+#
+#  $Log: MPICH,v $
+#  Revision 1.4  2006/10/10 16:52:32  william
+#  added a new Variable BENCHIT_MPIRUN
+#
+#  Revision 1.3  2006/01/03 14:45:12  mickler
+#  # New CVS header
+#
+#  Revision 1.2  2005/12/15 00:58:43  mickler
+#  # updated for new variable names
+#
+#  Revision 1.1  2005/11/24 03:26:10  mickler
+#  + Split run_benchit up into different environment files
+#
+#
+###############################################################################

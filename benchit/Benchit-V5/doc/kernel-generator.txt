@@ -1,0 +1,82 @@
+#####################################################################
+                 The BenchIT Kernel Generator
+#####################################################################
+
+Table of Content
+
+0. Introduction
+1. The FFT kernel generator
+2. FFT kernel verification
+
+#####################################################################
+
+0. Introduction
+
+The BenchIT Kernel Generator consists of several PHP scripts that
+can be used to generate BenchIT kernels automatically. It should be
+used in cases where many very similar kernels are needed in order to
+reduce the maintenance effort.
+
+Currently, the BenchIT Kernel Generator is solely available for FFT
+(Fast Fourier Transform) kernels. It is meant to be used by the
+BenchIT developers only and is not part of the public BenchIT
+distribution. Only the generated kernels are beeing made available
+for all users. The BenchIT Kernel Generator can be found in the
+'tools/kernel-generator/' directory.
+
+#####################################################################
+
+1. The FFT kernel generator
+
+The following files of the FFT kernel generator are located in the
+directory 'tools/kernel-generator/':
+
+- FFT/
+contains the templates for the four files that every FFT kernel
+consists of.
+
+- generate_FFT_kernel.php
+will generate one FFT kernel when properly called with a php parser.
+Please call 'php generate_FFT_kernel.php --help' to get further
+information concerning the parameters this script needs to be called
+with.
+
+- RUN_FFT_generator.sh
+is a shell script that calls 'generate_FFT_kernel.php' to
+automatically create many FFT kernels. Please edit this script and
+chose the FFT kernels you want to be created (by simply commenting
+out those you don't want). You also need to specify the name of your
+PHP binary. The script will create a file called
+'generated_FFT_kernels' that contains the names of all newly
+generated FFT kernels.
+You can call the RUN_FFT_generator.sh with the parameter '--verify'
+in order to verify the kernels automatically. See 'FFT kernel
+verification' for details.
+
+- verification/
+contains files that are needed for automatic kernel verification.
+See 'FFT kernel verification' for details.
+
+#####################################################################
+
+2. FFT kernel verification
+
+You can call the RUN_FFT_generator.sh with the parameter '--verify'.
+When doing so, the kernels will be created in special versions for
+automatic verification. After generation, you need to compile and run
+every newly generated kernel once. The script won't do this for you.
+Instead you need to use, for example, your BenchIT-GUI. The kernels
+will only execute one problem size an create a file in the
+'kernel-generator/verification/' directory that will be used to
+verify the FFT results. If you need to run the kernels remotely,
+please make sure to create the directory
+'kernel-generator/verification/' on the remote host first. You also
+need to manually copy the generated verification files to your local
+verification directory. If you have done so, you can start the
+verification process which will use a simple 'diff' to check wether
+or not the FFT results are correct.
+Kernels that have been generated in verification mode will not
+produce useful result graphs. Also, you should not understand the
+verification mode as a real and full kernel verification as it only
+checks one problemsize. However, it can be useful to make sure that
+your FFT library calls are correct.

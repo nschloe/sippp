@@ -1,0 +1,67 @@
+1. Introduction
+---------------
+
+The benchit shell script eases running multiple kernels from your shell.
+It is not intended to be a replacement for the Java GUI. Therefore it has no
+ability to execute kernels on a remote computer and the handling is by far not
+as convenient as the GUI.
+
+The remainder of this document will describe the functionality of the benchit
+shell script.
+
+
+2. The benchit shell script
+---------------------------
+
+The following sections describe the function of the particular menu entries.
+Which menu entries are available depends on your progress and your environment.
+If there e.g. is no GUI available, the "Start GUI" menu item will not show up,
+and the latter menu items depend on former ones, so not all will be shown at
+once.
+
+2.1 "Start GUI"
+---------------
+Start the BenchIT GUI. You need to have a window system and Java installed in
+order to use it.
+Documentation for the GUI is located under doc/
+
+2.2 "Select your set of kernels"
+--------------------------------
+A file with a list of available kernels will be created.
+Here you choose which kernels you want to work with in the next steps.
+If you want to add kernels later on, you have to insert them manually, or you
+can cleanup (last but one menu entry), then the list will be regenerated, but
+you will lose all your custom parameter settings.
+
+2.3 "Set parameters for your kernelset"
+---------------------------------------
+The parameters from your selected kernels will be copied to one file which you
+can edit afterwards and adjust the configuration for each kernel.
+
+2.4 "Compile your kernelset"
+----------------------------
+This starts the compilation of the selected kernels with the parameters you have
+set in the previous step.
+
+2.5 "Run your kernelset"
+------------------------
+After the kernels have been compiled, you can start them using this menu entry.
+Take a cup of tea or coffee if you have selected a large amount of kernels and
+have not set a timelimit.
+
+2.6 "View the most recent resultfile of each selected kernel"
+-------------------------------------------------------------
+This will open the output file from the last measurement of each kernel in the
+list you have selected at 2.2, provided that you have gnuplot and gv or gview
+installed as these will be used to generate and show the images.
+Beware that you might get numerous windows if you have selected many kernels.
+If there are no output files for your selection available at all, this menu
+entry will not be available.
+
+2.7 "Cleanup all generated files"
+---------------------------------
+This erases the selection of kernels and your custom parameters.
+
+2.8 "Exit"
+----------
+Quit the CLI.

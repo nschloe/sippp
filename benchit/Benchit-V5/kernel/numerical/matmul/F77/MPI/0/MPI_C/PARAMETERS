@@ -1,0 +1,44 @@
+######################################################################
+#
+# B e n c h I T - Performance Measurement for Scientific Applications
+#
+# �<>
+#
+# �Author: Thomas William (william@zhr.tu-dresden.de)
+#
+#  Last change by $Author: jmuelle $
+#
+# �$Revision: 1.2 $
+#
+# �$Date: 2007/07/06 14:54:08 $
+#
+######################################################################
+
+######################################################################
+# the following lines are for the benchit-shell B-CARE		
+#
+#!BENCHIT_VARIABLE BENCHIT_MATMUL_F77_DOUBLE_MPI_MPIC_START 1
+#!BENCHIT_VARIABLE BENCHIT_MATMUL_F77_DOUBLE_MPI_MPIC_INCREMENT 1
+#!BENCHIT_VARIABLE BENCHIT_MATMUL_F77_DOUBLE_MPI_MPIC_STEPS 600
+#!BENCHIT_VARIABLE BENCHIT_MATMUL_F77_DOUBLE_MPI_MPIC_NUM_PROC 32
+#!BENCHIT_VARIABLE BENCHIT_MATMUL_F77_DOUBLE_MPI_MPIC_PRECISION 1
+######################################################################
+
+ #############################################
+ # BEGINOF MATMUL_F77_DOUBLE_MPI_MPIC/PARAMETERS #
+ #############################################
+ BENCHIT_MATMUL_F77_DOUBLE_MPI_MPIC_START=10
+ BENCHIT_MATMUL_F77_DOUBLE_MPI_MPIC_INCREMENT=2
+ BENCHIT_MATMUL_F77_DOUBLE_MPI_MPIC_STEPS=600
+
+ # not to be used right now!!!
+ #BENCHIT_MATMUL_F77_DOUBLE_MPI_MPIC_PRECISION=1
+ 
+ #############################
+ # number of processors used #
+ #############################
+ BENCHIT_MATMUL_F77_DOUBLE_MPI_MPIC_NUM_PROC=1
+  
+ ###########################################
+ # ENDOF MATMUL_F77_DOUBLE_MPI_MPIC/PARAMETERS #
+ ###########################################

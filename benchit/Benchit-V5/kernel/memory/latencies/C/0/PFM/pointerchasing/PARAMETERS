@@ -1,0 +1,80 @@
+#! /bin/sh
+######################################################################
+#
+# B e n c h I T - Performance Measurement for Scientific Applications
+#
+# Memory latencies
+#
+# Author: Guido Juckeland (juckeland@zhr.tu-dresden.de)
+#
+# $Revision: 1.1 $
+#
+# $Date: 2005/09/16 06:00:08 $
+#
+######################################################################
+
+ #####################################
+ # MIN_ACCESS_LENGTH is the minimum  #
+ # of accessed memory (in KByte)      #
+ #####################################
+ MIN_ACCESS_LENGTH=1
+ export MIN_ACCESS_LENGTH
+
+ ####################################
+ # MAX_ACCESS_LENGTH is the maximum #
+ # of accessed memory (in KByte)     #
+ ####################################
+ MAX_ACCESS_LENGTH=25000
+ export MAX_ACCESS_LENGTH
+
+ ################################################
+ # ACCESS_INCREMENT is the increment in kB
+ # it must be used exclusively with ACCESS_STEPS
+ ################################################
+# ACCESS_INCREMENT=40
+# export ACCESS_INCREMENT
+ 
+ ################################################
+ # ACCESS_STEPS is the number of measurement points
+ # it must be used exclusively with ACCESS_INCREMENT
+ ################################################
+ACCESS_STEPS=70
+export ACCESS_STEPS
+
+ ################################################
+ # PFM_COUNTERS comma separates list of names of counters.
+  ################################################
+PFM_COUNTERS=L3_READS_DATA_READ_MISS,L3_MISSES
+export PFM_COUNTERS
+ 
+ ##################################################
+ # NUMBER_OF_JUMPS is the number of pointer jumps #
+ # that the kernel will perform per measurement   #
+ # point (must be a multiple of 100)              #
+ ##################################################
+ NUMBER_OF_JUMPS=40000000
+ export NUMBER_OF_JUMPS
+ 
+ # Parameters for run_benchit; uncomment and change the ones you need
+ # maximum memory for processes in kB
+ #RUN_MEMORY=1024
+ # number of processors
+ NUMCPUS=1
+ # allocate number of processors; only required if different from NUMCPUS
+ #RUN_ALLOCATE=1
+ # set core file size limit in kB
+ #RUN_CORESIZE=1024
+ # print all output to file
+ #RUN_OUTFILE=output.txt
+ # remove executable after run, if 1
+ #RUN_CLEAN=0
+ # use mpirun or mpprun or similar calls to start MPI program
+# RUN_USEMPI="1"
+ # run with OpenMP
+ #RUN_OMP="1"
+ # run Java code - not implemented yet
+ #RUN_JAVA="1"
+ # do not execute anything, just print out comments
+ #RUN_TEST="1"
+ # timelimit used for enqueueing the job; this is NOT BENCHIT_TOTAL_TIMELIMIT
+ #RUN_QUEUETIMELIMIT=

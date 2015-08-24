@@ -1,0 +1,87 @@
+#####################################################################
+# BenchIT - Performance Measurement for Scientific Applications
+# Contact: benchit@zih.tu-dresden.de
+# <made for our opteron-cluster phobos - should also work on others>
+# Last change by: $Author: william $
+# $Revision: 1.4 $
+# $Date: 2006/01/10 00:16:01 $
+#####################################################################
+
+#non-mpi:		bsub -n 1 [-x] [-q name] ./a.out
+#mpi:  				bsub -n N [-x]  [-q name] -a mvapich mpirun.lsf ./a.out
+
+execute_cmd="${BENCHIT_KERNELBINARY} ${BENCHIT_KERNELBINARY_ARGS}"
+
+########################################################################
+# SAVE ENVIRONMENT IF NECESSARY
+########################################################################
+
+env | grep BENCHIT | sed -e 's/^\([^=]*\)=\(.*\)$/export \1=\"\2\"/g'> ${BENCHITROOT}/${BENCHIT_KERNELNAME}_env
+
+########################################################################
+# EXECUTE AND CLEANUP
+########################################################################
+
+batch_cmd="bsub -n ${BENCHIT_NUM_CPUS}"
+
+if [ "${BENCHIT_RUN_USE_MPI}" = "1" ]; then
+	batch_cmd="bsub -n ${BENCHIT_NUM_CPUS} -a mvapich mpirun.lsf"
+fi
+
+#bind single-cpu-job to a cpu
+if [ "${BENCHIT_NUM_PROCESSES}" = "1" ]; then
+	batch_cmd="bsub -n ${BENCHIT_NUM_CPUS} -x"
+fi
+
+if [ -n "${BENCHIT_RUN_REDIRECT_CONSOLE}" ]; then
+	batch_cmd="${batch_cmd} -o ${BENCHIT_RUN_REDIRECT_CONSOLE}"
+fi
+
+script="${BENCHITROOT}/temp_script_file_${BENCHIT_KERNELNAME}"
+# Remove old script if one exists
+rm -f ${script}
+
+# Assemble script for submission to the batch system
+echo "#!/bin/sh" > ${script}
+echo "cd ${BENCHITROOT}" >> ${script}
+echo ". ./${BENCHIT_KERNELNAME}_env" >> ${script}
+echo "${execute_cmd}" >> ${script}
+
+if [ "${BENCHIT_RUN_CLEAN}" = "1" ]; then
+	echo "rm -f ${BENCHIT_KERNELBINARY}" >> ${script}
+	echo "rm ${script}" >> ${script}
+fi
+
+chmod +x ${script}
+
+# Submit job to the batch system
+batch_cmd="${batch_cmd} ${script}"
+if [ "$BENCHIT_RUN_TEST" != "1" ]; then
+	${batch_cmd}
+else
+	echo ${batch_cmd}
+	echo "---------------------------------------------------------"
+	echo "cat LSF temporary script:"
+	cat ${script}
+	echo "---------------------------------------------------------"
+fi
+
+
+###############################################################################
+#  Log-History
+#
+#  $Log: CLUSTERLSF,v $
+#  Revision 1.4  2006/01/10 00:16:01  william
+#  inserted a missing variable
+#
+#  Revision 1.3  2006/01/09 15:26:35  william
+#  changed style of bsub-invocation
+#
+#  Revision 1.2  2006/01/09 15:03:41  william
+#  corrected some bugs due to different option-flags in this Batchsystem
+#
+#  Revision 1.1  2006/01/09 14:32:28  william
+#  Env-Version made for a Opteron cluster
+#
+#
+###############################################################################

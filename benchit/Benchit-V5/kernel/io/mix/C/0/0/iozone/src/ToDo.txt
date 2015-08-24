@@ -1,0 +1,4 @@
+place the sourcefiles of ioprof in this folder or remove the folder and 
+set a symlink pointing to this location
+rm -r src
+ln -s /path/to/iozone /path/to/src

@@ -1,0 +1,88 @@
+#!/bin/sh
+#
+#ident "@(#)uname_minus_a 1.4 - 12/12/97" /* S.Seidl */
+#
+###############################################################################
+#
+# Copyright (C) 1997-2001 Stephan Seidl
+# This file is part of the FMC Project of the author.
+#
+# A canonical `uname -a'.
+#
+###############################################################################
+#
+unset LANG
+#
+uname -a                                                  \
+  | awk '{ while (0 == 0) {                               \
+             if (NF < 5)                                  \
+               break;                                     \
+             if ($1 == "AIX") {                           \
+               out = $1 " " $2 " " $4 "." $3;             \
+               for (i = 5; i <= NF; i++)                  \
+                 out = out " " $(i);                      \
+               print out;                                 \
+               next;                                      \
+               }                                          \
+             if ($5 == "CRAY") {                          \
+               out = "UNICOS";                            \
+               if ($4 == "unicosmk")                      \
+                   out = out "MK";                        \
+                 else if (NF >= 6) {                      \
+                   if ($6 == "T3E")                       \
+                     out = out "MK";                      \
+                   }                                      \
+               for (i = 2; i <= NF; i++)                  \
+                 out = out " " $(i);                      \
+               print out;                                 \
+               next;                                      \
+               }                                          \
+             if ($1 == "HI-UX/MPP") {                     \
+               out = "HIUXMPP";                           \
+               s2 = $2 ".";                               \
+               i = index (s2, ".");                       \
+               s2 = substr (s2, 1, i - 1);                \
+               out = out " " s2;                          \
+               for (i = 3; i <= NF; i++)                  \
+                 out = out " " $(i);                      \
+               print out;                                 \
+               next;                                      \
+               }                                          \
+             if ($1 == "OSF1") {                          \
+               out = $1;                                  \
+               s2 = $2 ".";                               \
+               i = index (s2, ".");                       \
+               s2 = substr (s2, 1, i - 1);                \
+               out = out " " s2;                          \
+               for (i = 3; i <= NF; i++)                  \
+                 out = out " " $(i);                      \
+               print out;                                 \
+               next;                                      \
+               }                                          \
+             if ($1 == "SunOS") {                         \
+               out = $1;                                  \
+               if (length ($3) > 2) {                     \
+                 if (substr ($3, 1, 2) == "4.")           \
+                   out = out "4";                         \
+                 }                                        \
+               for (i = 2; i <= NF; i++)                  \
+                 out = out " " $(i);                      \
+               print out;                                 \
+               next;                                      \
+               }                                          \
+             if ($(NF-1) == "F300" && $(NF) == "UXP/V") { \
+               out = "UXP " $2 " " $3 "_" $4;             \
+               for (i = 5; i <= NF; i++)                  \
+                 out = out " " $(i);                      \
+               print out;                                 \
+               next;                                      \
+               }                                          \
+             break;                                       \
+             }                                            \
+           print $0;                                      \
+           }'
+#
+exit 0
+#
+###############################################################################
+

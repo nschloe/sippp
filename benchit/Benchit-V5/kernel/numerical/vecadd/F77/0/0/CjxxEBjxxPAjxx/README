@@ -1,0 +1,48 @@
+#####################################################################
+#  BenchIT - Performance Measurement for Scientific Applications
+#
+#  <Description>
+#
+#  Author: Thomas William (benchit@zih.tu-dresden.de)
+#  Last change by: $Author: william $
+#  $Revision: 1.2 $
+#  $Date: 2005/12/07 18:36:11 $
+#####################################################################
+
+SYNOPSIS
+ vecadd jxx: c(jxx)=b(jxx)+a(jxx)
+
+DESCRIPTION
+ -------------------------------------------------------------------
+ Content
+ 1) What the kernel does
+ 2) Environment variables 
+ 3) Hints
+ -------------------------------------------------------------------
+
+ 1) What the kernel does
+ 
+ Adds two double vectors in the following way:
+ c(jxx)=b(jxx)+a(jxx)
+ The output is the FLOPS rate.
+ 
+ 2) Environment variables 
+ 
+ The following variables can be used to configure the kernel.
+ They can be found in "vecadd3.h". 
+
+ VECADD_START
+    Size if the smallest vector in the measurement.
+ VECADD_INCREMENT
+    Change of size in every STEP.
+ VECADD_STEPS
+    Number of STEPS that are made = number of measurements.
+    => biggest vector has size of:
+       VECADD_START+VECADD_INCREMENTVECADD_STEPS
+ VECADD_PRECISION
+    Number of repetitions for every single measurement in
+    the kernel.
+    This multiplies with the ACCURACY-variable in the
+    configure script of the benchit main program.
+
+ 3) Hints

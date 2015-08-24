@@ -1,0 +1,9 @@
+The kernel expects a folder named iozone in this directory, 
+containing the sources of iozone.
+
+http://www.iozone.org
+
+Place the sourcefiles of iozone in a subfolder named iozone or  
+set a symlink pointing to this location
+
+ln -s /path/to/iozone/src/current/ /path/to/src/iozone
