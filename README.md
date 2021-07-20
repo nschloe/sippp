@@ -4,11 +4,11 @@ LIBPARABOL is a software library that allows for quick solving of equation
 systems that arise when discretizing parabolic differential equations of the
 kind
 ```math
-u_t - L_{\epsilon} u &= f\\
-u(0)        &= u_0\\
-u_{\Gamma}  &= \gamma
+u_t - L_{\epsilon} u = f\\
+u(0)        = u_0\\
+u_{\Gamma}  = \gamma
 ```
-with $`L_{\epsilon} = \sqrt(\epsilon) \Delta u - c(x) u`$ in one space dimension.
+with $`L_{\epsilon} = \sqrt{\epsilon} \Delta u - c(x) u`$ in one space dimension.
 The library contains routines which handle the generation
 of meshes (in particular layer adapted meshes) when treating singularly perturbed
 problems as well as a wide range of A-stable Runge-Kutta methods. The
