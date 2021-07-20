@@ -11,11 +11,11 @@
 
 # ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###
 
-  F90C       := ifort
-  F90OPTS    := -free -g -O2 -check all -warn all
-#  F90OPTS    := -free -O4
-  LINKER     := ifort
-  LINKOPTS   := -O2 -check all -warn all
+  F90C       := gfortran
+  F90OPTS    := -g -O2
+#  F90OPTS    := -O4
+  LINKER     := gfortran
+  LINKOPTS   := -O2
 
   ARCH      := ar
   ARCHFLAGS := cr

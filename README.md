@@ -22,7 +22,7 @@ in various formats or generate LaTeX style "convergence tables".
 In each of the subdirectories you will find Makefiles that will help you with
 the compilation of the library. All you need to do is specify your favourite
 Fortran95 compiler in "make.inc" which is to be found at the top level directory
-Then type make, lean back, and watch the engine at work..
+Then type make, lean back, and watch the engine at work.
 
 
 ## Usage

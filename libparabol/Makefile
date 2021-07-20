@@ -6,19 +6,19 @@ TARGET:=libparabol.a
 
 # ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###
 
-SOURCES = kindmod.f         \
-          errormod.f        \
-          intermod.f      \
-          meshes.f          \
-          rk_parameters.f   \
-          preconditioners.f \
-          solvers.f         \
-          runge-kutta.f     \
-          put.f
+SOURCES = kindmod.f90         \
+          errormod.f90        \
+          intermod.f90      \
+          meshes.f90          \
+          rk_parameters.f90   \
+          preconditioners.f90 \
+          solvers.f90         \
+          runge-kutta.f90     \
+          put.f90
 
 # ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###
 
-OBJECTS := $(SOURCES:.f=.o)
+OBJECTS := $(SOURCES:.f90=.o)
 
 # ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###
 # 
@@ -32,7 +32,7 @@ parabolic: $(OBJECTS)
 	@$(ARCH) $(ARCHFLAGS) $(TARGET) $(OBJECTS)
 	@$(ECHOCMD) " done.\n"
 
-%.o: %.f
+%.o: %.f90
 	$(F90C) $(F90OPTS) -c $<
 
 .PHONY: clean
