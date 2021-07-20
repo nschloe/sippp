@@ -1,14 +1,9 @@
-! ============================================================================
-! *** MODULE MESHES <<<
-! ***
-! *** Provides one-dimensional meshes on [0,1] for use in solving pdes.
-! ***
-! *** The parameters EPS and RHO all refer to the differential equation
-! ***
-! *** -eps u_xx + c u = f
-! *** (+) bc (+) ic
-! ***
-! ============================================================================
+! Provides one-dimensional meshes on [0,1] for use in solving pdes.
+! 
+! The parameters EPS and RHO all refer to the differential equation
+! 
+! -eps u_xx + c u = f
+! (+) bc (+) ic
 module MESHES
 
    USE KINDMOD
@@ -19,60 +14,33 @@ module MESHES
 
    private
 
-! ----------------------------------------------------------------------------
-! *** PUBLIC MODULE ENTITIES <<<
-! ----------------------------------------------------------------------------
    public mesh, set_mesh, mesh_up_to_date, get_meshpoint, current_mesh
-! ----------------------------------------------------------------------------
-! *** END of PUBLIC MODULE ENTITIES >>>
-! ----------------------------------------------------------------------------
 
-! ----------------------------------------------------------------------------
-! *** TYPE mesh <<<
-! ----------------------------------------------------------------------------
    type mesh
       character(LEN=2) :: type  !UN (uniform), SH (Shishkin),...
       integer(INP)     :: N     !number of strictly inner points
    end type mesh
-! ----------------------------------------------------------------------------
-! *** END of TYPE mesh >>>
-! ----------------------------------------------------------------------------
 
-! ----------------------------------------------------------------------------
-! *** INTERFACES <<<
-! ----------------------------------------------------------------------------
    INTERFACE get_meshpoint
       MODULE PROCEDURE get_meshpoint_single
       MODULE PROCEDURE get_meshpoint_all
    END INTERFACE get_meshpoint
-! ----------------------------------------------------------------------------
-! *** END of INTERFACES >>>
-! ----------------------------------------------------------------------------
 
-! ----------------------------------------------------------------------------
-! *** MODULE VARIABLES <<<
-! ----------------------------------------------------------------------------
    type(mesh)            :: current_mesh = mesh('--', 0_INP)
    logical               :: init_x = .FALSE.
    real(RNP), allocatable :: x_save(:)
    real(RNP)             :: eps_save = 0.0_RNP, &
                             sigma = 2.0_RNP !expected convergence rate
-! ----------------------------------------------------------------------------
-! *** END of MODULE VARIABLES >>>
-! ----------------------------------------------------------------------------
 
 contains
 
-! ----------------------------------------------------------------------------
-! *** SUBROUTINE set_mesh <<<
-! ----------------------------------------------------------------------------
    subroutine set_mesh(type, N)
 
       ! Arguments
       character(LEN=2) :: type ! UN=uniform, SH=Shishkin,...
       integer(INP)     :: N    ! number of interior mesh points
 
-! write(*,*) ' >>> set_mesh'
+      ! write(*,*) ' >>> set_mesh'
 
       if (.NOT. mesh_up_to_date(mesh(type, N)) .OR. get_eps() .NE. eps_save) then
          if (ALLOCATED(x_save)) deallocate (x_save)
@@ -96,13 +64,7 @@ contains
 
       return
    end subroutine set_mesh
-! ----------------------------------------------------------------------------
-! *** END of SUBROUTINE set_mesh >>>
-! ----------------------------------------------------------------------------
 
-! ----------------------------------------------------------------------------
-! *** FUNCTION mesh_eqv <<<
-! ----------------------------------------------------------------------------
    logical function mesh_up_to_date(msh)
 
       ! Arguments
@@ -112,13 +74,7 @@ contains
 
       return
    end function mesh_up_to_date
-! ----------------------------------------------------------------------------
-! *** END of FUNCTION mesh_eqv >>>
-! ----------------------------------------------------------------------------
 
-! ----------------------------------------------------------------------------
-! *** FUNCTION get_meshpoint_single <<<
-! ----------------------------------------------------------------------------
    function get_meshpoint_single(idx) result(x_idx)
 
       ! Arguments
@@ -134,13 +90,7 @@ contains
 
       return
    end function get_meshpoint_single
-! ----------------------------------------------------------------------------
-! *** END of FUNCTION get_meshpoint_single >>>
-! ----------------------------------------------------------------------------
 
-! ----------------------------------------------------------------------------
-! *** FUNCTION get_meshpoint_all <<<
-! ----------------------------------------------------------------------------
    function get_meshpoint_all() result(x)
 
       ! Result
@@ -153,41 +103,18 @@ contains
 
       return
    end function get_meshpoint_all
-! ----------------------------------------------------------------------------
-! *** END of FUNCTION get_meshpoint_all >>>
-! ----------------------------------------------------------------------------
 
-! ----------------------------------------------------------------------------
-! *** SUBROUTINE Setup_Mesh_uniform <<<
-! ***
-! *** Get uniform x on [0,1].
-! ----------------------------------------------------------------------------
+   ! Get uniform x on [0,1].
    subroutine Setup_Mesh_uniform(N)
-
-      !arguments
       integer(INP), intent(in) :: N
-
-      !locals
       integer(INP) :: i
-
       do i = 0, N + 1
          x_save(i) = real(i, RNP)/real(N + 1, RNP)
       end do
-
    end subroutine Setup_Mesh_uniform
-! ----------------------------------------------------------------------------
-! *** END of SUBROUTINE Setup_Mesh_uniform >>>
-! ----------------------------------------------------------------------------
 
-! ----------------------------------------------------------------------------
-! *** SUBROUTINE Setup_Mesh_Shishkin <<<
-! ***
-! ----------------------------------------------------------------------------
    subroutine Setup_Mesh_Shishkin(Nx)
-
-      !arguments
       integer(INP), intent(in) :: Nx !no. of strictly interior points
-
       !locals
       integer(INP) :: N, N1, N2, i, k
       real(RNP)    :: lambda, &
@@ -242,27 +169,19 @@ contains
       end do
 
    end subroutine Setup_Mesh_Shishkin
-! ----------------------------------------------------------------------------
-! *** END of SUBROUTINE Setup_Mesh_Shishkin >>>
-! ----------------------------------------------------------------------------
 
-! ----------------------------------------------------------------------------
-! *** SUBROUTINE Setup_Mesh_Bakhvalov <<<
-! ***
-! *** Returns a graded Bakhvalov mesh as described in
-! ***
-! *** N. S. Balakhov
-! *** Towards optimization of methods for solving boundary value problems
-! *** in the presence of boundary layers.
-! *** Zh. Vychisl. Math. i Mat. Fiz., 9:841-859,1969, In Russian.
-! ***
-! *** For further reference see
-! ***
-! *** Lin{\"s}, Torsten and Madden, Niall
-! *** Parameter uniform approximations for time-dependent
-! *** reaction-diffusion problems
-! ***
-! ----------------------------------------------------------------------------
+   ! Returns a graded Bakhvalov mesh as described in
+   ! 
+   ! N. S. Balakhov
+   ! Towards optimization of methods for solving boundary value problems
+   ! in the presence of boundary layers.
+   ! Zh. Vychisl. Math. i Mat. Fiz., 9:841-859,1969, In Russian.
+   ! 
+   ! For further reference see
+   ! 
+   ! Lin{\"s}, Torsten and Madden, Niall
+   ! Parameter uniform approximations for time-dependent
+   ! reaction-diffusion problems
    subroutine Setup_Mesh_Bakhvalov(Nx)
 
       !arguments
@@ -287,19 +206,15 @@ contains
       lambda = sqrteps*sigma/sqrtrho*log(kappa/sqrteps)
 
       if (lambda .le. 0.0_RNP) then
-         !=======================================================================
          do i = 0, Nx + 1
             x_save(i) = real(i, RNP)/real(Nx + 1, RNP)
          end do
-         !=======================================================================
       elseif (lambda .ge. 0.5_RNP) then
-         !=======================================================================
          C = 2.0_RNP*sigma*kappa/sqrtrho*(1.0_RNP - exp(-sqrtrho/2.0_RNP/sqrteps/sigma))
 
          !int_{x_{i-1}}^{x_i} M{BA} = Cfrac
          Cfrac = C/(Nx + 1)
 
-         !-----------------------------------------------------
          ! (half of the) area, including the middle point
          N2 = ceiling(real(Nx)/2)
          x_save(0) = 0.0_RNP
@@ -308,23 +223,17 @@ contains
                         *log(exp(-sqrtrho*x_save(i - 1)/sqrteps/sigma) &
                              - Cfrac*sqrtrho/kappa/sigma)
          end do
-         !-----------------------------------------------------
 
-         !-----------------------------------------------------
          ! do the rest by symmetry
          do i = N2 + 1, Nx + 1
             x_save(i) = 1.0_RNP - x_save(Nx + 1 - i)
          end do
-         !-----------------------------------------------------
-         !=======================================================================
       else
-         !=======================================================================
          C = 1.0_RNP + 2.0_RNP*((kappa - sqrteps)*sigma/sqrtrho - lambda)
 
          !int_{x_{i-1}}^{x_i} M{BA} = Cfrac
          Cfrac = C/(Nx + 1)
 
-         !-----------------------------------------------------
          !boundary layer
          x_save(0) = 0.0_RNP
          !that many nodes fit into the boundary layer:
@@ -334,40 +243,25 @@ contains
                         *log(exp(-sqrtrho*x_save(i - 1)/sqrteps/sigma) &
                              - Cfrac*sqrtrho/kappa/sigma)
          end do
-         !-----------------------------------------------------
 
-         !-----------------------------------------------------
          ! transition between layers
          ! int_{x_{i}}^{lambda} M_{BA} =
          rest = kappa*sigma/sqrtrho &
                 *(exp(-sqrtrho*x_save(N1)/sqrteps/sigma) - sqrteps/kappa)
          x_save(N1 + 1) = lambda + (Cfrac - rest)
-         !-----------------------------------------------------
 
-         !-----------------------------------------------------
          ! (half of the) inner layer, including the middle point
          N2 = ceiling(real(Nx)/2, INP)
          do i = N1 + 2, N2
             x_save(i) = x_save(i - 1) + Cfrac
          end do
-         !-----------------------------------------------------
 
-         !-----------------------------------------------------
          ! do the rest by symmetry
          do i = N2 + 1, Nx + 1
             x_save(i) = 1.0_RNP - x_save(Nx + 1 - i)
          end do
-         !-----------------------------------------------------
-
-         !=======================================================================
       end if
 
    end subroutine Setup_Mesh_Bakhvalov
-! ----------------------------------------------------------------------------
-! *** END of SUBROUTINE Setup_Mesh_Bakhvalov >>>
-! ----------------------------------------------------------------------------
 
 end module MESHES
-! ============================================================================
-! *** END of MODULE MESHES >>>
-! ============================================================================

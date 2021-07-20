@@ -115,9 +115,9 @@ module INTERMOD
 
    ! Returns the vector that adjusts the right hand side of the equation
    ! system
-   ! 
+   !
    !    alpha*L_eps u  = f
-   ! 
+   !
    ! in the case of non-homogeneous boundary conditions.
    interface rhs_adjustment
       subroutine operators_mp_rhs_adjustment(N, t, alpha, F)
