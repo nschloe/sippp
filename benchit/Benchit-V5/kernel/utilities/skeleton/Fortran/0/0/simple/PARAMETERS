@@ -1,48 +1,0 @@
-#!/bin/sh
-#####################################################################
-# BenchIT - Performance Measurement for Scientific Applications
-# Contact: benchit@zih.tu-dresden.de
-#
-# Last change by: $Author: william $
-# $Revision: 1.1 $
-# $Date: 2007/06/05 18:07:11 $
-#####################################################################
- 
- # Iterate over matrix size from BENCHIT_KERNEL_PROBLEMSIZE_MIN
- # to BENCHIT_KERNEL_PROBLEMSIZE_MAX, incrementing by
- # BENCHIT_KERNEL_PROBLEMSIZE_INCREMENT with each step.
-
- BENCHIT_KERNEL_PROBLEMSIZE_MIN=1
- BENCHIT_KERNEL_PROBLEMSIZE_MAX=40
- BENCHIT_KERNEL_PROBLEMSIZE_INCREMENT=1
-
- # Describe your own kernel modifications
- #BENCHIT_KERNEL_COMMENT=""
-
-# Parameters for run_benchit; uncomment and change the ones you need
-# maximum memory for processes in MB
-#BENCHIT_RUN_MAX_MEMORY=1024
-# number of processors
-#BENCHIT_NUM_CPUS=1
-# redirect stdout and stderr to file
-#BENCHIT_RUN_REDIRECT_CONSOLE=output.txt
-# remove executable after run, if 1
-#BENCHIT_RUN_CLEAN=1
-# do not execute anything, just print out comments
-#BENCHIT_RUN_TEST=1
-# timelimit used for enqueueing the job; this is NOT BENCHIT_TOTAL_TIMELIMIT
-#BENCHIT_RUN_QUEUETIMELIMIT=
-
-
-#####################################################################
-# Log-History
-#
-# $Log: PARAMETERS,v $
-# Revision 1.1  2007/06/05 18:07:11  william
-# This Skeleton shows how to compile Fortran Codeagainst the BenchIT-Interface written in CFor more information regarding Fortran have a lookat our wiki:http://www.benchit.org/wiki/index.php/Fortran
-#
-# Revision 1.5  2006/01/09 15:57:01  william
-# cvs-keyword-problems
-#
-#
-#####################################################################
