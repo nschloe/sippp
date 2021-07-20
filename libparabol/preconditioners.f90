@@ -7,32 +7,30 @@
 ! ============================================================================
 module PRECONDITIONERS
 
-use KINDMOD
-use ERRORMOD
-use RK_PARAMETERS
-use intermod
+   use KINDMOD
+   use ERRORMOD
+   use RK_PARAMETERS
+   use intermod
 
-implicit none
+   implicit none
 
-private
+   private
 
 ! ----------------------------------------------------------------------------
 ! *** MODULE VARIABLES <<<
 ! ----------------------------------------------------------------------------
-  character(LEN=2) :: cond='--' !preconditioner to use
+   character(LEN=2) :: cond = '--' !preconditioner to use
 ! ----------------------------------------------------------------------------
 ! *** END of MODULE VARIABLES >>>
 ! ----------------------------------------------------------------------------
 
-
 ! ----------------------------------------------------------------------------
 ! *** PUBLIC MODULE ENTITIES <<<
 ! ----------------------------------------------------------------------------
-public :: set_preconditioner, get_preconditioner, preconditioner
+   public :: set_preconditioner, get_preconditioner, preconditioner
 ! ----------------------------------------------------------------------------
 ! *** End of PUBLIC MODULE ENTITIES <<<
 ! ----------------------------------------------------------------------------
-
 
 contains
 
@@ -41,36 +39,34 @@ contains
 ! ***
 ! *** Determines the preconditioner to use.
 ! ----------------------------------------------------------------------------
-subroutine set_preconditioner(pc)
+   subroutine set_preconditioner(pc)
 
-  !arguments
-  character(LEN=2) :: pc
+      !arguments
+      character(LEN=2) :: pc
 
-  cond = pc
+      cond = pc
 
-end subroutine set_preconditioner
+   end subroutine set_preconditioner
 ! ----------------------------------------------------------------------------
 ! *** END of SUBROUTINE set_preconditioner >>>
 ! ----------------------------------------------------------------------------
-
 
 ! ----------------------------------------------------------------------------
 ! *** FUNCTION get_preconditioner <<<
 ! ***
 ! *** Determines the preconditioner to use.
 ! ----------------------------------------------------------------------------
-FUNCTION get_preconditioner()
+   FUNCTION get_preconditioner()
 
-  !result
-  character(LEN=2) :: get_preconditioner
+      !result
+      character(LEN=2) :: get_preconditioner
 
-  get_preconditioner = cond
+      get_preconditioner = cond
 
-end FUNCTION get_preconditioner
+   end FUNCTION get_preconditioner
 ! ----------------------------------------------------------------------------
 ! *** END of FUNCTION get_preconditioner >>>
 ! ----------------------------------------------------------------------------
-
 
 ! ----------------------------------------------------------------------------
 ! *** SUBROUTINE preconditioner <<<
@@ -81,44 +77,42 @@ end FUNCTION get_preconditioner
 ! *** the solution to the preconditioning system.
 ! ***
 ! ----------------------------------------------------------------------------
-subroutine preconditioner(N,s,x)
+   subroutine preconditioner(N, s, x)
 
-  !arguments
-  integer(INP)               ,intent(in)    :: N,s
-  real(RNP)   ,dimension(N,s),intent(inout) :: x
+      !arguments
+      integer(INP), intent(in)    :: N, s
+      real(RNP), dimension(N, s), intent(inout) :: x
 
-  select case (cond)
-      case ('ID');  call IDENTITY(N,s,x)
-      case ('BJ');  call FIRK_BlockJacobi(N,s,x)
-      case ('LS');  call FIRK_LowerBlockSOR(N,s,x)
-      case ('US');  call FIRK_UpperBlockSOR(N,s,x)
-      case ('SS');  call FIRK_BlockSSOR(N,s,x)
-      case default; call STOP_ON_ERROR( 'preconditioner (in PRECONDITIONERS)', &
-                                        'preconditioner not supported.'   )
-  end select
+      select case (cond)
+      case ('ID'); call IDENTITY(N, s, x)
+      case ('BJ'); call FIRK_BlockJacobi(N, s, x)
+      case ('LS'); call FIRK_LowerBlockSOR(N, s, x)
+      case ('US'); call FIRK_UpperBlockSOR(N, s, x)
+      case ('SS'); call FIRK_BlockSSOR(N, s, x)
+      case default; call STOP_ON_ERROR('preconditioner (in PRECONDITIONERS)', &
+ 'preconditioner not supported.')
+      end select
 
-end subroutine preconditioner
+   end subroutine preconditioner
 ! ----------------------------------------------------------------------------
 ! *** END of SUBROUTINE preconditioner >>>
 ! ----------------------------------------------------------------------------
-
 
 ! ----------------------------------------------------------------------------
 ! *** SUBROUTINE IDENTITY <<<
 ! ***
 ! *** The identity precondioner. Does nothing.
 ! ----------------------------------------------------------------------------
-subroutine IDENTITY(N,s,x)
+   subroutine IDENTITY(N, s, x)
 
-  !arguments
-  integer(INP)               ,intent(in)    :: N,s
-  real(RNP)   ,dimension(N,s),intent(inout) :: x
+      !arguments
+      integer(INP), intent(in)    :: N, s
+      real(RNP), dimension(N, s), intent(inout) :: x
 
-end subroutine IDENTITY
+   end subroutine IDENTITY
 ! ----------------------------------------------------------------------------
 ! *** END of SUBROUTINE IDENTITY >>>
 ! ----------------------------------------------------------------------------
-
 
 ! ----------------------------------------------------------------------------
 ! *** SUBROUTINE FIRK_BlockJacobi <<<
@@ -137,24 +131,23 @@ end subroutine IDENTITY
 ! *** is implemented here.
 ! ***
 ! ----------------------------------------------------------------------------
-subroutine FIRK_BlockJacobi(N,s,Y)
+   subroutine FIRK_BlockJacobi(N, s, Y)
 
-  !arguments
-  integer(INP)                ,intent(in)   :: N,s
-  real(RNP)   ,dimension(N,s),intent(inout) :: Y
+      !arguments
+      integer(INP), intent(in)   :: N, s
+      real(RNP), dimension(N, s), intent(inout) :: Y
 
-  !locals
-  integer(INP) :: i
+      !locals
+      integer(INP) :: i
 
-  do i=1,s
-      call M_alpha_solve( N, tau_save * A(i,i), Y(:,i) )
-  enddo
+      do i = 1, s
+         call M_alpha_solve(N, tau_save*A(i, i), Y(:, i))
+      end do
 
-end subroutine FIRK_BlockJacobi
+   end subroutine FIRK_BlockJacobi
 ! ----------------------------------------------------------------------------
 ! *** END of SUBROUTINE FIRK_BlockJacobi >>>
 ! ----------------------------------------------------------------------------
-
 
 ! ----------------------------------------------------------------------------
 ! *** SUBROUTINE FIRK_LowerBlockSOR <<<
@@ -174,32 +167,31 @@ end subroutine FIRK_BlockJacobi
 ! *** is implemented here.
 ! ***
 ! ----------------------------------------------------------------------------
-subroutine FIRK_LowerBlockSOR(N,s,Y)
+   subroutine FIRK_LowerBlockSOR(N, s, Y)
 
-  !arguments
-  integer(INP)               ,intent(in)    :: N,s
-  real(RNP)   ,dimension(N,s),intent(inout) :: Y
+      !arguments
+      integer(INP), intent(in)    :: N, s
+      real(RNP), dimension(N, s), intent(inout) :: Y
 
-  !locals
-  integer(INP)              :: i,j
-  real(RNP)   ,dimension(N) :: Lj
+      !locals
+      integer(INP)              :: i, j
+      real(RNP), dimension(N) :: Lj
 
-  do j=1,s
+      do j = 1, s
 
-      call M_alpha_solve( N, tau_save*A(j,j), Y(:,j) )
+         call M_alpha_solve(N, tau_save*A(j, j), Y(:, j))
 
-      Lj = L_eps_multiply( N, Y(:,j) )
-      do i=j+1,s
-          Y(:,i) = Y(:,i) - tau_save* A(i,j)* Lj
-      enddo
+         Lj = L_eps_multiply(N, Y(:, j))
+         do i = j + 1, s
+            Y(:, i) = Y(:, i) - tau_save*A(i, j)*Lj
+         end do
 
-  enddo
+      end do
 
-end subroutine FIRK_LowerBlockSOR
+   end subroutine FIRK_LowerBlockSOR
 ! ----------------------------------------------------------------------------
 ! *** END of SUBROUTINE FIRK_LowerBlockSOR >>>
 ! ----------------------------------------------------------------------------
-
 
 !-------------------------------------------------------------------
 ! *** SUBROUTINE FIRK_UpperBlockSOR <<<
@@ -219,32 +211,31 @@ end subroutine FIRK_LowerBlockSOR
 ! *** is implemented here.
 ! ***
 ! ----------------------------------------------------------------------------
-subroutine FIRK_UpperBlockSOR(N,s,Y)
+   subroutine FIRK_UpperBlockSOR(N, s, Y)
 
-  !arguments
-  integer(INP)               ,intent(in)    :: N,s
-  real(RNP)   ,dimension(N,s),intent(inout) :: Y
+      !arguments
+      integer(INP), intent(in)    :: N, s
+      real(RNP), dimension(N, s), intent(inout) :: Y
 
-  !locals
-  integer(INP)              :: i,j
-  real(RNP)   ,dimension(N) :: Lj
+      !locals
+      integer(INP)              :: i, j
+      real(RNP), dimension(N) :: Lj
 
-  do j=s,1,-1
+      do j = s, 1, -1
 
-      call M_alpha_solve( N, tau_save*A(j,j), Y(:,j) )
+         call M_alpha_solve(N, tau_save*A(j, j), Y(:, j))
 
-      Lj = L_eps_multiply( N, Y(:,j) )
-      do i=1,j-1
-         Y(:,i) = Y(:,i) - tau_save * A(i,j)* Lj
-      enddo
+         Lj = L_eps_multiply(N, Y(:, j))
+         do i = 1, j - 1
+            Y(:, i) = Y(:, i) - tau_save*A(i, j)*Lj
+         end do
 
-  enddo
+      end do
 
-end subroutine FIRK_UpperBlockSOR
+   end subroutine FIRK_UpperBlockSOR
 ! ----------------------------------------------------------------------------
 ! *** END of SUBROUTINE FIRK_UpperBlockSOR >>>
 ! ----------------------------------------------------------------------------
-
 
 !-------------------------------------------------------------------
 ! *** SUBROUTINE FIRK_BlockSSOR <<<
@@ -266,64 +257,61 @@ end subroutine FIRK_UpperBlockSOR
 ! ***
 ! ***
 ! ----------------------------------------------------------------------------
-subroutine FIRK_BlockSSOR(N,s,Y)
+   subroutine FIRK_BlockSSOR(N, s, Y)
 
-  !arguments
-  integer(INP)               ,intent(in)    :: N,s
-  real(RNP)   ,dimension(N,s),intent(inout) :: Y
+      !arguments
+      integer(INP), intent(in)    :: N, s
+      real(RNP), dimension(N, s), intent(inout) :: Y
 
-  !locals
-  integer(INP) :: i,j
-  real(RNP)    :: omega
+      !locals
+      integer(INP) :: i, j
+      real(RNP)    :: omega
 
-  omega = 1.0_RNP
+      omega = 1.0_RNP
 
-  !-------------------------------------------------------------------
-  ! first solve equation system with
-  ! (I \otimes I + tau (diag(A) + lower_triangle(A)) \otimes L)
-  !-------------------------------------------------------------------
-  do i=1,s
+      !-------------------------------------------------------------------
+      ! first solve equation system with
+      ! (I \otimes I + tau (diag(A) + lower_triangle(A)) \otimes L)
+      !-------------------------------------------------------------------
+      do i = 1, s
 
-      do j=1,i-1
-         Y(:,i) = Y(:,i) - omega* tau_save * A(i,j)* L_eps_multiply( N, Y(:,j) )
-      enddo
+         do j = 1, i - 1
+            Y(:, i) = Y(:, i) - omega*tau_save*A(i, j)*L_eps_multiply(N, Y(:, j))
+         end do
 
-      call M_alpha_solve( N, tau_save*A(i,i), Y(:,i) )
+         call M_alpha_solve(N, tau_save*A(i, i), Y(:, i))
 
-  enddo
-  !-------------------------------------------------------------------
+      end do
+      !-------------------------------------------------------------------
 
+      !-------------------------------------------------------------------
+      ! then do multiplication with
+      ! I \otimes I + tau  diag(A) \otimes L
+      !-------------------------------------------------------------------
+      do i = 1, s
+         Y(:, i) = Y(:, i) + tau_save*A(i, i)*L_eps_multiply(N, Y(:, i))
+      end do
+      !-------------------------------------------------------------------
 
-  !-------------------------------------------------------------------
-  ! then do multiplication with
-  ! I \otimes I + tau  diag(A) \otimes L
-  !-------------------------------------------------------------------
-  do i=1,s
-      Y(:,i) = Y(:,i) + tau_save* A(i,i)* L_eps_multiply( N, Y(:,i) )
-  enddo
-  !-------------------------------------------------------------------
+      !-------------------------------------------------------------------
+      ! then solve equation system with
+      ! (I \otimes I + tau (diag(A) + omega upper_triangle(A)) \otimes L)
+      !-------------------------------------------------------------------
+      do i = s, 1, -1
 
+         do j = i + 1, s
+            Y(:, i) = Y(:, i) - omega*tau_save*A(i, j)*L_eps_multiply(N, Y(:, j))
+         end do
 
-  !-------------------------------------------------------------------
-  ! then solve equation system with
-  ! (I \otimes I + tau (diag(A) + omega upper_triangle(A)) \otimes L)
-  !-------------------------------------------------------------------
-  do i=s,1,-1
+         call M_alpha_solve(N, tau_save*A(i, i), Y(:, i))
 
-      do j=i+1,s
-         Y(:,i) = Y(:,i) - omega* tau_save * A(i,j)* L_eps_multiply( N, Y(:,j) )
-      enddo
+      end do
+      !-------------------------------------------------------------------
 
-      call M_alpha_solve( N, tau_save*A(i,i), Y(:,i) )
-
-  enddo
-  !-------------------------------------------------------------------
-
-end subroutine FIRK_BlockSSOR
+   end subroutine FIRK_BlockSSOR
 ! ----------------------------------------------------------------------------
 ! *** END of SUBROUTINE FIRK_BlockSSOR >>>
 ! ----------------------------------------------------------------------------
-
 
 end module PRECONDITIONERS
 ! ============================================================================

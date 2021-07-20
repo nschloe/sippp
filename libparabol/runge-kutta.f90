@@ -16,20 +16,20 @@
 ! ============================================================================
 module RUNGE_KUTTA
 
-use KINDMOD
-use MESHES
-use errormod
-use RK_PARAMETERS
-use intermod
+   use KINDMOD
+   use MESHES
+   use errormod
+   use RK_PARAMETERS
+   use intermod
 
-implicit none
+   implicit none
 
-private
+   private
 
 ! ----------------------------------------------------------------------------
 ! *** PUBLIC MODULE ENTITIES <<<
 ! ----------------------------------------------------------------------------
-  public set_runge_kutta, runge_kutta_step
+   public set_runge_kutta, runge_kutta_step
 ! ----------------------------------------------------------------------------
 ! *** END of PUBLIC MODULE ENTITIES >>>
 ! ----------------------------------------------------------------------------
@@ -52,65 +52,62 @@ contains
 ! *** component when using a tridiagonal equation system).
 ! ***
 ! ----------------------------------------------------------------------------
-subroutine runge_kutta_step(u,roundoff,tau,t)
+   subroutine runge_kutta_step(u, roundoff, tau, t)
 
-  !arguments
-  real(RNP)   ,dimension(1:current_mesh%N),intent(inout) :: u,roundoff
-  real(RNP)                               ,intent(in)    :: tau,t
+      !arguments
+      real(RNP), dimension(1:current_mesh%N), intent(inout) :: u, roundoff
+      real(RNP), intent(in)    :: tau, t
 
-  !locals
-  integer(INP)                          :: i, N
-  real(RNP),dimension(current_mesh%N,s) :: Y,rhs
-  real(RNP),dimension(1:current_mesh%N) :: temp1,temp2
+      !locals
+      integer(INP)                          :: i, N
+      real(RNP), dimension(current_mesh%N, s) :: Y, rhs
+      real(RNP), dimension(1:current_mesh%N) :: temp1, temp2
 
-  N = current_mesh%N
+      N = current_mesh%N
 
-  tau_save = tau ! make tau available to lower level routines
+      tau_save = tau ! make tau available to lower level routines
 
-  !------------------------------------------------------
-  ! step 1: get right hand side of the equation system
-  !         for the stage values
-  rhs = stage_rhs(N,u,t,tau)
-  !------------------------------------------------------
+      !------------------------------------------------------
+      ! step 1: get right hand side of the equation system
+      !         for the stage values
+      rhs = stage_rhs(N, u, t, tau)
+      !------------------------------------------------------
 
+      !------------------------------------------------------
+      ! step 2: solve equation system for stage values Y
+      select case (method_type)
+      case ('EX')
+         call explicit_solver(tau, RHS, Y)
 
-  !------------------------------------------------------
-  ! step 2: solve equation system for stage values Y
-  select case (method_type)
-  case ('EX')
-      call explicit_solver(tau,RHS,Y)
+      case ('DI')
+         call diagonally_implicit_solver(tau, RHS, Y)
 
-  case ('DI')
-      call diagonally_implicit_solver(tau,RHS,Y)
+      case ('FI')
+         call fully_implicit_solver(u, RHS, Y)
 
-  case ('FI')
-      call fully_implicit_solver(u,RHS,Y)
+      case default
+         call STOP_ON_ERROR('solve_stage_system (in RUNGE-KUTTA)', &
+                            'Unknown method type.')
+      end select
+      !------------------------------------------------------
 
-  case default
-      call STOP_ON_ERROR( 'solve_stage_system (in RUNGE-KUTTA)',             &
-                          'Unknown method type.' )
-  end select
-  !------------------------------------------------------
+      !------------------------------------------------------
+      ! step 3: update u_n with rounding error treatment
+      !         according to M/oller
+      temp1 = roundoff
+      do i = 1, s
+         temp1 = temp1 + tau*b(i)*(-L_eps_multiply(N, Y(:, i)) + get_f_tilde(N, t + c(i)*tau))
+         call rhs_adjustment(N, t + c(i)*tau, tau*b(i), temp1)
+      end do
+      temp2 = u + temp1
+      roundoff = temp1 - (temp2 - u)
+      u = temp2
+      !------------------------------------------------------
 
-
-  !------------------------------------------------------
-  ! step 3: update u_n with rounding error treatment
-  !         according to M/oller
-  temp1 = roundoff
-  do i=1,s
-      temp1 = temp1 + tau* b(i)* (-L_eps_multiply( N, Y(:,i) ) + get_f_tilde( N, t+c(i)*tau) )
-      call rhs_adjustment( N, t+c(i)*tau , tau*b(i) , temp1 )
-  end do
-  temp2    = u + temp1
-  roundoff = temp1 - (temp2-u)
-  u        = temp2
-  !------------------------------------------------------
-
-end subroutine runge_kutta_step
+   end subroutine runge_kutta_step
 ! ----------------------------------------------------------------------------
 ! *** END of SUBROUTINE runge_kutta_step >>>
 ! ----------------------------------------------------------------------------
-
 
 ! ----------------------------------------------------------------------------
 ! *** SUBROUTINE solve_stage_system <<<
@@ -122,35 +119,34 @@ end subroutine runge_kutta_step
 ! *** explicit, a diagonally implicit, or a fully implicit method.
 ! ***
 ! ----------------------------------------------------------------------------
-subroutine explicit_solver(tau,RHS,Y)
+   subroutine explicit_solver(tau, RHS, Y)
 
 !   use OPERATORS
 
-  !arguments
-  real(RNP)                            ,intent(in)  :: tau
-  real(RNP),dimension(current_mesh%N,s),intent(in)  :: RHS
-  real(RNP),dimension(current_mesh%N,s),intent(out) :: Y
+      !arguments
+      real(RNP), intent(in)  :: tau
+      real(RNP), dimension(current_mesh%N, s), intent(in)  :: RHS
+      real(RNP), dimension(current_mesh%N, s), intent(out) :: Y
 
-  !locals
-  integer(INP)                             :: i,j,N
-  real(RNP)   ,dimension(1:current_mesh%N) :: LYj
+      !locals
+      integer(INP)                             :: i, j, N
+      real(RNP), dimension(1:current_mesh%N) :: LYj
 
-  N = current_mesh%N
+      N = current_mesh%N
 
-  Y = RHS
+      Y = RHS
 
-  do j=1,s-1
-      LYj = L_eps_multiply( N, Y(:,j) )
-      do i=j+1,s
-          Y(:,i) = Y(:,i) - tau * A(i,j)* LYj
-      enddo
-  end do
+      do j = 1, s - 1
+         LYj = L_eps_multiply(N, Y(:, j))
+         do i = j + 1, s
+            Y(:, i) = Y(:, i) - tau*A(i, j)*LYj
+         end do
+      end do
 
-end subroutine explicit_solver
+   end subroutine explicit_solver
 ! ----------------------------------------------------------------------------
 ! *** END of SUBROUTINE explicit_solver >>>
 ! ----------------------------------------------------------------------------
-
 
 ! ----------------------------------------------------------------------------
 ! *** SUBROUTINE diagonally_implicit_solver <<<
@@ -162,37 +158,36 @@ end subroutine explicit_solver
 ! *** explicit, a diagonally implicit, or a fully implicit method.
 ! ***
 ! ----------------------------------------------------------------------------
-subroutine diagonally_implicit_solver(tau,RHS,Y)
+   subroutine diagonally_implicit_solver(tau, RHS, Y)
 
-  !arguments
-  real(RNP)                            ,intent(in)  :: tau
-  real(RNP),dimension(current_mesh%N,s),intent(in)  :: RHS
-  real(RNP),dimension(current_mesh%N,s),intent(out) :: Y
+      !arguments
+      real(RNP), intent(in)  :: tau
+      real(RNP), dimension(current_mesh%N, s), intent(in)  :: RHS
+      real(RNP), dimension(current_mesh%N, s), intent(out) :: Y
 
-  !locals
-  integer(INP)                          :: i,j,N
-  real(RNP),dimension(1:current_mesh%N) :: LYj
+      !locals
+      integer(INP)                          :: i, j, N
+      real(RNP), dimension(1:current_mesh%N) :: LYj
 
-  N = current_mesh%N
+      N = current_mesh%N
 
-  Y = RHS
+      Y = RHS
 
-  do j=1,s
-      if (A(j,j).ne.0.0_RNP) call M_alpha_solve( current_mesh%N, tau*A(j,j),Y(:,j) )
+      do j = 1, s
+         if (A(j, j) .ne. 0.0_RNP) call M_alpha_solve(current_mesh%N, tau*A(j, j), Y(:, j))
 
-      LYj = L_eps_multiply( N, Y(:,j) )
-      do i=j+1,s
-          Y(:,i) = Y(:,i) - tau * A(i,j)* LYj
-      enddo
-  end do
+         LYj = L_eps_multiply(N, Y(:, j))
+         do i = j + 1, s
+            Y(:, i) = Y(:, i) - tau*A(i, j)*LYj
+         end do
+      end do
 
 ! write(*,*) 'maxval',maxval(abs(stage_matrix_multiplication(N,s,Y)-RHS))
 
-end subroutine diagonally_implicit_solver
+   end subroutine diagonally_implicit_solver
 ! ----------------------------------------------------------------------------
 ! *** END of SUBROUTINE diagonally_implicit_solver >>>
 ! ----------------------------------------------------------------------------
-
 
 ! ----------------------------------------------------------------------------
 ! *** SUBROUTINE fully_implicit_solver <<<
@@ -204,33 +199,32 @@ end subroutine diagonally_implicit_solver
 ! *** explicit, a diagonally implicit, or a fully implicit method.
 ! ***
 ! ----------------------------------------------------------------------------
-subroutine fully_implicit_solver(u,RHS,Y)
+   subroutine fully_implicit_solver(u, RHS, Y)
 
-  use preconditioners
-  use SOLVERS
+      use preconditioners
+      use SOLVERS
 
-  !arguments
-  real(RNP),dimension(1:current_mesh%N),intent(in)  :: u
-  real(RNP),dimension(current_mesh%N,s),intent(in)  :: RHS
-  real(RNP),dimension(current_mesh%N,s),intent(out) :: Y
+      !arguments
+      real(RNP), dimension(1:current_mesh%N), intent(in)  :: u
+      real(RNP), dimension(current_mesh%N, s), intent(in)  :: RHS
+      real(RNP), dimension(current_mesh%N, s), intent(out) :: Y
 
-  !locals
-  integer(INP) :: i,N
+      !locals
+      integer(INP) :: i, N
 
-  N = current_mesh%N
+      N = current_mesh%N
 
-  ! Starting value for the following GMRES iteration. A not so smart
-  ! choice of Y=0.0 doesn't seem to make a big difference, though.
-  forall (i=1:s) Y(:,i) = u + c(i) * rhs(:,i)
+      ! Starting value for the following GMRES iteration. A not so smart
+      ! choice of Y=0.0 doesn't seem to make a big difference, though.
+      forall (i=1:s) Y(:, i) = u + c(i)*rhs(:, i)
 
-  call set_preconditioner('LS')
-  call GMRES(N,s,RHS,Y,stage_matrix_multiplication)
+      call set_preconditioner('LS')
+      call GMRES(N, s, RHS, Y, stage_matrix_multiplication)
 
-end subroutine fully_implicit_solver
+   end subroutine fully_implicit_solver
 ! ----------------------------------------------------------------------------
 ! *** END of SUBROUTINE fully_implicit_solver >>>
 ! ----------------------------------------------------------------------------
-
 
 ! ----------------------------------------------------------------------------
 ! *** FUNCTION stage_matrix_multiplication <<<
@@ -249,31 +243,30 @@ end subroutine fully_implicit_solver
 ! *** needs to be solved.
 ! ***
 ! ----------------------------------------------------------------------------
-function stage_matrix_multiplication(N,s,Y) result(Z)
+   function stage_matrix_multiplication(N, s, Y) result(Z)
 
-  !arguments
-  integer(INP)               ,intent(in) :: N,s
-  real(RNP)   ,dimension(N,s),intent(in) :: Y   ! stage vector
+      !arguments
+      integer(INP), intent(in) :: N, s
+      real(RNP), dimension(N, s), intent(in) :: Y   ! stage vector
 
-  !result
-  real(RNP),dimension(N,s) :: Z
+      !result
+      real(RNP), dimension(N, s) :: Z
 
-  !locals
-  integer(INP)           :: i,j
-  real(RNP),dimension(N) :: L
+      !locals
+      integer(INP)           :: i, j
+      real(RNP), dimension(N) :: L
 
-  Z = Y
+      Z = Y
 
-  do j=1,s
-      L = L_eps_multiply( N, Y(:,j) )
-      forall (i=1:s) Z(:,i) = Z(:,i) + tau_save * A(i,j) * L
-  end do
+      do j = 1, s
+         L = L_eps_multiply(N, Y(:, j))
+         forall (i=1:s) Z(:, i) = Z(:, i) + tau_save*A(i, j)*L
+      end do
 
-end function stage_matrix_multiplication
+   end function stage_matrix_multiplication
 ! ----------------------------------------------------------------------------
 ! *** END of FUNCTION stage_matrix_multiplication >>>
 ! ----------------------------------------------------------------------------
-
 
 ! ----------------------------------------------------------------------------
 ! *** FUNCTION stage_rhs <<<
@@ -292,32 +285,32 @@ end function stage_matrix_multiplication
 ! *** needs to be solved.
 ! ***
 ! ----------------------------------------------------------------------------
-function stage_rhs(N,u,t,tau) result(F)
+   function stage_rhs(N, u, t, tau) result(F)
 
-  use rk_parameters
+      use rk_parameters
 
-  !arguments
-  integer(INP)               ,intent(in) :: N
-  real(RNP)   ,dimension(1:N),intent(in) :: u   ! = y_{n-1}
-  real(RNP)                  ,intent(in) :: t, tau
+      !arguments
+      integer(INP), intent(in) :: N
+      real(RNP), dimension(1:N), intent(in) :: u   ! = y_{n-1}
+      real(RNP), intent(in) :: t, tau
 
-  !result
-  real(RNP),dimension(N,s) :: F
+      !result
+      real(RNP), dimension(N, s) :: F
 
-  !locals
-  integer(INP) :: i,j
+      !locals
+      integer(INP) :: i, j
 
-  do i=1,s
-      F(:,i) = u
+      do i = 1, s
+         F(:, i) = u
 
-      do j=1,s
-          F(:,i) = F(:,i) + tau* A(i,j)* get_f_tilde( N, t+c(j)*tau )
-          call rhs_adjustment( N, t+c(j)*tau , tau*A(i,j) , F(:,i) )
-      enddo
+         do j = 1, s
+            F(:, i) = F(:, i) + tau*A(i, j)*get_f_tilde(N, t + c(j)*tau)
+            call rhs_adjustment(N, t + c(j)*tau, tau*A(i, j), F(:, i))
+         end do
 
-  end do
+      end do
 
-end function stage_rhs
+   end function stage_rhs
 ! ----------------------------------------------------------------------------
 ! *** END of FUNCTION stage_rhs >>>
 ! ----------------------------------------------------------------------------
