@@ -1,16 +1,14 @@
-0. Introduction
----------------
+## Introduction
 
 LIBPARABOL is a software library that allows for quick solving of equation
 systems that arise when discretizing parabolic differential equations of the
 kind
-
-    u_t - L_eps u  = f
-
-    u(0)        = u_0
-    u|_{Gamma}  = gamma
-
-with L_eps = sqrt(eps) {Laplace} u - c(x)*u in one space dimension.
+```math
+u_t - L_{\eps} u  = f\\
+u(0)        = u_0\\
+u_{\Gamma}  = gamma
+```
+with $`L_{\eps} = \sqrt(\eps) \Delta u - c(x) u`$ in one space dimension.
 The library contains routines which handle the generation
 of meshes (in particular layer adapted meshes) when treating singularly perturbed
 problems as well as a wide range of A-stable Runge-Kutta methods. The
@@ -20,17 +18,14 @@ exist a number of user interfaces which neatly plot the approximated solution
 in various formats or generate LaTeX style "convergence tables".
 
 
-
-1. Installation
----------------
+## Installation
 In each of the subdirectories you will find Makefiles that will help you with
 the compilation of the library. All you need to do is specify your favourite
 Fortran95 compiler in "make.inc" which is to be found at the top level directory
 Then type make, lean back, and watch the engine at work..
 
 
-2. Usage
----------
+## Usage
 The user needs to provide the parameters of the differential equation as well 
 as everything that relates to the operator L_eps. Which routines are exactly
 required can be seen from INTERMOD.f; the interfaces for the Fortran routines
@@ -48,6 +43,4 @@ in PUT.f.
 Have fun!
 
 
-----------------------------------------------------------------------------
-This software was developed by Nico Schl"omer as part of his diploma
-thesis in 2007.
+This software was developed by Nico Schlömer as part of his diploma thesis in 2007.
